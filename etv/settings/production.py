@@ -18,7 +18,7 @@ import braintree
 db_from_env = dj_database_url.config(conn_max_age=500)
 
 env = environ.Env(
-    DEBUG=(bool, True)
+    DEBUG=(bool, False)
 )
 DATABASES = { 'default': dj_database_url.config() }
 
@@ -71,7 +71,7 @@ ADMINS = (
 
 MANAGERS = ADMINS
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 
 ALLOWED_HOSTS = ['etv.villageblackpages.org', 'villageblackpages.org', 'www.villageblackpages.org', 'www.etv.villageblackpages.org', 'etvlive.herokuapp.com', 'empowerthevillage.org', 'www.empowerthevillage.org', 'etv.empowerthevillage.org', 'www.etv.empowerthevillage.org']
