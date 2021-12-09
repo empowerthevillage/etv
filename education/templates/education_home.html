@@ -1,0 +1,399 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}ETV | Education & Employment{% endblock %}
+{% block canonical %}https://www.empowerthevillage.org/education-and-employment/{% endblock %}
+{% block seo_description %}ETV Strategic Pillars: Education & Employment{% endblock %}
+
+{% block content %}
+<div class="parallax-container z-depth-3 box-shadow valign-wrapper">
+    
+    <div class="container z-depth-4 center-align parallax-banner">
+        <img src='{% static "img/education_employment.png" %}' style="width:100%; padding: 4%">
+    </div>
+    <div class="parallax">
+        <img src='{% static "img/ed_collage_big.png" %}'>
+    </div>
+
+</div>
+<div style="background: url('{% static 'img/ed_collage_big.png' %}'); background-size: 180%; height: 100%">
+    <div class="row" style="height: 100%; background-color: rgba(255, 255, 255, 0.781); width:100%">
+        <ul class="tabs subnav-tabs tabs-fixed-width pillar-nav z-depth-2">
+            <li class="tab"  class="subnav-link"><a href="phase-one" class="subnav-link">Village@Work™</a></li>
+            <li class="tab"  class="subnav-link"><a href="phase-one" class="subnav-link">Village Strivers™</a></li>
+        </ul>
+        <style>
+            @media only screen and (min-width:663px){
+                .subnav-link {
+                font-size: 20px !important
+            }
+            }
+            .subnav-link {
+                font-size: 14px
+            }
+        </style>
+        <div class="col s12 l10 offset-l1  pillar-body">
+            <div class="row" style="width: 90%; margin-left: 5%">
+                <div class="row center-align">
+                    <h5 class="dyk"><p class="dyk" style="color: rgb(199, 24, 24); margin:0; padding:0; margin-top: -10px">State Of The Village : <a style="color:rgba(38, 38, 38, 0.947); font-family: oskar">Did You Know...?</a></p></h5>
+                    <div class="divider"></div>
+                    <div class="row" style="margin-bottom: 0; padding-top: 3%; padding-left: 1%; padding-right: 1%">
+                        
+                        <div class="col s12 m3">
+                            <style></style>
+                            <div class="row dyk-row">
+                                <img class="col s3 m12 ed-ss" src="{% static 'img/education_ss.png'%}" style="width: 100%">
+                                <p class="col s9 m12 obesity-text"> ~23% of the Black adult population has a bachelor’s degree or higher (versus ~36% of White adults)</p>
+                            </div>
+                        </div>
+                        <div class="col s12 m3">
+                            <div class="row dyk-row">
+                                <img class="col s3 m12 u-ss" src="{% static 'img/unemployment_ss.png'%}" style="width: 89%; margin-left: 5.5%">
+                                <p class="col s9 m12 covid-text">Unemployment rates are 2X higher for Black Americans compared to White Americans</p>
+                            </div>
+                        </div>
+                        
+                        <div class="col s12 m3">
+                            <div class="row dyk-row">
+                                <img class="col s3 m12 black-businesses" src="{% static 'img/95percent.png'%} " style="width: 90%; margin-left: 5%">
+                                <p class="col s9 m12 heart-text">95% of Black-owned businesses are nonemployer businesses. 101% average increase in annual revenue after hiring the 1st employee</p>
+                            </div>
+                        </div>
+                        <div class="col s12 m3">
+                            <div class="row dyk-row">
+                                <img class="col s3 m12 million-jobs" src="{% static 'img/million-jobs.png'%}">
+                                <p class="col s9 m12 million-jobs-text">~5% of Existing Black-owned businesses have created over 1 million jobs!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="divider"></div>
+                    
+                    
+                </div>
+                <div class="row popout-row">
+                    <ul class="col s12 xl6 pillar-collapsible goals-collapsible">
+                        <li class="goals-li z-depth-2">
+                            <div class="collapsible-header valign-wrapper pillar-header goals-header">
+                                <div class="collapsible-body-image" style="background: url('{% static 'img/ep-goals.jpg' %}'); background-size: 147%">
+                                </div>
+                                <div class="pillar-title">ETV Goals</div>
+                                
+                            </div>
+                            <div class=" collapsible-body-pillar">
+                                <table>
+                                    <tr class="pillar-tr">
+                                        <td class="pillar-target-td">
+                                            <i class="material-icons pillar-target">track_changes</i> 
+                                        </td>
+                                        <td class="pillar-h5">
+                                            Increase academic excellence and the percentage of Black adults with college and advanced degrees, as well as training for skilled-based employment
+                                        </td>
+                                    </tr>
+                                    <tr class="pillar-tr">
+                                        <td class="pillar-target-td">
+                                            <i class="material-icons pillar-target">track_changes</i> 
+                                        </td>
+                                        <td class="pillar-h5">
+                                            Mobilize the 21st century Black workforce to empower the community in innovative ways
+                                        </td>
+                                    </tr>
+                                    
+                                </table>
+                            </div>
+                        </li>
+                    </ul> 
+                
+                    <ul class="col s12 xl6 pillar-collapsible" style="margin-bottom: 2%;">
+                        
+                        <li class="solutions-li z-depth-2">
+                            <div class="collapsible-header valign-wrapper pillar-header solutions-header">
+                                <div class="collapsible-body-image" style="background: url('{% static 'img/solutions.jpg' %}'); background-size: 140%; background-position-x: -30px">
+                                </div>
+                                <div class="pillar-title">ETV Solutions</div>
+                                
+                            </div>
+                            <div class="collapsible-body-pillar">
+                                <table>
+                                    <tr class="pillar-tr">
+                                        <td class="pillar-target-td">
+                                            <i class="material-icons pillar-target">check</i> 
+                                        </td>
+                                        <td class="pillar-h5">
+                                            <a href="phase-one/"><b>Village@Work™ - </b></a>Workforce Development Program
+                                        </td>
+                                    </tr>
+                                    <tr class="pillar-tr">
+                                        <td class="pillar-target-td">
+                                            <i class="material-icons pillar-target">check</i> 
+                                        </td>
+                                        <td class="pillar-h5">
+                                            <a href="phase-one/"><b>Village Strivers™ - </b></a>Academic Enrichment, Mentorship and Job Creation
+                                        </td>
+                                    </tr>
+                                </table>
+                               
+                            </div>
+                        </li>
+                    </ul> 
+                </div>
+                <div class="divider"></div>
+                <div class="row valign-wrapper" style="width: 95%; margin-left: 5%; padding-top: 20px">
+                    <img src="{% static 'img/grad-cap.png' %}" width=20%>
+                    <blockquote class="dyk-quote">
+                        A <a href="https://edtrust.org/wp-content/uploads/2014/09/Black-Degree-Attainment_FINAL.pdf">college degree,</a> whether an Associate or Bachelor’s degree, is more and more vital. The number of “good-paying jobs” that did not require some level of college education or technical training have continued to rapidly decrease.
+                    </blockquote>
+                </div>
+                <div class="divider"></div>
+            </div>
+                
+            
+        </div>
+    </div>
+</div>
+<style>
+    @media only screen and (max-width: 850px){
+        .pillar-nav {
+        display: none !important
+    }
+    }
+    @media only screen and (min-width:663px){
+        .subnav-link {
+            font-size: 16px !important;
+            font-weight: 500 !important;
+        }
+        .pillar-nav {
+            display: none;
+        }
+    }
+    @media only screen and (min-width:992px){
+        .subnav-link {
+            font-size: 20px !important;
+            font-weight: 500 !important;
+        }
+        .pillar-nav {
+            display:-webkit-flex !important
+        }
+    }
+    .subnav-link {
+        font-size: 14px;
+        font-weight: 500 !important
+    }
+    
+</style>
+<style>
+    .pillar-nav {
+        background-color: rgb(0, 0, 0);
+    }
+    .pillar-nav li a {
+        color: rgb(255, 255, 255) !important;
+    }
+    .dyk-quote {
+        text-align: left;
+        border-left: dotted rgb(184, 34, 34) 2px;
+        padding-left: 3% !important;
+        margin-left: 2% !important
+    }
+    .divider {
+        margin: 0;
+        width: 90%;
+        margin-left: 5%;
+    }
+    
+    p {
+        font-weight: 400;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        text-align: center;
+    }
+    
+    .facts-ul li {
+        padding-bottom: 15px;
+        font-weight: 300;
+    }
+    .dyk {
+        font-family: oskar-inline;
+        color:rgba(60, 60, 60, 0.947);
+        text-transform: uppercase;
+    }
+    .goals-header {
+        background: rgb(191,23,23);
+        background: linear-gradient(90deg, rgba(191,23,23,0.8365721288515406) 0%, rgba(156,96,30,0.738532913165266) 49%, rgba(0, 0, 0, 0.399) 100%); 
+    }
+    .solutions-header {
+        background: rgb(191,23,23);
+        background: linear-gradient(90deg, rgba(0, 0, 0, 0.603) 0%, rgba(137, 143, 65, 0.739) 49%, rgba(44, 129, 15, 0.739) 100%); 
+    }
+    .cs-title {
+        color: black
+    }
+    @media only screen and (min-width: 0px) {
+        .ee-image img {
+            width: 60%
+        }
+        .program-text {
+            text-align: center;
+            width: 90%;
+            margin-left: 5%;
+            font-size: 14px
+        }
+        .dyk {
+            font-size: 38px;
+            letter-spacing: 2px;
+        }
+        .dyk-quote {
+            font-size: 14px
+        }
+        .collapsible-body-image-cs {
+            width: 64px !important;
+            height: 64px;
+            margin-left: 5%;
+            margin-right: 1%
+        }
+        .cs-title {
+            font-size: 28px;
+            text-align: left;
+            padding-left: 1%
+        }
+        .health-main-title {
+        font-family: oskar-inline;
+        font-size: 36px;
+        text-align: center;
+        color:rgb(18, 148, 18);
+        margin-bottom: 0;
+        margin-top: 20px
+    }
+    .health-main-text {
+        font-size: 18px;
+        line-height: 30px;
+        text-align: center;
+    }
+        .mi-row {
+            width: 100%;
+            padding-left: 5%
+        }
+        .dyk-quote {
+            font-size: 14px
+        }
+        blockquote {
+            font-size: 16px;
+            font-weight: 300;
+            margin-top: 20px !important;
+        }
+        .unemployment-seesaw img {
+            width: 100%;
+            padding-top: 40px;
+        }
+        .education-seesaw img {
+            padding-top: 20px;
+            width: 105%;
+        }
+        .statistic-title {
+            font-family: poppins;
+            font-weight: 600;
+            font-size: 16px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            text-transform: scale(1, 0.9);
+            text-align: center;
+            background-color: rgba(154, 22, 22, 0.947);
+            padding: 15px 5px;
+            color: white
+        }
+        .collapsible li {
+            margin: 0 !important;
+        }
+        .degree-attainment-small {
+            display: block;
+            padding: 0% 5%;
+        }
+        .degree-attainment {
+            display: none;
+            padding: 0% 5%;
+        }
+        blockquote {
+            width: 90%;
+            margin-left: 5%;
+            margin-top: 7%;
+        }
+    }
+    @media only screen and (min-width: 420px) {
+        .statistic-title {
+            font-size: 20px;
+            padding: 15px 10px;
+        }
+    }
+    @media only screen and (min-width: 601px) {
+        .ee-image img {
+            width: 60%
+        }
+        .program-text {
+            text-align: center;
+            width: 90%;
+            margin-left: 5%;
+            font-size: 16px
+        }
+        .goals-li {
+            width: 95%;
+    }
+    .solutions-li {
+        width: 95%;
+    }
+        .dyk {
+        font-size: 42px
+    }
+        .dyk-quote {
+            font-size: 16px
+        }
+        blockquote {
+            font-size: 20px;
+        }
+        .degree-attainment-small {
+            display: none;
+        }
+        .degree-attainment {
+            display: block;
+        }
+        .unemployment-seesaw img {
+            width: 91%;
+            padding-top: 20px;
+        }
+        .education-seesaw img {
+            padding-top: 20px;
+            width: 100%;
+        }
+        .statistic-title-large {
+            font-family: poppins;
+            width: 80%;
+            margin-left: 10%;
+            font-weight: 600;
+            font-size: 24px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            text-transform: scale(1, 0.9);
+            text-align: center;
+            background-color: rgba(207, 25, 25, 0.865);
+            padding: 15px 5px;
+            color: white
+        }
+    }
+    @media only screen and (min-width: 993px) {
+        .ee-image img {
+            width: 110%;
+            margin-top: 3%
+        }
+        .program-text {
+            text-align: left;
+            font-size: 22px
+        }
+        .dyk {
+        font-size: 58px
+    }
+        .dyk-quote {
+            font-size: 20px
+        }
+        blockquote {
+            font-size: 24px;
+        }
+    }
+</style>
+{% endblock %}

@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div id="page">
+  <div class="row center-align" style="margin-top:0px">
+    <div class="col s8 m8 l6 login-card" style="background-color:#fdfdfde5;padding-top:30px; padding-bottom:40px">
+        <h6 id="login-title">Login</h6>
+        <p id="new-to-village">New to The Village? <a href="{% url 'register' %}" >Register for a free account now!</p></a>
+        
+      <form class="form center" method='POST' style="padding-left: 10%; padding-right:10%; width: 70%; margin-left:15%">
+        
+        {% csrf_token %}
+         {{ form }}
+        <button type="submit" class='btn login-btn' style="margin-top:24; padding:22px; line-height:0px; margin-bottom:15px">Login</button>
+        <div class="center">
+          <a href='{% url "password_reset" %}' class='text-center' style="color:grey;"><p style="margin-bottom:80px; margin-top:35px">Forgot Password?</p></a>
+        </div>
+      </form>
+      
+    </div>
+  </div>
+</div>
+
+<style>
+  #page {
+    background-image: url("{% static 'img/login-collage.png' %}");
+    background-size: 100%;
+    background-repeat: repeat;
+  }
+  #id_username {
+    letter-spacing: 1px;
+    width:100%;
+    font-family: 'Poppins';
+    font-weight:200;
+  }
+  #id_password {
+    font-weight: 200;
+    letter-spacing: 1px;
+    font-family: 'Poppins';
+
+  }
+</style>
+{% endblock %}
+

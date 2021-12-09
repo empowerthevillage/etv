@@ -1,0 +1,371 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+
+<div class="" style="background: url('{% static 'img/pillar_collage.png' %}');">
+    <div id="merchandise-container">
+            <div class="row" style="margin-bottom: 0">
+                <h5 class="page-title">SHOW YOUR SUPPORT</h5>
+                        <h6 class="donation-subtitle"><b>EMPOWER THE VILLAGE  MERCHANDISE</b> helps support the work we do to bring prosperity, peace and power back to our community</h6>
+            </div>
+            <div class="row merch-row1" style="margin-bottom: 0">
+                
+                {% for obj in object_list %}
+
+                    <div class="col s12 m6 l4 card-column">
+                        <div class="card">
+                            <div class="card-image z-depth-1">
+                                <div class="carousel carousel-slider" id="product-carousel">
+                                    {% for image in obj.get_images %}
+                                    <div class="carousel-item">
+                                            <a class="" style="display: flex" data-lightbox="{{ obj.slug }}" href="{{ image.get_path }}"><img class="carousel-image-item" src="{{ image.get_path }}"></a>
+                                    </div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                            <div class="card-content center-align">
+                                <div class="card-title">{{ obj.title }}</div>
+                                <p class="card-price">${{ obj.price }}</p>
+                                <div class="card-info">
+                                
+                                <p>{{ obj.card_description}}</p>
+                                <form class="ajax-product-form">
+                                    <input class="product-id-hidden" type="hidden" value="{{ obj.id }}">
+                                    <div class="row valign-wrapper" style="margin-bottom: 0; display: flex; justify-content: center;">
+                                        
+
+                                    {% for color in obj.get_colors %}
+                                            <div class="col" style="padding:5px; margin:0">
+                                                <label>
+                                                    <input class="select-color" value="{{ color }}" name="{{ obj.slug }}-color" type="radio">
+                                                    <span class="color-radio" id="{{ obj.slug }}-{{ color }}"></span>
+                                                </label>
+                                                <p class="color-label" style="margin-top: 10px" >{{ color }}</p>
+                                            </div>
+                                            <style>
+                                                #{{obj.slug}}-{{ color }}::before {
+                                                    background: {{ color }}
+                                                }
+                                            </style>
+                                    {% endfor %}
+                                    </div>
+                                    {% if obj.get_sizes|length > 1 %}
+                                    <div class="row size-row">
+                                        <div class="input-field size-field">
+                                            <select class="size-select">
+                                                <option value="" selected style="color: grey">Choose Size</option>
+                                                {% for size in obj.get_sizes %}
+                                                    <option value="{{ size }}">{{ size }}</option>
+                                                {% endfor %}
+                                            </select>
+                                        </div>
+                                    </div>
+                                    {% else %}
+                                    <div class="size-select" style="display:none">
+                                        {% for size in obj.get_sizes %}
+                                        <option selected value="{{ size }}"></option>
+                                        {% endfor %}
+                                    </div>
+                                    {% endif %}
+                                    <div class="row" style="margin:0">
+                                        
+                                            <span class="submit-span">
+                                            <button class="btn" type="submit">Add To Cart</button>
+                                            </span>
+                                        
+                                    </div>
+                                </form>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                {% endfor %}
+            </div>
+    </div>
+    
+</div>
+
+<style>
+    
+    @media only screen and (min-width:0px){
+        .card {
+            width: 90%;
+            margin-left: 5%
+        }
+        .card-content {
+            padding-top: 3%;
+            padding-bottom: 3%;
+        }
+        .card-info p {
+            font-size: 14px
+        }
+        .color-circle {
+            width: 30px;
+            height: 30px;
+            margin: 5px;
+            border-radius: 50%;
+        }
+        .color-label {
+            font-size: 10px !important;
+            color: rgb(111, 111, 111);
+            text-align: center
+        }
+        .card-title {
+            font-family: oskar;
+            font-size: 26px !important;
+            color: rgb(0, 0, 0);
+            margin-bottom: 0 !important;
+        }
+        .card-price {
+            font-family: oskar-inline;
+            font-size: 22px;
+            color: rgb(44, 150, 44)
+        }
+        .carousel {
+            height: 300px;
+            -khtml-transition: height 0.5s ease;
+            -moz-transition: height 0.5s ease;
+            -ms-transition: height 0.5s ease;
+            -o-transition: height 0.5s ease;
+            -webkit-transition: height 0.5s ease;
+            transition: height 0.5s ease;
+        }
+        .carousel-item {
+            margin-top: 0px !important;
+        }
+        .carousel-image-item {
+            display: flex;
+        }
+        #merchandise-container {
+            margin-top: 0;
+            padding-top: 10px;
+            background-color: rgba(255, 255, 255, 0.954);
+        }
+        .merch-row1 {
+            display: flex;
+            flex-wrap: wrap;
+            padding-top: 10px
+        }
+        .indicator-item {
+            background-color: rgb(122, 235, 135) !important
+        }
+        .indicator-item.active {
+            background-color: rgb(229, 244, 231) !important
+        }
+        svg {
+            stroke: transparent !important;
+        }
+        label {
+            font-family: poppins;
+        }
+        .dropdown-content li>span {
+            color: black
+        }
+        .select-wrapper input.select-dropdown {
+            font-family: poppins;
+            font-size: 14px;
+            letter-spacing: 1px;
+            color: rgb(103, 103, 103)
+        }
+        .size-field {
+            width: 50%;
+            margin: 0
+        }
+        .size-row {
+            margin-bottom: 0; 
+            display: flex; 
+            justify-content: center;
+        }
+        .page-title {
+            font-family: oskar-inline; 
+            font-size: 42px;
+            text-align: center;
+            color: rgb(176, 39, 39)
+        }
+        .donation-subtitle {
+            text-align: left;
+            padding-left: 2%;
+            padding-right: 3%;
+            border-left: dotted 2px grey;
+            margin-left: 5%;
+            font-family: poppins;
+            font-weight: 300;
+            font-size: 14px;
+            letter-spacing: 1px;
+            line-height: 18px
+        }
+        .donation-subtitle b {
+            font-weight: 500 !important
+        }
+        
+        .lb-outerContainer {
+            width: 95% !important;
+            height: 95vw !important;
+        }
+        .lb-image {
+            width: 100% !important;
+            height: 100% !important
+        }
+        .color-radio::before, .color-radio::after {
+            width: 30px !important;
+            height: 30px !important;
+            margin: 0 !important;
+            border: none !important;
+            -webkit-box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.2); 
+            box-shadow: 0px 1px 3px 1px rgba(0,0,0,0.2);
+        }
+        [type="radio"]:checked+span:after {
+            background: transparent !important;
+            -webkit-box-shadow: 0px 0px 0px 2px rgb(2, 215, 34); 
+            box-shadow: 0px 0px 0px 3px rgb(18, 171, 41);
+        }
+    }
+    @media only screen and (min-width:500px){
+
+        .carousel-item {
+            margin-top: 0px !important
+        }
+        .card-column {
+            flex-grow: 1;
+        }
+        .size-field {
+            width: 30%;
+            margin: 0
+        }
+        .page-title {
+            font-size: 48px;
+        }
+        .donation-subtitle {
+            
+            font-family: poppins;
+            font-weight: 300;
+            font-size: 18px;
+            letter-spacing: 1px;
+            line-height: 22px
+        }
+    }
+    @media only screen and (min-width:601px){
+        .card {
+            width: 100%;
+            margin-left: 0;
+        }
+        .card-content {
+            padding-left: 0 !important;
+            padding-right: 0 !important
+        }
+        .card-image img {
+            padding:0;
+        }
+        .card-column {
+            display: block
+        }
+        .merch-row1 {
+            padding-left: 0%;
+            padding-right: 0%;
+            padding-bottom: 0px;
+            margin-bottom: 0;
+            display: block
+        }
+        .size-field {
+            width: 50%;
+            margin: 0
+        }
+    }
+    @media only screen and (min-width:900px){
+        .size-field {
+            width: 40%;
+            margin: 0
+        }
+        .lb-outerContainer {
+            width: 70% !important;
+            height: 70vw !important;
+        }
+    }
+    @media only screen and (min-width:992px){
+        .size-field {
+            width: 40%;
+            margin: 0
+        }
+        .merch-row1 {
+            padding-left: 5%;
+            padding-right: 5%;
+        }
+    }
+    @media only screen and (min-width:1201px){
+        .size-field {
+            width: 30%;
+            margin: 0
+        }
+        .lb-outerContainer {
+            width: 50% !important;
+            height: 50vw !important;
+        }
+    }
+    @media only screen and (min-width:1226px){
+        #merchandise-container {
+           padding-top: 60px !important
+        }
+    }
+</style>
+<script>
+    $(document).ready(function(){
+        
+        $('.carousel.carousel-slider').carousel({
+            fullWidth: true,
+            indicators: true,
+        });
+        $('.materialboxed').materialbox();
+        lightbox.option({
+            'maxWidth': '300px',
+            'maxHeight': '300px',
+            'wrapAround': true
+        });
+        
+       
+    });
+    $( window ).on( "load", function() {
+        var finalHeight = $('.carousel-image-item').first().innerHeight()
+        $('.carousel').css('height', finalHeight)
+    });
+    var productForm = $(".ajax-product-form")
+
+    productForm.submit(function(event){
+        event.preventDefault();
+        var thisForm = $(this)
+        var size = $(thisForm).find("option:selected").val()
+        var color = $(thisForm).find("input[class=select-color]:checked").val()
+        var type = $(thisForm).children('.product-id-hidden').val()
+        
+        var formData = {
+            'id': type,
+            'size': size,
+            'color': color,
+        };
+        $.ajax({
+            url: '{% url "merchandise:add-to-cart" %}',
+            method: 'GET',
+            data: formData,
+            success: function(data){
+                Swal.fire(
+                    'Added to Cart!',
+                    'Continue Shopping',
+                    'success'
+                );
+                
+                
+            },
+            error: function(errorData){
+                Swal.fire(
+                    'An Error Occured',
+                    errorData,
+                    'error'
+                );
+            }
+        })
+    });
+    
+</script>
+{% endblock %}

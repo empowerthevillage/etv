@@ -1,0 +1,1110 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+{{ title }}
+{% endblock %}
+
+{% block content %}
+
+<div class="center-align" style="background: url('{% static 'img/pillar_collage.png' %}');">
+    <div style="padding-top: 40px; padding-bottom: 20px; background-color: rgba(255, 255, 255, 0.954);">
+        <div class="row" style="padding-top: 40px; padding-left: 5%; padding-right: 5%">
+            <div class="col s6 m4">
+              <div class="card">
+                <div class="card-image" >
+                  <img src="{% static 'img/mugs.png' %}" style="padding-bottom: 20px; padding-top: 20px">
+                  
+                </div>
+                <div class="card-content">
+                    <h5 class="card-price-title"><b class="price">$15</b> - ETV Mug</h5>
+                    <p style="margin-bottom:0; padding-bottom:0">Empower The Village with Every Sip!</p>
+                    <p style="margin-top:0; padding-top:0">Available with Green or White ETV Logo</p>
+                </div>
+               
+              </div>
+            </div>
+            <div class="col s6 m4">
+                <div class="card">
+                  <div class="card-image" style="">
+                    <img src="{% static 'img/shannon-grey.png' %}" style="width: 100%;">
+                    
+                  </div>
+                  <div class="card-content">
+                      <h5 class="card-price-title"><b class="price">$20</b> - ETV Short Sleeve</h5>
+                    <p>Available in Black, White, or Grey</p>
+                  </div>
+                  
+                </div>
+              </div>
+              <div class="col s6 m4">
+                <div class="card">
+                  <div class="card-image" style="background-color: rgba(0, 0, 0, 0.934)">
+                    <img src="{% static 'img/longsleeve.png' %}" style="width: 100%;">
+                    
+                  </div>
+                  <div class="card-content">
+                      <h5 class="card-price-title"><b class="price">$30</b> - ETV Long Sleeve</h5>
+                    <p>Available in Black or White</p>
+                  </div>
+                  
+                </div>
+              </div>
+                <div class="row form-row">
+                    <div class="divider"></div>
+                    <form class="col s8 offset-s2" method="post" action="{{ donate_url }}" id="donation_form">
+                    {% csrf_token %}
+                    <h5 class="" style="font-family: oskar-inline; font-size: 56px">SHOW YOUR SUPPORT</h5>
+                    <h6 class="donation-subtitle"><b>EMPOWER THE VILLAGE  MERCHANDISE</b> helps support the work we do to bring prosperity, peace and power back to our community</h6>
+
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <input type="text" required>
+                            <label>First Name<b class="required">*</b></label>
+                        </div>
+                        <div class="input-field col s6">
+                            <input type="text" required>
+                            <label>Last Name<b class="required">*</b></label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input type="email" required>
+                            <label>Email Address<b class="required">*</b></label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input type="text" required>
+                            <label>Street Address 1<b class="required">*</b></label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input type="text">
+                            <label>Street Address 2 (optional)</label>
+                        </div>
+                        
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s4">
+                            <input type="text">
+                            <label>City<b class="required">*</b></label>
+                        </div>
+                        <div class="input-field col s4">
+                            <input type="text">
+                            <label>State<b class="required">*</b></label>
+                        </div>
+                        <div class="input-field col s4">
+                            <input type="text">
+                            <label>Zip<b class="required">*</b></label>
+                        </div>
+                    </div>
+                <div class="row left-align">
+                    <div class="col s8 offset-s2">
+                        <div class="row valign-wrapper">
+                            <div class="left">
+                                <label>
+                                    <input type="checkbox" id="mug-checkbox" />
+                                    <span>Mug - $15</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="mug-colors" id="mug-colors" style="display:none">
+                            <div class="row valign-wrapper" style="padding:0px; margin-left:5%; margin-bottom:0">
+                                <div class="left">
+                                    <label>
+                                    <input class="quantity" type="checkbox" id="greenmug-checkbox" />
+                                    <span>Green ETV Logo</span>
+                                    </label>
+                                </div>
+                                <div class="right input-field" id="greenmug-quantity-field" style="display:none; width: 50%; margin:0; margin-left: 20px; margin-bottom: 10px">
+                                    <label for="greenmug-quantity">Quantity</label>
+                                    <input class="quantity" type="number" id="greenmug-quantity" name="greenmug-quantity" min="0">
+                                </div>
+                            </div>
+                            <div class="row valign-wrapper" style="padding:0px; margin-left:5%; margin-top:10px; margin-bottom:10px">
+                                <div class="left">
+                                    <label>
+                                    <input class="quantity" type="checkbox" id="whitemug-checkbox" />
+                                    <span>White ETV Logo</span>
+                                    </label>
+                                </div>
+                                <div class="right input-field" id="whitemug-quantity-field" style="display:none; width: 50%; margin:0; margin-left: 20px; margin-bottom: 10px">
+                                    <label for="whitemug-quantity">Quantity</label>
+                                    <input class="quantity" type="number" id="whitemug-quantity" name="whitemug-quantity" min="0">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row valign-wrapper">
+                            <div class="left">
+                                <label>
+                                    <input class="quantity" type="checkbox" id="shortsleeve-checkbox"/>
+                                    <span>Short Sleeve T-Shirt - $20</span>
+                                </label>
+                            </div>
+                        </div>
+                       
+                        <div class="short-sleeve" id="shortsleeve-colors" style="display:none">
+                            <div class="row valign-wrapper" style="padding:0px; margin-left:5%; margin-bottom:0">
+                                <div class="left">
+                                    <label>
+                                    Black
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="row valign-wrapper" style="padding:0px; margin-left:10%; margin-bottom:0">
+                                <div class="left">
+                                    <label>
+                                    <input class="quantity" type="checkbox" id="blackssm-checkbox" />
+                                    <span>M</span>
+                                    </label>
+                                </div>
+                                <div class="right input-field" id="blackssm-quantity-field" style="display:none; width: 50%; margin:0; margin-left: 20px; margin-top:10px;  margin-bottom: 10px">
+                                    <label for="blackssm-quantity">Quantity</label>
+                                    <input class="quantity" type="number" id="blackssm-quantity" name="blackssm-quantity" min="0">
+                                </div>
+                            </div>
+                            <div class="row valign-wrapper" style="padding:0px; margin-left:10%; margin-bottom:0">
+                                <div class="left">
+                                    <label>
+                                    <input class="quantity" type="checkbox" id="blackssl-checkbox" />
+                                    <span>L</span>
+                                    </label>
+                                </div>
+                                <div class="right input-field" id="blackssl-quantity-field" style="display:none; width: 50%; margin:0; margin-left: 20px; margin-top:10px;  margin-bottom: 10px">
+                                    <label for="blackssl-quantity">Quantity</label>
+                                    <input class="quantity" type="number" id="blackssl-quantity" name="blackssl-quantity" min="0">
+                                </div>
+                            </div>
+                            <div class="row valign-wrapper" style="padding:0px; margin-left:10%; margin-bottom:0">
+                                <div class="left">
+                                    <label>
+                                    <input class="quantity" type="checkbox" id="blackssxl-checkbox" />
+                                    <span>XL</span>
+                                    </label>
+                                </div>
+                                <div class="right input-field" id="blackssxl-quantity-field" style="display:none; width: 50%; margin:0; margin-left: 20px; margin-top:10px;  margin-bottom: 10px">
+                                    <label for="blackssxl-quantity">Quantity</label>
+                                    <input class="quantity" type="number" id="blackssxl-quantity" name="blackssxl-quantity" min="0">
+                                </div>
+                            </div>
+                            <div class="row valign-wrapper" style="padding:0px; margin-left:10%; margin-bottom:0">
+                                <div class="left">
+                                    <label>
+                                    <input class="quantity" type="checkbox" id="blackssxxl-checkbox" />
+                                    <span>XXL</span>
+                                    </label>
+                                </div>
+                                <div class="right input-field" id="blackssxxl-quantity-field" style="display:none; width: 50%; margin:0; margin-left: 20px; margin-top:10px;  margin-bottom: 10px">
+                                    <label for="blackssxxl-quantity">Quantity</label>
+                                    <input class="quantity" type="number" id="blackssxxl-quantity" name="blackssxxl-quantity" min="0">
+                                </div>
+                            </div>
+                            <div class="row valign-wrapper" style="padding:0px; margin-left:5%; margin-top:10px; margin-bottom:0">
+                                <div class="left">
+                                    <label>
+                                    Grey
+                                    </label>
+                                </div>
+                                
+                            </div>
+                            <div class="row valign-wrapper" style="padding:0px; margin-left:10%; margin-bottom:0">
+                                <div class="left">
+                                    <label>
+                                    <input class="quantity" type="checkbox" id="greyssm-checkbox" />
+                                    <span>M</span>
+                                    </label>
+                                </div>
+                                <div class="right input-field" id="greyssm-quantity-field" style="display:none; width: 50%; margin:0; margin-left: 20px; margin-top:10px;  margin-bottom: 10px">
+                                    <label for="greyssm-quantity">Quantity</label>
+                                    <input class="quantity" type="number" id="greyssm-quantity" name="greyssm-quantity" min="0">
+                                </div>
+                            </div>
+                            <div class="row valign-wrapper" style="padding:0px; margin-left:10%; margin-bottom:0">
+                                <div class="left">
+                                    <label>
+                                    <input class="quantity" type="checkbox" id="greyssl-checkbox" />
+                                    <span>L</span>
+                                    </label>
+                                </div>
+                                <div class="right input-field" id="greyssl-quantity-field" style="display:none; width: 50%; margin:0; margin-left: 20px; margin-top:10px;  margin-bottom: 10px">
+                                    <label for="greyssl-quantity">Quantity</label>
+                                    <input class="quantity" type="number" id="greyssl-quantity" name="greyssl-quantity" min="0">
+                                </div>
+                            </div>
+                            <div class="row valign-wrapper" style="padding:0px; margin-left:10%; margin-bottom:0">
+                                <div class="left">
+                                    <label>
+                                    <input class="quantity" type="checkbox" id="greyssxl-checkbox" />
+                                    <span>XL</span>
+                                    </label>
+                                </div>
+                                <div class="right input-field" id="greyssxl-quantity-field" style="display:none; width: 50%; margin:0; margin-left: 20px; margin-top:10px;  margin-bottom: 10px">
+                                    <label for="greyssxl-quantity">Quantity</label>
+                                    <input class="quantity" type="number" id="greyssxl-quantity" name="greyssxl-quantity" min="0">
+                                </div>
+                            </div>
+                            <div class="row valign-wrapper" style="padding:0px; margin-left:10%; margin-bottom:0">
+                                <div class="left">
+                                    <label>
+                                    <input class="quantity" type="checkbox" id="greyssxxl-checkbox" />
+                                    <span>XXL</span>
+                                    </label>
+                                </div>
+                                <div class="right input-field" id="greyssxxl-quantity-field" style="display:none; width: 50%; margin:0; margin-left: 20px; margin-top:10px;  margin-bottom: 10px">
+                                    <label for="greyssxxl-quantity">Quantity</label>
+                                    <input class="quantity" type="number" id="greyssxxl-quantity" name="greyssxxl-quantity" min="0">
+                                </div>
+                            </div>
+                            <div class="row valign-wrapper" style="padding:0px; margin-left:5%; margin-top:10px; margin-bottom:10px">
+                                <div class="left">
+                                    <label>
+                                    White
+                                    </label>
+                                </div>
+                                
+                            </div>
+                            <div class="row valign-wrapper" style="padding:0px; margin-left:10%; margin-bottom:0">
+                                <div class="left">
+                                    <label>
+                                    <input class="quantity" type="checkbox" id="whitessm-checkbox" />
+                                    <span>M</span>
+                                    </label>
+                                </div>
+                                <div class="right input-field" id="whitessm-quantity-field" style="display:none; width: 50%; margin:0; margin-left: 20px; margin-top:10px;  margin-bottom: 10px">
+                                    <label for="whitessm-quantity">Quantity</label>
+                                    <input class="quantity" type="number" id="whitessm-quantity" name="whitessm-quantity" min="0">
+                                </div>
+                            </div>
+                            <div class="row valign-wrapper" style="padding:0px; margin-left:10%; margin-bottom:0">
+                                <div class="left">
+                                    <label>
+                                    <input class="quantity" type="checkbox" id="whitessl-checkbox" />
+                                    <span>L</span>
+                                    </label>
+                                </div>
+                                <div class="right input-field" id="whitessl-quantity-field" style="display:none; width: 50%; margin:0; margin-left: 20px; margin-top:10px;  margin-bottom: 10px">
+                                    <label for="whitessl-quantity">Quantity</label>
+                                    <input class="quantity" type="number" id="whitessl-quantity" name="whitessl-quantity" min="0">
+                                </div>
+                            </div>
+                            <div class="row valign-wrapper" style="padding:0px; margin-left:10%; margin-bottom:0">
+                                <div class="left">
+                                    <label>
+                                    <input class="quantity" type="checkbox" id="whitessxl-checkbox" />
+                                    <span>XL</span>
+                                    </label>
+                                </div>
+                                <div class="right input-field" id="whitessxl-quantity-field" style="display:none; width: 50%; margin:0; margin-left: 20px; margin-top:10px;  margin-bottom: 10px">
+                                    <label for="whitessxl-quantity">Quantity</label>
+                                    <input class="quantity" type="number" id="whitessxl-quantity" name="whitessxl-quantity" min="0">
+                                </div>
+                            </div>
+                            <div class="row valign-wrapper" style="padding:0px; margin-left:10%; margin-bottom:0">
+                                <div class="left">
+                                    <label>
+                                    <input class="quantity" type="checkbox" id="whitessxxl-checkbox" />
+                                    <span>XXL</span>
+                                    </label>
+                                </div>
+                                <div class="right input-field" id="whitessxxl-quantity-field" style="display:none; width: 50%; margin:0; margin-left: 20px; margin-top:10px;  margin-bottom: 10px">
+                                    <label for="whitessxxl-quantity">Quantity</label>
+                                    <input class="quantity" type="number" id="whitessxxl-quantity" name="whitessxxl-quantity" min="0">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row valign-wrapper">
+                            <div class="left">
+                                <label>
+                                    <input class="quantity" type="checkbox" id="longsleeve-checkbox"/>
+                                    <span>Long Sleeve T-Shirt - $30</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="long-sleeve" id="longsleeve-colors" style="display:none">
+                            <div class="row valign-wrapper" style="padding:0px; margin-left:5%; margin-bottom:10px">
+                                <label>Black</label>
+                            </div>
+                                <div class="row valign-wrapper" style="padding:0px; margin-left:10%; margin-bottom:0">
+                                    <div class="left">
+                                        <label>
+                                        <input class="quantity" type="checkbox" id="blacklsm-checkbox" />
+                                        <span>M</span>
+                                        </label>
+                                    </div>
+                                    <div class="right input-field" id="blacklsm-quantity-field" style="display:none; width: 50%; margin:0; margin-left: 20px; margin-top:10px;  margin-bottom: 10px">
+                                        <label for="blacklsm-quantity">Quantity</label>
+                                        <input class="quantity" type="number" id="blacklsm-quantity" name="blacklsm-quantity" min="0">
+                                    </div>
+                                </div>
+                                <div class="row valign-wrapper" style="padding:0px; margin-left:10%; margin-bottom:0">
+                                    <div class="left">
+                                        <label>
+                                        <input class="quantity" type="checkbox" id="blacklsl-checkbox" />
+                                        <span>L</span>
+                                        </label>
+                                    </div>
+                                    <div class="right input-field" id="blacklsl-quantity-field" style="display:none; width: 50%; margin:0; margin-left: 20px; margin-top:10px;  margin-bottom: 10px">
+                                        <label for="blacklsl-quantity">Quantity</label>
+                                        <input class="quantity" type="number" id="blacklsl-quantity" name="blacklsl-quantity" min="0">
+                                    </div>
+                                </div>
+                                <div class="row valign-wrapper" style="padding:0px; margin-left:10%; margin-bottom:0">
+                                    <div class="left">
+                                        <label>
+                                        <input class="quantity" type="checkbox" id="blacklsxl-checkbox" />
+                                        <span>XL</span>
+                                        </label>
+                                    </div>
+                                    <div class="right input-field" id="blacklsxl-quantity-field" style="display:none; width: 50%; margin:0; margin-left: 20px; margin-top:10px;  margin-bottom: 10px">
+                                        <label for="blacklsxl-quantity">Quantity</label>
+                                        <input class="quantity" type="number" id="blacklsxl-quantity" name="blacklsxl-quantity" min="0">
+                                    </div>
+                                </div>
+                                <div class="row valign-wrapper" style="padding:0px; margin-left:10%; margin-bottom:0">
+                                    <div class="left">
+                                        <label>
+                                        <input class="quantity" type="checkbox" id="blacklsxxl-checkbox" />
+                                        <span>XXL</span>
+                                        </label>
+                                    </div>
+                                    <div class="right input-field" id="blacklsxxl-quantity-field" style="display:none; width: 50%; margin:0; margin-left: 20px; margin-top:10px;  margin-bottom: 10px">
+                                        <label for="blacklsxxl-quantity">Quantity</label>
+                                        <input class="quantity" type="number" id="blacklsxxl-quantity" name="blacklsxxl-quantity" min="0">
+                                    </div>
+                                </div>
+                            <div class="row valign-wrapper" style="padding:0px; margin-left:5%; margin-bottom:0">
+                                <div class="left">
+                                    <label>White</label>
+                                </div>
+                                    
+                            </div>
+                            <div class="row valign-wrapper" style="padding:0px; margin-left:10%; margin-bottom:0">
+                                <div class="left">
+                                    <label>
+                                    <input class="quantity" type="checkbox" id="whitelsm-checkbox" />
+                                    <span>M</span>
+                                    </label>
+                                </div>
+                                <div class="right input-field" id="whitelsm-quantity-field" style="display:none; width: 50%; margin:0; margin-left: 20px; margin-top:10px;  margin-bottom: 10px">
+                                    <label for="whitelsm-quantity">Quantity</label>
+                                    <input class="quantity" type="number" id="whitelsm-quantity" name="whitelsm-quantity" min="0">
+                                </div>
+                            </div>
+                            <div class="row valign-wrapper" style="padding:0px; margin-left:10%; margin-bottom:0">
+                                <div class="left">
+                                    <label>
+                                    <input class="quantity" type="checkbox" id="whitelsl-checkbox" />
+                                    <span>L</span>
+                                    </label>
+                                </div>
+                                <div class="right input-field" id="whitelsl-quantity-field" style="display:none; width: 50%; margin:0; margin-left: 20px; margin-top:10px;  margin-bottom: 10px">
+                                    <label for="whitelsl-quantity">Quantity</label>
+                                    <input class="quantity" type="number" id="whitelsl-quantity" name="whitelsl-quantity" min="0">
+                                </div>
+                            </div>
+                            <div class="row valign-wrapper" style="padding:0px; margin-left:10%; margin-bottom:0">
+                                <div class="left">
+                                    <label>
+                                    <input class="quantity" type="checkbox" id="whitelsxl-checkbox" />
+                                    <span>XL</span>
+                                    </label>
+                                </div>
+                                <div class="right input-field" id="whitelsxl-quantity-field" style="display:none; width: 50%; margin:0; margin-left: 20px; margin-top:10px;  margin-bottom: 10px">
+                                    <label for="whitelsxl-quantity">Quantity</label>
+                                    <input class="quantity" type="number" id="whitelsxl-quantity" name="whitelsxl-quantity" min="0">
+                                </div>
+                            </div>
+                            <div class="row valign-wrapper" style="padding:0px; margin-left:10%; margin-bottom:0">
+                                <div class="left">
+                                    <label>
+                                    <input class="quantity" type="checkbox" id="whitelsxxl-checkbox" />
+                                    <span>XXL</span>
+                                    </label>
+                                </div>
+                                <div class="right input-field" id="whitelsxxl-quantity-field" style="display:none; width: 50%; margin:0; margin-left: 20px; margin-top:10px;  margin-bottom: 10px">
+                                    <label for="whitelsxxl-quantity">Quantity</label>
+                                    <input class="quantity" type="number" id="whitelsxxl-quantity" name="whitelsxxl-quantity" min="0">
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <script>
+                    $('#mug-checkbox').change(function(){
+                        if($(this).is(":checked")){
+                            $('#mug-colors').show();
+                            
+                        }
+                        else if($(this).is(":not(:checked)")){
+                            $('#mug-colors').hide();
+                            $('#greenmug-checkbox').prop('checked', false);
+                            $('#greenmug-quantity').val(0);
+                            $('#whitemug-checkbox').prop('checked', false);
+                            $('#whitemug-quantity').val(0);
+                        }
+                    });
+                    $('#greenmug-checkbox').change(function(){
+                        if($(this).is(":checked")){
+                            $('#greenmug-quantity-field').show();
+                            
+                        }
+                        else if($(this).is(":not(:checked)")){
+                            $('#greenmug-quantity-field').hide();
+                            $('#greenmug-quantity').val(0);
+                        }
+                    });
+                    $('#whitemug-checkbox').change(function(){
+                        if($(this).is(":checked")){
+                            $('#whitemug-quantity-field').show();
+                            
+                        }
+                        else if($(this).is(":not(:checked)")){
+                            $('#whitemug-quantity-field').hide();
+                            $('#whitemug-quantity').val('0');
+                        }
+                    });
+                    $('#shortsleeve-checkbox').change(function(){
+                        if($(this).is(":checked")){
+                            $('#shortsleeve-colors').show();
+                            
+                        }
+                        else if($(this).is(":not(:checked)")){
+                            $('#shortsleeve-colors').hide();
+                            $('#shortsleeve-colors input').prop('checked', false);
+                            $('#blackssm-quantity').val(0);
+                            $('#blackssl-quantity').val(0);
+                            $('#blackssxl-quantity').val(0);
+                            $('#blackssxxl-quantity').val(0);
+                            $('#greyssm-quantity').val(0);
+                            $('#greyssl-quantity').val(0);
+                            $('#greyssxl-quantity').val(0);
+                            $('#greyssxxl-quantity').val(0);
+                            $('#whitessm-quantity').val(0);
+                            $('#whitessl-quantity').val(0);
+                            $('#whitessxl-quantity').val(0);
+                            $('#whitessxxl-quantity').val(0);
+                        }
+                    });
+                    $('#longsleeve-checkbox').change(function(){
+                        if($(this).is(":checked")){
+                            $('#longsleeve-colors').show();
+                            
+                        }
+                        else if($(this).is(":not(:checked)")){
+                            $('#longsleeve-colors').hide();
+                            $('#blackls-checkbox').prop('checked', false);
+                            $('#blackls-quantity').val(0);
+                            $('#whitels-checkbox').prop('checked', false);
+                            $('#whitels-quantity').val(0);
+                            $('#blacklsm-quantity').val(0);
+                            $('#blacklsl-quantity').val(0);
+                            $('#blacklsxl-quantity').val(0);
+                            $('#blacklsxxl-quantity').val(0);
+                            $('#greylsm-quantity').val(0);
+                            $('#greylsl-quantity').val(0);
+                            $('#greylsxl-quantity').val(0);
+                            $('#greylsxxl-quantity').val(0);
+                            $('#whitelsm-quantity').val(0);
+                            $('#whitelsl-quantity').val(0);
+                            $('#whitelsxl-quantity').val(0);
+                            $('#whitelsxxl-quantity').val(0);
+                        }
+                    });
+                    $('#blackssm-checkbox').change(function(){
+                        if($(this).is(":checked")){
+                            $('#blackssm-quantity-field').show();
+                            
+                        }
+                        else if($(this).is(":not(:checked)")){
+                            $('#blackssm-quantity-field').hide();
+                            $('#blackssm-quantity').val(0);
+                        }
+                    });
+                    $('#blackssl-checkbox').change(function(){
+                        if($(this).is(":checked")){
+                            $('#blackssl-quantity-field').show();
+                            
+                        }
+                        else if($(this).is(":not(:checked)")){
+                            $('#blackssl-quantity-field').hide();
+                            $('#blackssl-quantity').val(0);
+                        }
+                    });
+                    $('#blackssxl-checkbox').change(function(){
+                        if($(this).is(":checked")){
+                            $('#blackssxl-quantity-field').show();
+                            
+                        }
+                        else if($(this).is(":not(:checked)")){
+                            $('#blackssxl-quantity-field').hide();
+                            $('#blackssxl-quantity').val(0);
+                        }
+                    });
+                    $('#blackssxxl-checkbox').change(function(){
+                        if($(this).is(":checked")){
+                            $('#blackssxxl-quantity-field').show();
+                            
+                        }
+                        else if($(this).is(":not(:checked)")){
+                            $('#blackssxxl-quantity-field').hide();
+                            $('#blackssxxl-quantity').val(0);
+                        }
+                    });
+                    $('#greyssm-checkbox').change(function(){
+                        if($(this).is(":checked")){
+                            $('#greyssm-quantity-field').show();
+                            
+                        }
+                        else if($(this).is(":not(:checked)")){
+                            $('#greyssm-quantity-field').hide();
+                            $('#greyssm-quantity').val(0);
+                        }
+                    });
+                    $('#greyssl-checkbox').change(function(){
+                        if($(this).is(":checked")){
+                            $('#greyssl-quantity-field').show();
+                            
+                        }
+                        else if($(this).is(":not(:checked)")){
+                            $('#greyssl-quantity-field').hide();
+                            $('#greyssl-quantity').val(0);
+                        }
+                    });
+                    $('#greyssxl-checkbox').change(function(){
+                        if($(this).is(":checked")){
+                            $('#greyssxl-quantity-field').show();
+                            
+                        }
+                        else if($(this).is(":not(:checked)")){
+                            $('#greyssxl-quantity-field').hide();
+                            $('#greyssxl-quantity').val(0);
+                        }
+                    });
+                    $('#greyssxxl-checkbox').change(function(){
+                        if($(this).is(":checked")){
+                            $('#greyssxxl-quantity-field').show();
+                            
+                        }
+                        else if($(this).is(":not(:checked)")){
+                            $('#greyssxxl-quantity-field').hide();
+                            $('#greyssxxl-quantity').val(0);
+                        }
+                    });
+                    $('#whitessm-checkbox').change(function(){
+                        if($(this).is(":checked")){
+                            $('#whitessm-quantity-field').show();
+                            
+                        }
+                        else if($(this).is(":not(:checked)")){
+                            $('#whitessm-quantity-field').hide();
+                            $('#whitessm-quantity').val(0);
+                        }
+                    });
+                    $('#whitessl-checkbox').change(function(){
+                        if($(this).is(":checked")){
+                            $('#whitessl-quantity-field').show();
+                            
+                        }
+                        else if($(this).is(":not(:checked)")){
+                            $('#whitessl-quantity-field').hide();
+                            $('#whitessl-quantity').val(0);
+                        }
+                    });
+                    $('#whitessxl-checkbox').change(function(){
+                        if($(this).is(":checked")){
+                            $('#whitessxl-quantity-field').show();
+                            
+                        }
+                        else if($(this).is(":not(:checked)")){
+                            $('#whitessxl-quantity-field').hide();
+                            $('#whitessxl-quantity').val(0);
+                        }
+                    });
+                    $('#whitessxxl-checkbox').change(function(){
+                        if($(this).is(":checked")){
+                            $('#whitessxxl-quantity-field').show();
+                            
+                        }
+                        else if($(this).is(":not(:checked)")){
+                            $('#whitessxxl-quantity-field').hide();
+                            $('#whitessxxl-quantity').val(0);
+                        }
+                    });
+                    $('#blacklsm-checkbox').change(function(){
+                        if($(this).is(":checked")){
+                            $('#blacklsm-quantity-field').show();
+                            
+                        }
+                        else if($(this).is(":not(:checked)")){
+                            $('#blacklsm-quantity-field').hide();
+                            $('#blacklsm-quantity').val(0);
+                        }
+                    });
+                    $('#blacklsl-checkbox').change(function(){
+                        if($(this).is(":checked")){
+                            $('#blacklsl-quantity-field').show();
+                            
+                        }
+                        else if($(this).is(":not(:checked)")){
+                            $('#blacklsl-quantity-field').hide();
+                            $('#blacklsl-quantity').val(0);
+                        }
+                    });
+                    $('#blacklsxl-checkbox').change(function(){
+                        if($(this).is(":checked")){
+                            $('#blacklsxl-quantity-field').show();
+                            
+                        }
+                        else if($(this).is(":not(:checked)")){
+                            $('#blacklsxl-quantity-field').hide();
+                            $('#blacklsxl-quantity').val(0);
+                        }
+                    });
+                    $('#blacklsxxl-checkbox').change(function(){
+                        if($(this).is(":checked")){
+                            $('#blacklsxxl-quantity-field').show();
+                            
+                        }
+                        else if($(this).is(":not(:checked)")){
+                            $('#blacklsxxl-quantity-field').hide();
+                            $('#blacklsxxl-quantity').val(0);
+                        }
+                    });
+                    
+                    $('#whitelsm-checkbox').change(function(){
+                        if($(this).is(":checked")){
+                            $('#whitelsm-quantity-field').show();
+                            
+                        }
+                        else if($(this).is(":not(:checked)")){
+                            $('#whitelsm-quantity-field').hide();
+                            $('#whitelsm-quantity').val(0);
+                        }
+                    });
+                    $('#whitelsl-checkbox').change(function(){
+                        if($(this).is(":checked")){
+                            $('#whitelsl-quantity-field').show();
+                            
+                        }
+                        else if($(this).is(":not(:checked)")){
+                            $('#whitelsl-quantity-field').hide();
+                            $('#whitelsl-quantity').val(0);
+                        }
+                    });
+                    $('#whitelsxl-checkbox').change(function(){
+                        if($(this).is(":checked")){
+                            $('#whitelsxl-quantity-field').show();
+                            
+                        }
+                        else if($(this).is(":not(:checked)")){
+                            $('#whitelsxl-quantity-field').hide();
+                            $('#whitelsxl-quantity').val(0);
+                        }
+                    });
+                    $('#whitelsxxl-checkbox').change(function(){
+                        if($(this).is(":checked")){
+                            $('#whitelsxxl-quantity-field').show();
+                            
+                        }
+                        else if($(this).is(":not(:checked)")){
+                            $('#whitelsxxl-quantity-field').hide();
+                            $('#whitelsxxl-quantity').val(0);
+                        }
+                    });
+                    $('#mug-quantity').change(function(){
+                        var mugTotal = 15 * $('#quantity').val()
+                        $('#shop-total').text('$' + mugTotal)
+                        $('#shop-total').attr('value', mugTotal)
+                    });
+                    $('#greenmug-quantity').change(function(){
+                        var greenmugTotal = parseInt(15 * $('#greenmug-quantity').val())
+                    });
+                    $('#whitemug-quantity').change(function(){
+                        var whitemugTotal = parseInt(15 * $('#whitemug-quantity').val())
+                    });
+                    $('#blackssm-quantity').change(function(){
+                        var blackssTotal = parseInt(20 * $('#blackssm-quantity').val())
+                    });
+                    $('#blackssl-quantity').change(function(){
+                        var blackssTotal = parseInt(20 * $('#blackssl-quantity').val())
+                    });
+                    $('#blackssxl-quantity').change(function(){
+                        var blackssTotal = parseInt(20 * $('#blackssxl-quantity').val())
+                    });
+                    $('#blackssxxl-quantity').change(function(){
+                        var blackssTotal = parseInt(20 * $('#blackssxxl-quantity').val())
+                    });
+                    $('#greyssm-quantity').change(function(){
+                        var greyssTotal = parseInt(20 * $('#greyssm-quantity').val())
+                    });
+                    $('#greyssl-quantity').change(function(){
+                        var greyssTotal = parseInt(20 * $('#greyssl-quantity').val())
+                    });
+                    $('#greyssxl-quantity').change(function(){
+                        var greyssTotal = parseInt(20 * $('#greyssxl-quantity').val())
+                    });
+                    $('#greyssxxl-quantity').change(function(){
+                        var greyssTotal = parseInt(20 * $('#greyssxxl-quantity').val())
+                    });
+                    $('#whitessm-quantity').change(function(){
+                        var whitessTotal = parseInt(20 * $('#whitessm-quantity').val())
+                    });
+                    $('#whitessl-quantity').change(function(){
+                        var whitessTotal = parseInt(20 * $('#whitessl-quantity').val())
+                    });
+                    $('#whitessxl-quantity').change(function(){
+                        var whitessTotal = parseInt(20 * $('#whitessxl-quantity').val())
+                    });
+                    $('#whitessxxl-quantity').change(function(){
+                        var whitessTotal = parseInt(20 * $('#whitessxxl-quantity').val())
+                    });
+                    $('#whitelsm-quantity').change(function(){
+                        var whitelsTotal = parseInt(30 * $('#whitelsm-quantity').val())
+                    });
+                    $('#whitelsl-quantity').change(function(){
+                        var whitelsTotal = parseInt(30 * $('#whitelsl-quantity').val())
+                    });
+                    $('#whitelsxl-quantity').change(function(){
+                        var whitelsTotal = parseInt(30 * $('#whitelsxl-quantity').val())
+                    });
+                    $('#whitelsxxl-quantity').change(function(){
+                        var whitelsTotal = parseInt(30 * $('#whitelsxxl-quantity').val())
+                    });
+                    $('#blacklsm-quantity').change(function(){
+                        var blacklsTotal = parseInt(30 * $('#blacklsm-quantity').val())
+                    });
+                    $('#blacklsl-quantity').change(function(){
+                        var blacklsTotal = parseInt(30 * $('#blacklsl-quantity').val())
+                    });
+                    $('#blacklsxl-quantity').change(function(){
+                        var blacklsTotal = parseInt(30 * $('#blacklsxl-quantity').val())
+                    });
+                    $('#blacklsxxl-quantity').change(function(){
+                        var blacklsTotal = parseInt(30 * $('#blacklsxxl-quantity').val())
+                    });
+                    $('#shop-total').change(function(){
+                        
+                    });
+                    $('.quantity').change(function(){
+                        var greenmugTotal = parseInt(15 * $('#greenmug-quantity').val())
+                        var whitemugTotal = parseInt(15 * $('#whitemug-quantity').val())
+                        var whitessmTotal = parseInt(20 * $('#whitessm-quantity').val())
+                        var whitesslTotal = parseInt(20 * $('#whitessl-quantity').val())
+                        var whitessxlTotal = parseInt(20 * $('#whitessxl-quantity').val())
+                        var whitessxxlTotal = parseInt(20 * $('#whitessxxl-quantity').val())
+                        var greyssmTotal = parseInt(20 * $('#greyssm-quantity').val())
+                        var greysslTotal = parseInt(20 * $('#greyssl-quantity').val())
+                        var greyssxlTotal = parseInt(20 * $('#greyssxl-quantity').val())
+                        var greyssxxlTotal = parseInt(20 * $('#greyssxxl-quantity').val())
+                        var blackssmTotal = parseInt(20 * $('#blackssm-quantity').val())
+                        var blacksslTotal = parseInt(20 * $('#blackssl-quantity').val())
+                        var blackssxlTotal = parseInt(20 * $('#blackssxl-quantity').val())
+                        var blackssxxlTotal = parseInt(20 * $('#blackssxxl-quantity').val())
+                        var whitelsmTotal = parseInt(30 * $('#whitelsm-quantity').val())
+                        var whitelslTotal = parseInt(30 * $('#whitelsl-quantity').val())
+                        var whitelsxlTotal = parseInt(30 * $('#whitelsxl-quantity').val())
+                        var whitelsxxlTotal = parseInt(30 * $('#whitelsxxl-quantity').val())
+                        var blacklsmTotal = parseInt(30 * $('#blacklsm-quantity').val())
+                        var blacklslTotal = parseInt(30 * $('#blacklsl-quantity').val())
+                        var blacklsxlTotal = parseInt(30 * $('#blacklsxl-quantity').val())
+                        var blacklsxxlTotal = parseInt(30 * $('#blacklsxxl-quantity').val())
+                        var Total = greenmugTotal+whitemugTotal+whitessmTotal+whitesslTotal+whitessxlTotal+whitessxxlTotal+greyssmTotal+greysslTotal+greyssxlTotal+greyssxxlTotal+blackssmTotal+blacksslTotal+blackssxlTotal+blackssxxlTotal+whitelsmTotal+whitelslTotal+whitelsxlTotal+whitelsxxlTotal+blacklsmTotal+blacklslTotal+blacklsxlTotal+blacklsxxlTotal
+                        $('#shop-total').text('$' + Total)
+                        $('.venmo-button').attr('href', 'https://venmo.com/?txn=pay&audience=friends&recipients=Empower-TheVillage&amount='+ Total +'&note=ETV%20Merchandise')
+                    })
+                </script>
+                <div class="row center-align">
+                    <b>Total:</b><div id="shop-total" value="0">0</div>
+                </div>
+                <div class="donate-buttons center-align col s12 m8 offset-m2">
+                    
+                    <a class="btn waves-effect venmo-button valign-wrapper" target="_blank" href="">
+                        <img src="{% static 'img/venmo-icon.svg' %}" style="width: 30px;margin-bottom:-8px; padding-top:7px"> Pay with Venmo
+                    </a>
+                    <br>
+                    <a class="btn waves-effect pp-button" target="_blank" href="https://www.paypal.com/paypalme/empowerthevillage?locale.x=en_US">
+                        <i class="fab fa-cc-paypal"></i> Pay with Paypal
+                    </a>
+                    <script>
+                        $('#no-venmo').click(function(){
+                            Swal.fire('We will contact you to collect payment details!')
+                        })
+                    </script>
+                </div>
+                    </form>
+                </div>
+          </div>
+    </div>
+    
+</div>
+<style>
+    .select-wrapper {
+        display: none !important;
+    }
+    .hidden {
+        display: none;
+    }
+    
+    #page {
+        background-image: url("https://empowerthevillage.s3.amazonaws.com/static/img/VBP+collage.png");
+        background-size: 100%;
+        background-repeat: repeat;
+    }
+    label {
+        font-size: 16px !important;
+        color: black !important
+    }
+    h7 {
+        font-size: 18px
+    }
+    .content-container {
+    padding-top: 5%;
+    background-color: rgba(255, 255, 255, 0.954);
+    margin-left: 3%;
+    margin-right: 3%;
+    }
+    .required {
+        color: red
+    }
+    .label-title {
+        font-size: 16px
+    }
+    .donate-buttons {
+        padding-bottom: 60px
+    }
+    .donate-buttons a {
+        width: 100%;
+        margin:5px;
+        font-size: 16px;
+        letter-spacing: 1.5px;
+        font-weight:400;
+        height: 50px;
+        padding-top:4px;
+        border-radius: 40px;
+    }
+    .donate-buttons a i {
+        font-size: 24px;
+    }
+    .donation-title {
+        font-family: oskar-inline;
+        font-size: 52px;
+    }
+    @media only screen and (min-width:0px){
+        .donation-title {
+            font-family: oskar-inline;
+            font-size: 32px;
+        }
+        .donation-subtitle {
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 20px
+        }
+    }
+    @media only screen and (min-width:601px){
+        .donation-title {
+            font-family: oskar-inline;
+            font-size: 42px;
+        }
+    }
+    @media only screen and (min-width:993px){
+        .donation-title {
+            font-family: oskar-inline;
+            font-size: 48px;
+        }
+        .donation-subtitle {
+            font-size: 20px;
+            font-weight: 300;
+            line-height: 24px
+        }
+    }
+    @media only screen and (min-width:1400px){
+        .donation-title {
+            font-family: oskar-inline;
+            font-size: 56px;
+        }
+        .donation-subtitle {
+            font-size: 20px;
+            font-weight: 300;
+            line-height: 24px
+        }
+    }
+    .cc-button {
+        background-color: rgb(55, 54, 54)
+    }
+    .cc-button:hover {
+        background-color:rgb(101, 101, 101)
+    }
+    .pp-button {
+        background-color: #3b7bbf
+    }
+    .pp-button:hover {
+        background-color:#6799ce
+    }
+    .venmo-button {
+        background-color: #dfdfdf;
+        color:rgb(55, 54, 54)
+    }
+    .venmo-button:hover {
+        background-color:#606060
+    }
+</style>
+<style>
+    .card-price-title {
+        color: white;
+        margin:0
+    }
+    .card-action a {
+        color: rgb(26, 109, 26) !important;
+        font-size: 18px
+    }
+    .price {
+        color: rgb(130, 213, 130)
+    }
+    .card-content {
+        background-color: rgba(34, 34, 34, 0.92);
+        padding-bottom: 0 !important
+    }
+    .card-action {
+        background: white
+    }
+    .card-content p {
+        color: white;
+        margin-bottom: 0
+    }
+    .grid-container {
+        display: grid;
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
+        grid-template-columns: 50% 50%;
+        width: 60%;
+        margin-left: 20%
+    }
+    .grid-item {
+        padding-bottom: 100%
+    }
+    .pillars-title {
+        font-family: oskar-inline;
+        font-size: 64px;
+        color: rgb(53, 53, 53)
+    }
+    .divider {
+        margin: 5%;
+    }
+    
+    p {
+        font-weight: 400;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        text-align: center;
+    }
+    
+    .facts-ul li {
+        padding-bottom: 15px;
+        font-weight: 300;
+    }
+    @media only screen and (min-width: 0px) {
+        .power-collapse {
+        width: 100%;
+        
+    }
+    .power-collapse li {
+        
+    }
+    .power-collapse li div{
+        font-size: 14px;
+        padding: 2% 5%
+    }
+        blockquote {
+            font-size: 16px;
+            font-weight: 300;
+            margin-top: 30px !important;
+            margin-top: 30px !important;
+        }
+        .statistic-title {
+            font-family: oskar-inline;
+            font-size: 28px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-transform: scale(1, 0.9);
+            text-align: center;
+            background-color: rgba(154, 22, 22, 0.947);
+            padding: 15px 5px;
+            color: white
+        }
+        .collapsible li {
+            margin: 0 !important;
+        }
+        .degree-attainment-small {
+            display: block;
+            padding: 0% 5%;
+        }
+        .degree-attainment {
+            display: none;
+            padding: 0% 5%;
+        }
+        blockquote {
+            width: 90%;
+            margin-left: 5%;
+            margin-top: 7%;
+        }
+    }
+    @media only screen and (min-width: 420px) {
+        .statistic-title {
+            font-size: 32px;
+            padding: 15px 10px;
+        }
+    }
+    @media only screen and (min-width: 601px) {
+        .power-collapse {
+        width: 100%;
+        
+    }
+    .power-collapse li {
+        
+    }
+    .power-collapse li div{
+        font-size: 16px;
+        padding: 2% 10%
+    }
+        blockquote {
+            font-size: 20px;
+            margin-top: 5% !important;
+            margin-bottom: 5% !important;
+        }
+        .statistic-title {
+            font-size: 38px;
+            width: 50% !important;
+            margin-left: 25%;
+            margin-top: 5%;
+            margin-bottom: 5%;
+        }
+        
+      
+    }
+    @media only screen and (min-width: 993px) {
+        blockquote {
+            font-size: 22px;
+        }
+        .pillar-body {
+            padding-left: 5% !important;
+            padding-right: 5% !important;
+        }
+        .power-collapse {
+        width: 90%;
+        margin-left: 5%
+        
+    }
+    .power-collapse li {
+        
+    }
+    .power-collapse li div{
+        font-size: 18px;
+        padding: 2% 5%
+    }
+        
+    }
+</style>
+{% endblock %}

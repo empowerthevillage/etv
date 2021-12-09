@@ -1,0 +1,2057 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}{{ title }}{% endblock %}
+{% block content %}
+
+<div class="parallax-container z-depth-1" style="height:220px">
+    <div class="parallax" style="opacity: 1;">
+        <img src='{% static "img/bf-challenge-cropped.png" %}' style="width:100%">
+    </div>
+</div>
+<div style="background-color:rgb(255, 255, 255); height: 50%">
+    <div class="bingo-title center-align container" style="padding-bottom: 50px; padding-top:30px">
+        <div class="row">
+        <img src="https://empowerthevillage.s3.amazonaws.com/static/img/power_bingo_title.png" width="60%">
+        </div>
+        <div class="directions">
+            <p><b style="font-size: 24px;">Welcome to Empower The Village Power Bingo!</b></p>
+            <p style="margin-bottom:0">Use the interactive Power Bingo Board below to complete challenges and help ETV Make Every Friday, Black Friday! When you click on a box on your bingo board, you will be prompted to enter your proof of completion for the corresponding challenge. When you press submit, your participation will be recorded automatically!</p>
+                <br>
+            <p style="margin:0">Power Bingo Challenge winners will be notified via email at the end of the challenge period.</p>
+            {% if request.user.is_authenticated %}
+            {% else%}
+                <a class="btn btn-large" href="{{ register_url }}" style="margin-top: 10px; background-color:rgb(28, 29, 28)">Create an Account to Get Started!</a>
+            {% endif %}
+            <p><b style="font-size: 24px">Ways to Win</b></p>
+            <div class="row">
+                        <div class="col s12 m6">
+                            <ul class="bf-sublist">
+                                <li><b><u style="font-size: 20px">Team Play</u></b></li>
+                                <li style="font-size: 14px; color: rgb(169, 29, 29); padding-bottom: 15px">Register for Sponsored Challenges Only</li>
+                                <li>The first team to blackout the board by filling in every space wins!</li>
+                                <li><b>- AND -</b></li>
+                                <li>The first team to have four teammates win in any direction wins 2nd place!</li>
+                            </ul>
+                        </div>
+                        <div class="col s12 m6">
+                            <ul class="bf-sublist">
+                                <li><b><u style="font-size: 20px">Individual Play</u></b></li>
+                                <li style="font-size: 14px; color: rgb(169, 29, 29);padding-bottom: 15px">Suggested Registration Donation - $25 or more</li>
+                                <li>Be the first person to get Bingo in two directions</li>
+                                    <li>(12 bingo combinations!)</li>
+                                <a class="btn btn-large waves-effect waves-light donate-btn-bingo" href="{{ donate_url }}" id="donate-btn-bingo">DONATE TO PLAY</a>
+                            </ul>
+                        </div>
+                        
+                    </div>
+        </div>
+    </div>
+    {% if user.is_authenticated %}
+    {% if user.is_bingo_sponsor or user.is_donor %}
+    <div class="z-depth-3" style="width:100%;background:rgb(33, 33, 33); padding-left: 2%; padding-right:2%">
+
+    {% for obj in bingo_card %}
+    
+    <div class="row" style="margin-bottom:0;" >
+        <div class="col s12 xl7">
+            <div class="power row center-align">
+                <div style="color:#bf1e2d;">P</div>
+                <div style="color:#01a650">O</div>
+                <div style="color:#bf1e2d">W</div>
+                <div style="color:#01a650">E</div>
+                <div style="color:#bf1e2d">R</div>
+            </div>
+            <div class="left numbering">
+                <p class="valign-wrapper" style="color:#01a650">1</p>
+                <p class="valign-wrapper" style="color:#bf1e2d">2</p>
+                <p class="valign-wrapper" style="color:#01a650">3</p>
+                <p class="valign-wrapper" style="color:#bf1e2d">4</p>
+                <p class="valign-wrapper" style="color:#01a650">5</p>
+            </div>
+            
+            <div class="bingo-container center-align z-depth-3">
+                    {% if user_bingo.spot1 %}
+                    <div class="bingo-item row1 col1 valign-wrapper">
+                        <div id="P1" class="has-image tooltip" style="width:100%; height:100%; background-image: url('https://empowerthevillage.s3.amazonaws.com/static/img/EFBF+bag.png'); background-size: 80%;background-position:center; background-repeat:no-repeat">
+                            <span class="tooltiptext">{{ obj.spot1 }}</span>   
+                        </div>
+                       {% else %}
+                       <div class="bingo-item row1 col1 valign-wrapper modal-trigger" id='P1' data-target="modal1">
+                       {% if obj.spot1_img %}
+                        <div class="has-image tooltip" style="width:100%; height:100%; background-image: url({{ obj.spot1_img.url }}); background-size: 100%;background-position-y: top; background-position-x:right">
+                            <span class="tooltiptext">{{ obj.spot1 }}</span>   
+                        </div>
+                        
+                        {% else %}
+                        <div id="spot1-text">
+                        {{ obj.spot1 }}
+                        </div>
+                        {% endif %}
+                       {% endif %}
+                        
+                    </div>
+                
+                <div class="bingo-item valign-wrapper row2 col1" id="P2" style="background-color:rgb(210, 227, 200)">
+                    {% if obj.spot2_img %}
+                    <div class="has-image front tooltip" style="width:100%; height:100%; background-image: url({{ obj.spot2_img.url }}); background-size: 100%;background-position: center; background-repeat: no-repeat">
+                        <span class="tooltiptext">{{ obj.spot2 }}</span>   
+                        </div>
+                    {% else %}
+                    <div id="spot2-text">
+                        <div id="spot2-text">
+                        {{ obj.spot2 }}
+                        </div>
+                    </div>
+                    {% endif %}
+                </div>
+                {% if user_bingo.spot3 %}
+                <div class="bingo-item row1 col1 valign-wrapper">
+                    <div class="has-image tooltip" style="width:100%; height:100%; background-image: url('https://empowerthevillage.s3.amazonaws.com/static/img/EFBF+bag.png'); background-size: 80%;background-position:center; background-repeat:no-repeat">
+                     <span class="tooltiptext">{{ obj.spot3 }}</span>   
+                     </div>
+                     {% else %}
+                <div class="bingo-item valign-wrapper row3 col1 modal-trigger" id="P3" data-target="modal3">
+                    {% if obj.spot3_img %}
+                    <div class="has-image tooltip" id="P3" style="width:100%; height:100%; background-image: url({{ obj.spot3_img.url }}); background-size: 100%;background-position-y: top; background-position-x:right">
+                        <span class="tooltiptext">{{ obj.spot3 }}</span>   
+                        </div>
+                        
+                    {% else %}
+                    <div id="spot3-text">
+                    {{ obj.spot3 }}
+                    </div>
+                    {% endif %}
+                {% endif %}
+                </div>
+                {% if user_bingo.spot4 %}
+                <div class="bingo-item row1 col1 valign-wrapper">
+                    <div class="has-image tooltip" style="width:100%; height:100%; background-image: url('https://empowerthevillage.s3.amazonaws.com/static/img/EFBF+bag.png'); background-size: 80%;background-position:center; background-repeat:no-repeat">
+                     <span class="tooltiptext">{{ obj.spot4 }}</span>   
+                     </div>
+                     {% else %}
+                <div class="bingo-item valign-wrapper row4 col1 modal-trigger" id="P4" data-target="modal4">
+                    {% if obj.spot4_img %}
+                    <div class="has-image tooltip" id="P4" style="width:100%; height:100%; background-color:rgb(210, 227, 200); background-image: url({{ obj.spot4_img.url }}); background-size: 100%;background-position:center; background-repeat: no-repeat">
+                        <span class="tooltiptext">{{ obj.spot4 }}</span>   
+                    </div>
+                    
+                    {% else %}
+                    <div id="spot4-text">
+                        {{ obj.spot4 }}
+                    </div>
+                    {% endif %}
+                {% endif %}
+                </div>
+
+                {% if user_bingo.spot5 %}
+                <div class="bingo-item row4 col1 valign-wrapper">
+                    <div class="has-image tooltip" style="width:100%; height:100%; background-image: url('https://empowerthevillage.s3.amazonaws.com/static/img/EFBF+bag.png'); background-size: 80%;background-position:center; background-repeat:no-repeat">
+                        <span class="tooltiptext">{{ obj.spot5 }}</span>   
+                    </div>
+                    {% else %}
+                    <div class="bingo-item valign-wrapper row5 col1 modal-trigger" id="P5" data-target="modal5">
+                        {% if obj.spot5_img %}
+                        <div class="has-image tooltip" style="width:100%; height:100%; background-image: url({{ obj.spot5_img.url }}); background-size: 100%;background-position-y: top; background-position-x:right">
+                            <span class="tooltiptext">{{ obj.spot5 }}</span>   
+                            </div>
+                    {% else %}
+                    <div id="spot5-text">
+                    {{ obj.spot5 }}
+                    </div>
+                    {% endif %}
+                {% endif %}
+                </div>
+
+                {% if user_bingo.spot6 %}
+                <div class="bingo-item row1 valign-wrapper">
+                    <div class="has-image tooltip" style="width:100%; height:100%; background-image: url('https://empowerthevillage.s3.amazonaws.com/static/img/EFBF+bag.png'); background-size: 80%;background-position:center; background-repeat:no-repeat">
+                     <span class="tooltiptext">{{ obj.spot6 }}</span>   
+                     </div>
+                     {% else %}
+                <div class="bingo-item valign-wrapper row1 modal-trigger" id="P6" data-target="modal6">
+                    {% if obj.spot6_img %}
+                    <div class="has-image front tooltip" style="width:100%; height:100%; background-color:rgb(210, 227, 200); background-image: url({{ obj.spot6_img.url }}); background-size: 100%;background-position:center; background-repeat: no-repeat">
+                        <span class="tooltiptext">{{ obj.spot6 }}</span>   
+                    </div>
+                    
+                    {% else %}
+                    <div id="spot6-text">
+                        {{ obj.spot6 }}
+                    </div>
+                    {% endif %}
+                {% endif %}
+                </div>
+
+                {% if user_bingo.spot7 %}
+                <div class="bingo-item row2 valign-wrapper">
+                    <div class="has-image tooltip" style="width:100%; height:100%; background-image: url('https://empowerthevillage.s3.amazonaws.com/static/img/EFBF+bag.png'); background-size: 80%;background-position:center; background-repeat:no-repeat">
+                        <span class="tooltiptext">{{ obj.spot7 }}</span>   
+                    </div>
+                    {% else %}
+                    <div class="bingo-item valign-wrapper row1 modal-trigger" id="P7" data-target="modal7" >
+                        {% if obj.spot7_img %}
+                        <div class="has-image front tooltip" style="width:100%; height:100%; background-image: url({{ obj.spot7_img.url }}); background-size: 100%;background-position-y: top; background-position-x:right">
+                            <span class="tooltiptext">{{ obj.spot7 }}</span>   
+                            </div>
+                    {% else %}
+                    <div id="spot7-text">
+                    {{ obj.spot7 }}
+                    </div>
+                    {% endif %}
+                {% endif %}
+                </div>
+
+                {% if user_bingo.spot8 %}
+                <div class="bingo-item row3 valign-wrapper">
+                    <div class="has-image tooltip" style="width:100%; height:100%; background-image: url('https://empowerthevillage.s3.amazonaws.com/static/img/EFBF+bag.png'); background-size: 80%;background-position:center; background-repeat:no-repeat">
+                        <span class="tooltiptext">{{ obj.spot8 }}</span>   
+                    </div>
+                    {% else %}
+                    <div class="bingo-item valign-wrapper row1 modal-trigger" id="P8" data-target="modal8" >
+                        {% if obj.spot8_img %}
+                        <div class="has-image front tooltip" style="width:100%; height:100%; background-image: url({{ obj.spot8_img.url }}); background-size: 100%;background-position-y: top; background-position-x:right">
+                            <span class="tooltiptext">{{ obj.spot8 }}</span>   
+                            </div>
+                    {% else %}
+                    <div id="spot8-text">
+                    {{ obj.spot8 }}
+                    </div>
+                    {% endif %}
+                {% endif %}
+                </div>
+                
+                {% if user_bingo.spot9 %}
+                <div class="bingo-item row1 valign-wrapper">
+                    <div class="has-image tooltip" style="width:100%; height:100%; background-image: url('https://empowerthevillage.s3.amazonaws.com/static/img/EFBF+bag.png'); background-size: 80%;background-position:center; background-repeat:no-repeat">
+                        <span class="tooltiptext">{{ obj.spot9 }}</span>   
+                    </div>
+                    {% else %}
+                    <div class="bingo-item valign-wrapper row4 modal-trigger" id="P9" data-target="modal9" >
+                        {% if obj.spot9_img %}
+                        <div class="has-image front tooltip" style="width:100%; height:100%; background-image: url({{ obj.spot9_img.url }}); background-size: 100%;background-position-y: top; background-position-x:right">
+                            <span class="tooltiptext">{{ obj.spot9 }}</span>   
+                            </div>
+                    {% else %}
+                    <div id="spot9-text">
+                    {{ obj.spot9 }}
+                    </div>
+                    {% endif %}
+                {% endif %}
+                </div>
+
+                <div class="bingo-item row5" id="P10" style="background-color:rgb(210, 227, 200)">
+                    {% if obj.spot10_img %}
+                    <div class="has-image tooltip front" style="width:100%; height:100%; background-image: url({{ obj.spot10_img.url }}); background-size: 100%;background-position: center; background-repeat: no-repeat">
+                        <span class="tooltiptext">{{ obj.spot10 }}</span>   
+                        </div>
+                    {% else %}
+                    {{ obj.spot10 }}
+                    {% endif %}
+                </div>
+
+                {% if user_bingo.spot11 %}
+                <div class="bingo-item row1 valign-wrapper">
+                    <div class="has-image tooltip" style="width:100%; height:100%; background-image: url('https://empowerthevillage.s3.amazonaws.com/static/img/EFBF+bag.png'); background-size: 80%;background-position:center; background-repeat:no-repeat">
+                        <span class="tooltiptext">{{ obj.spot11 }}</span>   
+                    </div>
+                    {% else %}
+                    <div class="bingo-item valign-wrapper row1 modal-trigger" id="P11" data-target="modal11" >
+                        {% if obj.spot11_img %}
+                        <div class="has-image front tooltip" style="width:100%; height:100%; background-image: url({{ obj.spot11_img.url }}); background-size: 100%;background-position-y: top; background-position-x:right">
+                            <span class="tooltiptext">{{ obj.spot11 }}</span>   
+                            </div>
+                    {% else %}
+                    <div id="spot11-text">
+                    {{ obj.spot11 }}
+                    </div>
+                    {% endif %}
+                {% endif %}
+                </div>
+
+                {% if user_bingo.spot12 %}
+                <div class="bingo-item row2 valign-wrapper">
+                    <div class="has-image tooltip" style="width:100%; height:100%; background-image: url('https://empowerthevillage.s3.amazonaws.com/static/img/EFBF+bag.png'); background-size: 80%;background-position:center; background-repeat:no-repeat">
+                        <span class="tooltiptext">{{ obj.spot12 }}</span>   
+                    </div>
+                    {% else %}
+                    <div class="bingo-item valign-wrapper row2 modal-trigger" id="P12" data-target="modal12" >
+                        {% if obj.spot12_img %}
+                        <div class="has-image front tooltip" style="width:100%; height:100%; background-image: url({{ obj.spot12_img.url }}); background-size: 100%;background-position-y: top; background-position-x:right">
+                            <span class="tooltiptext">{{ obj.spot12 }}</span>   
+                            </div>
+                    {% else %}
+                    <div id="spot12-text">
+                    {{ obj.spot12 }}
+                    </div>
+                    {% endif %}
+                {% endif %}
+                </div>
+
+                <div class="has-image bingo-item row3 valign-wrapper" id="P13" data-position="bottom" data-tooltip="{{ obj.spot13 }}" style="background-color:rgb(255, 255, 255)">
+                    {% if obj.spot13_img %}
+                    <div class="has-image tooltip front" style="width:100%; height:100%; background-image: url({{ obj.spot13_img.url }}); background-size: 100%;background-position: center; background-repeat: no-repeat;">
+                        <span class="tooltiptext">{{ obj.spot13 }}</span>   
+                        </div>
+                        
+                    {% else %}
+                    {{ obj.spot13 }}
+                    {% endif %}
+                </div>
+
+                {% if user_bingo.spot14 %}
+                <div class="bingo-item row4 valign-wrapper">
+                    <div class="has-image tooltip" style="width:100%; height:100%; background-image: url('https://empowerthevillage.s3.amazonaws.com/static/img/EFBF+bag.png'); background-size: 80%;background-position:center; background-repeat:no-repeat">
+                        <span class="tooltiptext">{{ obj.spot14 }}</span>   
+                    </div>
+                    {% else %}
+                    <div class="bingo-item valign-wrapper row4 modal-trigger" id="P14" data-target="modal14" >
+                        {% if obj.spot14_img %}
+                        <div class="has-image front tooltip" style="width:100%; height:100%; background-image: url({{ obj.spot14_img.url }}); background-size: 100%;background-position-y: top; background-position-x:right">
+                            <span class="tooltiptext">{{ obj.spot14 }}</span>   
+                            </div>
+                    {% else %}
+                    <div id="spot14-text">
+                    {{ obj.spot14 }}
+                    </div>
+                    {% endif %}
+                {% endif %}
+                </div>
+
+                {% if user_bingo.spot15 %}
+                <div class="bingo-item row5 valign-wrapper">
+                    <div class="has-image tooltip" style="width:100%; height:100%; background-image: url('https://empowerthevillage.s3.amazonaws.com/static/img/EFBF+bag.png'); background-size: 80%;background-position:center; background-repeat:no-repeat">
+                        <span class="tooltiptext">{{ obj.spot15 }}</span>   
+                    </div>
+                    {% else %}
+                    <div class="bingo-item valign-wrapper row5 modal-trigger" id="P15" data-target="modal15" >
+                        {% if obj.spot15_img %}
+                        <div class="has-image front tooltip" style="width:100%; height:100%; background-image: url({{ obj.spot15_img.url }}); background-size: 100%;background-position-y: top; background-position-x:right">
+                            <span class="tooltiptext">{{ obj.spot15 }}</span>   
+                            </div>
+                    {% else %}
+                    <div id="spot15-text">
+                    {{ obj.spot15 }}
+                    </div>
+                    {% endif %}
+                {% endif %}
+                </div>
+
+                <div class="bingo-item valign-wrapper row1" id="P16" style="background-color:rgb(210, 227, 200)">
+                    {% if obj.spot16_img %}
+                    <div class="has-image tooltip front" style="width:100%; height:100%; background-image: url({{ obj.spot16_img.url }}); background-size: 100%;background-position: center; background-repeat: no-repeat">
+                        <span class="tooltiptext">{{ obj.spot16 }}</span>   
+                        </div>
+                        
+                    {% else %}
+                    {{ obj.spot16 }}
+                    {% endif %}
+                </div>
+
+                {% if user_bingo.spot17 %}
+                <div class="bingo-item row2 valign-wrapper">
+                    <div class="has-image tooltip" style="width:100%; height:100%; background-image: url('https://empowerthevillage.s3.amazonaws.com/static/img/EFBF+bag.png'); background-size: 80%;background-position:center; background-repeat:no-repeat">
+                        <span class="tooltiptext">{{ obj.spot17 }}</span>   
+                    </div>
+                    {% else %}
+                    <div class="bingo-item valign-wrapper row2 modal-trigger" id="P17" data-target="modal17" >
+                        {% if obj.spot17_img %}
+                        <div class="has-image front tooltip" style="width:100%; height:100%; background-image: url({{ obj.spot17_img.url }}); background-size: 100%;background-position-y: top; background-position-x:right">
+                            <span class="tooltiptext">{{ obj.spot17 }}</span>   
+                            </div>
+                    {% else %}
+                    <div id="spot17-text">
+                    {{ obj.spot17 }}
+                    </div>
+                    {% endif %}
+                {% endif %}
+                </div>
+
+                {% if user_bingo.spot18 %}
+                <div class="bingo-item row3 valign-wrapper">
+                    <div class="has-image tooltip" style="width:100%; height:100%; background-image: url('https://empowerthevillage.s3.amazonaws.com/static/img/EFBF+bag.png'); background-size: 80%;background-position:center; background-repeat:no-repeat">
+                        <span class="tooltiptext">{{ obj.spot18 }}</span>   
+                    </div>
+                    {% else %}
+                    <div class="bingo-item valign-wrapper row3 modal-trigger" id="P18" data-target="modal18" >
+                        {% if obj.spot18_img %}
+                        <div class="has-image front tooltip" style="width:100%; height:100%; background-image: url({{ obj.spot18_img.url }}); background-size: 100%;background-position-y: top; background-position-x:right">
+                            <span class="tooltiptext">{{ obj.spot18 }}</span>   
+                            </div>
+                    {% else %}
+                    <div id="spot18-text">
+                    {{ obj.spot18 }}
+                    </div>
+                    {% endif %}
+                {% endif %}
+                </div>
+               
+
+                {% if user_bingo.spot19 %}
+                <div class="bingo-item row4 valign-wrapper">
+                    <div class="has-image tooltip" style="width:100%; height:100%; background-image: url('https://empowerthevillage.s3.amazonaws.com/static/img/EFBF+bag.png'); background-size: 80%;background-position:center; background-repeat:no-repeat">
+                        <span class="tooltiptext">{{ obj.spot19 }}</span>   
+                    </div>
+                    {% else %}
+                    <div class="bingo-item valign-wrapper row4 modal-trigger" id="P19" data-target="modal19" >
+                        {% if obj.spot19_img %}
+                        <div class="has-image front tooltip" style="width:100%; height:100%; background-image: url({{ obj.spot19_img.url }}); background-size: 100%;background-position-y: top; background-position-x:right">
+                            <span class="tooltiptext">{{ obj.spot19 }}</span>   
+                            </div>
+                    {% else %}
+                    <div id="spot19-text">
+                    {{ obj.spot19 }}
+                    </div>
+                    {% endif %}
+                {% endif %}
+                </div>
+
+                {% if user_bingo.spot20 %}
+                <div class="bingo-item row5 valign-wrapper">
+                    <div class="has-image tooltip" style="width:100%; height:100%; background-image: url('https://empowerthevillage.s3.amazonaws.com/static/img/EFBF+bag.png'); background-size: 80%;background-position:center; background-repeat:no-repeat">
+                        <span class="tooltiptext">{{ obj.spot20 }}</span>   
+                    </div>
+                    {% else %}
+                    <div class="bingo-item valign-wrapper row5 modal-trigger" id="P20" data-target="modal20" >
+                        {% if obj.spot20_img %}
+                        <div class="has-image front tooltip" style="width:100%; height:100%; background-image: url({{ obj.spot20_img.url }}); background-size: 100%;background-position-y: top; background-position-x:right">
+                            <span class="tooltiptext">{{ obj.spot20 }}</span>   
+                            </div>
+                    {% else %}
+                    <div id="spot20-text">
+                    {{ obj.spot20 }}
+                    </div>
+                    {% endif %}
+                {% endif %}
+                </div>
+                
+                {% if user_bingo.spot21 %}
+                <div class="bingo-item row1 valign-wrapper">
+                    <div class="has-image tooltip" style="width:100%; height:100%; background-image: url('https://empowerthevillage.s3.amazonaws.com/static/img/EFBF+bag.png'); background-size: 80%;background-position:center; background-repeat:no-repeat">
+                        <span class="tooltiptext">{{ obj.spot21 }}</span>   
+                    </div>
+                    {% else %}
+                    <div class="bingo-item valign-wrapper row1 modal-trigger" id="P21" data-target="modal21" >
+                        {% if obj.spot21_img %}
+                        <div class="has-image front tooltip" style="width:100%; height:100%; background-image: url({{ obj.spot21_img.url }}); background-size: 100%;background-position-y: top; background-position-x:right">
+                            <span class="tooltiptext">{{ obj.spot21 }}</span>   
+                            </div>
+                    {% else %}
+                    <div id="spot21-text">
+                    {{ obj.spot21 }}
+                    </div>
+                    {% endif %}
+                {% endif %}
+                </div>
+                {% if user_bingo.spot22 %}
+                <div class="bingo-item row2 valign-wrapper">
+                    <div class="has-image tooltip" style="width:100%; height:100%; background-image: url('https://empowerthevillage.s3.amazonaws.com/static/img/EFBF+bag.png'); background-size: 80%;background-position:center; background-repeat:no-repeat">
+                        <span class="tooltiptext">{{ obj.spot22 }}</span>   
+                    </div>
+                    {% else %}
+                    <div class="bingo-item valign-wrapper row2 modal-trigger" id="P22" data-target="modal22" >
+                        {% if obj.spot22_img %}
+                        <div class="has-image front tooltip" style="width:100%; height:100%; background-image: url({{ obj.spot22_img.url }}); background-size: 100%;background-position-y: top; background-position-x:right">
+                            <span class="tooltiptext">{{ obj.spot22 }}</span>   
+                            </div>
+                    {% else %}
+                    <div id="spot22-text">
+                    {{ obj.spot22 }}
+                    </div>
+                    {% endif %}
+                {% endif %}
+                </div>
+
+                {% if user_bingo.spot23 %}
+                <div class="bingo-item row3 valign-wrapper">
+                    <div class="has-image tooltip" style="width:100%; height:100%; background-image: url('https://empowerthevillage.s3.amazonaws.com/static/img/EFBF+bag.png'); background-size: 80%;background-position:center; background-repeat:no-repeat">
+                        <span class="tooltiptext">{{ obj.spot23 }}</span>   
+                    </div>
+                    {% else %}
+                    <div class="bingo-item valign-wrapper row3 modal-trigger" id="P23" data-target="modal23">
+                        {% if obj.spot23_img %}
+                        <div class="has-image front tooltip" style="width:100%; height:100%; background-image: url({{ obj.spot23_img.url }}); background-size: 100%;background-position-y: top; background-position-x:right">
+                            <span class="tooltiptext">{{ obj.spot23 }}</span>   
+                            </div>
+                    {% else %}
+                    <div id="spot23-text">
+                    {{ obj.spot23 }}
+                    </div>
+                    {% endif %}
+                {% endif %}
+                </div>
+
+                <div class="bingo-item valign-wrapper row4" id="P24" style="background-color:rgb(210, 227, 200)">
+                    {% if obj.spot24_img %}
+                    <div class="has-image tooltip front" style="width:100%; height:100%; background-image: url({{ obj.spot24_img.url }}); background-size: 100%;background-position:center; background-repeat: no-repeat">
+                        <span class="tooltiptext-top">{{ obj.spot24 }}</span>   
+                        </div>
+                        
+                    {% else %}
+                    {{ obj.spot24 }}
+                    {% endif %}
+                </div>
+
+                {% if user_bingo.spot25 %}
+                <div class="bingo-item row5 valign-wrapper">
+                    <div class="has-image tooltip" style="width:100%; height:100%; background-image: url('https://empowerthevillage.s3.amazonaws.com/static/img/EFBF+bag.png'); background-size: 80%;background-position:center; background-repeat:no-repeat">
+                        <span class="tooltiptext">{{ obj.spot25 }}</span>   
+                    </div>
+                    {% else %}
+                    <div class="bingo-item valign-wrapper row5 modal-trigger" id="P25" data-target="modal25" >
+                        {% if obj.spot25_img %}
+                        <div class="has-image front tooltip" style="width:100%; height:100%; background-image: url({{ obj.spot25_img.url }}); background-size: 100%;background-position-y: top; background-position-x:right">
+                            <span class="tooltiptext">{{ obj.spot25 }}</span>   
+                            </div>
+                    {% else %}
+                    <div id="spot25-text">
+                    {{ obj.spot25 }}
+                    </div>
+                    {% endif %}
+                {% endif %}
+                </div>
+            </div>
+        </div>
+        <div class="col s12 xl5">
+            <h6 class="key-title center-align">KEY</h6>
+            <ul class="key">
+                <div class="key-group key-group-1">
+                    <li><b>P1</b> - {{ obj.spot1 }}</li>
+                    <li><b>O1</b> - {{ obj.spot2 }}</li>
+                    <li><b>W1</b> - {{ obj.spot3 }}</li>
+                    <li><b>E1</b> - {{ obj.spot4 }}</li>
+                    <li><b>R1</b> - {{ obj.spot5 }}</li>
+                </div>
+                <div class="key-group key-group-2">
+                    <li><b>P2</b> - {{ obj.spot6 }}</li>
+                    <li><b>O2</b> - {{ obj.spot7 }}</li>
+                    <li><b>W2</b> - {{ obj.spot8 }}</li>
+                    <li><b>E2</b> - {{ obj.spot9 }}</li>
+                    <li><b>R2</b> - {{ obj.spot10 }}</li>
+                </div>
+                <div class="key-group key-group-3">
+                    <li><b>P3</b> - {{ obj.spot11 }}</li>
+                    <li><b>O3</b> - {{ obj.spot12 }}</li>
+                    <li><b>W3</b> - {{ obj.spot13 }}</li>
+                    <li><b>E3</b> - {{ obj.spot14 }}</li>
+                    <li><b>R3</b> - {{ obj.spot15 }}</li>
+                </div>
+                <div class="key-group key-group-4">
+                    <li><b>P4</b> - {{ obj.spot16 }}</li>
+                    <li><b>O4</b> - {{ obj.spot17 }}</li>
+                    <li><b>W4</b> - {{ obj.spot18 }}</li>
+                    <li><b>E4</b> - {{ obj.spot19 }}</li>
+                    <li><b>R4</b> - {{ obj.spot20 }}</li>
+                </div>
+                <div class="key-group key-group-5">
+                    <li><b>P5</b> - {{ obj.spot21 }}</li>
+                    <li><b>O5</b> - {{ obj.spot22 }}</li>
+                    <li><b>W5</b> - {{ obj.spot23 }}</li>
+                    <li><b>E5</b> - {{ obj.spot24 }}</li>
+                    <li><b>R5</b> - {{ obj.spot25 }}</li>
+                </div>
+                <li style="margin-top: 10px;" class="valign-wrapper"><img width=10% src='https://empowerthevillage.s3.amazonaws.com/static/img/EFBF+bag.png'>&nbsp - Item Completed!</li>
+            </ul>
+            <style>
+                
+                .key li {
+                    color: white;
+                    font-size: 15px;
+                    font-weight: 200
+                }
+                .key-group {
+                    padding-top: 30px
+                }
+                .key-group-1 li b {
+                    color: rgb(228, 34, 34);
+                    font-weight:600;
+                    font-size: 16px
+                }
+                .key-group-2 li b {
+                    color: #01a650;
+                    font-weight:600;
+                    font-size:15.5px
+                }
+                .key-group-3 li b {
+                    color: rgb(244, 244, 244);
+                    font-weight:600;
+                    font-size:16px
+                }
+                .key-group-4 li b {
+                    color: #01a650;
+                    font-weight:600;
+                    font-size: 16px
+                }
+                .key-group-5 li b {
+                    color: rgb(228, 34, 34);
+                    font-weight:600;
+                    font-size: 16px
+                }
+            </style>
+        </div>
+    </div>
+    <div class="modal" id="modal1">
+        <div class="modal-content center-align">
+            <form id="modal1form">
+                {% csrf_token %}
+                <input id="spot" type="hidden" value="1">
+                <div class="input-field">
+                    <input required type="text" id="P1business1">
+                    <label class="valign-wrapper">Business Name 1<div class="required">*</div></label></div>
+                <div class="input-field">
+                    <input required type="text" id="P1business2">
+                    <label class="valign-wrapper">Business Name 2<div class="required">*</div></label>
+                </div>
+                <div class="input-field">
+                    <input required type="text" id="P1business3">
+                    <label class="valign-wrapper">Business Name 3<div class="required">*</div></label>
+                </div>
+                <div class="input-field">
+                    <input required type="text" id="P1business4">
+                    <label class="valign-wrapper">Business Name 4<div class="required">*</div></label>
+                </div>
+                <button class="btn light-green darken-3 waves-effect" id="spot1submit">Get My Bingo Chip!</button>
+            </form>
+        </div>
+    </div>
+    <div class="modal" id="modal3">
+        <div class="modal-content center-align">
+            <div class="row">
+                <div class="input-field valign-wrapper">
+                    <i class="material-icons prefix">share</i>
+                    <input type="text" id="P3link">
+                    <label for="P3link">Link To Your Post</label>
+                </div>
+            </div>
+            <button class="btn light-green darken-3 waves-effect" id="spot3submit">Get My Bingo Chip!</button>
+        </div>
+    </div>
+    <div class="modal" id="modal4">
+        <div class="modal-content center-align">
+            <div class="input-field">
+                <input type="text" id="P4author">
+                <label>Book Author</label>
+            </div>
+            <div class="input-field">
+                <input type="text" id="P4title">
+                <label>Book Title</label>
+            </div>
+            <button class="btn light-green darken-3 waves-effect" id="spot4submit">Get My Bingo Chip!</button>
+        </div>
+    </div>
+    <div class="modal" id="modal5">
+        <div class="modal-content center-align">
+            <div class="input-field">
+                <input type="text" id="P5org">
+                <label>Organization Name</label>
+            </div>
+            <div class="input-field">
+                <input class="money" id="P5amount" type="text">
+                <label>Amount Donated</label>
+            </div>
+            <button class="btn light-green darken-3 waves-effect" id="spot5submit">Get My Bingo Chip!</button>
+        </div>
+    </div>
+    <div class="modal" id="modal6">
+        <div class="modal-content center-align">
+            <div class="input-field">
+                <input type="text" id="P6store">
+                <label>Store Name</label>
+            </div>
+            <div class="input-field">
+                <input class="money" id="P6amount" type="text">
+                <label>Amount Spent</label>
+            </div>
+            <button class="btn light-green darken-3 waves-effect" id="spot6submit">Get My Bingo Chip!</button>
+        </div>
+    </div>
+    <div class="modal" id="modal7">
+        <div class="modal-content center-align">
+            <div class="input-field">
+                <input type="text" id="P7business1">
+                <label>Business 1 Name</label>
+            </div>
+            <div class="input-field">
+                <input type="text" id="P7state1">
+                <label>Business 1 State</label>
+            </div>
+            <div class="input-field">
+                <input type="text" id="P7business2">
+                <label>Business 2 Name</label>
+            </div>
+            <div class="input-field">
+                <input type="text" id="P7state2">
+                <label>Business 2 State</label>
+            </div>
+            <div class="input-field">
+                <input type="text" id="P7business3">
+                <label>Business 3 Name</label>
+            </div>
+            <div class="input-field">
+                <input type="text" id="P7state3">
+                <label>Business 3 State</label>
+            </div>
+            <button class="btn light-green darken-3 waves-effect" id="spot7submit">Get My Bingo Chip!</button>
+        </div>
+    </div>
+    <div class="modal" id="modal8">
+        <div class="modal-content center-align">
+            <div class="input-field">
+                <input type="text" id="P8store">
+                <label>Establishment Name</label>
+            </div>
+            <div class="input-field">
+                <input class="money" id="P8amount" type="text">
+                <label>Amount Spent</label>
+            </div>
+            <button class="btn light-green darken-3 waves-effect" id="spot8submit">Get My Bingo Chip!</button>
+        </div>
+    </div>
+    <div class="modal" id="modal9">
+        <div class="modal-content center-align">
+            <div class="input-field">
+                <input type="text" id="P9handle">
+                <label>Your Instagram Username</label>
+            </div>
+            <div class="input-field">
+                <input id="P9link" type="text">
+                <label>Link to Shared Post</label>
+            </div>
+            <button class="btn light-green darken-3 waves-effect" id="spot9submit">Get My Bingo Chip!</button>
+        </div>
+    </div>
+    <div class="modal" id="modal11">
+        <div class="modal-content center-align">
+            <div class="input-field">
+                <input type="text" id="P11org">
+                <label>Organization Name</label>
+            </div>
+            <div class="input-field">
+                <input class="money" id="P11amount" type="text">
+                <label>Amount Donated</label>
+            </div>
+            <button class="btn light-green darken-3 waves-effect" id="spot11submit">Get My Bingo Chip!</button>
+        </div>
+    </div>
+    <div class="modal" id="modal12">
+        <div class="modal-content center-align">
+            <div class="input-field">
+                <input type="text" id="P12business1">
+                <label>Business 1 Name</label>
+            </div>
+            <div class="input-field">
+                <input type="text" id="P12date1">
+                <label>Date Shopped</label>
+            </div>
+            <div class="input-field">
+                <input type="text" id="P12amount1">
+                <label>Amount Spent</label>
+            </div>
+            <div class="input-field">
+                <input type="text" id="P12business2">
+                <label>Business 2 Name</label>
+            </div>
+            <div class="input-field">
+                <input type="text" id="P12date2">
+                <label>Date Shopped</label>
+            </div>
+            <div class="input-field">
+                <input type="text" id="P12amount2">
+                <label>Amount Spent</label>
+            </div>
+            <button class="btn light-green darken-3 waves-effect" id="spot12submit">Get My Bingo Chip!</button>
+        </div>
+    </div>
+    <div class="modal" id="modal14">
+        <div class="modal-content center-align">
+            <div class="input-field">
+                <input type="text" id="P14store">
+                <label>Bookstore Name</label>
+            </div>
+            <div class="input-field">
+                <input id="P14link" type="text">
+                <label>Link to Shared Post</label>
+            </div>
+            <button class="btn light-green darken-3 waves-effect" id="spot14submit">Get My Bingo Chip!</button>
+        </div>
+    </div>
+    <div class="modal" id="modal15">
+        <div class="modal-content center-align">
+            <div class="input-field">
+                <input type="text" id="P15business1">
+                <label>Business 1 Name</label>
+            </div>
+            <div class="input-field">
+                <input type="text" id="P15date1">
+                <label>Date Shopped</label>
+            </div>
+            <div class="input-field">
+                <input class="money" type="text" id="P15amount1">
+                <label>Amount Spent</label>
+            </div>
+            <div class="input-field">
+                <input type="text" id="P15business2">
+                <label>Business 2 Name</label>
+            </div>
+            <div class="input-field">
+                <input type="text" id="P15date2">
+                <label>Date Shopped</label>
+            </div>
+            <div class="input-field">
+                <input class="money" type="text" id="P15amount2">
+                <label>Amount Spent</label>
+            </div>
+            <div class="input-field">
+                <input type="text" id="P15business3">
+                <label>Business 3 Name</label>
+            </div>
+            <div class="input-field">
+                <input type="text" id="P15date3">
+                <label>Date Shopped</label>
+            </div>
+            <div class="input-field">
+                <input class="money" type="text" id="P15amount3">
+                <label>Amount Spent</label>
+            </div>
+            <div class="input-field">
+                <input type="text" id="P15business4">
+                <label>Business 4 Name</label>
+            </div>
+            <div class="input-field">
+                <input type="text" id="P15date4">
+                <label>Date Shopped</label>
+            </div>
+            <div class="input-field">
+                <input class="money" type="text" id="P15amount4">
+                <label>Amount Spent</label>
+            </div>
+            <button class="btn light-green darken-3 waves-effect" id="spot15submit">Get My Bingo Chip!</button>
+        </div>
+    </div>
+    <div class="modal" id="modal17">
+        <div class="modal-content center-align">
+            <div class="input-field">
+                <input type="text" id="P17establishment">
+                <label>Establishment Name</label>
+            </div>
+            <div class="input-field">
+                <input class="money" id="P17amount" type="text">
+                <label>Amount Spent</label>
+            </div>
+            <button class="btn light-green darken-3 waves-effect" id="spot17submit">Get My Bingo Chip!</button>
+        </div>
+    </div>
+    <div class="modal" id="modal18">
+        <div class="modal-content center-align">
+            <div class="input-field">
+                <input type="text" id="P18member1">
+                <label>New Village Member 1 - Email Address</label>
+            </div>
+            <div class="input-field">
+                <input type="text" id="P18member2">
+                <label>New Village Member 2 - Email Address</label>
+            </div>
+            <div class="input-field">
+                <input type="text" id="P18member3">
+                <label>New Village Member 3 - Email Address</label>
+            </div>
+            <div class="input-field">
+                <input type="text" id="P18member4">
+                <label>New Village Member 4 - Email Address</label>
+            </div>
+            <div class="input-field">
+                <input type="text" id="P18member5">
+                <label>New Village Member 5 - Email Address</label>
+            </div>
+            <button class="btn light-green darken-3 waves-effect" id="spot18submit">Get My Bingo Chip!</button>
+        </div>
+    </div>
+    <div class="modal" id="modal19">
+        <div class="modal-content center-align">
+            <div class="input-field">
+                <input type="text" id="P19business">
+                <label>Business Name</label>
+            </div>
+            <div class="input-field">
+                <input class="money" type="text" id="P19amount">
+                <label>Amount Spent</label>
+            </div>
+            <button class="btn light-green darken-3 waves-effect" id="spot19submit">Get My Bingo Chip!</button>
+        </div>
+    </div>
+    <div class="modal" id="modal20">
+        <div class="modal-content center-align">
+            <div class="input-field">
+                <input type="text" id="P20business">
+                <label>Business/Tutor Name</label>
+            </div>
+            <div class="input-field">
+                <input type="text" id="P20link">
+                <label>Link to Your Instagram Post</label>
+            </div>
+            <button class="btn light-green darken-3 waves-effect" id="spot20submit">Get My Bingo Chip!</button>
+        </div>
+    </div>
+    <div class="modal" id="modal21">
+        <div class="modal-content center-align">
+            <div class="input-field">
+                <input type="text" id="P21book">
+                <label>Book Title</label>
+            </div>
+            <div class="input-field">
+                <input type="text" id="P21author">
+                <label>Author</label>
+            </div>
+            <button class="btn light-green darken-3 waves-effect" id="spot21submit">Get My Bingo Chip!</button>
+        </div>
+    </div>
+    <div class="modal" id="modal22">
+        <div class="modal-content center-align">
+            <div class="input-field">
+                <input type="text" id="P22business1">
+                <label>Business 1</label>
+            </div>
+            <div class="input-field">
+                <input type="text" id="P22link1">
+                <label>Link to Your Instagram Post</label>
+            </div>
+            <div class="input-field">
+                <input type="text" id="P22business2">
+                <label>Business 2</label>
+            </div>
+            <div class="input-field">
+                <input type="text" id="P22link2">
+                <label>Link to Your Instagram Post</label>
+            </div>
+            <button class="btn light-green darken-3 waves-effect" id="spot22submit">Get My Bingo Chip!</button>
+        </div>
+    </div>
+    <div class="modal" id="modal23">
+        <div class="modal-content center-align">
+            <div class="input-field">
+                <input type="text" id="P23business1">
+                <label>Business 1</label>
+            </div>
+            <div class="input-field">
+                <input type="text" id="P23state1">
+                <label>Business 1 State</label>
+            </div>
+            <div class="input-field">
+                <input type="text" id="P23business2">
+                <label>Business 2</label>
+            </div>
+            <div class="input-field">
+                <input type="text" id="P23state2">
+                <label>Business 2 State</label>
+            </div>
+            <div class="input-field">
+                <input type="text" id="P23business3">
+                <label>Business 3</label>
+            </div>
+            <div class="input-field">
+                <input type="text" id="P23state3">
+                <label>Business 3 State</label>
+            </div>
+            <button class="btn light-green darken-3 waves-effect" id="spot23submit">Get My Bingo Chip!</button>
+        </div>
+    </div>
+</div>
+<div class="modal" id="modal25">
+    <div class="modal-content center-align">
+        <div class="input-field">
+            <input type="text" id="P25business">
+            <label>Health & Wellness Guru Name</label>
+        </div>
+        <div class="input-field">
+            <input type="text" id="P25state">
+            <label>State</label>
+        </div>
+        <div class="input-field">
+            <input type="text" id="P25type">
+            <label>Class/Session Type</label>
+        </div>
+        <button class="btn light-green darken-3 waves-effect" id="spot25submit">Get My Bingo Chip!</button>
+    </div>
+</div>
+{% endfor %}
+
+</div>
+{% else %}
+{% endif%}
+{% else %}
+<div id='page'>
+    <div class="row center-align" style="margin-top:0px">
+        <div class="col s10 l8 offset-s1 offset-l2 login-card">
+          <h6 id="vbp-nomination-form-title">Contact Us to Register for Power Bingo!</h6>
+             <form method="POST" style="padding-left:10%; padding-right:10%;" id="nomination-form">
+              {% csrf_token %}
+        
+              {{ contact_form }}
+          
+              <button class="btn btn-large submit-btn nomination-submit" type="submit">
+                  SUBMIT
+              </button>
+            </form>
+        </div>
+      </div>
+</div>
+{% endif%}
+
+<style>
+     
+    .donate-btn-bingo {
+    border: solid 1px rgb(172, 172, 172);
+    cursor: pointer;
+    width: 80%;
+    padding-top: 26px;
+    display: inline-block;
+    margin: 10px 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 500;
+    font-size: 20px;
+    outline: none;
+    position: relative;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    overflow: hidden;
+    border-radius:0;
+    transform:scale(1,0.9);
+    background-color:rgb(46, 169, 71);
+    height: 70px;
+    line-height: 15px
+  }
+  .donate-btn-bingo:after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    width: 100%;
+    height: 0;
+    top: 50%;
+    left: 50%;
+    background: #fff;
+    opacity: 0;
+    -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    -moz-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    -ms-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  }
+  .donate-btn-bingo:hover,
+  .donate-btn-bingo:active {
+    color: #42b56e;
+  }
+
+  .donate-btn-bingo:hover:after {
+    height: 210%;
+    opacity: 1;
+  }
+
+  .donate-btn-bingo:active:after {
+    height: 400%;
+    opacity: 1;
+  }
+    .bf-sublist li{
+        font-size: 18px
+    }
+    .directions p{
+        font-size: 18px
+    }
+    .team-title {
+        font-family: oskar-inline;
+        margin-top:0;
+        padding-top:40px;
+    }
+    
+    .power {
+        width: 100%;
+        margin-left:7%;
+        padding-top:50px;
+        display: grid;
+        grid-template-columns: auto auto auto auto auto;
+        font-weight: 700;
+        font-size: 32;
+        padding-left: 10%
+    }
+    .numbering {
+        font-size: 32;
+        font-weight: 700;
+        width: 7%;
+        margin-top: 10px;
+    }
+    .bingo-item {
+        cursor: pointer
+    }
+    .bingo-container {
+        display:grid;
+        grid-template-columns: 20% 20% 20% 20% 20%;
+        margin-top:10px;
+        margin-bottom: 50px;
+    }
+    @media only screen and (max-width: 459px){
+        
+        .bingo-item {
+            padding:1px;
+            font-size:6px;
+            font-weight: 500;
+            background-color:rgb(249, 249, 249);
+            color:rgb(2, 2, 2);
+        }
+        .numbering {
+            display: none
+        }
+        .power {
+            display: none
+        }
+        .key-title{
+            font-family: oskar-inline;
+            font-size: 48px;
+            color:white;
+            padding-top: 0px
+        }
+    }
+    @media only screen and (min-width: 460px){
+        .numbering p {
+            height:16.5vw;
+            margin:0;
+        }
+        .bingo-item {
+            padding:1px;
+            font-size:8px;
+            font-weight: 500;
+            background-color:rgb(249, 249, 249);
+            color:rgb(2, 2, 2);
+            
+        }
+        .key-title{
+            font-family: oskar-inline;
+            font-size: 48px;
+            color:white;
+            padding-top: 50px
+        }
+    }
+    @media only screen and (min-width: 650px){
+        .bingo-item {
+            padding:1px;
+            font-size:12px;
+            font-weight: 500;
+            background-color:rgb(249, 249, 249);
+            color:rgb(2, 2, 2);
+        }
+    }
+    @media only screen and (min-width: 800px){
+        .bingo-item {
+            padding:2px;
+            font-size:16px;
+            font-weight: 500;
+            background-color:rgb(249, 249, 249);
+            color:rgb(2, 2, 2);
+        }
+    }
+    @media only screen and (min-width: 1200px){
+        .numbering p {
+            height:10vw;
+            margin:0;
+        }
+    }
+    .login-card {
+  background-color:#fdfdfdf1;
+}
+    body {
+        width: 100% !important;
+    }
+    .has-image:after {
+        content: '';
+        display: block;
+        padding-bottom: 100%;
+    }
+    .modal-trigger {
+        transition: filter 0.3s ease-in-out;
+    }
+    .row1 {
+        border-left: solid 2px black;
+        border-bottom: solid 2px black;
+    }
+    .row2 {
+        border-left: solid 2px black;
+        border-bottom: solid 2px black;
+    }
+    .row3 {
+        border-left: solid 2px black;
+        border-bottom: solid 2px black;
+    }
+    .row4 {
+        border-left: solid 2px black;
+        border-bottom: solid 2px black;
+    }
+    .row5 {
+        border-left: solid 2px black;
+        border-bottom: solid 2px black;
+        border-right:solid 2px black;
+    }
+    .col1 {
+        border-top: solid 2px black;
+    }
+    .file-upload-btn {
+        background-color: rgb(155, 181, 155)
+    }
+    .file-upload-btn:hover {
+        background-color:rgb(146, 174, 146);
+    }
+    .file-upload-btn i {
+        font-size: 24px;
+    }
+    .submit-btn {
+    border: solid 1px rgb(237, 237, 237);
+    background-color: rgb(57, 57, 57);
+    cursor: pointer;
+    padding: 30px 0px;
+    display: inline-block;
+    margin: 15px 5px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 300;
+    outline: none;
+    position: relative;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    overflow: hidden;
+    border-radius:0;
+    transform:scale(1,0.9);
+    line-height:0px;
+    width:40%;
+    margin-left: 30%;
+    font-size:16px
+  }
+  .submit-btn:after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    width: 100%;
+    height: 0;
+    top: 50%;
+    left: 50%;
+    background: rgb(237, 237, 237);
+    opacity: 0;
+    -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    -moz-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    -ms-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  }
+  .submit-btn:hover,
+  .submit-btn:active {
+    color: #319657;
+    background-color: rgb(89, 121, 89);
+  }
+
+  .submit-btn:hover:after {
+    height: 250%;
+    opacity: 1;
+  }
+
+  .power div {
+    font-family: oskar-inline;
+    font-size:48px;
+  }
+  .numbering p {
+    font-family: oskar-inline;
+    font-size:48px;
+  }
+</style>
+<style>
+    /* Tooltip container */
+    .tooltip {
+      position: relative;
+      display: inline-block;
+      }
+    
+    /* Tooltip text */
+    .tooltip .tooltiptext {
+      visibility: hidden;
+      background-color: black;
+      color: #fff;
+      text-align: center;
+      padding: 5px 5px;
+      border-radius: 3px;
+      font-size: 16px !important;
+      margin-top: 100%;
+      max-width: 300%;
+      margin-left: -50%;
+      opacity: 0;
+    transition: opacity 0.5s;
+     
+      /* Position the tooltip text - see examples below! */
+      position: absolute;
+      z-index: 1;
+    }
+    .tooltip .tooltiptext-top {
+      visibility: hidden;
+      background-color: black;
+      color: #fff;
+      text-align: center;
+      padding: 5px 5px;
+      border-radius: 3px;
+      font-size: 16px !important;
+      margin-bottom: 200%;
+      max-width: 300%;
+      margin-left: -50%;
+      opacity: 0;
+    transition: opacity 0.5s;
+     
+      /* Position the tooltip text - see examples below! */
+      position: absolute;
+      z-index: 1;
+    }
+    
+    /* Show the tooltip text when you mouse over the tooltip container */
+    .tooltip:hover .tooltiptext {
+      visibility: visible;
+      opacity: 1;
+    }
+    .tooltip:hover .tooltiptext-top {
+      visibility: visible;
+      opacity: 1;
+    }
+    </style>
+<script type="text/javascript">
+    $(document).ready(function(){
+    $('.parallax').parallax();
+  });
+</script>
+<style>
+    [type="radio"]:checked+span:after, [type="radio"].with-gap:checked+span:before, [type="radio"].with-gap:checked+span:after {
+    border: 2px solid rgb(67, 135, 33);
+}
+[type="radio"]:checked+span:after, [type="radio"].with-gap:checked+span:after {
+    background-color: rgb(67, 135, 33);
+}
+    .textfield {
+      font-family: 'Poppins';
+      font-weight: 300;
+      letter-spacing: 1px;
+      color:rgb(60, 60, 60);
+      font-size:18px
+    }
+    .input-field {
+      padding-bottom: 10px;
+    }
+    input.datepicker {
+    font-family: 'Poppins';
+      font-weight: 300;
+      letter-spacing: 1px;
+      color:rgb(60, 60, 60);
+      font-size:18px
+    }
+    input.file-path {
+    font-family: 'Poppins';
+      font-weight: 300;
+      letter-spacing: 1px;
+      color:rgb(60, 60, 60);
+      font-size:18px
+    }
+    /* label color */
+   .input-field label {
+     color: rgb(128, 128, 128);;
+     font-family: 'Poppins';
+      font-weight: 300;
+      letter-spacing: 1px;
+      font-size:14px;
+      padding-bottom:10px
+    }
+    /* label focus color */
+    .input-field input[type=text]:focus + label {
+      color: rgb(67, 135, 33) !important;
+    }
+    /* label underline focus color */
+    .input-field input[type=text]:focus {
+      border-bottom: 1px solid rgb(67, 135, 33) !important;
+      box-shadow: 0 1px 0 0 rgb(67, 135, 33) !important;
+    }
+    
+    /* icon prefix focus color */
+    .input-field .prefix.active {
+      color: #000;
+    }
+    .select-dropdown {
+      font-family: 'Poppins';
+      font-weight: 300;
+      color:rgb(60, 60, 60);
+      letter-spacing: 1px;
+      padding-top: 10px
+    }
+    #page {
+      background-image: url("{% static 'img/bf-challenge-cropped.png' %}");
+      background-size: 100%;
+      background-repeat: repeat;
+    }
+    .submit-btn {
+    border: solid 1px rgb(237, 237, 237);
+    background-color: rgb(57, 57, 57);
+    cursor: pointer;
+    padding: 30px 0px;
+    display: inline-block;
+    margin: 15px 5px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 300;
+    outline: none;
+    position: relative;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    overflow: hidden;
+    border-radius:0;
+    transform:scale(1,0.9);
+    line-height:0px;
+    width:40%;
+    font-size:16px
+  }
+  .submit-btn:after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    width: 100%;
+    height: 0;
+    top: 50%;
+    left: 50%;
+    background: rgb(237, 237, 237);
+    opacity: 0;
+    -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    -moz-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    -ms-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  }
+  .submit-btn:hover,
+  .submit-btn:active {
+    color: #319657;
+    background-color: rgb(89, 121, 89);
+  }
+
+  .submit-btn:hover:after {
+    height: 300%;
+    opacity: 1;
+  }
+  .recommended-label {
+    color: rgb(128, 128, 128);;
+     font-family: 'Poppins';
+      font-weight: 300;
+      letter-spacing: 1px;
+      font-size:16px;
+      padding-bottom:0px
+  }
+  .owned-label {
+    color: rgb(128, 128, 128);;
+     font-family: 'Poppins';
+      font-weight: 300;
+      letter-spacing: 1px;
+      font-size:16px;
+      padding-bottom:0px
+  }
+  .onlineonly-label {
+    color: rgb(128, 128, 128);;
+     font-family: 'Poppins';
+      font-weight: 300;
+      letter-spacing: 1px;
+      font-size:16px;
+      padding-bottom:0px
+  }
+  .input-field b {
+    color: red
+  }
+  .hidden {
+    display: none;
+  }
+  .swal2-popup .select-wrapper {
+    display: none;
+  }
+  .file-field .btn {
+      background-color: rgb(46, 46, 46) !important;
+  }
+  .swal2-close:focus{
+      box-shadow: none !important;
+      background-color: transparent !important;
+  }
+  </style>
+  <script>
+    $(document).ready(function(){
+    $('input.autocomplete').autocomplete({
+      data: {
+        'Alabama': null,
+        'Alaska': null,
+        'Arizona': null,
+        'Arkansas': null,
+        'California': null,
+        'Colorado': null,
+        'Connecticut': null,
+        'Delaware': null,
+        'District of Columbia': null,
+        'Florida': null,
+        'Georgia': null,
+        'Hawaii': null,
+        'Idaho': null,
+        'Illinois': null,
+        'Indiana': null,
+        'Iowa': null,
+        'Kansas': null,
+        'Kentucky': null,
+        'Louisiana': null,
+        'Maine': null,
+        'Maryland': null,
+        'Massachusetts': null,
+        'Michigan': null,
+        'Minnesota': null,
+        'Mississippi': null,
+        'Missouri': null,
+        'Montana': null,
+        'Nebraska': null,
+        'Nevada': null,
+        'New Hampshire': null,
+        'New Jersey': null,
+        'New Mexico': null,
+        'New York': null,
+        'North Carolina': null,
+        'North Dakota': null,
+        'Ohio': null,
+        'Oklahoma': null,
+        'Oregon': null,
+        'Pennsylvania': null,
+        'Rhode Island': null,
+        'South Carolina': null,
+        'South Dakota': null,
+        'Tennessee': null,
+        'Texas': null,
+        'Utah': null,
+        'Vermont': null,
+        'Virginia': null,
+        'Washington': null,
+        'West Virginia': null,
+        'Wisconsin': null,
+        'Wyoming': null,
+      },
+    });
+  });
+  </script>
+  
+  <script>
+    $('#spot1submit').click(function(e){
+        e.preventDefault();
+        var spot = '1'
+        data = {
+            csrfmiddlewaretoken: '{{ csrf_token }}',
+            'field1' : $('#P1business1').val(),
+            'field2' : $('#P1business2').val(),
+            'field3' : $('#P1business3').val(),
+            'field4' : $('#P1business4').val(),
+            'spot': spot
+        }
+        $.ajax({
+            data: data,
+            url: 'spot-1',
+            method: "POST",
+            success:function(){
+                $('.modal').modal('close'); 
+                $('#P1').css("background-image", "url('https://empowerthevillage.s3.amazonaws.com/static/img/EFBF+bag.png')")
+                $('#P1').css("background-size", "80%")
+                $('#P1').css("background-position", "center")
+                $('#P1').css("background-repeat", "no-repeat")
+                $('#P1 .has-image').css("display", "none")
+                $('#spot1-text').css("display","none")
+            },
+        })
+    })
+    $('#spot3submit').click(function(e){
+        e.preventDefault();
+        var spot = '3'
+        data = {
+            csrfmiddlewaretoken: '{{ csrf_token }}',
+            'field1' : $('#P3link').val(),
+            'spot': spot
+        }
+        $.ajax({
+            data: data,
+            url: 'spot-3',
+            method: "POST",
+            success:function(){
+                $('.modal').modal('close'); 
+                $('#P3').css("background-image", "url('https://empowerthevillage.s3.amazonaws.com/static/img/EFBF+bag.png')")
+                $('#P3').css("background-size", "80%")
+                $('#P3').css("background-position", "center")
+                $('#P3').css("background-repeat", "no-repeat")
+                $('#P3 .has-image').css("display", "none")
+                $('#spot3-text').css("display","none")
+            },
+        })
+    })
+    $('#spot4submit').click(function(e){
+        e.preventDefault();
+        var spot = '4'
+        data = {
+            csrfmiddlewaretoken: '{{ csrf_token }}',
+            'field1' : $('#P4author').val(),
+            'field2' : $('#P4title').val(),
+            'spot': spot
+        }
+        $.ajax({
+            data: data,
+            url: 'spot-4',
+            method: "POST",
+            success:function(){
+                $('.modal').modal('close'); 
+                $('#P4').css("background-image", "url('https://empowerthevillage.s3.amazonaws.com/static/img/EFBF+bag.png')")
+                $('#P4').css("background-size", "80%")
+                $('#P4').css("background-position", "center")
+                $('#P4').css("background-repeat", "no-repeat")
+                $('#P4 .has-image').css("display", "none")
+                $('#spot4-text').css("display","none")
+            },
+        })
+    })
+    
+    $('#spot5submit').click(function(e){
+        e.preventDefault();
+        var spot = '5'
+        data = {
+            csrfmiddlewaretoken: '{{ csrf_token }}',
+            'field1' : $('#P5org').val(),
+            'field2' : $('#P5amount').val(),
+            'spot': spot
+        }
+        $.ajax({
+            data: data,
+            url: 'spot-5',
+            method: "POST",
+            success:function(){
+                $('.modal').modal('close'); 
+                $('#P5').css("background-image", "url('https://empowerthevillage.s3.amazonaws.com/static/img/EFBF+bag.png')")
+                $('#P5').css("background-size", "80%")
+                $('#P5').css("background-position", "center")
+                $('#P5').css("background-repeat", "no-repeat")
+                $('#P5 .has-image').css("display", "none")
+                $('#spot5-text').css("display","none")
+            },
+        })
+    })
+    $('#spot6submit').click(function(e){
+        e.preventDefault();
+        var spot = '6'
+        data = {
+            csrfmiddlewaretoken: '{{ csrf_token }}',
+            'field1' : $('#P6store').val(),
+            'field2' : $('#P6amount').val(),
+            'spot': spot
+        }
+        $.ajax({
+            data: data,
+            url: 'spot-6',
+            method: "POST",
+            success:function(){
+                $('.modal').modal('close'); 
+                $('#P6').css("background-image", "url('https://empowerthevillage.s3.amazonaws.com/static/img/EFBF+bag.png')")
+                $('#P6').css("background-size", "80%")
+                $('#P6').css("background-position", "center")
+                $('#P6').css("background-repeat", "no-repeat")
+                $('#P6 .has-image').css("display", "none")
+                $('#spot6-text').css("display","none")
+            },
+        })
+    })
+    $('#spot7submit').click(function(e){
+        e.preventDefault();
+        var spot = '7'
+        data = {
+            csrfmiddlewaretoken: '{{ csrf_token }}',
+            'field1' : $('#P7business1').val(),
+            'field2' : $('#P7state1').val(),
+            'field3' : $('#P7business2').val(),
+            'field4' : $('#P7state2').val(),
+            'field5' : $('#P7business3').val(),
+            'field6' : $('#P7state3').val(),
+            'spot': spot
+        }
+        $.ajax({
+            data: data,
+            url: 'spot-7',
+            method: "POST",
+            success:function(){
+                $('.modal').modal('close'); 
+                $('#P7').css("background-image", "url('https://empowerthevillage.s3.amazonaws.com/static/img/EFBF+bag.png')")
+                $('#P7').css("background-size", "80%")
+                $('#P7').css("background-position", "center")
+                $('#P7').css("background-repeat", "no-repeat")
+                $('#P7 .has-image').css("display", "none")
+                $('#spot7-text').css("display","none")
+            },
+        })
+    })
+    $('#spot8submit').click(function(e){
+        e.preventDefault();
+        var spot = '8'
+        data = {
+            csrfmiddlewaretoken: '{{ csrf_token }}',
+            'field1' : $('#P8store').val(),
+            'field2' : $('#P8amount').val(),
+            'spot': spot
+        }
+        $.ajax({
+            data: data,
+            url: 'spot-8',
+            method: "POST",
+            success:function(){
+                $('.modal').modal('close'); 
+                $('#P8').css("background-image", "url('https://empowerthevillage.s3.amazonaws.com/static/img/EFBF+bag.png')")
+                $('#P8').css("background-size", "80%")
+                $('#P8').css("background-position", "center")
+                $('#P8').css("background-repeat", "no-repeat")
+                $('#P8 .has-image').css("display", "none")
+                $('#spot8-text').css("display","none")
+            },
+        })
+    })
+    $('#spot9submit').click(function(e){
+        e.preventDefault();
+        var spot = '9'
+        data = {
+            csrfmiddlewaretoken: '{{ csrf_token }}',
+            'field1' : $('#P9handle').val(),
+            'field2' : $('#P9link').val(),
+            'spot': spot
+        }
+        $.ajax({
+            data: data,
+            url: 'spot-9',
+            method: "POST",
+            success:function(){
+                $('.modal').modal('close'); 
+                $('#P9').css("background-image", "url('https://empowerthevillage.s3.amazonaws.com/static/img/EFBF+bag.png')")
+                $('#P9').css("background-size", "80%")
+                $('#P9').css("background-position", "center")
+                $('#P9').css("background-repeat", "no-repeat")
+                $('#P9 .has-image').css("display", "none")
+                $('#spot9-text').css("display","none")
+            },
+        })
+    })
+    $('#spot11submit').click(function(e){
+        e.preventDefault();
+        var spot = '11'
+        data = {
+            csrfmiddlewaretoken: '{{ csrf_token }}',
+            'field1' : $('#P11org').val(),
+            'field2' : $('#P11amount').val(),
+            'spot': spot
+        }
+        $.ajax({
+            data: data,
+            url: 'spot-11',
+            method: "POST",
+            success:function(){
+                $('.modal').modal('close'); 
+                $('#P11').css("background-image", "url('https://empowerthevillage.s3.amazonaws.com/static/img/EFBF+bag.png')")
+                $('#P11').css("background-size", "80%")
+                $('#P11').css("background-position", "center")
+                $('#P11').css("background-repeat", "no-repeat")
+                $('#P11 .has-image').css("display", "none")
+                $('#spot11-text').css("display","none")
+            },
+        })
+    })
+    $('#spot12submit').click(function(e){
+        e.preventDefault();
+        var spot = '12'
+        data = {
+            csrfmiddlewaretoken: '{{ csrf_token }}',
+            'field1' : $('#P12business1').val(),
+            'field2' : $('#P12date1').val(),
+            'field3' : $('#P12amount1').val(),
+            'field4' : $('#P12business2').val(),
+            'field5' : $('#P12date2').val(),
+            'field6' : $('#P12amount2').val(),
+            'spot': spot
+        }
+        $.ajax({
+            data: data,
+            url: 'spot-12',
+            method: "POST",
+            success:function(){
+                $('.modal').modal('close'); 
+                $('#P12').css("background-image", "url('https://empowerthevillage.s3.amazonaws.com/static/img/EFBF+bag.png')")
+                $('#P12').css("background-size", "80%")
+                $('#P12').css("background-position", "center")
+                $('#P12').css("background-repeat", "no-repeat")
+                $('#P12 .has-image').css("display", "none")
+                $('#spot12-text').css("display","none")
+            },
+        })
+    })
+    $('#spot14submit').click(function(e){
+        e.preventDefault();
+        var spot = '14'
+        data = {
+            csrfmiddlewaretoken: '{{ csrf_token }}',
+            'field1' : $('#P14store').val(),
+            'field2' : $('#P14link').val(),
+            'spot': spot
+        }
+        $.ajax({
+            data: data,
+            url: 'spot-14',
+            method: "POST",
+            success:function(){
+                $('.modal').modal('close'); 
+                $('#P14').css("background-image", "url('https://empowerthevillage.s3.amazonaws.com/static/img/EFBF+bag.png')")
+                $('#P14').css("background-size", "80%")
+                $('#P14').css("background-position", "center")
+                $('#P14').css("background-repeat", "no-repeat")
+                $('#P14 .has-image').css("display", "none")
+                $('#spot14-text').css("display","none")
+            },
+        })
+    })
+    $('#spot15submit').click(function(e){
+        e.preventDefault();
+        var spot = '15'
+        data = {
+            csrfmiddlewaretoken: '{{ csrf_token }}',
+            'field1' : $('#P15business1').val(),
+            'field2' : $('#P15date1').val(),
+            'field3' : $('#P15amount1').val(),
+            'field4' : $('#P15business2').val(),
+            'field5' : $('#P15date2').val(),
+            'field6' : $('#P15amount2').val(),
+            'field7' : $('#P15business3').val(),
+            'field8' : $('#P15date3').val(),
+            'field9' : $('#P15amount3').val(),
+            'field10' : $('#P15business4').val(),
+            'field11' : $('#P15date4').val(),
+            'field12' : $('#P15amount4').val(),
+            'spot': spot
+        }
+        $.ajax({
+            data: data,
+            url: 'spot-15',
+            method: "POST",
+            success:function(){
+                $('.modal').modal('close'); 
+                $('#P15').css("background-image", "url('https://empowerthevillage.s3.amazonaws.com/static/img/EFBF+bag.png')")
+                $('#P15').css("background-size", "80%")
+                $('#P15').css("background-position", "center")
+                $('#P15').css("background-repeat", "no-repeat")
+                $('#P15 .has-image').css("display", "none")
+                $('#spot15-text').css("display","none")
+            },
+        })
+    })
+    $('#spot17submit').click(function(e){
+        e.preventDefault();
+        var spot = '17'
+        data = {
+            csrfmiddlewaretoken: '{{ csrf_token }}',
+            'field1' : $('#P17establishment').val(),
+            'field2' : $('#P17amount').val(),
+            'spot': spot
+        }
+        $.ajax({
+            data: data,
+            url: 'spot-17',
+            method: "POST",
+            success:function(){
+                $('.modal').modal('close'); 
+                $('#P17').css("background-image", "url('https://empowerthevillage.s3.amazonaws.com/static/img/EFBF+bag.png')")
+                $('#P17').css("background-size", "80%")
+                $('#P17').css("background-position", "center")
+                $('#P17').css("background-repeat", "no-repeat")
+                $('#P17 .has-image').css("display", "none")
+                $('#spot17-text').css("display","none")
+            },
+        })
+    })
+    $('#spot18submit').click(function(e){
+        e.preventDefault();
+        var spot = '18'
+        data = {
+            csrfmiddlewaretoken: '{{ csrf_token }}',
+            'field1' : $('#P18member1').val(),
+            'field2' : $('#P18member2').val(),
+            'field3' : $('#P18member3').val(),
+            'field4' : $('#P18member4').val(),
+            'field5' : $('#P18member5').val(),
+            'spot': spot
+        }
+        $.ajax({
+            data: data,
+            url: 'spot-18',
+            method: "POST",
+            success:function(){
+                $('.modal').modal('close'); 
+                $('#P18').css("background-image", "url('https://empowerthevillage.s3.amazonaws.com/static/img/EFBF+bag.png')")
+                $('#P18').css("background-size", "80%")
+                $('#P18').css("background-position", "center")
+                $('#P18').css("background-repeat", "no-repeat")
+                $('#P18 .has-image').css("display", "none")
+                $('#spot18-text').css("display","none")
+            },
+        })
+    })
+    $('#spot19submit').click(function(e){
+        e.preventDefault();
+        var spot = '19'
+        data = {
+            csrfmiddlewaretoken: '{{ csrf_token }}',
+            'field1' : $('#P19business').val(),
+            'field2' : $('#P19amount').val(),
+            'spot': spot
+        }
+        $.ajax({
+            data: data,
+            url: 'spot-19',
+            method: "POST",
+            success:function(){
+                $('.modal').modal('close'); 
+                $('#P19').css("background-image", "url('https://empowerthevillage.s3.amazonaws.com/static/img/EFBF+bag.png')")
+                $('#P19').css("background-size", "80%")
+                $('#P19').css("background-position", "center")
+                $('#P19').css("background-repeat", "no-repeat")
+                $('#P19 .has-image').css("display", "none")
+                $('#spot19-text').css("display","none")
+            },
+        })
+    })
+    $('#spot20submit').click(function(e){
+        e.preventDefault();
+        var spot = '20'
+        data = {
+            csrfmiddlewaretoken: '{{ csrf_token }}',
+            'field1' : $('#P20business').val(),
+            'field2' : $('#P20link').val(),
+            'spot': spot
+        }
+        $.ajax({
+            data: data,
+            url: 'spot-20',
+            method: "POST",
+            success:function(){
+                $('.modal').modal('close'); 
+                $('#P20').css("background-image", "url('https://empowerthevillage.s3.amazonaws.com/static/img/EFBF+bag.png')")
+                $('#P20').css("background-size", "80%")
+                $('#P20').css("background-position", "center")
+                $('#P20').css("background-repeat", "no-repeat")
+                $('#P20 .has-image').css("display", "none")
+                $('#spot20-text').css("display","none")
+            },
+        })
+    })
+    $('#spot21submit').click(function(e){
+        e.preventDefault();
+        var spot = '21'
+        data = {
+            csrfmiddlewaretoken: '{{ csrf_token }}',
+            'field1' : $('#P21book').val(),
+            'field2' : $('#P21author').val(),
+            'spot': spot
+        }
+        $.ajax({
+            data: data,
+            url: 'spot-21',
+            method: "POST",
+            success:function(){
+                $('.modal').modal('close'); 
+                $('#P21').css("background-image", "url('https://empowerthevillage.s3.amazonaws.com/static/img/EFBF+bag.png')")
+                $('#P21').css("background-size", "80%")
+                $('#P21').css("background-position", "center")
+                $('#P21').css("background-repeat", "no-repeat")
+                $('#P21 .has-image').css("display", "none")
+                $('#spot21-text').css("display","none")
+            },
+        })
+    })
+    $('#spot22submit').click(function(e){
+        e.preventDefault();
+        var spot = '22'
+        data = {
+            csrfmiddlewaretoken: '{{ csrf_token }}',
+            'field1' : $('#P22business1').val(),
+            'field2' : $('#P22link1').val(),
+            'field3' : $('#P22business2').val(),
+            'field4' : $('#P22link2').val(),
+            'spot': spot
+        }
+        $.ajax({
+            data: data,
+            url: 'spot-22',
+            method: "POST",
+            success:function(){
+                $('.modal').modal('close'); 
+                $('#P22').css("background-image", "url('https://empowerthevillage.s3.amazonaws.com/static/img/EFBF+bag.png')")
+                $('#P22').css("background-size", "80%")
+                $('#P22').css("background-position", "center")
+                $('#P22').css("background-repeat", "no-repeat")
+                $('#P22 .has-image').css("display", "none")
+                $('#spot22-text').css("display","none")
+            },
+        })
+    })
+    $('#spot23submit').click(function(e){
+        e.preventDefault();
+        var spot = '23'
+        data = {
+            csrfmiddlewaretoken: '{{ csrf_token }}',
+            'field1' : $('#P23business1').val(),
+            'field2' : $('#P23state1').val(),
+            'field3' : $('#P23business2').val(),
+            'field4' : $('#P23state2').val(),
+            'field5' : $('#P23business3').val(),
+            'field6' : $('#P23state3').val(),
+            'spot': spot
+        }
+        $.ajax({
+            data: data,
+            url: 'spot-23',
+            method: "POST",
+            success:function(){
+                $('.modal').modal('close'); 
+                $('#P23').css("background-image", "url('https://empowerthevillage.s3.amazonaws.com/static/img/EFBF+bag.png')")
+                $('#P23').css("background-size", "80%")
+                $('#P23').css("background-position", "center")
+                $('#P23').css("background-repeat", "no-repeat")
+                $('#P23 .has-image').css("display", "none")
+                $('#spot23-text').css("display","none")
+            },
+        })
+    })
+    $('#spot25submit').click(function(e){
+        e.preventDefault();
+        var spot = '25'
+        data = {
+            csrfmiddlewaretoken: '{{ csrf_token }}',
+            'field1' : $('#P25business').val(),
+            'field2' : $('#P25state').val(),
+            'field3' : $('#P25type').val(),
+            'spot': spot
+        }
+        $.ajax({
+            data: data,
+            url: 'spot-25',
+            method: "POST",
+            success:function(){
+                $('.modal').modal('close'); 
+                $('#P25').css("background-image", "url('https://empowerthevillage.s3.amazonaws.com/static/img/EFBF+bag.png')")
+                $('#P25').css("background-size", "80%")
+                $('#P25').css("background-position", "center")
+                $('#P25').css("background-repeat", "no-repeat")
+                $('#P25 .has-image').css("display", "none")
+                $('#spot25-text').css("display","none")
+            },
+        })
+    })
+    </script>
+    
+{% endblock %}

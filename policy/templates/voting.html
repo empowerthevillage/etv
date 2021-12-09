@@ -1,0 +1,323 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}ETV | Operation: Ballot Box™{% endblock %}
+{% block canonical %}https://www.empowerthevillage.org/policy-and-power/voting/{% endblock %}
+{% block seo_description %}Operation: Ballot Box™: Learn how and where to vote safely and reliably!{% endblock %}
+
+{% block content %}
+<div class="parallax-container z-depth-3 box-shadow valign-wrapper">
+    
+    <div class="container z-depth-4 center-align parallax-banner">
+        <img src='{% static "img/policy_power.png" %}' style="width:90%; padding: 4% 0%">
+    </div>
+    <div class="parallax">
+        <img src='{% static "img/policy_collage_final.png" %}'>
+    </div>
+
+</div>
+<div style="background: url('{% static 'img/policy_collage_final.png' %}');">
+    <div class="row" style="background-color: rgba(255, 255, 255, 0.781);">
+        <div class="col s12 l10 offset-l1  pillar-body">
+            <h5 class="phase-one-title" style="margin-bottom: 10px">Operation: Ballot Box™</h5>
+            <h6 style='font-size: 28px; font-weight: 300'>How and Where to Vote Safely and Reliably</h6>
+            
+            <div class="row center-align">
+                <h5 style="font-size: 36px; font-weight: 500">Important Upcoming Elections: November 2, 2021!</b></h5>
+                <h5 style="margin-bottom: 20px;"><a href="{{ voting_url }}">Click to learn more about Early Voting, Vote-By-Mail opportunities and more</h5></a>
+              
+                <div class="col s6 l3 center-align">
+                  <a href="{% static 'img/US-NJ-2021.pdf' %}" target="_blank"><img class="z-depth-2" src="{% static 'img/US-NJ-2021.png' %}" width=100%></a>
+                </div>
+                <div class="col s6 l3 center-align">
+                  <a href="{% static 'img/US-OH-2021.pdf' %}" target="_blank"><img class="z-depth-2" src="{% static 'img/US-OH-2021.png' %}" width=100%></a>
+                </div>
+                <div class="col s6 l3 center-align">
+                  <a href="{% static 'img/US-VA-2021.pdf' %}" target="_blank"><img class="z-depth-2" src="{% static 'img/US-VA-2021.png' %}" width=100%></a>
+                </div>
+                <div class="col s6 l3 center-align">
+                  <a href="{% static 'img/US-FL-2021.pdf' %}" target="_blank"><img class="z-depth-2" src="{% static 'img/US-FL-2021.png' %}" width=100%></a>
+                </div>
+              </div>
+              <div class="divider" style="margin-top: 40px"></div>
+            <p style="text-align: center;margin-top:0">Click your state to download and share key voting info with friends, family and your network!</p>
+
+            <div class="map-container">
+                    <div id="map" style="height: 600px">
+                            
+                    </div>     
+            </div>
+            
+            <div class="row">
+                <div class="divider" style="margin-top: 60px;"></div>
+                <h5 class="center-align coming-soon-title" style="font-size: 48px;color: rgb(184, 34, 34); padding-bottom: 20px; padding-top: 30px">Coming Soon!</h5>
+                <h6 style="font-weight: 400"><b style="font-weight: 400; font-family: oskar-inline; font-size: 56px">Lights, Camera ... <b style="color: rgb(24, 186, 24); font-size: 56px; font-weight: 400">VOTE!</b></b></h6>
+                <h6 style="padding-top: 10px; font-weight: 400"> Get Info About Voter ID Requirements & Navigate the Process to Acquire ID</h6>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    h5 b {
+        font-family: poppins;
+        font-weight: 500;
+        font-size: 24px;
+        padding-right: 5%
+    }
+    h5 a {
+        font-family: poppins;
+        font-weight: 400;
+        font-size: 22px;
+        padding-right: 5%
+    }
+    #map {
+        background-color: transparent;
+    }
+    .pillar-header {
+        background-color: white;
+    }
+    
+    .pillar-collapsible li {
+        margin:0 !important;
+    }
+    .phase-one-list {
+        padding-left: 10% !important;
+        padding-right: 10%;
+    }
+    .phase-one-list li {
+        padding: 15px;
+    }
+    .phase-one-title{
+        font-family: oskar-inline;
+        text-align: center;
+    }
+    @media only screen and (min-width:0px){
+        .health-main-title {
+        font-family: oskar-inline;
+        font-size: 36px;
+        text-align: center;
+        color:rgb(18, 148, 18);
+        margin-bottom: 0;
+        margin-top: 20px
+    }
+    .health-main-text {
+        line-height: 32px;
+    }
+        .phase-one-list {
+            font-size: 16px
+        }
+        .phase-one-title {
+            font-size: 38px;
+            
+        }
+        .pillar-collapsible {
+        width: 100%;
+        margin-left:0;
+    }
+        p {
+            font-size:16px
+        }
+        .pillar-title {
+            color: black;
+            font-family: poppins;
+            font-size: 16px;
+            letter-spacing: 1px;
+            text-transform: none;
+        }
+    }
+    @media only screen and (min-width:601px){
+        .health-main-title {
+        font-family: oskar-inline;
+        font-size: 48px;
+        text-align: center;
+        color:rgb(18, 148, 18);
+        margin-bottom: 0;
+        margin-top: 20px
+    }
+        .phase-one-list {
+            font-size: 18px
+        }
+        .phase-one-title {
+            font-size: 48px;
+            width: 80%; 
+            margin-left: 10%
+        }
+        p {
+            font-size:18px
+        }
+        .pillar-title {
+            font-size: 20px;
+            letter-spacing: 2px;
+        }
+        .pillar-collapsible {
+        width: 80%;
+        margin-left:10%;
+    }
+        h5 b {
+            font-size: 32px;
+            line-height: 40px
+        }
+    }
+    @media only screen and (min-width:993px){
+        .health-main-title {
+        font-size: 48px;
+        text-align: left;
+        color:rgb(18, 148, 18);
+        margin-bottom: 0;
+        margin-top:0
+    }
+        .phase-one-list {
+            font-size: 22px
+        }
+        .phase-one-title {
+            font-size: 64px;
+            width: 70%; 
+            margin-left: 15%
+        }
+        p {
+            font-size:22px
+        }
+        .pillar-collapsible {
+        width: 70%;
+        margin-left:15%;
+    }
+}
+    @media only screen and (min-width:1201px){
+       
+        .pillar-collapsible {
+        width: 60%;
+        margin-left:20%;
+    }
+    .pillar-title {
+            font-size: 24px;
+            letter-spacing: 2px;
+        }
+        .health-main-title {
+        font-size: 52px;
+    }
+    .health-main-text {
+        font-size: 24px;
+        line-height: 40px
+    }
+    }
+    
+</style>
+<style>
+    .phase-one-title{
+        font-family: oskar-inline;
+        text-align: center
+    }
+    .jvectormap-container {
+        height: 100%;
+    }
+    .map-container{
+        background-color: transparent;
+    }
+    h6 {
+        font-weight: 500;
+        text-align: center;
+    }
+    p {
+        padding-left: 10%;
+        padding-right: 10%
+    }
+    @media only screen and (min-width: 0px) {
+        h5 {
+            font-size: 54px;
+            line-height: 36px
+        }
+        h6 {
+            font-size: 22px;
+            letter-spacing: 1px;
+            line-height: 36px
+        }
+        p {
+            font-size: 20px
+        }
+    }
+</style>
+<script>
+    $(function(){
+    map = new jvm.Map({
+        map: 'us_aea',
+        container: $('#map'),
+        zoomOnScroll: false,
+        regionLabelStyle: {
+          initial: {
+            fill: 'black',
+            'font-family': 'Poppins',
+          },
+          hover: {
+            fill: 'grey'
+          },
+        },
+        backgroundColor: 'transparent',
+        labels: {
+          regions: {
+            render: function(code){
+          var doNotShow = ['US-RI', 'US-DC', 'US-DE', 'US-MD'];
+
+          if (doNotShow.indexOf(code) === -1) {
+            return code.split('-')[1];
+          }
+        },
+            offsets: function(code){
+              return {
+                'CA': [-10, 10],
+                'ID': [0, 40],
+                'OK': [25, 0],
+                'LA': [-20, 0],
+                'FL': [45, 0],
+                'KY': [10, 5],
+                'VA': [15, 5],
+                'MI': [30, 30],
+                'AK': [50, -25],
+                'HI': [25, 50]
+              }[code.split('-')[1]];
+            }
+          }
+        },
+        regionStyle: {
+            initial: {
+                fill: '#cccccc',
+            },
+            hover: {
+                "fill-opacity": 0.9,
+            }
+        },
+        regionLabelStyle: {
+            "z-index": '3'
+        },
+        series: {
+            regions: [{
+                scale: {
+                    'published': '#19b529',
+                    'soon': '#199456',
+                },
+                attribute: 'fill',
+                values: {
+                    'US-NJ': 'published',
+                    'US-OH': 'published',
+                    'US-VA': 'published',
+                    'US-FL': 'published',
+                },
+                
+            }],
+        },
+        onRegionClick: function(event, code) {
+            var regionName = map.getRegionName(code);
+            var publishedStates = ["US-NJ", "US-VA", "US-OH", "US-FL"];
+            if (publishedStates.indexOf(code) != -1) {
+                var data = {
+                    'state': code,
+                }
+                var state = code
+                window.location.href = "https://empowerthevillage.s3.amazonaws.com/static/img/"+ code +"-2021.pdf";
+                
+            } 
+        },
+       });
+    });
+    </script>
+{% endblock %}

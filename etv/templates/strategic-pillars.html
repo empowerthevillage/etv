@@ -1,0 +1,174 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+{{ title }}
+{% endblock %}
+{% block canonical %}https://www.empowerthevillage.org/strategic-pillars/{% endblock %}
+{% block seo_description %}Learn more about ETV's four strategic pillars: Economic Prosperity, Policy & Power, Health & Wellness, and Eduction & Employment{% endblock %}
+
+{% block content %}
+<div class="parallax-container z-depth-3 box-shadow valign-wrapper">
+    
+    <div class="container z-depth-4 center-align parallax-banner" style="padding: 2%">
+        <div class="row valign-wrapper">
+        <img src="{% static 'img/pillar-logo-single.png' %}" width=100% style="margin-bottom: -20px;">
+    </div>
+    </div>
+    <div class="parallax">
+        <img src='{% static "img/pillar_collage.png" %}'>
+    </div>
+
+</div>
+<div class="center-align" style="background: url('{% static 'img/pillar_collage.png' %}');">
+    <div style="padding-top: 40px; padding-bottom: 20px; background-color: rgba(255, 255, 255, 0.884);">
+        <div class="grid-container" >
+            <a href="{{ ep_url }}"><div class="grid-item" style="background-image: url('{% static 'img/economic_prosperity_card.jpeg' %}'); background-size: 110%; background-position-x: -25px">
+                
+            </div></a>
+            <a href="{{ education_url }}"><div class="grid-item" style="background-image: url('{% static 'img/education_card.jpeg' %}'); background-size: 110%; background-position-x: -25px">
+               
+            </div></a>
+            <a href="{{ health_url }}"><div class="grid-item" style="background-image: url('{% static 'img/health_card.jpeg' %}'); background-size: 110%; background-position-x: -25px">
+               
+            </div></a>
+            <a href="{{ policy_url }}"><div class="grid-item" style="background-image: url('{% static 'img/policy_card.jpeg' %}'); background-size: 110%; background-position-x: -25px">
+              
+            </div></a>
+        </div>
+    </div>
+</div>
+<style>
+    .grid-container {
+        display: grid;
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
+        grid-template-columns: 50% 50%;
+        width: 60%;
+        margin-left: 20%
+    }
+    .grid-item {
+        padding-bottom: 100%
+    }
+    .pillars-title {
+        font-family: oskar-inline;
+        font-size: 64px;
+        color: rgb(53, 53, 53)
+    }
+    .divider {
+        margin: 5%;
+    }
+    
+    p {
+        font-weight: 400;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        text-align: center;
+    }
+    
+    .facts-ul li {
+        padding-bottom: 15px;
+        font-weight: 300;
+    }
+    @media only screen and (min-width: 0px) {
+        .power-collapse {
+        width: 100%;
+        
+    }
+    .power-collapse li {
+        
+    }
+    .power-collapse li div{
+        font-size: 14px;
+        padding: 2% 5%
+    }
+        blockquote {
+            font-size: 16px;
+            font-weight: 300;
+            margin-top: 30px !important;
+            margin-top: 30px !important;
+        }
+        .statistic-title {
+            font-family: oskar-inline;
+            font-size: 28px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-transform: scale(1, 0.9);
+            text-align: center;
+            background-color: rgba(154, 22, 22, 0.947);
+            padding: 15px 5px;
+            color: white
+        }
+        .collapsible li {
+            margin: 0 !important;
+        }
+        .degree-attainment-small {
+            display: block;
+            padding: 0% 5%;
+        }
+        .degree-attainment {
+            display: none;
+            padding: 0% 5%;
+        }
+        blockquote {
+            width: 90%;
+            margin-left: 5%;
+            margin-top: 7%;
+        }
+    }
+    @media only screen and (min-width: 420px) {
+        .statistic-title {
+            font-size: 32px;
+            padding: 15px 10px;
+        }
+    }
+    @media only screen and (min-width: 601px) {
+        .power-collapse {
+        width: 100%;
+        
+    }
+    .power-collapse li {
+        
+    }
+    .power-collapse li div{
+        font-size: 16px;
+        padding: 2% 10%
+    }
+        blockquote {
+            font-size: 20px;
+            margin-top: 5% !important;
+            margin-bottom: 5% !important;
+        }
+        .statistic-title {
+            font-size: 38px;
+            width: 50% !important;
+            margin-left: 25%;
+            margin-top: 5%;
+            margin-bottom: 5%;
+        }
+        
+      
+    }
+    @media only screen and (min-width: 993px) {
+        blockquote {
+            font-size: 22px;
+        }
+        .pillar-body {
+            padding-left: 5% !important;
+            padding-right: 5% !important;
+        }
+        .power-collapse {
+        width: 90%;
+        margin-left: 5%
+        
+    }
+    .power-collapse li {
+        
+    }
+    .power-collapse li div{
+        font-size: 18px;
+        padding: 2% 5%
+    }
+        
+    }
+</style>
+{% endblock %}

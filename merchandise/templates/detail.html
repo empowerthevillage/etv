@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}{{ object.title }} | The Commerce Code{% endblock %}
+
+{% block content %}
+<div class="container" style="padding-top: 40px; padding-bottom: 40px">
+    <div class=row>
+        <div class="col-sm-12 col-md-10">
+            <h5 class="detail-title">{{ object.title }}</h5>
+            <div class="">
+                {% if object.thumbnail %}
+                <img src="{{ object.thumbnail }}">
+                {% endif %}
+                <video style="margin: 30px 0px" class="shadow-2-strong" controls=True width=100% src="https://file-examples-com.github.io/uploads/2017/04/file_example_MP4_480_1_5MG.mp4"></video>
+            </div>
+            {% if object.free == True %}
+            <h7 class="list-group-free">FREE</h7>
+            {% else %}
+            <h7 class="list-group-price">${{ object.price }}</h7>
+            {% endif %}
+            <p class="list-group-description">{{ object.description }}</p>
+
+            <div class="row">
+                {% for skill in object.skills.all %}
+                <div class="chip">
+                    <img src="{% static 'img/html.png' %}" width="96" height="96">
+                    {{ skill }}
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-2">
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+                {% for lesson in object.lessons.all %}
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-heading{{ lesson.number }}">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-mdb-toggle="collapse"
+                      data-mdb-target="#flush-collapse{{ lesson.number }}"
+                      aria-expanded="false"
+                      aria-controls="flush-collapse{{ lesson.number }}"
+                    >
+                      {{ lesson.title }}
+                    </button>
+                  </h2>
+                  <div
+                    id="flush-collapse{{ lesson.number }}"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="flush-heading{{ lesson.number }}"
+                    data-mdb-parent="#accordionFlushExample"
+                  >
+                    <div class="accordion-body">
+                      {{ lesson.number }}
+                    </div>
+                  </div>
+                </div>
+                {% endfor %}
+              </div>
+        </div>
+    </div>
+    
+
+    
+</div>
+{% endblock %}

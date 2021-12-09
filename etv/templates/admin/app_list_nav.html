@@ -1,0 +1,34 @@
+
+{% load static %}
+{% load i18n %}
+
+{% block content %}
+<div>
+
+{% for app in app_list %}
+<div class="app-{{ app.app_label }}" module{% if app.app_url in request.path %} current-app{% endif %}>
+    <ul class="">
+        <a href="{{ app.app_url }}" class="section" title="{% blocktranslate with name=app.name %}Models in the {{ name }} application{% endblocktranslate %}">
+            <li class="collection-header">
+            {{ app.name }}
+            </li>
+        </a>
+        {% for model in app.models %}
+            {% if model.admin_url %}
+            <li class="">
+                <a href="{{ model.admin_url }}"{% if model.admin_url in request.path %} aria-current="page"{% endif %}>{{ model.name }}</a>
+            </li>
+            {% else %}
+            <li class="">
+                {{ model.name }}
+                
+            </li>
+            {% endif %}
+      
+        {% endfor %}
+    </ul>
+</div>
+{% endfor %}
+</div>
+{% endblock %}
+

@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% url 'account:home' as account_home_url %}
+<div class='ui grid'>
+  <div class="ui container">
+  <div class="ui breadcrumb">
+    <a class="section" href="{{ account_home_url }}">Account Home</a>
+    <i class="right chevron icon divider"></i>
+    <div class="active section">Update Username</div>
+  </div>
+  </div>
+  <div class='ui centered row'>
+  {% if title %}<h1 style='font-family:"Quicksand", sans serif; font-weight:400'>{{ title }}</h1>{% endif %}
+  </div>
+</div>
+<div class='ui center aligned text container'>
+    <div class='ui row'>
+        <form method='post' action='{% if action_url %}{{ action_url }}{% endif %}' class="ui form">{% csrf_token %}
+          {% if next_url %}
+          <input type='hidden' name='next' value='{{ next_url }}' />
+          {% endif %}
+           {{ form.as_p }}
+        <label for='email'>Email Address:</label>
+        <input type='text' value='{{ request.user.email }}' class='ui disabled input' disabled='disabled'/><span class='help-text'>Changes to email address are not yet supported, but we're working on it!</span><br/>
+        <br/><a href='{% url "password_change" %}'>Click Here to Change Password</a>
+        <br/><button type="submit" class='ui button' style='margin-top:20'>Save</button>
+        </form>
+      </div>
+
+</div>
+
+{% endblock %}

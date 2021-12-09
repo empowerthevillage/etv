@@ -1,0 +1,270 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+<div class="row cart-page">
+  <div class="cart-container col s12 m7 l8 section scrollspy">
+    <a href="{{ merchandise_url }}" class="valign-wrapper"><i class="material-icons" style="font-size: 16px">arrow_back</i>&nbspContinue Shopping</a>
+    <h5>My Cart</h5>
+    {% csrf_token %}
+    <div class="cart-row row" style="margin-bottom:0">
+        <div class="col s12">
+            <table class="cart-table">
+              <thead>
+                <tr>
+                  <td>Item</td>
+                  <td>Qty</td>
+                  <td>Price</td>
+                </tr>
+              </thead>
+                <tbody class="cart-body">
+                    {% for item in items_list %}
+                    {% if item.quantity == 0 %}
+                    {% else %}
+                    <tr class="cart-product" value="{{ item.id }}" product="{{ item.item.product }}">
+                      <td>
+                        <b>{{ item.item.product }}</b>
+                        <input class="product-price" type="hidden" value="{{ item.item.product.price }}">
+                        <p>Color: {{ item.item.variation.color }}</p>
+                        <p>Size: {{ item.item.variation.size }}</p>
+                      </td>
+                      <td class="qty-td"><input class="qty-counter" type="number" min='0' style="margin:0" value='{{ item.quantity }}'></td>
+                      <td class="line-price" value="{% widthratio item.item.product.price 1 item.quantity %}">
+                        <div class="price-text">${% widthratio item.item.product.price 1 item.quantity %}.00</div>
+                        <div class="preloader hidden"><img src="{% static 'img/sun-preloader.gif' %}" width=40px></div>
+                      </td>
+                    </tr>
+                    {% endif %}
+                    {% endfor %}
+                    <tr>
+                      <td></td>
+                      <td><b>Total</b>
+                      </td>
+                      <td class="cart-panetotal" style="font-weight: 500" value="{{ cart.total }}" id="cart-panetotal">${{ cart.total }}</td>
+
+                    </tr>
+                    <script>
+                      $('.qty-counter').change(function(){
+                        var qty = $(this).val()
+                        var product = $(this).closest('.cart-product')
+                        var itemID = product.attr('value')
+                        var product_title = product.attr('product')
+                        linePrice = $(product).find('.line-price')
+                        var priceText = linePrice.find('.price-text')
+                        var preloader = linePrice.find('.preloader')
+                        priceText.hide()
+                        preloader.removeClass('hidden')
+                        var cartTD = $('.cart-panetotal')
+                        var cartTotal = cartTD.attr('value')
+                        var data = {
+                          'quantity': qty,
+                          'itemID': itemID,
+                          csrfmiddlewaretoken: '{{ csrf_token }}'
+                        }
+                        $.ajax({
+                          data: data,
+                          url: 'update-cart',
+                          method: 'POST',
+                          success: function(data){
+                            $('.product-summary').load(location.href + ' .product-summary')
+                            if (data.itemQuantity == 0){
+                              product.remove()
+
+                              cartTD.text('$'+ data.cartTotal)
+                              cartTD.attr('value', data.cartTotal)
+                              $('.summary-total').text('$'+ data.cartTotal)
+
+                            }else{
+                              preloader.addClass('hidden')
+                              priceText.show()
+                              priceText.text('$'+ data.itemTotal)
+                              priceText.attr('value', data.itemTotal)
+                              cartTD.text('$'+ data.cartTotal)
+                              cartTD.attr('value', data.cartTotal)
+                              $('.summary-total').text('$'+ data.cartTotal)
+                            }
+                            
+                          },
+                          error: function(data){
+                            alert(data)
+                          }
+                        })
+                      })
+                      
+                    </script>
+                  </tbody>
+                </table>
+        </div>
+    </div>
+  </div>
+  <div class="cart-summary center-align col s12 m5 l4 z-depth-2">
+    <h5>Summary</h5>
+    {% regroup items_list by product as product_summary %}
+    <h6 class="items-title">Items</h6>
+      {% for x in product_summary %}
+        <p class="product-summary" style="margin:0" product-summary="{{ x.grouper }}">{{ x.grouper }}</p>
+      {% endfor %}
+    <div style="padding-top: 10px; padding-bottom: 10px">
+    <h6>Total</h6>
+    <p style="margin-top:0" class="summary-total">${{ cart.total }}</p>
+    </div>
+    <a  style="margin-bottom: 10px" href="{{ checkout_url }}" class="btn checkout">Proceed To Checkout</a>
+    <br>
+    <i ><i class="fas fa-lock"></i> Secure </i>
+  </div>
+</div>
+
+<script>
+
+function refreshCart(){
+    var cartTable = $(".cart-table")
+    var cartBody = cartTable.find(".cart-body")
+    var productRows = cartBody.find(".cart-product")
+    var currentUrl = window.location.href
+
+    var refreshCartUrl = '/api/cart';
+    var refreshCartMethod = "GET";
+    var data = {};
+    $.ajax({
+      url: refreshCartUrl,
+      method: refreshCartMethod,
+      data: data,
+      success: function(data){
+
+        var hiddenCartItemRemoveForm = $(".cart-item-remove-form")
+        if (data.products.length > 0){
+          productRows.html(" ")
+          i = data.products.length
+          $.each(data.products, function(index, value){
+            console.log(value)
+            var newCartItemRemove = hiddenCartItemRemoveForm.clone()
+            newCartItemRemove.css("display", "block")
+              cartBody.prepend("</th><td><a href='" + value.url + "'>" + value.name + "</a>" + newCartItemRemove.html() + "</td><td>" + "$" + value.price + "</td></tr>")
+            i --
+          })
+
+          cartBody.find(".cart-subtotal").text(data.subtotal)
+          cartBody.find(".cart-total").text(data.total)
+        } else {
+          window.location.href = currentUrl
+        }
+
+      },
+      error: function(errorData){
+        console.log("error")
+        console.log(errorData)
+      }
+    })
+}
+</script>
+<style>
+  .hidden {
+    display: none
+  }
+  @media only screen and (min-width: 0px) {
+    
+  .cart-page {
+    background-color: rgba(0, 0, 0, 0.482);
+  }
+  .cart-container {
+    padding-top: 10px !important;
+    background-color: rgba(255, 255, 255, 0.96);
+  }
+  .cart-summary {
+    background-color: rgb(255, 255, 255);
+    height: 100%;
+    padding-top: 30px !important
+  }
+  .cart-container h5 {
+    color: rgb(19, 162, 19)
+  }
+  .cart-summary h5 {
+    color: black
+  }
+  .cart-summary h6 {
+    font-weight: 500;
+    color: rgb(19, 162, 19)
+  }
+  .cart-product {
+    font-family: poppins;
+    font-weight: 300;
+    font-size: 14px;
+  }
+  .cart-product td b {
+    font-weight: 500;
+    color: rgb(187, 38, 38)
+  }
+  .cart-product p {
+    margin: 0;
+  }
+  h5 {
+    font-family: oskar-inline;
+    font-size: 42px
+  }
+  input[type=number]{
+    width: 40px !important;
+    text-align: center;
+  }
+  .checkout {
+    background: rgb(34, 34, 34);
+    font-size: 16px;
+    font-weight: 500
+  }
+  .checkout:hover {
+    background:rgb(50, 50, 50)
+  }
+}
+  @media only screen and (min-width:500px) {
+    tr td {
+      font-size: 16px;
+    }
+    .cart-summary p {
+      font-size: 16px
+    }
+  }
+  @media only screen and (min-width:601px) {
+    .cart-container {
+      height: 100%
+    }
+    .checkout {
+    background: rgb(34, 34, 34);
+    font-size: 18px;
+    font-weight: 500
+  }
+  }
+  @media only screen and (min-width:601px) {
+    tr td {
+      font-size: 18px;
+    }
+    .cart-summary p {
+      font-size: 18px
+    }
+    .checkout {
+      font-size: 20px;
+    }
+  }
+  
+  @media only screen and (min-width:1226px) {
+    .cart-container {
+      padding-top: 60px !important;
+      background-color: rgba(255, 255, 255, 0.94);
+      padding-left: 5% !important
+    }
+    .cart-summary {
+      background-color: rgb(255, 255, 255);
+      height: 100%;
+      padding-top: 80px !important
+    }
+    tr td {
+      font-size: 20px;
+    }
+    .cart-summary p {
+      font-size: 20px
+    }
+    .checkout {
+    font-size: 20px;
+  }
+  }
+</style>
+{% endblock %}

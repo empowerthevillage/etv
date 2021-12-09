@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="center-align" style="background: url('{% static 'img/pillar_collage.png' %}');">
+    <div style="padding-top: 40px; padding-bottom: 20px; background-color: rgba(252, 252, 252, 0.276);">
+        <div class="row" style="background-color: rgba(255, 255, 255, 0.982); width: 80%">
+            <div class="col s10 offset-s1" style="margin-top: 80px;">
+                <div class="row center-align">
+                    <div class="col s12">
+                        <h5>Take a Listen to the Empowerment Hour with Special Guest Ayo Sanderson Wilson <br>(ETV Founder, President, & CEO)!</h5>
+                        <audio controls  id="aacnj-interview" style="margin-bottom: 10px; width: 70%;">
+                            <source src="https://empowerthevillage.s3.amazonaws.com/static/img/ETV_Radio_Interview_FirstHalf.mp3" type="audio/mpeg">
+                        </audio>
+                        <img src="https://images.squarespace-cdn.com/content/v1/5f539c4c68bd6f19d4743e52/1630378962470-0T20U8B2GC7J52FGX1P0/RadioInterview+Ayo.png?format=1500w" width=50%>
+                    </div>
+                </div>
+                <div class="divider"></div>
+                <div class="row center-align">
+                    <h5 style="text-transform: uppercase; font-weight: 500">ETV’s 2020 - 2021 Special Report</h5>
+                    <div style="position:relative;padding-top:max(60%,326px);height:0;width:100%"><iframe sandbox="allow-top-navigation allow-top-navigation-by-user-activation allow-downloads allow-scripts allow-same-origin allow-popups allow-modals allow-popups-to-escape-sandbox" allowfullscreen="true" style="position:absolute;border:none;width:100%;height:100%;left:0;right:0;top:0;bottom:0;" src="https://e.issuu.com/embed.html?d=etv_special_report_2020-2021_v2&hideIssuuLogo=true&u=empowerthevillage"></iframe></div>
+                </div>
+                <div class="divider"></div>
+                
+                <div class="row center-align">
+                    <div class="col s12">
+                        <h5>How Did You Celebrate Juneteenth?</h5>
+                        <iframe width="100%" height="415" src="https://www.youtube.com/embed/-JaP0OkWUoQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="margin-bottom: 20px"></iframe>
+                        <a class="btn green" href="https://www.tapinto.net/towns/denville/categories/press-releases/articles/empower-the-village-inc-and-montclair-art-museum-celebrate-juneteenth-with-two-day-exhibit-showcasing-black-art-excellence-entrepreneurship-9e98e745-9162-4e0a-a2f4-5d13da29cadc">Read The Entire Press Release</a>
+                    </div>
+                </div>
+                <div class="divider" style="margin-bottom: 20px"></div>
+                <div class="row">
+                    <iframe width="100%" height="415" src="https://www.youtube.com/embed/kxH_YQ50pAs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+</div>
+</div>
+<style>
+    h5 {
+        line-height: 32px;
+        font-weight: 600;
+        padding-top: 10px;
+        padding-bottom: 10px
+    }
+</style>
+{% endblock %}

@@ -1,0 +1,346 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div id="page">
+  <div class="backpage">
+    <div class="row center-align" style="margin-top:0px">
+      <div class="col s10 offset-s1 login-card">
+        <h6 id="vbp-nomination-form-title">Ready, Set, Shop!™ Transaction Form</h6>
+        <div class="row">
+          <div class="col s12 m6">
+            <h7 class="bf-subtitle">Ways to Play</h7>
+            <p class="bf-instructions" style="color:rgb(66, 147, 17)"><u><b style="color: black">Team Play</b></u> - Play Ready, Set, Shop!™ as part of a sponsored group challenge with customized prizes!</p>
+            <p class="bf-instructions" style="color:rgb(66, 147, 17)"><u><b style="color: black">Every Friday Challenge!</b></u> - Solo play for Ready, Set, Shop!™ is available at any time for free!</p>
+          </div>
+          <div class="col s12 m6" style="border-left: 1px rgba(128, 128, 128, 0.756) dotted">
+            <h7 class="bf-subtitle">Ways to Win</h7>
+            <p class="bf-instructions" style="color:rgb(165, 55, 55)"><u><b style="color: black">Show Me The Money!</b></u> - Team/player with the highest dollar amount spent at VBP-listed Black-owned businesses within the challenge period wins!</p>
+            <p class="bf-instructions" style="color:rgb(165, 55, 55)"><u><b style="color: black">Throw It In The Bag!</b></u> - Team/player with the most transactions with VBP businesses within the challenge period wins!</p>
+          </div>
+        </div>
+          <p style="margin:0; padding-bottom:0; color: rgb(74, 74, 74); font-weight: 500">*Businesses must be listed in the Village Black Pages™ to count!*</p>
+          <p style="margin:0; padding-bottom:0; color: rgb(113, 113, 113)">If you shopped at a non-VBP business, <a href="{{ nomination_url }}">click here</a> to nominate it for VBP inclusion before the challenge period ends!</p>
+        
+       
+          <form enctype="multipart/form-data" method="POST" style="padding-left:10%; padding-right:10%;" id="nomination-form">
+            {% csrf_token %}
+            
+            <div class="row">
+              <div class="col s6 input-field" style="margin-bottom:0">
+                <input name="first_name" id="first_name" type="text">
+                <label>First Name<b>*</b></label>
+              </div>
+              <div class="col s6 input-field" style="margin-bottom:0">
+                <input name="last_name" id="last_name" type="text">
+                <label>Last Name<b>*</b></label>
+              </div>
+              <div class="col s12 m6 input-field" style="margin-bottom:0">
+                <input name="email" id="email" type="text">
+                <label>Email<b>*</b></label>
+              </div>
+              <div class="input-field col s12 m6" style="margin-bottom:0">
+                {{ rss_form.business_name }}
+                <label>{{ rss_form.business_name.label }}<b>*</b></label>
+              </div>
+            </div>
+            
+            
+            <div class="row" style='margin-bottom:0; margin-top: 0; padding-top: 0'>
+                <div class="input-field col s12 m6">
+                  {{ rss_form.date }}
+                  <label>{{ rss_form.date.label }}<b>*</b></label>
+                </div>
+                <div class="input-field col s12 m6">
+                  {{ rss_form.amount }}
+                  <label>{{ rss_form.amount.label }}<b>*</b></label>
+                </div>
+            </div>
+            <div class="input-field">
+              {{ rss_form.category }}
+              <label>{{ rss_form.category.label }}<b>*</b></label>
+            </div>
+            <div class="file-field input-field">
+                <div class="btn">
+                    <span class="material-icons" style="margin-top:8px">attach_file</span>
+                    <input type="file" name="receipt">
+                </div>
+                <div class="file-path-wrapper">
+                    {{ rss_form.receipt }}
+                </div>
+            </div>
+        
+            <button class="btn btn-large submit-btn nomination-submit" style="font-size: 28px; font-weight: 500;letter-spacing: 2px" type="submit">
+                SUBMIT
+            </button>
+          </form>
+      </div>
+    </div>
+    </div>
+  </div>
+
+  <style>
+    @media only screen and (min-width: 663px){
+      .login-card {
+        background-color:#fdfdfdf1;
+        padding-top:20px !important; 
+        padding-bottom:40px !important; 
+        padding-left: 30px !important; 
+        padding-right: 30px !important;
+      }
+      .backpage {
+        width: 95% !important;
+        margin-left: 2.5%
+      }
+      .bf-subtitle {
+        font-size: 38px !important
+      }
+      .bf-instructions {
+      }
+    }
+    @media only screen and (min-width: 992px){
+      .login-card {
+        padding-top:50px !important; 
+      }
+      .bf-subtitle {
+        font-size: 42px !important
+      }
+      .bf-instructions {
+        font-size: 18px !important
+      }
+      #page {
+        background-size: 120% !important
+      }
+    }
+    [type="radio"]:checked+span:after, [type="radio"].with-gap:checked+span:before, [type="radio"].with-gap:checked+span:after {
+    border: 2px solid rgb(67, 135, 33);
+}
+[type="radio"]:checked+span:after, [type="radio"].with-gap:checked+span:after {
+    background-color: rgb(67, 135, 33);
+}
+.bf-subtitle{
+  font-family: oskar-inline;
+  font-size: 28px;
+}
+.bf-instructions {
+  font-size: 16px
+}
+.login-card {
+  background-color:#fdfdfdf7;
+  
+}
+.backpage {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.555);
+}
+    .textfield {
+      font-family: 'Poppins';
+      font-weight: 300;
+      letter-spacing: 1px;
+      color:rgb(12, 12, 12);
+      font-size:18px
+    }
+    .input-field {
+      padding-bottom: 10px;
+    }
+    input.datepicker {
+    font-family: 'Poppins';
+      font-weight: 300;
+      letter-spacing: 1px;
+      color:rgb(60, 60, 60);
+      font-size:18px
+    }
+    input.file-path {
+    font-family: 'Poppins';
+      font-weight: 300;
+      letter-spacing: 1px;
+      color:rgb(60, 60, 60);
+      font-size:18px
+    }
+    /* label color */
+   .input-field label {
+     color: rgb(128, 128, 128);;
+     font-family: 'Poppins';
+      font-weight: 300;
+      letter-spacing: 1px;
+      font-size:14px;
+      padding-bottom:10px
+    }
+    /* label focus color */
+    .input-field input[type=text]:focus + label {
+      color: rgb(67, 135, 33) !important;
+    }
+    /* label underline focus color */
+    .input-field input[type=text]:focus {
+      border-bottom: 1px solid rgb(67, 135, 33) !important;
+      box-shadow: 0 1px 0 0 rgb(67, 135, 33) !important;
+    }
+    
+    /* icon prefix focus color */
+    .input-field .prefix.active {
+      color: #000;
+    }
+    .select-dropdown {
+      font-family: 'Poppins';
+      font-weight: 300;
+      color:rgb(60, 60, 60);
+      letter-spacing: 1px;
+      padding-top: 10px
+    }
+    #page {
+      background-image: url("{% static 'img/bf-challenge-cropped.png' %}");
+      background-size: 100%;
+      background-repeat: repeat;
+    }
+    .submit-btn {
+    border: solid 1px rgb(237, 237, 237);
+    background-color: rgb(57, 57, 57);
+    cursor: pointer;
+    padding: 30px 0px;
+    display: inline-block;
+    margin: 15px 5px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 300;
+    outline: none;
+    position: relative;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    overflow: hidden;
+    border-radius:0;
+    transform:scale(1,0.9);
+    line-height:0px;
+    width:40%;
+    font-size:16px
+  }
+  .submit-btn:after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    width: 100%;
+    height: 0;
+    top: 50%;
+    left: 50%;
+    background: rgb(237, 237, 237);
+    opacity: 0;
+    -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    -moz-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    -ms-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  }
+  .submit-btn:hover,
+  .submit-btn:active {
+    color: #319657;
+    background-color: rgb(89, 121, 89);
+  }
+
+  .submit-btn:hover:after {
+    height: 300%;
+    opacity: 1;
+  }
+  .recommended-label {
+    color: rgb(128, 128, 128);;
+     font-family: 'Poppins';
+      font-weight: 300;
+      letter-spacing: 1px;
+      font-size:16px;
+      padding-bottom:0px
+  }
+  .owned-label {
+    color: rgb(128, 128, 128);;
+     font-family: 'Poppins';
+      font-weight: 300;
+      letter-spacing: 1px;
+      font-size:16px;
+      padding-bottom:0px
+  }
+  .onlineonly-label {
+    color: rgb(128, 128, 128);;
+     font-family: 'Poppins';
+      font-weight: 300;
+      letter-spacing: 1px;
+      font-size:16px;
+      padding-bottom:0px
+  }
+  .input-field b {
+    color: red
+  }
+  .hidden {
+    display: none;
+  }
+  .swal2-popup .select-wrapper {
+    display: none;
+  }
+  </style>
+  <script>
+    $(document).ready(function(){
+    $('select').formSelect();
+    $('.datepicker').datepicker();
+    $('.money').mask('000,000.00', {reverse: true});
+  });
+    $(document).ready(function(){
+    $('input.autocomplete').autocomplete({
+      data: {
+        'Alabama': null,
+        'Alaska': null,
+        'Arizona': null,
+        'Arkansas': null,
+        'California': null,
+        'Colorado': null,
+        'Connecticut': null,
+        'Delaware': null,
+        'District of Columbia': null,
+        'Florida': null,
+        'Georgia': null,
+        'Hawaii': null,
+        'Idaho': null,
+        'Illinois': null,
+        'Indiana': null,
+        'Iowa': null,
+        'Kansas': null,
+        'Kentucky': null,
+        'Louisiana': null,
+        'Maine': null,
+        'Maryland': null,
+        'Massachusetts': null,
+        'Michigan': null,
+        'Minnesota': null,
+        'Mississippi': null,
+        'Missouri': null,
+        'Montana': null,
+        'Nebraska': null,
+        'Nevada': null,
+        'New Hampshire': null,
+        'New Jersey': null,
+        'New Mexico': null,
+        'New York': null,
+        'North Carolina': null,
+        'North Dakota': null,
+        'Ohio': null,
+        'Oklahoma': null,
+        'Oregon': null,
+        'Pennsylvania': null,
+        'Rhode Island': null,
+        'South Carolina': null,
+        'South Dakota': null,
+        'Tennessee': null,
+        'Texas': null,
+        'Utah': null,
+        'Vermont': null,
+        'Virginia': null,
+        'Washington': null,
+        'West Virginia': null,
+        'Wisconsin': null,
+        'Wyoming': null,
+      },
+    });
+  });
+  </script>
+  
+{% endblock %}
+

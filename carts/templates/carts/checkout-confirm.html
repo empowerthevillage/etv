@@ -1,0 +1,601 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="preloader-wrapper big active" style="display:none">
+  <div class="spinner-layer spinner-blue">
+    <div class="circle-clipper left">
+      <div class="circle"></div>
+    </div><div class="gap-patch">
+      <div class="circle"></div>
+    </div><div class="circle-clipper right">
+      <div class="circle"></div>
+    </div>
+  </div>
+
+  <div class="spinner-layer spinner-red">
+    <div class="circle-clipper left">
+      <div class="circle"></div>
+    </div><div class="gap-patch">
+      <div class="circle"></div>
+    </div><div class="circle-clipper right">
+      <div class="circle"></div>
+    </div>
+  </div>
+
+  <div class="spinner-layer spinner-yellow">
+    <div class="circle-clipper left">
+      <div class="circle"></div>
+    </div><div class="gap-patch">
+      <div class="circle"></div>
+    </div><div class="circle-clipper right">
+      <div class="circle"></div>
+    </div>
+  </div>
+
+  <div class="spinner-layer spinner-green">
+    <div class="circle-clipper left">
+      <div class="circle"></div>
+    </div><div class="gap-patch">
+      <div class="circle"></div>
+    </div><div class="circle-clipper right">
+      <div class="circle"></div>
+    </div>
+  </div>
+</div>
+<div id="page">
+    <div class="row content-row" style="background-color: rgba(255, 255, 255, 0.968);margin-bottom: 0">
+      <div class="right col s12 m5 l4 summary-container" style="padding-left: 5%; padding-right: 5%">
+        <h5 class="section-title" style="color:rgb(186, 37, 37)">Summary</h5>
+        {% regroup items_list by item.product as product_summary %}
+          
+
+            <h6 class="p-title">Items</h6>
+              {% for x in product_summary %}
+              <p class="item-category" style="margin:0;">{{ x.grouper }}</p>
+              <ul style="padding-left: 5%; padding-right: 5%">
+                {% for item in x.list %}
+                  
+                    <li class="variation" style="margin-top: 5px; margin-bottom: 5px"><b style="color: rgb(182, 36, 36)">${{ item.item.product.price }}</b> {{ item.item.variation.color }} - {{ item.item.variation.size }} <span data-badge-caption="" class="new grey darken-4 badge">{{ item.quantity }}</span></li>
+                
+                {% endfor %}
+              </ul>
+              {% endfor %}
+              <div style="border-top: rgb(133, 133, 133) 1px solid; border-bottom:rgb(133, 133, 133) 1px solid; padding-top: 10px; padding-bottom: 10px;">
+                <div class="valign-wrapper" style="justify-content: space-between;">
+                  <h6 class="p-subtitle">Subtotal</h6>
+                  <h6 class="p-subtitle">${{ order.subtotal }}</h6>
+                </div>
+                <div class="valign-wrapper" style="justify-content: space-between;">
+                  <h6 class="p-subtitle">Shipping</h6>
+                  <h6 class="p-subtitle">${{ order.shipping }}</h6>
+                </div>
+                <div class="valign-wrapper" style="justify-content: space-between;">
+                  <h6 class="p-title">Total</h6>
+                  <h6 class="p-title">${{ cart.total }}</h6>
+                </div>
+              </div>
+            
+      </div>
+      <div class="left col s12 m7 l8 checkout-container section scrollspy z-depth-2" style="background-color: white;">
+        <a href="{{ checkout_url }}" class="valign-wrapper"><i class="material-icons" style="font-size: 16px">arrow_back</i>&nbspBack</a>
+        <h5 class="section-title">Review Your Order</h5>
+        <div class="center-align">
+        <p class="review-item" style="margin-bottom: 15px"><b>Shipping Address:</b></p>
+        <ul class="review-list">
+          <li>{{ order.shipping_address.name }}</li>
+          <li>{{ order.shipping_address.address_line_1 }}</li>
+          <li>{{ order.shipping_address.address_line_2 }}</li>
+          <li>{{ order.shipping_address.city }}, {{ order.shipping_address.state }} {{ order.shipping_address.zip_code }}</li>
+          <li><a href="{{ checkout_url }}">Change</a></li>
+        </ul> 
+        {% if nonce.type == 'VenmoAccount' %}
+        <p class="review-item" style="margin-bottom: 15px"><b>Payment Method:</b>
+          <ul class="review-list">
+            <li>Venmo - @{{ nonce.details.username }} <a href="{{ checkout_url }}">Change</a></li>
+          </ul>
+          {% elif nonce.type == 'PayPalAccount' %}
+          <p class="review-item" style="margin-bottom: 15px"><b>Payment Method:</b>
+          <ul class="review-list">
+            <li>PayPal - @{{ nonce.details.email }} <a href="{{ checkout_url }}">Change</a></li>
+          </ul>
+          {% elif nonce.type == 'AndroidPayCard' %}
+          <p class="review-item" style="margin-bottom: 15px"><b>Payment Method:</b>
+            <ul class="review-list">
+              <li>GooglePay - {{ nonce.details.card_type }} ending in {{ nonce.details.last_four }} <a href="{{ checkout_url }}">Change</a></li>
+            </ul>
+          {% else %}
+          
+          <p class="review-item" style="margin-bottom: 15px"><b>Billing Address:</b>
+            <ul class="review-list">
+              <li>{{ order.billing_address.name }}</li>
+              <li>{{ order.billing_address.address_line_1 }}</li>
+              <li>{{ order.billing_address.address_line_2 }}</li>
+              <li>{{ order.billing_address.city }}, {{ order.billing_address.state }} {{ order.billing_address.zip_code }}</li>
+              <li><a href="{{ checkout_url }}">Change</a></li>
+            </ul> 
+          <p class="review-item" style="margin-bottom: 15px"><b>Payment Method:</b>
+            <ul class="review-list">
+              <li><i class="fas fa-credit-card"></i> {{ nonce.details.card_type }} ending in {{ nonce.details.last_four }}</li>
+              <li><a href="{{ checkout_url }}">Change</a></li>
+            </ul>
+          </p>
+          {% endif %}
+        
+        <p class="review-item" style="margin-bottom: 15px"><b>Order Total: ${{ cart.total }}</b></p>
+      </div>
+        <button class="valign-wrapper btn waves-effect creditcard-button z-depth-1" id="creditcard-button">
+          <div class="donate-text-small"><i class="fas fa-check-circle"></i> PLACE ORDER</div>
+          <div class="donate-text-large"><i class="fas fa-check-circle"></i> PLACE ORDER</div>
+        </button>
+      </div>
+      
+    </div>
+
+</div>
+<script>
+   $(document).ready(function(){
+    $('.scrollspy').scrollSpy();
+  });
+</script>
+<style>
+  .review-list li {
+    font-weight: 300;
+    font-size: 16px
+  }
+  .review-item b {
+    font-family: oskar;
+    font-weight: 400;
+    font-size: 26px
+  }
+  .express-checkout {
+    border: 1px solid rgb(218, 218, 218);
+    border-radius: 20px;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    margin-top: 15px
+  }
+  .express-checkout h6 {
+    margin-top: 0;
+    font-family: oskar;
+    font-size: 20px
+  }
+  .input-icon {
+    font-size: 18px;
+    color: rgb(160, 160, 160);
+    margin-right: 10px
+  }
+  .checkout-fieldset {
+    background: rgba(255, 255, 255, 0.632);
+    border: none;
+    border-radius: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+  }
+  .checkout-fieldset p {
+    margin-bottom: 0;
+    margin-top: 0px;
+  }
+  .p-title {
+    font-family: oskar;
+    font-size: 26px;
+  }
+  .p-subtitle {
+    font-family: oskar;
+    font-size: 20px;
+    color: rgb(109, 108, 108);
+    font-weight: 300;
+  }
+  .item-category {
+    font-family: oskar;
+    font-size: 24px;
+    font-weight: 200;
+  }
+  .variation {
+    color: rgb(130, 130, 130);
+    font-size: 16px
+  }
+  .checkout-fieldset h5 {
+    font-family: oskar;
+    color: rgb(30, 167, 30)
+  }
+  .secure-checkout {
+    font-size: 14px;
+    font-weight: 300;
+    color: rgb(99, 99, 99);
+  }
+  .secure-checkout span {
+    font-size: 16px
+  }
+  label {
+    color: rgb(43, 43, 43) !important
+  }
+  .fieldset-title {
+    font-family: oskar;
+    font-size: 20px;
+    color: rgb(186, 37, 37);
+    text-decoration: underline;
+  }
+    .hidden {
+        display: none;
+    }
+    #page {
+        background: black
+    }
+    .checkout-container {
+      padding-top: 30px !important;
+      padding-bottom: 30px !important;
+    }
+    .summary-container {
+      padding-top: 0px !important;
+      padding-bottom: 30px !important
+    }
+    .required {
+        color: red
+    }
+    .label-title {
+        font-size: 16px
+    }
+    .donate-buttons {
+        padding-bottom: 60px
+    }
+    .donate-buttons a {
+        width: 100%;
+        margin:5px;
+        font-size: 16px;
+        letter-spacing: 1.5px;
+        font-weight:400;
+        height: 50px;
+        padding-top:4px;
+        border-radius: 40px;
+    }
+    .donate-buttons a i {
+        font-size: 24px;
+    }
+    .donation-title {
+        font-family: oskar-inline;
+        font-size: 52px;
+    }
+    .content-row {
+    }
+    .section-title {
+      font-family: oskar-inline;
+      color: rgb(24, 160, 24);
+      font-size: 36px;
+      text-align: center
+    }
+    
+    @media only screen and (min-width:0px){
+        .donate-text-small {
+          display: block;
+        }
+        .donate-text-large {
+          display: none;
+        }
+        .donation-title {
+            font-family: oskar-inline;
+            font-size: 32px;
+        }
+        .donation-subtitle {
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 20px
+        }
+        .venmo-button {
+          width: 95%;
+          margin-left: 0;
+        }
+        .creditcard-button {
+          width: 95%;
+          font-size: 18px;
+        }
+        .google-button {
+          width: 95%;
+        }
+        .paypal-button {
+          width: 95%;
+        }
+        #paypal-button {
+          width: 95%;
+        }
+        .applepay-button {
+          width: 95%;
+        }
+        .paypal-button-row {
+          height: 50px !important
+        }
+    }
+
+    @media only screen and (min-width:601px){
+      .review-list li {
+        font-size: 18px
+      }
+      .review-item b {
+        font-family: oskar;
+        font-weight: 400;
+        font-size: 28px
+      }
+      .checkout-fieldset h5 {
+        font-size: 28px;
+      }
+      .donate-text-small {
+          display: none;
+        }
+        .donate-text-large {
+          display: block;
+          letter-spacing: 2px;
+        }
+        .donation-title {
+            font-family: oskar-inline;
+            font-size: 42px;
+        }
+        #creditcard-button {
+          width: 80%;
+          margin-left: 10%
+        }
+        .fieldset-title {
+          font-family: oskar;
+          font-size: 24px
+        }
+        .p-title {
+          font-family: oskar;
+          font-size: 20px;
+        }
+    }
+    @media only screen and (min-width:993px){
+      .checkout-fieldset h5 {
+        font-size: 36px;
+      }
+      #creditcard-button {
+          width: 70%;
+          margin-left: 15%
+        }
+        .donation-title {
+            font-family: oskar-inline;
+            font-size: 48px;
+        }
+        .donation-subtitle {
+            font-size: 20px;
+            font-weight: 300;
+            line-height: 24px;
+        }
+        .venmo-button {
+          font-size: 16px;
+        }
+        .creditcard-button {
+          font-size: 20px;
+        }
+        .google-button {
+          font-size: 16px;
+        }
+        .paypal-button {
+          font-size: 16px;
+        }
+        .applepay-button {
+          font-size: 16px;
+        }
+        .fieldset-title {
+          font-family: oskar;
+          font-size: 26px
+        }
+        .checkout-fieldset p {
+          margin-bottom: 15px !important
+        }
+        .p-title {
+          font-family: oskar;
+          font-size: 26px;
+        }
+        .checkout-container{
+          padding-left: 5% !important;
+          padding-right: 5% !important
+        }
+        .section-title {
+          font-size: 48px;
+        }
+    }
+    @media only screen and (min-width:1226px){
+      .checkout-container {
+        padding-top: 60px !important;
+      }
+      .summary-container {
+        padding-top: 80px !important
+      }
+      #creditcard-button {
+          width: 50%;
+          margin-left: 25%
+        }
+    }
+    @media only screen and (min-width:1400px){
+        .donation-title {
+            font-family: oskar-inline;
+            font-size: 56px;
+        }
+        .donation-subtitle {
+            font-size: 20px;
+            font-weight: 300;
+            line-height: 24px
+        }
+        .fieldset-title {
+          font-family: oskar;
+          font-size: 28px
+        }
+        .checkout-container{
+          padding-left: 10% !important;
+          padding-right: 10% !important
+        }
+    }
+    .cc-button {
+        background-color: rgb(55, 54, 54)
+    }
+    .cc-button:hover {
+        background-color:rgb(101, 101, 101)
+    }
+    .pp-button {
+        background-color: #3b7bbf
+    }
+    .pp-button:hover {
+        background-color:#6799ce
+    }
+    .venmo-button {
+        background-color: #3d95ce;
+        color:white;
+        margin:5px;
+        letter-spacing: 1.5px;
+        font-weight:500;
+        height: 50px;
+        line-height: 45px;
+        border-radius: 40px;
+    }
+    .venmo-button:hover {
+        background-color:#739296
+    }
+    .creditcard-button {
+      background-color: #0f9a22;
+      color:rgb(255, 255, 255);
+        margin:5px;
+        letter-spacing: 1.5px;
+        font-weight:500;
+        height: 50px;
+        line-height: 40px;
+        border-radius: 40px;
+    }
+    .creditcard-button:hover {
+        background-color:#5e6a4b
+    }
+    .google-button {
+      background-color: #fcfcfc;
+      color:rgb(50, 50, 50);
+        margin:5px;
+        letter-spacing: 1.5px;
+        font-weight:500;
+        height: 50px;
+        line-height: 45px;
+        border-radius: 40px;
+    }
+    .google-button:hover {
+        background-color:#ded8d8
+    }
+    .paypal-button {
+      background-color: #ffffff;
+      color:rgb(50, 50, 50);
+        margin:5px;
+        letter-spacing: 1.5px;
+        font-weight:500;
+        height: 50px;
+        line-height: 45px;
+        border-radius: 40px !important;
+    }
+    .paypal-button:hover {
+        background-color:#d3d1da
+    }
+    .paypal-button-container{
+      font-family: poppins !important;
+      font-weight: 500;
+      text-transform: uppercase !important;
+    }
+    .applepay-button {
+      background-color: #181818;
+      color:rgb(50, 50, 50);
+        margin:5px;
+        letter-spacing: 1.5px;
+        font-weight:500;
+        height: 50px;
+        line-height: 45px;
+        border-radius: 40px;
+    }
+    .applepay-button:hover {
+        background-color:#5e5e5e
+    }
+    .paypal-button.paypal-button-color-white, .paypal-button-row.paypal-button-color-white .menu-button {
+      border: none !important;
+    }
+    body {
+  background-color: #fff;
+}
+
+.toast {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  z-index: 9999;
+}
+
+.bootstrap-basic {
+  background: white;
+}
+
+#or {
+  position: relative;
+  line-height: 50px;
+  text-align: center;
+  font-weight: 500;
+}
+
+#or::before,
+#or::after {
+  position: absolute;
+  width: 30%;
+  height: 1px;
+  
+  top: 25px;
+  
+  background-color: rgb(193, 193, 193);
+  
+  content: '';
+}
+
+#or::before {
+  left: 15%;
+}
+
+#or::after {
+  right: 15%;
+}
+.btn:focus {
+  background-color:rgb(160, 160, 160) !important;
+}
+#card-number {
+  height: 3rem;
+  border-bottom: 1px solid #9e9e9e;
+}
+#card-date {
+  height: 3rem;
+  border-bottom: 1px solid #9e9e9e;
+}
+#card-cvv {
+  height: 3rem;
+  border-bottom: 1px solid #9e9e9e;
+}
+#card-zip {
+  height: 3rem ;
+  border-bottom: 1px solid #9e9e9e;
+}
+
+::placeholder {
+  color: rgb(186, 186, 186) !important
+}
+</style>
+<script src="https://js.braintreegateway.com/web/3.82.0/js/client.min.js"></script>
+<script src="https://js.braintreegateway.com/web/3.82.0/js/venmo.min.js"></script>
+<script src="https://js.braintreegateway.com/web/3.82.0/js/data-collector.min.js"></script>
+<script src="https://pay.google.com/gp/p/js/pay.js"></script>
+<script src="https://js.braintreegateway.com/web/3.82.0/js/google-payment.min.js"></script>
+<script src="https://js.braintreegateway.com/web/3.82.0/js/paypal-checkout.min.js"></script>
+<script src="https://js.braintreegateway.com/web/3.82.0/js/hosted-fields.min.js"></script>
+<script>  
+braintree.client.create({
+    authorization: 'production_pgz5pm7q_tb3vd7jd2hynhxcn'
+  }, function (clientErr, clientInstance) {
+  if (clientErr) {
+    console.error('Error creating client:', clientErr);
+    return;
+  }
+  
+});
+$('#creditcard-button').on('click', function(event){
+  event.preventDefault();
+  window.location.replace('/cart/charge')
+})
+</script>
+{% endblock %}

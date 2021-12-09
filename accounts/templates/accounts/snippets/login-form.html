@@ -1,0 +1,44 @@
+{% load static %}
+<div id="page">
+    <div class="row center-align" style="margin-top:0px">
+      <div class="col s8 m8 l6 login-card" style="background-color:#fdfdfde5;padding-top:30px; padding-bottom:40px">
+          <h6 id="login-title">Login</h6>
+          <p id="new-to-village">New to The Village? <a href="{% url 'register' %}">Register for a free account now!</p></a>
+          
+        <form class="form center" method='POST' action='{% if action_url %}{{ action_url}}{% else %}{% url "login" %}{% endif %}' style="padding-left: 10%; padding-right:10%; width: 70%; margin-left:15%">
+          
+          {% csrf_token %}
+            {% if next_url %}
+                <input class="" type='hidden' name='next' value ='{{ next_url }}' />
+            {% endif %}
+           {{ form }}
+          <button type="submit" class='btn login-btn' style="margin-top:24; padding:22px; line-height:0px; margin-bottom:15px">Login</button>
+          <div class="center">
+            <a class="btn google-btn" href="{% url 'social:begin' 'google-oauth2' %}?next={{ request.path }}" style="margin-bottom:15px;" id="google-btn">
+              <img src="{% static 'img/google-icon.png' %}" height=18px style="margin-bottom:-6px">&nbsp Continue with Google
+            </a>
+            <a class="btn facebook-btn" href="{% url 'social:begin' 'facebook' %}?next={{ request.path }}" id="facebook-btn"><i class="fab fa-facebook" style="font-size:18; padding:0"></i>&nbsp Continue with Facebook</a>
+            <a href='{% url "password_reset" %}' class='text-center' style="color:grey;"><p style="margin-bottom:80px; margin-top:35px">Forgot Password?</p></a>
+          </div>
+        </form>
+        
+      </div>
+    </div>
+  </div>
+  
+  <style>
+    #page {
+      background-image: url("https://empowerthevillage.s3.amazonaws.com/static/img/login-collage.png");
+      background-size: 100%;
+      background-repeat: repeat;
+    }
+    #id_email {
+      padding-left:15px;
+      letter-spacing: 1.5px;
+      width:100%
+    }
+    #id_password {
+      padding-left: 15px;
+      font-weight: 200;
+    }
+  </style>

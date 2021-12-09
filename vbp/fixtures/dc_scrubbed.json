@@ -1,0 +1,2990 @@
+[
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Braids & Styles Unlimited",
+      "city": "NW",
+      "county": "Washington",
+      "phone": 8664089676,
+      "website": "",
+      "subcategory": "Beauty supply/hair & accessories",
+      "category": "beauty"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Capital Hair Studio Salon",
+      "city": "NW",
+      "county": "Washington",
+      "phone": 2027222770,
+      "website": "",
+      "subcategory": "beauty salon",
+      "category": "beauty"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "DreamOn Soaping",
+      "city": "SW",
+      "county": "Washington",
+      "phone": "",
+      "website": "Dreamonsoaping.com",
+      "subcategory": "",
+      "category": "beauty"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Fyubi",
+      "city": "NW",
+      "county": "Washington",
+      "phone": 2029861000,
+      "website": "https://fyubi.com/",
+      "subcategory": "beauty salon",
+      "category": "beauty"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Lords of LuLu Candle Co.",
+      "city": "",
+      "county": "Washington",
+      "phone": "",
+      "website": "https://www.lordsoflulu.com/",
+      "subcategory": "",
+      "category": "beauty"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Marjani",
+      "city": "NW",
+      "county": "Washington",
+      "phone": "",
+      "website": "https://www.marjanibeauty.com/",
+      "subcategory": "cosmetics",
+      "category": "beauty"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Mindful Mane & Body Care",
+      "city": "",
+      "county": "Washington",
+      "phone": 2406856685,
+      "website": "https://www.mindfulmaneandbodycare.com/",
+      "subcategory": "bath & body",
+      "category": "beauty"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "RoDae&Co",
+      "city": "SE",
+      "county": "Washington",
+      "phone": 5716212663,
+      "website": "https://rodaeandco.com/",
+      "subcategory": "cosmetics",
+      "category": "beauty"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Shabazz Barber Shop",
+      "city": "NW",
+      "county": "Washington",
+      "phone": 2022999322,
+      "website": "",
+      "subcategory": "barber",
+      "category": "beauty"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "UNIQUE CUTZ BARBERSHOP",
+      "city": "SE",
+      "county": "Washington",
+      "phone": "",
+      "website": "https://www.facebook.com/Unique-Cutz-Barbershops-1-2-325429767513408/",
+      "subcategory": "barber",
+      "category": "beauty"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "sanaa",
+      "city": "",
+      "county": "Washington",
+      "phone": 5857394998,
+      "website": "https://www.sanaambc.com/",
+      "subcategory": "bath & body",
+      "category": "beauty"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Laws of Nature Cosmetics",
+      "city": "NW",
+      "county": "Washington",
+      "phone": 2026702701,
+      "website": "https://lawsofnaturecosmetics.com/",
+      "subcategory": "cosmetics",
+      "category": "beauty"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "ONYC",
+      "city": "",
+      "county": "Washington",
+      "phone": 2015896692,
+      "website": "https://www.onychair.com/",
+      "subcategory": "Beauty supply/hair & accessories",
+      "category": "beauty"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Caravan Organics",
+      "city": "",
+      "county": "Washington",
+      "phone": "",
+      "website": "https://www.etsy.com/shop/caravanorganics",
+      "subcategory": "bath & body",
+      "category": "beauty"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Bel Nouvo Beauty",
+      "city": "",
+      "county": "Washington",
+      "phone": "",
+      "website": "https://www.belnouvo.com/",
+      "subcategory": "bath & body",
+      "category": "beauty"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Mischo Luxury",
+      "city": "",
+      "county": "Washington",
+      "phone": "",
+      "website": "https://www.mischobeauty.com/",
+      "subcategory": "nails",
+      "category": "beauty"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "LUV Naturals",
+      "city": "",
+      "county": "Washington",
+      "phone": "",
+      "website": "https://www.luvnaturals.com/",
+      "subcategory": "Beauty supply/hair & accessories",
+      "category": "beauty"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "BLK + GRN",
+      "city": "",
+      "county": "Washington",
+      "phone": "",
+      "website": "https://blkgrn.com/",
+      "subcategory": "bath & body",
+      "category": "beauty"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Heat Free Hair",
+      "city": "",
+      "county": "Washington",
+      "phone": 8776869044,
+      "website": "https://heatfreehair.com/",
+      "subcategory": "Beauty supply/hair & accessories",
+      "category": "beauty"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Kurly Klips",
+      "city": "",
+      "county": "Washington",
+      "phone": "",
+      "website": "https://kurlyklips.com/",
+      "subcategory": "Beauty supply/hair & accessories",
+      "category": "beauty"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "De Glam Shoppe",
+      "city": "",
+      "county": "Washington",
+      "phone": 2028023098,
+      "website": "https://www.deglamshoppe.com/",
+      "subcategory": "beauty salon",
+      "category": "beauty"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Brown Beauty Co-Op",
+      "city": "NW",
+      "county": "Washington",
+      "phone": 2025062582,
+      "website": "https://www.brownbeautyco-op.com/",
+      "subcategory": "",
+      "category": "beauty"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Lamaj in the City",
+      "city": "NW",
+      "county": "Washington",
+      "phone": 2025185482,
+      "website": "https://jamaledmonds.com/",
+      "subcategory": "beauty salon",
+      "category": "beauty"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "A New Image By Acia",
+      "city": "NW",
+      "county": "Washington",
+      "phone": 2028088925,
+      "website": "https://www.vagaro.com/draciawilliams/",
+      "subcategory": "beauty salon",
+      "category": "beauty"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Mercy Beauty Supply Store",
+      "city": "NW",
+      "county": "Washington",
+      "phone": "",
+      "website": "https://www.instagram.com/mercybeautyllc/",
+      "subcategory": "Beauty supply/hair & accessories",
+      "category": "beauty"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Mahogany Books",
+      "city": "SE",
+      "county": "Washington",
+      "phone": 8442796239,
+      "website": "https://www.mahoganybooks.com/",
+      "subcategory": "Book Store",
+      "category": "books"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Sankofa DC",
+      "city": "NW",
+      "county": "Washington",
+      "phone": 2022344755,
+      "website": "https://www.events.sankofa.com/",
+      "subcategory": "Book Store",
+      "category": "books"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Fennell Adventures",
+      "city": "",
+      "county": "Washington",
+      "phone": 6788653611,
+      "website": "https://www.fennelladventures.com/",
+      "subcategory": "Children's Books",
+      "category": "child"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "NannyTainment Event Childcare",
+      "city": "",
+      "county": "Washington",
+      "phone": 3016363153,
+      "website": "https://nannytainment.com/",
+      "subcategory": "Childcare/Daycare/Preschool",
+      "category": "child"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "District of Clothing",
+      "city": "",
+      "county": "Washington",
+      "phone": "",
+      "website": "https://districtofclothing.com/",
+      "subcategory": "Apparel",
+      "category": "clothing"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Everard’s Clothing",
+      "city": "NW",
+      "county": "Washington",
+      "phone": 2022987464,
+      "website": "https://everardsclothing.com/",
+      "subcategory": "Apparel",
+      "category": "clothing"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "FashionbyMK",
+      "city": "NE",
+      "county": "Washington",
+      "phone": 6463053368,
+      "website": "https://www.etsy.com/shop/FashionbyMK",
+      "subcategory": "Apparel",
+      "category": "clothing"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "FLY - First Love Yourself Fashions",
+      "city": "",
+      "county": "Washington",
+      "phone": 3019712906,
+      "website": "https://fly-fashions.com/",
+      "subcategory": "Apparel",
+      "category": "clothing"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Jendai’s Closet",
+      "city": "NE",
+      "county": "Washington",
+      "phone": 2405545079,
+      "website": "https://www.jendairobinson.com/shop",
+      "subcategory": "Apparel",
+      "category": "clothing"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Lettie Gooch",
+      "city": "NW",
+      "county": "Washington",
+      "phone": 2023324242,
+      "website": "https://www.lettiegooch.com/",
+      "subcategory": "Apparel",
+      "category": "clothing"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Showstoppa Boutique",
+      "city": "",
+      "county": "Washington",
+      "phone": "",
+      "website": "https://paparazziaccessories.com/",
+      "subcategory": "Apparel",
+      "category": "clothing"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Taper Me Bad",
+      "city": "NE",
+      "county": "Washington",
+      "phone": 4434167431,
+      "website": "https://www.facebook.com/tapermebad/",
+      "subcategory": "Apparel",
+      "category": "clothing"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "BD&Z ASSOCIATES, LLC",
+      "city": "NW",
+      "county": "Washington",
+      "phone": 2028290310,
+      "website": "https://www.bdandz.com/",
+      "subcategory": "construction/engineering",
+      "category": "construction"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Bledsoe Construction Group of D.C.",
+      "city": "",
+      "county": "Washington",
+      "phone": 8772912751,
+      "website": "https://www.bledsoeinternational.com/",
+      "subcategory": "roofing & siding",
+      "category": "construction"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "DRM INTERNATIONAL INC",
+      "city": "NW",
+      "county": "Washington",
+      "phone": 2029443390,
+      "website": "http://drmintl.com/",
+      "subcategory": "construction/engineering",
+      "category": "construction"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "JCMCS",
+      "city": "NW",
+      "county": "Washington",
+      "phone": 2025587601,
+      "website": "",
+      "subcategory": "construction/engineering",
+      "category": "construction"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "XZOTECH SIGN AND DISPLAY, LLC DBA/FAST SIGNS",
+      "city": "NE",
+      "county": "Washington",
+      "phone": 2026350239,
+      "website": "https://www.fastsigns.com/494-washington-dc",
+      "subcategory": "",
+      "category": "construction"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "A & A PREMIUM PAINT DISTRIBUTOR ADSWAILES, LLC",
+      "city": "NE",
+      "county": "Washington",
+      "phone": 2024095173,
+      "website": "https://www.aapremiumpaintdistributor.com/",
+      "subcategory": "Painting Services",
+      "category": "construction"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Bubbys Pressure Wash",
+      "city": "SE",
+      "county": "Washington",
+      "phone": 2023525791,
+      "website": "",
+      "subcategory": "Power Washing",
+      "category": "construction"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "G.A.M.E. 7 Character Builders",
+      "city": "",
+      "county": "Washington",
+      "phone": 2025052427,
+      "website": "https://www.game7even.com/",
+      "subcategory": "Enrichment",
+      "category": "education"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Puzzle Programs Tutoring",
+      "city": "",
+      "county": "Washington",
+      "phone": 3012000091,
+      "website": "https://www.facebook.com/PuzzlePrograms/",
+      "subcategory": "Tutoring/Academic Planning",
+      "category": "education"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Pleasant Hearts Private Care and Nurse Staffing Inc",
+      "city": "NW",
+      "county": "Washington",
+      "phone": 8002415820,
+      "website": "http://www.pleasanthearts.com/",
+      "subcategory": "Home Health Care/ Nursing",
+      "category": "Eldercare"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Nia Interactive",
+      "city": "NE",
+      "county": "Washington",
+      "phone": 2026421475,
+      "website": "https://niainteractive.com",
+      "subcategory": "tech suport/repair",
+      "category": "electronics"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Pie Technology LLC",
+      "city": "",
+      "county": "Washington",
+      "phone": 2026708524,
+      "website": "",
+      "subcategory": "tech suport/repair",
+      "category": "electronics"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "ZANE NETWORKS, LLC",
+      "city": "NW",
+      "county": "Washington",
+      "phone": 3015600500,
+      "website": "https://www.zanenetworks.com/",
+      "subcategory": "",
+      "category": "electronics"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Eventz N Thingz Planning Services",
+      "city": "NW",
+      "county": "Washington",
+      "phone": 2025053134,
+      "website": "https://www.linkedin.com/in/eventz-n-thingzps-event-planner-a83886116/",
+      "subcategory": "Event Planning/Services",
+      "category": "entertainment"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Sister's Inc. Destination & Event Management",
+      "city": "NE",
+      "county": "Washington",
+      "phone": 2025347751,
+      "website": "https://www.sistersincdmc.com/",
+      "subcategory": "Event Planning/Services",
+      "category": "entertainment"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Terrence tickets",
+      "city": "",
+      "county": "Washington",
+      "phone": 2062279462,
+      "website": "terrencegross44@gmail.com",
+      "subcategory": "Event Planning/Services",
+      "category": "entertainment"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Lee's Flower Shop",
+      "city": "NW",
+      "county": "Washington",
+      "phone": 2022654965,
+      "website": "https://www.leesflowerandcard.com/",
+      "subcategory": "",
+      "category": "florists"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "7 Days Market",
+      "city": "NE",
+      "county": "Washington",
+      "phone": 2022481707,
+      "website": "https://www.7daysmarketdc.com/",
+      "subcategory": "",
+      "category": "grocery"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "8 Myles",
+      "city": "NE",
+      "county": "Washington",
+      "phone": 7172082853,
+      "website": "https://8myles.com/",
+      "subcategory": "",
+      "category": "grocery"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Bakery Creations D.C. by MNM Willis Creations LLC",
+      "city": "NW",
+      "county": "Washington",
+      "phone": 2025942352,
+      "website": "https://www.sweetrnhoneybakery.com/",
+      "subcategory": "bakery",
+      "category": "grocery"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Bar & Bean",
+      "city": "NE",
+      "county": "Washington",
+      "phone": 2029912460,
+      "website": "https://barandbeandc.com/",
+      "subcategory": "coffee/tea/beverages",
+      "category": "grocery"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Blend The Rule Smoothies",
+      "city": "NE",
+      "county": "Washington",
+      "phone": 2026432602,
+      "website": "https://www.facebook.com/blendtherulesmoothie/",
+      "subcategory": "coffee/tea/beverages",
+      "category": "grocery"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Buna Coffeehouse",
+      "city": "NW",
+      "county": "Washington",
+      "phone": 2028822223,
+      "website": "https://www.bunacoffeehouse.com/",
+      "subcategory": "coffee/tea/beverages",
+      "category": "grocery"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Calabash Tea & Tonic",
+      "city": "NE",
+      "county": "Washington",
+      "phone": 2022481186,
+      "website": "https://www.calabashtea.com/",
+      "subcategory": "coffee/tea/beverages",
+      "category": "grocery"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Calabash Tea & Tonic",
+      "city": "NW",
+      "county": "Washington",
+      "phone": "",
+      "website": "https://www.calabashtea.com/",
+      "subcategory": "coffee/tea/beverages",
+      "category": "grocery"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Capital City Co",
+      "city": "",
+      "county": "Washington",
+      "phone": 2026568626,
+      "website": "https://www.capitalcity.com/",
+      "subcategory": "food product/brand",
+      "category": "grocery"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Capital City Creamery",
+      "city": "SE",
+      "county": "Washington",
+      "phone": 2404701557,
+      "website": "http://www.capitalcitycreamery.com/",
+      "subcategory": "ice cream parlor",
+      "category": "grocery"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Chat's Liquor",
+      "city": "SE",
+      "county": "Washington",
+      "phone": 2025444660,
+      "website": "https://www.chatsdc.com/",
+      "subcategory": "alcohol",
+      "category": "grocery"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Chef Jess",
+      "city": "NW",
+      "county": "Washington",
+      "phone": 2027532662,
+      "website": "https://eatsaucefoods.com/",
+      "subcategory": "",
+      "category": "grocery"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Chef Kenneth Clay",
+      "city": "NE",
+      "county": "Washington",
+      "phone": 2406872516,
+      "website": "https://www.fastordernow.com/order/menu/chefkenny",
+      "subcategory": "",
+      "category": "grocery"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Crown Bakery",
+      "city": "",
+      "county": "Washington",
+      "phone": 2022913009,
+      "website": "https://www.dccrownbakery.com/",
+      "subcategory": "bakery",
+      "category": "grocery"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Custom Cuisine",
+      "city": "NE",
+      "county": "Washington",
+      "phone": 3017063633,
+      "website": "https://www.yourcustomcuisine.com/",
+      "subcategory": "catering/chef",
+      "category": "grocery"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Ditch the Wait",
+      "city": "",
+      "county": "Washington",
+      "phone": 2026309196,
+      "website": "http://www.ditchthewait.com/",
+      "subcategory": "catering/chef",
+      "category": "grocery"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Feast in a Basket",
+      "city": "",
+      "county": "Washington",
+      "phone": 2022480864,
+      "website": "https://www.feastinabasket.com/",
+      "subcategory": "catering/chef",
+      "category": "grocery"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Georgetown Butcher",
+      "city": "NW",
+      "county": "Washington",
+      "phone": 2026219746,
+      "website": "https://georgetownbutcher.com/",
+      "subcategory": "",
+      "category": "grocery"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Goodies Frozen Custard & Treats",
+      "city": "SW",
+      "county": "Washington",
+      "phone": "",
+      "website": "http://www.mmmgoodies.com/",
+      "subcategory": "ice cream parlor",
+      "category": "grocery"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Habesha Market",
+      "city": "NW",
+      "county": "Washington",
+      "phone": 2022321919,
+      "website": "https://habeshamarket.com/",
+      "subcategory": "",
+      "category": "grocery"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Here's The Scoop!",
+      "city": "NW",
+      "county": "Washington",
+      "phone": 2026294040,
+      "website": "https://heresthescoopdc.com/",
+      "subcategory": "ice cream parlor",
+      "category": "grocery"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "J.B. Humble Pies",
+      "city": "NE",
+      "county": "Washington",
+      "phone": 3015009540,
+      "website": "https://www.jbhumblepies.com/",
+      "subcategory": "bakery",
+      "category": "grocery"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Kherpa's Raw Food Juice Bar",
+      "city": "NE",
+      "county": "Washington",
+      "phone": 2028032063,
+      "website": "https://www.kheprasrawfoodjuicebar.net/",
+      "subcategory": "coffee/tea/beverages",
+      "category": "grocery"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Margaret's Catering and Soul Food Truck",
+      "city": "",
+      "county": "Washington",
+      "phone": 7036089226,
+      "website": "https://www.margarets-catering.com/home",
+      "subcategory": "catering/chef",
+      "category": "grocery"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Niko's Spiked Gelato",
+      "city": "NE",
+      "county": "Washington",
+      "phone": 2024554703,
+      "website": "https://nikosgelato.com/",
+      "subcategory": "ice cream parlor",
+      "category": "grocery"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Oasis Liquors",
+      "city": "NE",
+      "county": "Washington",
+      "phone": 2025440012,
+      "website": "https://www.yelp.com/biz/oasis-liquors-washington",
+      "subcategory": "alcohol",
+      "category": "grocery"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Southwest Soda Pop Shop",
+      "city": "SW",
+      "county": "Washington",
+      "phone": 2029816999,
+      "website": "https://www.wharfdc.com/restaurants/southwest-soda-pop-shop/",
+      "subcategory": "ice cream parlor",
+      "category": "grocery"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Sunflower Gardenz",
+      "city": "NW",
+      "county": "Washington",
+      "phone": 12022717210,
+      "website": "https://www.instagram.com/__sunflowergardenz/",
+      "subcategory": "bakery",
+      "category": "grocery"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "The Baker's Lounge",
+      "city": "NE",
+      "county": "Washington",
+      "phone": 2026017107,
+      "website": "https://thebakersloungedc.com/",
+      "subcategory": "bakery",
+      "category": "grocery"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "The Spice Suite",
+      "city": "NW",
+      "county": "Washington",
+      "phone": 2025063436,
+      "website": "https://www.thespicesuite.com/",
+      "subcategory": "food product/brand",
+      "category": "grocery"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "The Sweet Lobby",
+      "city": "SE",
+      "county": "Washington",
+      "phone": 2025442404,
+      "website": "http://www.sweetlobby.com/",
+      "subcategory": "",
+      "category": "grocery"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Tres Creole Catering",
+      "city": "NE",
+      "county": "Washington",
+      "phone": 2029057467,
+      "website": "https://www.trescreole.com/",
+      "subcategory": "catering/chef",
+      "category": "grocery"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Turning Natural",
+      "city": "NE",
+      "county": "Washington",
+      "phone": 2028008828,
+      "website": "https://www.turningnatural.com/",
+      "subcategory": "coffee/tea/beverages",
+      "category": "grocery"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "VineDication",
+      "city": "SE",
+      "county": "Washington",
+      "phone": 8003207694,
+      "website": "https://www.vinedication.com/",
+      "subcategory": "alcohol",
+      "category": "grocery"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Blooming Lotus",
+      "city": "SW",
+      "county": "Washington",
+      "phone": 2022002218,
+      "website": "",
+      "subcategory": "Spa/Massage Therapy",
+      "category": "health"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "BonAmi Care Calls",
+      "city": "",
+      "county": "Washington",
+      "phone": 3012989082,
+      "website": "https://bonami.life/",
+      "subcategory": "Mental Health Support",
+      "category": "health"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Health Empowerment for All",
+      "city": "NW",
+      "county": "Washington",
+      "phone": 2027801177,
+      "website": "",
+      "subcategory": "",
+      "category": "health"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Life Strategist & Wellness Coach - Inspiring JOY, Inc.",
+      "city": "",
+      "county": "Washington",
+      "phone": 2027700444,
+      "website": "https://www.inspiringjoyinc.com/",
+      "subcategory": "Mental Health Support",
+      "category": "health"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Reignite Fitness",
+      "city": "NE",
+      "county": "Washington",
+      "phone": "",
+      "website": "https://www.reignitepsych.com/",
+      "subcategory": "Fitness/ Yoga",
+      "category": "health"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "The Milan Experience",
+      "city": "NW",
+      "county": "Washington",
+      "phone": 2024894101,
+      "website": "https://www.facebook.com/TheMilanExperience/",
+      "subcategory": "Spa/Massage Therapy",
+      "category": "health"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Black Pepper Paperie Co",
+      "city": "",
+      "county": "Washington",
+      "phone": "",
+      "website": "https://www.blackpepperpaperie.com/",
+      "subcategory": "Home Goods/Décor",
+      "category": "home"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Countryside Lawncare, Landscaping & Cleaning Services",
+      "city": "",
+      "county": "Washington",
+      "phone": 2026213429,
+      "website": "https://countrysidellandc.wixsite.com/countrysidellandc/book-online",
+      "subcategory": "landscaping",
+      "category": "home"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Evelyn Jane Candles",
+      "city": "",
+      "county": "Washington",
+      "phone": "",
+      "website": "https://www.evelynjanecandles.com/",
+      "subcategory": "Home Goods/Décor",
+      "category": "home"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Frères Branchiaux Candle Co",
+      "city": "",
+      "county": "Washington",
+      "phone": "",
+      "website": "https://freresbranchiaux.com/",
+      "subcategory": "Home Goods/Décor",
+      "category": "home"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Akwaaba Bed and Breakfast",
+      "city": "NW",
+      "county": "Washington",
+      "phone": 8778933233,
+      "website": "https://www.akwaaba.com/akwaaba-dc/",
+      "subcategory": "Hospitality/Hotels/Inns",
+      "category": "hotels"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Elite Yacht Concierge",
+      "city": "",
+      "county": "Washington",
+      "phone": 3016513564,
+      "website": "https://eliteyachtconcierge.com/",
+      "subcategory": "",
+      "category": "hotels"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Mutani's Pocket",
+      "city": "",
+      "county": "Washington",
+      "phone": 2025058008,
+      "website": "https://www.mutanispocket.com/",
+      "subcategory": "Accessories/Handbags",
+      "category": "jewelry"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Selene by KGP",
+      "city": "",
+      "county": "Washington",
+      "phone": "",
+      "website": "https://www.etsy.com/shop/SeleneByKGP?ref=simple-shop-header-name&listing_id=542580746",
+      "subcategory": "Fine Jewelry",
+      "category": "jewelry"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Freedom Unlimited Financial L.L.C.",
+      "city": "NE",
+      "county": "Washington",
+      "phone": 2029101601,
+      "website": "https://freedomunlimitedfin.com/index.html",
+      "subcategory": "Financial Services",
+      "category": "legal"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Industrial Bank",
+      "city": "NW",
+      "county": "Washington",
+      "phone": 2027222000,
+      "website": "https://www.industrial-bank.com/",
+      "subcategory": "Financial Services",
+      "category": "legal"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Jayde Law PLLC",
+      "city": "NW",
+      "county": "Washington",
+      "phone": 2023516825,
+      "website": "https://www.jaydelaw.com/",
+      "subcategory": "Estate Planning/Wills",
+      "category": "legal"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Small Credit Solutions LLC",
+      "city": "NW",
+      "county": "Washington",
+      "phone": 2026007719,
+      "website": "https://www.facebook.com/Small-Credit-Solutions-LLC-225655037645841/",
+      "subcategory": "Financial Services",
+      "category": "legal"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "The Griffin Firm",
+      "city": "",
+      "county": "Washington",
+      "phone": 8555748481,
+      "website": "https://tgf-pllc.com/",
+      "subcategory": "Estate Planning/Wills",
+      "category": "legal"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Urban Public Finance",
+      "city": "NW",
+      "county": "Washington",
+      "phone": 2029090513,
+      "website": "ameerflippin@mail.com",
+      "subcategory": "Financial Services",
+      "category": "legal"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Black Girl Ventures",
+      "city": "NW",
+      "county": "Washington",
+      "phone": 2027094522,
+      "website": "https://www.blackgirlventures.org/",
+      "subcategory": "Financial Services",
+      "category": "legal"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "DMV Notary Mobile",
+      "city": "SE",
+      "county": "Washington",
+      "phone": 2028268179,
+      "website": "https://www.dmvnotarymobile.com/",
+      "subcategory": "Notary",
+      "category": "legal"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Seaberry Design",
+      "city": "NW",
+      "county": "Washington",
+      "phone": 2027760956,
+      "website": "https://seaberrydesign.com/",
+      "subcategory": "Branding/Graphic Design",
+      "category": "marketing"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "The Brand Amplifiers, LLC",
+      "city": "SE",
+      "county": "Washington",
+      "phone": 7025016130,
+      "website": "",
+      "subcategory": "Branding/Graphic Design",
+      "category": "marketing"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Ivory Dental Centre",
+      "city": "NW",
+      "county": "Washington",
+      "phone": 2026218862,
+      "website": "https://www.ivorydc.com/",
+      "subcategory": "Dental/ Orthodontics",
+      "category": "medical"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Pilates PT and Pelvic Floor Rehab, Inc.",
+      "city": "",
+      "county": "Washington",
+      "phone": 2409970449,
+      "website": "https://www.pilatesptrehab.com/",
+      "subcategory": "Physical Therapy",
+      "category": "medical"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Stellar Dental",
+      "city": "NE",
+      "county": "Washington",
+      "phone": 3018531567,
+      "website": "https://www.stellardentalllc.com/",
+      "subcategory": "Dental/ Orthodontics",
+      "category": "medical"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "The DC Dentist",
+      "city": "SE",
+      "county": "Washington",
+      "phone": 2025443626,
+      "website": "https://thedcdentist.com/",
+      "subcategory": "Dental/ Orthodontics",
+      "category": "medical"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "DOCUMENT MANAGERS",
+      "city": "NW",
+      "county": "Washington",
+      "phone": 2022991011,
+      "website": "http://www.documentmanagers.us/",
+      "subcategory": "Office Supplies",
+      "category": "Other"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Honeycomb Greetings™",
+      "city": "",
+      "county": "Washington",
+      "phone": "",
+      "website": "https://www.etsy.com/shop/HoneycombGreetings",
+      "subcategory": "Gifts & Stationary",
+      "category": "other"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Legacy Invites",
+      "city": "",
+      "county": "Washington",
+      "phone": 6626487295,
+      "website": "https://www.facebook.com/legacyinvitations83/",
+      "subcategory": "Gifts & Stationary",
+      "category": "other"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Tori’s Creative Treasures",
+      "city": "",
+      "county": "Washington",
+      "phone": 8282289244,
+      "website": "https://www.facebook.com/TorisTreas/",
+      "subcategory": "Gifts & Stationary",
+      "category": "other"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Transcription Services US",
+      "city": "",
+      "county": "Washington",
+      "phone": 8002307918,
+      "website": "https://www.transcription-services-us.com/Translation-Services-Fresno.php",
+      "subcategory": "Translation Services",
+      "category": "other"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "C. McFadden Photography LLC",
+      "city": "",
+      "county": "Washington",
+      "phone": 4433963134,
+      "website": "https://www.instagram.com/c.mcfadden.photography/?hl=en",
+      "subcategory": "Photography",
+      "category": "photography"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Cyberstorm Digital: Advanced Visual Technologie",
+      "city": "",
+      "county": "Washington",
+      "phone": 3235052463,
+      "website": "http://cyberstormdigital.com/",
+      "subcategory": "Videography",
+      "category": "photography"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "iEdit Projects",
+      "city": "",
+      "county": "Washington",
+      "phone": 8662735914,
+      "website": "https://ieditprojects.com/",
+      "subcategory": "Videography",
+      "category": "photography"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "One Moment In Time Entertainment™️ LLC",
+      "city": "NW",
+      "county": "Washington",
+      "phone": 4435843865,
+      "website": "https://www.instagram.com/OneMomentInTimeENT/",
+      "subcategory": "Photography",
+      "category": "photography"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Spencers Photography Services",
+      "city": "",
+      "county": "Washington",
+      "phone": 2024229693,
+      "website": "https://spencersphotography.smugmug.com/",
+      "subcategory": "Photography",
+      "category": "photography"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Black Bloggers Connect",
+      "city": "",
+      "county": "Washington",
+      "phone": "",
+      "website": "http://www.blackbloggersconnect.com/",
+      "subcategory": "",
+      "category": "photography"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Call Your Admin LLC",
+      "city": "NW",
+      "county": "Washington",
+      "phone": 2028548609,
+      "website": "https://callyouradmin.com/",
+      "subcategory": "Administrative Support",
+      "category": "photography"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Career Planning & Consulting (CPC)",
+      "city": "NW",
+      "county": "Washington",
+      "phone": 2028367960,
+      "website": "https://www.careerplanningandconsulting.com/",
+      "subcategory": "Consulting",
+      "category": "photography"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Enlightened INC.",
+      "city": "NW",
+      "county": "Washington",
+      "phone": 2027287190,
+      "website": "https://www.enlightened.com/",
+      "subcategory": "Consulting",
+      "category": "photography"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Osisis Group, LLC",
+      "city": "NW",
+      "county": "Washington",
+      "phone": 2026815575,
+      "website": "",
+      "subcategory": "",
+      "category": "photography"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Savvy Hands, LLC - Business Support Services",
+      "city": "",
+      "county": "Washington",
+      "phone": 2028548049,
+      "website": "https://www.facebook.com/yoursavvyhands/",
+      "subcategory": "Administrative Support",
+      "category": "photography"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "The Polished District",
+      "city": "",
+      "county": "Washington",
+      "phone": "",
+      "website": "http://www.thepolisheddistrict.com/",
+      "subcategory": "Writing Services",
+      "category": "photography"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Adair Solutions",
+      "city": "NE",
+      "county": "Washington",
+      "phone": 2022100532,
+      "website": "",
+      "subcategory": "Real Estate Agents/ Brokers",
+      "category": "real estate"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "MBB Affiliates LLC",
+      "city": "NW",
+      "county": "Washington",
+      "phone": 8004315012,
+      "website": "https://mbbaffiliates.com/",
+      "subcategory": "Property Management",
+      "category": "real estate"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Menkiti Group",
+      "city": "NE",
+      "county": "Washington",
+      "phone": 2022437777,
+      "website": "https://menkitigroup.com/",
+      "subcategory": "Real Estate Agents/ Brokers",
+      "category": "real estate"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "PANA Home Inspection",
+      "city": "NW",
+      "county": "Washington",
+      "phone": 2402817644,
+      "website": "",
+      "subcategory": "Home Inspection",
+      "category": "real estate"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Addis Paris Cafe",
+      "city": "NW",
+      "county": "Washington",
+      "phone": 2025889061,
+      "website": "https://addispariscafe.com/",
+      "subcategory": "Cafe",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Agua 301",
+      "city": "SE",
+      "county": "Washington",
+      "phone": 2024840301,
+      "website": "https://agua301.com/",
+      "subcategory": "",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Amen Cafe",
+      "city": "NW",
+      "county": "Washington",
+      "phone": 2028467453,
+      "website": "https://www.amencafedc.com/",
+      "subcategory": "Cafe",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Andrene's Soul Food & Caribbean Café",
+      "city": "NW",
+      "county": "Washington",
+      "phone": 2022917007,
+      "website": "http://places.singleplatform.com/andrenes-caribbean--soul-food-carry-out/menu",
+      "subcategory": "Caribbean Restaurant",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Anju",
+      "city": "NW",
+      "county": "Washington",
+      "phone": 2028458935,
+      "website": "https://www.anjurestaurant.com/",
+      "subcategory": "",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Appioo Bar and Grill",
+      "city": "NW",
+      "county": "Washington",
+      "phone": 2025887366,
+      "website": "http://www.appiooafricanbargrill.com/#eat-together-marquee",
+      "subcategory": "West African Restaurant",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Backyard Smoke Spot",
+      "city": "NW",
+      "county": "Washington",
+      "phone": 2027334204,
+      "website": "http://backyardsmokespot.com/phone/index.html",
+      "subcategory": "BBQ/ Soul Food Restaurant",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Ben's Chilli Bowl",
+      "city": "NE",
+      "county": "Washington",
+      "phone": "",
+      "website": "https://benschilibowl.com/",
+      "subcategory": "",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Ben's Chilli Bowl",
+      "city": "NW",
+      "county": "Washington",
+      "phone": "",
+      "website": "https://benschilibowl.com/",
+      "subcategory": "",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Ben's Next Door",
+      "city": "NW",
+      "county": "Washington",
+      "phone": 2026678880,
+      "website": "https://www.bensnextdoor.com/",
+      "subcategory": "",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Bin Wine Bar",
+      "city": "NW",
+      "county": "Washington",
+      "phone": 2025067716,
+      "website": "https://www.facebook.com/BIN1301/",
+      "subcategory": "Bar/Night Club",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Bukom Cafe",
+      "city": "NW",
+      "county": "Washington",
+      "phone": 2022654600,
+      "website": "https://www.bukomcafe.com/",
+      "subcategory": "West African restaurant",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Buna Coffeeshop",
+      "city": "NW",
+      "county": "Washington",
+      "phone": 2028822223,
+      "website": "https://www.bunacoffeehouse.com/",
+      "subcategory": "Cafe",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Cane",
+      "city": "NE",
+      "county": "Washington",
+      "phone": 2026752011,
+      "website": "https://www.cane-dc.com//",
+      "subcategory": "Caribbean Restaurant",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Catherine's Kitchen",
+      "city": "NE",
+      "county": "Washington",
+      "phone": 2028736449,
+      "website": "https://www.instagram.com/catherineskitchens/",
+      "subcategory": "BBQ/ Soul Food Restaurant",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Chercher",
+      "city": "NW",
+      "county": "Washington",
+      "phone": 2022999703,
+      "website": "https://www.chercherrestaurant.com/",
+      "subcategory": "Ethiopian/Eritrean Restaurant",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Coffy Café",
+      "city": "NW",
+      "county": "Washington",
+      "phone": 2025885660,
+      "website": "https://coffycafe.com/",
+      "subcategory": "Cafe",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Cork Wine Bar",
+      "city": "NW",
+      "county": "Washington",
+      "phone": 2022652675,
+      "website": "https://www.corkdc.com/",
+      "subcategory": "Bar/Night Club",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Crab Boss",
+      "city": "NE",
+      "county": "Washington",
+      "phone": 2028133463,
+      "website": "https://www.instagram.com/crabboss00/",
+      "subcategory": "",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Creative Grounds",
+      "city": "NW",
+      "county": "Washington",
+      "phone": 2027302979,
+      "website": "https://www.creativegroundsdc.com/",
+      "subcategory": "Cafe",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Creole on 14th",
+      "city": "NW",
+      "county": "Washington",
+      "phone": 2025066995,
+      "website": "https://www.creole14thdc.com/home-1",
+      "subcategory": "Creole/Cajun Restaurant",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Culture Coffee Too",
+      "city": "NE",
+      "county": "Washington",
+      "phone": 2025078349,
+      "website": "https://www.culturecoffeetoodc.com/",
+      "subcategory": "Cafe",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "DAS Ethiopian",
+      "city": "NW",
+      "county": "Washington",
+      "phone": 2023334710,
+      "website": "http://www.dasethiopian.com/about-us/",
+      "subcategory": "Ethiopian/Eritrean Restaurant",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "DC Conscious Cafe",
+      "city": "NE",
+      "county": "Washington",
+      "phone": 2023961064,
+      "website": "https://www.dcconsciouscafe.com/",
+      "subcategory": "Cafe",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "DCity Smokehouse",
+      "city": "NW",
+      "county": "Washington",
+      "phone": 2027331919,
+      "website": "https://www.dcitysmokehouse.com/",
+      "subcategory": "BBQ/ Soul Food Restaurant",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Dodah's Café",
+      "city": "NE",
+      "county": "Washington",
+      "phone": 2028836324,
+      "website": "https://dodahskitchen.com/",
+      "subcategory": "Cafe",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Dukem Ethiopian",
+      "city": "NW",
+      "county": "Washington",
+      "phone": 2026678735,
+      "website": "https://www.dukemrestaurant.com/",
+      "subcategory": "Ethiopian/Eritrean Restaurant",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Eclectic Cafe",
+      "city": "NE",
+      "county": "Washington",
+      "phone": 2023971075,
+      "website": "https://www.eclecticcafe-dc.com/",
+      "subcategory": "Caribbean Restaurant",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Eden's Kitchen",
+      "city": "NE",
+      "county": "Washington",
+      "phone": 2022481286,
+      "website": "https://www.yelp.com/biz/edens-kitchen-washington",
+      "subcategory": "Ethiopian/Eritrean Restaurant",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Elife Restaurant",
+      "city": "NW",
+      "county": "Washington",
+      "phone": 2028828999,
+      "website": "https://www.eliferestaurant.com/",
+      "subcategory": "BBQ/ Soul Food Restaurant",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Elife Restaurant",
+      "city": "SE",
+      "county": "Washington",
+      "phone": 2028828988,
+      "website": "https://www.eliferestaurant.com/",
+      "subcategory": "BBQ/ Soul Food Restaurant",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Ethiopic",
+      "city": "NE",
+      "county": "Washington",
+      "phone": 2026752066,
+      "website": "https://www.ethiopicrestaurant.com/",
+      "subcategory": "Ethiopian/Eritrean Restaurant",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Family Ethiopian",
+      "city": "NW",
+      "county": "Washington",
+      "phone": 2026292950,
+      "website": "https://familyethiopianrestaurant.com/",
+      "subcategory": "Ethiopian/Eritrean Restaurant",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Fishscale",
+      "city": "NW",
+      "county": "Washington",
+      "phone": 2027807886,
+      "website": "https://www.wearefishscale.com/",
+      "subcategory": "",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Florida Avenue Grill",
+      "city": "NW",
+      "county": "Washington",
+      "phone": "",
+      "website": "http://floridaavenuegrill.com/",
+      "subcategory": "BBQ/ Soul Food Restaurant",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Fusion Grill DMV",
+      "city": "NE",
+      "county": "Washington",
+      "phone": 2029771997,
+      "website": "https://www.instagram.com/fusiongrilldmv/?hl=en",
+      "subcategory": "",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Georgia Brown's",
+      "city": "NW",
+      "county": "Washington",
+      "phone": 2023934499,
+      "website": "https://www.gbrowns.com/",
+      "subcategory": "",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Halal Z-Burger",
+      "city": "NE",
+      "county": "Washington",
+      "phone": 2027153988,
+      "website": "https://www.zburger.com/",
+      "subcategory": "",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Halal Z-Burger",
+      "city": "NW",
+      "county": "Washington",
+      "phone": 3019382762,
+      "website": "https://www.zburger.com/",
+      "subcategory": "",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Half Smoke",
+      "city": "NW",
+      "county": "Washington",
+      "phone": 2029862079,
+      "website": "https://halfsmoke.com/",
+      "subcategory": "",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Heat Da Spot",
+      "city": "NW",
+      "county": "Washington",
+      "phone": 2028364719,
+      "website": "http://www.heatdaspotcafe.com/home.html",
+      "subcategory": "Cafe",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Hitching Post",
+      "city": "NW",
+      "county": "Washington",
+      "phone": 2027261511,
+      "website": "https://thehpostrestaurant.com/",
+      "subcategory": "",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Horace and Dickies",
+      "city": "NW",
+      "county": "Washington",
+      "phone": 2022484265,
+      "website": "https://www.horaceanddickies.com/",
+      "subcategory": "",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Hype Café DC",
+      "city": "SE",
+      "county": "Washington",
+      "phone": 2026293046,
+      "website": "https://hypecafedc.com/",
+      "subcategory": "Cafe",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Jam Doung Style",
+      "city": "NW",
+      "county": "Washington",
+      "phone": 2024832445,
+      "website": "https://www.jamdoungstyle.com/",
+      "subcategory": "Caribbean Restaurant",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Jerk at Nite",
+      "city": "NE",
+      "county": "Washington",
+      "phone": 2028365982,
+      "website": "http://www.jerkatnite.com/",
+      "subcategory": "Caribbean Restaurant",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Jojo Restaurant and Bar",
+      "city": "NW",
+      "county": "Washington",
+      "phone": 2023199350,
+      "website": "https://www.jojodc.com/",
+      "subcategory": "Bar/Night Club",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Karribean Kitchen",
+      "city": "NW",
+      "county": "Washington",
+      "phone": 2025065411,
+      "website": "https://karibbean-kitchen-llc.business.site/",
+      "subcategory": "Caribbean Restaurant",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Keren",
+      "city": "NW",
+      "county": "Washington",
+      "phone": 2022655764,
+      "website": "https://guide.michelin.com/us/en/washington/washington-dc/restaurant/keren",
+      "subcategory": "",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "KitchenCray",
+      "city": "NE",
+      "county": "Washington",
+      "phone": 3015771425,
+      "website": "https://kitchencray.com/",
+      "subcategory": "Ethiopian/Eritrean Restaurant",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Kitsuen",
+      "city": "NE",
+      "county": "Washington",
+      "phone": 2029142465,
+      "website": "http://kitsuenbar.com/",
+      "subcategory": "",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Lalibela Restaurant",
+      "city": "NW",
+      "county": "Washington",
+      "phone": 2022655700,
+      "website": "https://www.yelp.com/biz/lalibela-restaurant-washington",
+      "subcategory": "Ethiopian/Eritrean Restaurant",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Letena",
+      "city": "NW",
+      "county": "Washington",
+      "phone": 2027334830,
+      "website": "https://letenadc.com/",
+      "subcategory": "Ethiopian/Eritrean Restaurant",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Little Food Studio Petworth",
+      "city": "NW",
+      "county": "Washington",
+      "phone": "",
+      "website": "https://www.littlefoodstudio.com/",
+      "subcategory": "Cafe",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Matchbox",
+      "city": "NW",
+      "county": "Washington",
+      "phone": 2022894441,
+      "website": "https://www.matchboxrestaurants.com/",
+      "subcategory": "",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Matchbox",
+      "city": "SE",
+      "county": "Washington",
+      "phone": 2025480369,
+      "website": "https://www.matchboxrestaurants.com/",
+      "subcategory": "",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Melange",
+      "city": "NW",
+      "county": "Washington",
+      "phone": 2022895471,
+      "website": "https://www.melangedc.com/",
+      "subcategory": "Ethiopian/Eritrean Restaurant",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Mignot Ethiopian",
+      "city": "NW",
+      "county": "Washington",
+      "phone": 2027910845,
+      "website": "https://mignotdc.wordpress.com/",
+      "subcategory": "Ethiopian/Eritrean Restaurant",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Mike and Lois’s Late Night Grill",
+      "city": "NE",
+      "county": "Washington",
+      "phone": 3469086164,
+      "website": "https://www.yelp.com/biz/mike-and-loiss-late-night-grill-washington-2",
+      "subcategory": "",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Milk & Honey (formerly Smith Commons)",
+      "city": "NE",
+      "county": "Washington",
+      "phone": 2023960038,
+      "website": "https://milknhoneycafe.com/",
+      "subcategory": "Cafe",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Mimi's Ethiopian BBQ",
+      "city": "SE",
+      "county": "Washington",
+      "phone": 2024810414,
+      "website": "https://www.mimisbbq.com/",
+      "subcategory": "Ethiopian/Eritrean Restaurant",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "MLK Deli",
+      "city": "SE",
+      "county": "Washington",
+      "phone": 2025975897,
+      "website": "https://themlkdeli.com/",
+      "subcategory": "",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Montello Deli NE",
+      "city": "NE",
+      "county": "Washington",
+      "phone": 2023888522,
+      "website": "https://www.facebook.com/pages/Montello-Deli/111631805541664",
+      "subcategory": "",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Mother Rucker's Subs",
+      "city": "NE",
+      "county": "Washington",
+      "phone": 2023881881,
+      "website": "http://www.motherruckerssubs.com/",
+      "subcategory": "",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Motown Square",
+      "city": "NE",
+      "county": "Washington",
+      "phone": "",
+      "website": "https://www.motownsquaredc.com/",
+      "subcategory": "",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Mr. Braxton Bar & Kitchen",
+      "city": "NW",
+      "county": "Washington",
+      "phone": 2028824555,
+      "website": "https://www.mrbraxton.com/",
+      "subcategory": "",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Mr. Smith’s of Georgetown, Restaurant & Piano Bar",
+      "city": "NW",
+      "county": "Washington",
+      "phone": 2023332565,
+      "website": "https://mrsmiths.com/",
+      "subcategory": "Bar/Night Club",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Negril The Jamaican Eatery",
+      "city": "NW",
+      "county": "Washington",
+      "phone": 2023323737,
+      "website": "https://www.negrileats.com/",
+      "subcategory": "Caribbean Restaurant",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Nile Ethiopian",
+      "city": "NW",
+      "county": "Washington",
+      "phone": 2028821130,
+      "website": "https://www.facebook.com/Nile-Ethiopian-Restaurant-629808687075644/",
+      "subcategory": "Ethiopian/Eritrean Restaurant",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "NuVegan",
+      "city": "NW",
+      "county": "Washington",
+      "phone": 2022321700,
+      "website": "https://www.ilovenuvegan.com/",
+      "subcategory": "",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "On The Rocks",
+      "city": "NE",
+      "county": "Washington",
+      "phone": 2027351956,
+      "website": "https://www.clover.com/online-ordering/on-the-rocks-llc-washington",
+      "subcategory": "",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Oohhs & Aahhs",
+      "city": "NW",
+      "county": "Washington",
+      "phone": 2026677142,
+      "website": "https://www.oohhsnaahhs.com/",
+      "subcategory": "BBQ/ Soul Food Restaurant",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Open Crumb",
+      "city": "SE",
+      "county": "Washington",
+      "phone": 2026109979,
+      "website": "https://www.instagram.com/opencrumbdc/",
+      "subcategory": "",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Peaches Kitchen",
+      "city": "NW",
+      "county": "Washington",
+      "phone": 2027225250,
+      "website": "http://peacheskitchen.com/",
+      "subcategory": "Caribbean Restaurant",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Pimento Grill",
+      "city": "SE",
+      "county": "Washington",
+      "phone": 2025826595,
+      "website": "https://pimento-grill.com/",
+      "subcategory": "Caribbean Restaurant",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Pizza Mart",
+      "city": "NE",
+      "county": "Washington",
+      "phone": 2025261100,
+      "website": "https://pizzamartwashingtondc.com/35607",
+      "subcategory": "",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Po Boy Jim",
+      "city": "NE",
+      "county": "Washington",
+      "phone": 2026217071,
+      "website": "https://poboyjim.com/",
+      "subcategory": "",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Provost",
+      "city": "NE",
+      "county": "Washington",
+      "phone": 2022009852,
+      "website": "https://www.provostdc.com/menus",
+      "subcategory": "",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Puddin'",
+      "city": "NE",
+      "county": "Washington",
+      "phone": 2027251030,
+      "website": "https://www.dcpuddin.com/",
+      "subcategory": "Food Trucks/Carts",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Real Nutritious Food",
+      "city": "NW",
+      "county": "Washington",
+      "phone": 2022441208,
+      "website": "https://www.clover.com/online-ordering/real-nutritious-food-llc-northwest-washingt",
+      "subcategory": "",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Roaming Rooster",
+      "city": "NE",
+      "county": "Washington",
+      "phone": 2025078734,
+      "website": "https://www.roamingroosterdc.com/",
+      "subcategory": "",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "RockSalt Food Truck",
+      "city": "",
+      "county": "Washington",
+      "phone": 2028109565,
+      "website": "https://twitter.com/RockSalt_",
+      "subcategory": "Food Trucks/Carts",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Sandlot Southeast",
+      "city": "SE",
+      "county": "Washington",
+      "phone": 2024555325,
+      "website": "https://sandlotsoutheast.com/",
+      "subcategory": "Venues/Event Spaces",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Senbeb Café",
+      "city": "NW",
+      "county": "Washington",
+      "phone": 2022490917,
+      "website": "http://www.senbebcafe.com/",
+      "subcategory": "Cafe",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Serenata",
+      "city": "NE",
+      "county": "Washington",
+      "phone": 2029207373,
+      "website": "https://www.serenatadc.com/",
+      "subcategory": "Bar/Night Club",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Service Bar",
+      "city": "NW",
+      "county": "Washington",
+      "phone": 2024627232,
+      "website": "https://www.servicebardc.com/",
+      "subcategory": "Bar/Night Club",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Sidamo Coffee and Tea",
+      "city": "NE",
+      "county": "Washington",
+      "phone": 2025480081,
+      "website": "http://www.sidamocoffeeandtea.com/",
+      "subcategory": "Cafe",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Smitty's",
+      "city": "NW",
+      "county": "Washington",
+      "phone": 2024940593,
+      "website": "https://www.smittysdc.com/",
+      "subcategory": "Bar/Night Club",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Smokin' Pig",
+      "city": "NE",
+      "county": "Washington",
+      "phone": 2025255032,
+      "website": "https://www.smokinpigdc.com/",
+      "subcategory": "BBQ/ Soul Food Restaurant",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Souk",
+      "city": "SE",
+      "county": "Washington",
+      "phone": 2025477685,
+      "website": "https://www.dcsouk.com/",
+      "subcategory": "Cafe",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Soul Wingz",
+      "city": "NW",
+      "county": "Washington",
+      "phone": 8004841844,
+      "website": "https://www.seamless.com/menu/soul-wingz-food-truck-park-200-florida-ave-nw-washington/2552189",
+      "subcategory": "Food Trucks/Carts",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Soup Up",
+      "city": "NW",
+      "county": "Washington",
+      "phone": 2026216845,
+      "website": "http://www.soupup.us/",
+      "subcategory": "",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Spice – A Caribbean Jerk Joint",
+      "city": "NW",
+      "county": "Washington",
+      "phone": 2027221191,
+      "website": "https://www.yelp.com/biz/spice-a-carribean-jerk-joint-washington",
+      "subcategory": "Caribbean Restaurant",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Spice Kitchen West African Grill",
+      "city": "NE",
+      "county": "Washington",
+      "phone": 2022801491,
+      "website": "https://www.spicekitchengrill.com/",
+      "subcategory": "West African restaurant",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Spicy Delight",
+      "city": "NW",
+      "county": "Washington",
+      "phone": 2028299783,
+      "website": "https://www.yelp.com/biz/spicy-delight-washington",
+      "subcategory": "Caribbean Restaurant",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Steak N Egg",
+      "city": "NW",
+      "county": "Washington",
+      "phone": 2026861201,
+      "website": "https://www.steak-n-egg.com",
+      "subcategory": "",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Subbs by Carl (Carl's Subbs)",
+      "city": "NE",
+      "county": "Washington",
+      "phone": 2025296225,
+      "website": "https://www.yelp.com/biz/subbs-by-carl-washington?q=black",
+      "subcategory": "",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Sunrise Caribbean",
+      "city": "NW",
+      "county": "Washington",
+      "phone": 2022912949,
+      "website": "https://www.iamsunrise.com/",
+      "subcategory": "Caribbean Restaurant",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Swahlili Village",
+      "city": "NW",
+      "county": "Washington",
+      "phone": 2026292353,
+      "website": "https://swahilivillages.com/",
+      "subcategory": "",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Sweet Sosumba Jamaican Vegan Café",
+      "city": "NW",
+      "county": "Washington",
+      "phone": 2023137760,
+      "website": "https://sweetsosumba.com/",
+      "subcategory": "Caribbean Restaurant",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Takoma Station",
+      "city": "NW",
+      "county": "Washington",
+      "phone": 3014043948,
+      "website": "https://www.takomastation.com/",
+      "subcategory": "Bar/Night Club",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Teddy's Roti Shop",
+      "city": "NW",
+      "county": "Washington",
+      "phone": 2028826488,
+      "website": "https://www.yelp.com/biz/teddys-roti-shop-washington",
+      "subcategory": "Caribbean Restaurant",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "The Carolina Kitchen",
+      "city": "NE",
+      "county": "Washington",
+      "phone": 2027331216,
+      "website": "https://thecarolinakitchen.com/",
+      "subcategory": "",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "The Kitchen Jerk",
+      "city": "NE",
+      "county": "Washington",
+      "phone": 2022766588,
+      "website": "https://www.orderthekitchenjerk.com/#/",
+      "subcategory": "Caribbean Restaurant",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "The Village Cafe",
+      "city": "NE",
+      "county": "Washington",
+      "phone": "",
+      "website": "https://www.thevillagedc.space/menu",
+      "subcategory": "Cafe",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Tsehay Ethiopian",
+      "city": "NW",
+      "county": "Washington",
+      "phone": 2028088952,
+      "website": "https://www.tsehaydc.com/",
+      "subcategory": "Ethiopian/Eritrean Restaurant",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Zenebach",
+      "city": "NW",
+      "county": "Washington",
+      "phone": 2026674700,
+      "website": "http://www.zenebechdc.com/",
+      "subcategory": "Ethiopian/Eritrean Restaurant",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Zion Kitchen",
+      "city": "NE",
+      "county": "Washington",
+      "phone": 2026369097,
+      "website": "https://www.zkafricanlounge.com/",
+      "subcategory": "West African restaurant",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Whole Armor Security Services LLC",
+      "city": "",
+      "county": "Washington",
+      "phone": 8556116955,
+      "website": "https://wholearmorllc.com/",
+      "subcategory": "",
+      "category": "security"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "U STREET PARKING, INC",
+      "city": "NW",
+      "county": "Washington",
+      "phone": 2022650010,
+      "website": "http://www.parkingmanagementinwashingtondc.com/",
+      "subcategory": "Parking",
+      "category": "transportation"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "District Art and Crafts",
+      "city": "SE",
+      "county": "Washington",
+      "phone": 2022533301,
+      "website": "",
+      "subcategory": "",
+      "category": "visual"
+    }
+},
+    {
+      "model": "vbp.vbp_dc",
+      "fields": {
+"business_name": "Interdisciplinary Artist. Social Entrepreneur. Arts Equity Consultant",
+      "city": "",
+      "county": "Washington",
+      "phone": 2137848707,
+      "website": "https://www.janetedandridge.com/",
+      "subcategory": "Artists",
+      "category": "visual"
+    }
+    }
+  ]

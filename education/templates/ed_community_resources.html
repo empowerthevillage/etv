@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="parallax-container z-depth-3 box-shadow valign-wrapper">
+    
+    <div class="container z-depth-4 center-align parallax-banner" style="background:rgba(255, 255, 255, 0.906); border: rgb(43, 43, 43) 3px solid; width: 60%; margin-top: 2%">
+        <img src='{% static "img/health_wellness.png" %}' style="width:90%; padding: 20px">
+    </div>
+    <div class="parallax">
+        <img src='{% static "img/health_collage.png" %}' style="width: 120%;">
+    </div>
+
+</div>
+<div style="padding: 5%">
+    <h5 class="phase-one-title">ETV Phase One Health & Wellness Initiatives</h6>
+    <ul class="phase-one-list">
+        <li><b>Knowledge is Power! & Neighbors Feeding Neighbors:</b> ETV coordinates and provides free Covid-19 Testing and flu shots, as well as other pandemic-related support to families struggling economically. Programs are executed in partnership with The Village - churches, Divine 9 and local healthcare organizations. </li>
+        <li><b>Village Parents Alliance:</b> This is ETV’s parenting partners network, which will provide critical support systems to increase the peace, joy, health and stability of Black families and children. It does, indeed, take a village to raise a child! Through our partnership with child and family-focused organizations, we will supply information through workshops, events and tools across a variety of platforms. In addition, ETV will pair experienced parents with newer parents to serve as partners/mentors in parenting to assist them with navigating the challenging waters of preparing for and excelling at what many believe is the most important (and hardest) job they may ever have - raising healthy, happy children!</li>
+        <li><b>Village Assistance Program™:</b> ETV is developing this program to give the Black community greater free and affordable access to mental health professionals, especially Black psychiatrists, psychologists, social workers and other wellness professionals to improve emotional health and wellness in the Black adult and youth community and to identify and support early childhood development challenges.</li>
+        <li><b>Know Thyself!:</b> ETV is tackling Post Traumatic Slave Disorder (our PTSD) through customized age-appropriate education fostering cultural pride. We are also developing a curriculum and championing programs that promote a growth mindset of possibilities, self-confidence, self-respect and self-esteem. </li>
+    </ul>
+    <p>We will also launch programs to address and conquer obesity, as well as reduce the high prevalence of diabetes and high blood pressure in our community.</p>
+</div>
+<style>
+    .phase-one-list li {
+        padding: 3% 5%;
+    }
+    @media only screen and (min-width:0px){
+        .phase-one-list {
+            font-size: 16px
+        }
+        .phase-one-title {
+            font-size: 38px;
+            font-family: oskar-inline;
+            text-align: center
+        }
+    }
+    @media only screen and (min-width:601px){
+        .phase-one-list {
+            font-size: 18px
+        }
+        .phase-one-title {
+            font-size: 48px;
+            font-family: oskar-inline;
+            text-align: center
+        }
+    }
+    @media only screen and (min-width:993px){
+        .phase-one-list {
+            font-size: 18px
+        }
+        .phase-one-title {
+            font-size: 64px;
+            font-family: oskar-inline;
+            text-align: center
+        }
+    }
+</style>
+{% endblock %}

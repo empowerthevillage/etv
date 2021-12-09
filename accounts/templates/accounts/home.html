@@ -1,0 +1,135 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load humanize %}
+
+{% block content %}
+
+<div id="page">
+<div class="row" style=" padding-top:60px; padding-bottom: 60px;padding-left: 5%; padding-right: 5%; background-color: rgba(250, 250, 250, 0.742)">
+<h5 class="" style="text-transform: capitalize;">Welcome back{% if user.first_name %}, {{ user.first_name }}{% endif %}!</h5>
+<div class="row">
+  <div class="col s12 m10 l8">
+    <div class="card " style="margin-bottom:10">
+      <div class="card-content">
+        <span class="card-title">My Account</span>
+        <ul class="account-list">
+          {% if user.is_staff %}
+          <li><a href="/myadmin/etvadmin209423/">Take Me To ETV Admin</a></li>
+          {% endif %}
+          <li><b>Username:</b> {{ user.username }}</li>
+          <li><b>Email Address:</b> {{ user.email }}</li>
+          <li><b>Team:</b>
+            {% if user.team %}
+            {{ user.team }}
+            {% else %}
+            <a href="{{ join_url }}">Join a Team!</a>
+            {% endif %}
+          </li>
+          <li><b><a href="{% url 'password_change' %}">Change Password</a></b></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col s12 l4">
+    <div class="card" style="margin-bottom:10">
+      <div class="card-content">
+        <span class="card-title">Black Friday Challenge™ Dashboard</span>
+        <ul class="bf-challenge-list">
+          <li>Nomination Challenge</li>
+            <p></p><a href="{{ nomination_url }}">Nominate a Black-owned business today!</a></p>
+          <br>
+          <li>Power Bingo</li>
+            {% if user.is_bingo_sponsor %}
+            <a href="{{ bingo_url }}">Click here to view your Power Bingo board</a>
+            {% else %}
+            <a href="{{ contact_url }}">Contact Empower The Village to sponsor a Power Bingo game today!</a>
+            {% endif %}
+          <br>
+          <br>
+          <li>Ready, Set, Shop!</li>
+            {% if user.team %}
+            <p><a>{{ user.team }}</a></p>
+            {% else %}
+            <a href="{{ join_url }}">Join a Team!</a>
+            {% endif %}
+          </li>
+          <br>
+          <li>Spread The Love</li>
+          <p>Spread the word about Black-owned businesses! <a href="{{ stl_url }}">Drop us a link to your Instagram post!</a></p>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="col s12 l4">
+    <div class="card" style="margin-bottom:10">
+      <div class="card-content">
+        <span class="card-title">Order Dashboard</span>
+        <ul class="bf-challenge-list">
+          <li>My Orders</li>
+            <ul >
+              <div class="divider" style="margin-top: 10px; margin-bottom: 10px"></div>
+              {% for x in orders %}
+              <li>
+                <p><b>Order Id: </b><b style="font-weight: 300">{{ x }}</b></p>
+                <p><b>Tracking: </b><a target="_blank" href="" style="font-weight: 300"></a></p>
+                <p><b>Items:</b></p>
+                <p style="font-weight: 300">{% for item in x.items.all %}{{ item.product }}{% endfor %}</p>
+                <p><b>Total:</b> ${{ x.total }}</p>
+              </li>
+              <div class="divider" style="margin-top: 10px; margin-bottom: 10px"></div>
+              {% endfor %}
+            </ul>
+            <br>
+          
+          <li><a href="{{ merchandise_url }}">Shop Now!</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="col s12 l4">
+    <div class="card" style="margin-bottom:10">
+      <div class="card-content">
+        <span class="card-title">Donation Dashboard</span>
+        <ul class="bf-challenge-list">
+          <li>My Recent Donations</li>
+            <ul>
+              {% for donation in recent_qs %}
+              <p>{{ donation.updated }} - <b style="color: green">${{ donation.amount }}</b></p>
+              {% endfor %}
+            </ul>
+            <br>
+          <li>Total Donated</li>
+            <p>${{ total|intcomma }}</p>
+          <li><a href="{{ donate_url }}">Donate Now!</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+</div>
+</div>
+<style>
+#page {
+    background-image: url("{% static 'img/login-collage.png' %}");
+    background-size: 100%;
+    background-repeat: repeat;
+    height: 100%
+  }
+.bf-challenge-list li {
+  font-size:18px;
+  font-weight:500;
+}
+.account-list {
+  font-size: 18px
+}
+.card {
+}
+</style>
+{% endblock %}

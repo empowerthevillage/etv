@@ -1,0 +1,221 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+
+
+{% block title %}
+Empower The Village | Admin
+{% endblock %}
+
+{% block bodyclass %}{{ block.super }} dashboard{% endblock %}
+{% block breadcrumbs %}{% endblock %}
+
+{% block nav-sidebar %}{% endblock %}
+
+{% block content %}
+{% regroup rss by team as team_list %}
+<div id="page">
+    <div class="admin-content-container" style="margin-left:2%; margin-right: 2%;background-color: rgba(242, 242, 242, 0.934);">
+    <div class="row" style="padding-top: 30px; padding-left: 5%;">
+        <h5 class="admin-title">Empower The Village | Administration</h5>
+        <p><a class="back-subtitle" href="{{ account_url }}">Back to My Personal Account</a></p>
+    </div>
+    <div class="row" id='content-main' style="width: 90%; margin-left: 5%">
+        <div class="col s7">
+        {% include "admin/app_list.html" with app_list=app_list show_changelinks=True %}
+        </div>
+        <div class="col s5">
+            {% block sidebar %}
+                <h5><u>Dashboard</u></h5>
+                <div id="content-related">
+                    <div class="module" id="recent-actions-module">
+                        <h6 style="font-weight: 500">Notifications</h6>
+                        {% if AL > 0 %}
+                        <div>- <a href="vbp/vbp_al/"><span class="new new badge" style="text-transform: uppercase;">{{ AL }}</span></a> New VBP submissions are in for <a href="vbp/vbp_al/">Alabama!</a></div>
+                        {% endif %}
+                        {% if AK > 0 %}
+                        <div>- <a href="vbp/vbp_ak/"><span class="new badge" style="text-transform: uppercase;">{{ AK }}</span></a> New VBP submissions are in for <a href="vbp/vbp_ak/">Alaska!</a></div>
+                        {% endif %}
+                        {% if AZ > 0 %}
+                        <div>- <a href="vbp/vbp_az/"><span class="new badge" style="text-transform: uppercase;">{{ AZ }}</span></a> New VBP submissions are in for <a href="vbp/vbp_az/">Arizona</a></div>
+                        {% endif %}
+                        {% if AR > 0 %}
+                        <div>- <a href="vbp/vbp_ar/"><span class="new badge" style="text-transform: uppercase;">{{ AR }}</span></a> New VBP submissions are in for <a href="vbp/vbp_ar/">Arkansas!</a></div>
+                        {% endif %}
+                        {% if CA > 0 %}
+                        <div>- <a href="vbp/vbp_ca/"><span class="new badge" style="text-transform: uppercase;">{{ CA }}</span></a> New VBP submissions are in for <a href="vbp/vbp_ca/">California!</a></div>
+                        {% endif %}
+                        {% if CO > 0 %}
+                        <div>- <a href="vbp/vbp_co/"><span class="new new badge" style="text-transform: uppercase;">{{ CO }}</span></a> New VBP submissions are in for <a href="vbp/vbp_co/">Colorado!</a></div>
+                        {% endif %}
+                        {% if CT > 0 %}
+                        <div>- <a href="vbp/vbp_ct/"><span class="new badge" style="text-transform: uppercase;">{{ CT }}</span></a> New VBP submissions are in for <a href="vbp/vbp_ct/">Connecticut!</a></div>
+                        {% endif %}
+                        {% if DE > 0 %}
+                        <div>- <a href="vbp/vbp_de/"><span class="new badge" style="text-transform: uppercase;">{{ DE }}</span></a> New VBP submissions are in for <a href="vbp/vbp_de/">Delaware</a></div>
+                        {% endif %}
+                        {% if DC > 0 %}
+                        <div>- <a href="vbp/vbp_dc/"><span class="new badge" style="text-transform: uppercase;">{{ DC }}</span></a> New VBP submissions are in for <a href="vbp/vbp_dc/">DC!</a></div>
+                        {% endif %}
+                        {% if FL > 0 %}
+                        <div>- <a href="vbp/vbp_fl/"><span class="new badge" style="text-transform: uppercase;">{{ DL }}</span></a> New VBP submissions are in for <a href="vbp/vbp_fl/">Florida!</a></div>
+                        {% endif %}
+                        {% if GA > 0 %}
+                        <div>- <a href="vbp/vbp_ga/"><span class="new badge" style="text-transform: uppercase;">{{ GA }}</span></a> New VBP submissions are in for <a href="vbp/vbp_ga/">Georgia!</a></div>
+                        {% endif %}
+                        {% if HI > 0 %}
+                        <div>- <a href="vbp/vbp_hi/"><span class="new new badge" style="text-transform: uppercase;">{{ HI }}</span></a> New VBP submissions are in for <a href="vbp/vbp_hi/">Hawaii!</a></div>
+                        {% endif %}
+                        {% if ID > 0 %}
+                        <div>- <a href="vbp/vbp_id/"><span class="new badge" style="text-transform: uppercase;">{{ ID }}</span></a> New VBP submissions are in for <a href="vbp/vbp_id/">Idaho!</a></div>
+                        {% endif %}
+                        {% if IL > 0 %}
+                        <div>- <a href="vbp/vbp_il/"><span class="new badge" style="text-transform: uppercase;">{{ IL }}</span></a> New VBP submissions are in for <a href="vbp/vbp_il/">Illinois!</a></div>
+                        {% endif %}
+                        {% if IN > 0 %}
+                        <div>- <a href="vbp/vbp_in/"><span class="new badge" style="text-transform: uppercase;">{{ IN }}</span></a> New VBP submissions are in for <a href="vbp/vbp_in/">Indiana!</a></div>
+                        {% endif %}
+                        {% if KS > 0 %}
+                        <div>- <a href="vbp/vbp_ks/"><span class="new badge" style="text-transform: uppercase;">{{ KS }}</span></a> New VBP submissions are in for <a href="vbp/vbp_ks/">Kansas!</a></div>
+                        {% endif %}
+                        {% if KY > 0 %}
+                        <div>- <a href="vbp/vbp_ky/"><span class="new badge" style="text-transform: uppercase;">{{ KY }}</span></a> New VBP submissions are in for <a href="vbp/vbp_ky/">Kentucky!</a></div>
+                        {% endif %}
+                        {% if LA > 0 %}
+                        <div>- <a href="vbp/vbp_la/"><span class="new new badge" style="text-transform: uppercase;">{{ LA }}</span></a> New VBP submissions are in for <a href="vbp/vbp_la/">Louisiana!</a></div>
+                        {% endif %}
+                        {% if ME > 0 %}
+                        <div>- <a href="vbp/vbp_me/"><span class="new badge" style="text-transform: uppercase;">{{ ME }}</span></a> New VBP submissions are in for <a href="vbp/vbp_me/">Maine!</a></div>
+                        {% endif %}
+                        {% if MD > 0 %}
+                        <div>- <a href="vbp/vbp_md/"><span class="new badge" style="text-transform: uppercase;">{{ MD }}</span></a> New VBP submissions are in for <a href="vbp/vbp_md/">Maryland!</a></div>
+                        {% endif %}
+                        {% if MA > 0 %}
+                        <div>- <a href="vbp/vbp_ma/"><span class="new badge" style="text-transform: uppercase;">{{ MA }}</span></a> New VBP submissions are in for <a href="vbp/vbp_ma/">Massachusetts!</a></div>
+                        {% endif %}
+                        {% if MI > 0 %}
+                        <div>- <a href="vbp/vbp_mi/"><span class="new badge" style="text-transform: uppercase;">{{ MI }}</span></a> New VBP submissions are in for <a href="vbp/vbp_mi/">Missouri!</a></div>
+                        {% endif %}
+                        {% if MN > 0 %}
+                        <div>- <a href="vbp/vbp_mn/"><span class="new badge" style="text-transform: uppercase;">{{ MN }}</span></a> New VBP submissions are in for <a href="vbp/vbp_mn/">Minnesota!</a></div>
+                        {% endif %}
+                        {% if MS > 0 %}
+                        <div>- <a href="vbp/vbp_ms/"><span class="new new badge" style="text-transform: uppercase;">{{ MS }}</span></a> New VBP submissions are in for <a href="vbp/vbp_ms/">Mississippi!</a></div>
+                        {% endif %}
+                        {% if MO > 0 %}
+                        <div>- <a href="vbp/vbp_mo/"><span class="new badge" style="text-transform: uppercase;">{{ MO }}</span></a> New VBP submissions are in for <a href="vbp/vbp_mo/">Missouri!</a></div>
+                        {% endif %}
+                        {% if MT > 0 %}
+                        <div>- <a href="vbp/vbp_mt/"><span class="new badge" style="text-transform: uppercase;">{{ MT }}</span></a> New VBP submissions are in for <a href="vbp/vbp_mt/">Montana!</a></div>
+                        {% endif %}
+                        {% if NE > 0 %}
+                        <div>- <a href="vbp/vbp_ne/"><span class="new badge" style="text-transform: uppercase;">{{ NE }}</span></a> New VBP submissions are in for <a href="vbp/vbp_ne/">Nebraska!</a></div>
+                        {% endif %}
+                        {% if NV > 0 %}
+                        <div>- <a href="vbp/vbp_nv/"><span class="new badge" style="text-transform: uppercase;">{{ NV }}</span></a> New VBP submissions are in for <a href="vbp/vbp_nv/">Nevada!</a></div>
+                        {% endif %}
+                        {% if NH > 0 %}
+                        <div>- <a href="vbp/vbp_nh/"><span class="new badge" style="text-transform: uppercase;">{{ NH }}</span></a> New VBP submissions are in for <a href="vbp/vbp_nh/">New Hampshire!</a></div>
+                        {% endif %}
+                        {% if NJ > 0 %}
+                        <div>- <a href="vbp/vbp_nj/"><span class="new badge" style="text-transform: uppercase;">{{ NJ }}</span></a> New VBP submissions are in for <a href="vbp/vbp_nj/">New Jersey!</a></div>
+                        {% endif %}
+                        {% if NM > 0 %}
+                        <div>- <a href="vbp/vbp_nm/"><span class="new badge" style="text-transform: uppercase;">{{ NM }}</span></a> New VBP submissions are in for <a href="vbp/vbp_nm/">New Mexico!</a></div>
+                        {% endif %}
+                        {% if NY > 0 %}
+                        <div>- <a href="vbp/vbp_ny/"><span class="new badge" style="text-transform: uppercase;">{{ NY }}</span></a> New VBP submissions are in for <a href="vbp/vbp_ny/">New York!</a></div>
+                        {% endif %}
+                        {% if NC > 0 %}
+                        <div>- <a href="vbp/vbp_nc/"><span class="new badge" style="text-transform: uppercase;">{{ NC }}</span></a> New VBP submissions are in for <a href="vbp/vbp_nc/">North Carolina!</a></div>
+                        {% endif %}
+                        {% if ND > 0 %}
+                        <div>- <a href="vbp/vbp_nd/"><span class="new badge" style="text-transform: uppercase;">{{ ND }}</span></a> New VBP submissions are in for <a href="vbp/vbp_nd/">North Dakota!</a></div>
+                        {% endif %}
+                        {% if OH > 0 %}
+                        <div>- <a href="vbp/vbp_oh/"><span class="new badge" style="text-transform: uppercase;">{{ OH }}</span></a> New VBP submissions are in for <a href="vbp/vbp_oh/">Ohio!</a></div>
+                        {% endif %}
+                        {% if OK > 0 %}
+                        <div>- <a href="vbp/vbp_ok/"><span class="new badge" style="text-transform: uppercase;">{{ OK }}</span></a> New VBP submissions are in for <a href="vbp/vbp_ok/">Oklahoma!</a></div>
+                        {% endif %}
+                        {% if OR > 0 %}
+                        <div>- <a href="vbp/vbp_or/"><span class="new badge" style="text-transform: uppercase;">{{ OR }}</span></a> New VBP submissions are in for <a href="vbp/vbp_or/">Oregon!</a></div>
+                        {% endif %}
+                        {% if PA > 0 %}
+                        <div>- <a href="vbp/vbp_pa/"><span class="new badge" style="text-transform: uppercase;">{{ PA }}</span></a> New VBP submissions are in for <a href="vbp/vbp_pa/">Pennsylvania!</a></div>
+                        {% endif %}
+                        {% if RI > 0 %}
+                        <div>- <a href="vbp/vbp_ri/"><span class="new badge" style="text-transform: uppercase;">{{ RI }}</span></a> New VBP submissions are in for <a href="vbp/vbp_ri/">Rhode Island!</a></div>
+                        {% endif %}
+                        {% if SC > 0 %}
+                        <div>- <a href="vbp/vbp_sc/"><span class="new badge" style="text-transform: uppercase;">{{ SC }}</span></a> New VBP submissions are in for <a href="vbp/vbp_sc/">South Carolina!</a></div>
+                        {% endif %}
+                        {% if SD > 0 %}
+                        <div>- <a href="vbp/vbp_sd/"><span class="new badge" style="text-transform: uppercase;">{{ SD }}</span></a> New VBP submissions are in for <a href="vbp/vbp_sd/">South Dakota!</a></div>
+                        {% endif %}
+                        {% if TN > 0 %}
+                        <div>- <a href="vbp/vbp_tn/"><span class="new badge" style="text-transform: uppercase;">{{ TN }}</span></a> New VBP submissions are in for <a href="vbp/vbp_tn/">Tennessee!</a></div>
+                        {% endif %}
+                        {% if TX > 0 %}
+                        <div>- <a href="vbp/vbp_tx/"><span class="new badge" style="text-transform: uppercase;">{{ TX }}</span></a> New VBP submissions are in for <a href="vbp/vbp_tx/">Texas!</a></div>
+                        {% endif %}
+                        {% if UT > 0 %}
+                        <div>- <a href="vbp/vbp_ut/"><span class="new badge" style="text-transform: uppercase;">{{ UT }}</span></a> New VBP submissions are in for <a href="vbp/vbp_ut/">Utah!</a></div>
+                        {% endif %}
+                        {% if VT > 0 %}
+                        <div>- <a href="vbp/vbp_vt/"><span class="new badge" style="text-transform: uppercase;">{{ VT }}</span></a> New VBP submissions are in for <a href="vbp/vbp_vt/">Vermont!</a></div>
+                        {% endif %}
+                     
+                        {% if VA > 0 %}
+                        <div>- <a href="vbp/vbp_va/"><span class="new badge" style="text-transform: uppercase;">{{ VA }}</span></a> New VBP submissions are in for <a href="vbp/vbp_va/">Virginia!</a></div>
+                        {% endif %}
+                        {% if WA > 0 %}
+                        <div>- <a href="vbp/vbp_wa/"><span class="new badge" style="text-transform: uppercase;">{{ WA }}</span></a> New VBP submissions are in for <a href="vbp/vbp_wa/">Washington!</a></div>
+                        {% endif %}
+                        {% if WV > 0 %}
+                        <div>- <a href="vbp/vbp_wv/"><span class="new badge" style="text-transform: uppercase;">{{ WV }}</span></a> New VBP submissions are in for <a href="vbp/vbp_wv/">West Virginia!</a></div>
+                        {% endif %}
+                        {% if WI > 0 %}
+                        <div>- <a href="vbp/vbp_wi/"><span class="new badge" style="text-transform: uppercase;">{{ WI }}</span></a> New VBP submissions are in for <a href="vbp/vbp_wi/">Wisconsin!</a></div>
+                        {% endif %}
+                        {% if WY > 0 %}
+                        <div>- <a href="vbp/vbp_wy/"><span class="new badge" style="text-transform: uppercase;">{{ WY }}</span></a> New VBP submissions are in for <a href="vbp/vbp_wy/">Wyoming!</a></div>
+                        {% endif %}
+
+
+                    </div>
+                </div>
+                
+            {% endblock %}
+        </div>
+    </div>
+</div>
+</div>
+<style>
+    #page {
+    background-image: url("{% static 'img/login-collage.png' %}");
+    background-size: 100%;
+    background-repeat: repeat;
+    height: 100%
+  }
+  .admin-title {
+      font-family: oskar-inline;
+      font-size: 36px
+  }
+  .admin-content-container {
+      padding-top: 3%
+  }
+  .back-subtitle {
+      font-size: 18px
+  }
+  #recent-actions-module div {
+      margin-bottom: 10px
+  }
+  @media only screen and (min-width: 601px) {
+    .admin-title {
+      font-family: oskar-inline;
+      font-size: 48px
+  }
+  }
+</style>
+{% endblock%}

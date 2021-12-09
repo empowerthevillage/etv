@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}ETV | Login{% endblock %}
+{% block canonical %}https://www.empowerthevillage.org/login/{% endblock %}
+{% block seo_description %}Login to manage your account and participate in ETV's fun Black Friday Challenges!{% endblock %}
+
+{% block content %}
+<div id="page">
+  <div class="row center-align" style="margin-top:0px">
+    <div class="col s12 m8 l6 login-card center-align" style="background-color:#fdfdfde5;padding-top:3%; padding-bottom:3%">
+        <h6 id="login-title">Login</h6>
+        <p id="new-to-village">New to The Village? <a href="{% url 'register' %}" >Register for a free account now!</p></a>
+        
+      <form class="form center col s11 m8 offset-m2" method='POST'>
+        
+        {% csrf_token %}
+         {{ form }}
+        <button type="submit" class='btn login-btn' style="margin-top:24; padding:22px; line-height:0px; margin-bottom:15px">Login</button>
+        <div class="center">
+          <a class="btn google-btn" href="{% url 'social:begin' 'google-oauth2' %}?next={{ home_url }}" style="margin-bottom:15px;" id="google-btn">
+            <img src="{% static 'img/google-icon.png' %}" height=18px style="margin-bottom:-6px">&nbsp Continue with Google
+          </a>
+          <a href='{% url "password_reset" %}' class='text-center' style="color:grey;"><p style="margin-bottom:80px; margin-top:35px">Forgot Password?</p></a>
+        </div>
+      </form>
+      
+    </div>
+  </div>
+</div>
+
+<style>
+  #page {
+    background-image: url("https://empowerthevillage.s3.amazonaws.com/static/img/login-collage.png");
+    background-size: 100%;
+    background-repeat: repeat;
+  }
+  #id_email {
+    padding-left:15px;
+    letter-spacing: 1.5px;
+    width:100%
+  }
+  #id_password {
+    padding-left: 15px;
+    font-weight: 200;
+  }
+</style>
+{% endblock %}
+

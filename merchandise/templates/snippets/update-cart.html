@@ -1,0 +1,41 @@
+{% load static %}
+<form class='form-product-ajax' method='POST' action='{% url "cart:update" %}' data-endpoint='{% url "cart:update" %}' class="form"> {% csrf_token %}
+    <input type='hidden' name='product_id' value='{{ product.id }}' />
+      <span class='submit-span'>
+    {% if product in cart.products.all %}
+      <button type='submit' class='btn-1e'>Remove</button>
+    {% else %}
+      <button type='submit' class='btn-1c'>Add to Cart</button>
+    {% endif %}
+    </span>
+</form>
+productForm.submit(function(event){
+  event.preventDefault();
+  var thisForm = $(this);
+  var actionEndpoint = thisForm.attr("data-endpoint");
+  var httpMethod  = thisForm.attr("method");
+  var formData = {
+      
+  }
+
+  $.ajax({
+      url: actionEndpoint,
+      method: httpMethod,
+      data: formData,
+      success: function(data){
+          var submitSpan = thisForm.find(".submit-span")
+          if (data.added){
+              submitSpan.html("<button type='submit' class='btn'>In Cart! Add More</button>")
+          } else {
+              submitSpan.html("<button type='submit' class='btn'>Add to Cart</button>")
+          }
+          var currentPath = window.location.href
+          if (currentPath.indexOf('cart') != -1) {
+              refreshCart()
+          }
+      },
+      error: function(errorData){
+          $.alert(errorData)
+      }
+  })
+})

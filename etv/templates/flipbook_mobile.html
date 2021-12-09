@@ -1,0 +1,2005 @@
+{% load static %}
+{% regroup obj by get_category_display as category_list %}
+{% regroup obj|dictsort:'city' by city as city_list %}
+{% regroup obj by county as county_list %}
+{% regroup obj by subcategory as subcategory_list %}
+{% url 'bfchallenge:nomination' as nomination_url %}
+
+<div class="" id="vbp-flipbook">
+    <div class="row offset-s1" style="padding: 10%; padding-top:5%;padding-bottom:0">
+        <form id="filter-form">
+            <input type="hidden" id="filter-form-state">
+            <div class="row">
+                <div class="col s5 input-field">
+                    {{ filter.form.category }}
+                    <label>Category</label>
+                </div>
+                <div class="col s5 input-field autocomplete" id="filter-city">
+                    {{ filter.form.city}}
+                    <label>City</label>
+                </div>
+                <button class="col s2 btn" id="filter-submit" style="margin-top: 25px">FILTER</button>
+            </div>
+    </form>
+    <script>
+    $(document).ready(function(){
+        $('.autocomplete input').autocomplete({
+          data: {
+            {% for city in city_list %}
+            "{{ city.grouper }}": null,
+            {% endfor %}
+          },
+        });
+      });
+    </script>
+    </div>
+    <script>
+        $('#filter-submit').click(function(event){
+            event.preventDefault()
+            data = $('#filter-form').serialize()
+            state = $('#filter-form-state').val()
+            if($('#filter-form-state').val() == 'US-CT'){
+                url = '/village-black-pages/ct/filter'
+            } else if($('#filter-form-state').val() == 'US-NY'){
+                url = '/village-black-pages/ny/filter'
+            } else if($('#filter-form-state').val() == 'US-NJ'){
+                url = '/village-black-pages/nj/filter'
+            } else if($('#filter-form-state').val() == 'US-MA'){
+                url = '/village-black-pages/ma/filter'
+            } else if($('#filter-form-state').val() == 'US-VA'){
+                url = '/village-black-pages/va/filter'
+            } else if($('#filter-form-state').val() == 'US-PA'){
+                url = '/village-black-pages/pa/filter'
+            } else if($('#filter-form-state').val() == 'US-OH'){
+                url = '/village-black-pages/oh/filter'
+            } else if($('#filter-form-state').val() == 'US-MD'){
+                url = '/village-black-pages/md/filter'
+            } else if($('#filter-form-state').val() == 'US-DC'){
+                url = '/village-black-pages/dc/filter'
+            } else if($('#filter-form-state').val() == 'US-DE'){
+                url = '/village-black-pages/de/filter'
+            }
+            console.log(url)
+            $.ajax({
+                state: state,
+                data: data,
+                url: url,
+                method: 'GET',
+                success: function(data) {
+                    $('#flipbook-content-wrapper').html(data)
+                    $('#cover-page').attr('value', state);
+                }
+            })
+            $([document.documentElement, document.body]).animate({
+            scrollTop: $("#book").offset().top
+            }, 500);
+        })
+    </script>
+    <div class="row valign-wrapper">
+        <div class="col s1" style="margin-left: 2%">
+        <i class="material-icons flipbook-arrows" id="prev">arrow_back_ios</i>
+        </div>
+        <div class="col s10 flipbook-wrapper valign-wrapper" id="flipbook-content-wrapper">
+            <div class="aspect" id="aspect">
+                <div class="aspect-inner" id="aspect-inner">
+                    <div id="flipbook" class="flipbook">
+                        <div class="hard" id="cover-page"></div>
+                        <div class="hard">
+                            <div class="col 11" style="margin-top:15%;width:100%">
+                                <div class="center-align intro-page1">
+                                    <img src="{% static 'img/logo.jpeg' %}" height=17% style="margin-top:10%">
+                                    <div style="margin-top: 10%">
+                                        <p>Copyright © {% now "Y" %} Empower The Village, Inc.</p>
+                                        <p>All rights reserved.</p>
+                                        <p>Empower The Village, Inc.</p>
+                                        <p>178 E. Hanover Avenue, Suite 103-312</p>
+                                        <p>Cedar Knolls, NJ 07927</p>
+                                    </div>
+                                    <div class="row" style="margin-top: 5%; margin-bottom:0">
+                                        <a href="https://www.empowerthevillage.org"><img src="{% static 'img/web icon.jpg' %}" height=10vw style="margin-bottom:-2px"> &nbsp;empowerthevillage.org</a>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <a href="mailto: info@empowerthevillage.org"><img src="{% static 'img/at icon.jpg' %}" height=10vw style="margin-bottom:-2px"> &nbsp;info@empowerthevillage.org</a>
+                                    </div>
+                                    <div class="row" style="margin-bottom:0">
+                                        <a href="https://www.facebook.com/empoweretv"><img src="{% static 'img/fb logo.jpg' %}" height=10vw style="margin-bottom:-2px"> &nbsp;@empoweretv</a>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <a href="https://twitter.com/empower_etv"><img src="{% static 'img/ig icon.jpg' %}" height=10vw style="margin-bottom:-2px"> <img src="{% static 'img/twitter icon.jpg' %}" height=10vw style="margin-bottom:-2px"> &nbsp;@empower_etv</a>
+                                    </div>
+                                    <div class="" style="margin-top:30%; margin-bottom:10%">
+                                        <p class="">Photos via <a href="www.unsplash.com" style="text-decoration: underline;">Unsplash</a></p>
+                                        <p class="">Graphic Design by Alexandra Stennett</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="" style="background: url({% static 'img/vbp welcome page.png' %});background-size: 105%"></div>
+                        <div class="" style="background-color: 181818;">
+                            <div class="col 11" style="padding:30px; color: white">
+                                <h6 style="font-family: 'Barlow Condensed'; font-size: 2vw; margin-bottom:10px">TABLE OF CONTENTS</h6>
+                                <div style="border-top:dotted white 0.1px; padding-bottom: 1vw"></div>
+                                <div style="column-count: 2; column-gap: 5%">
+                                    
+                                    {% for category in category_list %}
+                                    <p class="table-of-contents-item">
+                                    - {{ category.grouper }}</p>
+                                    
+                                    {% endfor %}
+                                    
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="beauty" style="background: url({% static 'img/beauty.png' %});background-size: 105%"></div>
+                        {% for response in paginator_beauty %}
+                            <div class="beauty-section beauty">
+                                <div class="data-table">
+                                    <table class="highlight">
+                                        <tbody>
+                                            {% for vbp in response %}
+                                            <tr>
+                                                <td style="max-width: 35%; font-weight:500">
+                                                    {% if vbp|length > 20%}
+                                                        {% if vbp.website %}
+                                                        <a href="{{ vbp.website }}" target="_blank" style="font-weight: 500;font-size: 0.35vw">{{ vbp }}</a>
+                                                        {% else %}
+                                                        <a style="font-size: 0.35vw; color:black">{{ vbp }}</a>
+                                                        {% endif %}
+                                                    {% else %}
+                                                        {% if vbp.website %}
+                                                        <a href="{{ vbp.website }}" target="_blank" style="font-weight: 500;">{{ vbp }}</a>
+                                                        {% else %}
+                                                        <a style="color:rgb(55, 55, 55); font-weight:400">{{ vbp }}</a>
+                                                        {% endif %}
+                                                    {% endif %}
+                                                </td>
+                                                <td>{{ vbp.city }}</td>
+                                                {% if vbp.phone is not None %}<td style="text-align:right;min-width: 6vw">{{ vbp.phone }}</td>
+                                                {% else %}<td style="text-align:right;min-width: 6vw"></td>
+                                                {% endif %}
+
+                                            </tr>
+                                            {% endfor %}
+                                        </tbody>
+                                    </table>
+                                    {% if response.object_list|length > 10 %}
+                                    {% else %}
+                                    <div class="center-align roomformore" style="margin-top: 30%; background:rgb(29, 29, 29); padding: 1vw 2vw">
+                                        <p style="color:white; font-size: 1vw">There's always room for more!</p>
+                                        <p style="color:white; font-size: 0.6vw; text-align: justify">If you know of a great business we should include, or if you own a business and would like to be listed, please fill out the <a href="{{ nomination_url }}">Business Nomination Form</a> on our website. VBP is ever-evolving and we update our directories quarterly!</p>
+                                    </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        {% endfor %}
+                        <div class="books" style="background: url({% static 'img/books.png' %});background-size: 105%"></div>
+                        {% for response in paginator_books %}
+                            <div class="books-section books">
+                                <div class="data-table">
+                                <table class="highlight">
+                                    <tbody>
+                                        {% for vbp in response %}
+                                        <tr class="vbp-listing-row">
+                                            <td style="max-width: 35%; font-weight:500">{% if vbp.website %}
+                                                <a href="{{ vbp.website }}" target="_blank" style="font-weight: 500;">{{ vbp }}</a>
+                                                {% else %}
+                                                        <a style="color:rgb(55, 55, 55); font-weight:400">{{ vbp }}</a>
+                                                        {% endif %}
+                                            </td>
+                                            <td>{{ vbp.city }}</td>
+                                            {% if vbp.phone is not None %}<td style="text-align:right;min-width: 6vw">{{ vbp.phone }}</td>
+                                            {% else %}<td style="text-align:right;min-width: 6vw;"></td>
+                                            {% endif %}
+                                            
+                                        </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                                {% if response.object_list|length > 10 %}
+                            
+                                    {% else %}
+                                    <div class="center-align roomformore" style="margin-top: 30%; background:rgb(29, 29, 29); padding: 1vw 2vw">
+                                        <p style="color:white; font-size: 1vw">There's always room for more!</p>
+                                        <p style="color:white; font-size: 0.6vw; text-align: justify">If you know of a great business we should include, or if you own a business and would like to be listed, please fill out the <a href="{{ nomination_url }}">Business Nomination Form</a> on our website. VBP is ever-evolving and we update our directories quarterly!</p>
+                                    </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        {% endfor %}
+                        <div class="cars" style="background: url({% static 'img/cars.png' %});background-size: 105%"></div>
+                        {% for response in paginator_cars %}
+                            <div class="cars-section cars">
+                                <div class="data-table">
+                                <table class="highlight">
+                                    <tbody>
+                                        {% for vbp in response %}
+                                        <tr>
+                                            <td style="max-width: 35%; font-weight:500">{% if vbp.website %}
+                                                <a href="{{ vbp.website }}" target="_blank" style="font-weight: 500;">{{ vbp }}</a>
+                                                {% else %}
+                                                        <a style="color:rgb(55, 55, 55); font-weight:400">{{ vbp }}</a>
+                                                        {% endif %}
+                                            </td>
+                                            <td>{{ vbp.city }}</td>
+                                            {% if vbp.phone is not None %}<td style="text-align:right;min-width: 6vw">{{ vbp.phone }}</td>
+                                            {% else %}<td style="text-align:right;min-width: 6vw"></td>
+                                            {% endif %}
+                                            
+                                        </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                                {% if response.object_list|length > 10 %}
+                                    {% else %}
+                                    <div class="center-align roomformore" style="margin-top: 30%; background:rgb(29, 29, 29); padding: 1vw 2vw">
+                                        <p style="color:white; font-size: 1vw">There's always room for more!</p>
+                                        <p style="color:white; font-size: 0.6vw; text-align: justify">If you know of a great business we should include, or if you own a business and would like to be listed, please fill out the <a href="{{ nomination_url }}">Business Nomination Form</a> on our website. VBP is ever-evolving and we update our directories quarterly!</p>
+                                    </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        {% endfor %}
+                        <div class="child" style="background: url({% static 'img/child.png' %});background-size: 105%"></div>
+                        {% for response in paginator_child %}
+                            <div class="child-section child">
+                                <div class="data-table">
+                                <table class="highlight">
+                                    <tbody>
+                                        {% for vbp in response %}
+                                        <tr>
+                                            <td style="max-width: 35%; font-weight:500">{% if vbp.website %}
+                                                <a href="{{ vbp.website }}" target="_blank" style="font-weight: 500;">{{ vbp }}</a>
+                                                {% else %}
+                                                        <a style="color:rgb(55, 55, 55); font-weight:400">{{ vbp }}</a>
+                                                        {% endif %}
+                                            </td>
+                                            <td>{{ vbp.city }}</td>
+                                            {% if vbp.phone is not None %}<td style="text-align:right;min-width: 6vw">{{ vbp.phone }}</td>
+                                            {% else %}<td style="text-align:right;min-width: 6vw"></td>
+                                            {% endif %}
+                                            
+                                        </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                                {% if response.object_list|length > 10 %}
+                                    {% else %}
+                                    <div class="center-align roomformore" style="margin-top: 30%; background:rgb(29, 29, 29); padding: 1vw 2vw">
+                                        <p style="color:white; font-size: 1vw">There's always room for more!</p>
+                                        <p style="color:white; font-size: 0.6vw; text-align: justify">If you know of a great business we should include, or if you own a business and would like to be listed, please fill out the <a href="{{ nomination_url }}">Business Nomination Form</a> on our website. VBP is ever-evolving and we update our directories quarterly!</p>
+                                    </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        {% endfor %}
+                        <div class="cleaning" style="background: url({% static 'img/cleaning.png' %});background-size: 105%"></div>
+                        {% for response in paginator_cleaning %}
+                            <div class="cleaning-section cleaning">
+                                <div class="data-table">
+                                <table class="highlight">
+                                    <tbody>
+                                        {% for vbp in response %}
+                                        <tr>
+                                            <td style="max-width: 35%; font-weight:500">{% if vbp.website %}
+                                                <a href="{{ vbp.website }}" target="_blank" style="font-weight: 500;">{{ vbp }}</a>
+                                                {% else %}
+                                                        <a style="color:rgb(55, 55, 55); font-weight:400">{{ vbp }}</a>
+                                                        {% endif %}
+                                            </td>
+                                            <td>{{ vbp.city }}</td>
+                                            {% if vbp.phone is not None %}<td style="text-align:right;min-width: 6vw">{{ vbp.phone }}</td>
+                                            {% else %}<td style="text-align:right;min-width: 6vw"></td>
+                                            {% endif %}
+                                            
+                                        </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                                {% if response.object_list|length > 10 %}
+                                    {% else %}
+                                    <div class="center-align roomformore" style="margin-top: 30%; background:rgb(29, 29, 29); padding: 1vw 2vw">
+                                        <p style="color:white; font-size: 1vw">There's always room for more!</p>
+                                        <p style="color:white; font-size: 0.6vw; text-align: justify">If you know of a great business we should include, or if you own a business and would like to be listed, please fill out the <a href="{{ nomination_url }}">Business Nomination Form</a> on our website. VBP is ever-evolving and we update our directories quarterly!</p>
+                                    </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        {% endfor %}
+                        <div class="clothing" style="background: url({% static 'img/clothing.png' %});background-size: 105%"></div>
+                        {% for response in paginator_clothing %}
+                            <div class="clothing-section clothing">
+                                <div class="data-table">
+                                <table class="highlight">
+                                    <tbody>
+                                        {% for vbp in response %}
+                                        <tr>
+                                            <td style="max-width: 35%; font-weight:500">{% if vbp.website %}
+                                                <a href="{{ vbp.website }}" target="_blank" style="font-weight: 500;">{{ vbp }}</a>
+                                                {% else %}
+                                                        <a style="color:rgb(55, 55, 55); font-weight:400">{{ vbp }}</a>
+                                                        {% endif %}
+                                            </td>
+                                            <td>{{ vbp.city }}</td>
+                                            {% if vbp.phone is not None %}<td style="text-align:right;min-width: 6vw">{{ vbp.phone }}</td>
+                                            {% else %}<td style="text-align:right;min-width: 6vw"></td>
+                                            {% endif %}
+                                            
+                                        </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                                {% if response.object_list|length > 10 %}
+                                    {% else %}
+                                    <div class="center-align roomformore" style="margin-top: 30%; background:rgb(29, 29, 29); padding: 1vw 2vw">
+                                        <p style="color:white; font-size: 1vw">There's always room for more!</p>
+                                        <p style="color:white; font-size: 0.6vw; text-align: justify">If you know of a great business we should include, or if you own a business and would like to be listed, please fill out the <a href="{{ nomination_url }}">Business Nomination Form</a> on our website. VBP is ever-evolving and we update our directories quarterly!</p>
+                                    </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        {% endfor %}
+                        <div class="construction" style="background: url({% static 'img/construction.png' %});background-size: 105%"></div>
+                        {% for response in paginator_construction %}
+                            <div class="construction-section construction">
+                                <div class="data-table">
+                                <table class="highlight">
+                                    <tbody>
+                                        {% for vbp in response %}
+                                        <tr>
+                                            <td style="max-width: 35%; font-weight:500">{% if vbp.website %}
+                                                <a href="{{ vbp.website }}" target="_blank" style="font-weight: 500;">{{ vbp }}</a>
+                                                {% else %}
+                                                        <a style="color:rgb(55, 55, 55); font-weight:400">{{ vbp }}</a>
+                                                        {% endif %}
+                                            </td>
+                                            <td>{{ vbp.city }}</td>
+                                            {% if vbp.phone is not None %}<td style="text-align:right;min-width: 6vw">{{ vbp.phone }}</td>
+                                            {% else %}<td style="text-align:right;min-width: 6vw"></td>
+                                            {% endif %}
+                                            
+                                        </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                                {% if response.object_list|length > 10 %}
+                                    {% else %}
+                                    <div class="center-align roomformore" style="margin-top: 30%; background:rgb(29, 29, 29); padding: 1vw 2vw">
+                                        <p style="color:white; font-size: 1vw">There's always room for more!</p>
+                                        <p style="color:white; font-size: 0.6vw; text-align: justify">If you know of a great business we should include, or if you own a business and would like to be listed, please fill out the <a href="{{ nomination_url }}">Business Nomination Form</a> on our website. VBP is ever-evolving and we update our directories quarterly!</p>
+                                    </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        {% endfor %}
+                        <div class="education" style="background: url({% static 'img/education.png' %});background-size: 105%"></div>
+                        {% for response in paginator_education %}
+                            <div class="education-section education">
+                                <div class="data-table">
+                                <table class="highlight">
+                                    <tbody>
+                                        {% for vbp in response %}
+                                        <tr>
+                                            <td style="max-width: 35%; font-weight:500">{% if vbp.website %}
+                                                <a href="{{ vbp.website }}" target="_blank" style="font-weight: 500;">{{ vbp }}</a>
+                                                {% else %}
+                                                        <a style="color:rgb(55, 55, 55); font-weight:400">{{ vbp }}</a>
+                                                        {% endif %}
+                                            </td>
+                                            <td>{{ vbp.city }}</td>
+                                            {% if vbp.phone is not None %}<td style="text-align:right;min-width: 6vw">{{ vbp.phone }}</td>
+                                            {% else %}<td style="text-align:right;min-width: 6vw"></td>
+                                            {% endif %}
+                                            
+                                        </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                                {% if response.object_list|length > 10 %}
+                                    {% else %}
+                                    <div class="center-align roomformore" style="margin-top: 30%; background:rgb(29, 29, 29); padding: 1vw 2vw">
+                                        <p style="color:white; font-size: 1vw">There's always room for more!</p>
+                                        <p style="color:white; font-size: 0.6vw; text-align: justify">If you know of a great business we should include, or if you own a business and would like to be listed, please fill out the <a href="{{ nomination_url }}">Business Nomination Form</a> on our website. VBP is ever-evolving and we update our directories quarterly!</p>
+                                    </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        {% endfor %}
+                        <div class="eldercare" style="background: url({% static 'img/eldercare.png' %});background-size: 105%"></div>
+                        {% for response in paginator_eldercare %}
+                            <div class="eldercare-section eldercare">
+                                <div class="data-table">
+                                <table class="highlight">
+                                    <tbody>
+                                        {% for vbp in response %}
+                                        <tr>
+                                            <td style="max-width: 35%; font-weight:500">{% if vbp.website %}
+                                                <a href="{{ vbp.website }}" target="_blank" style="font-weight: 500;">{{ vbp }}</a>
+                                                {% else %}
+                                                        <a style="color:rgb(55, 55, 55); font-weight:400">{{ vbp }}</a>
+                                                        {% endif %}
+                                            </td>
+                                            <td>{{ vbp.city }}</td>
+                                            {% if vbp.phone is not None %}<td style="text-align:right;min-width: 6vw">{{ vbp.phone }}</td>
+                                            {% else %}<td style="text-align:right;min-width: 6vw"></td>
+                                            {% endif %}
+                                            
+                                        </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                                {% if response.object_list|length > 10 %}
+                                    {% else %}
+                                    <div class="center-align roomformore" style="margin-top: 30%; background:rgb(29, 29, 29); padding: 1vw 2vw">
+                                        <p style="color:white; font-size: 1vw">There's always room for more!</p>
+                                        <p style="color:white; font-size: 0.6vw; text-align: justify">If you know of a great business we should include, or if you own a business and would like to be listed, please fill out the <a href="{{ nomination_url }}">Business Nomination Form</a> on our website. VBP is ever-evolving and we update our directories quarterly!</p>
+                                    </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        {% endfor %}
+                        <div class="electronics" style="background: url({% static 'img/electronics.png' %});background-size: 105%"></div>
+                        {% for response in paginator_electronics %}
+                            <div class="electronics-section electronics">
+                                <div class="data-table">
+                                <table class="highlight">
+                                    <tbody>
+                                        {% for vbp in response %}
+                                        <tr>
+                                            <td style="max-width: 35%; font-weight:500">{% if vbp.website %}
+                                                <a href="{{ vbp.website }}" target="_blank" style="font-weight: 500;">{{ vbp }}</a>
+                                                {% else %}
+                                                        <a style="color:rgb(55, 55, 55); font-weight:400">{{ vbp }}</a>
+                                                        {% endif %}
+                                            </td>
+                                            <td>{{ vbp.city }}</td>
+                                            {% if vbp.phone is not None %}<td style="text-align:right;min-width: 6vw">{{ vbp.phone }}</td>
+                                            {% else %}<td style="text-align:right;min-width: 6vw"></td>
+                                            {% endif %}
+                                            
+                                        </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                                {% if response.object_list|length > 10 %}
+                                    {% else %}
+                                    <div class="center-align roomformore" style="margin-top: 30%; background:rgb(29, 29, 29); padding: 1vw 2vw">
+                                        <p style="color:white; font-size: 1vw">There's always room for more!</p>
+                                        <p style="color:white; font-size: 0.6vw; text-align: justify">If you know of a great business we should include, or if you own a business and would like to be listed, please fill out the <a href="{{ nomination_url }}">Business Nomination Form</a> on our website. VBP is ever-evolving and we update our directories quarterly!</p>
+                                    </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        {% endfor %}
+                        <div class="entertainment" style="background: url({% static 'img/entertainment.png' %});background-size: 105%"></div>
+                        {% for response in paginator_entertainment %}
+                            <div class="electronics-section entertainment">
+                                <div class="data-table">
+                                <table class="highlight">
+                                    <tbody>
+                                        {% for vbp in response %}
+                                        <tr>
+                                            <td style="max-width: 35%; font-weight:500">{% if vbp.website %}
+                                                <a href="{{ vbp.website }}" target="_blank" style="font-weight: 500;">{{ vbp }}</a>
+                                                {% else %}
+                                                        <a style="color:rgb(55, 55, 55); font-weight:400">{{ vbp }}</a>
+                                                        {% endif %}
+                                            </td>
+                                            <td>{{ vbp.city }}</td>
+                                            {% if vbp.phone is not None %}<td style="text-align:right;min-width: 6vw">{{ vbp.phone }}</td>
+                                            {% else %}<td style="text-align:right;min-width: 6vw"></td>
+                                            {% endif %}
+                                            
+                                        </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                                {% if response.object_list|length > 10 %}
+                                    {% else %}
+                                    <div class="center-align roomformore" style="margin-top: 30%; background:rgb(29, 29, 29); padding: 1vw 2vw">
+                                        <p style="color:white; font-size: 1vw">There's always room for more!</p>
+                                        <p style="color:white; font-size: 0.6vw; text-align: justify">If you know of a great business we should include, or if you own a business and would like to be listed, please fill out the <a href="{{ nomination_url }}">Business Nomination Form</a> on our website. VBP is ever-evolving and we update our directories quarterly!</p>
+                                    </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        {% endfor %}
+                        <div class="farming" style="background: url({% static 'img/farming.png' %});background-size: 105%"></div>
+                        {% for response in paginator_farming %}
+                            <div class="farming-section farming">
+                                <div class="data-table">
+                                <table class="highlight">
+                                    <tbody>
+                                        {% for vbp in response %}
+                                        <tr>
+                                            <td style="max-width: 35%; font-weight:500">{% if vbp.website %}
+                                                <a href="{{ vbp.website }}" target="_blank" style="font-weight: 500;">{{ vbp }}</a>
+                                                {% else %}
+                                                        <a style="color:rgb(55, 55, 55); font-weight:400">{{ vbp }}</a>
+                                                        {% endif %}
+                                            </td>
+                                            <td>{{ vbp.city }}</td>
+                                            {% if vbp.phone is not None %}<td style="text-align:right;min-width: 6vw">{{ vbp.phone }}</td>
+                                            {% else %}<td style="text-align:right;min-width: 6vw"></td>
+                                            {% endif %}
+                                            
+                                        </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                                {% if response.object_list|length > 10 %}
+                                    {% else %}
+                                    <div class="center-align roomformore" style="margin-top: 30%; background:rgb(29, 29, 29); padding: 1vw 2vw">
+                                        <p style="color:white; font-size: 1vw">There's always room for more!</p>
+                                        <p style="color:white; font-size: 0.6vw; text-align: justify">If you know of a great business we should include, or if you own a business and would like to be listed, please fill out the <a href="{{ nomination_url }}">Business Nomination Form</a> on our website. VBP is ever-evolving and we update our directories quarterly!</p>
+                                    </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        {% endfor %}
+                        <div class="florists" style="background: url({% static 'img/florists.png' %});background-size: 105%"></div>
+                        {% for response in paginator_florists %}
+                            <div class="florists-section florists">
+                                <div class="data-table">
+                                <table class="highlight">
+                                    <tbody>
+                                        {% for vbp in response %}
+                                        <tr>
+                                            <td style="max-width: 35%; font-weight:500">{% if vbp.website %}
+                                                <a href="{{ vbp.website }}" target="_blank" style="font-weight: 500;">{{ vbp }}</a>
+                                                {% else %}
+                                                        <a style="color:rgb(55, 55, 55); font-weight:400">{{ vbp }}</a>
+                                                        {% endif %}
+                                            </td>
+                                            <td>{{ vbp.city }}</td>
+                                            {% if vbp.phone is not None %}<td style="text-align:right;min-width: 6vw">{{ vbp.phone }}</td>
+                                            {% else %}<td style="text-align:right;min-width: 6vw"></td>
+                                            {% endif %}
+                                            
+                                        </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                                {% if response.object_list|length > 10 %}
+                                    {% else %}
+                                    <div class="center-align roomformore" style="margin-top: 30%; background:rgb(29, 29, 29); padding: 1vw 2vw">
+                                        <p style="color:white; font-size: 1vw">There's always room for more!</p>
+                                        <p style="color:white; font-size: 0.6vw; text-align: justify">If you know of a great business we should include, or if you own a business and would like to be listed, please fill out the <a href="{{ nomination_url }}">Business Nomination Form</a> on our website. VBP is ever-evolving and we update our directories quarterly!</p>
+                                    </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        {% endfor %}
+                        <div class="grocery" style="background: url({% static 'img/grocery.png' %});background-size: 105%"></div>
+                        {% for response in paginator_grocery %}
+                            <div class="grocery-section grocery">
+                                <div class="data-table">
+                                <table class="highlight">
+                                    <tbody>
+                                        {% for vbp in response %}
+                                        <tr>
+                                            <td style="max-width: 35%; font-weight:500">{% if vbp.website %}
+                                                <a href="{{ vbp.website }}" target="_blank" style="font-weight: 500;">{{ vbp }}</a>
+                                                {% else %}
+                                                        <a style="color:rgb(55, 55, 55); font-weight:400">{{ vbp }}</a>
+                                                        {% endif %}
+                                            </td>
+                                            <td>{{ vbp.city }}</td>
+                                            {% if vbp.phone is not None %}<td style="text-align:right;min-width: 6vw">{{ vbp.phone }}</td>
+                                            {% else %}<td style="text-align:right;min-width: 6vw"></td>
+                                            {% endif %}
+                                            
+                                        </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                                {% if response.object_list|length > 10 %}
+                                    {% else %}
+                                    <div class="center-align roomformore" style="margin-top: 30%; background:rgb(29, 29, 29); padding: 1vw 2vw">
+                                        <p style="color:white; font-size: 1vw">There's always room for more!</p>
+                                        <p style="color:white; font-size: 0.6vw; text-align: justify">If you know of a great business we should include, or if you own a business and would like to be listed, please fill out the <a href="{{ nomination_url }}">Business Nomination Form</a> on our website. VBP is ever-evolving and we update our directories quarterly!</p>
+                                    </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        {% endfor %}
+                        <div class="health" style="background: url({% static 'img/health.png' %});background-size: 105%"></div>
+                        {% for response in paginator_health %}
+                            <div class="health-section health">
+                                <div class="data-table">
+                                <table class="highlight">
+                                    <tbody>
+                                        {% for vbp in response %}
+                                        <tr>
+                                            <td style="max-width: 35%; font-weight:500">{% if vbp.website %}
+                                                <a href="{{ vbp.website }}" target="_blank" style="font-weight: 500;">{{ vbp }}</a>
+                                                {% else %}
+                                                        <a style="color:rgb(55, 55, 55); font-weight:400">{{ vbp }}</a>
+                                                        {% endif %}
+                                            </td>
+                                            <td>{{ vbp.city }}</td>
+                                            {% if vbp.phone is not None %}<td style="text-align:right;min-width: 6vw">{{ vbp.phone }}</td>
+                                            {% else %}<td style="text-align:right;min-width: 6vw"></td>
+                                            {% endif %}
+                                            
+                                        </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                                {% if response.object_list|length > 10 %}
+                                    {% else %}
+                                    <div class="center-align roomformore" style="margin-top: 30%; background:rgb(29, 29, 29); padding: 1vw 2vw">
+                                        <p style="color:white; font-size: 1vw">There's always room for more!</p>
+                                        <p style="color:white; font-size: 0.6vw; text-align: justify">If you know of a great business we should include, or if you own a business and would like to be listed, please fill out the <a href="{{ nomination_url }}">Business Nomination Form</a> on our website. VBP is ever-evolving and we update our directories quarterly!</p>
+                                    </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        {% endfor %}
+                        <div class="home" style="background: url({% static 'img/home.png' %});background-size: 105%"></div>
+                        {% for response in paginator_home %}
+                            <div class="home-section home">
+                                <div class="data-table">
+                                <table class="highlight">
+                                    <tbody>
+                                        {% for vbp in response %}
+                                        <tr>
+                                            <td style="max-width: 35%; font-weight:500">{% if vbp.website %}
+                                                <a href="{{ vbp.website }}" target="_blank" style="font-weight: 500;">{{ vbp }}</a>
+                                                {% else %}
+                                                        <a style="color:rgb(55, 55, 55); font-weight:400">{{ vbp }}</a>
+                                                        {% endif %}
+                                            </td>
+                                            <td>{{ vbp.city }}</td>
+                                            {% if vbp.phone is not None %}<td style="text-align:right;min-width: 6vw">{{ vbp.phone }}</td>
+                                            {% else %}<td style="text-align:right;min-width: 6vw"></td>
+                                            {% endif %}
+                                            
+                                        </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                                {% if response.object_list|length > 10 %}
+                                    {% else %}
+                                    <div class="center-align roomformore" style="margin-top: 30%; background:rgb(29, 29, 29); padding: 1vw 2vw">
+                                        <p style="color:white; font-size: 1vw">There's always room for more!</p>
+                                        <p style="color:white; font-size: 0.6vw; text-align: justify">If you know of a great business we should include, or if you own a business and would like to be listed, please fill out the <a href="{{ nomination_url }}">Business Nomination Form</a> on our website. VBP is ever-evolving and we update our directories quarterly!</p>
+                                    </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        {% endfor %}
+                        <div class="hotels" style="background: url({% static 'img/hotels.png' %});background-size: 105%"></div>
+                        {% for response in paginator_hotels %}
+                            <div class="hotels-section hotels">
+                                <div class="data-table">
+                                <table class="highlight">
+                                    <tbody>
+                                        {% for vbp in response %}
+                                        <tr>
+                                            <td style="max-width: 35%; font-weight:500">{% if vbp.website %}
+                                                <a href="{{ vbp.website }}" target="_blank" style="font-weight: 500;">{{ vbp }}</a>
+                                                {% else %}
+                                                        <a style="color:rgb(55, 55, 55); font-weight:400">{{ vbp }}</a>
+                                                        {% endif %}
+                                            </td>
+                                            <td>{{ vbp.city }}</td>
+                                            {% if vbp.phone is not None %}<td style="text-align:right;min-width: 6vw">{{ vbp.phone }}</td>
+                                            {% else %}<td style="text-align:right;min-width: 6vw"></td>
+                                            {% endif %}
+                                            
+                                        </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                                {% if response.object_list|length > 10 %}
+                                    {% else %}
+                                    <div class="center-align roomformore" style="margin-top: 30%; background:rgb(29, 29, 29); padding: 1vw 2vw">
+                                        <p style="color:white; font-size: 1vw">There's always room for more!</p>
+                                        <p style="color:white; font-size: 0.6vw; text-align: justify">If you know of a great business we should include, or if you own a business and would like to be listed, please fill out the <a href="{{ nomination_url }}">Business Nomination Form</a> on our website. VBP is ever-evolving and we update our directories quarterly!</p>
+                                    </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        {% endfor %}
+                        <div class="jewelry" style="background: url({% static 'img/jewelry.png' %});background-size: 105%"></div>
+                        {% for response in paginator_jewelry %}
+                            <div class="jewelry-section jewelry">
+                                <div class="data-table">
+                                <table class="highlight">
+                                    <tbody>
+                                        {% for vbp in response %}
+                                        <tr>
+                                            <td style="max-width: 35%; font-weight:500">{% if vbp.website %}
+                                                <a href="{{ vbp.website }}" target="_blank" style="font-weight: 500;">{{ vbp }}</a>
+                                                {% else %}
+                                                        <a style="color:rgb(55, 55, 55); font-weight:400">{{ vbp }}</a>
+                                                        {% endif %}
+                                            </td>
+                                            <td>{{ vbp.city }}</td>
+                                            {% if vbp.phone is not None %}<td style="text-align:right;min-width: 6vw">{{ vbp.phone }}</td>
+                                            {% else %}<td style="text-align:right;min-width: 6vw"></td>
+                                            {% endif %}
+                                            
+                                        </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                                {% if response.object_list|length > 10 %}
+                                    {% else %}
+                                    <div class="center-align roomformore" style="margin-top: 30%; background:rgb(29, 29, 29); padding: 1vw 2vw">
+                                        <p style="color:white; font-size: 1vw">There's always room for more!</p>
+                                        <p style="color:white; font-size: 0.6vw; text-align: justify">If you know of a great business we should include, or if you own a business and would like to be listed, please fill out the <a href="{{ nomination_url }}">Business Nomination Form</a> on our website. VBP is ever-evolving and we update our directories quarterly!</p>
+                                    </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        {% endfor %}
+                        <div class="legal" style="background: url({% static 'img/legal.png' %});background-size: 105%"></div>
+                        {% for response in paginator_legal %}
+                            <div class="legal-section legal">
+                                <div class="data-table">
+                                <table class="highlight">
+                                    <tbody>
+                                        {% for vbp in response %}
+                                        <tr>
+                                            <td style="max-width: 35%; font-weight:500">{% if vbp.website %}
+                                                <a href="{{ vbp.website }}" target="_blank" style="font-weight: 500;">{{ vbp }}</a>
+                                                {% else %}
+                                                        <a style="color:rgb(55, 55, 55); font-weight:400">{{ vbp }}</a>
+                                                        {% endif %}
+                                            </td>
+                                            <td>{{ vbp.city }}</td>
+                                            {% if vbp.phone is not None %}<td style="text-align:right;min-width: 6vw">{{ vbp.phone }}</td>
+                                            {% else %}<td style="text-align:right;min-width: 6vw"></td>
+                                            {% endif %}
+                                            
+                                        </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                                {% if response.object_list|length > 10 %}
+                                    {% else %}
+                                    <div class="center-align roomformore" style="margin-top: 30%; background:rgb(29, 29, 29); padding: 1vw 2vw">
+                                        <p style="color:white; font-size: 1vw">There's always room for more!</p>
+                                        <p style="color:white; font-size: 0.6vw; text-align: justify">If you know of a great business we should include, or if you own a business and would like to be listed, please fill out the <a href="{{ nomination_url }}">Business Nomination Form</a> on our website. VBP is ever-evolving and we update our directories quarterly!</p>
+                                    </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        {% endfor %}
+                        <div class="lifestyle" style="background: url({% static 'img/lifestyle.png' %});background-size: 105%"></div>
+                        {% for response in paginator_lifestyle %}
+                            <div class="lifestyle-section lifestyle">
+                                <div class="data-table">
+                                <table class="highlight">
+                                    <tbody>
+                                        {% for vbp in response %}
+                                        <tr>
+                                            <td style="max-width: 35%; font-weight:500">{% if vbp.website %}
+                                                <a href="{{ vbp.website }}" target="_blank" style="font-weight: 500;">{{ vbp }}</a>
+                                                {% else %}
+                                                        <a style="color:rgb(55, 55, 55); font-weight:400">{{ vbp }}</a>
+                                                        {% endif %}
+                                            </td>
+                                            <td>{{ vbp.city }}</td>
+                                            {% if vbp.phone is not None %}<td style="text-align:right;min-width: 6vw">{{ vbp.phone }}</td>
+                                            {% else %}<td style="text-align:right;min-width: 6vw"></td>
+                                            {% endif %}
+                                            
+                                        </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                                {% if response.object_list|length > 10 %}
+                                    {% else %}
+                                    <div class="center-align roomformore" style="margin-top: 30%; background:rgb(29, 29, 29); padding: 1vw 2vw">
+                                        <p style="color:white; font-size: 1vw">There's always room for more!</p>
+                                        <p style="color:white; font-size: 0.6vw; text-align: justify">If you know of a great business we should include, or if you own a business and would like to be listed, please fill out the <a href="{{ nomination_url }}">Business Nomination Form</a> on our website. VBP is ever-evolving and we update our directories quarterly!</p>
+                                    </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        {% endfor %}
+                        <div class="marketing" style="background: url({% static 'img/marketing.png' %});background-size: 105%"></div>
+                        {% for response in paginator_marketing %}
+                            <div class="marketing-section marketing">
+                                <div class="data-table">
+                                <table class="highlight">
+                                    <tbody>
+                                        {% for vbp in response %}
+                                        <tr>
+                                            <td style="max-width: 35%; font-weight:500">{% if vbp.website %}
+                                                <a href="{{ vbp.website }}" target="_blank" style="font-weight: 500;">{{ vbp }}</a>
+                                                {% else %}
+                                                        <a style="color:rgb(55, 55, 55); font-weight:400">{{ vbp }}</a>
+                                                        {% endif %}
+                                            </td>
+                                            <td>{{ vbp.city }}</td>
+                                            {% if vbp.phone is not None %}<td style="text-align:right;min-width: 6vw">{{ vbp.phone }}</td>
+                                            {% else %}<td style="text-align:right;min-width: 6vw"></td>
+                                            {% endif %}
+                                            
+                                        </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                                {% if response.object_list|length > 10 %}
+                                    {% else %}
+                                    <div class="center-align roomformore" style="margin-top: 30%; background:rgb(29, 29, 29); padding: 1vw 2vw">
+                                        <p style="color:white; font-size: 1vw">There's always room for more!</p>
+                                        <p style="color:white; font-size: 0.6vw; text-align: justify">If you know of a great business we should include, or if you own a business and would like to be listed, please fill out the <a href="{{ nomination_url }}">Business Nomination Form</a> on our website. VBP is ever-evolving and we update our directories quarterly!</p>
+                                    </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        {% endfor %}
+                        <div class="medical" style="background: url({% static 'img/medical.png' %});background-size: 105%"></div>
+                        {% for response in paginator_medical %}
+                            <div class="medical-section medical">
+                                <div class="data-table">
+                                <table class="highlight">
+                                    <tbody>
+                                        {% for vbp in response %}
+                                        <tr>
+                                            <td style="max-width: 35%; font-weight:500">{% if vbp.website %}
+                                                <a href="{{ vbp.website }}" target="_blank" style="font-weight: 500;">{{ vbp }}</a>
+                                                {% else %}
+                                                        <a style="color:rgb(55, 55, 55); font-weight:400">{{ vbp }}</a>
+                                                        {% endif %}
+                                            </td>
+                                            <td>{{ vbp.city }}</td>
+                                            {% if vbp.phone is not None %}<td style="text-align:right;min-width: 6vw">{{ vbp.phone }}</td>
+                                            {% else %}<td style="text-align:right;min-width: 6vw"></td>
+                                            {% endif %}
+                                            
+                                        </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                                {% if response.object_list|length > 10 %}
+                                    {% else %}
+                                    <div class="center-align roomformore" style="margin-top: 30%; background:rgb(29, 29, 29); padding: 1vw 2vw">
+                                        <p style="color:white; font-size: 1vw">There's always room for more!</p>
+                                        <p style="color:white; font-size: 0.6vw; text-align: justify">If you know of a great business we should include, or if you own a business and would like to be listed, please fill out the <a href="{{ nomination_url }}">Business Nomination Form</a> on our website. VBP is ever-evolving and we update our directories quarterly!</p>
+                                    </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        {% endfor %}
+                        <div class="other" style="background: url('https://empowerthevillage.s3.amazonaws.com/static/img/other.png');background-size: 105%"></div>
+                        {% for response in paginator_other %}
+                            <div class="other-section other">
+                                <div class="data-table">
+                                <table class="highlight">
+                                    <tbody>
+                                        {% for vbp in response %}
+                                        <tr>
+                                            <td style="max-width: 35%; font-weight:500">{% if vbp.website %}
+                                                <a href="{{ vbp.website }}" target="_blank" style="font-weight: 500;">{{ vbp }}</a>
+                                                {% else %}
+                                                        <a style="color:rgb(55, 55, 55); font-weight:400">{{ vbp }}</a>
+                                                        {% endif %}
+                                            </td>
+                                            <td>{{ vbp.city }}</td>
+                                            {% if vbp.phone is not None %}<td style="text-align:right;min-width: 6vw">{{ vbp.phone }}</td>
+                                            {% else %}<td style="text-align:right;min-width: 6vw"></td>
+                                            {% endif %}
+                                            
+                                        </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                                {% if response.object_list|length > 10 %}
+                                    {% else %}
+                                    <div class="center-align roomformore" style="margin-top: 30%; background:rgb(29, 29, 29); padding: 1vw 2vw">
+                                        <p style="color:white; font-size: 1vw">There's always room for more!</p>
+                                        <p style="color:white; font-size: 0.6vw; text-align: justify">If you know of a great business we should include, or if you own a business and would like to be listed, please fill out the <a href="{{ nomination_url }}">Business Nomination Form</a> on our website. VBP is ever-evolving and we update our directories quarterly!</p>
+                                    </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        {% endfor %}
+                        <div class="packaging" style="background: url({% static 'img/packaging.png' %});background-size: 105%"></div>
+                        {% for response in paginator_packaging %}
+                            <div class="packaging-section packaging">
+                                <div class="data-table">
+                                <table class="highlight">
+                                    <tbody>
+                                        {% for vbp in response %}
+                                        <tr>
+                                            <td style="max-width: 35%; font-weight:500">{% if vbp.website %}
+                                                <a href="{{ vbp.website }}" target="_blank" style="font-weight: 500;">{{ vbp }}</a>
+                                                {% else %}
+                                                        <a style="color:rgb(55, 55, 55); font-weight:400">{{ vbp }}</a>
+                                                        {% endif %}
+                                            </td>
+                                            <td>{{ vbp.city }}</td>
+                                            {% if vbp.phone is not None %}<td style="text-align:right;min-width: 6vw">{{ vbp.phone }}</td>
+                                            {% else %}<td style="text-align:right;min-width: 6vw"></td>
+                                            {% endif %}
+                                            
+                                        </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                                {% if response.object_list|length > 10 %}
+                                    {% else %}
+                                    <div class="center-align roomformore" style="margin-top: 30%; background:rgb(29, 29, 29); padding: 1vw 2vw">
+                                        <p style="color:white; font-size: 1vw">There's always room for more!</p>
+                                        <p style="color:white; font-size: 0.6vw; text-align: justify">If you know of a great business we should include, or if you own a business and would like to be listed, please fill out the <a href="{{ nomination_url }}">Business Nomination Form</a> on our website. VBP is ever-evolving and we update our directories quarterly!</p>
+                                    </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        {% endfor %}
+                        <div class="pets" style="background: url({% static 'img/pets.png' %});background-size: 105%"></div>
+                        {% for response in paginator_pets %}
+                            <div class="pets-section pets">
+                                <div class="data-table">
+                                <table class="highlight">
+                                    <tbody>
+                                        {% for vbp in response %}
+                                        <tr>
+                                            <td style="max-width: 35%; font-weight:500">{% if vbp.website %}
+                                                <a href="{{ vbp.website }}" target="_blank" style="font-weight: 500;">{{ vbp }}</a>
+                                                {% else %}
+                                                        <a style="color:rgb(55, 55, 55); font-weight:400">{{ vbp }}</a>
+                                                        {% endif %}
+                                            </td>
+                                            <td>{{ vbp.city }}</td>
+                                            {% if vbp.phone is not None %}<td style="text-align:right;min-width: 6vw">{{ vbp.phone }}</td>
+                                            {% else %}<td style="text-align:right;min-width: 6vw"></td>
+                                            {% endif %}
+                                            
+                                        </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                                {% if response.object_list|length > 10 %}
+                                    {% else %}
+                                    <div class="center-align roomformore" style="margin-top: 30%; background:rgb(29, 29, 29); padding: 1vw 2vw">
+                                        <p style="color:white; font-size: 1vw">There's always room for more!</p>
+                                        <p style="color:white; font-size: 0.6vw; text-align: justify">If you know of a great business we should include, or if you own a business and would like to be listed, please fill out the <a href="{{ nomination_url }}">Business Nomination Form</a> on our website. VBP is ever-evolving and we update our directories quarterly!</p>
+                                    </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        {% endfor %}
+                        <div class="photography" style="background: url({% static 'img/photography.png' %});background-size: 105%"></div>
+                        {% for response in paginator_photography %}
+                            <div class="photography-section photography">
+                                <div class="data-table">
+                                <table class="highlight">
+                                    <tbody>
+                                        {% for vbp in response %}
+                                        <tr>
+                                            <td style="max-width: 35%; font-weight:500">{% if vbp.website %}
+                                                <a href="{{ vbp.website }}" target="_blank" style="font-weight: 500;">{{ vbp }}</a>
+                                                {% else %}
+                                                        <a style="color:rgb(55, 55, 55); font-weight:400">{{ vbp }}</a>
+                                                        {% endif %}
+                                            </td>
+                                            <td>{{ vbp.city }}</td>
+                                            {% if vbp.phone is not None %}<td style="text-align:right;min-width: 6vw">{{ vbp.phone }}</td>
+                                            {% else %}<td style="text-align:right;min-width: 6vw"></td>
+                                            {% endif %}
+                                            
+                                        </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                                {% if response.object_list|length > 10 %}
+                                    {% else %}
+                                    <div class="center-align roomformore" style="margin-top: 30%; background:rgb(29, 29, 29); padding: 1vw 2vw">
+                                        <p style="color:white; font-size: 1vw">There's always room for more!</p>
+                                        <p style="color:white; font-size: 0.6vw; text-align: justify">If you know of a great business we should include, or if you own a business and would like to be listed, please fill out the <a href="{{ nomination_url }}">Business Nomination Form</a> on our website. VBP is ever-evolving and we update our directories quarterly!</p>
+                                    </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        {% endfor %}
+                        <div class="professional" style="background: url({% static 'img/professional.png' %});background-size: 105%"></div>
+                        {% for response in paginator_professional %}
+                            <div class="professional-section professional">
+                                <div class="data-table">
+                                <table class="highlight">
+                                    <tbody>
+                                        {% for vbp in response %}
+                                        <tr>
+                                            <td style="max-width: 35%; font-weight:500">{% if vbp.website %}
+                                                <a href="{{ vbp.website }}" target="_blank" style="font-weight: 500;">{{ vbp }}</a>
+                                                {% else %}
+                                                        <a style="color:rgb(55, 55, 55); font-weight:400">{{ vbp }}</a>
+                                                        {% endif %}
+                                            </td>
+                                            <td>{{ vbp.city }}</td>
+                                            {% if vbp.phone is not None %}<td style="text-align:right;min-width: 6vw">{{ vbp.phone }}</td>
+                                            {% else %}<td style="text-align:right;min-width: 6vw"></td>
+                                            {% endif %}
+                                            
+                                        </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                                {% if response.object_list|length > 10 %}
+                                    {% else %}
+                                    <div class="center-align roomformore" style="margin-top: 30%; background:rgb(29, 29, 29); padding: 1vw 2vw">
+                                        <p style="color:white; font-size: 1vw">There's always room for more!</p>
+                                        <p style="color:white; font-size: 0.6vw; text-align: justify">If you know of a great business we should include, or if you own a business and would like to be listed, please fill out the <a href="{{ nomination_url }}">Business Nomination Form</a> on our website. VBP is ever-evolving and we update our directories quarterly!</p>
+                                    </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        {% endfor %}
+                        <div class="realestate" style="background: url({% static 'img/realestate.png' %});background-size: 105%"></div>
+                        {% for response in paginator_realestate %}
+                            <div class="realestate-section realestate">
+                                <div class="data-table">
+                                <table class="highlight">
+                                    <tbody>
+                                        {% for vbp in response %}
+                                        <tr>
+                                            <td style="max-width: 35%; font-weight:500">{% if vbp.website %}
+                                                <a href="{{ vbp.website }}" target="_blank" style="font-weight: 500;">{{ vbp }}</a>
+                                                {% else %}
+                                                        <a style="color:rgb(55, 55, 55); font-weight:400">{{ vbp }}</a>
+                                                        {% endif %}
+                                            </td>
+                                            <td>{{ vbp.city }}</td>
+                                            {% if vbp.phone is not None %}<td style="text-align:right;min-width: 6vw">{{ vbp.phone }}</td>
+                                            {% else %}<td style="text-align:right;min-width: 6vw"></td>
+                                            {% endif %}
+                                            
+                                        </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                                {% if response.object_list|length > 10 %}
+                                    {% else %}
+                                    <div class="center-align roomformore" style="margin-top: 30%; background:rgb(29, 29, 29); padding: 1vw 2vw">
+                                        <p style="color:white; font-size: 1vw">There's always room for more!</p>
+                                        <p style="color:white; font-size: 0.6vw; text-align: justify">If you know of a great business we should include, or if you own a business and would like to be listed, please fill out the <a href="{{ nomination_url }}">Business Nomination Form</a> on our website. VBP is ever-evolving and we update our directories quarterly!</p>
+                                    </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        {% endfor %}
+                        <div class="recreation" style="background: url({% static 'img/recreation.png' %});background-size: 105%"></div>
+                        {% for response in paginator_recreation %}
+                            <div class="recreation-section recreation">
+                                <div class="data-table">
+                                <table class="highlight">
+                                    <tbody>
+                                        {% for vbp in response %}
+                                        <tr>
+                                            <td style="max-width: 35%; font-weight:500">{% if vbp.website %}
+                                                <a href="{{ vbp.website }}" target="_blank" style="font-weight: 500;">{{ vbp }}</a>
+                                                {% else %}
+                                                        <a style="color:rgb(55, 55, 55); font-weight:400">{{ vbp }}</a>
+                                                        {% endif %}
+                                            </td>
+                                            <td>{{ vbp.city }}</td>
+                                            {% if vbp.phone is not None %}<td style="text-align:right;min-width: 6vw">{{ vbp.phone }}</td>
+                                            {% else %}<td style="text-align:right;min-width: 6vw"></td>
+                                            {% endif %}
+                                            
+                                        </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                                {% if response.object_list|length > 10 %}
+                                    {% else %}
+                                    <div class="center-align roomformore" style="margin-top: 30%; background:rgb(29, 29, 29); padding: 1vw 2vw">
+                                        <p style="color:white; font-size: 1vw">There's always room for more!</p>
+                                        <p style="color:white; font-size: 0.6vw; text-align: justify">If you know of a great business we should include, or if you own a business and would like to be listed, please fill out the <a href="{{ nomination_url }}">Business Nomination Form</a> on our website. VBP is ever-evolving and we update our directories quarterly!</p>
+                                    </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        {% endfor %}
+                        <div class="restaurants" style="background: url({% static 'img/restaurants.png' %});background-size: 105%"></div>
+                        {% for response in paginator_restaurants %}
+                            <div class="restaurants-section restaurants">
+                                <div class="data-table">
+                                <table class="highlight">
+                                    <tbody>
+                                        {% for vbp in response %}
+                                        <tr>
+                                            <td style="max-width: 35%; font-weight:500">{% if vbp.website %}
+                                                <a href="{{ vbp.website }}" target="_blank" style="font-weight: 500;">{{ vbp }}</a>
+                                                {% else %}
+                                                        <a style="color:rgb(55, 55, 55); font-weight:400">{{ vbp }}</a>
+                                                        {% endif %}
+                                            </td>
+                                            <td>{{ vbp.city }}</td>
+                                            {% if vbp.phone is not None %}<td style="text-align:right;min-width: 6vw">{{ vbp.phone }}</td>
+                                            {% else %}<td style="text-align:right;min-width: 6vw"></td>
+                                            {% endif %}
+                                            
+                                        </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                                {% if response.object_list|length > 10 %}
+                                    {% else %}
+                                    <div class="center-align roomformore" style="margin-top: 30%; background:rgb(29, 29, 29); padding: 1vw 2vw">
+                                        <p style="color:white; font-size: 1vw">There's always room for more!</p>
+                                        <p style="color:white; font-size: 0.6vw; text-align: justify">If you know of a great business we should include, or if you own a business and would like to be listed, please fill out the <a href="{{ nomination_url }}">Business Nomination Form</a> on our website. VBP is ever-evolving and we update our directories quarterly!</p>
+                                    </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        {% endfor %}
+                        <div class="security" style="background: url({% static 'img/security.png' %});background-size: 105%"></div>
+                        {% for response in paginator_security %}
+                            <div class="security-section security">
+                                <div class="data-table">
+                                <table class="highlight">
+                                    <tbody>
+                                        {% for vbp in response %}
+                                        <tr>
+                                            <td style="max-width: 35%; font-weight:500">{% if vbp.website %}
+                                                <a href="{{ vbp.website }}" target="_blank" style="font-weight: 500;">{{ vbp }}</a>
+                                                {% else %}
+                                                        <a style="color:rgb(55, 55, 55); font-weight:400">{{ vbp }}</a>
+                                                        {% endif %}
+                                            </td>
+                                            <td>{{ vbp.city }}</td>
+                                            {% if vbp.phone is not None %}<td style="text-align:right;min-width: 6vw">{{ vbp.phone }}</td>
+                                            {% else %}<td style="text-align:right;min-width: 6vw"></td>
+                                            {% endif %}
+                                            
+                                        </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                                {% if response.object_list|length > 10 %}
+                                    {% else %}
+                                    <div class="center-align roomformore" style="margin-top: 30%; background:rgb(29, 29, 29); padding: 1vw 2vw">
+                                        <p style="color:white; font-size: 1vw">There's always room for more!</p>
+                                        <p style="color:white; font-size: 0.6vw; text-align: justify">If you know of a great business we should include, or if you own a business and would like to be listed, please fill out the <a href="{{ nomination_url }}">Business Nomination Form</a> on our website. VBP is ever-evolving and we update our directories quarterly!</p>
+                                    </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        {% endfor %}
+                        <div class="transportation" style="background: url({% static 'img/transportation.png' %});background-size: 105%"></div>
+                        {% for response in paginator_transportation %}
+                            <div class="transportation-section transportation">
+                                <div class="data-table">
+                                <table class="highlight">
+                                    <tbody>
+                                        {% for vbp in response %}
+                                        <tr>
+                                            <td style="max-width: 35%; font-weight:500">{% if vbp.website %}
+                                                <a href="{{ vbp.website }}" target="_blank" style="font-weight: 500;">{{ vbp }}</a>
+                                                {% else %}
+                                                        <a style="color:rgb(55, 55, 55); font-weight:400">{{ vbp }}</a>
+                                                        {% endif %}
+                                            </td>
+                                            <td>{{ vbp.city }}</td>
+                                            {% if vbp.phone is not None %}<td style="text-align:right;min-width: 6vw">{{ vbp.phone }}</td>
+                                            {% else %}<td style="text-align:right;min-width: 6vw"></td>
+                                            {% endif %}
+                                            
+                                        </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                                {% if response.object_list|length > 10 %}
+                                    {% else %}
+                                    <div class="center-align roomformore" style="margin-top: 30%; background:rgb(29, 29, 29); padding: 1vw 2vw">
+                                        <p style="color:white; font-size: 1vw">There's always room for more!</p>
+                                        <p style="color:white; font-size: 0.6vw; text-align: justify">If you know of a great business we should include, or if you own a business and would like to be listed, please fill out the <a href="{{ nomination_url }}">Business Nomination Form</a> on our website. VBP is ever-evolving and we update our directories quarterly!</p>
+                                    </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        {% endfor %}
+                        <div class="visual" style="background: url({% static 'img/visual.png' %});background-size: 105%"></div>
+                        {% for response in paginator_visual %}
+                            <div class="visual-section visual">
+                                <div class="data-table">
+                                <table class="highlight">
+                                    <tbody>
+                                        {% for vbp in response %}
+                                        <tr>
+                                            <td style="max-width: 35%; font-weight:500">{% if vbp.website %}
+                                                <a href="{{ vbp.website }}" target="_blank" style="font-weight: 500;">{{ vbp }}</a>
+                                                {% else %}
+                                                        <a style="color:rgb(55, 55, 55); font-weight:400">{{ vbp }}</a>
+                                                        {% endif %}
+                                            </td>
+                                            <td>{{ vbp.city }}</td>
+                                            {% if vbp.phone is not None %}<td style="text-align:right;min-width: 6vw">{{ vbp.phone }}</td>
+                                            {% else %}<td style="text-align:right;min-width: 6vw"></td>
+                                            {% endif %}
+                                            
+                                        </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                                {% if response.object_list|length > 10 %}
+                                    {% else %}
+                                    <div class="center-align roomformore" style="margin-top: 30%; background:rgb(29, 29, 29); padding: 1vw 2vw">
+                                        <p style="color:white; font-size: 1vw">There's always room for more!</p>
+                                        <p style="color:white; font-size: 0.6vw; text-align: justify">If you know of a great business we should include, or if you own a business and would like to be listed, please fill out the <a href="{{ nomination_url }}">Business Nomination Form</a> on our website. VBP is ever-evolving and we update our directories quarterly!</p>
+                                    </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        {% endfor %}
+                        <div class="hard" style="background: url({% static 'img/vbp final page.png' %});background-size: 500px 650px"></div>
+                    
+                
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col s1">
+        <i class="material-icons flipbook-arrows" id="next">arrow_forward_ios</i>
+        </div>
+    </div> 
+    
+</div>
+<div class="row">
+    <button class="btn btn-flat valign-wrapper right fullscreen-btn" onClick="openFullscreen()" style="font-size: 1vw;"><p class="left" style="margin-top: 0px">FULLSCREEN</p> <i class="material-icons right" style="">fullscreen</i></button>
+</div>
+{% block js %}
+
+<script type="text/javascript">
+$(document).ready(function() {
+    // This will fire when document is ready:
+    $(window).resize(function() {
+        // This will fire each time the window is resized:
+        if($(window).width() >= 600) {
+            var oTurn = $("#flipbook").turn(
+                {
+                autoCenter: true,
+                next: true,
+                display: double,
+            });
+        } else {
+            var oTurn = $("#flipbook").turn(
+                {
+                autoCenter: true,
+                next: true,
+                display: single,
+            });
+        }
+    }).resize(); // This will simulate a resize to trigger the initial run.
+});
+	
+    $("#prev").click(function(e){
+    e.preventDefault();
+    oTurn.turn("previous");
+    });
+    $("#next").click(function(e){
+    e.preventDefault();
+    oTurn.turn("next");
+    });
+    $('#flipbook .p1').ready(function(){
+        $('#prev').hide();
+    });
+    $('#flipbook').bind("last", function(event){
+        $('#next').hide()
+    });
+    $('#flipbook').bind("first", function(event){
+        $('#prev').hide();
+        $('#next').show();
+    });
+    $('#flipbook').bind("turned", function(event, page){
+        if (page!=1){
+            $('#prev').show();
+        }
+        else {
+            $('#prev').hide();
+        }
+    });
+</script>
+
+<script>
+    var elem = document.getElementById("flipbook");
+    function openFullscreen() {
+    if (elem.requestFullscreen) {
+        elem.requestFullscreen();
+    } else if (elem.webkitRequestFullscreen) { /* Safari */
+        elem.webkitRequestFullscreen();
+    } else if (elem.msRequestFullscreen) { /* IE11 */
+        elem.msRequestFullscreen();
+    }
+    $('#')
+    };
+</script>
+<script>
+    var flipbookEL = document.getElementById('flipbook');
+
+    window.addEventListener('resize', function (e) {
+        flipbookEL.style.width = '';
+        flipbookEL.style.height = '';
+        $(flipbookEL).turn('size', flipbookEL.clientWidth, flipbookEL.clientHeight);
+        });
+
+</script>
+<script>
+    $(document).ready(function(){
+    $('select').formSelect('dropdownOptions', {
+        'constrainWidth': false
+    });
+  });
+</script>
+{% endblock %}
+<style>
+    @media only screen and (max-width:1050px) {
+        .table-of-contents-item {
+            font-size:1.1vh; 
+            padding-top:0.2vw;
+            padding-bottom: 0.2vw; 
+            margin:0; 
+            text-transform: capitalize;
+        }
+    }
+    @media only screen and (min-width:1051px){
+        .table-of-contents-item {
+            font-size:1.2vh; 
+            padding-top:0.2vw;
+            padding-bottom: 0.2vw; 
+            margin:0; 
+            text-transform: capitalize;
+        }
+    }
+    @media only screen and (min-width:1350px){
+        .table-of-contents-item {
+            font-size:1.6vh; 
+            padding-top:0.2vw;
+            padding-bottom: 0.2vw; 
+            margin:0; 
+            text-transform: capitalize;
+        }
+    }
+    #id-city {
+        font-weight: 300;
+        letter-spacing: 1px;
+        font-family: Poppins !important
+    }
+    .multiple-select-dropdown {
+        width: 300px !important
+    }
+    .fullscreen-btn:hover {
+        background-color:white;
+    }
+    .beauty-section.odd {
+        background: url('https://empowerthevillage.s3.amazonaws.com/static/img/beauty_right.png');
+        background-size: 101%;
+    }
+    .beauty-section.even {
+        background-image: url('https://empowerthevillage.s3.amazonaws.com/static/img/beauty_left.png'); 
+        background-size: 101%
+    }
+    .beauty-section.odd .data-table {
+        padding-right: 15%;
+        padding-left: 5%;
+        padding-top: 5vw;
+    }
+    .beauty-section.even .data-table {
+        padding-left: 15%;
+        padding-right: 5%;
+        padding-top: 5vw;
+    }
+
+    .books-section.odd {
+        background-image: url('https://empowerthevillage.s3.amazonaws.com/static/img/books_right.png');
+        background-size: 101%;
+    }
+    .books-section.even {
+        background-image: url('https://empowerthevillage.s3.amazonaws.com/static/img/books_left.png'); 
+        background-size: 101%
+    }
+    .data-table {
+        height: 100%
+    }
+    .books-section.odd .data-table {
+        padding-right: 15%;
+        padding-left: 5%;
+        padding-top: 5vw;
+    }
+    .books-section.even .data-table {
+        padding-left: 15%;
+        padding-right: 5%;
+        padding-top: 5vw;
+    }
+
+    .cars-section.odd {
+        background-image: url("https://empowerthevillage.s3.amazonaws.com/static/img/cars_right.png");
+        background-size: 101%;
+    }
+    .cars-section.even {
+        background-image: url('https://empowerthevillage.s3.amazonaws.com/static/img/cars_left.png'); 
+        background-size: 101%
+    }
+    .cars-section.odd .data-table {
+        padding-right: 15%;
+        padding-left: 5%;
+        padding-top: 5vw;
+    }
+    .cars-section.even .data-table {
+        padding-left: 15%;
+        padding-right: 5%;
+        padding-top: 5vw;
+    }
+
+    .child-section.odd {
+        background-image: url('https://empowerthevillage.s3.amazonaws.com/static/img/child_right.png');
+        background-size: 101%;
+    }
+    .child-section.even {
+        background-image: url('https://empowerthevillage.s3.amazonaws.com/static/img/child_left.png'); 
+        background-size: 101%
+    }
+    .child-section.odd .data-table {
+        padding-right: 15%;
+        padding-left: 5%;
+        padding-top: 5vw;
+    }
+    .child-section.even .data-table {
+        padding-left: 15%;
+        padding-right: 5%;
+        padding-top: 5vw;
+    }
+
+    .cleaning-section.odd {
+        background-image: url('https://empowerthevillage.s3.amazonaws.com/static/img/cleaning_right.png');
+        background-size: 101%;
+    }
+    .cleaning-section.even {
+        background-image: url("https://empowerthevillage.s3.amazonaws.com/static/img/cleaning_left.png"); 
+        background-size: 101%
+    }
+    .cleaning-section.odd .data-table {
+        padding-right: 15%;
+        padding-left: 5%;
+        padding-top: 5vw;
+    }
+    .cleaning-section.even .data-table {
+        padding-left: 15%;
+        padding-right: 5%;
+        padding-top: 5vw;
+    }
+
+    .clothing-section.odd {
+        background-image: url("https://empowerthevillage.s3.amazonaws.com/static/img/clothing_right.png");
+        background-size: 101%;
+    }
+    .clothing-section.even {
+        background-image: url("https://empowerthevillage.s3.amazonaws.com/static/img/clothing_left.png"); 
+        background-size: 101%
+    }
+    .clothing-section.odd .data-table {
+        padding-right: 15%;
+        padding-left: 5%;
+        padding-top: 5vw;
+    }
+    .clothing-section.even .data-table {
+        padding-left: 15%;
+        padding-right: 5%;
+        padding-top: 5vw;
+    }
+
+    .construction-section.odd {
+        background-image: url("https://empowerthevillage.s3.amazonaws.com/static/img/construction_right.png");
+        background-size: 101%;
+    }
+    .construction-section.even {
+        background-image: url("https://empowerthevillage.s3.amazonaws.com/static/img/construction_left.png"); 
+        background-size: 101%
+    }
+    .construction-section.odd .data-table {
+        padding-right: 15%;
+        padding-left: 5%;
+        padding-top: 5vw;
+    }
+    .construction-section.even .data-table {
+        padding-left: 15%;
+        padding-right: 5%;
+        padding-top: 5vw;
+    }
+
+    .education-section.odd {
+        background-image: url("https://empowerthevillage.s3.amazonaws.com/static/img/education_right.png");
+        background-size: 101%;
+    }
+    .education-section.even {
+        background-image: url("https://empowerthevillage.s3.amazonaws.com/static/img/education_left.png"); 
+        background-size: 101%
+    }
+    .education-section.odd .data-table {
+        padding-right: 15%;
+        padding-left: 5%;
+        padding-top: 5vw;
+    }
+    .education-section.even .data-table {
+        padding-left: 15%;
+        padding-right: 5%;
+        padding-top: 5vw;
+    }
+
+    .eldercare-section.odd {
+        background-image: url('https://empowerthevillage.s3.amazonaws.com/static/img/eldercare_right.png');
+        background-size: 101%;
+    }
+    .eldercare-section.even {
+        background-image: url('https://empowerthevillage.s3.amazonaws.com/static/img/eldercare_left.png'); 
+        background-size: 101%
+    }
+    .eldercare-section.odd .data-table {
+        padding-right: 15%;
+        padding-left: 5%;
+        padding-top: 5vw;
+    }
+    .eldercare-section.even .data-table {
+        padding-left: 15%;
+        padding-right: 5%;
+        padding-top: 5vw;
+    }
+
+    .electronics-section.odd {
+        background-image: url("https://empowerthevillage.s3.amazonaws.com/static/img/electronics_right.png");
+        background-size: 101%;
+    }
+    .electronics-section.even {
+        background-image: url('https://empowerthevillage.s3.amazonaws.com/static/img/electronics_left.png'); 
+        background-size: 101%
+    }
+    .electronics-section.odd .data-table {
+        padding-right: 15%;
+        padding-left: 5%;
+        padding-top: 5vw;
+    }
+    .electronics-section.even .data-table {
+        padding-left: 15%;
+        padding-right: 5%;
+        padding-top: 5vw;
+    }
+
+    .entertainment-section.odd {
+        background-image: url('https://empowerthevillage.s3.amazonaws.com/static/img/entertainment_right.png');
+        background-size: 101%;
+    }
+    .entertainment-section.even {
+        background-image: url("https://empowerthevillage.s3.amazonaws.com/static/img/entertainment_right.png"); 
+        background-size: 101%
+    }
+    .entertainment-section.odd .data-table {
+        padding-right: 15%;
+        padding-left: 5%;
+        padding-top: 5vw;
+    }
+    .entertainment-section.even .data-table {
+        padding-left: 15%;
+        padding-right: 5%;
+        padding-top: 5vw;
+    }
+
+    .farming-section.odd {
+        background-image: url('https://empowerthevillage.s3.amazonaws.com/static/img/farming_right.png');
+        background-size: 101%;
+    }
+    .farming-section.even {
+        background-image: url('https://empowerthevillage.s3.amazonaws.com/static/img/farming_left.png'); 
+        background-size: 101%
+    }
+    .farming-section.odd .data-table {
+        padding-right: 15%;
+        padding-left: 5%;
+        padding-top: 5vw;
+    }
+    .farming-section.even .data-table {
+        padding-left: 15%;
+        padding-right: 5%;
+        padding-top: 5vw;
+    }
+
+    .florists-section.odd {
+        background-image: url('https://empowerthevillage.s3.amazonaws.com/static/img/florists_right.png');
+        background-size: 101%;
+    }
+    .florists-section.even {
+        background-image: url('https://empowerthevillage.s3.amazonaws.com/static/img/florists_left.png'); 
+        background-size: 101%
+    }
+    .florists-section.odd .data-table {
+        padding-right: 15%;
+        padding-left: 5%;
+        padding-top: 5vw;
+    }
+    .florists-section.even .data-table {
+        padding-left: 15%;
+        padding-right: 5%;
+        padding-top: 5vw;
+    }
+
+    .grocery-section.odd {
+        background-image: url('https://empowerthevillage.s3.amazonaws.com/static/img/grocery_right.png');
+        background-size: 101%;
+    }
+    .grocery-section.even {
+        background-image: url('https://empowerthevillage.s3.amazonaws.com/static/img/grocery_left.png'); 
+        background-size: 101%
+    }
+    .grocery-section.odd .data-table {
+        padding-right: 15%;
+        padding-left: 5%;
+        padding-top: 5vw;
+    }
+    .grocery-section.even .data-table {
+        padding-left: 15%;
+        padding-right: 5%;
+        padding-top: 5vw;
+    }
+
+    .health-section.odd {
+        background-image: url('https://empowerthevillage.s3.amazonaws.com/static/img/health_right.png');
+        background-size: 101%;
+    }
+    .health-section.even {
+        background-image: url('https://empowerthevillage.s3.amazonaws.com/static/img/health_left.png'); 
+        background-size: 101%
+    }
+    .health-section.odd .data-table {
+        padding-right: 15%;
+        padding-left: 5%;
+        padding-top: 5vw;
+    }
+    .health-section.even .data-table {
+        padding-left: 15%;
+        padding-right: 5%;
+        padding-top: 5vw;
+    }
+
+    .home-section.odd {
+        background-image: url('https://empowerthevillage.s3.amazonaws.com/static/img/home_right.png');
+        background-size: 101%;
+    }
+    .home-section.even {
+        background-image: url('https://empowerthevillage.s3.amazonaws.com/static/img/home_left.png'); 
+        background-size: 101%
+    }
+    .home-section.odd .data-table {
+        padding-right: 15%;
+        padding-left: 5%;
+        padding-top: 5vw;
+    }
+    .home-section.even .data-table {
+        padding-left: 15%;
+        padding-right: 5%;
+        padding-top: 5vw;
+    }
+
+    .hotels-section.odd {
+        background-image: url('https://empowerthevillage.s3.amazonaws.com/static/img/hotels_right.png');
+        background-size: 101%;
+    }
+    .hotels-section.even {
+        background-image: url('https://empowerthevillage.s3.amazonaws.com/static/img/hotels_left.png'); 
+        background-size: 101%
+    }
+    .hotels-section.odd .data-table {
+        padding-right: 15%;
+        padding-left: 5%;
+        padding-top: 5vw;
+    }
+    .hotels-section.even .data-table {
+        padding-left: 15%;
+        padding-right: 5%;
+        padding-top: 5vw;
+    }
+
+    .jewelry-section.odd {
+        background-image: url('https://empowerthevillage.s3.amazonaws.com/static/img/jewelry_right.png');
+        background-size: 101%;
+    }
+    .jewelry-section.even {
+        background-image: url('https://empowerthevillage.s3.amazonaws.com/static/img/jewelry_left.png'); 
+        background-size: 101%
+    }
+    .jewelry-section.odd .data-table {
+        padding-right: 15%;
+        padding-left: 5%;
+        padding-top: 5vw;
+    }
+    .jewelry-section.even .data-table {
+        padding-left: 15%;
+        padding-right: 5%;
+        padding-top: 5vw;
+    }
+
+    .legal-section.odd {
+        background-image: url('https://empowerthevillage.s3.amazonaws.com/static/img/legal_right.png');
+        background-size: 101%;
+    }
+    .legal-section.even {
+        background-image: url('https://empowerthevillage.s3.amazonaws.com/static/img/legal_left.png'); 
+        background-size: 101%
+    }
+    .legal-section.odd .data-table {
+        padding-right: 15%;
+        padding-left: 5%;
+        padding-top: 5vw;
+    }
+    .legal-section.even .data-table {
+        padding-left: 15%;
+        padding-right: 5%;
+        padding-top: 5vw;
+    }
+
+    .lifestyle-section.odd {
+        background-image: url('https://empowerthevillage.s3.amazonaws.com/static/img/lifestyle_right.png');
+        background-size: 101%;
+    }
+    .lifestyle-section.even {
+        background-image: url('https://empowerthevillage.s3.amazonaws.com/static/img/lifestyle_left.png'); 
+        background-size: 101%
+    }
+    .lifestyle-section.odd .data-table {
+        padding-right: 15%;
+        padding-left: 5%;
+        padding-top: 5vw;
+    }
+    .lifestyle-section.even .data-table {
+        padding-left: 15%;
+        padding-right: 5%;
+        padding-top: 5vw;
+    }
+
+    .marketing-section.odd {
+        background-image: url('https://empowerthevillage.s3.amazonaws.com/static/img/marketing_right.png');
+        background-size: 101%;
+    }
+    .marketing-section.even {
+        background-image: url('https://empowerthevillage.s3.amazonaws.com/static/img/marketing_left.png'); 
+        background-size: 101%
+    }
+    .marketing-section.odd .data-table {
+        padding-right: 15%;
+        padding-left: 5%;
+        padding-top: 5vw;
+    }
+    .marketing-section.even .data-table {
+        padding-left: 15%;
+        padding-right: 5%;
+        padding-top: 5vw;
+    }
+
+    .medical-section.odd {
+        background-image: url('https://empowerthevillage.s3.amazonaws.com/static/img/medical_right.png');
+        background-size: 101%;
+    }
+    .medical-section.even {
+        background-image: url('https://empowerthevillage.s3.amazonaws.com/static/img/medical_left.png'); 
+        background-size: 101%
+    }
+    .medical-section.odd .data-table {
+        padding-right: 15%;
+        padding-left: 5%;
+        padding-top: 5vw;
+    }
+    .medical-section.even .data-table {
+        padding-left: 15%;
+        padding-right: 5%;
+        padding-top: 5vw;
+    }
+
+    .other-section.odd {
+        background-image: url('https://empowerthevillage.s3.amazonaws.com/static/img/other_right.png');
+        background-size: 101%;
+    }
+    .other-section.even {
+        background-image: url('https://empowerthevillage.s3.amazonaws.com/static/img/other_left.png'); 
+        background-size: 101%
+    }
+    .other-section.odd .data-table {
+        padding-right: 15%;
+        padding-left: 5%;
+        padding-top: 5vw;
+    }
+    .other-section.even .data-table {
+        padding-left: 15%;
+        padding-right: 5%;
+        padding-top: 5vw;
+    }
+
+    .packaging-section.odd {
+        background-image: url('https://empowerthevillage.s3.amazonaws.com/static/img/packaging_right.png');
+        background-size: 101%;
+    }
+    .packaging-section.even {
+        background-image: url('https://empowerthevillage.s3.amazonaws.com/static/img/packaging_left.png'); 
+        background-size: 101%
+    }
+    .packaging-section.odd .data-table {
+        padding-right: 15%;
+        padding-left: 5%;
+        padding-top: 5vw;
+    }
+    .packaging-section.even .data-table {
+        padding-left: 15%;
+        padding-right: 5%;
+        padding-top: 5vw;
+    }
+
+    .pets-section.odd {
+        background-image: url('https://empowerthevillage.s3.amazonaws.com/static/img/pets_right.png');
+        background-size: 101%;
+    }
+    .pets-section.even {
+        background-image: url('https://empowerthevillage.s3.amazonaws.com/static/img/pets_left.png'); 
+        background-size: 101%
+    }
+    .pets-section.odd .data-table {
+        padding-right: 15%;
+        padding-left: 5%;
+        padding-top: 5vw;
+    }
+    .pets-section.even .data-table {
+        padding-left: 15%;
+        padding-right: 5%;
+        padding-top: 5vw;
+    }
+
+    .photography-section.odd {
+        background-image: url('https://empowerthevillage.s3.amazonaws.com/static/img/photography_right.png');
+        background-size: 101%;
+    }
+    .photography-section.even {
+        background-image: url('https://empowerthevillage.s3.amazonaws.com/static/img/photography_left.png'); 
+        background-size: 101%
+    }
+    .photography-section.odd .data-table {
+        padding-right: 15%;
+        padding-left: 5%;
+        padding-top: 5vw;
+    }
+    .photography-section.even .data-table {
+        padding-left: 15%;
+        padding-right: 5%;
+        padding-top: 5vw;
+    }
+
+    .professional-section.odd {
+        background-image: url('https://empowerthevillage.s3.amazonaws.com/static/img/professional_right.png');
+        background-size: 101%;
+    }
+    .professional-section.even {
+        background-image: url('https://empowerthevillage.s3.amazonaws.com/static/img/professional_left.png'); 
+        background-size: 101%
+    }
+    .professional-section.odd .data-table {
+        padding-right: 15%;
+        padding-left: 5%;
+        padding-top: 5vw;
+    }
+    .professional-section.even .data-table {
+        padding-left: 15%;
+        padding-right: 5%;
+        padding-top: 5vw;
+    }
+
+    .realestate-section.odd {
+        background-image: url('https://empowerthevillage.s3.amazonaws.com/static/img/realestate_right.png');
+        background-size: 101%;
+    }
+    .realestate-section.even {
+        background-image: url('https://empowerthevillage.s3.amazonaws.com/static/img/realestate_left.png'); 
+        background-size: 101%
+    }
+    .realestate-section.odd .data-table {
+        padding-right: 15%;
+        padding-left: 5%;
+        padding-top: 5vw;
+    }
+    .realestate-section.even .data-table {
+        padding-left: 15%;
+        padding-right: 5%;
+        padding-top: 5vw;
+    }
+
+    .recreation-section.odd {
+        background-image: url('https://empowerthevillage.s3.amazonaws.com/static/img/recreation_right.png');
+        background-size: 101%;
+    }
+    .recreation-section.even {
+        background-image: url('https://empowerthevillage.s3.amazonaws.com/static/img/recreation_left.png'); 
+        background-size: 101%
+    }
+    .recreation-section.odd .data-table {
+        padding-right: 15%;
+        padding-left: 5%;
+        padding-top: 5vw;
+    }
+    .recreation-section.even .data-table {
+        padding-left: 15%;
+        padding-right: 5%;
+        padding-top: 5vw;
+    }
+
+    .restaurants-section.odd {
+        background-image: url('https://empowerthevillage.s3.amazonaws.com/static/img/restaurants_right.png');
+        background-size: 101%;
+    }
+    .restaurants-section.even {
+        background-image: url('https://empowerthevillage.s3.amazonaws.com/static/img/restaurants_left.png'); 
+        background-size: 101%
+    }
+    .restaurants-section.odd .data-table {
+        padding-right: 15%;
+        padding-left: 5%;
+        padding-top: 5vw;
+    }
+    .restaurants-section.even .data-table {
+        padding-left: 15%;
+        padding-right: 5%;
+        padding-top: 5vw;
+    }
+
+    .security-section.odd {
+        background-image: url('https://empowerthevillage.s3.amazonaws.com/static/img/security_right.png');
+        background-size: 101%;
+    }
+    .security-section.even {
+        background-image: url('https://empowerthevillage.s3.amazonaws.com/static/img/security_left.png'); 
+        background-size: 105%
+    }
+    .security-section.odd .data-table {
+        padding-right: 15%;
+        padding-left: 5%;
+        padding-top: 5vw;
+    }
+    .security-section.even .data-table {
+        padding-left: 15%;
+        padding-right: 5%;
+        padding-top: 5vw;
+    }
+
+    .transportation-section.odd {
+        background-image: url('https://empowerthevillage.s3.amazonaws.com/static/img/transportation_right.png');
+        background-size: 101%;
+    }
+    .transportation-section.even {
+        background-image: url('https://empowerthevillage.s3.amazonaws.com/static/img/transportation_left.png'); 
+        background-size: 101%
+    }
+    .transportation-section.odd .data-table {
+        padding-right: 15%;
+        padding-left: 5%;
+        padding-top: 5vw;
+    }
+    .transportation-section.even .data-table {
+        padding-left: 15%;
+        padding-right: 5%;
+        padding-top: 5vw;
+    }
+
+    .visual-section.odd {
+        background-image: url('https://empowerthevillage.s3.amazonaws.com/static/img/visual_right.png');
+        background-size: 101%;
+    }
+    .visual-section.even {
+        background-image: url('https://empowerthevillage.s3.amazonaws.com/static/img/visual_left.png'); 
+        background-size: 101%
+    }
+    .visual-section.odd .data-table {
+        padding-right: 15%;
+        padding-left: 5%;
+        padding-top: 5vw;
+    }
+    .visual-section.even .data-table {
+        padding-left: 15%;
+        padding-right: 5%;
+        padding-top: 5vw;
+    }
+</style>
+<script>
+     $(document).ready(function(){
+    $('select').formSelect();
+  });
+        
+</script>

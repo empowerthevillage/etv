@@ -1,0 +1,156 @@
+[
+    {
+      "model": "accounts.Participant",
+      "fields":
+{"email": "al_lee@colpal.com",
+      "team": "2"
+    }
+},
+    {
+      "model": "accounts.Participant",
+      "fields":
+{"email": "antonio.a.james@gmail.com",
+      "team": "2"
+    }
+},
+    {
+      "model": "accounts.Participant",
+      "fields":
+{"email": "clydehenderson111@gmail.com",
+      "team": "2"
+    }
+},
+    {
+      "model": "accounts.Participant",
+      "fields":
+{"email": "easleytodd@gmail.com",
+      "team": "2"
+    }
+},
+    {
+      "model": "accounts.Participant",
+      "fields":
+{"email": "l.mishoeii1@gmail.com",
+      "team": "2"
+    }
+},
+    {
+      "model": "accounts.Participant",
+      "fields":
+{"email": "mwilson13000@yahoo.com",
+      "team": "2"
+    }
+},
+    {
+      "model": "accounts.Participant",
+      "fields":
+{"email": "tmswinters@gmail.com",
+      "team": "2"
+    }
+},
+    {
+      "model": "accounts.Participant",
+      "fields":
+{"email": "jcarterrich@hotmail.com",
+      "team": "4"
+    }
+},
+    {
+      "model": "accounts.Participant",
+      "fields":
+{"email": "sambbaker@hotmail.com",
+      "team": "3"
+    }
+},
+    {
+      "model": "accounts.Participant",
+      "fields":
+{"email": "dlburrell1@gmail.com",
+      "team": "3"
+    }
+},
+    {
+      "model": "accounts.Participant",
+      "fields":
+{"email": "mturner0616@gmail.com",
+      "team": "3"
+    }
+},
+    {
+      "model": "accounts.Participant",
+      "fields":
+{"email": "docj02@gmail.com",
+      "team": "3"
+    }
+},
+    {
+      "model": "accounts.Participant",
+      "fields":
+{"email": "kdharrisesq@gmail.com",
+      "team": "3"
+    }
+},
+    {
+      "model": "accounts.Participant",
+      "fields":
+{"email": "willisjohnm@yahoo.com",
+      "team": "3"
+    }
+},
+    {
+      "model": "accounts.Participant",
+      "fields":
+{"email": "cliff.dawkins@gmail.com",
+      "team": "4"
+    }
+},
+    {
+      "model": "accounts.Participant",
+      "fields":
+{"email": "joshuahaynes1906@gmail.com",
+      "team": "4"
+    }
+},
+    {
+      "model": "accounts.Participant",
+      "fields":
+{"email": "wilsonkwiii@aol.com",
+      "team": "4"
+    }
+},
+    {
+      "model": "accounts.Participant",
+      "fields":
+{"email": "rmooreleempa@gmail.com",
+      "team": "4"
+    }
+},
+    {
+      "model": "accounts.Participant",
+      "fields":
+{"email": "cfulmore20@optimum.net",
+      "team": "4"
+    }
+},
+    {
+      "model": "accounts.Participant",
+      "fields":
+{"email": "henrysm1906@hotmail.com",
+      "team": "4"
+    }
+},
+    {
+      "model": "accounts.Participant",
+      "fields":
+{"email": "jford92765@aol.com",
+      "team": "4"
+    }
+},
+    {
+      "model": "accounts.Participant",
+      "fields":
+{"email": "harrisdarren524@gmail.com",
+      "team": "4"
+    }
+}
+  ]

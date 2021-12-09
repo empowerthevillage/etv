@@ -1,0 +1,577 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}ETV | Policy & Power{% endblock %}
+{% block canonical %}https://www.empowerthevillage.org/policy-and-power/{% endblock %}
+{% block seo_description %}ETV Strategic Pillars: Policy & Power{% endblock %}
+
+{% block content %}
+<div class="parallax-container z-depth-3 box-shadow valign-wrapper">
+    
+    <div class="container z-depth-4 center-align parallax-banner">
+        <img src='{% static "img/policy_power.png" %}' style="width:90%; padding: 4% 0%">
+    </div>
+    <div class="parallax">
+        <img src='{% static "img/policy_collage_final.png" %}'>
+    </div>
+
+</div>
+<div style="background: url('{% static 'img/policy_collage_final.png' %}');">
+    <div class="row" style="background-color: rgba(255, 255, 255, 0.865);">
+        <ul class="tabs subnav-tabs tabs-fixed-width pillar-nav z-depth-2">
+            <li class="tab"  class="subnav-link"><a href="{{ voting_url }}" class="subnav-link">Operation: Ballot Box™</a></li>
+            <li class="tab disabled subnav-link">Coming Soon! - Community Resources</li>
+        </ul>
+        <style>
+            @media only screen and (min-width:663px){
+                .subnav-link {
+                font-size: 20px !important
+            }
+            }
+            .subnav-link {
+                font-size: 14px
+            }
+        </style>
+        <div class="col s12 l10 offset-l1 pillar-body">
+            <div class="center-align">
+                <h5 class="dyk"><p class="dyk" style="color: rgb(162, 21, 21); margin:0; padding:0; margin-top: -10px">State Of The Village : <a style="color:rgba(38, 38, 38, 0.947); font-family: oskar">Did You Know...?</a></p></h5>
+                <div class="divider"></div>
+                <div class="row" style="margin-bottom: 0; padding-top: 20px">
+                    
+                    <div class="col s12 m4">
+                        <div class="row dyk-row">
+                            <img class="col s3 m12 threepercent" src="{% static 'img/3percent.png'%}">
+                            <p class="col s9 m12 threepercent-text">Black people comprise ~13% of the US population, yet we only hold 3% (3 of 100) of US Senate seats</p>
+                        </div>
+                    </div>
+                    <div class="col s12 m4">
+                        <div class="row dyk-row">
+                            <img class="col s3 m12 policy-women" src="{% static 'img/policy-women.png'%}">
+                            <p class="col s9 m12 policy-women-text">Black women are among the most engaged and influential voting blocs in the country. Their expanding influence and political power will shape the trajectory of America for generations</p>
+                        </div>
+                    </div>
+                    <div class="col s12 m4">
+                        <div class="row dyk-row">
+                            <img class="col s3 m12 policy-fist" src="{% static 'img/blm_2.png'%} ">
+                            <p class="col s9 m12 policy-fist-text">While Black Americans make up ~13% of the US population, they account for ~33% of the US incarcerated population and ~23% of people killed by police</p>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                <div class="divider" style="margin-bottom: 30px"></div>
+                <div class="row popout-row" style="padding-left: 3%; padding-right: 3%">
+                    <ul class="col s12 xl6 pillar-collapsible goals-collapsible ">
+                        <li class="goals-li z-depth-2">
+                            <div class="collapsible-header valign-wrapper pillar-header goals-header">
+                                <div class="collapsible-body-image" style="background: url('{% static 'img/ep-goals.jpg' %}'); background-size: 147%">
+                                </div>
+                                <div class="pillar-title">ETV Goals</div>
+                                
+                            </div>
+                            <div class="collapsible-body-pillar">
+                                <ul>
+                                    <li class="pillar-h5">
+                                        <table>
+                                            <tr class="pillar-tr">
+                                                <td class="pillar-target-td">
+                                                    <i class="material-icons pillar-target">track_changes</i> 
+                                                </td>
+                                                <td class="pillar-h5">
+                                                    Ensure that all Black Americans have the opportunity to realize their full potential unimpeded by the vestiges of racism, systemic abuse & discrimination
+                                                </td>
+                                            </tr>
+                                            <tr class="pillar-tr">
+                                                <td class="pillar-target-td">
+                                                    <i class="material-icons pillar-target">track_changes</i> 
+                                                </td>
+                                                <td class="pillar-h5">
+                                                    Engage & activate the Black community and its allies to shape & develop favorable policies
+                                                </td>
+                                            </tr>
+                                            <tr class="pillar-tr">
+                                                <td class="pillar-target-td">
+                                                    <i class="material-icons pillar-target">track_changes</i> 
+                                                </td>
+                                                <td class="pillar-h5">
+                                                    Cultivate & support leadership that advances our strategic agenda
+                                                </td>
+                                            </tr>
+                                            
+                                        </table>
+                                    </li>
+                                </ul>
+                                
+                            </div>
+                        </li>
+                    </ul> 
+                
+                    <ul class="col s12 xl6 pillar-collapsible z-depth-2">
+                        
+                        <li class="solutions-li">
+                            <div class="collapsible-header valign-wrapper pillar-header solutions-header">
+                                <div class="collapsible-body-image" style="background: url('{% static 'img/solutions.jpg' %}'); background-size: 140%; background-position-x: -30px">
+                                </div>
+                                <div class="pillar-title">ETV Solutions</div>
+                                
+                            </div>
+                            <div class="collapsible-body-pillar">
+                                <table>
+                                    <tr class="pillar-tr">
+                                        <td class="pillar-target-td">
+                                            <i class="material-icons pillar-target">check</i> 
+                                        </td>
+                                        <td class="pillar-h5">
+                                            <b><a href="{{ voting_url }}">Operation: Ballot Box™ - </a></b>How, When, and Where To Vote Safely & Reliably
+                                        </td>
+                                    </tr>
+                                    <tr class="pillar-tr">
+                                        <td class="pillar-target-td">
+                                            <i class="material-icons pillar-target">check</i> 
+                                        </td>
+                                        <td class="pillar-h5">
+                                            <b><a href="{{ voting_url }}">Lights, Camera ... Vote! - </a></b>Get Info About Voter ID Requirements & Navigate the Process to Acquire ID  
+                                        </td>
+                                    </tr>
+                                </table>
+                               
+                            </div>
+                        </li>
+                    </ul> 
+                </div>
+            </div>
+            <div class="divider" style="margin-bottom: 20px"></div>
+                <div class="row valign-wrapper mi-row">
+                    <img class="col s4 trend" src="{% static 'img/power-post-blm.jpg'%}">
+                    <blockquote class="col s8 dyk-quote">
+                        <p style="font-size: 32px"><b style="font-weight: 500">Black Votes Matter: Numbers Don't Lie!</b></p>
+                        <p style="font-size: 28px">There is power in your voice and your vote!</p>
+                        <p style="font-size: 24px">Check out our <a href="https://issuu.com/empowerthevillage/docs/the_power_post_june_2021_issue?mode=window" target="_blank">June 2021 Power Post</a> to see how Black voters have impacted recent elections</p>
+                        <b style="font-weight: 500; font-size: 24px">Now is the time to engage in strategic action with sustainable results!</b>
+                    </blockquote>
+                </div>
+                
+</div>
+</div>
+</div>
+<style>
+    .dyk-quote {
+        text-align: left;
+        border-left: dotted rgb(184, 34, 34) 2px;
+        padding-left: 3% !important;
+        margin-left: 2% !important
+    }
+    .dyk-quote p {
+        text-align: left;
+        padding-bottom: 10px !important;
+        padding:0;
+        margin: 0;
+        font-weight: 300;
+
+    }
+    .tab.disabled {
+        color: rgb(155, 155, 155)
+    }
+    .divider {
+        margin: 0;
+    }
+    
+    p {
+        font-weight: 400;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        text-align: center;
+    }
+    
+    .facts-ul li {
+        padding-bottom: 15px;
+        font-weight: 300;
+    }
+    .pillar-nav {
+        background-color: rgb(0, 0, 0);
+    }
+    .pillar-nav li a {
+        color: rgb(255, 255, 255) !important;
+    }
+    .dyk {
+        font-family: oskar-inline;
+        color:rgba(60, 60, 60, 0.947);
+        text-transform: uppercase;
+    }
+    
+    .goals-header {
+        background: rgb(191,23,23);
+        background: linear-gradient(90deg, rgba(191,23,23,0.8365721288515406) 0%, rgba(156,96,30,0.738532913165266) 49%, rgba(0, 0, 0, 0.399) 100%); 
+    }
+    .solutions-header {
+        background: rgb(191,23,23);
+        background: linear-gradient(90deg, rgba(0, 0, 0, 0.603) 0%, rgba(137, 143, 65, 0.739) 49%, rgba(44, 129, 15, 0.739) 100%); 
+    }
+    @media only screen and (min-width: 0px) {
+        .mi-row {
+            width: 100%;
+            padding-left: 5%
+        }
+        .threepercent-text {
+            padding: 0 !important;
+            margin: 0 !important;
+            font-size: 14px;
+            text-align: left
+        }
+        .policy-women-text {
+            padding: 0 !important;
+            margin: 0 !important;
+            font-size: 14px;
+            text-align: left
+        }
+        .policy-fist-text {
+            padding: 0 !important;
+            margin: 0 !important;
+            font-size: 14px;
+            text-align: left
+        }
+        
+        .dyk {
+            font-size: 38px;
+            letter-spacing: 2px;
+        }
+        .power-collapse {
+        width: 100%;
+        
+    }
+    .unemployment_ss {
+        width: 50%;
+        padding-top: 20px
+    }
+    .unemployment_ss_caption {
+        font-size: 12px;
+        padding: 0;
+        margin: 0;
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+    .dyk-row {
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+    .power-post {
+        width: 25%;
+        padding-left: 3%;
+        padding-right: 0;
+        padding-top: 5%
+    }
+    .power-post-text p {
+        margin: 0;
+        padding: 0;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-right: 3%;
+        font-size: 12px;
+        text-align: left;
+    }
+    .goals li {
+        width: 100%;
+    }
+    .power-collapse li {
+        
+    }
+    .power-collapse li div{
+        font-size: 14px;
+        padding: 2% 5%
+    }
+        blockquote {
+            font-size: 14px;
+            font-weight: 300;
+            margin-top: 30px !important;
+            margin-top: 30px !important;
+        }
+        .statistic-title {
+            font-family: oskar-inline;
+            font-size: 28px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-transform: scale(1, 0.9);
+            text-align: center;
+            background-color: rgba(154, 22, 22, 0.947);
+            padding: 15px 5px;
+            color: white
+        }
+        .collapsible li {
+            margin: 0 !important;
+        }
+        .degree-attainment-small {
+            display: block;
+            padding: 0% 5%;
+        }
+        .degree-attainment {
+            display: none;
+            padding: 0% 5%;
+        }
+        blockquote {
+            width: 90%;
+            margin-left: 5%;
+            margin-top: 7%;
+        }
+    }
+    @media only screen and (min-width: 420px) {
+        .statistic-title {
+            font-size: 32px;
+            padding: 15px 10px;
+        }
+        .tenx-text p {
+        margin: 0;
+        padding: 0;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-right: 3%;
+        font-size: 14px;
+        text-align: left;
+    }
+    .unemployment_ss_caption {
+        font-size: 14px;
+        padding: 0;
+        margin: 0;
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+    }
+    @media only screen and (min-width: 601px) {
+        .mi-row {
+            width: 95%;
+        }
+        .threepercent {
+            width: 95% !important;
+            margin-left: 2.5% !important;
+            padding-top: 22% !important;
+        }
+        .threepercent-text {
+            padding: 2% !important;
+            margin: 0 !important;
+            font-size: 16px;
+            text-align: center
+        }
+        .policy-women-text {
+            padding: 2% !important;
+            margin: 0 !important;
+            font-size: 16px;
+            text-align: center
+        }
+        .policy-fist-text {
+            padding: 2% !important;
+            margin: 0 !important;
+            font-size: 16px;
+            text-align: center
+        }
+        .policy-women {
+            width: 85% !important;
+            margin-left: 7.5% !important;
+            padding-top: 7.2% !important
+        }
+        .policy-fist {
+            width: 100% !important;
+            padding-top: 15% !important
+        }
+       
+        .goals-li {
+            width: 100%;
+    }
+    .solutions-li {
+        width: 100%;
+    }
+    .dyk {
+        font-size: 42px
+    }
+    .unemployment_ss {
+        width: 90%;
+        padding-top: 30px
+    }
+    .unemployment_ss_caption {
+        font-size: 12px;
+        padding: 0;
+        margin: 0;
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+    .dyk-row {
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+    .tenx-house {
+        width: 25%;
+        padding-left: 1%;
+        padding-right: 0;
+        padding-top: 5%
+    }
+    .tenx-text p {
+        margin: 0;
+        padding: 0;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-right: 3%;
+        font-size: 16px;
+    }
+        
+        .power-collapse {
+        width: 100%;
+        
+    }
+    .power-collapse li {
+        
+    }
+    .power-collapse li div{
+        font-size: 16px;
+        padding: 2% 10%
+    }
+        blockquote {
+            font-size: 16px;
+            margin-top: 5% !important;
+            margin-bottom: 5% !important;
+        }
+        .statistic-title {
+            font-size: 38px;
+            width: 50% !important;
+            margin-left: 25%;
+            margin-top: 5%;
+            margin-bottom: 5%;
+        }
+        
+      
+    }
+    @media only screen and (min-width: 993px) {
+        .goals-li {
+            width: 95%;
+            margin-left: 2.5% !important
+    }
+    .solutions-li {
+        width: 100%;
+    }
+        .mi-row {
+            width: 90%;
+            margin-left: 2.5% !important;
+        }
+        .threepercent {
+            width: 100% !important;
+            padding-top: 17% !important;
+            padding-bottom: 6% !important
+        }
+        .threepercent-text {
+            padding: 2% !important;
+            margin: 0 !important;
+            font-size: 16px;
+        }
+        .policy-women-text {
+            padding: 2% !important;
+            margin: 0 !important;
+            font-size: 16px;
+        }
+        .policy-fist-text {
+            padding: 2% !important;
+            margin: 0 !important;
+            font-size: 16px;
+        }
+        .policy-women {
+            width: 85% !important;
+            margin-left: 7.5% !important;
+            padding-top: 7.2% !important
+        }
+        .policy-fist {
+            width: 100% !important;
+            padding-top: 16% !important
+        }
+        blockquote {
+            font-size: 18px;
+        }
+        .pillar-body {
+            padding-left: 1% !important;
+            padding-right: 1% !important;
+        }
+        .power-collapse {
+        width: 90%;
+        margin-left: 5%
+        
+    }
+    .dyk {
+        font-size: 58px
+    }
+    .power-collapse li {
+        
+    }
+    .power-collapse li div{
+        font-size: 18px;
+        padding: 2% 5%
+    }
+        
+    }
+    @media only screen and (min-width: 1201px) {
+        .unemployment_ss {
+        width: 70%;
+        padding-top: 20px
+    }
+    .unemployment_ss_caption {
+        font-size: 14px;
+        padding: 0;
+        margin: 0;
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+    .dyk-row {
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+    .dyk {
+        padding-bottom: 20px
+    }
+    .tenx-house {
+        width: 20%;
+        padding-left: 3%;
+        padding-right: 0;
+        padding-top: 5%
+    }
+    .tenx-text p {
+        margin: 0;
+        padding: 0;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-right: 3%;
+        font-size: 22px;
+      
+    }
+}
+@media only screen and (min-width: 1400px) {
+        .unemployment_ss {
+        width: 70%;
+        padding-top: 20px
+    }
+    .unemployment_ss_caption {
+        font-size: 14px;
+        padding: 0;
+        margin: 0;
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+    .dyk-row {
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+    .dyk {
+        padding-bottom: 20px
+    }
+    .tenx-house {
+        width: 20%;
+        padding-left: 3%;
+        padding-right: 0;
+        padding-top: 5%
+    }
+    .tenx-text p {
+        margin: 0;
+        padding: 0;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-right: 3%;
+        font-size: 24px;
+        font-weight: 300
+      
+    }
+}
+</style>
+{% endblock %}

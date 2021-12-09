@@ -1,0 +1,6591 @@
+[
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Blair's Barber Shop",
+      "website": "",
+      "city": "Vineyard Haven",
+      "phone": 5083387902,
+      "category": "beauty",
+      "subcategory": "Barber"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Delilah & Linda's Unisex Beauty Salon",
+      "website": "",
+      "city": "Dorchester",
+      "phone": 6172650038,
+      "category": "beauty",
+      "subcategory": "Beauty Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "DJ ils",
+      "website": "",
+      "city": "Mattapan",
+      "phone": 6178607240,
+      "category": "beauty",
+      "subcategory": "ils"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Gypsy Barbershop",
+      "website": "",
+      "city": "Edgartown",
+      "phone": 5089394551,
+      "category": "beauty",
+      "subcategory": "Barber"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Adela’s Hair Studio",
+      "website": "http://adelashairstudio.com/",
+      "city": "Boston",
+      "phone": 6177232245,
+      "category": "beauty",
+      "subcategory": "Beauty Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Anique Nicole Hair Studio",
+      "website": "http://aniquenicolehairstudio.com/",
+      "city": "Jamaica Plain",
+      "phone": 6174774387,
+      "category": "beauty",
+      "subcategory": "Beauty Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Anita Kurl Salon",
+      "website": "http://anitakurl.com/",
+      "city": "Boston",
+      "phone": 6172662668,
+      "category": "beauty",
+      "subcategory": "Beauty Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Coils to Locs Wigs",
+      "website": "http://coilstolocs.com/",
+      "city": "Boston",
+      "phone": 8883678835,
+      "category": "beauty",
+      "subcategory": "Beauty Supply/Hair & Accessories"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Fox City Beard Company",
+      "website": "http://foxcitybeard.com/",
+      "city": "Foxborough",
+      "phone": 7742195235,
+      "category": "beauty",
+      "subcategory": "Cosmetics"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Gloria's Beauty Center",
+      "website": "http://gloriasbeautycenter.com/",
+      "city": "Allston",
+      "phone": 6177940856,
+      "category": "beauty",
+      "subcategory": "Beauty Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Salon Monet",
+      "website": "http://hairsalonmonet.com/",
+      "city": "Boston",
+      "phone": 6174250009,
+      "category": "beauty",
+      "subcategory": "Beauty Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Salon Hairapy",
+      "website": "http://salonhairapymalden.com/",
+      "city": "Malden",
+      "phone": 7814803269,
+      "category": "beauty",
+      "subcategory": "Beauty Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Shinemylocs&braids",
+      "website": "http://shinemylocsandbraids.com/",
+      "city": "West Roxbury",
+      "phone": 6173270850,
+      "category": "beauty",
+      "subcategory": "Beauty Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Sly's Barbershop",
+      "website": "http://slysbarbershop.com/",
+      "city": "Cambridge",
+      "phone": 6174913940,
+      "category": "beauty",
+      "subcategory": "Barber"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Althea's Head to Toe Salon",
+      "website": "http://www.altheasheadtotoe.wix.com/unisexsalon",
+      "city": "Mattapan",
+      "phone": 6172988543,
+      "category": "beauty",
+      "subcategory": "Beauty Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "The Loft Hair Studio",
+      "website": "https://theloft.as.me/schedule.php",
+      "city": "Medford",
+      "phone": 9782898519,
+      "category": "beauty",
+      "subcategory": "Beauty Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Artifact Soapworks",
+      "website": "http://www.artifactsoapworks.com/",
+      "city": "Cambridge",
+      "phone": "",
+      "category": "beauty",
+      "subcategory": "Beauty Supply/Hair & Accessories"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Bonita Hair Salon",
+      "website": "http://www.bonitahairsalon.com/",
+      "city": "Somerville",
+      "phone": 6177640008,
+      "category": "beauty",
+      "subcategory": "Beauty Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "DeJa Vu Skin LLC",
+      "website": "http://www.dejavuskin.com/",
+      "city": "Mattapan",
+      "phone": 5084109662,
+      "category": "beauty",
+      "subcategory": "Beauty Supply/Hair & Accessories"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Elite Lash Studio",
+      "website": "http://www.elitelashstudio.com/",
+      "city": "Boston",
+      "phone": 6172625274,
+      "category": "beauty",
+      "subcategory": "Beauty Supply/Hair & Accessories"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "stahja's Hair Bar",
+      "website": "http://www.hairbarboston.com/",
+      "city": "Boston",
+      "phone": 6179428342,
+      "category": "beauty",
+      "subcategory": "Beauty Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Hair By LynShue",
+      "website": "http://www.hairbylynshue.com/",
+      "city": "Boston",
+      "phone": 6175396755,
+      "category": "beauty",
+      "subcategory": "Beauty Supply/Hair & Accessories"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Hair It Is Barbershop, LLC",
+      "website": "http://www.hairitisbarbershop.com/",
+      "city": "Mattapan",
+      "phone": 6173221694,
+      "category": "beauty",
+      "subcategory": "Barber"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "In the Cut Barbershop",
+      "website": "http://www.inthecutboston.com/",
+      "city": "Boston",
+      "phone": 6173026017,
+      "category": "beauty",
+      "subcategory": "Barber"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Lash Season Co.",
+      "website": "http://www.lashseason.com/",
+      "city": "South Boston",
+      "phone": 6178184723,
+      "category": "beauty",
+      "subcategory": "Beauty Supply/Hair & Accessories"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Made Organics",
+      "website": "http://www.made-organics.com/",
+      "city": "Cambridge",
+      "phone": 6176427345,
+      "category": "beauty",
+      "subcategory": "Cosmetics"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Simply Erinn's Unisex Hair Salon",
+      "website": "https://www.simplyerinns.com/",
+      "city": "Cambridge",
+      "phone": 6175478098,
+      "category": "beauty",
+      "subcategory": "Beauty Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Marvelous Barber Lounge",
+      "website": "http://www.marvelouscuts.com/",
+      "city": "Boston",
+      "phone": 5088575157,
+      "category": "beauty",
+      "subcategory": "Barber"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Salvaged Roots Hair & Beauty",
+      "website": "http://www.salvagedroots.com/",
+      "city": "Dorchester",
+      "phone": 6173266673,
+      "category": "beauty",
+      "subcategory": "Beauty Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "ShopJayAnnell",
+      "website": "http://www.shopjayannell.com/",
+      "city": "Boston",
+      "phone": 7819808432,
+      "category": "beauty",
+      "subcategory": "Beauty Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Sondarya",
+      "website": "http://www.sondarya.com/",
+      "city": "North Andover",
+      "phone": 9788862779,
+      "category": "beauty",
+      "subcategory": "Beauty Supply/Hair & Accessories"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Styllistik",
+      "website": "http://www.styllistik.com/",
+      "city": "Boston",
+      "phone": 6175338961,
+      "category": "beauty",
+      "subcategory": "Beauty Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Temple of Groom",
+      "website": "http://www.templeofgroom.net/",
+      "city": "Boston",
+      "phone": 6179451621,
+      "category": "beauty",
+      "subcategory": "Barber"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Unique Cuts",
+      "website": "http://www.uniquecuts.net/",
+      "city": "Dorchester",
+      "phone": 6172964414,
+      "category": "beauty",
+      "subcategory": "Barber"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Angela's Unisex Salon",
+      "website": "https://angelasunisexsalon.business.site/",
+      "city": "Jamaica Plain",
+      "phone": 8573170876,
+      "category": "beauty",
+      "subcategory": "Beauty Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Brown and Coconut",
+      "website": "https://browndcoconut.com/",
+      "city": "Boston",
+      "phone": "",
+      "category": "beauty",
+      "subcategory": "Cosmetics"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "First Class Salon & Blowdry Bar",
+      "website": "https://firstclasssalon.wixsite.com/web2020",
+      "city": "Boston",
+      "phone": 6176691465,
+      "category": "beauty",
+      "subcategory": "Beauty Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Hair Sessions, Inc.",
+      "website": "https://hairsessionsinc.com/",
+      "city": "Boston",
+      "phone": 6178729719,
+      "category": "beauty",
+      "subcategory": "Beauty Supply/Hair & Accessories"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "House of Colour Salon",
+      "website": "https://houseofcoloursalon.com/",
+      "city": "Boston",
+      "phone": 8573172400,
+      "category": "beauty",
+      "subcategory": "Beauty Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Intriguing Hair",
+      "website": "https://intriguinghair.com/",
+      "city": "Hyde Park",
+      "phone": 6172763337,
+      "category": "beauty",
+      "subcategory": "Beauty Supply/Hair & Accessories"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Polished Hair Lounge",
+      "website": "https://polished-hair-lounge.business.site/",
+      "city": "Dorchester",
+      "phone": 6178330009,
+      "category": "beauty",
+      "subcategory": "Beauty Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Sarahy Beauty Center inc",
+      "website": "https://square.site/book/QNRYJNP97XDGK/sarahy-beauty-center-dorchester-ma",
+      "city": "Dorchester",
+      "phone": 6175060643,
+      "category": "beauty",
+      "subcategory": "Beauty Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Alluring Beauty",
+      "website": "https://www.alluringbeautysalon.com/",
+      "city": "Jamaica Plain",
+      "phone": 6179834090,
+      "category": "beauty",
+      "subcategory": "Beauty Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Cut N Edge - Boston",
+      "website": "https://www.cutnedgeboston.com/",
+      "city": "Boston",
+      "phone": 6178679200,
+      "category": "beauty",
+      "subcategory": "Barber"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Dazzles Hair Salon and Beauty Supply Store",
+      "website": "https://www.facebook.com/DazzlesHairSalon/",
+      "city": "Roslindale",
+      "phone": 6179809276,
+      "category": "beauty",
+      "subcategory": "Beauty Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "James Harris Intertiol",
+      "website": "https://jamesharrisinter.wixsite.com/website",
+      "city": "Jamaica Plain",
+      "phone": 7733989839,
+      "category": "beauty",
+      "subcategory": "Beauty Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Maria’s Hair Fashion",
+      "website": "https://www.facebook.com/Mariashairfashionddayspa/",
+      "city": "Jamaica Plain",
+      "phone": 6172907947,
+      "category": "beauty",
+      "subcategory": "Beauty Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Mike's Locs & Braids",
+      "website": "https://www.facebook.com/MikeLocsBraids/",
+      "city": "Roslindale",
+      "phone": 6173236737,
+      "category": "beauty",
+      "subcategory": "Beauty Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Thy Hair Salon",
+      "website": "https://www.facebook.com/pureluxehairsalon/",
+      "city": "Boston",
+      "phone": 8572054445,
+      "category": "beauty",
+      "subcategory": "Beauty Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Sho Stylez, Inc",
+      "website": "https://www.facebook.com/shostylez/",
+      "city": "Boston",
+      "phone": 6172220142,
+      "category": "beauty",
+      "subcategory": "Beauty Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Liz's Hair Care",
+      "website": "https://www.lizshaircare.com/",
+      "city": "Boston",
+      "phone": 6172322705,
+      "category": "beauty",
+      "subcategory": "Beauty Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Pink and Pretty",
+      "website": "https://www.pinkandpretty.co/",
+      "city": "Dorchester",
+      "phone": 6178223558,
+      "category": "beauty",
+      "subcategory": "ils"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Sharm turals",
+      "website": "https://www.sharmturals.com/",
+      "city": "Framingham",
+      "phone": "",
+      "category": "beauty",
+      "subcategory": "Beauty Supply/Hair & Accessories"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Lisselot Beauty Salon",
+      "website": "https://www.yelp.com/biz/lisselot-beauty-salon-boston",
+      "city": "Boston",
+      "phone": 6179972358,
+      "category": "beauty",
+      "subcategory": "Beauty Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Jerison's Barber Shop",
+      "website": "",
+      "city": "Jamaica Plain",
+      "phone": 8573170876,
+      "category": "beauty",
+      "subcategory": "Barber"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Lawsons Barbershop",
+      "website": "",
+      "city": "Roxbury",
+      "phone": 5089443475,
+      "category": "beauty",
+      "subcategory": "Barber"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "The Biz Unisex Salon",
+      "website": "",
+      "city": "Mattapan",
+      "phone": 6175930204,
+      "category": "beauty",
+      "subcategory": "Beauty Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Thonys Barber Shop",
+      "website": "",
+      "city": "Boston",
+      "phone": 6174274736,
+      "category": "beauty",
+      "subcategory": "Barber"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Frugal Bookstore",
+      "website": "Frugal Bookstore",
+      "city": "Roxbury",
+      "phone": 6175411722,
+      "category": "books",
+      "subcategory": "Book Store"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Footprints Cafe LLC",
+      "website": "https://footprintscafellc.com/",
+      "city": "Buzzards Bay",
+      "phone": "",
+      "category": "books",
+      "subcategory": "Book Store"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Khelsea Purvis Editorial Services LLC",
+      "website": "https://www.linkedin.com/in/khelsea-purvis/",
+      "city": "Randolph",
+      "phone": "",
+      "category": "books",
+      "subcategory": "Publishing"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Olive Tree Books-n-Voices",
+      "website": "Olive Tree Books-n-Voices",
+      "city": "Springfield",
+      "phone": 4137376400,
+      "category": "books",
+      "subcategory": "Book Store"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "The Million Year Picnic Comic Shop",
+      "website": "The Million Year Picnic Comic Shop",
+      "city": "Cambridge",
+      "phone": 6174926763,
+      "category": "books",
+      "subcategory": "Book Store"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Allston Towing Services and Repairs, Inc.",
+      "website": "",
+      "city": "Allston",
+      "phone": 6177718690,
+      "category": "cars",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Anthony's Auto Repair",
+      "website": "",
+      "city": "Dorchester",
+      "phone": 6172651211,
+      "category": "cars",
+      "subcategory": "Auto Repair/Services"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "D&R Auto Repair Corp",
+      "website": "",
+      "city": "Boston",
+      "phone": 6173268228,
+      "category": "cars",
+      "subcategory": "Auto Repair/Services"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Hicks Auto Body, Inc.",
+      "website": "http://hicksautobodyinc.com/?hg=0",
+      "city": "Dorchester",
+      "phone": 6178251545,
+      "category": "cars",
+      "subcategory": "Auto Repair/Services"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "WDI Appraisal Service",
+      "website": "https://www.manta.com/c/mmq351c/wdi-appraisal-service",
+      "city": "Jamaica Plain",
+      "phone": 6174451171,
+      "category": "cars",
+      "subcategory": "Auto Repair/Services"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "MRV Auto Parts, Inc.",
+      "website": "https://www.treadhunter.com/tire-shops/MA/jamaica-plain/16264-mrv-auto-parts",
+      "city": "Jamaica Plain",
+      "phone": 6178587859,
+      "category": "cars",
+      "subcategory": "Auto Repair/Services"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "PC Auto Repair",
+      "website": "http://www.pcautorepair.org/",
+      "city": "Brighton",
+      "phone": 6177870767,
+      "category": "cars",
+      "subcategory": "Auto Repair/Services"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Universal Auto",
+      "website": "https://www.universalautomotor.com/",
+      "city": "Boston",
+      "phone": 6179875657,
+      "category": "cars",
+      "subcategory": "Auto Repair/Services"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Michael Araujo Car Detailing",
+      "website": "",
+      "city": "Oak Bluffs",
+      "phone": 5086960725,
+      "category": "cars",
+      "subcategory": "Auto Repair/Services"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Wave Express Gas Station",
+      "website": "",
+      "city": "Mattapan",
+      "phone": 6176949925,
+      "category": "cars",
+      "subcategory": "Gas Station"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Romper Room Childcare Center",
+      "website": "https://www.romperroomonline.com/",
+      "city": "Boston",
+      "phone": 8572771251,
+      "category": "child",
+      "subcategory": "Childcare/Daycare/Preschool"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Little Leaders Prep School",
+      "website": "https://www.facebook.com/Little-Leaders-Prep-School-Inc-331190986977322/",
+      "city": "Dorchester Center",
+      "phone": 6172656361,
+      "category": "child",
+      "subcategory": "Childcare/Daycare/Preschool"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Excel Academy",
+      "website": "https://www.excelacademy.org/our-schools/east-boston/",
+      "city": "East Boston",
+      "phone": 6172829100,
+      "category": "child",
+      "subcategory": "Childcare/Daycare/Preschool"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Little Steps Child Care",
+      "website": "http://littlestepslearning.net/",
+      "city": "Scituate",
+      "phone": 8573831194,
+      "category": "child",
+      "subcategory": "Childcare/Daycare/Preschool"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Hip Baby Gear",
+      "website": "http://www.romperroomonline.com/",
+      "city": "Marblehead",
+      "phone": 7816315556,
+      "category": "child",
+      "subcategory": "Baby Products"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Tender living Family Child Care",
+      "website": "Tender living Family Child Care",
+      "city": "Mattapan",
+      "phone": 8572373068,
+      "category": "child",
+      "subcategory": "Childcare/Daycare/Preschool"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "WEE CARE JP",
+      "website": "WEE CARE JP",
+      "city": "Jamaica Plain",
+      "phone": 6175227901,
+      "category": "child",
+      "subcategory": "Childcare/Daycare/Preschool"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "All Time Service, Inc.",
+      "website": "http://www.alltimeservice.com/",
+      "city": "Jamaica Plain",
+      "phone": 6175240635,
+      "category": "cleaning",
+      "subcategory": "Cleaning"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Boston Cleaning Services",
+      "website": "Boston Cleaning Services",
+      "city": "Dorchester",
+      "phone": 6179535888,
+      "category": "cleaning",
+      "subcategory": "Cleaning"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Breezie Cleaning and Janitorial Services",
+      "website": "Breezie Cleaning and Janitorial Services",
+      "city": "Roxbury",
+      "phone": 8662926228,
+      "category": "cleaning",
+      "subcategory": "Cleaning"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Citizens Cleaning Services",
+      "website": "Citizens Cleaning Services",
+      "city": "Roslindale",
+      "phone": 8574172264,
+      "category": "cleaning",
+      "subcategory": "Cleaning"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Cleanlux Cleaning Services",
+      "website": "Cleanlux Cleaning Services",
+      "city": "Boston",
+      "phone": 6173863144,
+      "category": "cleaning",
+      "subcategory": "Cleaning"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "EMZ Rainbow Laundromat, LLC",
+      "website": "EMZ Rainbow Laundromat, LLC",
+      "city": "Dorchester Center",
+      "phone": 6178253200,
+      "category": "cleaning",
+      "subcategory": "Laundry"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "F Cleaning",
+      "website": "F Cleaning",
+      "city": "Dorchester",
+      "phone": 6172799144,
+      "category": "cleaning",
+      "subcategory": "Cleaning"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Day In Cleaners",
+      "website": "https://dayincleaners.com/",
+      "city": "Boston",
+      "phone": 6174073185,
+      "category": "cleaning",
+      "subcategory": "Cleaning"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Chapman Cleaning Company LLC",
+      "website": "https://www.facebook.com/profile.php?id=100029145656316",
+      "city": "Quincy",
+      "phone": 3024071722,
+      "category": "cleaning",
+      "subcategory": "Cleaning"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Bright Cleaning Services",
+      "website": "http://www.brightcleaningserv.com/about_us",
+      "city": "Revere",
+      "phone": 7816320056,
+      "category": "cleaning",
+      "subcategory": "Cleaning"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "The Maids Boston",
+      "website": "http://www.boston-maids.com/",
+      "city": "Jamaica Plain",
+      "phone": 6175240300,
+      "category": "cleaning",
+      "subcategory": "Cleaning"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Mass Premium Cleaning",
+      "website": "https://www.masspremiumcleaning.com/",
+      "city": "Everett",
+      "phone": 8573641111,
+      "category": "cleaning",
+      "subcategory": "Cleaning"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Deliver Wash",
+      "website": "https://deliverwash.com/",
+      "city": "Boston",
+      "phone": 8572641325,
+      "category": "cleaning",
+      "subcategory": "Laundry"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Sparkle Clean",
+      "website": "https://www.sparklecleanboston.com/",
+      "city": "Boston",
+      "phone": 7813758475,
+      "category": "cleaning",
+      "subcategory": "Cleaning"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Sunnyside Property Services",
+      "website": "https://sunnysidepro.com/",
+      "city": "Dorchester",
+      "phone": 6179057109,
+      "category": "cleaning",
+      "subcategory": "Cleaning"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "J&P CLEANERS",
+      "website": "http://www.jpdrycleaners.com/",
+      "city": "Jamaica Plain",
+      "phone": 6179084687,
+      "category": "cleaning",
+      "subcategory": "Dry Cleaning"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Southern Hands Cleaning Service",
+      "website": "http://www.southernhandscleaning.com/",
+      "city": "Roxbury",
+      "phone": 6177080693,
+      "category": "cleaning",
+      "subcategory": "Cleaning"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "K & K Cleaning",
+      "website": "K & K Cleaning",
+      "city": "Framingham",
+      "phone": 6177042719,
+      "category": "cleaning",
+      "subcategory": "Cleaning"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Mass Janitorial Supplies",
+      "website": "Mass Janitorial Supplies",
+      "city": "Brighton",
+      "phone": 6176808180,
+      "category": "cleaning",
+      "subcategory": "Cleaning"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Mop in Hand Cleaning Services",
+      "website": "Mop in Hand Cleaning Services",
+      "city": "Boston",
+      "phone": 6178035581,
+      "category": "cleaning",
+      "subcategory": "Cleaning"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Tremendous Maid LLC",
+      "website": "Tremendous Maid LLC",
+      "city": "Dorchester",
+      "phone": 6175531393,
+      "category": "cleaning",
+      "subcategory": "Cleaning"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Wilson Cleaning Company",
+      "website": "Wilson Cleaning Company",
+      "city": "Boston",
+      "phone": 6177081715,
+      "category": "cleaning",
+      "subcategory": "Cleaning"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Pink Shoe Lounge",
+      "website": "http://pslboutique.com/",
+      "city": "Boston",
+      "phone": 7818583498,
+      "category": "clothing",
+      "subcategory": "Footwear"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Colibri Crystal Couture",
+      "website": "https://www.facebook.com/ColibriCrystalLLC/",
+      "city": "Boston",
+      "phone": "",
+      "category": "clothing",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Kréyol",
+      "website": "https://iamkreyol.com/",
+      "city": "Boston",
+      "phone": "",
+      "category": "clothing",
+      "subcategory": "Apparel"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Cuddlesxo",
+      "website": "https://cuddlesxo.myshopify.com/?fbclid=IwAR05OjStgTiUCOAQEGDbyVINTskGnII2aHXD03JtS9ntACTh-dBrtTStu38",
+      "city": "Boston",
+      "phone": "",
+      "category": "clothing",
+      "subcategory": "Apparel"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "I Am Apparel",
+      "website": "https://www.iamfashionmens.com/",
+      "city": "Boston",
+      "phone": "",
+      "category": "clothing",
+      "subcategory": "Apparel"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Concrete Royalty",
+      "website": "https://www.concreteroyalty.com/#",
+      "city": "Dorchester",
+      "phone": 8576542587,
+      "category": "clothing",
+      "subcategory": "Apparel"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Bondij Clothing",
+      "website": "https://bondijclothing.com/",
+      "city": "Milton",
+      "phone": "",
+      "category": "clothing",
+      "subcategory": "Apparel"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Spider Apparel",
+      "website": "https://spiderapparelonline.com/",
+      "city": "Onset",
+      "phone": "",
+      "category": "clothing",
+      "subcategory": "Apparel"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Villeside Customs",
+      "website": "https://villesidecustoms.com/",
+      "city": "Somerville",
+      "phone": "",
+      "category": "clothing",
+      "subcategory": "Apparel"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Carlo Van Clothing",
+      "website": "https://www.instagram.com/carlovanclothing/?hl=en",
+      "city": "Springfield",
+      "phone": "",
+      "category": "clothing",
+      "subcategory": "Apparel"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "ALT2Crafts",
+      "website": "https://www.facebook.com/alt2crafts/",
+      "city": "Boston",
+      "phone": 8572674116,
+      "category": "clothing",
+      "subcategory": "Apparel"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "JeLike Boutique",
+      "website": "https://jelikeboutique.com/",
+      "city": "Boston/Online",
+      "phone": 7813668480,
+      "category": "clothing",
+      "subcategory": "Apparel"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Tasha Michelle Kloset",
+      "website": "https://www.tashamichellekloset.com/",
+      "city": "Dorchester Center",
+      "phone": 6173266597,
+      "category": "clothing",
+      "subcategory": "Apparel"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Legendary MV",
+      "website": "https://legendarymv.com/",
+      "city": "Oak Bluffs",
+      "phone": 4102077905,
+      "category": "clothing",
+      "subcategory": "Apparel"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Saint-aubin-retail & Distribution",
+      "website": "https://saintaubinretail.com/",
+      "city": "",
+      "phone": 6179914871,
+      "category": "clothing",
+      "subcategory": "Apparel"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "33Fusion",
+      "website": "https://www.33fusion.com/password",
+      "city": "Boston",
+      "phone": 6177356879,
+      "category": "clothing",
+      "subcategory": "Apparel"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "House of Tafari Collection",
+      "website": "https://tafariwraps.com/",
+      "city": "Boston",
+      "phone": 6179048561,
+      "category": "clothing",
+      "subcategory": "Apparel"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Juanda's Hattitude",
+      "website": "https://www.instagram.com/juandashattitude/?hl=en",
+      "city": "Dorchester Center",
+      "phone": 6173196504,
+      "category": "clothing",
+      "subcategory": "Apparel"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Francois' Fine Tailoring",
+      "website": "",
+      "city": "Edgartown",
+      "phone": 5086279393,
+      "category": "clothing",
+      "subcategory": "Apparel"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Deloris' Designs",
+      "website": "http://www.delorisdesigns.com/",
+      "city": "Vineyard Haven",
+      "phone": 5085603352,
+      "category": "clothing",
+      "subcategory": "Apparel"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Dareales",
+      "website": "http://www.dareales.com/",
+      "city": "Boston",
+      "phone": 6173798001,
+      "category": "clothing",
+      "subcategory": "Apparel"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Jahzara Fashion House",
+      "website": "http://www.jahzaradesignstudio.com/",
+      "city": "Boston",
+      "phone": 6179100476,
+      "category": "clothing",
+      "subcategory": "Apparel"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Bonbon-T",
+      "website": "https://bonbontonline.com/",
+      "city": "Edgartown",
+      "phone": "",
+      "category": "clothing",
+      "subcategory": "Apparel"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Lennox & Harvey",
+      "website": "https://lennoxandharvey.com/",
+      "city": "Vineyard Haven",
+      "phone": 5086879372,
+      "category": "clothing",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Make It Persol Designs",
+      "website": "http://makeitpersoldesigns.com/",
+      "city": "Roxbury",
+      "phone": 6174450424,
+      "category": "clothing",
+      "subcategory": "Apparel"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "OKW, Inc.",
+      "website": "https://www.okwfashion.com/",
+      "city": "Boston",
+      "phone": 6172664114,
+      "category": "clothing",
+      "subcategory": "Apparel"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Sideline Brand",
+      "website": "https://sidelinebrand.com/",
+      "city": "Vineyard Haven",
+      "phone": "",
+      "category": "clothing",
+      "subcategory": "Apparel"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "TNT Custom Printed T Shirts",
+      "website": "https://www.facebook.com/tntcustomprintedtshirts/",
+      "city": "Dorchester",
+      "phone": 8002719226,
+      "category": "clothing",
+      "subcategory": "Apparel"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Stars Branding",
+      "website": "https://www.starsapparel.com/",
+      "city": "East Boston",
+      "phone": 6175670000,
+      "category": "clothing",
+      "subcategory": "Apparel"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Designs by Rey",
+      "website": "https://designsbyrey.com/",
+      "city": "Jamaica Plains",
+      "phone": 8572478055,
+      "category": "clothing",
+      "subcategory": "Apparel"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "MadeINcubator, Inc",
+      "website": "https://www.madeincboston.com/",
+      "city": "Boston",
+      "phone": 8575447271,
+      "category": "clothing",
+      "subcategory": "Apparel"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "A-Plus Welding and Engineering, Inc.",
+      "website": "A-Plus Welding and Engineering, Inc.",
+      "city": "Roxbury",
+      "phone": 8573896243,
+      "category": "construction",
+      "subcategory": "Construction/engineering"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "A.C.S. Mechanical, LLC",
+      "website": "A.C.S. Mechanical, LLC",
+      "city": "Dorchester",
+      "phone": 7813081151,
+      "category": "construction",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Abel Floor Covering",
+      "website": "http://www.abelfloorcovering.com/",
+      "city": "Dorchester",
+      "phone": 6172880103,
+      "category": "construction",
+      "subcategory": "Home improvement"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Academy Tree Service",
+      "website": "Academy Tree Service",
+      "city": "Methuen",
+      "phone": 9786858749,
+      "category": "construction",
+      "subcategory": "Home improvement"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Affordable Construction, Inc.",
+      "website": "Affordable Construction, Inc.",
+      "city": "Dorchester",
+      "phone": 6177994868,
+      "category": "construction",
+      "subcategory": "Construction/engineering"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Atlas Y Value Hardware",
+      "website": "Atlas Y Value Hardware",
+      "city": "West Roxbury",
+      "phone": 6173259494,
+      "category": "construction",
+      "subcategory": "Home improvement"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "B. Williams Painting Company",
+      "website": "B. Williams Painting Company",
+      "city": "Hyde Park",
+      "phone": 6173610134,
+      "category": "construction",
+      "subcategory": "Home improvement"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Boggs Properties, LLC",
+      "website": "Boggs Properties, LLC",
+      "city": "Dorchester",
+      "phone": 6172824474,
+      "category": "construction",
+      "subcategory": "Home improvement"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Bros Home Improvement",
+      "website": "Bros Home Improvement",
+      "city": "Brockton",
+      "phone": 7744507312,
+      "category": "construction",
+      "subcategory": "Home improvement"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Bryant Associates, Inc.",
+      "website": "https://www.bryant-engrs.com/",
+      "city": "Boston",
+      "phone": 6172480300,
+      "category": "construction",
+      "subcategory": "Construction/engineering"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Carl-Louis & Company, Inc.",
+      "website": "Carl-Louis & Company, Inc.",
+      "city": "Dorchester",
+      "phone": 6172657324,
+      "category": "construction",
+      "subcategory": "Plumbing"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Chaps Building Magement & Maintence",
+      "website": "http://chapsservices.com/",
+      "city": "Dorchester",
+      "phone": 6172650622,
+      "category": "construction",
+      "subcategory": "Home improvement"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Cross-Spectrum Acoustics LLC",
+      "website": "https://csacoustics.com/",
+      "city": "East Longmeadow",
+      "phone": 4133155770,
+      "category": "construction",
+      "subcategory": "Construction/engineering"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Crosswinds Enterprises, Inc.",
+      "website": "Crosswinds Enterprises, Inc.",
+      "city": "Dorchester",
+      "phone": 6174455100,
+      "category": "construction",
+      "subcategory": "Construction/engineering"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Design Construction Consulting Services",
+      "website": "Design Construction Consulting Services",
+      "city": "Dorchester",
+      "phone": 6175410900,
+      "category": "construction",
+      "subcategory": "Construction/engineering"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Designer Masonry Inc.",
+      "website": "Designer Masonry Inc.",
+      "city": "Dorchester",
+      "phone": 6174749882,
+      "category": "construction",
+      "subcategory": "Construction/engineering"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Devon Plumbing & Heating Corp.",
+      "website": "Devon Plumbing & Heating Corp.",
+      "city": "Mattapan",
+      "phone": 6172982728,
+      "category": "construction",
+      "subcategory": "Plumbing"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Done Right Building Services, Inc.",
+      "website": "https://www.drbfacilityservices.com/",
+      "city": "Boston",
+      "phone": 6172360155,
+      "category": "construction",
+      "subcategory": "Home improvement"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Drywall Plus, Inc.",
+      "website": "Drywall Plus, Inc.",
+      "city": "Dorchester",
+      "phone": 6174454287,
+      "category": "construction",
+      "subcategory": "Construction/engineering"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Eco Waste Disposal and Container Storage, Inc.",
+      "website": "Eco Waste Disposal and Container Storage, Inc.",
+      "city": "Dorchester",
+      "phone": 6179295900,
+      "category": "construction",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Excelle Masonry, Inc.",
+      "website": "Excelle Masonry, Inc.",
+      "city": "Mattapan",
+      "phone": 6173647971,
+      "category": "construction",
+      "subcategory": "Construction/engineering"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Fosters Electric Service",
+      "website": "Fosters Electric Service",
+      "city": "Mattapan",
+      "phone": 6172963820,
+      "category": "construction",
+      "subcategory": "Electrical"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "G & O, Inc.",
+      "website": "https://www.facebook.com/GandOconstructiondroofing/",
+      "city": "Dorchester",
+      "phone": 6172824400,
+      "category": "construction",
+      "subcategory": "Construction/engineering"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "General A.C. and Heating, Co.",
+      "website": "General A.C. and Heating, Co.",
+      "city": "Dorchester",
+      "phone": 6174277370,
+      "category": "construction",
+      "subcategory": "HVAC"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Geo's Electrical Service, Inc.",
+      "website": "Geo's Electrical Service, Inc.",
+      "city": "Dorchester",
+      "phone": 6172961124,
+      "category": "construction",
+      "subcategory": "Electrical"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Glee All Phase",
+      "website": "Glee All Phase",
+      "city": "Mattapan",
+      "phone": 6172295317,
+      "category": "construction",
+      "subcategory": "Home improvement"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Gomes Plumbing & Heating Company, LLC",
+      "website": "https://gomesplumbingheatingandcooling.com/",
+      "city": "Dorchester",
+      "phone": 6178187601,
+      "category": "construction",
+      "subcategory": "Plumbing"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "H.B. Plumbing and Heating",
+      "website": "H.B. Plumbing and Heating",
+      "city": "Dorchester",
+      "phone": 7818179045,
+      "category": "construction",
+      "subcategory": "Plumbing"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Handy Hands",
+      "website": "Handy Hands",
+      "city": "Boston",
+      "phone": 6177528059,
+      "category": "construction",
+      "subcategory": "Construction/engineering"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Harvey's Professiol Painting",
+      "website": "Harvey's Professiol Painting",
+      "city": "Boston",
+      "phone": 8572443390,
+      "category": "construction",
+      "subcategory": "Home improvement"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Aponte Development Inc",
+      "website": "http://www.apontedevelopment.com/",
+      "city": "Boston",
+      "phone": 6174774733,
+      "category": "construction",
+      "subcategory": "Home improvement"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Priced Right Junk Removal",
+      "website": "https://pricedrightjunkremovalllc.com/",
+      "city": "Ipswich",
+      "phone": 6175040045,
+      "category": "construction",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Bimshire Construction Co, Inc.",
+      "website": "https://www.bimshireco.com/",
+      "city": "Boston",
+      "phone": 6177040107,
+      "category": "construction",
+      "subcategory": "Construction/engineering"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "rman Construction",
+      "website": "https://rmanconstruction.com/",
+      "city": "Boston",
+      "phone": 8886276261,
+      "category": "construction",
+      "subcategory": "Construction/engineering"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Atmos Heating and Cooling",
+      "website": "https://www.atmoshvac.net/",
+      "city": "Dorchester",
+      "phone": 6179097746,
+      "category": "construction",
+      "subcategory": "HVAC"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Anvil Steel Engineering inc",
+      "website": "http://anvilsteelinc.com/",
+      "city": "Taunton",
+      "phone": 6177991614,
+      "category": "construction",
+      "subcategory": "Construction/engineering"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Turbo Construction",
+      "website": "https://www.facebook.com/turboconstruction856/",
+      "city": "West Roxbury",
+      "phone": 6179978378,
+      "category": "construction",
+      "subcategory": "Construction/engineering"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Bartholomew Lighting",
+      "website": "https://sites.google.com/view/bartholomew-lighting/home",
+      "city": "Cambridge",
+      "phone": 2069137187,
+      "category": "construction",
+      "subcategory": "Electrical"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "LXC Engineering Group, LLC",
+      "website": "https://lxceg.com/",
+      "city": "Boston",
+      "phone": 6174313202,
+      "category": "construction",
+      "subcategory": "Construction/engineering"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Family Hardware Corp.",
+      "website": "https://familyhardwareco.com/?utm_source=gmb&utm_medium=referral",
+      "city": "Dorchester",
+      "phone": 6172822114,
+      "category": "construction",
+      "subcategory": "Home improvement"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Janey Construction Magement & Consulting, Inc.",
+      "website": "https://janeyco.com/",
+      "city": "Boston",
+      "phone": 6172676200,
+      "category": "construction",
+      "subcategory": "Construction/engineering"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Jet-A-Way Disposal, Inc.",
+      "website": "Jet-A-Way Disposal, Inc.",
+      "city": "Roxbury",
+      "phone": 6175414009,
+      "category": "construction",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "John B. Cruz Construction Company, Inc.",
+      "website": "http://cruzcompanies.com/",
+      "city": "Roxbury",
+      "phone": 6174456901,
+      "category": "construction",
+      "subcategory": "Construction/engineering"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "John Tile and Marble",
+      "website": "John Tile and Marble",
+      "city": "Boston",
+      "phone": 6173724387,
+      "category": "construction",
+      "subcategory": "Home improvement"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "L & H Plumbing Company, Inc.",
+      "website": "L & H Plumbing Company, Inc.",
+      "city": "Boston",
+      "phone": 6174452937,
+      "category": "construction",
+      "subcategory": "Plumbing"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "L. Martinez Construction, Inc.",
+      "website": "L. Martinez Construction, Inc.",
+      "city": "Boston",
+      "phone": 6173317270,
+      "category": "construction",
+      "subcategory": "Construction/engineering"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Lowe Plumbing & Heating",
+      "website": "Lowe Plumbing & Heating",
+      "city": "Dorchester",
+      "phone": 6175413446,
+      "category": "construction",
+      "subcategory": "HVAC"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Mass Construction and Magement, Inc.",
+      "website": "https://www.massconstruct.com/",
+      "city": "Mattapan",
+      "phone": 7818866901,
+      "category": "construction",
+      "subcategory": "Construction/engineering"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Mass Remodeling and Painting, Inc.",
+      "website": "https://www.massremodelingandpainting.com/",
+      "city": "Boston",
+      "phone": 6178741837,
+      "category": "construction",
+      "subcategory": "Construction/engineering"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "McNish Building and Development, Inc.",
+      "website": "https://www.mcnishbuildinganddevelopment.com/",
+      "city": "Dorchester",
+      "phone": 6175010075,
+      "category": "construction",
+      "subcategory": "Construction/engineering"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Mill City Environmental Corporation",
+      "website": "https://www.millcityenv.com/",
+      "city": "Lowell",
+      "phone": 9786546741,
+      "category": "construction",
+      "subcategory": "Construction/engineering"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "New England Mechanical Co., Inc.",
+      "website": "New England Mechanical Co., Inc.",
+      "city": "Mattapan",
+      "phone": 6172989196,
+      "category": "construction",
+      "subcategory": "Electrical"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Nova Sheen Corporation",
+      "website": "Nova Sheen Corporation",
+      "city": "Dorchester",
+      "phone": 6174420488,
+      "category": "construction",
+      "subcategory": "Construction/engineering"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "One Way Development, Inc.",
+      "website": "https://www.onewaydevelopment.com/",
+      "city": "Roxbury",
+      "phone": 6173905469,
+      "category": "construction",
+      "subcategory": "Construction/engineering"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Outkast Electrical Contractors",
+      "website": "https://www.outkastelectrical.com/",
+      "city": "Dorchester",
+      "phone": 6178220244,
+      "category": "construction",
+      "subcategory": "Electrical"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Parrish Painting, Development and Construction, Inc.",
+      "website": "Parrish Painting, Development and Construction, Inc.",
+      "city": "Boston",
+      "phone": 6175158860,
+      "category": "construction",
+      "subcategory": "Construction/engineering"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Payne Contracting Company",
+      "website": "Payne Contracting Company",
+      "city": "Dorchester",
+      "phone": 6178922921,
+      "category": "construction",
+      "subcategory": "Construction/engineering"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Premium Insulation Services",
+      "website": "https://premiuminsul.com/",
+      "city": "Mattapan",
+      "phone": 6177926978,
+      "category": "construction",
+      "subcategory": "HVAC"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Prestige Construction, LLC",
+      "website": "Prestige Construction, LLC",
+      "city": "Boston",
+      "phone": 6176526853,
+      "category": "construction",
+      "subcategory": "Construction/engineering"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Reflection Cleaning and Painting",
+      "website": "Reflection Cleaning and Painting",
+      "city": "Dorchester",
+      "phone": 6174425426,
+      "category": "construction",
+      "subcategory": "Construction/engineering"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Reform Masonry",
+      "website": "Reform Masonry",
+      "city": "Hyde Park",
+      "phone": 6173647937,
+      "category": "construction",
+      "subcategory": "Construction/engineering"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Repeat History Restoration, LLC",
+      "website": "Repeat History Restoration, LLC",
+      "city": "Roxbury",
+      "phone": 6174275755,
+      "category": "construction",
+      "subcategory": "Construction/engineering"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "S. Barzola Concrete Corp.",
+      "website": "https://www.sbarzolaconstruction.com/",
+      "city": "Weymouth",
+      "phone": 7818176485,
+      "category": "construction",
+      "subcategory": "Construction/engineering"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Slayton & Weaver Painting",
+      "website": "Slayton & Weaver Painting",
+      "city": "Dorchester",
+      "phone": 6174596080,
+      "category": "construction",
+      "subcategory": "Construction/engineering"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Tara Construction Company, Inc.",
+      "website": "Tara Construction Company, Inc.",
+      "city": "Boston",
+      "phone": 7813916400,
+      "category": "construction",
+      "subcategory": "Construction/engineering"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Thomas Construction Company, Inc.",
+      "website": "Thomas Construction Company, Inc.",
+      "city": "Dorchester",
+      "phone": 6174278443,
+      "category": "construction",
+      "subcategory": "Construction/engineering"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Turbo Construction",
+      "website": "Turbo Construction",
+      "city": "Boston",
+      "phone": 6179814696,
+      "category": "construction",
+      "subcategory": "Construction/engineering"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "V. Francis Mechanical, Inc.",
+      "website": "V. Francis Mechanical, Inc.",
+      "city": "Hyde Park",
+      "phone": 6174427936,
+      "category": "construction",
+      "subcategory": "Construction/engineering"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Villanova Construction, Inc.",
+      "website": "Villanova Construction, Inc.",
+      "city": "Roslindale",
+      "phone": 6175947990,
+      "category": "construction",
+      "subcategory": "Construction/engineering"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Walter Fallas Electric",
+      "website": "Walter Fallas Electric",
+      "city": "Jamaica Plain",
+      "phone": 6177194013,
+      "category": "construction",
+      "subcategory": "Electrical"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Wellington G. Rossi Construction Systems",
+      "website": "Wellington G. Rossi Construction Systems",
+      "city": "West Roxbury",
+      "phone": 6173255146,
+      "category": "construction",
+      "subcategory": "Construction/engineering"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Clark Construction Group, Ltd.",
+      "website": "https://www.buzzfile.com/business/The-Clark-Construction-Group-Ltd-617-241-7990",
+      "city": "Charlestown",
+      "phone": 6172417990,
+      "category": "construction",
+      "subcategory": "Construction/Engineering"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "The Edwards Group",
+      "website": "https://www.dnb.com/business-directory/company-profiles.the_edwards_group_llc.797c4bc70d1e9f5d2f616806046e60cb.html",
+      "city": "Boston",
+      "phone": 6175939875,
+      "category": "construction",
+      "subcategory": "Construction/Engineering"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "ReIdren Business Group",
+      "website": "https://www.reidren.com/",
+      "city": "Roxbury",
+      "phone": 7657343736,
+      "category": "education",
+      "subcategory": "Tutoring/ Academic Planning/ Leadership"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Babbling Brook Family Tutoring Service",
+      "website": "Babbling Brook Family Tutoring Service",
+      "city": "East Boston",
+      "phone": 8572640802,
+      "category": "education",
+      "subcategory": "Tutoring/ Academic Planning/ Leadership"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Educatiol Consultation Services",
+      "website": "Educatiol Consultation Services",
+      "city": "Roxbury",
+      "phone": 6174271428,
+      "category": "education",
+      "subcategory": "Tutoring/ Academic Planning/ Leadership"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "G|Code House",
+      "website": "https://www.thegcodehouse.com/",
+      "city": "Boston",
+      "phone": "",
+      "category": "education",
+      "subcategory": "Tutoring/ Academic Planning/ Leadership"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Mbadika",
+      "website": "https://mbadika.org/",
+      "city": "Boston",
+      "phone": 6179822921,
+      "category": "education",
+      "subcategory": "Tutoring/ Academic Planning/ Leadership"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "T & C Phonetic Reading System",
+      "website": "http://www.tncreading.com/",
+      "city": "Dorchester",
+      "phone": 8574441450,
+      "category": "education",
+      "subcategory": "Tutoring/ Academic Planning/ Leadership"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Eduporium, Inc.",
+      "website": "https://www.eduporium.com/",
+      "city": "Newton",
+      "phone": 6176007230,
+      "category": "education",
+      "subcategory": "Tutoring/ Academic Planning/ Leadership"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "The Witherspoon Institute",
+      "website": "http://www.thewitherspooninstitute.com/",
+      "city": "Roxbury",
+      "phone": 6178186422,
+      "category": "education",
+      "subcategory": "Etiquette"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Rubix Strategies",
+      "website": "https://rubixls.com/?gclid=CjwKCAjwgviIBhBkEiwA10D2j-fRMCM9YvPB5tAuG_tgHCFMKA61TK5-EoAQgnwXqcVI2uYQjZe1lhoCfzoQAvD_BwE",
+      "city": "Lawrence",
+      "phone": 9786556770,
+      "category": "education",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Boston School of Music Arts",
+      "website": "https://www.bostonschoolofmusicarts.com/",
+      "city": "Boston",
+      "phone": 6176903391,
+      "category": "education",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Healthy Habits: Adult Care & Transitiol Living Assistance",
+      "website": "",
+      "city": "Brockton",
+      "phone": 8608168089,
+      "category": "education",
+      "subcategory": "Adult Care Center"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Help Services Network, Inc.",
+      "website": "",
+      "city": "Dorchester",
+      "phone": 6178252673,
+      "category": "education",
+      "subcategory": "Home Health Care/Nursing Services"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Jamoji App LLC",
+      "website": "https://jamojiapp.com/",
+      "city": "Boston/App",
+      "phone": 9178425945,
+      "category": "electronics",
+      "subcategory": "Software Development"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "GNB Technologies",
+      "website": "https://www.gnbtechnologies.net/",
+      "city": "Quincy",
+      "phone": 8334628324,
+      "category": "electronics",
+      "subcategory": "Tech Support/ Repair"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "ByteSize Labs",
+      "website": "https://bytesizelabs.io/",
+      "city": "Boston",
+      "phone": 4047772983,
+      "category": "electronics",
+      "subcategory": "Software Development"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Black Boston",
+      "website": "https://www.blackboston.com/",
+      "city": "Boston/Online",
+      "phone": 6174177456,
+      "category": "electronics",
+      "subcategory": "Web Services"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "A.J. Williams Event",
+      "website": "https://ajwevents.com/",
+      "city": "Boston",
+      "phone": 6172672244,
+      "category": "entertainment",
+      "subcategory": "Event Planning/Event Services"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Audio and Lighting Unlimited",
+      "website": "https://audioandlightingunlimited.com/",
+      "city": "Roxbury",
+      "phone": 8572125660,
+      "category": "entertainment",
+      "subcategory": "Event Planning/Event Services"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "eXpozedTV",
+      "website": "https://www.expozedtv.com/",
+      "city": "Cambridge",
+      "phone": 6178942203,
+      "category": "entertainment",
+      "subcategory": "Media"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "SELCOUTH SZN Media",
+      "website": "https://www.facebook.com/realselcouthszn/",
+      "city": "Boston",
+      "phone": 6173403100,
+      "category": "entertainment",
+      "subcategory": "Media"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "The Boston TeePee Party",
+      "website": "https://bostonteepeeparty.com/",
+      "city": "Boston",
+      "phone": 6179215581,
+      "category": "entertainment",
+      "subcategory": "Event Planning/Event Services"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "BAMS Fest, Inc.",
+      "website": "https://www.bamsfest.org/",
+      "city": "Boston",
+      "phone": 8572560775,
+      "category": "entertainment",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "BVD Boston",
+      "website": "https://www.bvdboston.com/",
+      "city": "Boston",
+      "phone": "",
+      "category": "entertainment",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Cllctv. US",
+      "website": "https://www.cllctv.us/",
+      "city": "Boston",
+      "phone": "",
+      "category": "entertainment",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Hella Black Trivia",
+      "website": "http://hellablacktrivia.com/?fbclid=IwAR1MZQSf6PpCGxEmWz5qe2hq0mddn85doFXksjRzPo1v-f-42x--YTJKdtY",
+      "city": "Boston",
+      "phone": "",
+      "category": "entertainment",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Kickback Boston",
+      "website": "https://kickbackboston.splashthat.com/?fbclid=IwAR3djk1KfjGgwQeIgnUf4KOfgcKRqKU1PG5caGejM3PiP2TkiJWdgT9JWGk",
+      "city": "Boston",
+      "phone": "",
+      "category": "entertainment",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "LiteWork Events",
+      "website": "http://www.liteworkevents.com/",
+      "city": "Boston",
+      "phone": "",
+      "category": "entertainment",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "NYA. Boston",
+      "website": "https://www.nyaboston.com/",
+      "city": "Boston",
+      "phone": "",
+      "category": "entertainment",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Pritty Ugly Media",
+      "website": "https://www.facebook.com/prittyuglymedia/",
+      "city": "Boston",
+      "phone": "",
+      "category": "entertainment",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Black Wall street 1921 Podcast",
+      "website": "https://www.dreamsofblackwallstreet.com/",
+      "city": "Newton",
+      "phone": "",
+      "category": "entertainment",
+      "subcategory": "Media"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "The Social Butterflies",
+      "website": "https://www.thesocialbutterfliesevents.com/",
+      "city": "Boston",
+      "phone": "",
+      "category": "entertainment",
+      "subcategory": "Event Planning/Event Services"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Sha Bryant Consulting",
+      "website": "https://shabryant.net/",
+      "city": "Dorchester",
+      "phone": 7818888162,
+      "category": "entertainment",
+      "subcategory": "Event Planning/Event Services"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Christian Jordan",
+      "website": "https://christianjordan1.com/",
+      "city": "Boston",
+      "phone": "",
+      "category": "entertainment",
+      "subcategory": "Event Planning/Event Services"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Empire Party Rentals Mass INC",
+      "website": "http://www.empirepartyrentalsmass.com/",
+      "city": "Boston",
+      "phone": 6174363518,
+      "category": "entertainment",
+      "subcategory": "Event Planning/Event Services"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Designs of You Event Planning",
+      "website": "https://designsofyou.com/",
+      "city": "Boston",
+      "phone": 6174359101,
+      "category": "entertainment",
+      "subcategory": "Event Planning/Event Services"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Posh Parties",
+      "website": "https://www.instagram.com/posh.parties/?hl=en",
+      "city": "Boston",
+      "phone": 6468941357,
+      "category": "entertainment",
+      "subcategory": "Event Planning/Event Services"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Gorgeous Galaz",
+      "website": "https://www.facebook.com/GorgeousGalaz/",
+      "city": "Boston",
+      "phone": 5086388294,
+      "category": "entertainment",
+      "subcategory": "Event Planning/Event Services"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Visions By A&K",
+      "website": "https://visionsbyak.com/",
+      "city": "Boston",
+      "phone": 6179717391,
+      "category": "entertainment",
+      "subcategory": "Event Planning/Event Services"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Event Staffing by Josie",
+      "website": "http://www.eventstaffingbyjosie.com/",
+      "city": "Boston",
+      "phone": 6173721720,
+      "category": "entertainment",
+      "subcategory": "Event Planning/Event Services"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Kung Fu Video and DVD",
+      "website": "http://kungfuvideoanddvd.net/",
+      "city": "Boston",
+      "phone": 6174513336,
+      "category": "entertainment",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "MV Escapes Concierge & Events",
+      "website": "https://www.mvescapes.com/weddings-events",
+      "city": "Oak Bluffs",
+      "phone": 5089309839,
+      "category": "entertainment",
+      "subcategory": "Event Planning/Event Services"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "B. Edelin Events Planning, Inc.",
+      "website": "https://www.bedelinevents.com/home.html",
+      "city": "Oak Bluffs",
+      "phone": 6174807828,
+      "category": "entertainment",
+      "subcategory": "Event Planning/Event Services"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Ballot Entertainment",
+      "website": "https://www.bentland.org/upcoming-bent-events",
+      "city": "Boston",
+      "phone": "",
+      "category": "entertainment",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "We Grow Microgreens, LLC",
+      "website": "http://www.wegrowmicrogreens.com/",
+      "city": "Hyde Park",
+      "phone": 6178770465,
+      "category": "farming",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Ada’s Tropical Inc.",
+      "website": "",
+      "city": "Dorchester Center",
+      "phone": 6179055347,
+      "category": "grocery",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "ture's Batch",
+      "website": "https://www.facebook.com/turesbatch/",
+      "city": "Malden",
+      "phone": 8888632814,
+      "category": "grocery",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Reveille Trading Company",
+      "website": "https://reveille.io/",
+      "city": "Boston",
+      "phone": 8573488948,
+      "category": "grocery",
+      "subcategory": "Coffee/Tea/Beverages"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "R&B Ice Cream",
+      "website": "https://www.rb-icecream.com/",
+      "city": "Boston",
+      "phone": 6172011056,
+      "category": "grocery",
+      "subcategory": "Ice Cream Parlor"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Mokha Vending LLC",
+      "website": "https://mokhavending.com/",
+      "city": "Boston",
+      "phone": 6176630465,
+      "category": "grocery",
+      "subcategory": "Food Product/Brand"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Sweet Teez Bakery",
+      "website": "https://www.sweetteezbakery.com/",
+      "city": "Dorchester",
+      "phone": 7184734112,
+      "category": "grocery",
+      "subcategory": "Bakery"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Auntie Vie's Bakery & Cafe",
+      "website": "https://auntie-vies-restaurant.business.site/",
+      "city": "Dorchester",
+      "phone": 9788213519,
+      "category": "grocery",
+      "subcategory": "Bakery"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Perry's Catering",
+      "website": "https://www.perrysgourmet.com/",
+      "city": "Roxbury",
+      "phone": 6174138732,
+      "category": "grocery",
+      "subcategory": "Catering/ Chef"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Delectable Desires Pastries",
+      "website": "https://delectabledesires.net/",
+      "city": "West Roxbury",
+      "phone": 6176786001,
+      "category": "grocery",
+      "subcategory": "Bakery"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Monumental Market",
+      "website": "http://www.monumentalmarket.com/",
+      "city": "Boston",
+      "phone": 6179422945,
+      "category": "grocery",
+      "subcategory": "Coffee/Tea/Beverages"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "On The Edge Nutrition",
+      "website": "https://linktr.ee/OnTheEdgeNutrition",
+      "city": "Boston",
+      "phone": 6177524056,
+      "category": "grocery",
+      "subcategory": "Coffee/Tea/Beverages"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Au Beurre Chaud Bakery",
+      "website": "http://au-beurre-chaud-bakery.edan.io/",
+      "city": "Mattapan",
+      "phone": 6173643066,
+      "category": "grocery",
+      "subcategory": "Bakery"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Le Foyer Bakery",
+      "website": "http://www.lefoyerbakery.com/",
+      "city": "Mattapan",
+      "phone": 6172980535,
+      "category": "grocery",
+      "subcategory": "Bakery"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Tipping Cow Ice Cream",
+      "website": "https://www.tippingcowicecream.com/",
+      "city": "Somerville",
+      "phone": 6178708090,
+      "category": "grocery",
+      "subcategory": "Ice Cream Parlor"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Oasis Vegan Veggie Parlor",
+      "website": "https://www.oasisveganveggieparlor.com/",
+      "city": "Dorchester",
+      "phone": 6172379033,
+      "category": "grocery",
+      "subcategory": "Specialty"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Sweet Temptations",
+      "website": "https://www.facebook.com/Sweet-temptations-500010793871480/",
+      "city": "Brockton",
+      "phone": 6175127731,
+      "category": "grocery",
+      "subcategory": "Bakery"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "The Urban Grape",
+      "website": "https://theurbangrape.shop/",
+      "city": "Boston",
+      "phone": 8572502509,
+      "category": "grocery",
+      "subcategory": "Alcohol"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Petsi Pies",
+      "website": "https://petsipies.com/",
+      "city": "Somerville",
+      "phone": 6176617437,
+      "category": "grocery",
+      "subcategory": "Bakery"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Fresh Press Bakery & Cafe",
+      "website": "https://www.frenchpressbakery.com/",
+      "city": "Needham",
+      "phone": 7814002660,
+      "category": "grocery",
+      "subcategory": "Bakery"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Bailey's Too",
+      "website": "",
+      "city": "Boston",
+      "phone": 7816908601,
+      "category": "grocery",
+      "subcategory": "Grocery"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "The Té Spa",
+      "website": "https://www.thetespa.com/",
+      "city": "Mattapan",
+      "phone": 6172099197,
+      "category": "grocery",
+      "subcategory": "Coffee/Tea/Beverages"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Cafe Juice Up",
+      "website": "https://cafejuiceup.com/",
+      "city": "Boston",
+      "phone": 6177021808,
+      "category": "grocery",
+      "subcategory": "Coffee/Tea/Beverages"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Shea Butter Smoothies",
+      "website": "https://www.grubhub.com/restaurant/shea-butter-smoothies-777-morrissey-blvd-boston/1012191",
+      "city": "Boston",
+      "phone": 6172962245,
+      "category": "grocery",
+      "subcategory": "Coffee/Tea/Beverages"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Afro Chi Fitness",
+      "website": "",
+      "city": "Boston",
+      "phone": 6178683635,
+      "category": "health",
+      "subcategory": "Fitness/Yoga"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Bonita Jones and Associates",
+      "website": "https://arelaxedattitude.com/",
+      "city": "Roxbury",
+      "phone": 6174458946,
+      "category": "health",
+      "subcategory": "Spa/Massage Therapy"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Red City Fitness",
+      "website": "http://redcityfitness.com/",
+      "city": "Allston",
+      "phone": 6172021056,
+      "category": "health",
+      "subcategory": "Fitness/Yoga"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "You Good, Sis",
+      "website": "https://www.yougoodsis.co/",
+      "city": "Boston",
+      "phone": "",
+      "category": "health",
+      "subcategory": "Mental Health Support"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Anointed Hands Massage & Spa Essentials",
+      "website": "https://www.anointedhandsmassage7.com/",
+      "city": "Randolph",
+      "phone": "",
+      "category": "health",
+      "subcategory": "Spa/Massage Therapy"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Through the Forest Counseling Inc.",
+      "website": "https://forestcounseling.net/",
+      "city": "Boston",
+      "phone": 6179323813,
+      "category": "health",
+      "subcategory": "Mental Health Support"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Jocelyn St. Cyr, LICSW",
+      "website": "https://healingwellcounseling.com/",
+      "city": "Arlington",
+      "phone": 7816299168,
+      "category": "health",
+      "subcategory": "Mental Health Support"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "REPS Yoga Studio",
+      "website": "https://reps57.com/",
+      "city": "Beacon Hill",
+      "phone": 6177848419,
+      "category": "health",
+      "subcategory": "Fitness/Yoga"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Black Girls Nutrition",
+      "website": "http://blackgirlsnutrition.com/?fbclid=IwAR3ryBBxQWisZB_fgPLF9KVAM2on6iWjsLL3I2t5ZvAxRlpQyiZt0rpqxDs",
+      "city": "Boston",
+      "phone": 8604064878,
+      "category": "health",
+      "subcategory": "Nutrition"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Cryohub",
+      "website": "https://www.cryohubbos.com/",
+      "city": "Boston",
+      "phone": 8572613626,
+      "category": "health",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "GroundingHearts, Inc",
+      "website": "https://www.groundinghearts.com/",
+      "city": "Boston",
+      "phone": 8576002449,
+      "category": "health",
+      "subcategory": "Mental Health Support"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "EastieFit",
+      "website": "https://geteastiefit.com/",
+      "city": "Boston",
+      "phone": 6173568407,
+      "category": "health",
+      "subcategory": "Fitness/Yoga"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Imani Massage",
+      "website": "https://www.imanimassage.com/",
+      "city": "Boston",
+      "phone": 6178212875,
+      "category": "health",
+      "subcategory": "Spa/Massage Therapy"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Linda Wellness Warrior",
+      "website": "https://www.lindawellnesswarrior.com/",
+      "city": "Boston",
+      "phone": 6174485512,
+      "category": "health",
+      "subcategory": "Fitness/Yoga"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Spark Essentials",
+      "website": "https://www.instagram.com/_sparkessentials/?hl=en",
+      "city": "Boston",
+      "phone": 8576002449,
+      "category": "health",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Trill Fit",
+      "website": "https://www.trill.fit/",
+      "city": "Boston",
+      "phone": 6175447690,
+      "category": "health",
+      "subcategory": "Fitness/Yoga"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "AMRON Intertiol Organization",
+      "website": "https://www.amronintertiol.org/",
+      "city": "Brockton",
+      "phone": 8578006604,
+      "category": "health",
+      "subcategory": "Mental Health Support"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "4 Corners Yoga + Wellness LLC",
+      "website": "https://www.4cornersyogawellness.com/",
+      "city": "Dorchester",
+      "phone": 6175060519,
+      "category": "health",
+      "subcategory": "Fitness/Yoga"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Inspired Release",
+      "website": "https://www.inspiredrelease.com/",
+      "city": "Dorchester",
+      "phone": 6174463840,
+      "category": "health",
+      "subcategory": "Mental Health Support"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "3R Massages LLC",
+      "website": "http://3rmassages.com/",
+      "city": "Jamaica Plain",
+      "phone": 6176817719,
+      "category": "health",
+      "subcategory": "Spa/Massage Therapy"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "High Voltage Wellness",
+      "website": "https://www.hvwellnessandmedspa.com/",
+      "city": "Roslindale",
+      "phone": 6172868108,
+      "category": "health",
+      "subcategory": "Spa/Massage Therapy"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Chrisira's Cure",
+      "website": "https://www.chrisirascure.com/",
+      "city": "Roxbury",
+      "phone": 6179057938,
+      "category": "health",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Divine Revelations Yoga and Meditation Services",
+      "website": "http://www.revelationyoga.net/",
+      "city": "Roxbury",
+      "phone": 7744739881,
+      "category": "health",
+      "subcategory": "Fitness/Yoga"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "La Alianza Hispa, Inc.",
+      "website": "https://laalianza.org/",
+      "city": "Roxbury",
+      "phone": 6174277175,
+      "category": "health",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Lakay Pharmacy",
+      "website": "https://www.lakaylegrandwellnesscenter.com/?utm_source=gmb&utm_medium=referral",
+      "city": "Mattapan",
+      "phone": 8573127928,
+      "category": "health",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Bill Hamletts Extermiting Company",
+      "website": "Bill Hamletts Extermiting Company",
+      "city": "Boston",
+      "phone": 6175360271,
+      "category": "home",
+      "subcategory": "Pest Control"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "A & M Home Services LLC",
+      "website": "https://www.facebook.com/AMHomeServicesLLC",
+      "city": "Roxbury",
+      "phone": 6176972353,
+      "category": "home",
+      "subcategory": "Landscaping/Gardening"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Giara's Furniture Gallery",
+      "website": "https://www.giarasfurnituregallery.com/",
+      "city": "West Roxbury",
+      "phone": 6172317006,
+      "category": "home",
+      "subcategory": "Furniture"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Anchor’d Inc",
+      "website": "https://www.anchordinc.com/",
+      "city": "Boston/Online",
+      "phone": 8573028362,
+      "category": "home",
+      "subcategory": "Furniture"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Roger’s Snow Removal and Landscaping Services LLC",
+      "website": "http://www.greaterbostonlandscapingservices.com/",
+      "city": "Boston",
+      "phone": 6179108271,
+      "category": "home",
+      "subcategory": "Landscaping/Gardening"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Hurst Landscaping, Inc.",
+      "website": "Hurst Landscaping, Inc.",
+      "city": "Mattapan",
+      "phone": 6173337431,
+      "category": "home",
+      "subcategory": "Landscaping/Gardening"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "In Home Design Inc.",
+      "website": "In Home Design Inc.",
+      "city": "Dorchester",
+      "phone": 6176860034,
+      "category": "home",
+      "subcategory": "Interior Designer/Home Staging"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "J & C Kingdom Living Incorporated,inc",
+      "website": "J & C Kingdom Living Incorporated,inc",
+      "city": "Dorchester Center",
+      "phone": 8572475149,
+      "category": "home",
+      "subcategory": "Interior Designer/Home Staging"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Rogers Pest Control, Inc.",
+      "website": "Rogers Pest Control, Inc.",
+      "city": "Dorchester",
+      "phone": 6174270810,
+      "category": "home",
+      "subcategory": "Pest Control"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "The Urban Gardner Landscape Service",
+      "website": "The Urban Gardner Landscape Service",
+      "city": "Boston",
+      "phone": 6172919931,
+      "category": "home",
+      "subcategory": "Landscaping/Gardening"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Giselle's Flowers & Gifts",
+      "website": "https://gisellesflowersandgifts.com/",
+      "city": "Roxbury",
+      "phone": "",
+      "category": "home",
+      "subcategory": "Landscaping/Gardening"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "The Centerpiece Flower Shop",
+      "website": "https://thecenterpieceflowershop.com/",
+      "city": "West Roxbury",
+      "phone": 6173236262,
+      "category": "home",
+      "subcategory": "Landscaping/Gardening"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Micro Plant Studio LLC",
+      "website": "https://microplantstudio.com/",
+      "city": "South Boston",
+      "phone": 6177972717,
+      "category": "home",
+      "subcategory": "Landscaping/Gardening"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Fidalgo Travel Center",
+      "website": "",
+      "city": "Boston",
+      "phone": 6174424824,
+      "category": "hotels",
+      "subcategory": "Travel Agent"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Inn of Treasured Memories",
+      "website": "https://www.tripadvisor.com/Hotel_Review-g41601-d1466062-Reviews-Inn_of_Treasured_Memories-Harwich_Cape_Cod_Massachusetts.html",
+      "city": "Harwich",
+      "phone": 5084309919,
+      "category": "hotels",
+      "subcategory": "Hospitality/Hotels/Inns"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Shearer Cottage",
+      "website": "https://www.shearercottage.com/",
+      "city": "Oak Bluffs",
+      "phone": "781322 1866",
+      "category": "hotels",
+      "subcategory": "Hospitality/Hotels/Inns"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "S&K Travel",
+      "website": "https://sktravelgroup.webs.com/",
+      "city": "Dorchester",
+      "phone": 6175069335,
+      "category": "hotels",
+      "subcategory": "Travel Agent"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "The Oak Bluffs Inn",
+      "website": "https://oakbluffsinn.com/",
+      "city": "Oak Bluffs",
+      "phone": 5086937171,
+      "category": "hotels",
+      "subcategory": "Hospitality/Hotels/Inns"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "V-Roc Vacations",
+      "website": "https://www.facebook.com/V-ROC-VACATIONS-273040242776328/",
+      "city": "Dedham",
+      "phone": 6177777099,
+      "category": "hotels",
+      "subcategory": "Travel"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Boston Marriott Burlington",
+      "website": "https://www.marriott.com/hotels/travel/bosbu-boston-marriott-burlington/?scid=bb1a189a-fec3-4d19-a255-54ba596febe2&y_source=1_MTYzODkxOC03MTUtbG9jYXRpb24uZ29vZ2xlX3dlYnNpdGVfb3ZlcnJpZGU%3D",
+      "city": "Boston",
+      "phone": 7812296565,
+      "category": "hotels",
+      "subcategory": "Hospitality/Hotels/Inns"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Hampton Inn & Suites Boston Crosstown Center",
+      "website": "https://www.hilton.com/en/hotels/boshshx-hampton-suites-boston-crosstown-center/?SEO_id=GMB-HX-BOSHSHX&y_source=1_MjA4NTA4NC03MTUtbG9jYXRpb24uZ29vZ2xlX3dlYnNpdGVfb3ZlcnJpZGU%3D",
+      "city": "Boston",
+      "phone": 6174456400,
+      "category": "hotels",
+      "subcategory": "Hospitality/Hotels/Inns"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Granny's Cottage",
+      "website": "https://www.houfy.com/lodging/granny-s-cottage/16783",
+      "city": "Oak Bluffs",
+      "phone": 4084393114,
+      "category": "hotels",
+      "subcategory": "Hospitality/Hotels/Inns"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Sea U On the Vineyard",
+      "website": "https://www.seauonthevineyard.com/about",
+      "city": "Oak Bluffs",
+      "phone": 4846399539,
+      "category": "hotels",
+      "subcategory": "Hospitality/Hotels/Inns"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Embassy Suites Bostom/Waltham",
+      "website": "https://www.hilton.com/en/hotels/boswses-embassy-suites-boston-waltham/",
+      "city": "Boston",
+      "phone": 7818906767,
+      "category": "hotels",
+      "subcategory": "Hospitality/Hotels/Inns"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Martha's Vineyard Resort & Racquet Club",
+      "website": "https://www.resortsandlodges.com/lodging/usa/massachusetts/marthas-vineyard/marthas-vineyard-resort-racquet-club.html",
+      "city": "Oak Bluffs",
+      "phone": 8008744403,
+      "category": "hotels",
+      "subcategory": "Hospitality/Hotels/Inns"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Jewelz on Demand",
+      "website": "https://www.jewelzondemand.com/",
+      "city": "Randolph/Obline",
+      "phone": 8577562487,
+      "category": "jewelry",
+      "subcategory": "Fine Jewlery"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Rosemonde Fashion Couture",
+      "website": "http://www.rosemondes.com/",
+      "city": "Boston",
+      "phone": 6178725672,
+      "category": "jewelry",
+      "subcategory": "Accessories/Handbags"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Andreaturally",
+      "website": "https://andreaturally.com/shop",
+      "city": "Roxbury",
+      "phone": 3399879030,
+      "category": "jewelry",
+      "subcategory": "Accessories/Handbags"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "QUUEENN",
+      "website": "https://www.quueenn.com/",
+      "city": "Boston",
+      "phone": 6175952388,
+      "category": "jewelry",
+      "subcategory": "Fine Jewelry"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "SchnelleCares",
+      "website": "https://www.schnellecares.com/",
+      "city": "Boston/Online",
+      "phone": 7816409652,
+      "category": "jewelry",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "V-Lure Designs by Voltaire",
+      "website": "http://www.vluredesigns.com/home",
+      "city": "Milton",
+      "phone": 6178490579,
+      "category": "jewelry",
+      "subcategory": "Accessories/Handbags"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Archa Gift Shop",
+      "website": "https://www.archagifts.com/",
+      "city": "",
+      "phone": 6173044583,
+      "category": "jewelry",
+      "subcategory": "Fine Jewelry"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Beauberry The Label",
+      "website": "https://www.instagram.com/beauberrythelabel/?hl=en",
+      "city": "Boston",
+      "phone": 5083485269,
+      "category": "jewelry",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "E M BRYAN TAX SERVICES",
+      "website": "",
+      "city": "Mattapan",
+      "phone": 6178758600,
+      "category": "legal",
+      "subcategory": "Fincial Services"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "MJOrganizers",
+      "website": "http://mjorganizers.com/",
+      "city": "Medford",
+      "phone": 7812194932,
+      "category": "legal",
+      "subcategory": "Fincial Services"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "OneUnited Bank",
+      "website": "https://www.oneunited.com/",
+      "city": "Boston",
+      "phone": 8776638648,
+      "category": "legal",
+      "subcategory": "Fincial Services"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Mission Park Capital",
+      "website": "https://www.missionparkcapital.com/",
+      "city": "Boston",
+      "phone": 4135978901,
+      "category": "legal",
+      "subcategory": "Fincial Services"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "GenNx360 Capital Partners",
+      "website": "https://gennx360.com/",
+      "city": "Cambridge",
+      "phone": 2122576772,
+      "category": "legal",
+      "subcategory": "Fincial Services"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Fince 100 Series",
+      "website": "https://fince100series.teachable.com/",
+      "city": "Dorchester",
+      "phone": "",
+      "category": "legal",
+      "subcategory": "Fincial Services"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Occe Law",
+      "website": "https://occelaw.com/",
+      "city": "Revere",
+      "phone": 7816295147,
+      "category": "legal",
+      "subcategory": "Legal Services (General)"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Reconciled Business Services LLC",
+      "website": "https://rbstaxsolutions.com/",
+      "city": "Waltham",
+      "phone": 7813309232,
+      "category": "legal",
+      "subcategory": "Fincial Services"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Beacon Hill Insurance Agency",
+      "website": "https://beaconhillinsured.com/",
+      "city": "Boston",
+      "phone": 6179774002,
+      "category": "legal",
+      "subcategory": "Insurance"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "McKenzie & Edwards, P.C.",
+      "website": "https://www.mckenzielawpc.com/",
+      "city": "Boston",
+      "phone": 6177230400,
+      "category": "legal",
+      "subcategory": "Legal Services (General)"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Fairview Capital Partners",
+      "website": "http://www.fairviewcapital.com/",
+      "city": "Andover",
+      "phone": 8606748066,
+      "category": "legal",
+      "subcategory": "Fincial Services"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "J & J Professiol Services",
+      "website": "",
+      "city": "Mattapan",
+      "phone": 6178694994,
+      "category": "legal",
+      "subcategory": "Legal Services (General)"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Pure Oasis",
+      "website": "https://www.mypureoasis.com/",
+      "city": "Boston",
+      "phone": 6174206838,
+      "category": "lifestyle",
+      "subcategory": "CBD Products"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Western Front",
+      "website": "https://www.westernfrontus.com/",
+      "city": "Chelsea",
+      "phone": 6174660255,
+      "category": "lifestyle",
+      "subcategory": "CBD Products"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Mass Bay Canbis",
+      "website": "https://samuraent.wixsite.com/massbaycanbis",
+      "city": "Roslindale",
+      "phone": 8575058811,
+      "category": "lifestyle",
+      "subcategory": "CBD Products"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Smokey Joe's Cigar Lounge",
+      "website": "http://www.smokeyjoescigars.com/welcome",
+      "city": "Springfield",
+      "phone": 4133917944,
+      "category": "lifestyle",
+      "subcategory": "Smoking & Parapherlia"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Diligentia Express",
+      "website": "https://diligentiaexpress.com/",
+      "city": "Boston",
+      "phone": 7819753886,
+      "category": "lifestyle",
+      "subcategory": "CBD Products"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Wave N Pave Tattoo",
+      "website": "https://www.instagram.com/wavenpave/?hl=en",
+      "city": "East Boston",
+      "phone": 6174185115,
+      "category": "lifestyle",
+      "subcategory": "Piercing/Tattoo"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Advertising Business Concepts",
+      "website": "Advertising Business Concepts",
+      "city": "Roxbury",
+      "phone": 6174456171,
+      "category": "marketing",
+      "subcategory": "Advertising"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Archipelago Strategies Group",
+      "website": "http://discoverasg.com/",
+      "city": "West Roxbury",
+      "phone": 8572220800,
+      "category": "marketing",
+      "subcategory": "Marketing/Digital Marketing"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Calloway Graphix, Printing and Marketing, Inc.",
+      "website": "Calloway Graphix, Printing and Marketing, Inc.",
+      "city": "Boston",
+      "phone": 8885383834,
+      "category": "marketing",
+      "subcategory": "Advertising"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Crescent Graphics",
+      "website": "Crescent Graphics",
+      "city": "Roxbury",
+      "phone": 6174428282,
+      "category": "marketing",
+      "subcategory": "Marketing/Digital Marketing"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Rore Media",
+      "website": "https://roremedia.com/",
+      "city": "Milton",
+      "phone": 6172370847,
+      "category": "marketing",
+      "subcategory": "Marketing/Digital Marketing"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Tie the Knot Marketing Group",
+      "website": "https://www.facebook.com/ttkmgroup/?ref=page_interl",
+      "city": "Boston",
+      "phone": 6174534231,
+      "category": "marketing",
+      "subcategory": "Marketing/Digital Marketing"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "The Williams Agency",
+      "website": "https://thewilliamsagency.net/",
+      "city": "Cambridge",
+      "phone": 6173957680,
+      "category": "marketing",
+      "subcategory": "Marketing/Digital Marketing"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Whyte Millioire Marketing Group",
+      "website": "https://millioiremarketinggroup.org/",
+      "city": "Springfield",
+      "phone": 5164994043,
+      "category": "marketing",
+      "subcategory": "Marketing/Digital Marketing"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Hogu Technology Services, LLC",
+      "website": "https://www.hugotech.co/",
+      "city": "Boston",
+      "phone": 6176426098,
+      "category": "marketing",
+      "subcategory": "Web Services/Social Media"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "The Birch Group Corporation",
+      "website": "https://birchgroupco.wpcomstaging.com/",
+      "city": "Boston",
+      "phone": 6178169396,
+      "category": "marketing",
+      "subcategory": "Marketing/Digital Marketing"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "ROMADOJA",
+      "website": "https://www.romadoja.com/",
+      "city": "Boston",
+      "phone": 8574989911,
+      "category": "marketing",
+      "subcategory": "Marketing/Digital Marketing"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "iMedia Exposure",
+      "website": "https://imediaexposure.com/",
+      "city": "Boston",
+      "phone": 9172322167,
+      "category": "marketing",
+      "subcategory": "Web Services/Social Media"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Logan Communications Intertiol, Inc.",
+      "website": "https://logancommunications.com/",
+      "city": "East Boston",
+      "phone": 6175698720,
+      "category": "marketing",
+      "subcategory": "Advertising"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Techspeaks",
+      "website": "http://www.techspeaks.com/",
+      "city": "",
+      "phone": 6178436605,
+      "category": "marketing",
+      "subcategory": "Marketing/Digital Marketing"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "The Word Boston",
+      "website": "http://www.thewordboston.com/",
+      "city": "Boston",
+      "phone": 6177754273,
+      "category": "marketing",
+      "subcategory": "Marketing/Digital Marketing"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Standard Media Boston",
+      "website": "https://www.facebook.com/smediaboston/",
+      "city": "East Boston",
+      "phone": 6179028983,
+      "category": "marketing",
+      "subcategory": "Branding/Graphic Design"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Sulift",
+      "website": "https://sulift.com/",
+      "city": "Boston",
+      "phone": 6177125409,
+      "category": "marketing",
+      "subcategory": "Branding/Graphic Design"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Sterling Business Products",
+      "website": "https://www.sterlingprinting.com/",
+      "city": "Stoneham",
+      "phone": 7814811234,
+      "category": "marketing",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Codman Square Chiropractc and Rehabilitiation",
+      "website": "https://codmansqchiro.com/",
+      "city": "Boston",
+      "phone": 6173266125,
+      "category": "medical",
+      "subcategory": "Chiropractor"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Brave Counseling and Wellness",
+      "website": "https://www.psychologytoday.com/us/therapists/brave-counseling-wellness-llc-milton-ma/459724",
+      "city": "Milton",
+      "phone": 6173906602,
+      "category": "medical",
+      "subcategory": "Psychiatry/Mental Health"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Battle First Aid Responder Services, Inc.",
+      "website": "https://www.facebook.com/battlefirstaidresponderservicesinc/",
+      "city": "Boston",
+      "phone": 8573530173,
+      "category": "medical",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Dot Smiles",
+      "website": "http://dotsmiles.com/",
+      "city": "Boston",
+      "phone": 6175338058,
+      "category": "medical",
+      "subcategory": "Dental/Orthodontics"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Dartmouth Street Vision Center",
+      "website": "https://www.dartmouthvision.com/",
+      "city": "Boston",
+      "phone": 6172668188,
+      "category": "medical",
+      "subcategory": "Vision"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Eye & Eye Optics",
+      "website": "http://eyeandeyeoptics.com/",
+      "city": "Dorchester",
+      "phone": 6172960066,
+      "category": "medical",
+      "subcategory": "Vision"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Gallery Eye Care",
+      "website": "https://galleryeyecarevisionsource.com/",
+      "city": "Roxbury",
+      "phone": 6172029650,
+      "category": "medical",
+      "subcategory": "Vision"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Gibbs Physical Therapy",
+      "website": "",
+      "city": "Dorchester",
+      "phone": 6174274611,
+      "category": "medical",
+      "subcategory": "Physical Therapy"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Martha's Vineyard Endodontics",
+      "website": "https://www.marthasvineyardendo.com/",
+      "city": "Vineyard Haven",
+      "phone": 5086879950,
+      "category": "medical",
+      "subcategory": "Dental/Orthodontics"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Minh & Korn Orthodontics On Newbury St",
+      "website": "http://www.orthoonnewbury.com/",
+      "city": "Boston",
+      "phone": 8134806808,
+      "category": "medical",
+      "subcategory": "Dental/Orthodontics"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Bay State Banner",
+      "website": "https://www.baystatebanner.com/",
+      "city": "Boston",
+      "phone": 6179367796,
+      "category": "other",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "The Don Firearms Inc",
+      "website": "https://www.thedonfirearms.com/",
+      "city": "Boston",
+      "phone": 6176505708,
+      "category": "other",
+      "subcategory": "Guns & Shooting Ranges"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Bishop Funeral Home",
+      "website": "https://www.bishopfuneralhomeworcster.com/",
+      "city": "Worchester",
+      "phone": "",
+      "category": "other",
+      "subcategory": "Mortuary Services"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Sendent Energy, LLC",
+      "website": "sendentenergy.com/index.php",
+      "city": "Boston",
+      "phone": 8447363368,
+      "category": "other",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Fabwright Origins, LLC",
+      "website": "https://www.fabwrightorigins.com/",
+      "city": "Boston",
+      "phone": 8572303613,
+      "category": "other",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Garrett Pressley Autism Resource Center",
+      "website": "http://gpautismresourcecenter.org/home.aspx",
+      "city": "Mattapan",
+      "phone": 6172161676,
+      "category": "other",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "C'est la vie",
+      "website": "https://www.facebook.com/cestlaviemv/",
+      "city": "Oak Bluffs",
+      "phone": 5086936181,
+      "category": "other",
+      "subcategory": "Gifts & Statiory"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Off Main",
+      "website": "https://off-main.business.site/",
+      "city": "Vineyard Haven",
+      "phone": 5086965354,
+      "category": "other",
+      "subcategory": "Gifts & Statiory"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Streamline Antiques & Vintage",
+      "website": "https://www.streamlineantiques.com/",
+      "city": "Boston",
+      "phone": "",
+      "category": "other",
+      "subcategory": "Antiques & Collectibles"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "A.O. Security Services",
+      "website": "",
+      "city": "Dorchester",
+      "phone": 6179706772,
+      "category": "other",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Third Eye Surveillance & Security",
+      "website": "http://www.thirdeyesurveil.com/",
+      "city": "Hyde Park",
+      "phone": 6179100767,
+      "category": "other",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "ratoone Security Corporation",
+      "website": "",
+      "city": "Roxbury",
+      "phone": 6175410099,
+      "category": "other",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "ENDLESS Designs Picture Framing, Inc.",
+      "website": "",
+      "city": "Boston",
+      "phone": 6175166138,
+      "category": "packaging",
+      "subcategory": "Printing"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Hunter Signs",
+      "website": "http://www.huntersigns.net/",
+      "city": "Hyde Park",
+      "phone": 6173609710,
+      "category": "packaging",
+      "subcategory": "Printing"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "All The Way Logistics, LLC",
+      "website": "https://www.facebook.com/pages/category/Business-Service/All-The-Way-Logistics-LLC-112205926915551/",
+      "city": "Allston",
+      "phone": 6174306289,
+      "category": "packaging",
+      "subcategory": "Couriers"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "CCP Intertiol Shipping Inc.",
+      "website": "https://www.facebook.com/CCP-Shipping-160543697311059/",
+      "city": "Hyde Park",
+      "phone": 6172763153,
+      "category": "packaging",
+      "subcategory": "Shipping"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Boston Innovation Outlet Co",
+      "website": "https://bostoninnovationoutlet.com/index.html",
+      "city": "Boston",
+      "phone": 6175298449,
+      "category": "packaging",
+      "subcategory": "Printing"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Imprint Boston Inc",
+      "website": "https://impintboston.square.site/",
+      "city": "Boston",
+      "phone": 8007216042,
+      "category": "packaging",
+      "subcategory": "Printing"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Green Castle Business Solutions, LLC",
+      "website": "https://greencastlebusiness.com/",
+      "city": "Boston",
+      "phone": 8882497839,
+      "category": "packaging",
+      "subcategory": "Office Supplies"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Roxbury Technology",
+      "website": "http://www.roxburytechnology.com/",
+      "city": "Hyde Park",
+      "phone": 6175241020,
+      "category": "packaging",
+      "subcategory": "Office Supplies"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Kriol Global",
+      "website": "https://kriolglobal.com/",
+      "city": "Dorchester",
+      "phone": 6174169697,
+      "category": "packaging",
+      "subcategory": "Shipping"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Skycom Courier",
+      "website": "",
+      "city": "Allston",
+      "phone": 6177821130,
+      "category": "packaging",
+      "subcategory": "Courier"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Studio 24 Graphix & Printing",
+      "website": "https://studio24graphix.com/",
+      "city": "Boston",
+      "phone": "",
+      "category": "packaging",
+      "subcategory": "Printing"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Artistic Explosions",
+      "website": "",
+      "city": "Roslindale",
+      "phone": 6174615868,
+      "category": "photography",
+      "subcategory": "Photography"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Goss Photography",
+      "website": "",
+      "city": "Boston",
+      "phone": 6172984677,
+      "category": "photography",
+      "subcategory": "Photography"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Carven Creative Media",
+      "website": "https://www.carvencreativemedia.com/",
+      "city": "Somerville",
+      "phone": 6176062167,
+      "category": "photography",
+      "subcategory": "Videography"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Picturenomics",
+      "website": "https://picturenomics.com/",
+      "city": "Boston",
+      "phone": 6177334741,
+      "category": "photography",
+      "subcategory": "Photography"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Zhaun Frias Photographer",
+      "website": "https://zhaunfriasphotography.com/",
+      "city": "Boston",
+      "phone": 9789952395,
+      "category": "photography",
+      "subcategory": "Photography"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "1981andCo",
+      "website": "https://www.1981andco.com/",
+      "city": "Dorchester",
+      "phone": 6177505896,
+      "category": "photography",
+      "subcategory": "Photography"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "So Focused Photography",
+      "website": "https://www.instagram.com/sofocusedphotography/?hl=en",
+      "city": "Oak Bluffs",
+      "phone": 6463190360,
+      "category": "photography",
+      "subcategory": "Photography"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Michael Johnson Photography",
+      "website": "http://www.michaeljimage.com/Welcome.html",
+      "city": "Vineyard Haven",
+      "phone": 4152387572,
+      "category": "photography",
+      "subcategory": "Photography"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Aba Gallery/Regild Jackson Photography",
+      "website": "http://www.olaleye.org/",
+      "city": "Boston",
+      "phone": 8573898986,
+      "category": "photography",
+      "subcategory": "Photography"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Jordan's Photography World",
+      "website": "",
+      "city": "Springfield",
+      "phone": 4137369300,
+      "category": "photography",
+      "subcategory": "Photography"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Wiseiye, Inc.",
+      "website": "https://www.wiseiye.com/",
+      "city": "Boston",
+      "phone": 8572515191,
+      "category": "photography",
+      "subcategory": "IT"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "CKW Magement Inc",
+      "website": "https://www.ckw.magement/",
+      "city": "Dorchester",
+      "phone": 6172370697,
+      "category": "photography",
+      "subcategory": "Consulting"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "The Collaborative",
+      "website": "https://www.thecollaborative.com/",
+      "city": "Boston",
+      "phone": 6173380018,
+      "category": "photography",
+      "subcategory": "Consulting"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "ConsultwithX",
+      "website": "",
+      "city": "Boston",
+      "phone": 6174534231,
+      "category": "photography",
+      "subcategory": "Consulting"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "DHK Architects, Inc.",
+      "website": "https://www.dhkinc.com/",
+      "city": "Boston",
+      "phone": 6172676408,
+      "category": "photography",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Ebony100",
+      "website": "http://ebony100.com/",
+      "city": "Boston",
+      "phone": 6178030937,
+      "category": "photography",
+      "subcategory": "Business"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Benevolent Builder",
+      "website": "https://www.benevolentbuilder.com/about",
+      "city": "Boston",
+      "phone": 5089748170,
+      "category": "photography",
+      "subcategory": "Consulting"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Stull and Lee, Inc.",
+      "website": "https://www.stullandlee.com/",
+      "city": "Roxbury Crossing",
+      "phone": 6174260407,
+      "category": "photography",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Catalyst Ventures Dev.",
+      "website": "https://www.cvdboston.com/",
+      "city": "Boston",
+      "phone": 6175129275,
+      "category": "photography",
+      "subcategory": "Business"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Studio Luz Architects",
+      "website": "https://www.studioluz.net/",
+      "city": "Boston",
+      "phone": 6174232724,
+      "category": "photography",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Urban Architects",
+      "website": "http://urbarchs.com/index.html",
+      "city": "Boston",
+      "phone": 6174426700,
+      "category": "photography",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Surfside Capital Advisors LLC",
+      "website": "https://www.surfcapadvisors.com/",
+      "city": "Boston",
+      "phone": 6174335375,
+      "category": "photography",
+      "subcategory": "Consulting"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Aria Rae, LLC",
+      "website": "https://www.ariarae.com/",
+      "city": "Boston",
+      "phone": 6173138905,
+      "category": "photography",
+      "subcategory": "Speaker"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Boston Change Magement Partners",
+      "website": "https://www.bostoncmpartners.com/",
+      "city": "Boston",
+      "phone": 7815910410,
+      "category": "photography",
+      "subcategory": "Consulting"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Cunningham Consulting and Innovation",
+      "website": "https://hakimscunningham.wixsite.com/cunninghamconsulting",
+      "city": "Boston",
+      "phone": 6175300757,
+      "category": "photography",
+      "subcategory": "Consulting"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "DethWench Professiol Services",
+      "website": "https://dethwench.com/",
+      "city": "Boston",
+      "phone": 6177846657,
+      "category": "photography",
+      "subcategory": "Consulting"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Fire Code Design",
+      "website": "https://www.firecodedesign.com/",
+      "city": "Boston",
+      "phone": 6174422633,
+      "category": "photography",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Beyond Wordz",
+      "website": "https://www.beyondwordz.info/",
+      "city": "Boston",
+      "phone": 8575045472,
+      "category": "photography",
+      "subcategory": "Consulting"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Revby LLC",
+      "website": "https://www.revby.co/",
+      "city": "Boston",
+      "phone": 9173198576,
+      "category": "photography",
+      "subcategory": "Consulting"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Solomon Consulting Group",
+      "website": "https://www.solomodmissions.com/",
+      "city": "Boston",
+      "phone": 6463451742,
+      "category": "photography",
+      "subcategory": "Consulting"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Tessi Consulting",
+      "website": "https://tessiconsulting.com/",
+      "city": "Boston",
+      "phone": 6175643331,
+      "category": "photography",
+      "subcategory": "Consulting"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Mel's Life Coaching Services and Wedding Officiant",
+      "website": "",
+      "city": "Cambridge",
+      "phone": 8573350796,
+      "category": "photography",
+      "subcategory": "Consulting"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "VISIONS Inc.",
+      "website": "https://visions-inc.org/",
+      "city": "Dorchester",
+      "phone": 6175414100,
+      "category": "photography",
+      "subcategory": "Consulting"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "CJ Strategies LLC",
+      "website": "https://cjstrategiesllc.com/",
+      "city": "Hyde Park",
+      "phone": 6179990179,
+      "category": "photography",
+      "subcategory": "Consulting"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Greater Resource of Women Networks",
+      "website": "https://grownwomenbiz.com/",
+      "city": "Quincy",
+      "phone": 6176503595,
+      "category": "photography",
+      "subcategory": "Consulting"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Know Your Truths. Speak Your Truths., LLC",
+      "website": "https://berdinetruth.com/",
+      "city": "Roslindale",
+      "phone": 6178520281,
+      "category": "photography",
+      "subcategory": "Speaker"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "DREAM Collaborative, LLC",
+      "website": "https://dreamcollaborative.com/",
+      "city": "Boston",
+      "phone": 6176067029,
+      "category": "photography",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Michael Washington Architects, Inc.",
+      "website": "http://www.mwaboston.com/",
+      "city": "Jamaica Plain",
+      "phone": 7815307185,
+      "category": "photography",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "A Gill of all Trades",
+      "website": "https://www.agillofalltrades.com/",
+      "city": "Boston",
+      "phone": 6179227283,
+      "category": "photography",
+      "subcategory": "Consulting"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Amaka Consulting and Evaluation Services, LLC",
+      "website": "https://www.amakaconsulting.com/",
+      "city": "Boston",
+      "phone": 8573093434,
+      "category": "photography",
+      "subcategory": "Consulting"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Blakely Consulting, LLC",
+      "website": "http://pietablakely.com/",
+      "city": "Boston",
+      "phone": 6174808117,
+      "category": "photography",
+      "subcategory": "Consulting"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Consciously Exposed Consulting",
+      "website": "https://consciouslyexposed.net/",
+      "city": "Boston",
+      "phone": 8572930371,
+      "category": "photography",
+      "subcategory": "Consulting"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "M&A Supplier Diversity Consultants",
+      "website": "https://supplierdiversityconsultants.com/",
+      "city": "Boston",
+      "phone": 5087205654,
+      "category": "photography",
+      "subcategory": "Consulting"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Resume Badge",
+      "website": "https://www.resumebadge.com/",
+      "city": "Cambridge",
+      "phone": 6173098996,
+      "category": "photography",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "JLW Medical Magement Consulting",
+      "website": "https://www.jlwmedicalmh.com/",
+      "city": "Framingham",
+      "phone": 8574445444,
+      "category": "photography",
+      "subcategory": "Consulting"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Executive Office Essentials",
+      "website": "https://www.executiveofficeessentials.com/",
+      "city": "Lawrence",
+      "phone": 8882302230,
+      "category": "photography",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Fenton’s Magement Services",
+      "website": "https://www.fentonmodels.com/",
+      "city": "",
+      "phone": 8572129247,
+      "category": "photography",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Oak Hill Consulting Partners",
+      "website": "https://oakhillconsultingpartners.com/",
+      "city": "Newton",
+      "phone": 3217891238,
+      "category": "photography",
+      "subcategory": "Consulting"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Hustle & Thrive Consulting",
+      "website": "https://sidelineceo.co/about-us",
+      "city": "Vineyard Haven",
+      "phone": 5086850484,
+      "category": "photography",
+      "subcategory": "Consulting"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Luxury Restrooms",
+      "website": "https://www.luxuryrestroomsmv.com/",
+      "city": "Vineyard Haven",
+      "phone": 5083601950,
+      "category": "photography",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "In Order Business Development Solutions",
+      "website": "http://www.inorderbusiness.com/",
+      "city": "Boston",
+      "phone": 6177197869,
+      "category": "photography",
+      "subcategory": "Consulting"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Vulcan Consulting Inc",
+      "website": "http://www.vulcanconsulting.com/",
+      "city": "Boston",
+      "phone": 6173146695,
+      "category": "photography",
+      "subcategory": "Consulting"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Johnson Pope Consulting",
+      "website": "",
+      "city": "Boston",
+      "phone": 7038625856,
+      "category": "photography",
+      "subcategory": "Consulting"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Kennedy & Violich Architecture",
+      "website": "",
+      "city": "Boston",
+      "phone": 6174420800,
+      "category": "photography",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Annette Dillard Inc.",
+      "website": "Annette Dillard Inc.",
+      "city": "Brockton",
+      "phone": 5088970400,
+      "category": "real estate",
+      "subcategory": "Real estate"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "DB Warfield, Inc.",
+      "website": "https://dbwarfield.com/",
+      "city": "Boston",
+      "phone": 6175904990,
+      "category": "real estate",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Fort Hill Brokerage Group",
+      "website": "https://www.thecamerongroup.boston/",
+      "city": "Boston",
+      "phone": 6179300914,
+      "category": "real estate",
+      "subcategory": "Real Estate Agents/Brokers"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Hilton Realty",
+      "website": "https://www.hiltonrealtyhomes.com/",
+      "city": "Boston",
+      "phone": 6176512295,
+      "category": "real estate",
+      "subcategory": "Real Estate Agents/Brokers"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Tanya Brown Realtor",
+      "website": "https://tanyabrown.cbintouch.com/",
+      "city": "Newton",
+      "phone": 6175127731,
+      "category": "real estate",
+      "subcategory": "Real Estate Agents/Brokers"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Bold Vision Real Estate Solutions LLC",
+      "website": "https://www.homesp.com/Carline-Chery/newsletter3",
+      "city": "Boston",
+      "phone": 6174297775,
+      "category": "real estate",
+      "subcategory": "Real Estate Agents/Brokers"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "UHM Properties LLC",
+      "website": "https://www.uhmproperties.com/",
+      "city": "Boston",
+      "phone": 6175415510,
+      "category": "real estate",
+      "subcategory": "Property Magement"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Fortified City LLC",
+      "website": "https://www.fortifiedcity.net/",
+      "city": "Dorchester",
+      "phone": 8573181550,
+      "category": "real estate",
+      "subcategory": "Real Estate Agents/Brokers"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "TMW Enterprises",
+      "website": "https://www.realestatebook.com/office/9662/tmw-enterprises",
+      "city": "Boston",
+      "phone": 6175126468,
+      "category": "real estate",
+      "subcategory": "Real Estate Agents/Brokers"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Tayla Made Real Estate Easy LLC",
+      "website": "https://www.taylaandre.com/",
+      "city": "Boston",
+      "phone": 6174590041,
+      "category": "real estate",
+      "subcategory": "Real Estate Agents/Brokers"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "InVesta Realty",
+      "website": "https://www.facebook.com/InVestaRealty/",
+      "city": "Boston",
+      "phone": 8574925736,
+      "category": "real estate",
+      "subcategory": "Real Estate Agents/Brokers"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "NextHome Unlimited Realty Solutions",
+      "website": "http://nexthomeurs.com/",
+      "city": "Hyde Park",
+      "phone": 6178336880,
+      "category": "real estate",
+      "subcategory": "Real Estate Agents/Brokers"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Exit Bayside Realty",
+      "website": "https://exitbaysiderealtyma.business.site/?utm_source=gmb&utm_medium=referral",
+      "city": "Boston",
+      "phone": 6172656111,
+      "category": "real estate",
+      "subcategory": "Real Estate Agents/Brokers"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "H&L Realty Enterprises LLC",
+      "website": "http://www.hlrealtyinvesting.com/",
+      "city": "Canton",
+      "phone": 7075725522,
+      "category": "real estate",
+      "subcategory": "Real Estate Agents/Brokers"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "WelcomeHomes Group, Inc",
+      "website": "https://welcomehomesnewengland.com/",
+      "city": "Northampton",
+      "phone": 4138350657,
+      "category": "real estate",
+      "subcategory": "Real Estate Agents/Brokers"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Undeniable Homes LLC",
+      "website": "https://www.facebook.com/undeniablehomes/",
+      "city": "South Weymouth",
+      "phone": 6176579285,
+      "category": "real estate",
+      "subcategory": "Real Estate Agents/Brokers"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Hammond Residential Real Estate",
+      "website": "https://www.hammondre.com/",
+      "city": "Wellesley",
+      "phone": 6176995878,
+      "category": "real estate",
+      "subcategory": "Real Estate Agents/Brokers"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Nuestra Comunidad Development Corp.",
+      "website": "https://nuestracdc.org/",
+      "city": "Roxbury",
+      "phone": 6179891223,
+      "category": "real estate",
+      "subcategory": "Real Estate Agents/Brokers"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "LAER Realty Partners / MV Roy Cutrer",
+      "website": "https://www.laerrealty.com/agents/18845-roy-cutrer",
+      "city": "Vineyard Haven",
+      "phone": 7748368545,
+      "category": "real estate",
+      "subcategory": "Real Estate Agents/Brokers"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Jennifer DaSilva Realtor",
+      "website": "https://www.homesp.com/Jennifer-DaSilva-1/gmb",
+      "city": "Edgartown",
+      "phone": 9735687093,
+      "category": "real estate",
+      "subcategory": "Real Estate Agents/Brokers"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "MV Island-Wide Realty",
+      "website": "http://www.mvislandwiderealty.com/",
+      "city": "Vineyard Haven",
+      "phone": 5086933700,
+      "category": "real estate",
+      "subcategory": "Real Estate Agents/Brokers"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Donnelly & Co.",
+      "website": "https://donnellyandco.com/marthas-vineyard/",
+      "city": "Edgartown",
+      "phone": 5086271022,
+      "category": "real estate",
+      "subcategory": "Real Estate Agents/Brokers"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "James Real Estate, Inc.",
+      "website": "",
+      "city": "Mattapan",
+      "phone": 6172966500,
+      "category": "real estate",
+      "subcategory": "Real Estate Agents/Brokers"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Liberty Realty",
+      "website": "http://www.libertyrentsboston.com/",
+      "city": "Boston",
+      "phone": 6179290388,
+      "category": "real estate",
+      "subcategory": "Real Estate Agents/Brokers"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "LORD & Stovell LLC dba EXIT Bayside Realty",
+      "website": "https://www.realestatebook.com/office/6612/exit-bayside-realty",
+      "city": "Boston",
+      "phone": 6172656111,
+      "category": "real estate",
+      "subcategory": "Real Estate Agents/Brokers"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "CCFL Boston",
+      "website": "http://ccflboston.com/",
+      "city": "Brighton",
+      "phone": 6173194770,
+      "category": "recreation",
+      "subcategory": "Sports"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Empower Brazilian Jiu Jitsu, Inc.",
+      "website": "https://www.empowerbjj.com/",
+      "city": "Dorchester",
+      "phone": 6175191925,
+      "category": "recreation",
+      "subcategory": "Martial Arts"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Chez Vous Skating",
+      "website": "https://chezvousrollerrink.com/",
+      "city": "Dorchester",
+      "phone": 6178256877,
+      "category": "recreation",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Wally's Cafe",
+      "website": "https://wallyscafe.com/",
+      "city": "Boston",
+      "phone": 6174241408,
+      "category": "restaurants",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Slade's Bar and Grill",
+      "website": "https://www.sladesbarandgrill.com/",
+      "city": "Roxbury Crossing",
+      "phone": "",
+      "category": "restaurants",
+      "subcategory": "BBQ/Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Addie Lee's Soul Food",
+      "website": "https://www.facebook.com/addieleessoulfood",
+      "city": "Worcester",
+      "phone": 5087520659,
+      "category": "restaurants",
+      "subcategory": "BBQ/Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "BRED Gourmet",
+      "website": "http://www.bredgourmet.com/",
+      "city": "Boston",
+      "phone": 6176980103,
+      "category": "restaurants",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Island Style Jamaican Restaurant",
+      "website": "https://www.islandstylerest.com/",
+      "city": "Dorchester",
+      "phone": 6172888300,
+      "category": "restaurants",
+      "subcategory": "Caribbean Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Zaz Restaurant",
+      "website": "https://www.zazrestaurant.com/",
+      "city": "Hyde Park",
+      "phone": 6172763729,
+      "category": "restaurants",
+      "subcategory": "Caribbean Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Bonne Chance Cafe",
+      "website": "https://www.bonnechancecafe77.com/",
+      "city": "Boston",
+      "phone": 3392230260,
+      "category": "restaurants",
+      "subcategory": "Cafe"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Rock City Pizza",
+      "website": "https://rockcitypizzeria.com/",
+      "city": "Allston",
+      "phone": 6177827625,
+      "category": "restaurants",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Darryl's Corner Bar & Grill",
+      "website": "https://dcbkboston.com/",
+      "city": "Boston",
+      "phone": 6175361100,
+      "category": "restaurants",
+      "subcategory": "Bar/Nightclub"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Do Haba Restaurant",
+      "website": "http://dohabarestaurant.com/",
+      "city": "Boston",
+      "phone": 6172935361,
+      "category": "restaurants",
+      "subcategory": "Caribbean Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Il Mondo Pizza",
+      "website": "http://www.ilmondopizza.com/",
+      "city": "Boston",
+      "phone": 6173359833,
+      "category": "restaurants",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "La Gran Manza Restaurant and Bar",
+      "website": "https://www.doordash.com/store/la-gran-manza-boston-1290379/?utm_campaign=gpa",
+      "city": "Boston",
+      "phone": 6174185728,
+      "category": "restaurants",
+      "subcategory": "Bar/Nightclub"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Maxine's on St.James",
+      "website": "http://www.maxinesonsaintjames.com/",
+      "city": "Boston",
+      "phone": 6172070551,
+      "category": "restaurants",
+      "subcategory": "BBQ/Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "A Family Affair Restaurant",
+      "website": "https://famaffairboston.wixsite.com/mysite",
+      "city": "Boston",
+      "phone": 6175144458,
+      "category": "restaurants",
+      "subcategory": "BBQ/Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Noon Mediterranean",
+      "website": "https://eatmednoon.com/",
+      "city": "Boston",
+      "phone": 6174820198,
+      "category": "restaurants",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Restaurante Cesaria",
+      "website": "https://www.restaurantcesaria.com/",
+      "city": "Boston",
+      "phone": 6172821998,
+      "category": "restaurants",
+      "subcategory": "Creole/Cajun Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Soleil",
+      "website": "https://www.soleilboston.com/",
+      "city": "Boston",
+      "phone": 6175419000,
+      "category": "restaurants",
+      "subcategory": "BBQ/Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Tawakal Halal Cafe",
+      "website": "https://www.tawakalfoods.co/",
+      "city": "Boston",
+      "phone": 6174185890,
+      "category": "restaurants",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Tex Mex Eats",
+      "website": "https://www.txmexeats.com/",
+      "city": "Boston",
+      "phone": 6179051806,
+      "category": "restaurants",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Vejigantes Restaurant",
+      "website": "http://vejigantesrestaurant.com/",
+      "city": "Boston",
+      "phone": 6172935361,
+      "category": "restaurants",
+      "subcategory": "Caribbean Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Blue Mountain Jamaican Restaurant",
+      "website": "https://bluemountainjamaicanrestaurant.com/",
+      "city": "Boston",
+      "phone": 6175337255,
+      "category": "restaurants",
+      "subcategory": "Caribbean Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Comfort Kitchen",
+      "website": "https://www.comfortkitchenbos.com/",
+      "city": "Dorchester",
+      "phone": 6173312094,
+      "category": "restaurants",
+      "subcategory": "BBQ/Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Down Home Delivery & Catering",
+      "website": "http://www.downhomedelivery.com/",
+      "city": "Dorchester",
+      "phone": 6462260118,
+      "category": "restaurants",
+      "subcategory": "BBQ/Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "M&M BBQ",
+      "website": "https://www.mandmbbq.com/",
+      "city": "Dorchester",
+      "phone": 6173077674,
+      "category": "restaurants",
+      "subcategory": "BBQ/Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "50 Kitchen",
+      "website": "https://50kitchen.com/",
+      "city": "Dorchester",
+      "phone": 6174742433,
+      "category": "restaurants",
+      "subcategory": "BBQ/Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Shanti Restaurant",
+      "website": "https://www.shantiboston.com/",
+      "city": "Dorchester",
+      "phone": 6173253900,
+      "category": "restaurants",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Jamaica Me Hungry",
+      "website": "https://www.jamaicamihungry.com/",
+      "city": "Jamaica Plain",
+      "phone": 6177080465,
+      "category": "restaurants",
+      "subcategory": "Caribbean Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "JPizle",
+      "website": "https://jpizlekitchen.com/",
+      "city": "Jamaica Plain",
+      "phone": 8579192709,
+      "category": "restaurants",
+      "subcategory": "BBQ/Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Blue Nile Restaurant",
+      "website": "https://www.bluenileincjp.com/",
+      "city": "Jamaica Plain",
+      "phone": 6175226453,
+      "category": "restaurants",
+      "subcategory": "Ethiopian/Eritrean Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Pit Stop Barbecue",
+      "website": "http://www.pitstopbarbecue.com/",
+      "city": "Mattapan",
+      "phone": 6173085593,
+      "category": "restaurants",
+      "subcategory": "BBQ/Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "District 7 Tavern",
+      "website": "https://www.facebook.com/District7Tavern/?ref=bookmarks",
+      "city": "Roxbury",
+      "phone": 6175447699,
+      "category": "restaurants",
+      "subcategory": "Bar/Nightclub"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Merengue Restaurant",
+      "website": "http://merenguerestaurant.com/",
+      "city": "Roxbury",
+      "phone": 6175150362,
+      "category": "restaurants",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Rhythm N' Wraps",
+      "website": "https://www.rhythmnwraps.com/",
+      "city": "Boston",
+      "phone": 6175664144,
+      "category": "restaurants",
+      "subcategory": "BBQ/Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Fasika Cafe",
+      "website": "https://www.fasikarestaurants.com/fasika-cafe",
+      "city": "Boston",
+      "phone": 6172387979,
+      "category": "restaurants",
+      "subcategory": "Ethiopian/Eritrean Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Food for the Soul",
+      "website": "https://www.facebook.com/bostonsoulfood/",
+      "city": "Boston",
+      "phone": 6174423300,
+      "category": "restaurants",
+      "subcategory": "BBQ/Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Fort Hill Bar + Grill",
+      "website": "https://www.facebook.com/forthillbarandgrill/",
+      "city": "Boston",
+      "phone": 6174427000,
+      "category": "restaurants",
+      "subcategory": "BBQ/Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Country Kitchen",
+      "website": "http://bostoncountrykitchen.com/",
+      "city": "Boston",
+      "phone": "",
+      "category": "restaurants",
+      "subcategory": "Caribbean Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Levi's Restaurant and Lounge",
+      "website": "https://www.facebook.com/Levis323/",
+      "city": "Boston",
+      "phone": 6172651009,
+      "category": "restaurants",
+      "subcategory": "Caribbean Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "tif tal Restaurant",
+      "website": "https://www.tiftalma.com/#/",
+      "city": "Boston",
+      "phone": 6173266929,
+      "category": "restaurants",
+      "subcategory": "Caribbean Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Taste of Eden",
+      "website": "https://www.tasteofedenjamerican.net/",
+      "city": "Boston",
+      "phone": 6172820077,
+      "category": "restaurants",
+      "subcategory": "Caribbean Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Top Mix",
+      "website": "https://www.topmixbar.com/",
+      "city": "Boston",
+      "phone": 6176528976,
+      "category": "restaurants",
+      "subcategory": "Bar/Nightclub"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Lucy Ethiopian Cafe",
+      "website": "https://lucyethiopiancafe.business.site/?utm_source=gmb&utm_medium=referral",
+      "city": "Boston",
+      "phone": 6175360415,
+      "category": "restaurants",
+      "subcategory": "Ethiopian/Eritrean Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "MIDA",
+      "website": "https://midarestaurant.com/",
+      "city": "Boston",
+      "phone": "",
+      "category": "restaurants",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Asmara",
+      "website": "",
+      "city": "Boston",
+      "phone": 6178647447,
+      "category": "restaurants",
+      "subcategory": "Ethiopian/Eritrean Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Wingz & Tingz",
+      "website": "https://www.wingzandtingz.com/",
+      "city": "Boston",
+      "phone": 6176528580,
+      "category": "restaurants",
+      "subcategory": "BBQ/Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Farah's Cafe Restaurant",
+      "website": "https://www.yelp.com/biz/farahs-caf%C3%A9-restaurant-boston-2",
+      "city": "Boston",
+      "phone": 6179103203,
+      "category": "restaurants",
+      "subcategory": "Caribbean Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Ideals Sub Shop",
+      "website": "https://www.ideal.boston/",
+      "city": "Boston",
+      "phone": 6174421560,
+      "category": "restaurants",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Puritan & Co",
+      "website": "https://www.puritancambridge.com/",
+      "city": "Cambridge",
+      "phone": 6176156195,
+      "category": "restaurants",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Oggi Gourmet",
+      "website": "https://www.oggigourmetmenu.com/",
+      "city": "Cambridge",
+      "phone": 6174926444,
+      "category": "restaurants",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Antonio's Pizzeria",
+      "website": "https://www.antoniospizzeriamenu.com/",
+      "city": "Dorchester",
+      "phone": 6172650489,
+      "category": "restaurants",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Bon Appetit",
+      "website": "https://www.facebook.com/boppetitboston/",
+      "city": "Dorchester",
+      "phone": 6178255544,
+      "category": "restaurants",
+      "subcategory": "Caribbean Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Irie Jamaican Style Restaurant",
+      "website": "http://ordeririejamaicanstylerestaurant.com/",
+      "city": "Dorchester",
+      "phone": 6179293866,
+      "category": "restaurants",
+      "subcategory": "Caribbean Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "JP Roti Shop",
+      "website": "https://www.instagram.com/j.protishop/?hl=en",
+      "city": "Dorchester",
+      "phone": 6178254860,
+      "category": "restaurants",
+      "subcategory": "Caribbean Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Murl's Kitchen",
+      "website": "https://www.facebook.com/murlskitchen/",
+      "city": "Dorchester",
+      "phone": 6175067331,
+      "category": "restaurants",
+      "subcategory": "Caribbean Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Oasis Cafe",
+      "website": "https://oasis-restaurant-caribbean-restaurant.business.site/?utm_source=gmb&utm_medium=referral",
+      "city": "Dorchester",
+      "phone": 6177408288,
+      "category": "restaurants",
+      "subcategory": "Caribbean Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "One Family Diner",
+      "website": "https://www.facebook.com/OnefamilydinerDorchester/",
+      "city": "Dorchester",
+      "phone": 6174361577,
+      "category": "restaurants",
+      "subcategory": "Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Singh's Roti Shop",
+      "website": "https://singhsrotishop.business.site/?m=true",
+      "city": "Dorchester",
+      "phone": 6172827977,
+      "category": "restaurants",
+      "subcategory": "Caribbean Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Vaughan Fish & Chips",
+      "website": "https://www.yelp.com/biz/vaughan-fish-and-chips-dorchester",
+      "city": "Dorchester",
+      "phone": 6178251194,
+      "category": "restaurants",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Yelu's",
+      "website": "https://www.facebook.com/YELUSboston/",
+      "city": "Dorchester",
+      "phone": 8572713926,
+      "category": "restaurants",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Only One Jamaican Restaurant",
+      "website": "https://www.onlyonerestaurant.com/",
+      "city": "Dorchester, Brockton, Hyde Park",
+      "phone": 6178220444,
+      "category": "restaurants",
+      "subcategory": "Caribbean Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Brother's Kafe Kreyol",
+      "website": "https://www.yelp.com/biz/brothers-kafe-kreyol-everett",
+      "city": "Everett",
+      "phone": 6172941425,
+      "category": "restaurants",
+      "subcategory": "Caribbean Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Las Vegas Seafood Restaurant",
+      "website": "https://www.facebook.com/LasVegasHydePark/",
+      "city": "Hyde Park",
+      "phone": 6173642772,
+      "category": "restaurants",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "D Coal Pot",
+      "website": "https://www.instagram.com/dcoalpot/?hl=en",
+      "city": "Hyde Park",
+      "phone": 8573459512,
+      "category": "restaurants",
+      "subcategory": "Caribbean Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Ethiopian Cafe",
+      "website": "https://ethiopiancafe.business.site/",
+      "city": "Jamaica Plain",
+      "phone": 6179427192,
+      "category": "restaurants",
+      "subcategory": "Ethiopian/Eritrean Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Caribbean Flavors",
+      "website": "https://caribbean-flavors-boston.business.site/?utm_source=gmb&utm_medium=referral",
+      "city": "Mattapan",
+      "phone": 6175067875,
+      "category": "restaurants",
+      "subcategory": "Caribbean Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Neighborhood Kitchen",
+      "website": "https://www.nkboston.com/",
+      "city": "Medford",
+      "phone": 7813919000,
+      "category": "restaurants",
+      "subcategory": "Caribbean Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Cape Cod Lobster Rolls",
+      "website": "https://www.capecodlobsterrolls.com/",
+      "city": "Onset",
+      "phone": 5087437020,
+      "category": "restaurants",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Obosa",
+      "website": "https://obosafoods.com/",
+      "city": "Roslindale",
+      "phone": 6173273700,
+      "category": "restaurants",
+      "subcategory": "West African Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Ashur Restaurant",
+      "website": "https://www.grubhub.com/restaurant/ashur-restaurant-291-roxbury-st-roxbury/339725",
+      "city": "Roxbury",
+      "phone": 6174270599,
+      "category": "restaurants",
+      "subcategory": "Caribbean Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Dayib Cafe",
+      "website": "https://www.yelp.com/biz/dayib-cafe-roxbury",
+      "city": "Roxbury",
+      "phone": 6174270099,
+      "category": "restaurants",
+      "subcategory": "Cafe"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Nos Casa Cafe",
+      "website": "https://www.noscasacafe.com/",
+      "city": "Roxbury",
+      "phone": 6176067060,
+      "category": "restaurants",
+      "subcategory": "West African Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Suya Joint",
+      "website": "https://suyajoint.com/",
+      "city": "Roxbury",
+      "phone": 6177080245,
+      "category": "restaurants",
+      "subcategory": "West African Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Pikliz Intertiol Kitchen",
+      "website": "https://www.piklizint.com/",
+      "city": "Somerville",
+      "phone": 6176256255,
+      "category": "restaurants",
+      "subcategory": "Caribbean Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Fasika Ethiopian Restaurant",
+      "website": "https://www.fasikaethiopian.com/",
+      "city": "Somerville",
+      "phone": 6176289300,
+      "category": "restaurants",
+      "subcategory": "Ethiopian/Eritrean Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Highland Cuisine",
+      "website": "https://highlandcreolecuisine.com/",
+      "city": "Somerville",
+      "phone": 6176258333,
+      "category": "restaurants",
+      "subcategory": "Creole/Cajun Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Bistro 781",
+      "website": "https://www.bistro781.com/",
+      "city": "Waltham",
+      "phone": 7818990297,
+      "category": "restaurants",
+      "subcategory": "Bar/Nightclub"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Savvor Restaurant & Lounge",
+      "website": "https://www.savvorbostonlounge.com/",
+      "city": "Boston",
+      "phone": 8572502165,
+      "category": "restaurants",
+      "subcategory": "BBQ/Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Chef Deon's Kitchen",
+      "website": "https://www.chefdeon.com/",
+      "city": "Oak Bluffs",
+      "phone": 5086270330,
+      "category": "restaurants",
+      "subcategory": "Caribbean Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Dilly's Taqueria",
+      "website": "https://www.dillystaqueria.com/",
+      "city": "Oak Bluffs",
+      "phone": 5086939851,
+      "category": "restaurants",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Edgartown Diner",
+      "website": "https://edgartowndiner.com/",
+      "city": "Edgartown",
+      "phone": 5086279337,
+      "category": "restaurants",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Biscuits",
+      "website": "https://www.mvbiscuits.com/",
+      "city": "Oak Bluffs",
+      "phone": 5086932033,
+      "category": "restaurants",
+      "subcategory": "BBQ/Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Karibu",
+      "website": "https://www.facebook.com/KaribuWaltham/",
+      "city": "Waltham",
+      "phone": "",
+      "category": "restaurants",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "La Mamma Pizza, Pasta & More",
+      "website": "https://www.lamammaspizza.com/",
+      "city": "Allston",
+      "phone": 6177831661,
+      "category": "restaurants",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Cameo Macaron",
+      "website": "http://www.cameomacaron.com/",
+      "city": "Boston",
+      "phone": 6179091228,
+      "category": "restaurants",
+      "subcategory": "Food Trucks/Carts"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Exodus Bagels",
+      "website": "http://www.exodusbagels.com/",
+      "city": "Boston",
+      "phone": "",
+      "category": "restaurants",
+      "subcategory": "Bakery"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Ripple Cafe",
+      "website": "https://www.rippleboston.com/",
+      "city": "Dorchester",
+      "phone": 6172975621,
+      "category": "restaurants",
+      "subcategory": "Cafe"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "JUICYGREENS",
+      "website": "https://www.juicygreensboston.com/",
+      "city": "Jamaica Plain",
+      "phone": 8572889776,
+      "category": "restaurants",
+      "subcategory": "Cafe"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Seshat Cafe and Publishing",
+      "website": "https://www.instagram.com/seshat_cafe/?hl=en",
+      "city": "Boston",
+      "phone": "",
+      "category": "restaurants",
+      "subcategory": "Cafe"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "ATLANTIC CAB",
+      "website": "ATLANTIC CAB",
+      "city": "",
+      "phone": 5086937110,
+      "category": "transportation",
+      "subcategory": "Taxi"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Higher Ground Transportation",
+      "website": "Higher Ground Transportation",
+      "city": "Mattapan",
+      "phone": 6172982357,
+      "category": "transportation",
+      "subcategory": "Taxi"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Prive Parking, LLC",
+      "website": "http://priveparkingboston.com/",
+      "city": "Boston",
+      "phone": 5083266929,
+      "category": "transportation",
+      "subcategory": "Parking"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "BCb Moving Labor Services",
+      "website": "https://www.bcbmoving.com/",
+      "city": "Malden",
+      "phone": 3392244799,
+      "category": "transportation",
+      "subcategory": "Moving Services"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "The Transportation Initiative Inc",
+      "website": "https://www.facebook.com/Transinit/",
+      "city": "Norton",
+      "phone": 6172029035,
+      "category": "transportation",
+      "subcategory": "Limo/Party Bus"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "AdamHelper",
+      "website": "https://adamhelper.com/",
+      "city": "Medford",
+      "phone": 6179822744,
+      "category": "transportation",
+      "subcategory": "Moving Services"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Austin Transportation LLC",
+      "website": "http://www.austintransportsboston.com/",
+      "city": "Boston",
+      "phone": 6177999670,
+      "category": "transportation",
+      "subcategory": "Limo/Party Bus"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Legacy Intertiol Trucking, LLC",
+      "website": "https://www.facebook.com/Legacy-Intertiol-Trucking-100189631557636/?ref=py_c",
+      "city": "Dorchester Center",
+      "phone": 8573340429,
+      "category": "transportation",
+      "subcategory": "Trucking"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Brandao Transportation Services",
+      "website": "https://www.facebook.com/brandaotransportationservice/",
+      "city": "Boston",
+      "phone": 6172242059,
+      "category": "transportation",
+      "subcategory": "Taxi"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "M1 Airport Livery LLC.",
+      "website": "http://www.m1airportlivery.com/",
+      "city": "Boston",
+      "phone": 6178889486,
+      "category": "transportation",
+      "subcategory": "Taxi"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Masters Transportation and Services",
+      "website": "https://masterstransportandservices.com/",
+      "city": "Boston",
+      "phone": 6172242214,
+      "category": "transportation",
+      "subcategory": "Taxi"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Adam Cab, LLC",
+      "website": "https://adamcabmv.com/",
+      "city": "Edgartown",
+      "phone": 5086274462,
+      "category": "transportation",
+      "subcategory": "Taxi"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "McCall Transportation LLC",
+      "website": "McCall Transportation LLC",
+      "city": "Dorchester",
+      "phone": 6172887772,
+      "category": "transportation",
+      "subcategory": "Taxi"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "RMN Limousine and Sedan Service",
+      "website": "RMN Limousine and Sedan Service",
+      "city": "Mattapan",
+      "phone": 6172878008,
+      "category": "transportation",
+      "subcategory": "Limo/Party Bus"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Tonys Transportation",
+      "website": "Tonys Transportation",
+      "city": "Dorchester",
+      "phone": 6177193777,
+      "category": "transportation",
+      "subcategory": "Taxi"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Z 19 Bos Truck Service",
+      "website": "Z 19 Bos Truck Service",
+      "city": "Hyde Park",
+      "phone": 5083833475,
+      "category": "transportation",
+      "subcategory": "Trucking"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Coley Communications: Arts Education Therapy Drum Circles",
+      "website": "http://www.afrolatin.net/home.html",
+      "city": "Mattapan",
+      "phone": 6179357614,
+      "category": "visual",
+      "subcategory": "Music"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Chavez Design Studio",
+      "website": "https://www.chavezdesignstudio.com/",
+      "city": "Boston",
+      "phone": 6177926332,
+      "category": "visual",
+      "subcategory": "Art"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Takeover Sound",
+      "website": "http://takeoversound.com/",
+      "city": "Boston",
+      "phone": 8573343635,
+      "category": "visual",
+      "subcategory": "Music"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Ideal Mixer",
+      "website": "https://www.facebook.com/TheIdealMixer/",
+      "city": "Mattapan",
+      "phone": 6172949295,
+      "category": "visual",
+      "subcategory": "Music"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Aya Mack Design",
+      "website": "https://www.ayamack.co/",
+      "city": "Boston/Online",
+      "phone": 6170000000,
+      "category": "visual",
+      "subcategory": "Art"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Aashka Company",
+      "website": "http://www.aashkacompany.com/",
+      "city": "Hyde Park",
+      "phone": 6172978377,
+      "category": "visual",
+      "subcategory": "Dance"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Polyphonic Studios LLC",
+      "website": "https://www.polyphonicstudios.com/",
+      "city": "Buzzards Bay",
+      "phone": 5087591906,
+      "category": "visual",
+      "subcategory": "Music"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Justin Time Productions",
+      "website": "http://www.justintime-productions.com/Home.html",
+      "city": "Boston",
+      "phone": 6172333578,
+      "category": "visual",
+      "subcategory": "Music"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Designs by Bolaji",
+      "website": "https://www.designsbybolaji.org/",
+      "city": "Cambridge",
+      "phone": "",
+      "category": "visual",
+      "subcategory": "Art"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Roxbury Center For The Performing Arts",
+      "website": "http://www.rcpaboston.org/",
+      "city": "Boston",
+      "phone": 6172824561,
+      "category": "visual",
+      "subcategory": "Performing Arts"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Harry Seymour Gallery",
+      "website": "https://hseymour.artspan.com/contact",
+      "city": "Oak Bluffs",
+      "phone": 4135311084,
+      "category": "visual",
+      "subcategory": "Art Gallery/Museum"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Knowhere Art Gallery",
+      "website": "https://knowhereart.com/",
+      "city": "Oak Bluffs",
+      "phone": 9179609344,
+      "category": "visual",
+      "subcategory": "Art Gallery/Museum"
+    }
+},
+    {
+      "model": "vbp.vbp_ma",
+      "fields": {
+"business_name": "Cousen Rose Gallery",
+      "website": "https://www.cousenrose.com/",
+      "city": "Oak Bluffs",
+      "phone": 5086936656,
+      "category": "visual",
+      "subcategory": "Art Gallery/Museum"
+    }
+    }
+  ]

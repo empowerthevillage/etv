@@ -1,0 +1,3254 @@
+[
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Blissed By Ayo",
+      "website": "https://www.blissedbyayo.com/",
+      "city": "Dover",
+      
+      "phone": 3022172782,
+      "subcategory": "Hair Salon",
+      "category": "beauty"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "KBo e’scentials",
+      "website": "https://kboessentials.bigcartel.com/product/kbo-e-scentials-hair-pudding",
+      "city": "Dover",
+      
+      "phone": "",
+      "subcategory": "Hair Product",
+      "category": "beauty"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Suds Bar Soap",
+      "website": "https://sudsbarsoap.com/",
+      "city": "Dover",
+      
+      "phone": 3026741303,
+      "subcategory": "Bath & Body",
+      "category": "beauty"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Parris Nail Lounge",
+      "website": "https://parrisnaillounge.com/",
+      "city": "Dover",
+      
+      "phone": 3026782935,
+      "subcategory": "",
+      "category": "beauty"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Bare Nature",
+      "website": "https://www.facebook.com/gobarenature/",
+      "city": "Kirkwood",
+      
+      "phone": "",
+      "subcategory": "Natural Products",
+      "category": "beauty"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Che’ Studio",
+      "website": "https://www.instagram.com/chestudioinc/",
+      "city": "New Castle",
+      
+      "phone": "",
+      "subcategory": "Hair Salon",
+      "category": "beauty"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Resh Salon and Spa",
+      "website": "https://myresh.com/",
+      "city": "New Castle",
+      
+      "phone": 3025435469,
+      "subcategory": "",
+      "category": "beauty"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Wanderin’ Woman Soap and Such",
+      "website": "https://thewanderinwoman.com/",
+      "city": "New Castle",
+      
+      "phone": "Coming soon!",
+      "subcategory": "",
+      "category": "beauty"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "2 Fly Hair",
+      "website": "https://www.2flyhair.com/password",
+      "city": "Wilmington",
+      
+      "phone": "",
+      "subcategory": "Hair Extentions",
+      "category": "beauty"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Aja Myhe Wax & Beauty Lounge",
+      "website": "https://www.instagram.com/ajamyhewax/",
+      "city": "Wilmington",
+      
+      "phone": 3025977444,
+      "subcategory": "",
+      "category": "beauty"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Babe Styling Studio",
+      "website": "https://babestylingstudios.com/",
+      "city": "Wilmington",
+      
+      "phone": 3025437738,
+      "subcategory": "",
+      "category": "beauty"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Bare Beauty Wax Studio",
+      "website": "https://www.facebook.com/Bare-Beauty-Wax-Studio-104413817720730/",
+      "city": "Wilmington",
+      
+      "phone": "",
+      "subcategory": "",
+      "category": "beauty"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "J. Stanley Salon",
+      "website": "https://jstanleysalon.com/",
+      "city": "Wilmington",
+      
+      "phone": 3027781885,
+      "subcategory": "",
+      "category": "beauty"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Makeup by Kim",
+      "website": "https://www.instagram.com/makeupbykim01/",
+      "city": "Wilmington",
+      
+      "phone": "",
+      "subcategory": "",
+      "category": "beauty"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Makeup by LaVonne",
+      "website": "http://www.makeuplovebylavonne.com/",
+      "city": "Wilmington",
+      
+      "phone": "",
+      "subcategory": "",
+      "category": "beauty"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Pure Holistics",
+      "website": "https://www.pureholistics.org/",
+      "city": "Wilmington",
+      
+      "phone": 3028034767,
+      "subcategory": "Natural Products",
+      "category": "beauty"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Pure Quality Hair Suites",
+      "website": "https://www.facebook.com/PureQualityHairSuites/",
+      "city": "Wilmington",
+      
+      "phone": 8448548388,
+      "subcategory": "",
+      "category": "beauty"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Royal Spa and Nail Academy",
+      "website": "https://www.instagram.com/royal_spa_and__nail_academy/",
+      "city": "Wilmington",
+      
+      "phone": "",
+      "subcategory": "",
+      "category": "beauty"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Sadiddy Hippie",
+      "website": "https://www.sadiddyhippie.com/",
+      "city": "Wilmington",
+      
+      "phone": "",
+      "subcategory": "Natural Products",
+      "category": "beauty"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Teased Styling Studio",
+      "website": "https://www.vagaro.com/teasedstylingstudio",
+      "city": "Wilmington",
+      
+      "phone": 3026548383,
+      "subcategory": "",
+      "category": "beauty"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "V Class Makeup Artistry",
+      "website": "https://www.vclassmakeup.com/",
+      "city": "Wilmington",
+      
+      "phone": 3023128943,
+      "subcategory": "",
+      "category": "beauty"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Mary Kay",
+      "website": "https://www.marykay.com/jester/en-us",
+      "city": "Lewes",
+      
+      "phone": 3023811965,
+      "subcategory": "Cosmetics",
+      "category": "beauty"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Body & Soul Organics",
+      "website": "https://thebodyandsoulorganicsco.com/",
+      "city": "Middletown",
+      
+      "phone": "",
+      "subcategory": "Natural Products",
+      "category": "beauty"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Sabrina's Alchemy",
+      "website": "https://www.sabrinasalchemy.com/",
+      "city": "Middletown",
+      
+      "phone": 5075917627,
+      "subcategory": "Bath & Body",
+      "category": "beauty"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "King Kutz Barbershop",
+      "website": "https://www.facebook.com/KingKutzLLC/",
+      "city": "Smyrna",
+      
+      "phone": 6108644234,
+      "subcategory": "",
+      "category": "beauty"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Black Visionary Designers Barber Salon",
+      "website": "https://www.facebook.com/TWARRENBVD/about/?ref=page_internal",
+      "city": "Wilmington",
+      
+      "phone": 3028882831,
+      "subcategory": "",
+      "category": "beauty"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "His Image Barber Lounger",
+      "website": "http://www.hisimagebarberlounge.com/",
+      "city": "Wilmington",
+      
+      "phone": 3025592743,
+      "subcategory": "",
+      "category": "beauty"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Kings Lounge",
+      "website": "https://www.styleseat.com/m/v/krystlelove",
+      "city": "Wilmington",
+      
+      "phone": 3029839387,
+      "subcategory": "Hair Salon",
+      "category": "beauty"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "N.V.Me Designs by Nikki Valentine",
+      "website": "https://nvmedesigns.wixsite.com/nvmedesigns",
+      "city": "Wilmington",
+      
+      "phone": 3027507652,
+      "subcategory": "Make Up Artist",
+      "category": "beauty"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Salon Ollae",
+      "website": "https://www.facebook.com/Salonollae2/",
+      "city": "Wilmington",
+      
+      "phone": 3026544848,
+      "subcategory": "",
+      "category": "beauty"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "MeJah Books",
+      "website": "https://mejahbooks.com/",
+      "city": "Claymont",
+      
+      "phone": 3027933424,
+      "subcategory": "Book Store",
+      "category": "books"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Baba's Love",
+      "website": "https://www.babaslove.com/",
+      "city": "Smyrna",
+      
+      "phone": 3022612761,
+      "subcategory": "Authors",
+      "category": "books"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Tasmanian Details",
+      "website": "https://www.facebook.com/TasmanianDetails/",
+      "city": "Milford",
+      
+      "phone": 3023190624,
+      "subcategory": "Auto Repair/ Services",
+      "category": "cars"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Delaware Public Auto Auto Auction",
+      "website": "https://www.dpaa2.com/",
+      "city": "New Castle",
+      
+      "phone": 3026560500,
+      "subcategory": "Auto Dealership",
+      "category": "cars"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Performance Body & Paint",
+      "website": "https://www.facebook.com/Performance-Auto-Body-and-Paint-1589194351351363/",
+      "city": "Wilmington",
+      
+      "phone": 3026556170,
+      "subcategory": "Auto Repair/ Services",
+      "category": "cars"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Towman 302",
+      "website": "https://www.instagram.com/towman_302/",
+      "city": "Wilmington",
+      
+      "phone": 3028984535,
+      "subcategory": "",
+      "category": "cars"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "PDL Cleaning Services",
+      "website": "http://pdlcleaningservice.website2.me/",
+      "city": "New Castle",
+      
+      "phone": 3023459376,
+      "subcategory": "",
+      "category": "cleaning"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "All Clean Floor Care LLC",
+      "website": "https://www.allcleanfloorcare.com/",
+      "city": "Newark",
+      
+      "phone": 3023546726,
+      "subcategory": "",
+      "category": "cleaning"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "GiGi's Laundry Room",
+      "website": "https://gigis-laundry-room.business.site/",
+      "city": "Wilmington",
+      
+      "phone": 3027647777,
+      "subcategory": "Laundry",
+      "category": "cleaning"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Juxtamod Kids",
+      "website": "https://www.juxtamod.com/",
+      "city": "Wilmington",
+      
+      "phone": "",
+      "subcategory": "Apparel",
+      "category": "clothing"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Asata Maise",
+      "website": "https://www.asatamaise.com/",
+      "city": "Wilmington",
+      
+      "phone": "",
+      "subcategory": "Stylist",
+      "category": "clothing"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Modishh Boutique",
+      "website": "https://shopmodishh302.com/",
+      "city": "Bear",
+      
+      "phone": 3022239486,
+      "subcategory": "Apparel",
+      "category": "clothing"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "T&T Custom Embroidery",
+      "website": "https://tntcustomembroidery.com/",
+      "city": "Bear",
+      
+      "phone": 3024209454,
+      "subcategory": "Apparel",
+      "category": "clothing"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "URU uniforms",
+      "website": "https://www.facebook.com/uru-Uniforms-215638835231463/",
+      "city": "Bear",
+      
+      "phone": 3025952761,
+      "subcategory": "Apparel",
+      "category": "clothing"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Diva Couture by Dell Scott",
+      "website": "https://www.divacoutoure.com/",
+      "city": "Clayton",
+      
+      "phone": 8008040194,
+      "subcategory": "Apparel",
+      "category": "clothing"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Ambishes Diva",
+      "website": "https://ambishesdiva.com/",
+      "city": "Dover",
+      
+      "phone": "",
+      "subcategory": "Apparel",
+      "category": "clothing"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "That Ish Boutique",
+      "website": "https://www.facebook.com/ThatIsh302/",
+      "city": "Dover",
+      
+      "phone": 3025351668,
+      "subcategory": "Apparel",
+      "category": "clothing"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Elite Feet",
+      "website": "https://www.elitefeet302.com/",
+      "city": "Middletown",
+      
+      "phone": 3024641028,
+      "subcategory": "Footwear",
+      "category": "clothing"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Factory Finish Shoe Repair And Leather Work",
+      "website": "",
+      "city": "Milford",
+      
+      "phone": 3024228399,
+      "subcategory": "Footwear",
+      "category": "clothing"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Couture Greek",
+      "website": "https://couturegreek.com/",
+      "city": "New Castle",
+      
+      "phone": 3023165589,
+      "subcategory": "Apparel",
+      "category": "clothing"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Mignon Manley Bridal",
+      "website": "https://www.mignonmanleybridal.com/",
+      "city": "New Castle",
+      
+      "phone": 3022344000,
+      "subcategory": "Apparel",
+      "category": "clothing"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "A Design by Diva",
+      "website": "https://www.adesignbydiva.com/",
+      "city": "Newark",
+      
+      "phone": 2024911327,
+      "subcategory": "Apparel",
+      "category": "clothing"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Africabaie",
+      "website": "https://www.africabaie.com/en/",
+      "city": "Newark",
+      
+      "phone": "",
+      "subcategory": "Apparel",
+      "category": "clothing"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "TamiCaRa Designs",
+      "website": "https://tamicaradesigns.square.site/",
+      "city": "Newark",
+      
+      "phone": "",
+      "subcategory": "Apparel",
+      "category": "clothing"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "88 Flavors",
+      "website": "https://88flavors.com/",
+      "city": "Wilmington",
+      
+      "phone": "",
+      "subcategory": "Apparel",
+      "category": "clothing"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Akim",
+      "website": "https://www.akimneversettles.shop/",
+      "city": "Wilmington",
+      
+      "phone": "",
+      "subcategory": "Apparel",
+      "category": "clothing"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Carry My Own Weight",
+      "website": "https://carrymyownweight.com/",
+      "city": "Wilmington",
+      
+      "phone": 3023549464,
+      "subcategory": "Apparel",
+      "category": "clothing"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Danny’s M&Ms",
+      "website": "https://www.facebook.com/DannysMnMs/",
+      "city": "Wilmington",
+      
+      "phone": "",
+      "subcategory": "Apparel",
+      "category": "clothing"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Devere Sock Company",
+      "website": "https://deveresocks.com/",
+      "city": "Wilmington",
+      
+      "phone": "",
+      "subcategory": "Footwear",
+      "category": "clothing"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Joyride Denim",
+      "website": "https://www.joyridedenim.shop/",
+      "city": "Wilmington",
+      
+      "phone": "",
+      "subcategory": "Apparel",
+      "category": "clothing"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Morgan's of Delaware",
+      "website": "https://morgans-of-delaware.business.site/",
+      "city": "Wilmington",
+      
+      "phone": 3026580968,
+      "subcategory": "Apparel",
+      "category": "clothing"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Mrs. P's Pretty Tees",
+      "website": "https://www.facebook.com/mrsptees/",
+      "city": "Wilmington",
+      
+      "phone": 6106566323,
+      "subcategory": "Apparel",
+      "category": "clothing"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Soul Snatcher",
+      "website": "https://www.facebook.com/soulsnatcherceo/",
+      "city": "Wilmington",
+      
+      "phone": "",
+      "subcategory": "Apparel",
+      "category": "clothing"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Fitting Room 8",
+      "website": "https://www.fittingroom8.com/",
+      "city": "",
+      
+      "phone": "",
+      "subcategory": "Apparel",
+      "category": "clothing"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "URSewCrazy",
+      "website": "https://ursewcrazy.com/",
+      "city": "",
+      
+      "phone": 3024558355,
+      "subcategory": "Apparel",
+      "category": "clothing"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Sparkling Image Roof & Exterior Cleaning",
+      "website": "https://sparklingimageroofcleaning.com/",
+      "city": "Middletown",
+      
+      "phone": 3022939161,
+      "subcategory": "Roofing & Siding",
+      "category": "construction"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Dewitt Heating and Air Conditioning",
+      "website": "https://www.dewitthvac.com/",
+      "city": "Bear",
+      
+      "phone": 2672287355,
+      "subcategory": "",
+      "category": "construction"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Harvey's Heating",
+      "website": "http://www.harveysheatingandac.com/",
+      "city": "New Castle",
+      
+      "phone": 3027627712,
+      "subcategory": "",
+      "category": "construction"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Parker Eletrical Maintenance",
+      "website": "https://parkerelectrical.us/",
+      "city": "Wilmington",
+      
+      "phone": "",
+      "subcategory": "",
+      "category": "construction"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Rock Solid Contracting",
+      "website": "https://rocksolidworks.net/",
+      "city": "Wilmington",
+      
+      "phone": 3026558250,
+      "subcategory": "",
+      "category": "construction"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Wills Affordable Pest Service",
+      "website": "https://willspest.com/",
+      "city": "Wilmington",
+      
+      "phone": 3026581628,
+      "subcategory": "",
+      "category": "construction"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Delaware Financial Literacy Institute",
+      "website": "http://www.demoneyschool.org/index.cfm?ref=02000",
+      "city": "Claymont",
+      
+      "phone": 3027921200,
+      "subcategory": "Enrichment",
+      "category": "education"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Seaford Music & Education Center",
+      "website": "https://www.seafordmaec.com/",
+      "city": "Seaford",
+      
+      "phone": 3026295124,
+      "subcategory": "Enrichment",
+      "category": "education"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Black History Ed Zone",
+      "website": "https://www.blackhistoryedzone.com/",
+      "city": "Wilmington",
+      
+      "phone": 3022293679,
+      "subcategory": "Enrichment",
+      "category": "education"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "FAME Inc",
+      "website": "https://www.famedelaware.org/",
+      "city": "Wilmington",
+      
+      "phone": 3027773254,
+      "subcategory": "Enrichment",
+      "category": "education"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Gamma Theta Lambda Education Foundation, Inc.",
+      "website": "https://gtledf.org/#access",
+      "city": "Wilmington",
+      
+      "phone": "",
+      "subcategory": "Enrichment",
+      "category": "education"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "IMPACT DELAWARE INC.",
+      "website": "https://www.impactleadershipde.org/",
+      "city": "",
+      
+      "phone": 3028587525,
+      "subcategory": "Enrichment",
+      "category": "education"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Pennies Make a Dime Inc",
+      "website": "https://www.penniesmakeadime.org/",
+      "city": "Newark",
+      
+      "phone": 3022631191,
+      "subcategory": "Enrichment",
+      "category": "education"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "BB Digital",
+      "website": "https://bbdigitalonline.com/",
+      "city": "Bear",
+      
+      "phone": "",
+      "subcategory": "Website Builder",
+      "category": "electronics"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "BlackShare",
+      "website": "https://blackshare.net/",
+      "city": "Bear",
+      
+      "phone": 3022790427,
+      "subcategory": "App",
+      "category": "electronics"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "My Love Budz",
+      "website": "https://mylovebudz.com/",
+      "city": "Middletown",
+      
+      "phone": 8562377776,
+      "subcategory": "Wireless Headphones",
+      "category": "electronics"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "NerdIT NOW",
+      "website": "https://nerditnow.com/",
+      "city": "Newport",
+      
+      "phone": 3022839871,
+      "subcategory": "Computer/Device Repair",
+      "category": "electronics"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Tasmiyah",
+      "website": "https://www.facebook.com/Tasmiyah-319880247866/",
+      "city": "Wilmington",
+      
+      "phone": 3026562446,
+      "subcategory": "Internet Lounge",
+      "category": "electronics"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "The Venues",
+      "website": "https://www.facebook.com/thevenues.de/",
+      "city": "Wilmington",
+      
+      "phone": 3022509208,
+      "subcategory": "Event Planning/Services",
+      "category": "entertainment"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Dav/Mark Inc",
+      "website": "http://davmarkinc.com/",
+      "city": "Newark",
+      
+      "phone": "",
+      "subcategory": "",
+      "category": "entertainment"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Ctrl V Virtual Reality Arcade",
+      "website": "https://www.ctrlv.ca/",
+      "city": "Bear",
+      
+      "phone": 3025619040,
+      "subcategory": "",
+      "category": "entertainment"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Is That Jazz Radio 1125 FM",
+      "website": "https://isthatjazzradio.com/",
+      "city": "Claymont",
+      
+      "phone": 3027930129,
+      "subcategory": "Media",
+      "category": "entertainment"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Best Kept Soul",
+      "website": "http://www.bestkeptsoul.com/",
+      "city": "Greenville",
+      
+      "phone": 3022186367,
+      "subcategory": "Bands/DJs/Performers",
+      "category": "entertainment"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Feel Good Talk Podcast",
+      "website": "https://m.facebook.com/feelgoodtalk/?__tn__=%2As-R",
+      "city": "New Castle",
+      
+      "phone": "",
+      "subcategory": "Media",
+      "category": "entertainment"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Leave it to May",
+      "website": "https://www.leaveittomayevents.com/",
+      "city": "Smyrna",
+      
+      "phone": "",
+      "subcategory": "Event Planning/Services",
+      "category": "entertainment"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Framed & Focused Creative Event Entertainment",
+      "website": "https://www.facebook.com/FramedNFocusedPhotoBooth/",
+      "city": "Smyrna",
+      
+      "phone": 3023974290,
+      "subcategory": "Photo Booth",
+      "category": "entertainment"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "BoredinDE",
+      "website": "https://boredinde.com/",
+      "city": "Wilmington",
+      
+      "phone": "",
+      "subcategory": "Media",
+      "category": "entertainment"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "DETV",
+      "website": "https://detvch.com/",
+      "city": "Wilmington",
+      
+      "phone": "",
+      "subcategory": "Media",
+      "category": "entertainment"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Diasporiq Sound & Entertainment",
+      "website": "https://diasporiq.com/",
+      "city": "Wilmington",
+      
+      "phone": "3023640893‬",
+      "subcategory": "",
+      "category": "entertainment"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Futures First Gaming",
+      "website": "https://www.futuresfirstgaming.com/",
+      "city": "Wilmington",
+      
+      "phone": "",
+      "subcategory": "",
+      "category": "entertainment"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "K-Mack Clean Comedy",
+      "website": "https://www.kmackcleancomedy.com/",
+      "city": "Wilmington",
+      
+      "phone": "",
+      "subcategory": "Comedian",
+      "category": "entertainment"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Uncultured Heathens",
+      "website": "https://www.instagram.com/theunculturedheathens/",
+      "city": "Wilmington",
+      
+      "phone": "",
+      "subcategory": "Media",
+      "category": "entertainment"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Cool J’s Premium Water Ice",
+      "website": "https://www.cooljspremiumwaterice.com/",
+      "city": "Bear",
+      
+      "phone": 3025954252,
+      "subcategory": "",
+      "category": "grocery"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Jamaican Cafe Cuisine",
+      "website": "https://jamaicancafecuisine.com/",
+      "city": "Bear",
+      
+      "phone": 3023658303,
+      "subcategory": "",
+      "category": "grocery"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "TenderBones Rib Shack",
+      "website": "https://www.tenderbones.com/",
+      "city": "Bear",
+      
+      "phone": 3028327427,
+      "subcategory": "",
+      "category": "grocery"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Kee's Cookies & Cupcakes, LLC",
+      "website": "https://keesbakeshop.com/",
+      "city": "Clayton",
+      
+      "phone": 3022236784,
+      "subcategory": "",
+      "category": "grocery"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Plush Vodka",
+      "website": "https://www.plushvodka.com/home",
+      "city": "Dover",
+      
+      "phone": 7186002869,
+      "subcategory": "",
+      "category": "grocery"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Sweets ‘n Treats",
+      "website": "https://www.instagram.com/sweetsntreatsde/",
+      "city": "Dover",
+      
+      "phone": 3026701380,
+      "subcategory": "Bakery",
+      "category": "grocery"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Tiffanee & Co. Bakery",
+      "website": "https://www.facebook.com/TiffaneeCo/",
+      "city": "Dover",
+      
+      "phone": 3027245396,
+      "subcategory": "",
+      "category": "grocery"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Granny Darmic's Kitchen",
+      "website": "https://www.clover.com/online-ordering/granny-darmics-kitchen-harrington",
+      "city": "Harrington",
+      
+      "phone": 3024045463,
+      "subcategory": "Soul Food",
+      "category": "grocery"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Summer J Artisan Ice Pops",
+      "website": "https://ilovesummerj.com/",
+      "city": "Lewes",
+      
+      "phone": 8572773917,
+      "subcategory": "",
+      "category": "grocery"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Candy Connections",
+      "website": "https://www.candyconnectionsinc.com/",
+      "city": "Middletown",
+      
+      "phone": 3028030909,
+      "subcategory": "Cotton Candy",
+      "category": "grocery"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "DIGG-N Cuisine",
+      "website": "https://www.diggncuisine.com/",
+      "city": "Middletown",
+      
+      "phone": 3023125749,
+      "subcategory": "",
+      "category": "grocery"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Pop In Pops",
+      "website": "https://popinpops.com/",
+      "city": "Middletown",
+      
+      "phone": 3026962596,
+      "subcategory": "Artisan Ice Pops",
+      "category": "grocery"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Vicky's Famous Fried Fish",
+      "website": "https://vickysfish.com/menu",
+      "city": "Middletown",
+      
+      "phone": 3023766412,
+      "subcategory": "",
+      "category": "grocery"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "A Ya So Nice Jamacian Food",
+      "website": "http://www.ayasonice.com/",
+      "city": "New Castle",
+      
+      "phone": 3023173135,
+      "subcategory": "",
+      "category": "grocery"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Chef ThugLife",
+      "website": "https://www.facebook.com/ChefThugLife/",
+      "city": "New Castle",
+      
+      "phone": 3022290095,
+      "subcategory": "Personal Chef",
+      "category": "grocery"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Dino's Ice Cream & Water Ice",
+      "website": "http://www.dinosicecreamtruck.com/",
+      "city": "New Castle",
+      
+      "phone": 3029831666,
+      "subcategory": "",
+      "category": "grocery"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "K's Kitchen",
+      "website": "https://www.facebook.com/kskitchende/",
+      "city": "New Castle",
+      
+      "phone": 3025619561,
+      "subcategory": "West African Food",
+      "category": "grocery"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Karibbean Delight 2",
+      "website": "http://places.singleplatform.com/caribban-delight-ii/menu?ref=google",
+      "city": "New Castle",
+      
+      "phone": 3023322286,
+      "subcategory": "",
+      "category": "grocery"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Moon Child Sweets",
+      "website": "https://moonchildsweets.com/",
+      "city": "New Castle",
+      
+      "phone": 3022521529,
+      "subcategory": "Specialty Desserts",
+      "category": "grocery"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Desserts By Dana",
+      "website": "https://dessertsbydana.com/",
+      "city": "Newark",
+      
+      "phone": 3027215798,
+      "subcategory": "Bakery",
+      "category": "grocery"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Hummingbird Island Cuisine",
+      "website": "https://www.hbicuisine.com/",
+      "city": "Newark",
+      
+      "phone": 3023002475,
+      "subcategory": "Food Truck & Catering",
+      "category": "grocery"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Painted Stave",
+      "website": "https://www.paintedstave.com/",
+      "city": "Smyrna",
+      
+      "phone": 3026536834,
+      "subcategory": "Handcrafted Spirits",
+      "category": "grocery"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Chop Cheez",
+      "website": "https://www.instagram.com/chop.cheez/",
+      "city": "Wilmington",
+      
+      "phone": "",
+      "subcategory": "Catering",
+      "category": "grocery"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Christa-Bell's Carribean Cusine",
+      "website": "https://www.zmenu.com/christa-bells-caribbean-cuisine-wilmington-online-menu/",
+      "city": "Wilmington",
+      
+      "phone": 3025108989,
+      "subcategory": "",
+      "category": "grocery"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Connie's Chicken & Waffles",
+      "website": "http://www.connieschickenandwaffles.com/?fbclid=IwAR2TFofy9U5lveAj2wmY9WelOI-FITJz1ypjJGZhKd2fWzspIYTZGDs7RhU",
+      "city": "Wilmington",
+      
+      "phone": 3023004953,
+      "subcategory": "",
+      "category": "grocery"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Double Dipper Ice Cream Parlor",
+      "website": "https://doubledipperparlor.wixsite.com/website",
+      "city": "Wilmington",
+      
+      "phone": 3028934920,
+      "subcategory": "",
+      "category": "grocery"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Drop Squad Kitchen",
+      "website": "https://dropsquadkitchen.com/",
+      "city": "Wilmington",
+      
+      "phone": 3029842773,
+      "subcategory": "Vegan",
+      "category": "grocery"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Fat Rick's BBQ",
+      "website": "https://www.facebook.com/fatricksbbq/",
+      "city": "Wilmington",
+      
+      "phone": 3023458863,
+      "subcategory": "",
+      "category": "grocery"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Juice Joint",
+      "website": "https://thejuicejoint.de/",
+      "city": "Wilmington",
+      
+      "phone": 3028036886,
+      "subcategory": "Juice Bar",
+      "category": "grocery"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Kaos Kitchen",
+      "website": "https://www.instagram.com/kaos.kitchen/",
+      "city": "Wilmington",
+      
+      "phone": "",
+      "subcategory": "Catering & Take Out",
+      "category": "grocery"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Milk & Honey Coffeehouse & Gallery",
+      "website": "https://www.facebook.com/milkandhoneycoffeehouse/",
+      "city": "Wilmington",
+      
+      "phone": 3026543738,
+      "subcategory": "",
+      "category": "grocery"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Out of the Ordinary Catering",
+      "website": "https://outoftheordinarycatering.com/",
+      "city": "Wilmington",
+      
+      "phone": 3024640353,
+      "subcategory": "",
+      "category": "grocery"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Russell's Quality Foods",
+      "website": "http://www.russellsqualityfood.com/",
+      "city": "Wilmington",
+      
+      "phone": 3022993128,
+      "subcategory": "BBQ",
+      "category": "grocery"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Serena's Soulfood Catering",
+      "website": "https://www.facebook.com/serenassoulfood/",
+      "city": "Wilmington",
+      
+      "phone": 3027621608,
+      "subcategory": "",
+      "category": "grocery"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Taste of the Tropic",
+      "website": "https://www.facebook.com/tasteofthetropic/",
+      "city": "Wilmington",
+      
+      "phone": 3025244373,
+      "subcategory": "",
+      "category": "grocery"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Tasty Couture",
+      "website": "http://tastycoutures.com/tastycoutures.com/Home.html",
+      "city": "Wilmington",
+      
+      "phone": 3026482789,
+      "subcategory": "Bakery",
+      "category": "grocery"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "The Chicken Spot",
+      "website": "https://www.thechickenspotde.com/",
+      "city": "Wilmington",
+      
+      "phone": 3023582381,
+      "subcategory": "",
+      "category": "grocery"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "The Mayne Dish",
+      "website": "https://www.facebook.com/MayneDish/",
+      "city": "Wilmington",
+      
+      "phone": 3024446989,
+      "subcategory": "Jamaican Food",
+      "category": "grocery"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Walt’s Flavor Crisp Chicken Express",
+      "website": "http://www.waltsexpress.com/",
+      "city": "Wilmington",
+      
+      "phone": 3024393452,
+      "subcategory": "",
+      "category": "grocery"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Walt’s Flavor Crisp Chicken Express",
+      "website": "http://www.waltsexpress.com/",
+      "city": "Wilmington",
+      
+      "phone": 3024292587,
+      "subcategory": "",
+      "category": "grocery"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Yummy Tummy",
+      "website": "https://www.facebook.com/YummyTummyGourmet/",
+      "city": "Wilmington",
+      
+      "phone": 3022757137,
+      "subcategory": "Catering",
+      "category": "grocery"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Heartache to Healing Ministry LLC",
+      "website": "https://www.heartache2healing.com/griefmethodspecialist",
+      "city": "Bear",
+      
+      "phone": 3025631108,
+      "subcategory": "Mental Health Support",
+      "category": "health"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "You Got The Look Spa",
+      "website": "https://www.yougotthelookspa.com/",
+      "city": "Wilmington",
+      
+      "phone": 3023164102,
+      "subcategory": "Spa/Massage Therapy",
+      "category": "health"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Lush Oasis MedSpa",
+      "website": "https://lushoasismedspa.com/",
+      "city": "Bear",
+      
+      "phone": 3028388505,
+      "subcategory": "Spa/Massage Therapy",
+      "category": "health"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "JTJames Performance",
+      "website": "https://jtjamesperformance.com/",
+      "city": "Milford",
+      
+      "phone": "",
+      "subcategory": "Fitness/Yoga",
+      "category": "health"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "1st Choice Chiropractic",
+      "website": "https://www.my1stchoicechiropractic.com/",
+      "city": "Wilmington",
+      
+      "phone": 3025436072,
+      "subcategory": "Chiropractor",
+      "category": "health"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Don’t Retreat Fitness by Cheryl Davis",
+      "website": "https://www.facebook.com/DontRetreatFitness/",
+      "city": "Wilmington",
+      
+      "phone": 3027235217,
+      "subcategory": "Fitness/Yoga",
+      "category": "health"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Edward's Wellness & Skincare Facility",
+      "website": "https://edwardswellness.skincaretherapy.net/home",
+      "city": "Wilmington",
+      
+      "phone": 3024799399,
+      "subcategory": "Spa/Massage Therapy",
+      "category": "health"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Earl Allen Lawncare",
+      "website": "https://www.instagram.com/ealawncare__/?hl=en",
+      "city": "Elsmere",
+      
+      "phone": 3024422195,
+      "subcategory": "Landscaping/Gardening",
+      "category": "home"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Lifestyle Scents",
+      "website": "https://lifestylescentsonline.com/",
+      "city": "Smyrna",
+      
+      "phone": 3025409137,
+      "subcategory": "Home Goods/Décor",
+      "category": "home"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Cloud 9 Candle Co.",
+      "website": "https://cloud9candleco.com/",
+      "city": "",
+      
+      "phone": "",
+      "subcategory": "Home Goods/Décor",
+      "category": "home"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Aras Furniture Rentals",
+      "website": "https://arasfurniturerentals.com/",
+      "city": "Bear",
+      
+      "phone": 8555765623,
+      "subcategory": "Interior Design/Home Staging",
+      "category": "home"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Anderson Travel Services Inc",
+      "website": "https://www.facebook.com/AndersonTravelServices/",
+      "city": "Wilmington",
+      
+      "phone": 3025887363,
+      "subcategory": "Travel Agent",
+      "category": "hotels"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "The Travel Morena Vacations",
+      "website": "https://www.instagram.com/thetravelmorena/",
+      "city": "Wilmington",
+      
+      "phone": "",
+      "subcategory": "Travel Agent",
+      "category": "hotels"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Beautiful Emotions",
+      "website": "https://www.facebook.com/Beautifulemotionsshop/?rc=p",
+      "city": "Newark",
+      
+      "phone": 3022729275,
+      "subcategory": "Fine Jewelry",
+      "category": "jewelry"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Clutch Instincts",
+      "website": "http://www.clutchinstincts.com/",
+      "city": "Wilmington",
+      
+      "phone": "",
+      "subcategory": "Accessories/Handbags",
+      "category": "jewelry"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "lolahSoul",
+      "website": "https://lolahsoul.com/",
+      "city": "Wilmington",
+      
+      "phone": 3027579099,
+      "subcategory": "Fine Jewelry",
+      "category": "jewelry"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Glossy Luxe Co",
+      "website": "https://www.glossyluxeco.com/?fbclid=IwAR04cwMXcmw4V7q-GGBbAy7g8DYl3N6uHu4gI39cWNJzNNGZCMuF_UkUZWo",
+      "city": "",
+      
+      "phone": "",
+      "subcategory": "Fine Jewelry",
+      "category": "jewelry"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Metropolitan Wilmington Urban League Young Professionals",
+      "website": "https://mwul.org/",
+      "city": "Wilmington",
+      
+      "phone": 3026224300,
+      "subcategory": "Financial Services",
+      "category": "legal"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Ambitious Credit Services",
+      "website": "https://www.fesconnect.net/default.aspx?rid=dkennedy1",
+      "city": "Dover",
+      
+      "phone": 3027298964,
+      "subcategory": "Financial Services",
+      "category": "legal"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Cynthia Carrol Law Firm",
+      "website": "http://cynthiacarrolllaw.com/",
+      "city": "Newark",
+      
+      "phone": 3022740295,
+      "subcategory": "Legal Services (General)",
+      "category": "legal"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "E.L.E.V.A.T.E. Business Solutions LLC",
+      "website": "https://www.facebook.com/notarythateducates/",
+      "city": "Wilmington",
+      
+      "phone": 3024821069,
+      "subcategory": "Notary",
+      "category": "legal"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Garland Thompson, State Farm",
+      "website": "https://garlandthompsoninsurance.com/",
+      "city": "Wilmington",
+      
+      "phone": 3024076262,
+      "subcategory": "Insurance",
+      "category": "legal"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Jervey Genesis Solutions",
+      "website": "https://genesiswms.com/our-team/",
+      "city": "Wilmington",
+      
+      "phone": 3025437424,
+      "subcategory": "Financial Services",
+      "category": "legal"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Leroy A. Tice, ESQ.",
+      "website": "http://www.teamtice.com/",
+      "city": "Wilmington",
+      
+      "phone": 3024892400,
+      "subcategory": "Legal Services (General)",
+      "category": "legal"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Potter Insurance",
+      "website": "https://www.cpjrinsurance.com/",
+      "city": "Wilmington",
+      
+      "phone": 3029955451,
+      "subcategory": "Insurance",
+      "category": "legal"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Prominent Insurance",
+      "website": "https://www.prominentagency.com/",
+      "city": "Wilmington",
+      
+      "phone": 3023513368,
+      "subcategory": "Insurance",
+      "category": "legal"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Stacy Harrison: Mortage Loan Originator",
+      "website": "https://www.meridianbanker.com/homeloans/stacy-harrison/",
+      "city": "Wilmington",
+      
+      "phone": 3022754828,
+      "subcategory": "Financial Services",
+      "category": "legal"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "FundingFuel",
+      "website": "https://www.fundingfuel.com/",
+      "city": "Bear",
+      
+      "phone": "",
+      "subcategory": "Financial Services",
+      "category": "legal"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Darren Moore, State Farm",
+      "website": "https://www.darrenmooregroup.com/?cmpid=hav6_blm_0001",
+      "city": "Wilmington",
+      
+      "phone": 3029999101,
+      "subcategory": "Financial Services",
+      "category": "legal"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Jeter & Company, LLC",
+      "website": "https://www.facebook.com/jeterjcpa/",
+      "city": "Wilmington",
+      
+      "phone": 3025104642,
+      "subcategory": "Financial Services",
+      "category": "legal"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Four Seasons Tobacco Outlet",
+      "website": "https://www.facebook.com/fstobacco/",
+      "city": "Newark",
+      
+      "phone": 3027330330,
+      "subcategory": "Smoking & Paraphernalia",
+      "category": "lifestyle"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Sha'Ree Smyth",
+      "website": "https://sharismyth.com/",
+      "city": "Newark",
+      
+      "phone": 3029669427,
+      "subcategory": "",
+      "category": "lifestyle"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Push Tattoo",
+      "website": "https://www.pushtattoos.com/",
+      "city": "Wilmington",
+      
+      "phone": 3025436302,
+      "subcategory": "Piercing/ Tattoos",
+      "category": "lifestyle"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Sikar Lounge",
+      "website": "https://www.facebook.com/SikarLounge/",
+      "city": "Wilmington",
+      
+      "phone": 3026552250,
+      "subcategory": "Smoking & Paraphernalia",
+      "category": "lifestyle"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "The Adult Playhouse",
+      "website": "https://www.theadultplayhouse.store/",
+      "city": "Wilmington",
+      
+      "phone": 3023002134,
+      "subcategory": "Adult Novelties",
+      "category": "lifestyle"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Every Man Counts Better Lives",
+      "website": "https://www.facebook.com/groups/EveryManCounts/",
+      "city": "",
+      
+      "phone": 3022720678,
+      "subcategory": "",
+      "category": "lifestyle"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Ascendant Group",
+      "website": "https://www.ascendantgroupbranding.com/",
+      "city": "Newark",
+      
+      "phone": 3024504494,
+      "subcategory": "Branding/Graphic Design",
+      "category": "marketing"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Darling SEO",
+      "website": "https://www.darlingseo.com/",
+      "city": "Wilmington",
+      
+      "phone": 3028947412,
+      "subcategory": "Marketing/Digital Marketing",
+      "category": "marketing"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Influencers Lab Media",
+      "website": "https://www.influencerslab.com/",
+      "city": "Wilmington",
+      
+      "phone": 3024446990,
+      "subcategory": "Marketing/Digital Marketing",
+      "category": "marketing"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Purpose PR Agency",
+      "website": "https://purposepragency.com/",
+      "city": "Wilmington",
+      
+      "phone": 3028249471,
+      "subcategory": "Marketing/Digital Marketing",
+      "category": "marketing"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "DeeZ CreationZ LLC",
+      "website": "https://www.deezcreationz.info/",
+      "city": "",
+      
+      "phone": 3028580361,
+      "subcategory": "",
+      "category": "marketing"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Shaping Minds",
+      "website": "https://www.shapingmindstherapy.com/therapist-s",
+      "city": "Newark",
+      
+      "phone": 3027311022,
+      "subcategory": "Psychiatry/Mental Health",
+      "category": "medical"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Ames Counesling Services",
+      "website": "https://www.psychologytoday.com/us/therapists/regina-vontelaray-ames-wilmington-de/284042",
+      "city": "Wilmington",
+      
+      "phone": 3022768794,
+      "subcategory": "Psychiatry/Mental Health",
+      "category": "medical"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Living Great",
+      "website": "https://www.facebook.com/timeisonyourside/",
+      "city": "Dover",
+      
+      "phone": 3027349200,
+      "subcategory": "Primary Care",
+      "category": "medical"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Dr. Jane Tildon-Burton",
+      "website": "",
+      "city": "Newark",
+      
+      "phone": 3028321124,
+      "subcategory": "OB/GYNs",
+      "category": "medical"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Smile Brite",
+      "website": "https://www.smilebritedelaware.com/",
+      "city": "Newark",
+      
+      "phone": 3023142906,
+      "subcategory": "Dental/Orthodontics",
+      "category": "medical"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "The Natural Hypertension Institute",
+      "website": "",
+      "city": "Newark",
+      
+      "phone": 3025337704,
+      "subcategory": "",
+      "category": "medical"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Focus Pharmacy",
+      "website": "https://www.focuspharmacyde.com/",
+      "city": "Smyrna",
+      
+      "phone": 3025261280,
+      "subcategory": "",
+      "category": "medical"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Alton A. Williams, OD",
+      "website": "https://deeyesurgeons.com/about-dr-williams/",
+      "city": "Wilmington",
+      
+      "phone": 3029931300,
+      "subcategory": "Vision",
+      "category": "medical"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Beautiful Gate Outreach Center",
+      "website": "https://www.bgate.org/",
+      "city": "Wilmington",
+      
+      "phone": 3024723002,
+      "subcategory": "Diagnostic Testing/Labs",
+      "category": "medical"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Blue Diamond Dental",
+      "website": "https://bluediamonddental.com/",
+      "city": "Wilmington",
+      
+      "phone": 3026558387,
+      "subcategory": "Dental/Orthodontics",
+      "category": "medical"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Brandywine's Women Health - Christiana Care",
+      "website": "https://doctors.christianacare.org/provider/Cecil+C.+Gordon%2C+Jr./1100702",
+      "city": "Wilmington",
+      
+      "phone": 3026583331,
+      "subcategory": "OB/GYNs",
+      "category": "medical"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Dr. Nadine Thompson",
+      "website": "",
+      "city": "Wilmington",
+      
+      "phone": 3026556187,
+      "subcategory": "",
+      "category": "medical"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Wilmington 1st Walk In",
+      "website": "https://www.wilmington1st.com/",
+      "city": "Wilmington",
+      
+      "phone": 3024075222,
+      "subcategory": "",
+      "category": "medical"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Concealed Carry Training",
+      "website": "https://ccdwtrainingclass.com/",
+      "city": "Bear",
+      
+      "phone": 2979024266,
+      "subcategory": "Guns & Shooting Ranges",
+      "category": "other"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "SPLIT Greeting Cards, LLC",
+      "website": "https://www.facebook.com/splitgreetingcards/",
+      "city": "Middleton",
+      
+      "phone": "3028277548)",
+      "subcategory": "Gifts & Stationary",
+      "category": "other"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Bell Funeral Home LLC",
+      "website": "https://www.bellfh.com/",
+      "city": "Wilmington",
+      
+      "phone": 3026581555,
+      "subcategory": "Mortuary/Funeral Services",
+      "category": "other"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Congo Funeral Home",
+      "website": "https://www.congofuneralhome.com/",
+      "city": "Wilmington",
+      
+      "phone": 3026528887,
+      "subcategory": "Mortuary/Funeral Services",
+      "category": "other"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Reybold Self Storage",
+      "website": "https://reyboldselfstorage.com/",
+      "city": "Wilmington",
+      
+      "phone": 3027860762,
+      "subcategory": "",
+      "category": "other"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "The House of Wright Mortuary & Creamtion Services",
+      "website": "https://www.wrightmortuary.com/",
+      "city": "Wilmington",
+      
+      "phone": 3027628448,
+      "subcategory": "Mortuary/Funeral Services",
+      "category": "other"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Evan W. Smith Funeral Services",
+      "website": "https://www.evanwsmithfuneralservices.com/",
+      "city": "",
+      
+      "phone": 3023776906,
+      "subcategory": "Mortuary/Funeral Services",
+      "category": "other"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Sign Dreamers",
+      "website": "https://signdreamers.com/sign-dreamers-of-new-castle-county/",
+      "city": "New Castle",
+      
+      "phone": 3023072568,
+      "subcategory": "Printing",
+      "category": "packaging"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Lisa's Canine Castle",
+      "website": "https://www.rover.com/members/lisa-d-pets-rule-at-my-canine-castle/?utm_medium=direct&utm_campaign=977262825&utm_content=ssp&utm_source=sit-link&utm_term=6829593",
+      "city": "Bear",
+      
+      "phone": 3023123615,
+      "subcategory": "",
+      "category": "pets"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Monster Photo",
+      "website": "https://monsterphoto.photoshelter.com/index",
+      "city": "Newark",
+      
+      "phone": "",
+      "subcategory": "Photography",
+      "category": "photography"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Melissa Robinson Photography",
+      "website": "https://www.facebook.com/Melissa-Robinson-Photography-846147985418414/",
+      "city": "Wilmington",
+      
+      "phone": 3029835202,
+      "subcategory": "Photography",
+      "category": "photography"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "UrBoi Photography",
+      "website": "https://urboi.com/",
+      "city": "Wilmington",
+      
+      "phone": 4843248825,
+      "subcategory": "Photography",
+      "category": "photography"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Don't Jude Me Productions",
+      "website": "https://www.dontjudgemeproductions.com/",
+      "city": "",
+      
+      "phone": "",
+      "subcategory": "",
+      "category": "photography"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "H.Knight-TheBroker-",
+      "website": "https://linktr.ee/iamhoraceknight",
+      "city": "",
+      
+      "phone": 6097922147,
+      "subcategory": "Photography",
+      "category": "photography"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Peace Living Films",
+      "website": "https://www.instagram.com/peacelivingfilms/",
+      "city": "Wilmington",
+      
+      "phone": "",
+      "subcategory": "",
+      "category": "photography"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Eastside Career Development Center and Testing Services",
+      "website": "https://eastsiderisingcdc.org/",
+      "city": "Wilmington",
+      
+      "phone": 3026608124,
+      "subcategory": "",
+      "category": "professional"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Coach D: Darrell Andrews",
+      "website": "https://www.coachdspeaks.com/",
+      "city": "Bear",
+      
+      "phone": 3028341040,
+      "subcategory": "Consulting",
+      "category": "professional"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "LM Bryant Consulting",
+      "website": "https://www.bryconsult.com/",
+      "city": "Claymont",
+      
+      "phone": 3025848439,
+      "subcategory": "Consulting",
+      "category": "professional"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Bravin Consultants",
+      "website": "https://www.bravinconsultants.com/Bravin.html",
+      "city": "Dover",
+      
+      "phone": 3023143802,
+      "subcategory": "Consulting",
+      "category": "professional"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Dara Business Consulting",
+      "website": "https://darabiz.com/",
+      "city": "New Castle",
+      
+      "phone": 5406322135,
+      "subcategory": "Consulting",
+      "category": "professional"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "ALLy Community Health Associates",
+      "website": "https://allycommunityhealth.com/",
+      "city": "Newark",
+      
+      "phone": 3029817116,
+      "subcategory": "",
+      "category": "professional"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Seminars By Joyce",
+      "website": "https://seminarsbyjoyce.com/",
+      "city": "Newark",
+      
+      "phone": 3027330330,
+      "subcategory": "Consulting",
+      "category": "professional"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "All In One Consultancy",
+      "website": "",
+      "city": "Wilmington",
+      
+      "phone": 9529943241,
+      "subcategory": "",
+      "category": "professional"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "DAB Meditation",
+      "website": "",
+      "city": "Wilmington",
+      
+      "phone": 3025023845,
+      "subcategory": "",
+      "category": "professional"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Giner House Events & Consulting",
+      "website": "https://gingerhouseconsulting.com/",
+      "city": "Wilmington",
+      
+      "phone": "",
+      "subcategory": "Consulting",
+      "category": "professional"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "KMS Virtual Executive Assistance",
+      "website": "https://kmsvea.com/",
+      "city": "Wilmington",
+      
+      "phone": 3022981059,
+      "subcategory": "Administrative Support",
+      "category": "professional"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Manifest Business Consultants",
+      "website": "https://manifestbusinessconsultants.com/",
+      "city": "Wilmington",
+      
+      "phone": 8884167735,
+      "subcategory": "Consulting",
+      "category": "professional"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Power Up 4 Success",
+      "website": "https://powerup4success.com/",
+      "city": "Wilmington",
+      
+      "phone": 8889960696,
+      "subcategory": "Consulting",
+      "category": "professional"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "RD Innovative Planning",
+      "website": "https://rdinnovativeplanning.com/",
+      "city": "Wilmington",
+      
+      "phone": 3026350767,
+      "subcategory": "Consulting",
+      "category": "professional"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Resiliency Human Resources Consulting",
+      "website": "http://www.rchrconsult.com/",
+      "city": "Wilmington",
+      
+      "phone": 3023145247,
+      "subcategory": "Consulting",
+      "category": "professional"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "WIN Factory",
+      "website": "https://winwilmington.com/",
+      "city": "Wilmington",
+      
+      "phone": 3022500175,
+      "subcategory": "",
+      "category": "professional"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Mamu Technologies",
+      "website": "https://www.mamu-tech.com/",
+      "city": "Bear",
+      
+      "phone": 3028837971,
+      "subcategory": "IT",
+      "category": "professional"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Mechelle Rust",
+      "website": "https://www.linkedin.com/in/mechelle-rust-654945159/",
+      "city": "Rehobooth Beach",
+      
+      "phone": 3025422756,
+      "subcategory": "",
+      "category": "real estate"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "ELM Properties",
+      "website": "https://www.elmproperties.net/",
+      "city": "Wilmington",
+      
+      "phone": 3027623757,
+      "subcategory": "Real Estate Agents/Brokers",
+      "category": "real estate"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "R.K. Wilson",
+      "website": "https://www.zillow.com/profile/rkwilson%20rk",
+      "city": "",
+      
+      "phone": 3025052192,
+      "subcategory": "Real Estate Agents/Brokers",
+      "category": "real estate"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Long & Foster Real Estate - Karen Stephens-Johnson",
+      "website": "https://www.longandfoster.com/KarenStephensJohnson",
+      "city": "Bear",
+      
+      "phone": 3022796881,
+      "subcategory": "Real Estate Agents/Brokers",
+      "category": "real estate"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Millwood Real Estate Group",
+      "website": "https://kw.com/agent/UPA-6587385164059836419-1",
+      "city": "Christiana",
+      
+      "phone": 3025338020,
+      "subcategory": "Real Estate Agents/Brokers",
+      "category": "real estate"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Delisia Inge Real Estate",
+      "website": "https://delisiainge.foxroach.com/",
+      "city": "Hockessin",
+      
+      "phone": 3023796723,
+      "subcategory": "Real Estate Agents/Brokers",
+      "category": "real estate"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Hope Realty",
+      "website": "https://www.hope4housing.com/",
+      "city": "Lewes",
+      
+      "phone": 3026459800,
+      "subcategory": "Real Estate Agents/Brokers",
+      "category": "real estate"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Ranita Howard",
+      "website": "https://ranita-howard.remax.com/",
+      "city": "Middletown",
+      
+      "phone": 3024638324,
+      "subcategory": "Real Estate Agents/Brokers",
+      "category": "real estate"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Rochellda Adderley",
+      "website": "https://rochelldaadderley.exprealty.com/",
+      "city": "Newark",
+      
+      "phone": 3022133868,
+      "subcategory": "Real Estate Agents/Brokers",
+      "category": "real estate"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Sylvia Manlove",
+      "website": "https://www.bhhs.com/fox-and-roach-realtors-pa301/newark/sylvia-manlove/cid-3024311",
+      "city": "Newark",
+      
+      "phone": 3026505911,
+      "subcategory": "Property Management",
+      "category": "real estate"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Donna Bond",
+      "website": "https://www.foxroach.com/",
+      "city": "Wilmington",
+      
+      "phone": 3024775500,
+      "subcategory": "Real Estate Agents/Brokers",
+      "category": "real estate"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "ELS Properties",
+      "website": "https://elsproperties302.com/",
+      "city": "Wilmington",
+      
+      "phone": 3026075567,
+      "subcategory": "Property Management",
+      "category": "real estate"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Delaware Afro-American Sports Hall of Fame Inc",
+      "website": "http://www.daashof.org/",
+      "city": "New Castle",
+      
+      "phone": "",
+      "subcategory": "Sports",
+      "category": "recreation"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Osrick Ingredients Cricket",
+      "website": "https://www.osingredientscricket.com/",
+      "city": "Claymont",
+      
+      "phone": 8442228500,
+      "subcategory": "",
+      "category": "recreation"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Perfect Soccer",
+      "website": "https://www.perfectsoccerskills.com/",
+      "city": "Lewes",
+      
+      "phone": "",
+      "subcategory": "",
+      "category": "recreation"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Full Circle Martial Arts Studio",
+      "website": "",
+      "city": "Newark",
+      
+      "phone": 3023683262,
+      "subcategory": "",
+      "category": "recreation"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Goju Training Center",
+      "website": "https://gojurobics.com/",
+      "city": "Wilmington",
+      
+      "phone": 3022932185,
+      "subcategory": "",
+      "category": "recreation"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "The Boulevard Live Entertainment Restaurant",
+      "website": "https://theboulevardde.com/",
+      "city": "Dover",
+      
+      "phone": 3022649322,
+      "subcategory": "Venues/Event Spaces",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Cool J's After Dark",
+      "website": "https://www.cooljsafterdark.com/?fbclid=IwAR2HXkY_39yQJNjBbBrRyoOG5uBtN1bf5rfWMuWSBm1FVOX3gHI9Q8XdW0s",
+      "city": "Bear",
+      
+      "phone": 3025954252,
+      "subcategory": "Venues/Event Spaces",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "ArtzScape by Lady C Productions",
+      "website": "https://artzscape.com/",
+      "city": "Wilmington",
+      
+      "phone": 3024336622,
+      "subcategory": "Venues/Event Spaces",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "African Fusion Restaurant",
+      "website": "https://africanrestaurantde.com/",
+      "city": "Dover",
+      
+      "phone": 3025952780,
+      "subcategory": "West African Restaurant",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Carter's Restaurant",
+      "website": "https://www.restaurantji.com/de/dover/carters-restaurant-/",
+      "city": "Dover",
+      
+      "phone": 3026744772,
+      "subcategory": "BBQ/Soul Food Restaurant",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "The BnL Dover",
+      "website": "https://www.facebook.com/TheBnL",
+      "city": "Dover",
+      
+      "phone": 3027477061,
+      "subcategory": "",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Tomeka’s Homestyle Eatery",
+      "website": "https://www.facebook.com/Tomekas-HomeStyle-Eatery-106446280220795/",
+      "city": "Dover",
+      
+      "phone": "",
+      "subcategory": "BBQ/Soul Food Restaurant",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "aBlazing Grace",
+      "website": "https://www.facebook.com/ABlazing-Grace-1923513661093302/",
+      "city": "Milford",
+      
+      "phone": 3026089559,
+      "subcategory": "BBQ/Soul Food Restaurant",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Aunt Mary’s Soulfood Kitchen",
+      "website": "https://www.auntmaryssoulfoodkitchen.com/",
+      "city": "Milford",
+      
+      "phone": 3024227685,
+      "subcategory": "BBQ/Soul Food Restaurant",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Sisters Caribbean Restaurant",
+      "website": "https://www.facebook.com/Sisters-Caribbean-107038850788304/",
+      "city": "Milford",
+      
+      "phone": 3025037225,
+      "subcategory": "Caribbean Restaurant",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "L & G Southern Soul Food",
+      "website": "https://lgsoulfood.com/",
+      "city": "New Castle",
+      
+      "phone": 3023227774,
+      "subcategory": "BBQ/Soul Food Restaurant",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "L’africana",
+      "website": "https://www.yelp.com/biz/l-africana-new-castle",
+      "city": "New Castle",
+      
+      "phone": 3027636911,
+      "subcategory": "West African Restaurant",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "D & H Jamaican Cuisine",
+      "website": "https://dandhjamaican.com/",
+      "city": "Newark",
+      
+      "phone": 3023698826,
+      "subcategory": "Caribbean Restaurant",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Tastee D's African Restaurant",
+      "website": "https://www.facebook.com/TasteeDsRestaurant/",
+      "city": "Newark",
+      
+      "phone": 3026016147,
+      "subcategory": "West African Restaurant",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Good & Pure Cafe",
+      "website": "https://www.facebook.com/GoodPureCafe/",
+      "city": "Wilmington",
+      
+      "phone": 3024768672,
+      "subcategory": "Cafe",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Green Box Kitchen",
+      "website": "https://www.greenboxkitchen.com/home",
+      "city": "Wilmington",
+      
+      "phone": 3022742195,
+      "subcategory": "",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Just to Serve You",
+      "website": "http://www.just2serveyou.com/",
+      "city": "Wilmington",
+      
+      "phone": 3028881100,
+      "subcategory": "BBQ/Soul Food Restaurant",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Tasties 302 Soul Food",
+      "website": "https://www.instagram.com/tasties302/",
+      "city": "Wilmington",
+      
+      "phone": 3024822584,
+      "subcategory": "BBQ/Soul Food Restaurant",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Zoup",
+      "website": "https://www.instagram.com/zoup._the_real_dia/",
+      "city": "Wilmington",
+      
+      "phone": 3026604400,
+      "subcategory": "",
+      "category": "restaurants"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Helicopter To Holdings, Inc",
+      "website": "https://www.iflyhto.com/",
+      "city": "Wilmington",
+      
+      "phone": 3025089780,
+      "subcategory": "",
+      "category": "transportation"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "NSG Studios",
+      "website": "https://www.facebook.com/nsgstudios302/",
+      "city": "Wilmington",
+      
+      "phone": 6103221490,
+      "subcategory": "",
+      "category": "visual"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Delaware History Museum and Mitchell Center for African American Heritage",
+      "website": "https://dehistory.org/visit/jane-and-littleton-mitchell-center-for-african-american-heritage/",
+      "city": "Wilmington",
+      
+      "phone": 3026557161,
+      "subcategory": "Art Gallery/Museum",
+      "category": "visual"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "DanceWorks",
+      "website": "http://www.danceworksde.net/",
+      "city": "New Castle",
+      
+      "phone": 3022861492,
+      "subcategory": "Dance Studios/Lessons",
+      "category": "visual"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Stage Lights Dance Academy",
+      "website": "https://www.stagelightsdanceacademy.com/",
+      "city": "Newark",
+      
+      "phone": 3024530714,
+      "subcategory": "Dance Studios/Lessons",
+      "category": "visual"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Christina Cultural Arts Center",
+      "website": "http://www.ccacde.org/",
+      "city": "Wilmington",
+      
+      "phone": 3026520101,
+      "subcategory": "Dance Studios/Lessons",
+      "category": "visual"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Just Vibing Studios",
+      "website": "https://www.justvibingstudios.com/",
+      "city": "Wilmington",
+      
+      "phone": 3023164460,
+      "subcategory": "Dance Studios/Lessons",
+      "category": "visual"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "LaFate Gallery",
+      "website": "https://www.lafategallery.com/",
+      "city": "Wilmington",
+      
+      "phone": 3026566786,
+      "subcategory": "Art Gallery/Museum",
+      "category": "visual"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Pieces of a Dream",
+      "website": "http://www.piecesofadream.org/",
+      "city": "Wilmington",
+      
+      "phone": "",
+      "subcategory": "Dance Studios/Lessons",
+      "category": "visual"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "Reed's Refuge Center",
+      "website": "https://reedsrefugecenter.org/",
+      "city": "Wilmington",
+      
+      "phone": 3024822286,
+      "subcategory": "",
+      "category": "visual"
+    }
+},
+    {
+      "model": "vbp.vbp_de",
+      "fields": {
+"business_name": "The Sold Firm",
+      "website": "https://www.thesoldfirm.com/",
+      "city": "Wilmington",
+      
+      "phone": 3026893237,
+      "subcategory": "Art Gallery/Museum",
+      "category": "visual"
+    }
+}
+  ]

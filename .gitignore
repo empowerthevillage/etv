@@ -1,0 +1,22 @@
+*.log
+*.pot
+*.pyc
+venv
+.env
+__pycache__
+etv/static_my_proj
+staticfiles
+db.sqlite3
+
+.DS_Store
+bin/
+include/
+pip-selfcheck.json
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+pip-log.txt
+pip-delete-this-directory.txt

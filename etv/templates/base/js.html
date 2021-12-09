@@ -1,0 +1,73 @@
+{% load static %}
+<!-- JQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+<!-- Materialize JS -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+<!-- Dynamic Map -->
+<script src="{% static 'js/raphael.js' %}"></script>
+<script src="{% static 'js/jquery.usmap.js' %}"></script>
+<script src="{% static 'js/jquery-jvectormap-2.0.5.min.js' %}"></script>
+<script src="{% static 'js/jquery-jvectormap-us-aea.js' %}"></script>
+
+<!-- Turn JS -->
+<script src="{% static 'js/jquery.hash.js' %}"></script>
+<script src="{% static 'js/scissor.js' %}"></script>
+<script src="{% static 'js/turn.html4.js' %}"></script>
+<script src="{% static 'js/turn.js' %}"></script>
+<script src="{% static 'js/zoom.js' %}"></script>
+
+<!-- Marquee -->
+<script src="{% static 'js/marquee.js' %}"></script>
+
+<!-- Lightbox -->
+<script src="{% static 'js/lightbox.js' %}"></script>
+
+<!-- Sweet Alert 2 -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<!-- JQuery Mask -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js" integrity="sha512-pHVGpX7F/27yZ0ISY+VVjyULApbDlD0/X0rgGbTqCE7WFW5MezNTWG/dnhtbBuICzsd0WQPgpE4REBLv+UqChw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- PayPal SDK -->
+<script src="https://www.paypal.com/sdk/js?client-id=AS691wwoe-JDGscxIYcn20-MiiNmZFDHTeGgZbLuDuqT6CezfP4LMwN-uckzbLfZfirv7ESyyQ0padIz"></script>
+
+<!-- Pagination js -->
+<script src="{% static 'js/pagination.min.js' %}"></script>
+
+<!-- Validate -->
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>
+
+<script src="https://js.braintreegateway.com/web/3.82.0/js/client.min.js"></script>
+<script>
+  $(document).ready(function(){
+      $('.simple-marquee-container').SimpleMarquee({velocity: 0.05});
+      $('.collapsible').collapsible();
+      $('.parallax').parallax();
+      $('select').formSelect();
+      $('.dropdown-trigger').dropdown({hover: true, constrainWidth: false, coverTrigger: false, container:'.dropdown-container'});
+      $('.sidenav').sidenav();
+      $('.carousel').carousel({indicators: true, numVisible: 10,});
+      $('.tooltipped').tooltip({'margin':'0', 'transitionMovement': '0',});
+      $('.phone_us').mask('(000) 000-0000');
+      $('.money').mask('000,000.00', {reverse: true});
+      $('#other-donation').mask('000,000', {reverse: true});
+      $('.datepicker').datepicker();
+      $('.ways-to-play-tabs').tabs();
+      $('.modal)').modal();
+      $('.scrollspy').scrollSpy();
+      $('.materialboxed').materialbox();
+    });
+    
+  </script>
+  <script>
+    $(window).resize(function(event) {
+      event.preventDefault();
+    })
+    $('.carousel-item').resize(function(event){
+      event.preventDefault();
+    })
+    
+  </script>

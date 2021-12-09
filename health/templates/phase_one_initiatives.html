@@ -1,0 +1,190 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}ETV | Health & Wellness Initiatives{% endblock %}
+{% block content %}
+<div class="parallax-container z-depth-3 box-shadow valign-wrapper">
+    
+    <div class="container z-depth-4 center-align parallax-banner">
+        <img src='{% static "img/health_wellness.png" %}' style="width:70%; padding: 4% 0%">
+    </div>
+    <div class="parallax">
+        <img src='{% static "img/health_collage_final.png" %}'>
+    </div>
+
+</div>
+<div style="background: url('{% static 'img/health_collage_final.png' %}'); background-size: 120%; height: 100%">
+    <div class="row" style="height: 100%; background-color: rgba(255, 255, 255, 0.781); width:100%">
+        <div class="col s12 l10 offset-l1  pillar-body">
+            
+            <h5 class="phase-one-title">ETV Health & Wellness Initiatives</h5>
+                <div class="row vaw-row">
+                    <div class="col s8 offset-s2 l4 hw-image">
+                        <img class="z-depth-2" src="{% static 'img/knowledgepower.jpg' %}" style="width: 100%;">
+                    </div>
+                    <div class="col s10 offset-s1 l8" style="padding-left: 1%; padding-right: 1%;">
+                        <h6 class="health-main-title">Knowledge is Power!™</h6>
+                        <h6 class="pillar-h5 health-main-text"> Fitness and wellness programs are executed in partnership with The Village - churches, community and local healthcare organizations.</h6>
+     
+                        <h6 class="pillar-h5 health-main-text">We will also launch programs to address and conquer obesity, as well as reduce the high prevalence of diabetes and high blood pressure in our community.</h6>
+                    </div>
+                </div>
+                <div class="divider" style="margin-bottom: 30px; margin-top: 30px"></div>
+                <h5 class="center-align coming-soon-title" style="color: rgb(184, 34, 34); padding-bottom: 20px">Coming Soon!</h5>
+            <ul class="collapsible popout pillar-collapsible" style="margin-bottom: 2%;">
+                
+                <li>
+                    <div class="collapsible-header valign-wrapper pillar-header">
+                        <div class="collapsible-body-image" style="background: url('{% static 'img/villageassistance.jpg' %}'); background-size: 160%; background-position-x: -35px; background-position-y: -30px">
+                        </div>
+                        <div class="pillar-title">Village Assistance Program™</div>
+                        
+                    </div>
+                    <div class="collapsible-body collapsible-body-pillar">
+                        <h5 class="pillar-h5 health-main-text" style="padding-left: 5%;padding-right: 3%; padding-bottom: 15px">ETV is developing this platform to give the Black community greater free and affordable access to mental health professionals, especially Black psychiatrists, psychologists, social workers and other wellness professionals to improve emotional health and wellness in the Black adult and youth community and to identify and support early childhood development challenges.</h5>
+                    </div>
+                </li>
+            </ul> 
+            <ul class="collapsible popout pillar-collapsible" style="padding-bottom: 30px">
+                
+                <li>
+                    <div class="collapsible-header valign-wrapper pillar-header">
+                        <div class="collapsible-body-image" style="background: url('{% static 'img/knowthyself.jpg' %}'); background-size: 140%; background-position-x: -25px; background-position-y: -10px">
+                        </div>
+                        <div class="pillar-title">Know Thyself!</div>
+                      
+                    </div>
+                    <div class="collapsible-body collapsible-body-pillar">
+                        <h5 class="pillar-h5 health-main-text" style="padding-left: 5%;padding-right: 3%; padding-bottom: 15px">ETV is tackling Post Traumatic Slave Disorder (our PTSD) through customized age-appropriate education fostering cultural pride. We are also developing a curriculum and championing programs that promote a growth mindset of possibilities, self-confidence, self-respect and self-esteem.</h5>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<style>
+    .pillar-header {
+        background-color: white;
+    }
+    
+    .pillar-collapsible li {
+        margin:0 !important;
+    }
+    .phase-one-list {
+        padding-left: 10% !important;
+        padding-right: 10%;
+    }
+    .phase-one-list li {
+        padding: 15px;
+    }
+    .phase-one-title{
+        font-family: oskar;
+        text-align: center
+    }
+    .collapsible-body-pillar {
+        background-color: rgba(255, 255, 255, 0);
+    }
+    @media only screen and (min-width:0px){
+        .health-main-title {
+        font-family: oskar-inline;
+        font-size: 36px;
+        text-align: center;
+        color:rgb(18, 148, 18);
+        margin-bottom: 0;
+        margin-top: 20px
+    }
+    .health-main-text {
+        line-height: 32px;
+    }
+        .phase-one-list {
+            font-size: 16px
+        }
+        .phase-one-title {
+            font-size: 38px;
+            
+        }
+        .pillar-collapsible {
+        width: 100%;
+        margin-left:0;
+    }
+        p {
+            font-size:16px
+        }
+        .pillar-title {
+            color: black;
+            font-family: poppins;
+            font-size: 16px;
+            letter-spacing: 1px;
+            text-transform: none;
+        }
+    }
+    @media only screen and (min-width:601px){
+        .health-main-title {
+        font-family: oskar-inline;
+        font-size: 48px;
+        text-align: center;
+        color:rgb(18, 148, 18);
+        margin-bottom: 0;
+        margin-top: 20px
+    }
+        .phase-one-list {
+            font-size: 18px
+        }
+        .phase-one-title {
+            font-size: 48px;
+        }
+        p {
+            font-size:18px
+        }
+        .pillar-title {
+            font-size: 20px;
+            letter-spacing: 2px;
+        }
+        .pillar-collapsible {
+        width: 80%;
+        margin-left:10%;
+    }
+    }
+    @media only screen and (min-width:993px){
+        .health-main-title {
+        font-size: 48px;
+        text-align: left;
+        color:rgb(18, 148, 18);
+        margin-bottom: 0;
+        margin-top:0
+    }
+        .phase-one-list {
+            font-size: 22px
+        }
+        .phase-one-title {
+            font-size: 64px;
+        }
+        p {
+            font-size:22px
+        }
+        .pillar-collapsible {
+        width: 70%;
+        margin-left:15%;
+    }
+}
+    @media only screen and (min-width:1201px){
+       
+        .pillar-collapsible {
+        width: 60%;
+        margin-left:20%;
+    }
+    .pillar-title {
+            font-size: 24px;
+            letter-spacing: 2px;
+        }
+        .health-main-title {
+        font-size: 52px;
+    }
+    .health-main-text {
+        font-size: 24px;
+        line-height: 40px
+    }
+    }
+    
+</style>
+{% endblock %}

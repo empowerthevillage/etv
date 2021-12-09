@@ -1,0 +1,102 @@
+
+<li class="media row">
+  <div class="media-body col-9" style="padding:0px;padding-right:5px;">
+   
+    <a class="list-title" href="{{ instance.get_absolute_url }}">{{ instance.title }}</a>
+    <br>
+    <p class="list-description">{{ instance.card_description }}</p>
+    <div class="list-price">${{ instance.price }}</div>
+    
+    <div id="update-cart">{% include 'products/snippets/update-cart.html' with product=instance cart=cart %}</div>
+    <div class="list-enroll cl-effect-17">OR | <a class="list-link" href="">ENROLL</a> for unlimited access!</div>
+    
+  </div>
+  {% if instance.image %}
+
+  <a class="align-self-start col-5" href="{{ instance.get_absolute_url }}" style="padding:0; padding-right:5px"><img class="" src="{{ instance.image.url }}" alt="{{ instance.title }}" width="100%"></a>
+  {% endif %}  
+</li>
+<div class="dropdown-divider"></div>
+
+<style>
+  .list-title {
+    font-size: 20;
+    font-weight: 300;
+    color:rgb(76, 74, 214);
+    letter-spacing: 1.5px;
+  }
+  .list-title:hover {
+    color:#8f90df;
+  }
+  .list-description {
+    margin-top: 5px;
+  }
+  .list-price {
+    color: rgb(82, 81, 81);
+    margin-top: 5px;
+    font-size: 18px;
+    margin-bottom: 4px;
+  }
+  .list-enroll {
+    font-size:12px;
+    margin-bottom: 5px;
+    margin-top:0px;
+    color:grey;
+  }
+  .list-link {
+    color:rgb(59, 85, 233);
+  }
+  .list-link:hover {
+    color:#1ba6f7;
+  }
+  .cl-effect-17 a {
+	color: #10649b;
+	text-shadow: none;
+	padding: 4px 0;
+}
+
+.cl-effect-17 a::before {
+	color: #fff;
+	text-shadow: 0 0 2px rgba(255,255,255,0.3);
+	content: attr(data-hover);
+	position: absolute;
+	-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+	-moz-transition: -moz-transform 0.3s, opacity 0.3s;
+	transition: transform 0.3s, opacity 0.3s;
+	pointer-events: none;
+}
+
+.cl-effect-17 a::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 2px;
+	background: #fff;
+	opacity: 0;
+	-webkit-transform: translateY(5px);
+	-moz-transform: translateY(5px);
+	transform: translateY(5px);
+	-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+	-moz-transition: -moz-transform 0.3s, opacity 0.3s;
+	transition: transform 0.3s, opacity 0.3s;
+	pointer-events: none;
+}
+
+.cl-effect-17 a:hover::before,
+.cl-effect-17 a:focus::before {
+	opacity: 0;
+	-webkit-transform: translateY(-2px);
+	-moz-transform: translateY(-2px);
+	transform: translateY(-2px);
+}
+
+.cl-effect-17 a:hover::after,
+.cl-effect-17 a:focus::after {
+	opacity: 1;
+	-webkit-transform: translateY(0px);
+	-moz-transform: translateY(0px);
+	transform: translateY(0px);
+}
+</style>

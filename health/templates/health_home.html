@@ -1,0 +1,741 @@
+
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}ETV | Health & Wellness{% endblock %}
+{% block canonical %}https://www.empowerthevillage.org/health-and-wellness/{% endblock %}
+{% block seo_description %}ETV Strategic Pillars: Health & Wellness{% endblock %}
+{% block content %}
+<div class="parallax-container z-depth-3 box-shadow valign-wrapper">
+    
+    <div class="container z-depth-4 center-align parallax-banner">
+        <img src='{% static "img/health_wellness.png" %}' style="width:90%; padding: 4% 0%">
+    </div>
+    <div class="parallax">
+        <img src='{% static "img/health_collage_final.png" %}'>
+    </div>
+
+</div>
+<div style="background: url('{% static 'img/health_collage_final.png' %}'); background-size: 120%; height: 100%">
+    <div class="row" style="height: 100%; background-color: rgba(255, 255, 255, 0.781); width:100%">
+        <div class="col s12 l10 offset-l1  pillar-body">
+                <div class="row center-align" style="margin-left: 0; margin-right: 0">
+                    <h5 class="dyk"><p class="dyk" style="color: rgb(199, 24, 24); margin:0; padding:0; margin-top: -10px">State Of The Village: <a style="color:rgba(38, 38, 38, 0.947); font-family: oskar">Did You Know...?</a></p></h5>
+                    <div class="divider"></div>
+                    <div class="row valign-wrapper mi-row" style="margin-left: 0; margin-right: 0">
+                        <img class="col s3 trend" src="{% static 'img/trend-chart.png'%}">
+                        <blockquote class="col s9 dyk-quote quote-1">
+                            The number of reported cases of diagnosed mental illness, especially anxiety and depression, as well as the rate of suicide in the Black community, continues to climb in recent years. Physical health challenges are also on the rise.
+                        </blockquote>
+                    </div>
+                    <style>
+                        .quote-1 {
+                            font-size: 18px
+                        }
+                        @media only screen and (min-width: 663px){
+                            .quote-1 {
+                                font-size: 24px
+                            }
+                        }
+                        @media only screen and (min-width: 992px){
+                            .quote-1 {
+                                font-size: 28px
+                            }
+                        }
+                    </style>
+                    <div class="divider" style="margin-bottom: 30px"></div>
+                    <div class="row popout-row" style="margin-left: 0; margin-right: 0">
+                        <ul class="col s12 xl6 pillar-collapsible goals-collapsible">
+                            <li class="goals-li z-depth-2" style="margin: 0">
+                                <div class="collapsible-header valign-wrapper pillar-header goals-header">
+                                    <div class="collapsible-body-image" style="background: url('{% static 'img/ep-goals.jpg' %}'); background-size: 147%">
+                                    </div>
+                                    <div class="pillar-title">ETV Goals</div>
+                                    
+                                </div>
+                                <div class="collapsible-body-pillar">
+                                    <ul>
+                                        <li class="pillar-h5">
+                                            <table>
+                                                <tr class="pillar-tr">
+                                                    <td class="pillar-target-td">
+                                                        <i class="material-icons pillar-target">track_changes</i> 
+                                                    </td>
+                                                    <td class="pillar-h5">
+                                                        Healthier, more peaceful, longer lives for Black individuals and families
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </li>
+                                    </ul>
+                                    
+                                </div>
+                            </li>
+                        </ul> 
+                    
+                        <ul class="col s12 xl6 pillar-collapsible" style="margin-bottom: 2%;">
+                            
+                            <li class="solutions-li z-depth-2" style="margin:0">
+                                <div class="collapsible-header valign-wrapper pillar-header solutions-header">
+                                    <div class="collapsible-body-image" style="background: url('{% static 'img/solutions.jpg' %}'); background-size: 140%; background-position-x: -30px">
+                                    </div>
+                                    <div class="pillar-title">ETV Solutions</div>
+                
+                                </div>
+                                <div class="collapsible-body-pillar">
+                                    <table>
+                                        <tr class="pillar-tr">
+                                            <td class="pillar-target-td">
+                                                <i class="material-icons pillar-target">check</i> 
+                                            </td>
+                                            <td class="pillar-h5">
+                                                <b>Knowledge is Power!™ - </b>Fitness & Wellness Programs
+                                            </td>
+                                        </tr>
+                                        <tr class="pillar-tr">
+                                            <td class="pillar-target-td">
+                                                <i class="material-icons pillar-target">check</i> 
+                                            </td>
+                                            <td class="pillar-h5">
+                                                <b>Village Assistance Program™ - </b>Mental Healthcare Access 
+                                            </td>
+                                        </tr>
+                                        <tr class="pillar-tr">
+                                            <td class="pillar-target-td">
+                                                <i class="material-icons pillar-target">check</i> 
+                                            </td>
+                                            <td class="pillar-h5">
+                                                <b>Know Thyself! - </b>Age-Appropriate Cultural Education
+                                            </td>
+                                        </tr>
+                                    </table>
+                                   
+                                </div>
+                            </li>
+                        </ul> 
+                    </div>
+                    <div class="row" style="margin-left: 0; margin-right: 0; margin-bottom: 0; padding-top: 3%; padding-left: 1%; padding-right: 1%">
+                        
+                        <div class="col s12 m3">
+                            <div class="row dyk-row">
+                                <img class="col s3 m12 covid" src="{% static 'img/covid-stat.png'%}">
+                                <p class="col s9 m12 covid-text">Black Americans are 2.8X as likely to be hospitalized if infected with COVID-19, and 2X more likely to die</p>
+                            </div>
+                        </div>
+                        <div class="col s12 m3">
+                            <div class="row dyk-row">
+                                <img class="col s3 m12 obesity" src="{% static 'img/obesity-stat.png'%}">
+                                <p class="col s9 m12 obesity-text">49% of Black Americans are considered obese & have the highest age-adjusted prevalence of obesity</p>
+                            </div>
+                        </div>
+                        <div class="col s12 m3">
+                            <div class="row dyk-row">
+                                <img class="col s3 m12 heart" src="{% static 'img/heart-stat.png'%} ">
+                                <p class="col s9 m12 heart-text">Black Americans account for ~14% of the U.S. population, but ~24% of heart disease deaths</p>
+                            </div>
+                        </div>
+                        <div class="col s12 m3">
+                            <div class="row dyk-row">
+                                <img class="col s3 m12 cancer" src="{% static 'img/cancer-stat.png'%}">
+                                <p class="col s9 m12 cancer-text">With 177.6 cases per 100,000 people, Black Americans have the highest prevalence of cancer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            <div class="divider" style="margin-bottom: 30px"></div>
+            <div class="row center-align" style="margin-left: 0; margin-right: 0">
+                <h5 class="dyk">Health & Wellness Initiatives</h5>
+                    <div class="divider" style="margin-bottom: 20px"></div>
+                    <div class="row" style="margin-left: 0; margin-right: 0">
+                        <div class="col s8 offset-s2 l4 ee-image">
+                            <img class="z-depth-2" src="{% static 'img/group-fitness.jpg' %}" style="width: 100%;">
+                        </div>
+                        <div class="col s10 offset-s1 l8" style="padding-left: 2%; padding-right: 3%;">
+                            
+                            <h6 class="health-main-title">Knowledge is Power!™</h6>
+                            <h6 class="pillar-h5 health-main-text">Physical fitness and wellness programs, including COVID-19 education, testing and vaccination support, are executed in partnership with The Village - churches, community and local healthcare organizations.</h6>
+        
+                            <h6 class="pillar-h5 health-main-text">We will also launch programs to address black maternal & infant mortality, conquer obesity, and reduce the high prevalence of diabetes, cancer, and high blood pressure in our community.</h6>
+                        </div>
+                    </div>
+                    <div class="divider" style="margin-bottom: 30px"></div>
+                    <div class="row" style="margin-left: 0 !important; margin-right: 0 !important">
+                        <div class="col s12 m6">
+                            <iframe width=100% height="315" src="https://www.youtube.com/embed/pILCWjsAksQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <div class="col s12 m6">
+                            <iframe width=100% height="315" src="https://www.youtube.com/embed/yYewqf6GRVs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="divider" style="margin-bottom: 0px; margin-top: 30px"></div>
+                    <div class="row" style="width: 90%; margin-left:5% !important; margin-right: 0 !important">
+                    <h5 class="center-align health-main-title" style="color: rgb(184, 34, 34); padding-bottom: 20px">Coming Soon!</h5>
+                        
+                    <ul class="col s12 m6 center-align collapsible popout pillar-collapsible" style="text-align: center;">
+                            
+                            <li class="center-align" style="margin: 5px; text-align: center;">
+                                <div class="collapsible-header center-align pillar-header" style="justify-content: center; background-color: white; text-align: center;">
+                                    
+                                    <div class="pillar-title center-align cs-title vap-line1">Village Assistance<b class="cs-title center-align" style="font-weight: 400;"><div style="margin-top:0; padding-top:0; justify-content: center;" class="valign-wrapper vap-line2">Program™<i class="material-icons" style="color: rgb(7, 7, 7); font-size: 36px">keyboard_arrow_down</i></div></b>
+                                    </div>
+                                </div>
+                                <div class="collapsible-body collapsible-body-pillar" style="background-color: rgba(100, 165, 90, 0.521)">
+                                    <h5 class="pillar-h5 health-main-text" style="padding-left: 5%;padding-right: 3%; padding-bottom: 15px; background-color: rgba(255, 255, 255, 0.536)">ETV is developing this platform to give the Black community free and affordable access to mental health professionals, especially Black psychiatrists, psychologists, social workers and other wellness professionals to improve emotional health and wellness in the Black adult and youth communities and to identify and support early childhood developmental challenges.</h5>
+                                </div>
+                            </li>
+                        </ul> 
+                        <ul class="col s12 m6 collapsible popout center-align pillar-collapsible">
+                            
+                            <li class="center-align" style="margin: 5px">
+                                <div class="collapsible-header center-align pillar-header" style="justify-content: center; background-color: white;">
+                                    
+                                    <div class="pillar-title center-align cs-title" style="justify-content: center;">Know<b class="cs-title center-align" style="font-weight: 400; padding-left: 20px"><div style="margin:0; padding:0; justify-content: center;" class="valign-wrapper">Thyself!<i class="material-icons" style="color: rgb(7, 7, 7); font-size: 36px">keyboard_arrow_down</i></div></b></div>
+                                
+                                </div>
+                                <div class="collapsible-body collapsible-body-pillar" style="background-color: rgba(100, 165, 90, 0.521)" >
+                                    <h5 class="pillar-h5 health-main-text" style="padding-left: 5%;padding-right: 3%; padding-bottom: 15px; background-color: rgba(255, 255, 255, 0.536)">ETV is tackling Post Traumatic Slave Disorder (our PTSD) through customized age-appropriate education fostering cultural pride. We are also developing a curriculum and championing programs that promote a growth mindset of possibilities, self-confidence, self-respect and self-esteem.</h5>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+            </div>
+            <div class="divider" style="margin-bottom: 30px"></div>
+            
+            
+        </div>
+    </div>
+            
+        
+</div>
+
+<style>
+    .dyk-quote {
+        text-align: left;
+        border-left: dotted rgb(184, 34, 34) 2px;
+        padding-left: 3% !important;
+        margin-left: 2% !important
+    }
+    .divider {
+        margin: 0;
+        width: 90%;
+        margin-left: 5%;
+    }
+    
+    p {
+        font-weight: 400;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        text-align: center;
+    }
+    
+    .facts-ul li {
+        padding-bottom: 15px;
+        font-weight: 300;
+    }
+    .pillar-nav {
+        background-color: rgba(0, 0, 0, 0.728);
+    }
+    .pillar-nav li a {
+        color: rgb(255, 255, 255) !important;
+        font-size: 16px !important;
+        font-weight: 300
+    }
+    .dyk {
+        font-family: oskar-inline;
+        color:rgba(60, 60, 60, 0.947);
+        text-transform: uppercase;
+    }
+    
+    .goals-header {
+        background: rgb(191,23,23);
+        background: linear-gradient(90deg, rgba(191,23,23,0.8365721288515406) 0%, rgba(156,96,30,0.738532913165266) 49%, rgba(0, 0, 0, 0.399) 100%); 
+    }
+    .solutions-header {
+        background: rgb(191,23,23);
+        background: linear-gradient(90deg, rgba(0, 0, 0, 0.603) 0%, rgba(137, 143, 65, 0.739) 49%, rgba(44, 129, 15, 0.739) 100%); 
+    }
+    .cs-title {
+        color: black
+    }
+    @media only screen and (min-width: 0px) {
+        .collapsible-body-image-cs {
+            width: 64px !important;
+            height: 64px;
+            margin-left: 5%;
+            margin-right: 1%
+        }
+        .cs-title {
+            font-size: 28px;
+            text-align: center;
+            padding-left: 1%
+        }
+        .health-main-title {
+        font-family: oskar-inline;
+        font-size: 36px;
+        text-align: center;
+        color:rgb(18, 148, 18);
+        margin-bottom: 0;
+        margin-top: 20px
+    }
+    .health-main-text {
+        font-size: 18px;
+        line-height: 30px;
+        text-align: center;
+    }
+        .mi-row {
+            width: 100%;
+            padding-left: 5%
+        }
+        .dyk-quote {
+            font-size: 14px
+        }
+        .covid {
+        }
+        .covid-text {
+            padding: 0 !important;
+            margin: 0 !important;
+            font-size: 14px;
+            text-align: left;
+            font-weight: 300;
+        }
+        .obesity {
+        }
+        .obesity-text {
+            padding: 0 !important;
+            margin: 0 !important;
+            font-size: 14px;
+            text-align: left;
+            font-weight: 300;
+        }
+        .heart {
+        }
+        .heart-text {
+            padding: 0 !important;
+            margin: 0 !important;
+            font-size: 14px;
+            text-align: left;
+            font-weight: 300;
+        }
+        .cancer {
+           
+        }
+        .cancer-text {
+            padding: 0 !important;
+            margin: 0 !important;
+            font-size: 14px;
+            text-align: left;
+            font-weight: 300;
+        }
+        .dyk {
+            font-size: 38px;
+            letter-spacing: 2px;
+        }
+        .power-collapse {
+        width: 100%;
+        
+    }
+    .unemployment_ss {
+        width: 50%;
+        padding-top: 20px
+    }
+    .unemployment_ss_caption {
+        font-size: 12px;
+        padding: 0;
+        margin: 0;
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+    .dyk-row {
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+    .tenx-house {
+        width: 25%;
+        padding-left: 3%;
+        padding-right: 0;
+        padding-top: 5%
+    }
+    .tenx-text p {
+        margin: 0;
+        padding: 0;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-right: 3%;
+        font-size: 12px;
+        text-align: left;
+    }
+    .goals li {
+        width: 100%;
+    }
+    .power-collapse li {
+        
+    }
+    .power-collapse li div{
+        font-size: 14px;
+        padding: 2% 5%
+    }
+        blockquote {
+            font-size: 16px;
+            font-weight: 300;
+            margin-top: 30px !important;
+            margin-top: 30px !important;
+        }
+        .statistic-title {
+            font-family: oskar-inline;
+            font-size: 28px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-transform: scale(1, 0.9);
+            text-align: center;
+            background-color: rgba(154, 22, 22, 0.947);
+            padding: 15px 5px;
+            color: white
+        }
+        .degree-attainment-small {
+            display: block;
+            padding: 0% 5%;
+        }
+        .degree-attainment {
+            display: none;
+            padding: 0% 5%;
+        }
+        blockquote {
+            width: 90%;
+            margin-left: 5%;
+            margin-top: 7%;
+        }
+    }
+    @media only screen and (min-width: 420px) {
+        .statistic-title {
+            font-size: 32px;
+            padding: 15px 10px;
+        }
+        .tenx-text p {
+        margin: 0;
+        padding: 0;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-right: 3%;
+        font-size: 14px;
+        text-align: left;
+    }
+    .unemployment_ss_caption {
+        font-size: 14px;
+        padding: 0;
+        margin: 0;
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+    }
+    @media only screen and (min-width: 601px) {
+        .collapsible-body-image-cs {
+            width: 80px !important;
+            height: 80px;
+            margin-left: 3%;
+            margin-right: 1%
+        }
+        .cs-title {
+            font-size: 32px;
+            text-align: center;
+            padding-left: 1%
+        }
+        .health-main-title {
+        font-family: oskar-inline;
+        font-size: 50px;
+        text-align: center;
+        color:rgb(18, 148, 18);
+        margin-bottom: 0;
+        margin-top: 20px
+    }
+        .trend {
+            width: 20% !important
+        }
+        .dyk-quote {
+            font-size: 16px
+        }
+        .mi-row {
+            width: 95%;
+        }
+        .covid {
+            width: 85% !important;
+        }
+        .covid-text {
+            padding: 0;
+            padding-top: 2% !important;
+            margin: 0;
+            font-size: 14px;
+            text-align: center;
+        }
+        .obesity {
+            width: 100% !important;
+            padding-top: 1% !important
+        }
+        .obesity-text {
+            padding: 0;
+            margin: 0;
+            padding-top: 4% !important;
+            font-size: 14px;
+            text-align: center;
+        }
+        .heart {
+           
+        }
+        .heart-text {
+            padding: 0;
+            margin: 0;
+            padding-top: 3.5% !important;
+            font-size: 14px;
+            text-align: center;
+        }
+        .cancer {
+            width: 100% !important;
+            margin-top: -5px !important
+        }
+        .cancer-text {
+            padding: 0;
+            margin: 0;
+            padding-top: 4% !important;
+            font-size: 14px;
+            text-align: center;
+        }
+        .popout-row {
+            padding-left: 5%;
+            padding-right: 5%
+        }
+        .goals-li {
+            width: 95%;
+    }
+    .solutions-li {
+        width: 95%;
+    }
+    .dyk {
+        font-size: 42px
+    }
+    .unemployment_ss {
+        width: 90%;
+        padding-top: 30px
+    }
+    .unemployment_ss_caption {
+        font-size: 12px;
+        padding: 0;
+        margin: 0;
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+    .dyk-row {
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+    .tenx-house {
+        width: 25%;
+        padding-left: 1%;
+        padding-right: 0;
+        padding-top: 5%
+    }
+    .tenx-text p {
+        margin: 0;
+        padding: 0;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-right: 3%;
+        font-size: 16px;
+    }
+        
+        .power-collapse {
+        width: 100%;
+        
+    }
+    .power-collapse li {
+        
+    }
+    .power-collapse li div{
+        font-size: 16px;
+        padding: 2% 10%
+    }
+        blockquote {
+            font-size: 20px;
+            margin-top: 5% !important;
+            margin-bottom: 5% !important;
+        }
+        .statistic-title {
+            font-size: 38px;
+            width: 50% !important;
+            margin-left: 25%;
+            margin-top: 5%;
+            margin-bottom: 5%;
+        }
+        
+      
+    }
+    @media only screen and (min-width: 993px) {
+        .collapsible-body-image-cs {
+            width: 120px !important;
+            height: 120px;
+            margin-left: 1%;
+            margin-right: 1%
+        }
+        .cs-title {
+            font-size: 44px !important;
+            text-align: center !important;
+            padding-left: 1%
+        }
+        .health-main-title {
+        font-size: 56px;
+        color:rgb(18, 148, 18);
+        margin-bottom: 0;
+        margin-top:0
+    }
+    .health-main-text {
+        font-size: 22px;
+        line-height: 36px;
+        font-weight: 200;
+        text-align: left
+    }
+        .trend {
+            width: 15% !important
+        }
+        .dyk-quote {
+            font-size: 20px
+        }
+        .mi-row {
+            width: 80%;
+            margin-left: 5% !important;
+        }
+        .covid-text {
+            padding: 0;
+            padding-top: 2% !important;
+            margin: 0;
+            font-size: 16px;
+            text-align: center;
+        }
+        .obesity-text {
+            padding: 0;
+            margin: 0;
+            padding-top: 4% !important;
+            font-size: 16px;
+            text-align: center;
+        }
+        .heart-text {
+            padding: 0;
+            margin: 0;
+            padding-top: 3.5% !important;
+            font-size: 16px;
+            text-align: center;
+        }
+        .cancer-text {
+            padding: 0;
+            margin: 0;
+            padding-top: 4% !important;
+            font-size: 16px;
+            text-align: center;
+        }
+        blockquote {
+            font-size: 22px;
+        }
+        .pillar-body {
+            padding-left: 1% !important;
+            padding-right: 1% !important;
+        }
+        .power-collapse {
+        width: 90%;
+        margin-left: 5%
+        
+    }
+    .dyk {
+        font-size: 58px
+    }
+    .power-collapse li {
+        
+    }
+    .power-collapse li div{
+        font-size: 18px;
+        padding: 2% 5%
+    }
+        
+    }
+    @media only screen and (min-width: 1201px) {
+        .collapsible-body-image-cs {
+            width: 120px !important;
+            height: 120px;
+            margin-left: 2%;
+            margin-right: 1%
+        }
+        .cs-title {
+            font-size: 48px;
+            text-align: center;
+            padding-left: 1%
+        }
+        .unemployment_ss {
+        width: 70%;
+        padding-top: 20px
+    }
+    .unemployment_ss_caption {
+        font-size: 14px;
+        padding: 0;
+        margin: 0;
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+    .dyk-row {
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+    .dyk {
+        padding-bottom: 20px
+    }
+    .tenx-house {
+        width: 20%;
+        padding-left: 3%;
+        padding-right: 0;
+        padding-top: 5%
+    }
+    .tenx-text p {
+        margin: 0;
+        padding: 0;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-right: 3%;
+        font-size: 22px;
+      
+    }
+}
+@media only screen and (min-width: 1400px) {
+        .unemployment_ss {
+        width: 70%;
+        padding-top: 20px
+    }
+    .unemployment_ss_caption {
+        font-size: 14px;
+        padding: 0;
+        margin: 0;
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+    .dyk-row {
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+    .dyk {
+        padding-bottom: 20px
+    }
+    .tenx-house {
+        width: 20%;
+        padding-left: 3%;
+        padding-right: 0;
+        padding-top: 5%
+    }
+    .tenx-text p {
+        margin: 0;
+        padding: 0;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-right: 3%;
+        font-size: 24px;
+        font-weight: 300
+      
+    }
+}
+</style>
+
+{% endblock %}

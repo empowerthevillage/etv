@@ -1,0 +1,237 @@
+{% load static %}
+{% load mailchimp_tags %}
+{% include 'base/css.html' %}
+{% include 'base/js.html' %}
+{% url 'account:home' as account_url %}
+{% url 'donations:donate' as donate_url %}
+{% url 'home' as home_url %}
+{% url 'vbp:home' as vbp_url %}
+{% url 'login' as login_url %}
+{% url 'logout' as logout_url %}
+{% url 'register' as register_url %}
+{% url 'bfchallenge:bingo' as bingo_url %}
+{% url 'bfchallenge:home' as bf_home_url %}
+{% url 'bfchallenge:readyss' as readyss_url %}
+{% url 'bfchallenge:nomination' as nomination_url %}
+{% url 'bfchallenge:stl' as stl_url %}
+{% url 'myadmin' as admin_url %}
+{% url 'efbf' as efbf_url %}
+{% url 'contact' as contact_url %}
+{% url 'bfchallenge:everyfriday' as efchallenge_url %}
+{% url 'account:jointeam' as join_url %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" type="image/png" href="{% static 'img/favicon.png' %}" />
+        <title>{% block title %}{% endblock %}</title>
+    </head>
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GFM7WGP9KD"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){window.dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-GFM7WGP9KD');
+    </script>
+    <body>
+      <main>
+          <nav id="navbar" class="nav-extended">
+            <div class="nav-wrapper z-depth-0" id="navbar-div">
+                
+                <i class="left sidenav-trigger material-icons" data-target="side-nav" id="sidenav-menu-trigger">menu</i>
+        
+                <div class="left nav-row-left valign-wrapper" id="nav-top-left"> 
+                  <div class="icon-wrap valign-wrapper" id="icon-wrap">
+                    <a href="https://www.facebook.com/Empower-The-Village-Nonprofit-Organization-105185814766521/" class="facebook nav-socialmedia" target="_blank"><i class="fab fa-facebook nav-socialmedia-icon"></i></a>
+                    <a href="https://twitter.com/empower_etv" class="twitter nav-socialmedia" target="_blank"><i class="fab fa-twitter nav-socialmedia-icon"></i></a>
+                    <a href="https://www.instagram.com/empower_etv/" class="instagram nav-socialmedia" target="_blank"><i class="fab fa-instagram nav-socialmedia-icon"></i></a>
+                    <a href="http://linkedin.com/company/empower-the-village" class="linkedin nav-socialmedia" target="_blank"><i class="fab fa-linkedin nav-socialmedia-icon"></i></a>
+                    <a href="https://www.youtube.com/channel/UCKMNMY8pqCId-PY4dCcKtaQ" class="youtube nav-socialmedia" target="_blank"><i class="fab fa-youtube nav-socialmedia-icon"></i></a>
+                  </div>  
+                  <div class="navbar-slash"> | </div>
+                  <a class="main-nav-link ul-effect valign-wrapper {% if request.path == efbf_url %}active{% endif %}" href="{{ home_url }}">Home</a>
+                    <div class="navbar-slash"> | </div>
+                    <a class="main-nav-link ul-effect valign-wrapper" href="{{ contact_url }}">Contact</a>
+                    <div class="navbar-slash"> | </div>
+                    <a class="main-nav-link ul-effect valign-wrapper" href="https://empowerthevillage.org/">ETV</a>
+                  </div>
+                <div class="center">
+                  <a href="{{ home_url }}" class="center brand-logo"><img src="{% static 'img/logo.jpeg' %}" height=110></a>
+                </div>
+                <div class="right valign-wrapper" style="height:100%">
+                    {% if request.user.is_authenticated %}
+                    
+                    <a href="{{ account_url }}" class="main-nav-link valign-wrapper welcome-back">Welcome Back!</a>
+                    <a href="{{ account_url }}" id="account-icon"><i class="material-icons" style="color: grey; font-size: 36px; padding-top:30px;padding-left:10px">account_circle</i></a>
+                      <div class="navbar-slash"> | </div>
+                    <a href="{{ logout_url }}" class="main-nav-link ul-effect valign-wrapper"> Logout</a>
+                    <div class="navbar-slash"> | </div>
+                    {% else %}
+                    <a class="main-nav-link valign-wrapper ul-effect {% if request.path == login_url %}active{% endif %}" href="{{ login_url }}" style="">Login</a>
+                    <div class="navbar-slash"> | </div>
+                    <a class="main-nav-link valign-wrapper ul-effect {% if request.path == register_url %}active{% endif %}" href="{{ register_url }}" style="">Join The Village</a>
+                    <div class="navbar-slash"> | </div>
+                    {% endif %}
+                  
+                  <a class="btn btn-large waves-effect waves-light donate-btn-navbar" href="{{ donate_url }}" id="donate-btn-navbar">DONATE</a>
+                </div>
+            </div>
+            <div class="nav-content ">
+              <ul class="tabs tabs-transparent tabs-fixed-width z-depth-2">
+                <li class="tab"><a class="nav-tab {% if request.path == efbf_url %}active{% endif %}" href="{{ efbf_url }}" style="font-size: 16px; font-weight: 500">Make Every Friday, Black Friday!™</a></li>
+                <li class="tab"><a class="nav-tab {% if request.path == vbp_url %}active{% endif %}" href="{{ vbp_url }}" style="font-size: 16px; margin-left: -38px;font-weight: 500">Village Black Pages™</a></li>
+                <li class="tab"><a class="nav-tab dropdown-trigger" data-target="nav-dropdown" href="{{ bf_home_url }}" style="font-size: 16px; font-weight: 500">Black Friday Challenge™</a></li>
+              </ul>
+            </div>
+          </nav>
+          <ul id="side-nav" class="sidenav" style="background-color:rgba(255, 255, 255, 0.899)">
+            <li style="margin-bottom: 2px; background-color: rgb(230, 229, 228);"><img src="{% static 'img/footer-logo.png' %}" width="95%" style="margin-left:2.5%; padding-top:19px"></li>
+            
+            <li><a href="{{ efbf_url }}" class="waves-effect">Make Every Friday, Black Friday</a></li>
+            <li><a href="{{ vbp_url }}" class="waves-effect">Village Black Pages</a></li>
+            <li><a href="{{ bf_home_url }}" class="waves-effect">Black Friday Challenge</a></li>
+            
+            
+           
+            <li class="divider"></li>
+            {% if request.user.is_authenticated %}
+            <li><a href="{{ account_url }}" class="waves-effect">Account</a></li>
+            <li><a href="{{ logout_url }}" class="waves-effect">Logout</a></li>
+            {% else %}
+            <li><a href="{{ login_url }}" class="waves-effect">Login</a></li>
+            <li><a href="{{ register_url }}" class="waves-effect">Join the Village</a></li>
+            {% endif %}
+            <li class="divider"></li>
+            <a class="btn btn-large waves-effect waves-light donate-btn-sidenav" style="line-height: 50px; width: 93%" href="{{ donate_url }}" id="donate-btn-navbar">DONATE</a>
+            <div class="icon-wrap center-align" id="sidenav-icons">
+              <a href="https://www.facebook.com/Empower-The-Village-Nonprofit-Organization-105185814766521/" class="facebook nav-socialmedia" target="_blank"><i class="fab fa-facebook nav-socialmedia-icon"></i></a>
+              <a href="https://twitter.com/empower_etv" class="twitter nav-socialmedia" target="_blank"><i class="fab fa-twitter nav-socialmedia-icon"></i></a>
+              <a href="https://www.instagram.com/empower_etv/" class="instagram nav-socialmedia" target="_blank"><i class="fab fa-instagram nav-socialmedia-icon"></i></a>
+              <a href="http://linkedin.com/company/empower-the-village" class="linkedin nav-socialmedia" target="_blank"><i class="fab fa-linkedin nav-socialmedia-icon"></i></a>
+              <a href="https://www.youtube.com/channel/UCKMNMY8pqCId-PY4dCcKtaQ" class="youtube nav-socialmedia" target="_blank"><i class="fab fa-youtube nav-socialmedia-icon"></i></a>
+            </div>
+          </ul>
+          <div class="dropdown-container">
+          <ul id="nav-dropdown" class="dropdown-content">
+            <li><a href="{{ nomination_url }}" class="center-align valign-wrapper {% if request.path == nomination_url %}active{% endif %}" style="font-size: 14px">Nomination Challenge</a</li>
+            <li style="border-top:solid 0.05px rgba(220, 220, 220, 0.673); border-bottom:solid 0.1px rgb(220, 220, 220, 0.673);"><a class="center-align {% if request.path == bingo_url %}active{% endif %}" href="{{ bingo_url }}" style="font-size: 14px">Power Bingo</a></li>
+            <li><a href="{{ readyss_url }}" class="center-align {% if request.path == readyss_url %}active{% endif %}" style="font-size: 14px">Ready, Set, Shop</a></li>
+            <li style="border-top:solid 0.05px rgba(220, 220, 220, 0.673)"><a href="{{ efchallenge_url }}" class="center-align" style="font-size: 14px">Every Friday Challenge</a></li>
+            <li style="border-top:solid 0.05px rgba(220, 220, 220, 0.673)"><a href="{{ stl_url }}" class="center-align" style="font-size: 14px">Spread The Love</a></li>
+          </ul>
+          </div>
+        <div style="z-index: -1">
+        {% block content %}
+        
+        {% endblock %}
+        </div>
+    </main>
+    {% load sweetify %}
+    {% sweetify %}
+    
+    </body>
+    <footer class="page-footer etv-footer">
+        <div class="">
+          <div class="row">
+            <div class="col s12 m10 l7 xl6 offset-l1 offset-xl1">
+              <img src="{% static 'img/footer_logo.png' %}" width=80% style="z-index: 3;padding-top: 10px">
+              
+              
+              <ul class="other-links">
+                <li><a class="" href="https://empowerthevillage.org">Empower The Village Home</a></li>
+                <li><a class="" href="{{ efbf_url }}">Make Every Friday, Black Friday</a></li>
+                <li><a class="" href="{{ vbp_url }}">Village Black Pages</a></li>
+                <li><a class="" href="{{ bf_home_url }}">Black Friday Challenge</a></li>
+                <li><a class="" href="https://empowerthevillage.org/etv-merchandise">Shop</a></li>
+              </ul>
+            </div>
+            </div>
+          </div>
+          <div class="row center-align">
+            <a class="btn waves-effect waves-light amazon-smile-btn" href="https://smile.amazon.com/ch/83-1330564" target="_blank">Support ETV<img src="{% static 'img/amazon-smile.png' %}" width=100% style="margin-top:-8px"></a>
+            <a class="btn btn-large waves-effect waves-light donate-btn footer-donate-btn" href="{{ donate_url }}">DONATE</a>
+            <p class="tax-disclaimer" style="letter-spacing: 2px; transform: scale(1,0.95);">Empower The Village, Inc. is a data-driven 501(c)(3) non-profit organization.<br>
+              All donations are tax-deductible to the fullest extent of the law.</p>
+          </div>
+        </div>
+        </div>
+        <div class="footer-copyright" style="height:100px; background-color: rgb(0, 0, 0);">
+          <div class="container center-align">
+          <p class="copyright-text row" style="margin:0">©{% now "Y" %} Copyright Empower The Village, Inc.</p>
+          <div class="row footer-icon-row" style="margin:0;padding:0">
+              <a href="https://www.facebook.com/Empower-The-Village-Nonprofit-Organization-105185814766521/" class="facebook"><i class="fab fa-facebook"></i></a>
+              <a href="https://twitter.com/empower_etv" class="twitter"><i class="fab fa-twitter"></i></a>
+              <a href="https://www.instagram.com/empower_etv/" class="instagram"><i class="fab fa-instagram"></i></a>
+              <a href="http://linkedin.com/company/empower-the-village" class="linkedin"><i class="fab fa-linkedin"></i></a>
+              <a href="https://www.youtube.com/channel/UCKMNMY8pqCId-PY4dCcKtaQ" class="youtube"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+        </div>
+    </footer>
+    {% block style %}
+    {% endblock %}
+    {% block js %}
+    <script>
+      $(document).ready(function(){
+          $('.collapsible').collapsible();
+          $('.parallax').parallax();
+          $('.dropdown-trigger').dropdown({hover: true, constrainWidth: false, coverTrigger: false, container:'.dropdown-container'});
+          $('.sidenav').sidenav();
+          $('.modal').modal();
+          $('select').formSelect();
+          $('.carousel').carousel({indicators: true, numVisible: 7});
+          $('.tooltipped').tooltip();
+          $('.phone_us').mask('(000) 000-0000');
+          $('.money').mask('000,000.00', {reverse: true});
+          $('#other-donation').mask('000,000', {reverse: true});
+          $('.datepicker').datepicker();
+        });
+        
+      </script>
+      <script>
+        $( window ).resize(function(event) {
+          event.preventDefault();
+        });
+        $('#mailchimp-form').submit(event, function(){
+          event.preventDefault();
+          var email = $('#mailchimp-email').val()
+          var token = '{{csrf_token}}'
+          var form = $('#mailchimp-form')
+            $.ajax({
+                data: form.serialize(),
+                dataType: 'json',
+                url: '/mailchimp-signup/',
+                method: "POST",
+                success: function(data) {
+                  Swal.fire({
+                    title:'Welcome to the Village!',
+                    html: '',
+                    showComfirmButton: false,
+                    showCancelButton: false,
+                    showCloseButton: false,
+                    text:"You've been added to our mailing list",
+                  })
+                },
+                error: function(){
+                  Swal.fire({
+                    title:"You're on the list!",
+                    html: '',
+                    showComfirmButton: false,
+                    showCancelButton: false,
+                    showCloseButton: false,
+                    text:"You're on our mailing list, thank you for keeping up with ETV!",
+                  })
+                }
+            })
+        }) 
+      
+      </script>
+      
+    {% endblock %}
+</html>

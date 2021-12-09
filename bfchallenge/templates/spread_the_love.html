@@ -1,0 +1,246 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+{% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <li  {% if message.tags %} class=" {{ message.tags }} " {% endif %}> {{ message }} </li>
+    {% endfor %}
+</ul>
+{% endif %}
+<div id="page">
+
+    <div class="row center-align" style="margin-top:0px">
+      <div class="col s10 l8 offset-s1 offset-l2 login-card" style="background-color:#fdfdfdf1;padding-top:110px; padding-bottom:40px; padding-left: 30px; padding-right: 30px">
+        <h6 id="vbp-nomination-form-title">Spread the Love Submission Form</h6>
+          <p style="color:rgb(165, 55, 55); font-size: 18px; margin:0">Tag @empower_etv in an Instagram post and paste the link to your post below!</p> 
+          <p style="color:rgb(165, 55, 55); font-size: 18px; margin:0">The player with the highest number of posts within the challenge period wins!</p>
+          <form method="POST" style="padding-left:10%; padding-right:10%;padding-top:40px" id="nomination-form">
+            {% csrf_token %}
+      
+            <div class="input-field">
+              {{ stl_form.link }}
+              <label>{{ stl_form.link.label }}<b>*</b></label>
+            </div>
+        
+            <button class="btn btn-large submit-btn nomination-submit" type="submit">
+                SUBMIT
+            </button>
+          </form>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    [type="radio"]:checked+span:after, [type="radio"].with-gap:checked+span:before, [type="radio"].with-gap:checked+span:after {
+    border: 2px solid rgb(67, 135, 33);
+}
+[type="radio"]:checked+span:after, [type="radio"].with-gap:checked+span:after {
+    background-color: rgb(67, 135, 33);
+}
+    .textfield {
+      font-family: 'Poppins';
+      font-weight: 300;
+      letter-spacing: 1px;
+      color:rgb(60, 60, 60);
+      font-size:18px
+    }
+    .input-field {
+      padding-bottom: 10px;
+    }
+    input.datepicker {
+    font-family: 'Poppins';
+      font-weight: 300;
+      letter-spacing: 1px;
+      color:rgb(60, 60, 60);
+      font-size:18px
+    }
+    input.file-path {
+    font-family: 'Poppins';
+      font-weight: 300;
+      letter-spacing: 1px;
+      color:rgb(60, 60, 60);
+      font-size:18px
+    }
+    /* label color */
+   .input-field label {
+     color: rgb(128, 128, 128);;
+     font-family: 'Poppins';
+      font-weight: 300;
+      letter-spacing: 1px;
+      font-size:14px;
+      padding-bottom:10px
+    }
+    /* label focus color */
+    .input-field input[type=text]:focus + label {
+      color: rgb(67, 135, 33) !important;
+    }
+    /* label underline focus color */
+    .input-field input[type=text]:focus {
+      border-bottom: 1px solid rgb(67, 135, 33) !important;
+      box-shadow: 0 1px 0 0 rgb(67, 135, 33) !important;
+    }
+    
+    /* icon prefix focus color */
+    .input-field .prefix.active {
+      color: #000;
+    }
+    .select-dropdown {
+      font-family: 'Poppins';
+      font-weight: 300;
+      color:rgb(60, 60, 60);
+      letter-spacing: 1px;
+      padding-top: 10px
+    }
+    #page {
+      background-image: url("https://empowerthevillage.s3.amazonaws.com/static/img/VBP+collage.png");
+      background-size: 100%;
+      background-repeat: repeat;
+    }
+    .submit-btn {
+    border: solid 1px rgb(237, 237, 237);
+    background-color: rgb(57, 57, 57);
+    cursor: pointer;
+    padding: 30px 0px;
+    display: inline-block;
+    margin: 15px 5px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 300;
+    outline: none;
+    position: relative;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    overflow: hidden;
+    border-radius:0;
+    transform:scale(1,0.9);
+    line-height:0px;
+    width:40%;
+    font-size:16px
+  }
+  .submit-btn:after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    width: 100%;
+    height: 0;
+    top: 50%;
+    left: 50%;
+    background: rgb(237, 237, 237);
+    opacity: 0;
+    -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    -moz-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    -ms-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  }
+  .submit-btn:hover,
+  .submit-btn:active {
+    color: #319657;
+    background-color: rgb(89, 121, 89);
+  }
+
+  .submit-btn:hover:after {
+    height: 300%;
+    opacity: 1;
+  }
+  .recommended-label {
+    color: rgb(128, 128, 128);;
+     font-family: 'Poppins';
+      font-weight: 300;
+      letter-spacing: 1px;
+      font-size:16px;
+      padding-bottom:0px
+  }
+  .owned-label {
+    color: rgb(128, 128, 128);;
+     font-family: 'Poppins';
+      font-weight: 300;
+      letter-spacing: 1px;
+      font-size:16px;
+      padding-bottom:0px
+  }
+  .onlineonly-label {
+    color: rgb(128, 128, 128);;
+     font-family: 'Poppins';
+      font-weight: 300;
+      letter-spacing: 1px;
+      font-size:16px;
+      padding-bottom:0px
+  }
+  .input-field b {
+    color: red
+  }
+  .hidden {
+    display: none;
+  }
+  .swal2-popup .select-wrapper {
+    display: none;
+  }
+  </style>
+  <script>
+    $(document).ready(function(){
+    $('input.autocomplete').autocomplete({
+      data: {
+        'Alabama': null,
+        'Alaska': null,
+        'Arizona': null,
+        'Arkansas': null,
+        'California': null,
+        'Colorado': null,
+        'Connecticut': null,
+        'Delaware': null,
+        'District of Columbia': null,
+        'Florida': null,
+        'Georgia': null,
+        'Hawaii': null,
+        'Idaho': null,
+        'Illinois': null,
+        'Indiana': null,
+        'Iowa': null,
+        'Kansas': null,
+        'Kentucky': null,
+        'Louisiana': null,
+        'Maine': null,
+        'Maryland': null,
+        'Massachusetts': null,
+        'Michigan': null,
+        'Minnesota': null,
+        'Mississippi': null,
+        'Missouri': null,
+        'Montana': null,
+        'Nebraska': null,
+        'Nevada': null,
+        'New Hampshire': null,
+        'New Jersey': null,
+        'New Mexico': null,
+        'New York': null,
+        'North Carolina': null,
+        'North Dakota': null,
+        'Ohio': null,
+        'Oklahoma': null,
+        'Oregon': null,
+        'Pennsylvania': null,
+        'Rhode Island': null,
+        'South Carolina': null,
+        'South Dakota': null,
+        'Tennessee': null,
+        'Texas': null,
+        'Utah': null,
+        'Vermont': null,
+        'Virginia': null,
+        'Washington': null,
+        'West Virginia': null,
+        'Wisconsin': null,
+        'Wyoming': null,
+      },
+    });
+  });
+  </script>
+  
+{% endblock %}
+

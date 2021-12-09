@@ -1,0 +1,14 @@
+{% load tags %}
+
+<form method="post">
+    <p class="mailchimp-tile">Sign up to receive news and updates from Empower The Village</p>
+    {% csrf_token %}
+    <div class="row">
+        <div class="input-field col s8" style="margin:0; margin-top: 1vw;width:80%">
+            <i class="material-icons prefix" style="color: rgb(196, 196, 196);">email</i>
+            {{ mailchimp_form.email }}
+            <label>{{ mailchimp_form.email.label }}</label>
+            <span class="helper-text" data-error="wrong" data-success="right" style="color:rgb(124, 124, 124);">We respect your privacy and do not share or sell your contact information.</span>
+        </div>
+    </div>
+</form>

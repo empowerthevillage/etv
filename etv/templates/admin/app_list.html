@@ -1,0 +1,69 @@
+
+{% load static %}
+{% load i18n %}
+
+{% block content %}
+<div>
+<h5 style="text-transform: capitalize;">Welcome Back {{ user.username }}!</h5>
+<div class="">
+    <ul class="collection with-header">
+        <li class="collection-header"><a target="_blank" href="https://analytics.google.com/analytics/web/#/p285067598/reports/reportinghub">Google Analytics <span style="font-size: 12px" class="material-icons">
+            open_in_new
+            </span></a></li>
+    </ul>
+</div>
+
+{% for app in app_list %}
+{% if app.name == 'Village Black Pages' %}
+    <ul class="collection with-header" style="margin-bottom:0">
+        <a href="{{ app.app_url }}" class="section" title="{% blocktranslate with name=app.name %}Models in the {{ name }} application{% endblocktranslate %}">
+            <li class="collection-header" style="color:black">
+            {{ app.name }}
+            </li>
+        </a>
+    </ul>
+    <div class="input-field col s12" style="background-color: white; margin-top:0">
+        <select>
+            <option value="" disabled selected>Choose A State</option>
+            {% for model in app.models %}
+                <option value="{{ model.admin_url }}">{{ model.name }}</option>
+            {% endfor %}
+        </select>
+    </div>
+{% else %}
+<div class="app-{{ app.app_label }}" module{% if app.app_url in request.path %} current-app{% endif %}>
+    <ul class="collection with-header">
+        <a href="{{ app.app_url }}" class="section" title="{% blocktranslate with name=app.name %}Models in the {{ name }} application{% endblocktranslate %}">
+            <li class="collection-header" style="color:black">
+            {{ app.name }}
+            </li>
+        </a>
+        
+        
+        {% for model in app.models %}
+        
+            {% if model.admin_url %}
+            <li class="collection-item">
+                <a href="{{ model.admin_url }}"{% if model.admin_url in request.path %} aria-current="page"{% endif %}>{{ model.name }}</a>
+            </li>
+            {% else %}
+            <li class="collection-item">
+                {{ model.name }}
+            </li>
+            {% endif %}
+      
+        {% endfor %}
+        
+    </ul>
+</div>
+{% endif %}
+{% endfor %}
+</div>
+{% endblock %}
+
+<script>
+    $('select').change(function(){
+        url = $(this).val()
+        window.location.replace(url);
+    })
+</script>

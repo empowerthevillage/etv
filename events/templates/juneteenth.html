@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}{{ title }}{% endblock %}
+{% block canonical %}https://www.empowerthevillage.org/events/love-of-art-fundraiser{% endblock %}
+{% block seo_description %}ETV Love Of Art Fundraiser{% endblock %}
+
+{% block content %}
+<div class="row" style="padding-top: 5%;">
+    <div class="col s12 l6" style="margin-bottom: 2%">
+        <a href = "mailto:admin@empowerthevillage.org?subject=Juneteenth Arts Festival @MAM&body=Please contact me to provide more info about the Juneteenth Arts Festival. Here's what I'd like to know: ">
+        <img class="z-depth-1" src="{% static 'img/loa-2021.png' %}" width=100%>
+        </a>
+    </div>
+    <div class="col s12 l6 center-align" style="margin-bottom: 1%">
+        <div class="col s12" style="margin-bottom: 5%">
+            <iframe
+                class="z-depth-1"
+                width="100%"
+                frameborder="0" style="border:0"
+                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAVVRAq29rAojzu4l2MP1dKtfecmTQ_zuM&q=Montclair+Art+Museum,Montclair+New+Jersey" allowfullscreen>
+            </iframe>
+        </div>
+        <div class="col s12 center-align">
+            <iframe class="z-depth-1" width="100%" height="315" src="https://www.youtube.com/embed/-JaP0OkWUoQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+    
+</div>
+<style>
+    .text {
+        font-family: oskar;
+        font-size: 20px
+    }
+    .tickets-email-link {
+        font-family: oskar;
+        font-size: 18px
+    }
+    iframe {
+        height: 200px
+    }
+    @media only screen and (min-width: 663px){
+        .text {
+            font-size: 28px
+        }
+        .tickets-email-link {
+            font-size: 24px
+        }
+        iframe {
+            height:400px
+        }
+    }
+    @media only screen and (min-width: 992px){
+        .card {
+            height: 400px;
+            margin: 0
+        }
+    }
+</style>
+{% endblock %}

@@ -1,0 +1,134 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}ETV | MakeEveryFridayBlackFriday{% endblock %}
+{% block content %}
+
+<div class="parallax-container box-shadow valign-wrapper">
+    
+    <div class="container z-depth-4 center-align parallax-banner" style="background:rgba(255, 255, 255, 0.906); border: rgb(43, 43, 43) 3px solid">
+        <img src="{% static 'img/EFBF_new2.png' %}" width="100%">
+    </div>
+    <div class="parallax" style="opacity: 1;">
+        <img src='{% static "img/vbp_collage.png" %}' height=200%>
+    </div>
+
+</div>
+<div id="page-content">
+    <style>
+        @media only screen and (max-width:992px){
+            #page-content {
+                margin-bottom: 50%;
+            }
+        }
+        @media only screen and (min-width:993px){
+            #page-content {
+                margin-bottom: 0%;
+            }
+        }
+    </style>
+        <div class="row" style="margin-bottom:0">
+            <div class="col m5 l4 xl3 success-eq-top">
+                <img class="left" src="{% static 'img/success_equation_2.gif' %}" width=100%>
+            </div>
+            <div class="col s12 l8 xl9" style="padding-left:2%; padding-right:2%">
+                <ul class="collapsible z-depth-0" style="border:none">
+                <li class="center-align efbf_text1">
+                    <div class="collapsible-header">
+                        <p class="">
+                            <b>Make Every Friday, Black Friday</b>™: 
+                            Our movement and multi-platform awareness & empowerment initiative – Make Every Friday, Black Friday!™ – encourages all Americans interested in racial equity to take action to close the wealth gap between Black Americans and other Americans.
+                                
+                            <i class="learn-more" style="margin-top:2vw; width:100%; font-weight:300">Click to learn more!</i>
+                        </p> 
+                         
+                    </div>
+                    <div class="center-align collapsible-body efbf_text2">
+                        <p>Did you know that approximately 1 out of 7 Americans is Black?
+                        Make Every Friday, Black Friday encourages all Americans to support Black-owned businesses <u>at least 1 out of 7 days each week (Fridays)</u>!  This ETV movement establishes a platform to spread the word about how consumers can consistently leverage their individual spending power to support the Black community by patronizing Black-owned businesses in an effort to overcome the economic disparities that serve as roadblocks to Black Prosperity.</p>
+                        </p>
+
+                    </div>
+                    <div class="row valign-wrapper image-row center-align" style="padding-top: 2%;">
+                        <img class="left bag-image" style="margin-left:17%;margin-right: 5%; width: 26%" src="{% static 'img/EFBF bag.png' %}">
+                        <img class="right z-depth-2" width= 30% src="{% static 'img/efbf red.png' %}" >
+                    </div> 
+                </li>
+                <li class="center-align efbf_text1">
+                    
+                    <div class="collapsible-header" style="cursor: text;border-top: solid 1px #ddd">
+                        
+                        <p>Visit <b>ETV’s <a href="{{ vbp_url }}">Village Black Pages™</a></b> - our go-to resource to identify 1000s of Black-owned businesses to patronize as you respond to our Call to Action: <b>Make Every Friday, Black Friday™!</b></p>
+                    </div>
+                </li>
+    
+                <li class="center-align efbf_text1">
+                    <div class="collapsible-header" style="border-bottom:none">
+                        <p><b>ETV’s <a href="{{ bf_home_url }}">Black Friday (BF) Challenge™</a></b> is a fun way to measure your impact while supporting our ETV mission to empower Black-owned Businesses!
+                        <i class="learn-more" style="margin-top:2vw; width:100%; font-weight:300;">Click to learn more!</i></p>
+                    </div>
+                    <div class="collapsible-body efbf_text2" style="border-top: 1px solid #ddd;border-bottom:none">
+                        <p>Corporations and organizations can partner with ETV to accelerate its movement through the Black Friday Challenge and achieve their corporate diversity, equity, and inclusion goals!</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="divider" style="margin-top:0px; margin-bottom: 0px; width:80%; margin-left: 10%"></div>
+        <div class="col s12 success-eq-bottom">
+            <img class="left" src="{% static 'img/success_equation_2.gif' %}" width=70% style="margin-left: 15%">
+        </div>
+        <div class="row efbf-video-container" style="padding-top:10px">
+            
+            <div class="col s12 l6">
+                <iframe class="z-depth-3 efbf-video" style="margin-top: 20px;" width="100%" src="https://www.youtube.com/embed/IsPP6yuo7_o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <p class="video-caption"><i>Whoopi Goldberg shares ETV #MakeEveryFridayBlackFriday campaign</i></p>
+            </div>
+            <div class="col s12 l6" style="padding-top:20px">
+                <div class="row">
+                    <div class="col s6 xl5">
+                        <img class="z-depth-3"src="{% static 'img/ayo.jpeg' %}" id="ayo-img" style="margin-left: 0px;margin-bottom: 10px; max-width: 100%">
+                        <p class= "" style="font-size: 12px;margin-top:5px;margin-bottom:0"><i>ETV Founder Interview With AACCNJ</i></p>
+                <p class= "" style="font-size: 12px;margin-top:0">About The Black Friday Movement</i></p>
+                    </div>
+                    <div class="col s6 xl7" id="interview-block">
+                        <audio controls  id="aacnj-interview" style="margin-bottom: 10px; width: 100%;">
+                            <source src="https://empowerthevillage.s3.amazonaws.com/static/img/ETV_Radio_Interview_FirstHalf.mp3" type="audio/mpeg">
+                        </audio>
+                        <p style="padding: 5px">ETV Founder, Ayo Sanderson Wilson, speaks to AACCNJ about the importance of supporting Black-owned businesses through the ETV Economic Prosperity Initiatives.</p>
+                        <button class="btn btn-large btn-floating" style="margin-left: 45%; background-color: rgb(70, 165, 70)" onClick="document.getElementById('aacnj-interview').play(); return false;">
+                            <i class="material-icons" style="font-size: 32px; margin-left: -1px">play_circle_filled</i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    <ul>
+        <li class="divider" style="margin-top:30px; margin-bottom: 30px;  width:80%; margin-left: 10%"></li>
+    </ul>
+    <div class="container efbf_text1 coming-soon-group" style="text-align: justify; display:block; padding-bottom: 0;">
+        <h5 class="center-align coming-soon-title"><b>COMING SOON!</b></h5>
+        <p><b>Village@Work</b>™: Adult and youth workforce development, apprenticeship and internship program with a primary focus on creating jobs within Black-owned businesses that need additional personnel to enhance their success. It creates the win-win for our business owners and job/career seekers.</p>
+        <p><b>Village Empowerment Network</b>™ provides the business expertise Black entrepreneurs need to thrive. Black business owners can receive one-on-one strategy, planning, and technical counseling from experts to grow revenue, access funding, manage employees and expenses, protect assets, and expand their network. ETV will offer an online, on-demand training platform designed to ensure entrepreneurs can get the information they need at their own pace.</p>
+    </div>
+</div>
+
+<style>
+    @media only screen and (max-width:992px){
+        .coming-soon-group {
+            margin-bottom: -40%
+        }
+    }
+    .join-tv-title {
+        font-family: oskar-inline;
+
+    }
+    .select-wrapper {
+        display: none !important;
+    }
+    .swal2-close:focus{
+      box-shadow: none !important;
+      background-color: transparent !important;
+  }
+</style>
+{% endblock%}

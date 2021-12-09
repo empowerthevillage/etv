@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div id="page">
+    <div class="row center-align" style="margin-top:0px">
+      <div class="col s8 m8 l6 login-card" style="background-color:#fdfdfde5;padding-top:30px; padding-bottom:40px">
+          <h6 id="login-title">Join A Team</h6>
+          <p id="new-to-village">Join a team today to get involved in ETV's economic prosperity initiatives!
+          
+        <form class="form center" method='POST' style="padding-left: 10%; padding-right:10%; width: 70%; margin-left:15%">
+          
+          {% csrf_token %}
+          {% for field in form %}
+          <div class="input-field">
+           {{ field }}
+           <label>{{ field.label }}</label>
+          </div>
+          {% endfor %}
+          <button type="submit" class='btn login-btn' style="margin-top:24; padding:22px; line-height:0px; margin-bottom:15px">Join Team</button>
+          
+        </form>
+        
+      </div>
+    </div>
+  </div>
+  
+  <style>
+    #page {
+      background-image: url("https://empowerthevillage.s3.amazonaws.com/static/img/login-collage.png");
+      background-size: 100%;
+      background-repeat: repeat;
+    }
+    #id_email {
+      padding-left:15px;
+      letter-spacing: 1.5px;
+      width:100%
+    }
+    #id_password {
+      padding-left: 15px;
+      font-weight: 200;
+    }
+  </style>
+  {% endblock %}

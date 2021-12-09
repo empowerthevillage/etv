@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}ETV | Register{% endblock %}
+{% block canonical %}https://www.empowerthevillage.org/register/{% endblock %}
+{% block seo_description %}Create a free account today to keep up with ETV and participate in our fun Black Friday Challenges!{% endblock %}
+
+{% block content %}
+<div id="page">
+  <div class="row center-align" style="margin-top:0px">
+    <div class="col s12 m8 l8 offset-m2 login-card" style="background-color:#fdfdfde5;padding-top:30px; padding-bottom:40px">
+        <h6 id="login-title">Join The Village</h6>
+        <p id="new-to-village">Already a member? <a href="{% url 'login' %}" >Click here to login!</p></a>
+        
+      <form class="form center" method='POST' style="width: 80%; margin-left:10%">
+        {% csrf_token %}
+        <div class="input-field">
+          {{ form.username }}
+          <label>{{ form.username.label }}</label>
+        </div>
+        <div class="input-field">
+          {{ form.email }}
+          <label>{{ form.email.label }}</label>
+        </div>
+        <div class="input-field">
+          {{ form.first_name }}
+          <label>{{ form.first_name.label }}</label>
+        </div>
+        <div class="input-field">
+          {{ form.last_name }}
+          <label>{{ form.last_name.label }}</label>
+        </div>
+        <div class="input-field">
+          {{ form.password1 }}
+          <label>{{ form.password1.label }}</label>
+        </div>
+        <div class="input-field">
+          {{ form.password2 }}
+          <label>{{ form.password2.label }}</label>
+        </div>
+        
+        <button type="submit" class='btn register-btn' style="margin-top:24; padding:22px; line-height:0px; margin-bottom:15px">Register</button>
+        <div class="center">
+          <a class="btn google-btn" href="{% url 'social:begin' 'google-oauth2' %}?next={{ request.path }}" style="margin-bottom:15px;" id="google-btn">
+            <img src="{% static 'img/google-icon.png' %}" height=18px style="margin-bottom:-6px">&nbsp Continue with Google
+          </a>
+          <div class="separator" style="margin-top:25px">- OR -</div>
+    <p class='' style="color:grey">Already a member of the village?</p>
+    <a href='{% url "login" %}' class="btn login-btn2">Login</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<style>
+  .select-wrapper input.select-dropdown {
+    font-weight: 400;
+    letter-spacing: 1px;
+    font-size: 14px;
+    color: rgb(142, 142, 142)
+  }
+  .hidden {
+    display: none;
+  }
+  #page {
+    background-image: url("https://empowerthevillage.s3.amazonaws.com/static/img/login-collage.png");
+    background-size: 100%;
+    background-repeat: repeat;
+  }
+  .textfield {
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 1.5px;
+    font-weight:200
+  }
+  #team-none span {
+    color: rgb(99, 99, 99)
+  }
+</style>
+<script>
+  $(document).ready(function(){
+    var teams = 
+    $('input.autocomplete').autocomplete({
+      data: {
+        "Apple": null,
+        "Microsoft": null,
+        "Google": 'https://placehold.it/250x250'
+      },
+    });
+  });
+</script>
+{% endblock %}
+
