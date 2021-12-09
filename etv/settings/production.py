@@ -18,7 +18,7 @@ import braintree
 db_from_env = dj_database_url.config(conn_max_age=500)
 
 env = environ.Env(
-    DEBUG=(bool, False)
+    DEBUG=(bool, True)
 )
 DATABASES = { 'default': dj_database_url.config() }
 
