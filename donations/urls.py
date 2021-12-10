@@ -7,5 +7,6 @@ urlpatterns = [
     path('create', donation_create, name='create'),
     path('review', donation_review, name='review'),
     path('complete', donation_complete, name='complete'),
-    path('analytics', donation_analytics, name="analytics")
+    path('analytics', donation_analytics, name="analytics"),
+    path('express-review', express_review, name="express-review")
 ]

@@ -107,6 +107,62 @@ def donation_review(request):
     }
     return JsonResponse(data)
 
+def express_review(request):
+    amount = request.POST.get('contact_info[amount]')
+    frequency = request.POST.get('contact_info[frequency]')
+    donor_level = request.POST.get('contact_info[amount]')
+    first_name = request.POST.get('contact_info[donor_first]')
+    last_name = request.POST.get('contact_info[donor_last]')
+    phone = request.POST.get('contact_info[donor_phone]')
+    email = request.POST.get('contact_info[donor_email]')
+    request.session['guest_email'] = email
+    billing_profile, billing_profile_created = BillingProfile.objects.new_or_get(request)
+    mailing_address, created = Address.objects.get_or_create(
+        billing_profile = billing_profile,
+        address_type = 'mailing',
+        name = request.POST.get('contact_info[name]'),
+        address_line_1 = request.POST.get('contact_info[mailing_1]'),
+        address_line_2 = request.POST.get('contact_info[mailing_2]'),
+        city = request.POST.get('contact_info[mailing_city]'),
+        state = request.POST.get('contact_info[mailing_state]'),
+        zip_code = request.POST.get('contact_info[mailing_zip]'),
+    )
+    donation_obj = donation.objects.new(email=email)
+    donor_obj, created = Donor.objects.new_or_get(request)
+    donation_obj.status = 'incomplete'
+    donation_obj.billing_profile = billing_profile
+    donation_obj.first_name = first_name
+    donation_obj.last_name = last_name
+    donation_obj.amount = amount
+    if frequency is not None:
+        donation_obj.frequency = frequency
+    else:
+        donation_obj.frequency = 'once'
+    donation_obj.save()
+    donor_obj.donations.add(donation_obj)
+    donor_obj.first_name = first_name
+    donor_obj.last_name = last_name
+    donor_obj.donor_level = donor_level
+    if donor_obj.default_mailing_address is not None:
+        if donor_obj.default_mailing_address == mailing_address:
+            pass
+        else:
+            donor_obj.mailing_addresses.add(mailing_address)
+    else:
+        donor_obj.default_mailing_address = mailing_address
+    if phone is not None:
+        donor_obj.phone = phone
+    donor_obj.save()
+    request.session['braintree_id'] = billing_profile.customer_id
+    request.session['donation_id'] = donation_obj.id
+    nonce = request.POST.get('nonce')
+    donation_id = request.session.get('donation_id')
+    donation_obj = donation.objects.get(id=donation_id)
+    donation_obj.payment_method = nonce
+    donation_obj.save()
+
+    return HttpResponse('Incomplete Donation Created')
+
 def donation_complete(request):
     donation_id = request.session.get('donation_id')
     donation_obj = donation.objects.get(id=donation_id)

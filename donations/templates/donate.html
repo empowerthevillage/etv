@@ -601,21 +601,51 @@ braintree.client.create({
           $('#preloader').show();
           return paypalCheckoutInstance.tokenizePayment(data, function(err, payload){
             $('#nonce-input').attr('value', payload.nonce);
+            var amount = $('#donation-level-input').val()
+            var frequency = $('#frequency-input').val()
+            var donor_first = $('#id_first_name').val()
+            var donor_last = $('#last_name').val()
+            var donor_email = $('#email').val()
+            var donor_phone = $('#phone').val()
+            var name = String(donor_first + donor_last)
+            var mailing_1 = $('#id_address_line_1').val()
+            var mailing_2 = $('#id_address_line_2').val()
+            var mailing_city = $('#id_city').val()
+            var mailing_state = $('#id_state').val()
+            var mailing_zip = $('#id_zip').val()
+            var csrf_token = $('[name="csrfmiddlewaretoken"]').val()
+            contact_info = {
+              csrfmiddlewaretoken: csrf_token,
+              'amount': amount,
+              'frequency': frequency,
+              'donor_first': donor_first,
+              'donor_last': donor_last,
+              'donor_email': donor_email,
+              'donor_phone': donor_phone,
+              'name': name,
+              'mailing_1': mailing_1,
+              'mailing_2': mailing_2,
+              'mailing_city': mailing_city,
+              'mailing_state': mailing_state,
+              'mailing_zip': mailing_zip,
+            }
+            var nonce_id = payload.nonce
             var frequencyVerbose = $('#frequency-verbose-input').val()
             var amount = $('#donation-level-input').val()
             var csrf_token = $('[name="csrfmiddlewaretoken"]', '#creditcard-form').val()
             var data = {
               csrfmiddlewaretoken: csrf_token,
               'nonce': nonce_id,
+              'contact_info': contact_info
             }
             $.ajax({
               data: data,
               method: 'POST',
-              url: '/donation/review',
+              url: '/donation/express-review',
               success: function(data){
                 $('#review-amount').html('<b>Donation Amount:</b> $'+ amount)
                 $('#review-frequency').html('<b>Donation Frequency:</b> '+frequencyVerbose)
-                $('#review-nonce').html('<b>Payment Method:</b> '+ data['details'].card_type +' ending in '+ data['details'].last_four)
+                $('#review-nonce').html('<b>Payment Method:</b> PayPal')
                 $('#preloader').hide()
                 $('.step-3').removeClass('hidden')
               },
