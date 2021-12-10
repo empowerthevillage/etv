@@ -8,12 +8,12 @@
 <div id="page">
     <div id="overlay">
         <div class="row" style="padding-top: 5%;">
-            <div class="col s12 xl6 right-align" style="margin-bottom: 2%;">
+            <div class="col s12 l6 center-align" style="margin-bottom: 2%;">
                 <a href = "mailto:admin@empowerthevillage.org?subject=Juneteenth Arts Festival @MAM&body=Please contact me to provide more info about the Juneteenth Arts Festival. Here's what I'd like to know: ">
-                <img class="z-depth-1" src="{% static 'img/loa-2021.png' %}" width=90%>
+                <img class="z-depth-1" src="{% static 'img/loa-2021.png' %}" width=100%>
                 </a>
             </div>
-            <div class="col s12 xl5 left-align" style="margin-bottom: 1%;">
+            <div class="col s12 l6 center-align" style="margin-bottom: 1%;">
                 <div class="col s12" style="margin-bottom: 5%">
                     <iframe
                         class="z-depth-1"
@@ -63,13 +63,21 @@
             font-size: 24px
         }
         iframe {
-            height:400px
+            height:320px
         }
     }
     @media only screen and (min-width: 992px){
         .card {
             height: 400px;
             margin: 0
+        }
+    }
+    @media only screen and (min-width: 1200px){
+        iframe {
+            height:400px
+        }
+        #overlay {
+           padding: 0% 5%
         }
     }
 </style>
