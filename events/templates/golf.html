@@ -5,41 +5,81 @@
 {% block seo_description %}ETV Power Swing Classic{% endblock %}
 
 {% block content %}
-<div class="row" style="padding-top: 5%;">
-    <div class="col s12 l10 offset-l1 xl8 offset-xl2" style="margin-bottom: 2%">
-        <a href = "mailto:admin@empowerthevillage.org?subject=Power Swing Classic @Fiddler's Elbow&body=Please contact me to provide more info about the Power Swing Classic Golf Event. Here's what I'd like to know: ">
-        <img class="z-depth-1" src="{% static 'img/golf-header.png' %}" width=100%>
-        </a>
-    </div>
-    <div class="col s12 center-align" style="margin-bottom: 2%">
-        <div class="col s12 l6 xl6">
-            <iframe
-                class="z-depth-1"
-                width="100%"
-                frameborder="0" style="border:0"
-                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAVVRAq29rAojzu4l2MP1dKtfecmTQ_zuM&q=Fiddler's+Elbow+Country+Club,Bedminster+New+Jersey" allowfullscreen>
-            </iframe>
-        </div>
-        <div class="col s12 l6 xl6 center-align">
-            <div class="card" style="padding:4%; width: 100%;">
-                <p class="text">Event Registration & Lunch Service Begins at <b style="color: #01a650">11:00am</b></p>
-                <p class="text">Shotgun Starts at <b style="color: #bf1e2d">12:30pm</b></p>
-                <p class="text">Premium Open Bar & Dinner from <b style="color: #01a650">5:30PM-8:30PM</b></p>
-                <div class="">
-                    <a class="tickets-email-link" href = "mailto:admin@empowerthevillage.org?subject=Power Swing Classic @Fiddler's Elbow&body=Please contact me to provide more info about the Power Swing Classic Golf Event. Here's what I'd like to know: ">
-                        Tickets & Sponsorship Information
-                    </a>
+<div id="page">
+    <div id="overlay">
+        <div class="row" style="padding-top: 5%;">
+            <div class="col s12 l10 offset-l1 xl8 offset-xl2" style="margin-bottom: 2%">
+                <a href = "mailto:admin@empowerthevillage.org?subject=Power Swing Classic @Fiddler's Elbow&body=Please contact me to provide more info about the Power Swing Classic Golf Event. Here's what I'd like to know: ">
+                <img class="z-depth-1" src="{% static 'img/golf-header.png' %}" width=100%>
+                </a>
+            </div>
+            <div class="col s12 xl8 offset-xl2">
+                <div class="row center-align">
+                    <div class="col s12 m8 offset-m2" style="margin-bottom: 1%">
+                        <a class="btn waves-effect green darken-3 tickets-btn modal-trigger" href="#ticketModal">BUY TICKETS</a>
+                    </div>
+                    <div class="col s12 m8 offset-m2" style="margin-bottom: 1%">
+                        <a class="btn waves-effect light-green darken-2 sponsor-btn modal-trigger" href="#sponsorModal">BECOME A SPONSOR</a>
+                    </div>     
                 </div>
+                
+            </div>
+            <div class="col s12 center-align" style="margin-bottom: 2%">
+                <div class="col s12 l6 xl6">
+                    <iframe
+                        class="z-depth-1"
+                        width="100%"
+                        frameborder="0" style="border:0"
+                        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAVVRAq29rAojzu4l2MP1dKtfecmTQ_zuM&q=Fiddler's+Elbow+Country+Club,Bedminster+New+Jersey" allowfullscreen>
+                    </iframe>
+                </div>
+                
+                <div class="col s12 l6 xl6 center-align">
+                    <div class="card" style="padding:4%; width: 100%;">
+                        <p class="text">Event Registration & Lunch Service Begins at <b style="color: #01a650">11:00am</b></p>
+                        <p class="text">Shotgun Starts at <b style="color: #bf1e2d">12:30pm</b></p>
+                        <p class="text">Premium Open Bar & Dinner from <b style="color: #01a650">5:30PM-8:30PM</b></p>
+                        <div class="">
+                            <a class="tickets-email-link" href = "mailto:admin@empowerthevillage.org?subject=Power Swing Classic @Fiddler's Elbow&body=Please contact me to provide more info about the Power Swing Classic Golf Event. Here's what I'd like to know: ">
+                                Tickets & Sponsorship Information
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <div class="col s12 l10 offset-l1">
+                <img class="z-depth-2" src="{% static 'img/golf-sponsorships.png' %}" width=100%>
             </div>
         </div>
     </div>
-    
-    
-    <div class="col s12 l10 offset-l1">
-        <img class="z-depth-2" src="{% static 'img/golf-sponsorships.png' %}" width=100%>
+</div>
+<div id="ticketModal" class="modal">
+    <div class="modal-content center-align">
+        <h6 class="modal-title">ETV Power Swing Classic</h6>
+        <h7 class="modal-date">Tuesday, August 30th, 2022 - 11:00am EST</h7>
+        <form>
+            
+        </form>
     </div>
 </div>
 <style>
+    .modal-title {
+        font-family: oskar;
+        font-size: 22px;
+
+    }
+    .modal-date {
+        
+    }
+    #page {
+        background: url('{% static "img/vbp_collage.png" %}');
+    }
+    #overlay {
+        background: rgba(255, 255, 255, 0.938);
+        width: 100%;
+    }
     .text {
         font-family: oskar;
         font-size: 20px

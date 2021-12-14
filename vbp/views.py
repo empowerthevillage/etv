@@ -1,5 +1,6 @@
 import django
 from django.db.models import query, F
+from django.core.serializers import serialize
 from django.http.response import HttpResponse, JsonResponse
 from django.shortcuts import render, redirect
 from .models import vbp, vbp_book, vbp_al, vbp_az, vbp_az, vbp_ar, vbp_ca, vbp_co, vbp_ct, vbp_de, vbp_dc, vbp_fl, vbp_ga, vbp_hi, vbp_id, vbp_il, vbp_in, vbp_ia, vbp_ks, vbp_ky, vbp_la, vbp_me, vbp_md, vbp_ma, vbp_mi, vbp_mi, vbp_ms, vbp_mn, vbp_mo, vbp_mt, vbp_ne, vbp_nv, vbp_nh, vbp_nj, vbp_nm, vbp_ny, vbp_nc, vbp_nd, vbp_oh, vbp_ok, vbp_or, vbp_pa, vbp_ri, vbp_sc, vbp_sd, vbp_tn, vbp_tx, vbp_ut, vbp_vt, vbp_va, vbp_wa, vbp_wv, vbp_wi, vbp_wy  
@@ -15,7 +16,14 @@ import django_filters
 import geocoder
 
 BEAUTY_CHOICES = {
-    "barber", "bathandbody", "beautysalon", "beautysupply", "cosmetics", "nails", "travelingstylist", "other"
+    "barber": 'Barber',
+    "bathandbody": 'Bath & Body',
+    "beautysalon": 'Beauty Salon',
+    "beautysupply": 'Beauty Supply/Hair & Accessories', 
+    "cosmetics": 'Cosmetics', 
+    "nails": 'Nails',
+    "travelingstylist": 'Traveling Stylist', 
+    "other": 'Other',
 }
 BOOK_CHOICES = (
     ("bookstore", "Book Store"),
@@ -264,22 +272,29 @@ VISUAL_CHOICES = (
 )
 
 def get_subcategories(request):
-    print(request.GET)
-    category = request.GET['category']
-    print(category)
+    category = request.GET['category']  
     qs = None
-    if category == 'beauty':
-        qs = BEAUTY_CHOICES
-    elif category == 'books':
+    if category == 'Beauty & Personal Grooming':
+        data = {
+            "barber": 'Barber',
+            "bathandbody": 'Bath & Body',
+            "beautysalon": 'Beauty Salon',
+            "beautysupply": 'Beauty Supply/Hair & Accessories', 
+            "cosmetics": 'Cosmetics', 
+            "nails": 'Nails',
+            "travelingstylist": 'Traveling Stylist', 
+            "other": 'Other',
+        }
+    elif category == 'Books & Publishing':
         qs = BOOK_CHOICES
-    elif category == "cars":
+    elif category == "Cars & Automotive":
         qs = CARS_CHOICES
-    elif category == 'child':
+    elif category == "Childcare | Children's Services & Products":
         qs = CHILD_CHOICES
-    elif category == "cleaning":
+    elif category == "Cleaning":
         qs = CLEANING_CHOICES
     print(qs)
-    return HttpResponse(qs)
+    return JsonResponse(data)
 
 def get_counties_de(request):
     queryset = vbp_de.objects.all()
@@ -2404,8 +2419,11 @@ def home(request):
         obj.city = nomination_form.data['city']
         obj.county = nomination_form.data['county']
         obj.phone = nomination_form.data['phone']
-        obj.category = nomination_form.data['category']
-        obj.subcategory = nomination_form.data['subcategory']
+        obj.category = request.POST.get('category')
+        subcategory_list = request.POST.get('subcategory')
+        for x in subcategory_list:
+            print(x)
+        obj.subcategory = request.POST.get('subcategory')
         obj.approved = 'False'
         if request.user.is_authenticated:
             obj.user = request.user
@@ -2418,7 +2436,7 @@ def home(request):
         obj.save()
         sweetify.success(request, title='Thank you!', icon='success', text='Thank you for nominating a Black-owned business!', button='Nominate Another Business', timer=4000)
         
-        return redirect('/black-friday-challenge')
+        return redirect('/village-black-pages/')
     else:
         nomination_form = NominationForm()
     return render(

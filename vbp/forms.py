@@ -47,7 +47,78 @@ CATEGORY_CHOICES = (
     ('visual', 'Visual & Performing Arts | Culture'),
     ('other', 'Other'),
 )
+CATEGORY_VERBOSE_CHOICES = (
+    'beauty',
+    'books',
+    'cars',
+    'child', 
+    'cleaning', 
+    'clothing',
+    'construction', 
+    'education', 
+    'eldercare',
+    'electronics', 
+    'entertainment',
+    'farming', 
+    'florists',
+    'grocery',
+    'health',
+    'home',
+    'hotels',
+    'jewelry',
+    'legal',
+    'lifestyle',
+    'marketing',
+    'medical',
+    'packaging',
+    'pets',
+    'photography',
+    'professional',
+    'real estate',
+    'recreation',
+    'restaurants',
+    'security',
+    'transportation',
+    'visual',
+    'other',
+)
+CATEGORY_CHOICES_PLAIN = (
+    'Beauty & Personal Grooming',
+    'Books & Publishing',
+    'Cars & Automotive',
+    "Childcare | Children's Services & Products",
+    'Cleaning',
+    'Clothing & Fashion',
+    'Construction & Trades',
+    'Education',
+    'Eldercare',
+    'Electronics & Technology',
+    'Entertainment',
+    'Farming & Agriculture',
+    'Florists',
+    'Grocery & Food Services',
+    'Health & Wellness',
+    'Home & Garden',
+    'Hotels & Hospitality | Travel',
+    'Jewelry & Accessories',
+    'Legal & Financial Services',
+    'Lifestyle',
+    'Marketing & Advertising',
+    'Medical Services',
+    'Packaging | Delivery | Shipping',
+    'Pets & Animal Care',
+    'Photography & Video',
+    'Professional Services',
+    'Real Estate',
+    'Recreation & Sports',
+    'Restaurants & Bars | Event Spaces',
+    'Security Services',
+    'Transportation & Trucking',
+    'Visual & Performing Arts | Culture',
+    'Other',
+)
 STATE_CHOICES = (
+    ('', 'Select State'),
     ('AL', 'Alabama'),
     ('AK', 'Alaska'),
     ('AZ', 'Arizona'),
@@ -290,5 +361,9 @@ class NominationForm(forms.Form):
     nominator_email = forms.EmailField(label='Your Email Address', widget=forms.EmailInput(attrs={'class':'textfield'}), label_suffix='')
 
     def save(self):
-            vbp = super(NominationForm, self).save()
-            return vbp
+        vbp = super(NominationForm, self).save()
+        return vbp
+
+    def get_categories(self):
+        categories = CATEGORY_CHOICES
+        return categories
