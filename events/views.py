@@ -27,7 +27,9 @@ def event_home(request):
     return render(request, "events-home.html", context)
 
 def ticket_cart_update(request):
-    cart_obj            = TicketCart.objects.new_or_get(request)
+    event_title         = request.POST.get('event')
+    event               = Event.objects.filter(title=event_title).first()
+    cart_obj            = TicketCart.objects.new_or_get(request, event)
     quantity            = request.POST.get('quantity')
     type_id             = request.POST.get('tid')
     item_obj            = ticketItem.objects.filter(cart=cart_obj).filter(ticket=type_id).first()
@@ -40,9 +42,11 @@ def ticket_cart_update(request):
         item_obj.quantity = quantity
         item_obj.ticket = TicketType.objects.filter(id=type_id).first()
         item_obj.cart = cart_obj
+        item_obj.event = item_obj.ticket.event
 
     item_obj.save()
     price = int(quantity) * item_obj.ticket.price
+    event = item_obj.event
     data = {
         'price': '$%s' %(price),
         'priceTarget': '.%s-price' %(item_obj.pk),
@@ -71,7 +75,7 @@ def golf(request):
     platinum = TicketType.objects.filter(title='Platinum Sponsor').first()
     diamond = TicketType.objects.filter(title='Diamond Sponsor').first()
 
-    (cart_obj) = TicketCart.objects.new_or_get(request)
+    (cart_obj) = TicketCart.objects.new_or_get(request, event)
     item_list = ticketItem.objects.filter(cart=cart_obj)
     single_quantity = ticketItem.objects.filter(cart=cart_obj).filter(ticket=single).first()
     foursome_quantity = ticketItem.objects.filter(cart=cart_obj).filter(ticket=foursome).first()
@@ -147,7 +151,7 @@ def art(request):
     platinum = TicketType.objects.filter(title='Platinum Sponsor').filter(event=event).first()
     diamond = TicketType.objects.filter(title='Diamond Sponsor').filter(event=event).first()
 
-    (cart_obj) = TicketCart.objects.new_or_get(request)
+    (cart_obj) = TicketCart.objects.new_or_get(request, event)
     item_list = ticketItem.objects.filter(cart=cart_obj).filter(event=event)
     single_quantity = ticketItem.objects.filter(cart=cart_obj).filter(ticket=single).first()
     saturday_quantity = ticketItem.objects.filter(cart=cart_obj).filter(ticket=saturday).first()
@@ -187,6 +191,14 @@ def art(request):
         'ticket_types': ticket_types,
         'item_list': item_list,
         'cart': cart_obj,
+        'single': single,
+        'saturday': saturday,
+        'twoday': twoday,
+        'bronze': bronze,
+        'silver': silver,
+        'gold': gold,
+        'platinum': platinum,
+        'diamond': diamond,
         'single_quantity': single_quantity,
         'saturday_quantity': saturday_quantity,
         'twoday_quantity': twoday_quantity,

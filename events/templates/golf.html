@@ -238,7 +238,7 @@
             <div class="col s12 l6 scrollspy">
                 <a class="valign-wrapper" href="" id="step2-back"><i class="material-icons" style="font-size: 16px">arrow_back</i>Back To Ticket Selection</a>
                 
-                <form>
+                <div>
                         <h6 class="modal-summary-title">Ticketholder List</h6>
                         <p class="ticket-description">Let us know who's coming for speedier check-in!</p>
                         <div class="divider"></div>
@@ -295,7 +295,7 @@
                         {% endfor %}
                         </form>
 
-                </form>
+                      </div>
             </div>
             <div class="col s12 l6">
                 <div class="z-depth-1 summary-card">
@@ -1144,6 +1144,7 @@
         var data = {
             'quantity': qty,
             'tid': tid,
+            'event': 'Power Swing Classic Golf Event',
             csrfmiddlewaretoken: '{{ csrf_token }}'
         }
         $.ajax({

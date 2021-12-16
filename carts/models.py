@@ -67,6 +67,7 @@ class cartItem(models.Model):
     cart        = models.ForeignKey(Cart, on_delete=models.CASCADE, blank=True, null=True)
     quantity    = models.IntegerField(default=1)
     product     = models.ForeignKey(newProduct, on_delete=models.SET_NULL, null=True, blank=True)
+    
     def __str__(self):
         return self.item.sku
 
@@ -74,14 +75,15 @@ class cartItem(models.Model):
         return self.item.product.price
 
 class TicketCartManager(models.Manager):
-    def new_or_get(self, request):
+    def new_or_get(self, request, event):
         cart_id = request.session.get("ticket_cart_id", None)
-        qs = self.get_queryset().filter(id=cart_id)
+        qs = self.get_queryset().filter(id=cart_id).filter(event=event)
         if qs.count() == 1:
             new_obj = False
             cart_obj = qs.first()
+            request.session['ticket_cart_id'] = cart_obj.pk
         else:
-            cart_obj = TicketCart.objects.new()
+            cart_obj = TicketCart.objects.create(event=event)
             new_obj = True
             request.session['ticket_cart_id'] = cart_obj.pk
         return cart_obj
@@ -94,6 +96,16 @@ class TicketCartManager(models.Manager):
             return self.update(nonce=nonce)
         return None
 
+    def ticket_total(self, event):
+        cart_id = self.id
+        qs = list(ticketItem.objects.filter(cart=cart_id).filter(event=event).all())
+        items = qs
+        total = 0
+        for x in items:
+            line_total = x.ticket.price * x.quantity
+            total += line_total
+        return total
+
 class TicketCart(models.Model):
     subtotal        = models.DecimalField(default=0.00, max_digits=8, decimal_places=2)
     total           = models.DecimalField(default=0.00, max_digits=8, decimal_places=2)
@@ -102,7 +114,8 @@ class TicketCart(models.Model):
     nonce           = models.CharField(null=True, blank=True, max_length=120)
     total           = models.DecimalField(default=0.00, max_digits=8, decimal_places=2)
     active          = models.BooleanField(default=True, null=True, blank=True)
-    
+    event           = models.ForeignKey(Event, null=True, blank=True, on_delete=models.SET_NULL)
+
     objects         = TicketCartManager()
 
     @property

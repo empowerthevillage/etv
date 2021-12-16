@@ -18,6 +18,7 @@
                 <div class="col s12">
                     <div class="row center-align">
                         <h6 style="font-size: 26px">ETV is once again proud to partner with <b>Kente Royal Gallery, Montclair Art Museum & African American Cultural Committee @MAM,</b> <br>and dozens of established and emerging artists!</h6>
+                        
                     </div>
                     <div class="row center-align">
                         <div class="col s6" style="margin-bottom: 1%">
@@ -69,7 +70,7 @@
                                 </td>
                                 <td class="col s12 m3">
                                     <div class="input-field ticket-quantity-input">
-                                        <select class="qty-counter" tid="1">
+                                        <select class="qty-counter" tid="{{ single.pk }}">
                                         {% if single_quantity.quantity is not none %}
                                         <option value="{{ single_quantity.quantity }}" selected>{{ single_quantity.quantity }}</option>
                                         <option value="0">0</option>
@@ -100,7 +101,7 @@
                                 </td>
                                 <td class="col s12 m3">
                                     <div class="input-field ticket-quantity-input">
-                                        <select class="qty-counter" tid="4">
+                                        <select class="qty-counter" tid="{{ saturday.pk }}">
                                         {% if saturday_quantity.quantity is not none %}
                                         <option value="{{ saturday_quantity.quantity }}" selected>{{ saturday_quantity.quantity }}</option>
                                         <option value="0">0</option>
@@ -131,7 +132,7 @@
                                 </td>
                                 <td class="col s12 m3">
                                     <div class="input-field ticket-quantity-input">
-                                        <select class="qty-counter" tid="2">
+                                        <select class="qty-counter" tid="{{ twoday.pk }}">
                                         {% if twoday_quantity.quantity is not none %}
                                         <option value="{{ twoday_quantity.quantity }}" selected>{{ twoday_quantity.quantity }}</option>
                                         <option value="0">0</option>
@@ -196,64 +197,19 @@
             <div class="col s12 l6 scrollspy">
                 <a class="valign-wrapper" href="" id="step2-back"><i class="material-icons" style="font-size: 16px">arrow_back</i>Back To Ticket Selection</a>
                 
-                <form>
+                <div>
                         <h6 class="modal-summary-title">Ticketholder List</h6>
                         <p class="ticket-description">Let us know who's coming for speedier check-in!</p>
                         <div class="divider"></div>
                         <form id="guest-form">
-                        {% for x in item_list %}
-                        {% if x.quantity > 0 %}
-                            <formset>
-                                <h7 class="ticket-title">{{ x.ticket }}</h7>
-                                <br>
-                                {% for guest in x.get_guests %}
-                                <div class="card" style="height: auto; padding: 3% 5%; margin-top: 5px; margin-bottom: 5px">
-                                    <h8 style="font-weight: 600">Ticket {{ guest|add:1 }}</h8>
-                                    <div class="row">
-                                        <div class="guest-input input-field col s6" name="guest{{ guest }}-first-name">
-                                            <input id="{{ guest }}-first" type="text" class="validate">
-                                            <label for="{{ guest }}-first">First Name</label>
-                                        </div>
-                                        <div class="guest-input input-field col s6" name="guest{{ guest }}-last-name">
-                                            <input id="{{ guest }}-last" type="text" class="validate">
-                                            <label for="{{ guest }}-last">Last Name</label>
-                                        </div>
-                                        <div class="guest-input input-field col s12" name="guest{{ guest }}-email">
-                                            <input id="{{ guest }}-email" type="text">
-                                            <label for="{{ guest }}-email">Email</label>
-                                        </div>
-                                        
-                                    </div>
-                                    <h8 style="font-weight: 600">Add-Ons:</h8>
-                                    {% if x.ticket.title == "Member For A Day" or x.ticket.title == "Golf-Club" %}
-
-                                    <p>Golf Club Rental - Included!</p>
-                                    <h8 style="font-weight: 500">Club Hand:</h8>
-                                    <p>
-                                        <label>
-                                            <input class="with-gap" name="club-hand" type="radio" value="left"/>
-                                            <span>Left-Handed</span>
-                                        </label>
-                                    </p>
-                                    <p>
-                                        <label>
-                                            <input class="with-gap" name="club-hand" type="radio" value="right"/>
-                                            <span>Right-Handed</span>
-                                        </label>
-                                    </p>
-                                    {% else %}
-                                    <div class="club-addon">
-                                        <p> Golf club rental available for $75! Notify ETV within 30 days of the event</p>
-                                    </div>
-                                    {% endif %}
-                                </div>
-                                {% endfor %}
-                            </formset>
-                        {% endif %}
-                        {% endfor %}
+                            <div class="input-field col s12">
+                                <i class="material-icons prefix">mode_edit</i>
+                                <textarea id="ticket-guest-list" class="materialize-textarea" rows="4"></textarea>
+                                <label for="ticket-guest-list">My Guest List</label>
+                              </div>
                         </form>
 
-                </form>
+                    </div>
             </div>
             <div class="col s12 l6">
                 <div class="z-depth-1 summary-card">
@@ -455,8 +411,8 @@
 <div id="sponsorModal" class="modal product-summary-container">
     <div class="modal-content">
         <div class="row center-align" style="border-bottom: dotted 1px rgb(233, 233, 233); padding-bottom: 2%; margin-bottom: 2%">
-            <h6 class="modal-title">ETV Power Swing Classic</h6>
-            <h7 class="modal-date">Tuesday, August 30th, 2022 - 11:00am EST</h7>
+            <h6 class="modal-title">ETV For The Love of Art Juneteenth Fundraiser</h6>
+            <h7 class="modal-date">June 18th & 19th, 2022</h7>
         </div>
         <div class="row" id="sponsor-checkout-p1">
             <div class="col s12 xl6">
@@ -659,10 +615,10 @@
             <div class="col s12 l6 scrollspy">
                 <a class="valign-wrapper" href="" id="sponsor-step2-back"><i class="material-icons" style="font-size: 16px">arrow_back</i>Back To Ticket Selection</a>
                 
-                <form>
+                <form id="sponsor-guest-form">
                         <h6 class="modal-summary-title">Request Guest Tickets</h6>
                         <div class="divider"></div>
-                        <form id="guest-form">
+                        <form id="sponsor-guest-form">
                             <div class="input-field col s12">
                                 <input id="sponsor-guest-request" type="number" class="validate" min="0">
                                 <label for="sponsor-guest-request">Estimated Number of Guests</label>
@@ -1529,6 +1485,7 @@
         var data = {
             'quantity': qty,
             'tid': tid,
+            'event': 'Juneteenth Fundraiser',
             csrfmiddlewaretoken: '{{ csrf_token }}'
         }
         $.ajax({
@@ -1551,7 +1508,6 @@
                 }
                 var total = data.total
                 $('.total-line').html(total)
-                $('#guest-form').load()
                 },
                 error: function(data){
                 }
