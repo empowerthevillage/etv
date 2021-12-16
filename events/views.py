@@ -152,7 +152,7 @@ def art(request):
     saturday = TicketType.objects.filter(title='Saturday VIP Reception').first()
     twoday = TicketType.objects.filter(title='2-Day Event Pass').first()
 
-    bronze = TicketType.objects.filter(title='Bronze/Golf Clinic Sponsor').filter(event=event).first()
+    bronze = TicketType.objects.filter(title='Bronze Sponsor').filter(event=event).first()
     silver = TicketType.objects.filter(title='Silver Sponsor').filter(event=event).first()
     gold = TicketType.objects.filter(title='Gold Sponsor').filter(event=event).first()
     platinum = TicketType.objects.filter(title='Platinum Sponsor').filter(event=event).first()
