@@ -16,4 +16,5 @@ urlpatterns = [
     path('charge', new_charge, name="charge"),
     path('update-cart', ajaxUpdateItems, name="ajax-update"),
     path('remove-items',ajaxRemoveItems, name='ajax-remove'),
+    path('ticket-nb', ticket_nb, name='ticket-nb'),
 ]

@@ -1,5 +1,5 @@
 from django.conf import settings
-from django.http import JsonResponse
+from django.http import JsonResponse, HttpResponseRedirect
 from django.shortcuts import render
 from django.shortcuts import redirect
 from .models import *
@@ -11,9 +11,11 @@ from accounts.forms import LoginForm, GuestForm
 from accounts.models import GuestEmail
 from addresses.forms import AddressForm, ShippingAddressForm, BillingAddressForm
 from addresses.models import Address
-
+from events.models import SingleTicket
+from itertools import islice
 import braintree
 import shippo
+import sweetify
 
 shippo.config.api_key = settings.SHIPPO_KEY
 User = settings.AUTH_USER_MODEL
@@ -383,4 +385,31 @@ def checkout_done(request):
     }
     return render(request, "carts/checkout-done.html", context)
         
-
+def ticket_nb(request):
+    billing_profile, billing_profile_created = BillingProfile.objects.new_or_get(request)
+    if billing_profile is None:
+        email = request.POST.get('email')
+        request.session['guest_email'] = email
+        billing_profile, billing_profile_created = BillingProfile.objects.new_or_get(request)
+    cart_obj = TicketCart.objects.new_or_get(request)
+    amount = str(cart_obj.total)
+    nonce = request.POST.get('nonce')
+    guest_list = request.POST.get('guestList')
+    result = gateway.transaction.sale({
+        "amount": amount,
+        "payment_method_nonce": nonce,
+        "device_data": request.POST.get('device_data'),
+        "options": {
+            "submit_for_settlement": True
+        }
+    })
+    if result.is_success:
+        tickets = ticketItem.objects.filter(cart=cart_obj)
+        ticket_list = []
+        for x in tickets:
+            batch_size = x.quantity
+            ticket = x.ticket
+            for i in range(batch_size):
+                new_ticket = SingleTicket.objects.create(type=ticket, billing_profile=billing_profile, email=email, guest_list=guest_list)
+                ticket_list.append(new_ticket)
+    return HttpResponseRedirect(request.path_info)

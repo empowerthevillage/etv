@@ -9,5 +9,12 @@ class EventAdmin(admin.ModelAdmin):
     search_fields = ['title', 'date']
     ordering = ['-date', 'title']
 
+class TicketAdmin(admin.ModelAdmin):
+    list_display = ['last_name', 'first_name', 'event']
+
 admin_site.register(tag)
 admin_site.register(Event, EventAdmin)
+admin_site.register(SingleTicket)
+admin_site.register(TicketType)
+admin_site.register(AddOn)
+admin_site.register(Option)

@@ -65,6 +65,7 @@ STATE_CHOICES = (
 class Address(models.Model):
     billing_profile = models.ForeignKey(BillingProfile, models.SET_NULL, null=True, blank=True)
     address_type = models.CharField(max_length=120, choices=ADDRESS_TYPES)
+    email = models.EmailField(blank=True, null=True)
     name = models.CharField(max_length=120)
     nickname = models.CharField(max_length=120, null=True, blank=True, help_text='Example: Home')
     address_line_1 = models.CharField(max_length=120)

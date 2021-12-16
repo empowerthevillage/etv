@@ -33,6 +33,15 @@ def unique_order_key_generator(instance):
         return unique_slug_generator(instance)
     return key
 
+def unique_ticket_id_generator(instance):
+    size = random.randint(6, 10)
+    ticket_id = random_string_generator(size=size)
+
+    Klass = instance.__class__
+    qs_exists = Klass.objects.filter(ticket_id=ticket_id).exists()
+    if qs_exists:
+        return unique_slug_generator(instance)
+    return ticket_id
 
 def unique_order_id_generator(instance):
     """

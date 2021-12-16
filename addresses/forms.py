@@ -33,6 +33,7 @@ class BillingAddressForm(forms.ModelForm):
         model = Address
         fields = [
             'name',
+            'email',
             'address_line_1',
             'address_line_2',
             'city',
