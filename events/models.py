@@ -69,18 +69,14 @@ class TicketType(models.Model):
     def __str__(self):
         return self.title
 
-<<<<<<< HEAD
     @property
     def is_sponsorship(self):
         return self.sponsorship
 
-=======
->>>>>>> 1de817148dd49476f708d1d81b6d307b36e0b520
     class Meta:
         verbose_name = 'Ticket Type'
         verbose_name_plural = 'Ticket Types'
 
-<<<<<<< HEAD
 class TicketManagerQuerySet(models.query.QuerySet):
     def by_request(self, request):
         billing_profile, created =BillingProfile.objects.new_or_get(request)
@@ -122,15 +118,6 @@ class SingleTicket(models.Model):
     event           = models.ForeignKey(Event, null=True, blank=True, on_delete=models.SET_NULL)
     guest           = models.ForeignKey(Guest, on_delete=models.SET_NULL, null=True, blank=True)
     email           = models.EmailField(blank=True, null=True)
-=======
-class SingleTicket(models.Model):
-    title           = models.CharField(max_length=270, null=True, blank=True)
-    type            = models.ForeignKey(TicketType, on_delete=models.SET_NULL, null=True, blank=True)
-    ticket_id       = models.CharField(max_length=270)
-    event           = models.ForeignKey(Event, null=True, blank=True, on_delete=models.SET_NULL)
-    guest           = models.ForeignKey(Guest, on_delete=models.SET_NULL, null=True)
-    email           = models.EmailField()
->>>>>>> 1de817148dd49476f708d1d81b6d307b36e0b520
     group           = models.CharField(max_length=270, null=True, blank=True)
     add_ons         = models.ManyToManyField(AddOn, blank=True)
     qr_code         = models.ImageField(null=True, blank=True)
@@ -141,7 +128,6 @@ class SingleTicket(models.Model):
 
     class Meta:
         verbose_name = 'Ticket'
-<<<<<<< HEAD
         verbose_name_plural = 'Tickets'
 
     def get_absolute_url(self):
@@ -155,6 +141,3 @@ def ticket_pre_save_receiver(sender, instance, *args, **kwargs):
         instance.ticket_id = unique_ticket_id_generator(instance)
 
 pre_save.connect(ticket_pre_save_receiver, sender=SingleTicket)
-=======
-        verbose_name_plural = 'Tickets'
->>>>>>> 1de817148dd49476f708d1d81b6d307b36e0b520
