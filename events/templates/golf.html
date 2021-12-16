@@ -36,6 +36,8 @@
                 
                 <div class="col s12 l6 xl6 center-align">
                     <div class="card" style="padding:4%; width: 100%;">
+                      {{ hole }}
+                      {{ bronze }}
                         <p class="text">Event Registration & Lunch Service Begins at <b style="color: #01a650">11:00am</b></p>
                         <p class="text">Shotgun Starts at <b style="color: #bf1e2d">12:30pm</b></p>
                         <p class="text">Premium Open Bar & Dinner from <b style="color: #01a650">5:30PM-8:30PM</b></p>
@@ -513,7 +515,7 @@
                                 </td>
                                 <td class="col s12 m3">
                                     <div class="input-field ticket-quantity-input">
-                                        <select class="qty-counter" tid="1">
+                                        <select class="qty-counter" tid="{{ hole.pk }}">
                                         {% if hole_quantity.quantity is not none %}
                                         <option value="{{ hole_quantity.quantity }}" selected>{{ hole_quantity.quantity }}</option>
                                         <option value="0">0</option>
@@ -543,7 +545,7 @@
                                 </td>
                                 <td class="col s12 m3">
                                     <div class="input-field ticket-quantity-input">
-                                        <select class="qty-counter" tid="2">
+                                        <select class="qty-counter" tid="{{ bronze.pk }}">
                                         {% if bronze_quantity.quantity is not none %}
                                         <option value="{{ bronze_quantity.quantity }}" selected>{{ bronze_quantity.quantity }}</option>
                                         <option value="0">0</option>
@@ -573,7 +575,7 @@
                                 </td>
                                 <td class="col s12 m3">
                                     <div class="input-field ticket-quantity-input">
-                                        <select class="qty-counter" tid="3">
+                                        <select class="qty-counter" tid="{{ silver.pk }}">
                                         {% if silver_quantity.quanity is not none %}
                                         <option value="{{ silver_quantity.quantity }}" selected>{{ silver_quantity.quantity }}</option>
                                         <option value="0">0</option>
@@ -603,7 +605,7 @@
                                 </td>
                                 <td class="col s12 m3">
                                     <div class="input-field ticket-quantity-input">
-                                        <select class="qty-counter" tid="4">
+                                        <select class="qty-counter" tid="{{ gold.pk }}">
                                         {% if gold_quantity.quantity is not none %}
                                         <option value="{{ gold_quantity.quantity }}" selected>{{ gold_quantity.quantity }}</option>
                                         <option value="0">0</option>
@@ -633,7 +635,7 @@
                                 </td>
                                 <td class="col s12 m3">
                                     <div class="input-field ticket-quantity-input">
-                                        <select class="qty-counter" tid="4">
+                                        <select class="qty-counter" tid="{{ platinum.pk }}">
                                         {% if platinum_quantity.quantity is not none %}
                                         <option value="{{ platinum_quantity.quantity }}" selected>{{ platinum_quantity.quantity }}</option>
                                         <option value="0">0</option>
@@ -663,7 +665,7 @@
                                 </td>
                                 <td class="col s12 m3">
                                     <div class="input-field ticket-quantity-input">
-                                        <select class="qty-counter" tid="4">
+                                        <select class="qty-counter" tid="{{ diamond.pk }}">
                                         {% if diamond_quantity.quantity is not none %}
                                         <option value="{{ diamond_quantity.quantity }}" selected>{{ diamond_quantity.quantity }}</option>
                                         <option value="0">0</option>

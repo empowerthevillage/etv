@@ -117,6 +117,13 @@ def golf(request):
         'ticket_types': ticket_types,
         'item_list': item_list,
         'cart': cart_obj,
+        'hole': hole,
+        'bronze': bronze,
+        'silver': silver,
+        'gold': gold,
+        'platinum': platinum,
+        'diamond': diamond,
+
         'single_quantity': single_quantity,
         'foursome_quantity': foursome_quantity,
         'clinic_quantity': clinic_quantity,
