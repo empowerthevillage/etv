@@ -245,56 +245,11 @@
                         <p class="ticket-description">Let us know who's coming for speedier check-in!</p>
                         <div class="divider"></div>
                         <form id="guest-form">
-                        {% for x in item_list %}
-                        {% if x.quantity > 0 %}
-                            <formset>
-                                <h7 class="ticket-title">{{ x.ticket }}</h7>
-                                <br>
-                                {% for guest in x.get_guests %}
-                                <div class="card" style="height: auto; padding: 3% 5%; margin-top: 5px; margin-bottom: 5px">
-                                    <h8 style="font-weight: 600">Ticket {{ guest|add:1 }}</h8>
-                                    <div class="row">
-                                        <div class="guest-input input-field col s6" name="guest{{ guest }}-first-name">
-                                            <input id="{{ guest }}-first" type="text" class="validate">
-                                            <label for="{{ guest }}-first">First Name</label>
-                                        </div>
-                                        <div class="guest-input input-field col s6" name="guest{{ guest }}-last-name">
-                                            <input id="{{ guest }}-last" type="text" class="validate">
-                                            <label for="{{ guest }}-last">Last Name</label>
-                                        </div>
-                                        <div class="guest-input input-field col s12" name="guest{{ guest }}-email">
-                                            <input id="{{ guest }}-email" type="text">
-                                            <label for="{{ guest }}-email">Email</label>
-                                        </div>
-                                        
-                                    </div>
-                                    <h8 style="font-weight: 600">Add-Ons:</h8>
-                                    {% if x.ticket.title == "Member For A Day" or x.ticket.title == "Golf-Club" %}
-
-                                    <p>Golf Club Rental - Included!</p>
-                                    <h8 style="font-weight: 500">Club Hand:</h8>
-                                    <p>
-                                        <label>
-                                            <input class="with-gap" name="club-hand" type="radio" value="left"/>
-                                            <span>Left-Handed</span>
-                                        </label>
-                                    </p>
-                                    <p>
-                                        <label>
-                                            <input class="with-gap" name="club-hand" type="radio" value="right"/>
-                                            <span>Right-Handed</span>
-                                        </label>
-                                    </p>
-                                    {% else %}
-                                    <div class="club-addon">
-                                        <p> Golf club rental available for $75! Notify ETV within 30 days of the event</p>
-                                    </div>
-                                    {% endif %}
-                                </div>
-                                {% endfor %}
-                            </formset>
-                        {% endif %}
-                        {% endfor %}
+                          <div class="input-field col s12">
+                            <i class="material-icons prefix">mode_edit</i>
+                            <textarea id="ticket-guest-list" class="materialize-textarea" rows="4"></textarea>
+                            <label for="ticket-guest-list">My Guest List</label>
+                          </div>
                         </form>
 
                       </div>
@@ -738,6 +693,7 @@
                         <div class="divider"></div>
                         <form id="guest-form">
                             <div class="input-field col s12">
+                                <i class="material-icons prefix">mode_edit</i>
                                 <input id="sponsor-guest-request" type="number" class="validate" min="0">
                                 <label for="sponsor-guest-request">Estimated Number of Guests</label>
                               </div>
