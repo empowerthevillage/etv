@@ -144,6 +144,9 @@ class vbp(models.Model):
 
     def __str__(self):
         return str(self.business_name)
+    @property
+    def is_approved(self):
+         return self.approved
 
     class Meta:
         verbose_name = 'VBP Listing'
@@ -190,6 +193,9 @@ class vbp_al(models.Model):
 
     def __str__(self):
         return str(self.business_name)
+    @property
+    def is_approved(self):
+         return self.approved
 
     class Meta:
         verbose_name = 'Alabama Listing'
@@ -220,6 +226,9 @@ class vbp_ak(models.Model):
 
     def __str__(self):
         return str(self.business_name)
+    @property
+    def is_approved(self):
+         return self.approved
 
     class Meta:
         verbose_name = 'Alaska Listing'
@@ -250,6 +259,9 @@ class vbp_az(models.Model):
 
     def __str__(self):
         return str(self.business_name)
+    @property
+    def is_approved(self):
+         return self.approved
 
     class Meta:
         verbose_name = 'Arizona Listing'
@@ -280,6 +292,9 @@ class vbp_ar(models.Model):
 
     def __str__(self):
         return str(self.business_name)
+    @property
+    def is_approved(self):
+         return self.approved
 
     class Meta:
         verbose_name = 'Arkansas Listing'
@@ -310,6 +325,9 @@ class vbp_ca(models.Model):
 
     def __str__(self):
         return str(self.business_name)
+    @property
+    def is_approved(self):
+         return self.approved
 
     class Meta:
         verbose_name = 'California Listing'
@@ -340,6 +358,9 @@ class vbp_co(models.Model):
 
     def __str__(self):
         return str(self.business_name)
+    @property
+    def is_approved(self):
+         return self.approved
 
     class Meta:
         verbose_name = 'Colorado Listing'
@@ -370,6 +391,9 @@ class vbp_ct(models.Model):
 
     def __str__(self):
         return str(self.business_name)
+    @property
+    def is_approved(self):
+         return self.approved
 
     class Meta:
         verbose_name = 'Connecticut Listing'
@@ -400,6 +424,9 @@ class vbp_de(models.Model):
 
     def __str__(self):
         return str(self.business_name)
+    @property
+    def is_approved(self):
+         return self.approved
 
     class Meta:
         verbose_name = 'Delaware Listing'
@@ -430,6 +457,9 @@ class vbp_dc(models.Model):
 
     def __str__(self):
         return str(self.business_name)
+    @property
+    def is_approved(self):
+         return self.approved
 
     class Meta:
         verbose_name = 'DC Listing'
@@ -460,6 +490,9 @@ class vbp_fl(models.Model):
 
     def __str__(self):
         return str(self.business_name)
+    @property
+    def is_approved(self):
+         return self.approved
 
     class Meta:
         verbose_name = 'Florida Listing'
@@ -490,6 +523,9 @@ class vbp_ga(models.Model):
 
     def __str__(self):
         return str(self.business_name)
+    @property
+    def is_approved(self):
+         return self.approved
 
     class Meta:
         verbose_name = 'Georgia Listing'
@@ -520,6 +556,9 @@ class vbp_hi(models.Model):
 
     def __str__(self):
         return str(self.business_name)
+    @property
+    def is_approved(self):
+         return self.approved
 
     class Meta:
         verbose_name = 'Hawaii Listing'
@@ -550,6 +589,9 @@ class vbp_id(models.Model):
 
     def __str__(self):
         return str(self.business_name)
+    @property
+    def is_approved(self):
+         return self.approved
 
     class Meta:
         verbose_name = 'Idaho Listing'
@@ -580,6 +622,9 @@ class vbp_il(models.Model):
 
     def __str__(self):
         return str(self.business_name)
+    @property
+    def is_approved(self):
+         return self.approved
 
     class Meta:
         verbose_name = 'Illinois Listing'
@@ -610,6 +655,9 @@ class vbp_in(models.Model):
 
     def __str__(self):
         return str(self.business_name)
+    @property
+    def is_approved(self):
+         return self.approved
 
     class Meta:
         verbose_name = 'Indiana Listing'
@@ -640,6 +688,9 @@ class vbp_ia(models.Model):
 
     def __str__(self):
         return str(self.business_name)
+    @property
+    def is_approved(self):
+         return self.approved
 
     class Meta:
         verbose_name = 'Iowa Listing'
@@ -670,6 +721,9 @@ class vbp_ks(models.Model):
 
     def __str__(self):
         return str(self.business_name)
+    @property
+    def is_approved(self):
+         return self.approved
 
     class Meta:
         verbose_name = 'Kansas Listing'
@@ -700,6 +754,9 @@ class vbp_ky(models.Model):
 
     def __str__(self):
         return str(self.business_name)
+    @property
+    def is_approved(self):
+         return self.approved
 
     class Meta:
         verbose_name = 'Kentucky Listing'
@@ -730,6 +787,9 @@ class vbp_la(models.Model):
 
     def __str__(self):
         return str(self.business_name)
+    @property
+    def is_approved(self):
+         return self.approved
 
     class Meta:
         verbose_name = 'Louisiana Listing'
@@ -760,6 +820,9 @@ class vbp_me(models.Model):
 
     def __str__(self):
         return str(self.business_name)
+    @property
+    def is_approved(self):
+         return self.approved
 
     class Meta:
         verbose_name = 'Maine Listing'
@@ -790,6 +853,9 @@ class vbp_md(models.Model):
 
     def __str__(self):
         return str(self.business_name)
+    @property
+    def is_approved(self):
+         return self.approved
 
     class Meta:
         verbose_name = 'Maryland Listing'
@@ -820,6 +886,9 @@ class vbp_ma(models.Model):
 
     def __str__(self):
         return str(self.business_name)
+    @property
+    def is_approved(self):
+         return self.approved
 
     class Meta:
         verbose_name = 'Massachusetts Listing'
@@ -850,6 +919,9 @@ class vbp_mi(models.Model):
 
     def __str__(self):
         return str(self.business_name)
+    @property
+    def is_approved(self):
+         return self.approved
 
     class Meta:
         verbose_name = 'Michigan Listing'
@@ -880,6 +952,9 @@ class vbp_mn(models.Model):
 
     def __str__(self):
         return str(self.business_name)
+    @property
+    def is_approved(self):
+         return self.approved
 
     class Meta:
         verbose_name = 'Minnesota Listing'
@@ -910,6 +985,9 @@ class vbp_ms(models.Model):
 
     def __str__(self):
         return str(self.business_name)
+    @property
+    def is_approved(self):
+         return self.approved
 
     class Meta:
         verbose_name = 'Mississippi Listing'
@@ -940,6 +1018,9 @@ class vbp_mo(models.Model):
 
     def __str__(self):
         return str(self.business_name)
+    @property
+    def is_approved(self):
+         return self.approved
 
     class Meta:
         verbose_name = 'Missouri Listing'
@@ -970,6 +1051,9 @@ class vbp_mt(models.Model):
 
     def __str__(self):
         return str(self.business_name)
+    @property
+    def is_approved(self):
+         return self.approved
 
     class Meta:
         verbose_name = 'Montana Listing'
@@ -1000,6 +1084,9 @@ class vbp_ne(models.Model):
 
     def __str__(self):
         return str(self.business_name)
+    @property
+    def is_approved(self):
+         return self.approved
 
     class Meta:
         verbose_name = 'Nebraska Listing'
@@ -1030,6 +1117,9 @@ class vbp_nv(models.Model):
 
     def __str__(self):
         return str(self.business_name)
+    @property
+    def is_approved(self):
+         return self.approved
 
     class Meta:
         verbose_name = 'Nevada Listing'
@@ -1060,6 +1150,9 @@ class vbp_nh(models.Model):
 
     def __str__(self):
         return str(self.business_name)
+    @property
+    def is_approved(self):
+         return self.approved
 
     class Meta:
         verbose_name = 'New Hampshire Listing'
@@ -1090,6 +1183,9 @@ class vbp_nj(models.Model):
 
     def __str__(self):
         return str(self.business_name)
+    @property
+    def is_approved(self):
+         return self.approved
 
     class Meta:
         verbose_name = 'New Jersey Listing'
@@ -1120,6 +1216,9 @@ class vbp_nm(models.Model):
 
     def __str__(self):
         return str(self.business_name)
+    @property
+    def is_approved(self):
+         return self.approved
 
     class Meta:
         verbose_name = 'New Mexico Listing'
@@ -1150,6 +1249,9 @@ class vbp_ny(models.Model):
 
     def __str__(self):
         return str(self.business_name)
+    @property
+    def is_approved(self):
+         return self.approved
 
     class Meta:
         verbose_name = 'New York Listing'
@@ -1181,6 +1283,9 @@ class vbp_nc(models.Model):
 
     def __str__(self):
         return str(self.business_name)
+    @property
+    def is_approved(self):
+         return self.approved
 
     class Meta:
         verbose_name = 'North Carolina Listing'
@@ -1211,6 +1316,9 @@ class vbp_nd(models.Model):
 
     def __str__(self):
         return str(self.business_name)
+    @property
+    def is_approved(self):
+         return self.approved
 
     class Meta:
         verbose_name = 'North Dakota Listing'
@@ -1241,6 +1349,9 @@ class vbp_oh(models.Model):
 
     def __str__(self):
         return str(self.business_name)
+    @property
+    def is_approved(self):
+         return self.approved
 
     class Meta:
         verbose_name = 'Ohio Listing'
@@ -1271,6 +1382,9 @@ class vbp_ok(models.Model):
 
     def __str__(self):
         return str(self.business_name)
+    @property
+    def is_approved(self):
+         return self.approved
 
     class Meta:
         verbose_name = 'Oklahoma Listing'
@@ -1301,6 +1415,9 @@ class vbp_or(models.Model):
 
     def __str__(self):
         return str(self.business_name)
+    @property
+    def is_approved(self):
+         return self.approved
 
     class Meta:
         verbose_name = 'Oregon Listing'
@@ -1331,6 +1448,9 @@ class vbp_pa(models.Model):
 
     def __str__(self):
         return str(self.business_name)
+    @property
+    def is_approved(self):
+         return self.approved
 
     class Meta:
         verbose_name = 'Pennsylvania Listing'
@@ -1361,6 +1481,9 @@ class vbp_ri(models.Model):
 
     def __str__(self):
         return str(self.business_name)
+    @property
+    def is_approved(self):
+         return self.approved
 
     class Meta:
         verbose_name = 'Rhode Island Listing'
@@ -1391,6 +1514,9 @@ class vbp_sc(models.Model):
 
     def __str__(self):
         return str(self.business_name)
+    @property
+    def is_approved(self):
+         return self.approved
 
     class Meta:
         verbose_name = 'South Carolina Listing'
@@ -1421,6 +1547,9 @@ class vbp_sd(models.Model):
 
     def __str__(self):
         return str(self.business_name)
+    @property
+    def is_approved(self):
+         return self.approved
 
     class Meta:
         verbose_name = 'South Dakota Listing'
@@ -1451,6 +1580,9 @@ class vbp_tn(models.Model):
 
     def __str__(self):
         return str(self.business_name)
+    @property
+    def is_approved(self):
+         return self.approved
 
     class Meta:
         verbose_name = 'Tennessee Listing'
@@ -1481,6 +1613,9 @@ class vbp_tx(models.Model):
 
     def __str__(self):
         return str(self.business_name)
+    @property
+    def is_approved(self):
+         return self.approved
 
     class Meta:
         verbose_name = 'Texas Listing'
@@ -1511,6 +1646,9 @@ class vbp_ut(models.Model):
 
     def __str__(self):
         return str(self.business_name)
+    @property
+    def is_approved(self):
+         return self.approved
 
     class Meta:
         verbose_name = 'Utah Listing'
@@ -1541,6 +1679,9 @@ class vbp_vt(models.Model):
 
     def __str__(self):
         return str(self.business_name)
+    @property
+    def is_approved(self):
+         return self.approved
 
     class Meta:
         verbose_name = 'Vermont Listing'
@@ -1571,6 +1712,9 @@ class vbp_va(models.Model):
 
     def __str__(self):
         return str(self.business_name)
+    @property
+    def is_approved(self):
+         return self.approved
 
     class Meta:
         verbose_name = 'Virginia Listing'
@@ -1601,6 +1745,9 @@ class vbp_wa(models.Model):
     
     def __str__(self):
         return str(self.business_name)
+    @property
+    def is_approved(self):
+         return self.approved
 
     class Meta:
         verbose_name = 'Washington Listing'
@@ -1631,6 +1778,9 @@ class vbp_wv(models.Model):
 
     def __str__(self):
         return str(self.business_name)
+    @property
+    def is_approved(self):
+         return self.approved
 
     class Meta:
         verbose_name = 'West Virginia Listing'
@@ -1661,6 +1811,9 @@ class vbp_wi(models.Model):
 
     def __str__(self):
         return str(self.business_name)
+    @property
+    def is_approved(self):
+         return self.approved
 
     class Meta:
         verbose_name = 'Wisconsin Listing'
@@ -1691,6 +1844,9 @@ class vbp_wy(models.Model):
     
     def __str__(self):
         return str(self.business_name)
+    @property
+    def is_approved(self):
+         return self.approved
 
     class Meta:
         verbose_name = 'Wyoming Listing'

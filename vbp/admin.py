@@ -70,10 +70,10 @@ class VBPAdmin(admin.ModelAdmin):
     make_inactive.short_description = "Mark selected submissions as not approved"
 
 class VBPStateAdmin(admin.ModelAdmin):
-    list_display = ['business_name', 'website', 'category', 'subcategory','phone', 'city']
+    list_display = ['business_name', 'approved', 'website', 'category', 'city']
     list_filter = ['county', 'city','approved', 'online_only', 'category', 'subcategory', 'team']
     search_fields = ['business_name', 'city', 'category', 'subcategory', 'user']
-    ordering = ['business_name']
+    ordering = ['-updated', 'business_name']
     actions = ['make_active', 'make_inactive']
     fieldsets = (
         (None, {
