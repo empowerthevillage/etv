@@ -824,7 +824,7 @@ function handleVenmoSuccess(payload) {
               success: function(data){
                 $('#review-amount').html('<b>Donation Amount:</b> $'+ amount)
                 $('#review-frequency').html('<b>Donation Frequency:</b> '+frequencyVerbose)
-                $('#review-nonce').html('<b>Payment Method:</b> PayPal')
+                $('#review-nonce').html('<b>Payment Method:</b> Venmo')
                 $('#preloader').hide()
                 $('.step-3').removeClass('hidden')
               },
