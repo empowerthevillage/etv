@@ -7,6 +7,7 @@ name = "pypi"
 amqp = "==5.0.6"
 asgiref = "==3.4.1"
 "backports.entry-points-selectable" = "==1.1.1"
+beautifulsoup4 = "==4.10.0"
 billiard = "==3.6.4.0"
 boto = "==2.49.0"
 boto3 = "==1.20.22"
@@ -69,6 +70,7 @@ simplejson = "==3.17.2"
 six = "==1.16.0"
 social-auth-app-django = "==5.0.0"
 social-auth-core = "==4.1.0"
+soupsieve = "==2.3.1"
 sqlparse = "==0.4.2"
 sweetify = "==2.2.0"
 typing-extensions = "==4.0.1"
@@ -84,3 +86,6 @@ Pillow = "==8.4.0"
 PyJWT = "==2.3.0"
 
 [dev-packages]
+
+[requires]
+python_version = "3.9"

@@ -1,10 +1,12 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "7ac4b9cd9e9f0aafa8a225d7b533b8bd868aade75b39dcd72813e0f00ed967ca"
+            "sha256": "cbee5ae2e24d1de704a69b04bc5c61e37d25988f563df5a105ea6a9c766728de"
         },
         "pipfile-spec": 6,
-        "requires": {},
+        "requires": {
+            "python_version": "3.9"
+        },
         "sources": [
             {
                 "name": "pypi",
@@ -37,6 +39,14 @@
             ],
             "index": "pypi",
             "version": "==1.1.1"
+        },
+        "beautifulsoup4": {
+            "hashes": [
+                "sha256:9a315ce70049920ea4572a4055bc4bd700c940521d36fc858205ad4fcde149bf",
+                "sha256:c23ad23c521d818955a4151a67d81580319d4bf548d3d49f4223ae041ff98891"
+            ],
+            "index": "pypi",
+            "version": "==4.10.0"
         },
         "billiard": {
             "hashes": [
@@ -665,11 +675,11 @@
         },
         "setuptools": {
             "hashes": [
-                "sha256:6d10741ff20b89cd8c6a536ee9dc90d3002dec0226c78fb98605bfb9ef8a7adf",
-                "sha256:d144f85102f999444d06f9c0e8c737fd0194f10f2f7e5fdb77573f6e2fa4fad0"
+                "sha256:0c8d5c36aea600828875ab751c03e2c52624edc8382a88a127e31bd8d860e34b",
+                "sha256:a426c5ce42242404fecb1cbce07af79c10b820ab2f684109e8129040413faaa1"
             ],
-            "markers": "python_version >= '3.6'",
-            "version": "==59.5.0"
+            "markers": "python_version >= '3.7'",
+            "version": "==59.7.0"
         },
         "shippo": {
             "hashes": [
@@ -753,6 +763,14 @@
             ],
             "index": "pypi",
             "version": "==4.1.0"
+        },
+        "soupsieve": {
+            "hashes": [
+                "sha256:1a3cca2617c6b38c0343ed661b1fa5de5637f257d4fe22bd9f1338010a1efefb",
+                "sha256:b8d49b1cd4f037c7082a9683dfa1801aa2597fb11c3a1155b7a5b94829b4f1f9"
+            ],
+            "index": "pypi",
+            "version": "==2.3.1"
         },
         "sqlparse": {
             "hashes": [
