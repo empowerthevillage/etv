@@ -28,7 +28,7 @@ def send_test_email(request):
                 'Test!',
                 'A successful test email has been sent',
                 'etvnotifications@gmail.com',
-                ['admin@empowerthevillage.org', 'chandler@eliftcreations.com'],
+                ['admin@empowerthevillage.org', 'chandler@eliftcreations.com', 'ayo@empowerthevillage.org'],
                 fail_silently=False
             )
     return HttpResponse('mail sent')
@@ -216,7 +216,7 @@ def donation_complete(request):
                 'New Donation!',
                 str('A new $'+ str(amount) +' donation has been received from '+ str(donation_obj.get_full_name) +' through www.empowerthevillage.org!'),
                 'etvnotifications@gmail.com',
-                ['admin@empowerthevillage.org', 'chandler@eliftcreations.com'],
+                ['admin@empowerthevillage.org', 'chandler@eliftcreations.com', 'ayo@empowerthevillage.org'],
                 fail_silently=True
             )
             del request.session['donation_id']
@@ -254,7 +254,7 @@ def donation_complete(request):
                 'New Donation!',
                 str('A new $'+ amount +'donation has been received from '+ donation_obj.get_full_name +'through www.empowerthevillage.org!'),
                 'etvnotifications@gmail.com',
-                ['admin@empowerthevillage.org', 'chandler@eliftcreations.com'],
+                ['admin@empowerthevillage.org', 'chandler@eliftcreations.com', 'ayo@empowerthevillage.org'],
                 fail_silently=True
             )
             data = 'success'
@@ -282,7 +282,7 @@ def donation_complete(request):
                 'New Donation!',
                 str('A new $'+ str(amount) +'donation has been received from '+ str(donation_obj.get_full_name) +'through www.empowerthevillage.org!'),
                 'etvnotifications@gmail.com',
-                ['admin@empowerthevillage.org', 'chandler@eliftcreations.com'],
+                ['admin@empowerthevillage.org', 'chandler@eliftcreations.com', 'ayo@empowerthevillage.org'],
                 fail_silently=True
             )
             del request.session['donation_id']
