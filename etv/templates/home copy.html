@@ -345,7 +345,15 @@
         {% block content %}
         
         <div class="carousel carousel-slider center z-depth-2" id="home-carousel">
-            <div class="carousel-item" href="" style="background: url('{% static 'img/pillar_collage.png' %}'); background-size: 80% !important;" id="panel-four">
+          <div class="carousel-item" href="" style="background: url('{% static 'img/pillar_collage.png' %}'); background-size: 80% !important;">
+            <div class="carousel-wash row center-align" style="background-color: rgba(255, 255, 255, 0.879)">
+              <div class="col s12 m10 offset-m1 carousel-title"><a href="{{ donate_url }}" style="color:#01a650">Invest in the Village!</a> Make your tax deductible donation to ETV today to Restore Prosperity, Peace & Power to the Black Community</div>
+              <div class="col s8 m4 offset-s2 offset-m4 center-align" style="padding:0; padding-right: 5px">
+                <a href="{{ donate_url }}"><img class="z-depth-2 donate-img" src="{% static 'img/gof.png' %}" style="margin-top: 10px"></a>
+              </div>
+            </div> 
+          </div> 
+          <div class="carousel-item" href="" style="background: url('{% static 'img/pillar_collage.png' %}'); background-size: 80% !important;" id="panel-four">
               <div class="carousel-wash row" style="background-color: rgba(255, 255, 255, 0.879)">
                 
                 <div class="col s6 right-align" style="padding:0; padding-right: 5px">
@@ -356,8 +364,19 @@
                   </div>
               </div>
               <style>
+                .carousel-title {
+                  font-family: oskar;
+                  font-size: 16px;
+                  line-height: 20px;
+                }
+                .donate-img {
+                  width: 90%
+                }
                 #panel-four .carousel-wash{
                   padding-top: 12%
+                }
+                .carousel-wash {
+                  padding-top: 1%
                 }
                 .mission-thumbnail {
                   height: 190px;
@@ -372,6 +391,13 @@
                   min-height: 0 !important
                 }
                 @media only screen and (min-width:400px){
+                  .carousel-title {
+                  font-size: 18px;
+                  line-height: 24px;
+                }
+                .donate-img {
+                  width: 80%
+                }
                   #panel-four .carousel-wash{
                   padding-top: 5%
                 }
@@ -386,6 +412,11 @@
                 }
                 }
                 @media only screen and (min-width:480px){
+                  .carousel-title {
+                  font-family: oskar;
+                  font-size: 20px;
+                  line-height: 20px;
+                }
                   #panel-four .carousel-wash{
                   padding-top: 6%
                 }
@@ -414,6 +445,13 @@
                 }
                 }
                 @media only screen and (min-width:601px){
+                  .carousel-title {
+                  font-size: 22px;
+                  line-height: 32px;
+                }
+                .donate-img {
+                  width: 100%
+                }
                   #panel-four .carousel-wash{
                   padding-top: 5%
                 }
@@ -445,6 +483,13 @@
                 }
                 }
                 @media only screen and (min-width:993px){
+                  .carousel-title {
+                  font-size: 26px;
+                  line-height: 32px;
+                }
+                .donate-img {
+                  width: 100%
+                }
                   #panel-four .carousel-wash{
                   padding-top: 0%
                 }
@@ -459,6 +504,13 @@
                 }
                 }
                 @media only screen and (min-width:1221px){
+                  .carousel-title {
+                  font-size: 32px;
+                  line-height: 42px;
+                }
+                .donate-img {
+                  width: 80%
+                }
                   #panel-four .carousel-wash{
                   padding-top: 2%
                 }
@@ -473,6 +525,13 @@
                 }
                 }
                 @media only screen and (min-width:1400px){
+                  .carousel-title {
+                  font-size: 42px;
+                  line-height: 52px;
+                }
+                .donate-img {
+                  width: 90%
+                }
                   #panel-four .carousel-wash{
                   padding-top: 1%
                 }
@@ -926,7 +985,7 @@
           <script>
               $(document).ready(function(){
                   Swal.fire({
-                      html: '<h3 class="join-tv-title">Join The Village!</h3><p>Enter your email address to join the ETV mailing list.</p><form method="POST" action="/mailchimp-signup/" id="mailchimp-efbf-form">{% csrf_token %}<div class="input-field"><input required id="mailchimp-email-efbf" name="email" type="email"><label for="mailchimp-email-efbf">Email</label></div><button type="submit" class="btn light-green darken-3 waves-effect" id="efbf-mailchimp">Add Me To The List!</button></form>',
+                      html: '<h3 class="join-tv-title">Donate Today!</h3><a href="{{ donate_url }}"><img class="z-depth-2" src="{% static "img/gof.png" %}" width=100%"></a>',
                       showCancelButton: false,
                       showCloseButton: true,
                       showConfirmButton: false,
