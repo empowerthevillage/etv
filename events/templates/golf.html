@@ -1745,8 +1745,8 @@
       }).then(function (isReadyToPay) {
         if (isReadyToPay.result) {
           googleButton.addEventListener('click', function(event){
-            event.preventDefault();
-            var totalPrice = String($('#cart-total').text())
+            var totalPrice = String($('#total-liine').text())
+            alert(totalPrice)
             var paymentDataRequest = googlePaymentInstance.createPaymentDataRequest({
               transactionInfo: {
                 currencyCode: 'USD',

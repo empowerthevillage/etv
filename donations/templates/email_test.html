@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container" style="padding: 100px">
+<form action="/donation/send-mail/" method="post">
+    {% csrf_token %}
+    <div class="input-field">
+        <input type="text" name="message">
+        <label>Message </label>
+    </div>
+    <input class="btn" type="submit" value="Send an Email">
+</form>
+</div>
+{% endblock %}

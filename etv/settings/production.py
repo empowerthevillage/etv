@@ -61,15 +61,9 @@ EMAIL_HOST = env('EMAIL_HOST')
 EMAIL_HOST_USER = env('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASSWORD')
 EMAIL_PORT = env('EMAIL_PORT')
-EMAIL_USE_TLS = False
+EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
 
-DEFAULT_FROM_EMAIL = 'admin@empowerthevillage.org'
-ADMINS = (
-    ('Empower The Village', 'admin@empowerthevillage.org'),
-)
-
-MANAGERS = ADMINS
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
@@ -107,6 +101,7 @@ INSTALLED_APPS = [
     'prosperity',
     'phone_field',
     'vbp',
+    'scraper',
     'social_django',
     'sweetify',
     'storages',
@@ -119,7 +114,6 @@ AUTH_USER_MODEL = 'accounts.MyUser'
 LOGIN_URL = '/login/'
 LOGIN_URL_REDIRECT = '/'
 LOUGOUT_REDIRECT_URL = 'login'
-
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

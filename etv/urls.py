@@ -158,6 +158,7 @@ urlpatterns = [
     path('merchandise/', include(("merchandise.urls", "merchandise"), namespace='merchandise')),
     path('register/', RegisterView.as_view(), name='register'),
     path('register/guest', GuestRegisterView.as_view(), name='guest_register'),
+    path('scraper/', include(("scraper.urls", "scaper"), namespace="scraper")),
     path('settings/', RedirectView.as_view(url='/account')),
     path('strategic-pillars/', strategic_pillars, name='pillars'),
     path('village-black-pages/', include(("vbp.urls", "vbp"), namespace='vbp')),

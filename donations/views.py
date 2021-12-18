@@ -23,6 +23,22 @@ mailchimp.set_config({
 User = settings.AUTH_USER_MODEL
 gateway = settings.GATEWAY
 
+def send_test_email(request):
+    send_mail(
+                'Test!',
+                'A successful test email has been sent',
+                'etvnotifications@gmail.com',
+                ['admin@empowerthevillage.org', 'chandler@eliftcreations.com'],
+                fail_silently=False
+            )
+    return HttpResponse('mail sent')
+
+def mail_test(request):
+    context = {
+        'title': 'Send Mail Test'
+    }
+    return render(request, 'email_test.html', context)
+
 def donate(request):
     user = request.user
     donor_form = DonorForm()
@@ -194,20 +210,13 @@ def donation_complete(request):
                 "FNAME": str(first_name),
                 "ETVAMOUNT": str(amount)
             }
-            mailchimp_obj = mailchimp.lists.set_list_member("bfb104d810", email, {"email_address": email, "status_if_new": "subscribed", "merge_fields": merge_fields})
-            journey = mailchimp.customerJourneys.trigger(2794, 15013, {"email_address": str(email)})
+            mailchimp.lists.set_list_member("bfb104d810", email, {"email_address": email, "status_if_new": "subscribed", "merge_fields": merge_fields})
+            mailchimp.customerJourneys.trigger(2794, 15013, {"email_address": str(email)})
             send_mail(
                 'New Donation!',
-                'A new donation has been received through www.empowerthevillage.org!',
-                'admin@empowerthevillage.org',
-                ['admin@empowerthevillage.org'],
-                fail_silently=True
-            )
-            send_mail(
-                'New Donation!',
-                'A new donation has been received through www.empowerthevillage.org!',
-                'admin@empowerthevillage.org',
-                ['chandler@eliftcreations.com'],
+                str('A new $'+ str(amount) +' donation has been received from '+ str(donation_obj.get_full_name) +' through www.empowerthevillage.org!'),
+                'etvnotifications@gmail.com',
+                ['admin@empowerthevillage.org', 'chandler@eliftcreations.com'],
                 fail_silently=True
             )
             del request.session['donation_id']
@@ -221,7 +230,6 @@ def donation_complete(request):
             "customer_id": braintree_id,
             "payment_method_nonce": nonce,
         })
-        print(vault_result)
         if vault_result.is_success:
             token = vault_result.token
             result = gateway.subscription.create({
@@ -240,20 +248,13 @@ def donation_complete(request):
                 "FNAME": str(first_name),
                 "ETVAMOUNT": str(amount)
             }
-            mailchimp_obj = mailchimp.lists.set_list_member("bfb104d810", email, {"email_address": email, "status_if_new": "subscribed", "merge_fields": merge_fields})
-            journey = mailchimp.customerJourneys.trigger(2794, 15013, {"email_address": str(email)})
+            mailchimp.lists.set_list_member("bfb104d810", email, {"email_address": email, "status_if_new": "subscribed", "merge_fields": merge_fields})
+            mailchimp.customerJourneys.trigger(2794, 15013, {"email_address": str(email)})
             send_mail(
                 'New Donation!',
-                'A new donation has been received through www.empowerthevillage.org!',
-                'admin@empowerthevillage.org',
-                ['admin@empowerthevillage.org'],
-                fail_silently=True
-            )
-            send_mail(
-                'New Donation!',
-                'A new donation has been received through www.empowerthevillage.org!',
-                'admin@empowerthevillage.org',
-                ['chandler@eliftcreations.com'],
+                str('A new $'+ amount +'donation has been received from '+ donation_obj.get_full_name +'through www.empowerthevillage.org!'),
+                'etvnotifications@gmail.com',
+                ['admin@empowerthevillage.org', 'chandler@eliftcreations.com'],
                 fail_silently=True
             )
             data = 'success'
@@ -279,16 +280,9 @@ def donation_complete(request):
             donation_obj.save()
             send_mail(
                 'New Donation!',
-                'A new donation has been received through www.empowerthevillage.org!',
-                'admin@empowerthevillage.org',
-                ['admin@empowerthevillage.org'],
-                fail_silently=True
-            )
-            send_mail(
-                'New Donation!',
-                'A new donation has been received through www.empowerthevillage.org!',
-                'admin@empowerthevillage.org',
-                ['chandler@eliftcreations.com'],
+                str('A new $'+ str(amount) +'donation has been received from '+ str(donation_obj.get_full_name) +'through www.empowerthevillage.org!'),
+                'etvnotifications@gmail.com',
+                ['admin@empowerthevillage.org', 'chandler@eliftcreations.com'],
                 fail_silently=True
             )
             del request.session['donation_id']

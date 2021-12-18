@@ -13,7 +13,7 @@ ETV | Donate
 
     <div class="content-container row" style="margin-bottom: 0">
         
-        <div class="col s12 l7 right" style="padding-left: 3%;padding-right: 5%; padding-bottom: 3%">
+        <div class="col s12 l7 right" style="padding-left: 2%; padding-right: 2%; padding-bottom: 3%">
           
           <h5 class="center-align donation-title">It Takes a Village to Restore Prosperity, Peace & Power to The Black Community!</h5>
           <h6 class="donation-subtitle center-align">Unleash the Power of The Village by donating  $25, $50, $100, $500 or whatever you are inspired to invest in the community!</h6>
@@ -117,7 +117,7 @@ ETV | Donate
                         </label>
                       </p>
                       <div class="other-input hidden text-field">
-                        <div class="valign-wrapper">$<input type="number" id="other-donation" style="width: 50%"></div>
+                        <div class="valign-wrapper">$<input type="number" id="other-donation" style="width: 50%; padding-left: 10px"></div>
                         <label>Enter a Custom Amount</label>
                       </div>
                     </div>
@@ -406,7 +406,7 @@ ETV | Donate
 var venmoButton = document.getElementById('venmo-button');
 
 braintree.client.create({
-    authorization: 'production_pgz5pm7q_tb3vd7jd2hynhxcn'
+    authorization: 'sandbox_38dyvcrw_993qmd9ws9fhww7q'
   }, function (clientErr, clientInstance) {
   if (clientErr) {
     console.error('Error creating client:', clientErr);
@@ -473,7 +473,7 @@ braintree.client.create({
         $.ajax({
           data: data,
           method: 'POST',
-          url: '/donation/review',
+          url: '/donation/review/',
           success: function(data){
             $('#review-amount').html('<b>Donation Amount:</b> $'+ amount)
             $('#review-frequency').html('<b>Donation Frequency:</b> '+frequencyVerbose)
@@ -533,7 +533,7 @@ braintree.client.create({
   });
   
   var paymentsClient = new google.payments.api.PaymentsClient({
-    environment: 'TEST'
+    environment: 'PRODUCTION'
   });
   var googleButton = document.querySelector('#google-pay-button');
   
@@ -564,7 +564,79 @@ braintree.client.create({
           cardPaymentMethod.parameters.billingAddressRequired = false;
           paymentsClient.loadPaymentData(paymentDataRequest).then(function(paymentData){
             googlePaymentInstance.parseResponse(paymentData, function(err, result){
-              
+              if (err) {
+                Swal.fire({
+                  icon: 'error',
+                  title: 'Oops...',
+                  text: 'There was a problem with your Google Pay payment method! Please try again',
+                })
+              }
+              $('.step-1').addClass('hidden');
+              window.scrollTo(0, 0);
+              $('#preloader').show();
+              $('#nonce-input').attr('value', result.nonce);
+              var amount = $('#donation-level-input').val()
+              var frequency = $('#frequency-input').val()
+              var donor_first = $('#id_first_name').val()
+              var donor_last = $('#last_name').val()
+              var donor_email = $('#email').val()
+              var donor_phone = $('#phone').val()
+              var name = String(donor_first + donor_last)
+              var mailing_1 = $('#id_address_line_1').val()
+              var mailing_2 = $('#id_address_line_2').val()
+              var mailing_city = $('#id_city').val()
+              var mailing_state = $('#id_state').val()
+              var mailing_zip = $('#id_zip').val()
+              var csrf_token = $('[name="csrfmiddlewaretoken"]').val()
+              contact_info = {
+                csrfmiddlewaretoken: csrf_token,
+                'amount': amount,
+                'frequency': frequency,
+                'donor_first': donor_first,
+                'donor_last': donor_last,
+                'donor_email': donor_email,
+                'donor_phone': donor_phone,
+                'name': name,
+                'mailing_1': mailing_1,
+                'mailing_2': mailing_2,
+                'mailing_city': mailing_city,
+                'mailing_state': mailing_state,
+                'mailing_zip': mailing_zip,
+              }
+              var nonce_id = result.nonce
+              var frequencyVerbose = $('#frequency-verbose-input').val()
+              var csrf_token = $('[name="csrfmiddlewaretoken"]', '#creditcard-form').val()
+              var data = {
+                csrfmiddlewaretoken: csrf_token,
+                'nonce': nonce_id,
+                'contact_info': contact_info
+              }
+              $.ajax({
+                data: data,
+                method: 'POST',
+                url: '/donation/express-review/',
+                success: function(data){
+                  $('#review-amount').html('<b>Donation Amount:</b> $'+ amount)
+                  $('#review-frequency').html('<b>Donation Frequency:</b> '+frequencyVerbose)
+                  $('#review-nonce').html('<b>Payment Method:</b> Google Pay')
+                  $('#preloader').hide()
+                  $('.step-3').removeClass('hidden')
+              },
+              error: function(){
+                Swal.fire(
+                  'An Error Occured',
+                  'Please Try Again',
+                  'error'
+                )
+              }
+            });
+            
+            })
+          }).catch(function(err){
+            Swal.fire({
+              icon: 'error',
+              title: 'Oops...',
+              text: 'There was a problem with your Google Pay payment method! Please try again',
             })
           })
         })
@@ -641,7 +713,7 @@ braintree.client.create({
             $.ajax({
               data: data,
               method: 'POST',
-              url: '/donation/express-review',
+              url: '/donation/express-review/',
               success: function(data){
                 $('#review-amount').html('<b>Donation Amount:</b> $'+ amount)
                 $('#review-frequency').html('<b>Donation Frequency:</b> '+frequencyVerbose)
@@ -704,25 +776,55 @@ function handleVenmoError(err) {
 }
 
 function handleVenmoSuccess(payload) {
-  event.preventDefault();
   $('.step-1').addClass('hidden');
   window.scrollTo(0, 0);
   $('#preloader').show();
-  var frequencyVerbose = $('#frequency-verbose-input').val()
+  $('#nonce-input').attr('value', payload.nonce);
+            var amount = $('#donation-level-input').val()
+            var frequency = $('#frequency-input').val()
+            var donor_first = $('#id_first_name').val()
+            var donor_last = $('#last_name').val()
+            var donor_email = $('#email').val()
+            var donor_phone = $('#phone').val()
+            var name = String(donor_first + donor_last)
+            var mailing_1 = $('#id_address_line_1').val()
+            var mailing_2 = $('#id_address_line_2').val()
+            var mailing_city = $('#id_city').val()
+            var mailing_state = $('#id_state').val()
+            var mailing_zip = $('#id_zip').val()
+            var csrf_token = $('[name="csrfmiddlewaretoken"]').val()
+            contact_info = {
+              csrfmiddlewaretoken: csrf_token,
+              'amount': amount,
+              'frequency': frequency,
+              'donor_first': donor_first,
+              'donor_last': donor_last,
+              'donor_email': donor_email,
+              'donor_phone': donor_phone,
+              'name': name,
+              'mailing_1': mailing_1,
+              'mailing_2': mailing_2,
+              'mailing_city': mailing_city,
+              'mailing_state': mailing_state,
+              'mailing_zip': mailing_zip,
+            }
+            var nonce_id = payload.nonce
+            var frequencyVerbose = $('#frequency-verbose-input').val()
             var amount = $('#donation-level-input').val()
             var csrf_token = $('[name="csrfmiddlewaretoken"]', '#creditcard-form').val()
             var data = {
               csrfmiddlewaretoken: csrf_token,
               'nonce': nonce_id,
+              'contact_info': contact_info
             }
             $.ajax({
               data: data,
               method: 'POST',
-              url: '/donation/review',
+              url: '/donation/express-review/',
               success: function(data){
                 $('#review-amount').html('<b>Donation Amount:</b> $'+ amount)
                 $('#review-frequency').html('<b>Donation Frequency:</b> '+frequencyVerbose)
-                $('#review-nonce').html('<b>Payment Method:</b> '+ data['details'].card_type +' ending in '+ data['details'].last_four)
+                $('#review-nonce').html('<b>Payment Method:</b> PayPal')
                 $('#preloader').hide()
                 $('.step-3').removeClass('hidden')
               },
@@ -795,7 +897,7 @@ function handleVenmoSuccess(payload) {
         'mailing_zip': mailing_zip,
       }
       $.ajax({
-        url: '/donation/create',
+        url: '/donation/create/',
         method: 'POST',
         data: data,
         success: function(data){
@@ -920,7 +1022,7 @@ function handleVenmoSuccess(payload) {
     }
     $.ajax({
       data: data,
-      url: '/donation/complete',
+      url: '/donation/complete/',
       method: 'POST',
       success: function(){
         $('#preloader').hide();

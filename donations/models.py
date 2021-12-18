@@ -142,3 +142,7 @@ class donation(models.Model):
     def __str__(self):
         return str(self.id)
 
+    @property
+    def get_full_name(self):
+        return '%s %s' %(self.first_name, self.last_name)
+
