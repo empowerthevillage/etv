@@ -37,7 +37,7 @@ braintree_public = env('PUBLIC_KEY')
 braintree_private = env('PRIVATE_KEY')
 GATEWAY = braintree.BraintreeGateway(
     braintree.Configuration(
-        braintree.Environment.Sandbox,
+        braintree.Environment.Production,
         merchant_id = braintree_merchant_id,
         public_key = braintree_public,
         private_key = braintree_private,
