@@ -109,6 +109,7 @@ PyJWT = "==2.3.0"
 pyOpenSSL = "==21.0.0"
 Scrapy = "==2.5.1"
 Twisted = "==21.7.0"
+XlsxWriter = "==3.0.2"
 
 [dev-packages]
 

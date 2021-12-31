@@ -1,8 +1,17 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div class="container center-align">
-    {{ cells|safe }}
+<div class="container " style="padding-top: 100px">
+    {% for x in vbp %}
+        <p>{{ forloop.counter }}. {{ x.name }}</p>
+        <ul class="list-group-flush">
+            {% if x.website is not None %}
+            <li>Website: {{ x.website }}</li>
+            {% endif %}
+            <li>Address: {{ x.address }}</li>
+        </ul>
+        
+    {% endfor %}
 </div>
 
 {% endblock %}

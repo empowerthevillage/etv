@@ -107,6 +107,7 @@ INSTALLED_APPS = [
     'social_django',
     'sweetify',
     'storages',
+    'tutorial',
     'whitenoise.runserver_nostatic',
     'ven',
 ]

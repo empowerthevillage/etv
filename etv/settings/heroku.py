@@ -9,7 +9,7 @@ from .production import *
 
 env = environ.Env(
     # set casting, default value
-    DEBUG=(bool, True)
+    DEBUG=(bool, False)
 )
 
 # False if not in os.environ
@@ -31,7 +31,7 @@ MERCHANT_ID=env('MERCHANT_ID')
 PUBLIC_KEY=env('PUBLIC_KEY')
 PRIVATE_KEY=env('PRIVATE_KEY')
 SHIPPO_KEY=env('SHIPPO_KEY')
-EMAIL_USE_TLS = False
+EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
 # Parse database connection url strings like psql://user:pass@127.0.0.1:8458/db
 DATABASES = {

@@ -3,5 +3,6 @@ from django.conf.urls import url
 from .views import *
 
 urlpatterns = [
-    path('', soup, name='soup'),
+    path('', scraper, name='home'),
+    path('get-sbo', create_sbo_objects, name='sbo'),
 ]
