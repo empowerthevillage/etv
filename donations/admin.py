@@ -5,7 +5,7 @@ from .models import donation_submission, donation, donation_event, tag
 from accounts.admin import admin_site
 
 class DonationAdmin(admin.ModelAdmin):
-    list_display = ['amount', 'billing_profile', 'frequency', 'updated']
+    list_display = ['amount', 'last_name', 'first_name', 'billing_profile', 'status', 'updated']
     list_filter = ['billing_profile', 'amount', 'frequency', 'status']
     search_fields = ['first_name', 'last_name', 'amount']
     ordering = ['-updated']
