@@ -345,14 +345,7 @@
         {% block content %}
         
         <div class="carousel carousel-slider center z-depth-2" id="home-carousel">
-          <div class="carousel-item" href="" style="background: url('{% static 'img/pillar_collage.png' %}'); background-size: 80% !important;">
-            <div class="carousel-wash row center-align" style="background-color: rgba(255, 255, 255, 0.879)">
-              <div class="col s12 m10 offset-m1 carousel-title"><a href="{{ donate_url }}" style="color:#01a650">Invest in the Village!</a> Make your tax deductible donation to ETV today to Restore Prosperity, Peace & Power to the Black Community</div>
-              <div class="col s8 m4 offset-s2 offset-m4 center-align" style="padding:0; padding-right: 5px">
-                <a href="{{ donate_url }}"><img class="z-depth-2 donate-img" src="{% static 'img/gof.png' %}" style="margin-top: 10px"></a>
-              </div>
-            </div> 
-          </div> 
+          
           <div class="carousel-item" href="" style="background: url('{% static 'img/pillar_collage.png' %}'); background-size: 80% !important;" id="panel-four">
               <div class="carousel-wash row" style="background-color: rgba(255, 255, 255, 0.879)">
                 
@@ -361,7 +354,7 @@
                 </div>
                 <div class="col s6 left-align" style="padding:0">
                   <a href="{{ pillars_url }}"><img class="pillars-thumbnail" src="{% static 'img/pillars-quad.png' %}"></a>
-                  </div>
+                </div>
               </div>
               <style>
                 .carousel-title {
@@ -547,6 +540,14 @@
                 }
               </style>
             </div>
+            <div class="carousel-item" href="" style="background: url('{% static 'img/pillar_collage.png' %}'); background-size: 80% !important;">
+              <div class="carousel-wash row center-align" style="background-color: rgba(255, 255, 255, 0.879)">
+                <div class="col s12 m10 offset-m1 carousel-title"><a href="{{ donate_url }}" style="color:#01a650">Invest in the Village!</a> Make your tax deductible donation to ETV today to Restore Prosperity, Peace & Power to the Black Community</div>
+                <div class="col s8 m4 offset-s2 offset-m4 center-align" style="padding:0; padding-right: 5px">
+                  <a href="{{ donate_url }}"><img class="z-depth-2 donate-img" src="{% static 'img/gift-of-empowerment-2022.png' %}" style="margin-top: 10px"></a>
+                </div>
+              </div> 
+            </div> 
               <div class="carousel-item" href="" style="background: url('{% static 'img/pillar_collage.png' %}'); background-size: 80% !important;" id="panel-one">
                 <div class="carousel-wash row">
                   <div class="col s12">
@@ -632,11 +633,11 @@
             
           </div>
           <div class="col s12 center-align" style="padding-top: 30px">
-            <div class="card center-align col s12 xl8 offset-xl2" style="padding: 2%">
-              <h6 style="color:#bf1e2d">Join Us on June 18 &19, 2022 at <br>Montclair Art Museum</h6>
+            <div class="card juneteenth-card center-align col s12 xl8 offset-xl2" style="padding: 2%">
+              <h6 style="color:#bf1e2d">Join us on June 18 & 19, 2022<br>at Montclair Art Museum</h6>
               <p>Special VIP Passes Available for ETV's Jazz Cocktail Reception and Art Preview on Saturday, June 18th! Be the first to see and purchase your favorite pieces while enjoying great music, food and open bar!
               </p>
-              <p style="color:rgb(34, 170, 34)">Official Juneteenth Celebration on Sunday, June 19th!</p>
+              <p style="color:rgb(34, 170, 34)">Official Juneteenth  & Father's Day Celebration Sunday, June 19th!</p>
             </div>
           </div>
         </div>
@@ -659,12 +660,16 @@
             .anniversary-graphic {
               width: 40%
             }
+            
             @media only screen and (min-width:992px){
               .mission-video {
               width: 70%
             }
             .anniversary-graphic {
               width: 30%
+            }
+            .juneteenth-card p{
+              font-size: 22px
             }
             }
 
