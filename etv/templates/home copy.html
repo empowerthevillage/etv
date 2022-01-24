@@ -999,10 +999,10 @@
           <script>
               $(document).ready(function(){
                   Swal.fire({
-                      html: '<img class="z-depth-3" style="margin-top: 10px" src="{% static "img/2022-thankyou-block.png" %}" width=100%">',
-                      showCancelButton: false,
-                      showCloseButton: true,
-                      showConfirmButton: false,
+                    html: '<h3 class="join-tv-title">Join The Village!</h3><p>Enter your email address to join the ETV mailing list.</p><form method="POST" action="/mailchimp-signup/" id="mailchimp-nav-form">{% csrf_token %}<div class="input-field"><input required id="mailchimp-email-nav" name="email" type="email"><label for="mailchimp-email-nav">Email</label></div><button type="submit" class="btn light-green darken-3 waves-effect" id="efbf-mailchimp">Add Me To The List!</button></form>',
+                    showCancelButton: false,
+                    showCloseButton: true,
+                    showConfirmButton: false,
                   })     
               })
               $('#mailchimp-efbf-form').submit(event, function(){
