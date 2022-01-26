@@ -45,3 +45,9 @@ def venForm(request):
         'nomination_form': nomination_form
         }
     )
+
+def ven_home(request):
+    context = {
+        "title": "ETV | Village Empowerment Network"
+    }
+    return render(request, 'ven-home.html', context)

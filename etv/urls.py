@@ -166,6 +166,7 @@ urlpatterns = [
     path('health-and-wellness/', include(("health.urls", "health"), namespace='health')),
     path('policy-and-power/', include(("policy.urls", "policy"), namespace='policy')),
     path('education-and-employment/', include(("education.urls", "education"), namespace='education')),
+    path('ed2CSwbdsV', ven_home, name='ven-home'),
     path('village-empowerment-network-nomination', venForm, name='ven-nomination'),
 ]
 
