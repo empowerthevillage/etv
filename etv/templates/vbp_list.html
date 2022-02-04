@@ -528,7 +528,7 @@
             {% csrf_token %}
                 <div class="input-field">
                 {{ nomination_form.business_name }}
-                <label>{{ nomination_form.business_name.label }}</label>
+                <label>{{ nomination_form.business_name.label }}<b>*</b></label>
                 </div>
                 <div class="input-field">
                     {{ nomination_form.owner_name }}
@@ -566,7 +566,7 @@
                         <option value="{{ category }}">{{ verbose }}</option>
                         {% endfor %}
                     </select>
-                    <label>Category</label>
+                    <label>Category<b>*</b></label>
                 </div>
                 <div class="input-field hidden subcat-div" cat="beauty">
                     <select name="subcategory">
@@ -1070,13 +1070,13 @@
                     </label>
                 </p>
                 </div>
-                <div class="input-field hidden" id="city-div">
+                <div class="input-field" id="city-div">
                 {{ nomination_form.city }}
-                <label>{{ nomination_form.city.label }}</label>
+                <label>{{ nomination_form.city.label }}<b>*</b></label>
                 </div>
                 <div class="input-field">
                     {{ nomination_form.state }}
-                    <label>{{ nomination_form.state.label }}</label>
+                    <label>{{ nomination_form.state.label }}<b>*</b></label>
                 </div>
                 <div class="input-field">
                 {{ nomination_form.county }}
@@ -1087,12 +1087,12 @@
                 {% else %}
                 <div class="input-field">
                     {{ nomination_form.nominator_name }}
-                    <label for="vbp-name">Your Name</label>
+                    <label for="vbp-name">Your Name<b>*</b></label>
                 </div>
 
                 <div class="input-field">
                     {{ nomination_form.nominator_email }}
-                    <label for="vbp-email">Your Email</label>
+                    <label for="vbp-email">Your Email<b>*</b></label>
                 </div>
                 {% endif %}
                 <button class="btn btn-large submit-btn nomination-submit" type="submit">
@@ -1123,16 +1123,6 @@ $('#category-select').on('change', function(){
     $('[cat="'+ category +'"]').removeClass('hidden')
     $('.subcat-div[cat!="'+ category +'"]').addClass('hidden')
 });
-$('[name="online-only"]').on('change', function(){
-    if($(this).val() === 'no'){
-        $('#city-div').removeClass('hidden')
-        
-    }
-    else {
-        $('#city-div').addClass('hidden')
-        $('#id_city').attr('value', '')
-    }
-})
 $('#vbp-nomination-form').submit(function(event){
     var subcategory = $('[name="subcategory"]');
     $(subcategory).each(function(){
@@ -1673,6 +1663,9 @@ $('#vbp-nomination-form').submit(function(event){
 <style>
     .btn-nominate:focus {
         background-color: rgb(196, 66, 66) !important
+    }
+    #vbp-nomination-form b {
+        color: red
     }
     @media only screen and (min-width: 601px){
         #nomination-form .input-field input{
