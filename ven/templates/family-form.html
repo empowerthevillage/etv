@@ -4,264 +4,199 @@
 {% block content %}
 <div id="vbp-nomination-form" class="row" style="background:url('https://empowerthevillage.s3.amazonaws.com/static/img/VBP+collage.png'); background-size: 100%; height:100%">
   <div class="col s12" style="background-color: rgba(255, 255, 255, 0.954); height: 100%">
-  <h6 class="center-align" id="ven-nomination-form-title" style="color: #01a650; padding-bottom: 0; margin-top: 40px">Village Empowerment Network™ <br>Business Registration Form</h6>
+  <h6 class="center-align" id="ven-nomination-form-title" style="color: #01a650; padding-bottom: 0; margin-top: 40px">Village Empowerment Network™ <br>Personal Registration Form</h6>
   <form class="col s12 l10 offset-l1 xl8 offset-xl2" method="POST" action="/village-empowerment-network-nomination" id="nomination-form">
       {% csrf_token %}
       <div class="col s12 m6 l4">
         <div class="input-field">
           <input name="nominator-name" id="vbp-name" type="text" required>
-          <label for="vbp-name">Your Name<b class="required">*</b></label>
+          <label for="vbp-name">Name<b class="required">*</b></label>
         </div>
       </div>
       <div class="col s12 m6 l4">
         <div class="input-field">
             <input id="vbp-email" name="nominator-email" type="text" required>
-            <label for="vbp-email">Your Email<b class="required">*</b></label>
-        </div>
-      </div>
-      
-      <div class="col s12 m6 l4">
-        <div class="input-field">
-          <input id="owner-name" name="owner-name" type="text" required>
-          <label for="owner-name">Business Owner Name(s)<b class="required">*</b></label>
+            <label for="vbp-email">Email<b class="required">*</b></label>
         </div>
       </div>
       <div class="col s12 m6 l4">
         <div class="input-field">
-          {{ nomination_form.business_name }}
-          <label>{{ nomination_form.business_name.label }}<b class="required">*</b></label>
-        </div>
-        
-      </div>
-      <div class="col s12 m6 l8">
-        <div class="input-field">
-          {{ nomination_form.website }}
-          <label>{{ nomination_form.website.label }}</label>
+          {{ nomination_form.phone }}
+          <label>Phone<b class="required">*</b></label>
         </div>
       </div>
-            <div class="col s12 m6 l4">
+            <div class="col s12 m6 ">
               <div class="input-field">
                 {{ nomination_form.city }}
-                <label>{{ nomination_form.city.label }}<b class="required">*</b></label>
+                <label>City<b class="required">*</b></label>
               </div>
             </div>
-            <div class="input-field col s12 m6 l4">
+            <div class="input-field col s12 m6 ">
               {{ nomination_form.state }}
-              <label>Business State<b class="required">*</b></label>
+              <label>State<b class="required">*</b></label>
           </div>
           
-            <div class="col s12 m6 l4">
-              <div class="input-field">
-                {{ nomination_form.phone }}
-                <label>{{ nomination_form.phone.label }}<b class="required">*</b></label>
+            
+            <div class="left-align col s12">
+                <p class="owned-label">Employment Status<b class="required">*</b></p>
+                  
+                  <p class="col s3">
+                    <label>
+                      <input type="radio" name="owned" value="False" class="with-gap">
+                      <span>Employed</span>
+                    </label>
+                  </p>
+                  <p class="col s3">
+                    <label>
+                      <input type="radio" name="owned" value="False" class="with-gap">
+                      <span>Self-Employed</span>
+                    </label>
+                  </p>
+                  <p class="col s3">
+                    <label>
+                      <input type="radio" name="owned" value="True" class="with-gap">
+                      <span>Unemployed</span>
+                    </label>
+                  </p>
               </div>
-            </div>
-            <div class="input-field col s12 m6">
-              {{ nomination_form.category }}
-              
-              <label>{{ nomination_form.category.label }}<b class="required">*</b></label>
-              
-            </div>
-           
-            <div class="input-field col s12 m6">
-              {{ nomination_form.subcategory }}
-              <label>{{ nomination_form.subcategory.label }}</label>
-              
-            </div>
-            <div class="col s12">
-              <div class="input-field col s8 m4" style="margin-left:-7">
-                <i class="fab fa-instagram prefix" ></i>
-                {{ nomination_form.instagram }}
-              </div>
-              <div class="input-field col s8 m4">
-                <i class="fab fa-facebook prefix"></i>
-                {{ nomination_form.facebook }}
-              </div>
-              <div class="input-field col s8 m4">
-                <i class="fab fa-twitter prefix"></i>
-                {{ nomination_form.twitter }}
-              </div>
-          </div>
-      <div class="left-align col s12">
-        <p class="owned-label">{{ nomination_form.owned.label }}<b class="required">*</b></p>
-          <p class="col s3">
-            <label>
-              <input type="radio" name="owned" value="True" class="with-gap">
-              <span>Yes</span>
-            </label>
-          </p>
-          <p class="col s3">
-            <label>
-              <input type="radio" name="owned" value="False" class="with-gap">
-              <span>No</span>
-            </label>
-          </p>
-      </div>
+    <div class="row">
       <div class="col s12 m6">
-        <p>Number of Years in Business<b class="required">*</b></p>
-        
+        <p>Age Range<b class="required">*</b></p>
         <p>
             <label>
               <input class="with-gap" value="Less than 2 years" name="years-active" type="radio" required/>
-              <span>Less than 2 years</span>
+              <span>Under 18</span>
             </label>
           </p>
           <p>
             <label>
               <input class="with-gap" value="3-5 years" name="years-active" type="radio"  />
-              <span>3-5 years</span>
+              <span>18-30 years</span>
             </label>
           </p>
           <p>
             <label>
               <input class="with-gap" value="5-10 years" name="years-active" type="radio"  />
-              <span>5-10 years</span>
+              <span>31-45 years</span>
             </label>
           </p>
           <p>
             <label>
               <input class="with-gap" value="10-15 years" name="years-active" type="radio"  />
-              <span>10-15 years</span>
+              <span>46-64 years</span>
             </label>
           </p>
           <p>
             <label>
               <input class="with-gap"value="More than 15 years" name="years-active" type="radio"/>
-              <span>More than 15 years</span>
+              <span>65 and older</span>
             </label>
           </p>
       </div>
       <div class="col s12 m6">
-        <p>Number of Employees<b class="required">*</b>
+        <p>Household Size<b class="required">*</b>
         </p>
         <p>
           <label>
             <input class="with-gap" value="0-4" name="employees" type="radio" required/>
-            <span>0-4 people</span>
+            <span>1 person</span>
           </label>
         </p>
         <p>
           <label>
             <input class="with-gap" value="5-10" name="employees" type="radio"  />
-            <span>5-10 people</span>
+            <span>2-3 people</span>
             
           </label>
         </p>
         <p>
           <label>
             <input class="with-gap" value="11-20" name="employees" type="radio"  />
-            <span>11-20</span>
+            <span>4 people</span>
             
           </label>
         </p>
         <p>
           <label>
             <input class="with-gap" value="21-30" name="employees" type="radio"  />
-            <span>21-30 people</span>
+            <span>More than 4 people</span>
             
           </label>
         </p>
-        <p>
-          <label>
-            <input class="with-gap" value="More than 30" name="employees" type="radio"  />
-            <span>More than 30 people</span>
-            
-          </label>
-        </p> 
       </div>
+    </div>
+    <div class="row">
+        <p>Estimated 2021 Income<b class="required">*</b>
       <div class="col s12 m6">
-        <p>Estimated 2021 Revenue<b class="required">*</b>
+        
           <p>
             <label>
-              <input class="with-gap" value="Less than $50,000" name="revenue" type="radio" required/>
-              <span>Less than $50,000</span>
+              <input class="with-gap" value="Less than $30,000" name="revenue" type="radio" required/>
+              <span>Less than $30,000</span>
               
             </label>
           </p>
           <p>
             <label>
-              <input class="with-gap" value="$51,000-$100,000" name="revenue" type="radio"  />
-              <span>$51,000-$100,000</span>
+              <input class="with-gap" value="$31,000-$50,000" name="revenue" type="radio"  />
+              <span>$30,000-$50,000</span>
               
             </label>
           </p>
           <p>
             <label>
-              <input class="with-gap" value="$101,000-$250,000" name="revenue" type="radio"  />
-              <span>$101,000-$250,000</span>
+              <input class="with-gap" value="$51,000-$75,000" name="revenue" type="radio"  />
+              <span>$50,000-$75,000</span>
               
             </label>
           </p>
           <p>
             <label>
-              <input class="with-gap" value="$251,000-$500,000" name="revenue" type="radio"  />
-              <span>$251,000-$500,000</span>
-              
-            </label>
-          </p>
-          <p>
-            <label>
-              <input class="with-gap" value="More than $500,000" name="revenue" type="radio" />
-              <span>More than $500,000</span>
+              <input class="with-gap" value="$75,001-$100,000" name="revenue" type="radio"  />
+              <span>$75,000-$100,000</span>
               
             </label>
           </p>
           
-        </p>
       </div>
       <div class="col s12 m6">
-        <p>Current Business Structure:</p>
-        <input class="hidden" type="radio" value='' name="structure" checked>
         <p>
-          <label>
-            <input class="with-gap" value="Sole Proprietorship" name="structure" type="radio"  />
-            <span id="spu">Sole Proprietorship (unincorporated)</span>
-            
-          </label>
-        </p>
-        <p>
-          <label>
-            <input class="with-gap" value="Incorporated Entity" name="structure" type="radio" />
-            <span>Incorporated Entity (Inc.)</span>
-            
-          </label>
-        </p>
-        <p>
-          <label>
-            <input class="with-gap" value="Official Partnership" name="structure" type="radio" />
-            <span>Official Partnership (e.g., LP)</span>
-            
-          </label>
-        </p>
-        <p>
-          <label>
-            <input class="with-gap" value="LLC" name="structure" type="radio" />
-            <span id="llc">Limited Liability Corporation (LLC)</span>
-            
-          </label>
-        </p>
-        <p>
-          <label>
-            <input class="with-gap" value="None" name="structure" type="radio" />
-            <span>None of the Above</span>
-            
-          </label>
-        </p>
+            <label>
+              <input class="with-gap" value="$101,000-$250,000" name="revenue" type="radio"  />
+              <span>$100,000-$250,000</span>
+              
+            </label>
+          </p>
+          <p>
+            <label>
+              <input class="with-gap" value="$75,001-$100,000" name="revenue" type="radio"  />
+              <span>$250,000-$500,000</span>
+              
+            </label>
+          </p>
+          <p>
+            <label>
+              <input class="with-gap" value="More than $100,000" name="revenue" type="radio" />
+              <span>More than $500,000</span>
+              
+            </label>
+          </p>
       </div>
+    </div>
       <div class="col s12">
         <p><b>Rank Your Top 3 Business Priorities in Order of Need from 1-3.</b></p>
-        <p>Revenue/Sales, Business Loans/Acquire Financing, Staffing/Employees, Marketing/Advertising, <br>E-Commerce, Exiting, Estate Planning, Other</p>
+        <p>Budgeting/Saving, Home Ownership, Home Ownership, Tax Planning, College Planning/Saving, Retirment Planning, Exploring Entrepreneurship, Transferring Wealth/Estate Planning, Other</p>
         <div class="col s12 m8" style="margin-top: 20px">
           <div class="input-field">
             <select name="priority1" id="priority1" required>
               <option value="" disabled selected>Select Your #1 Priority</option>
-              <option value="Revenue/Sales">Revenue/Sales</option>
-              <option value="Business Loans/Acquire Financing">Business Loans/Acquire Financing</option>
-              <option value="Staffing/Employees">Staffing/Employees</option>
-              <option value="Marketing/Advertising">Marketing/Advertising</option>
-              <option value="E-Commerce">E-Commerce</option>
-              <option value="Exiting">Exiting</option>
-              <option value="Estate Planning">Estate Planning</option>
+              <option value="Revenue/Sales">Budgeting/Saving</option>
+              <option value="Revenue/Sales">Home Ownership</option>
+              <option value="Revenue/Sales">Tax Planning</option>
+              <option value="Revenue/Sales">College Planning/Saving</option>
+              <option value="Business Loans/Acquire Financing">Retirment Planning</option>
+              <option value="Staffing/Employees">Exploring Entrepreneurship</option>
+              <option value="Marketing/Advertising">Transferring Wealth/Estate Planning</option>
               <option value="Other" id="other1">Other</option>
             </select>
             <label>#1 Priority<b class="required">*</b></label>
@@ -273,15 +208,15 @@
         <div class="col s12 m8" style="margin-top: 20px">
           <div class="input-field">
             <select name="priority2" id="priority2">
-              <option value="" selected>Select Your #2 Priority</option>
-              <option value="Revenue/Sales">Revenue/Sales</option>
-              <option value="Business Loans/Acquire Financing">Business Loans/Acquire Financing</option>
-              <option value="Staffing/Employees">Staffing/Employees</option>
-              <option value="Marketing/Advertising">Marketing/Advertising</option>
-              <option value="E-Commerce">E-Commerce</option>
-              <option value="Exiting">Exiting</option>
-              <option value="Estate Planning">Estate Planning</option>
-              <option value="Other" id="other2">Other</option>
+                <option value="" disabled selected>Select Your #2 Priority</option>
+                <option value="Revenue/Sales">Budgeting/Saving</option>
+                <option value="Revenue/Sales">Home Ownership</option>
+                <option value="Revenue/Sales">Tax Planning</option>
+                <option value="Revenue/Sales">College Planning/Saving</option>
+                <option value="Business Loans/Acquire Financing">Retirment Planning</option>
+                <option value="Staffing/Employees">Exploring Entrepreneurship</option>
+                <option value="Marketing/Advertising">Transferring Wealth/Estate Planning</option>
+                <option value="Other" id="other1">Other</option>
             </select>
             <label>#2 Priority</label>
           </div>
@@ -292,15 +227,15 @@
         <div class="col s12 m8" style="margin-top: 20px">
           <div class="input-field">
             <select name="priority3" id="priority">
-              <option value="" selected>Select Your #3 Priority</option>
-              <option value="Revenue/Sales">Revenue/Sales</option>
-              <option value="Business Loans/Acquire Financing">Business Loans/Acquire Financing</option>
-              <option value="Staffing/Employees">Staffing/Employees</option>
-              <option value="Marketing/Advertising">Marketing/Advertising</option>
-              <option value="E-Commerce">E-Commerce</option>
-              <option value="Exiting">Exiting</option>
-              <option value="Estate Planning">Estate Planning</option>
-              <option value="Other" id="other3">Other</option>
+                <option value="" disabled selected>Select Your #3 Priority</option>
+                <option value="Revenue/Sales">Budgeting/Saving</option>
+                <option value="Revenue/Sales">Home Ownership</option>
+                <option value="Revenue/Sales">Tax Planning</option>
+                <option value="Revenue/Sales">College Planning/Saving</option>
+                <option value="Business Loans/Acquire Financing">Retirment Planning</option>
+                <option value="Staffing/Employees">Exploring Entrepreneurship</option>
+                <option value="Marketing/Advertising">Transferring Wealth/Estate Planning</option>
+                <option value="Other" id="other1">Other</option>
             </select>
             <label>#3 Priority</label>
           </div>

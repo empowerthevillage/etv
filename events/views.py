@@ -111,6 +111,40 @@ def ticket_cart_update(request):
         'ticket': str(item_obj.ticket)
     }
     return JsonResponse(data)
+
+def ticket_cart_update(request):
+    event_title         = request.POST.get('event')
+    event               = Event.objects.filter(title=event_title).first()
+    cart_obj            = TicketCart.objects.new_or_get(request, event)
+    quantity            = request.POST.get('quantity')
+    type_id             = request.POST.get('tid')
+    item_obj            = ticketItem.objects.filter(cart=cart_obj).filter(ticket=type_id).first()
+    previous_quantity   = 0
+    if item_obj is not None:
+        previous_quantity = item_obj.quantity
+        item_obj.quantity = quantity
+    else:
+        item_obj = ticketItem.objects.create()
+        item_obj.quantity = quantity
+        item_obj.ticket = TicketType.objects.filter(id=type_id).first()
+        item_obj.cart = cart_obj
+        item_obj.event = item_obj.ticket.event
+
+    item_obj.save()
+    price = int(quantity) * item_obj.ticket.price
+    event = item_obj.event
+    data = {
+        'price': '$%s' %(price),
+        'priceTarget': '.%s-price' %(item_obj.pk),
+        'quantityTarget': '.%s-quantity' %(item_obj.pk),
+        'quantity': item_obj.quantity,
+        'total': '$%s' %(cart_obj.total),
+        'row': '.%s-row' %(item_obj.pk),
+        'previousQuantity': previous_quantity,
+        'pk': item_obj.pk,
+        'ticket': str(item_obj.ticket)
+    }
+    return JsonResponse(data)
     
 def golf(request):
     event = Event.objects.get(slug='power-swing-classic-golf-event')
