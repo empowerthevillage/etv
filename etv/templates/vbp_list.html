@@ -29,7 +29,7 @@
         
                     <p><b>Village Black Pages™</b> (VBP) is the critical resource Americans can rely on to locate Black-owned businesses to support when responding to our charge to <b>Make Every Friday, Black Friday™!</b> All Black-owned businesses are listed for <b style="color: rgb(15, 155, 15)">FREE</b> in the Village Black Pages™!
                     <p>Our goal is to elevate the overall prosperity of the Black community by building wealth and creating jobs. </p>
-                    <a href="#vbp-nomination-form" class="btn btn-nominate waves-effect">NOMINATE YOUR FAVORITE BLACK-OWNED BUSINESS TODAY!</a>
+                    <a href="{{ nomination_url }}" class="btn btn-nominate waves-effect">NOMINATE YOUR FAVORITE BLACK-OWNED BUSINESS TODAY!</a>
                 </div>
         </div>
         
@@ -526,6 +526,7 @@
         <h6 id="vbp-nomination-form-title">Village Black Pages™ Nomination Form</h6>
         <form method="POST" style="padding-left:10%; padding-right:10%;padding-bottom: 10%;" id="nomination-form">
             {% csrf_token %}
+                
                 <div class="input-field">
                 {{ nomination_form.business_name }}
                 <label>{{ nomination_form.business_name.label }}<b>*</b></label>
@@ -538,12 +539,16 @@
                 {{ nomination_form.website }}
                 <label>{{ nomination_form.website.label }}</label>
                 </div>
-
-                <div class="input-field">
-                {{ nomination_form.phone }}
-                <label>{{ nomination_form.phone.label }}</label>
+                <div class="row" style="margin-bottom: 0">
+                <div class="input-field col s12 m7">
+                    {{ nomination_form.business_email }}
+                    <label>{{ nomination_form.business_email.label }}</label>
+                    </div>
+                    <div class="input-field col s12 m5">
+                    {{ nomination_form.phone }}
+                    <label>{{ nomination_form.phone.label }}</label>
+                    </div>
                 </div>
-
                 <div class="row">
                     <div class="input-field col s4" style="margin-left:-7">
                     <i class="fab fa-instagram prefix" ></i>
@@ -1060,13 +1065,13 @@
                 <p>
                     <label>
                         <input class="with-gap" name="online-only" type="radio" value="yes"/>
-                        <span>Online Only</span>
+                        <span>Online Only - Enter city and state of mailing address/HQ below</span>
                     </label>
                 </p>
                 <p style="margin-bottom: 30px">
                     <label>
                         <input class="with-gap" name="online-only" type="radio" value="no"/>
-                        <span>Physical Presence</span>
+                        <span>Physical Presence/Hybrid</span>
                     </label>
                 </p>
                 </div>
@@ -1135,11 +1140,7 @@ $('#vbp-nomination-form').submit(function(event){
 })
 </script>
 <script>
-    $('.btn-nominate').click(function(){
-        $([document.documentElement, document.body]).animate({
-                scrollTop: $("#vbp-nomination-form").offset().top
-                }, 500);
-    })
+
     $('svg').resize(function(event){
         event.preventDefault();
       })

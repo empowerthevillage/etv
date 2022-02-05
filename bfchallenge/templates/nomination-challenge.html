@@ -8,28 +8,64 @@
     <div class="row center-align" style="margin-top:0px">
       <div class="col s10 offset-s1 login-card">
         <h6 id="vbp-nomination-form-title">Village Black Pages™ Nomination Form</h6>
-          <h7 class="bf-instructions" style="color:rgb(165, 55, 55)">Nomination Challenge Rules: Player to identify and submit the most, new Black-owned businesses for free listing in ETV’s Village Black Pages wins!
-            <p style="font-weight:200; font-size:14px; color:rgb(92, 92, 92); margin-top:0">*Nominated businesses must operate within our 25-state* footprint or online and be submitted through ETV’s portal. Ownership status will be validated by ETV.</p>
-          </h7>
+        <p class="right-align" style="margin-top: 0; margin-bottom: 0; margin-right: 50px;"><b class="required">*</b> = required field</p>
           <form method="POST" style="padding-left:10%; padding-right:10%;" id="nomination-form">
             {% csrf_token %}
-      
-            <div class="input-field">
-              {{ nomination_form.business_name }}
-              <label>{{ nomination_form.business_name.label }}<b>*</b></label>
-            </div>
-            <div class="input-field">
-              {{ nomination_form.owner_name }}
-              <label>{{ nomination_form.owner_name.label }}<b></b></label>
+            <div class="row" style="margin-bottom: 0">
+              <div class="input-field col s12 m5 l6">
+                {{ nomination_form.business_name }}
+                <label>{{ nomination_form.business_name.label }}<b>*</b></label>
+              </div>
+              <div class="input-field col s12 m7 l6">
+                {{ nomination_form.owner_name }}
+                <label>{{ nomination_form.owner_name.label }}<b></b></label>
+              </div>
             </div>
             <div class="row" style='margin-bottom:0'>
-              <div class="input-field col s12 m8">
+              <div class="input-field col s12 l4">
                 {{ nomination_form.website }}
                 <label>{{ nomination_form.website.label }}</label>
               </div>
-              <div class="input-field col s12 m4">
+              <div class="input-field col s12 m6 l4">
+                {{ nomination_form.business_email }}
+                <label>{{ nomination_form.business_email.label }}</label>
+              </div>
+              <div class="input-field col s12 m6 l4">
                 {{ nomination_form.phone }}
                 <label>{{ nomination_form.phone.label }}</label>
+              </div>
+            </div>
+            <div class="left-align" style="margin-bottom: 0">
+              <p>This Business Operates:</p>
+          <p>
+              <label>
+                  <input class="with-gap" name="online-only" type="radio" value="yes"/>
+                  <span class="online-span">Online Only - Enter city and state of mailing address/HQ below</span>
+              </label>
+          </p>
+          <p>
+              <label>
+                  <input class="with-gap" name="online-only" type="radio" value="no"/>
+                  <span>Physical Presence/Hybrid</span>
+              </label>
+          </p>
+          </div>
+            <div class="row">
+              <div class="input-field col s6 l4">
+                {{ nomination_form.city }}
+                <label>{{ nomination_form.city.label }}<b>*</b></label>
+              </div>
+              <div class="input-field col s6 l4">
+                  <select>
+                    <option value="" selected>Select State<b class="required">*</b></option>
+                    {% for x,y in states %}
+                    <option value="{{ x }}">{{ y }}</option>
+                    {% endfor %}
+                  </select>
+              </div>
+              <div class="input-field col s12 l4">
+                {{ nomination_form.county }}
+                <label>{{ nomination_form.county.label }}</label>
               </div>
             </div>
             <div class="row">
@@ -49,65 +85,45 @@
                 <label>@Twitter</label>
               </div>
             </div>
-            <div class="input-field">
-              {{ nomination_form.category }}
-              <label>{{ nomination_form.category.label }}<b>*</b></label>
-            </div>
-            <div class="input-field">
-              {{ nomination_form.subcategory }}
-              <label>{{ nomination_form.subcategory.label }}</label>
-            </div>
-        
-          <div class="row">
-            <div class="input-field col s6">
-              {{ nomination_form.city }}
-              <label>{{ nomination_form.city.label }}<b>*</b></label>
-            </div>
-            <div class="input-field col s6">
-                {{ nomination_form.state }}
-                <label>{{ nomination_form.state.label }}<b>*</b></label>
-            </div>
-          </div>
-            <div class="input-field">
-              {{ nomination_form.county }}
-              <label>{{ nomination_form.county.label }}</label>
-            </div>
-            
-            <div class="left-align">
+            <div class="row" style="margin-bottom: 0">
+                <div class="input-field col s12 l6">
+                  {{ nomination_form.category }}
+                  <label>{{ nomination_form.category.label }}<b>*</b></label>
+                </div>
+                <div class="input-field col s12 l6">
+                  {{ nomination_form.subcategory }}
+                  <label>{{ nomination_form.subcategory.label }}</label>
+                </div>
+              </div>
               
-              <p class="onlineonly-label">{{ nomination_form.online_only.label }}</p>
-              {% for radio in nomination_form.online_only %}
-                <p>
-                  <label>
-                    <input type="radio" name="online_only" class="with-gap">
-                    <span> {{ radio.choice_label }}</span>
-                  </label>
-                </p>
-              {% endfor %}
-            </div>
-            <div class="left-align">
-            <p class="owned-label">{{ nomination_form.owned.label }}</p>
+          
             
+          
+            <div class="left-align">
+            <p class="owned-label" style="color: black">{{ nomination_form.owned.label }}</p>
+            <div class="valign-wrapper">
               {% for radio in nomination_form.owned %}
-                <p>
+                <p style="padding-right: 20px">
                   <label>
                     <input type="radio" name="owned" class="with-gap">
                     <span> {{ radio.choice_label }}</span>
                   </label>
                 </p>
               {% endfor %}
+              </div>
             </div>
             <div class="left-align">
-              <p class="recommended-label">{{ nomination_form.recommended.label }}</p>
-              
+              <p class="recommended-label" style="color: black">{{ nomination_form.recommended.label }}</p>
+              <div class="valign-wrapper">
                 {% for radio in nomination_form.recommended %}
-                  <p>
+                  <p style="padding-right: 20px">
                     <label>
                       <input type="radio" name="recommended" class="with-gap">
                       <span> {{ radio.choice_label }}</span>
                     </label>
                   </p>
                 {% endfor %}
+                </div>
               </div>
             {% if user.is_authenticated %}
             {% else %}
@@ -133,7 +149,13 @@
   </div>
   
   <style>
+    .online-span {
+      margin-bottom: 30px
+    }
     @media only screen and (min-width: 663px){
+      .online-span {
+      margin-bottom: 0
+    }
       .login-card {
         
         padding-top:20px !important; 
@@ -201,7 +223,7 @@
      font-family: 'Poppins';
       font-weight: 300;
       letter-spacing: 1px;
-      font-size:14px;
+      font-size:16px;
       padding-bottom:10px
     }
     /* label focus color */
@@ -221,7 +243,7 @@
     .select-dropdown {
       font-family: 'Poppins';
       font-weight: 300;
-      color:rgb(60, 60, 60);
+      color:rgb(128, 128, 128);
       letter-spacing: 1px;
       padding-top: 10px
     }

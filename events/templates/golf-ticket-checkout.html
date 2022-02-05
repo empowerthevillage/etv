@@ -22,8 +22,8 @@
                             <td class="col s12 m9">
                                 <p class="ticket-title">Single Golfer</p>
                                 <p class="ticket-price"><b style="text-decoration: line-through; font-weight:400">$395</b> <b class="sale">&nbsp$375</b> - Early Bird Special for the First 50 Registrants!</p>
-                                <p class="ticket-description">Includes all golf fees, cart, lunch, post-tournament 3-hour cocktail reception and awards
-                                    banquet/buffet</p>
+                                <p class="ticket-description">Includes all golf fees, cart, golfer gift, lunch, post-tournament 3-hour cocktail reception and awards
+                                  banquet/buffet, plus an ETV swag bag</p>
                             </td>
                             <td class="col s12 m3">
                                 <div class="input-field ticket-quantity-input">
@@ -51,12 +51,13 @@
                         </tr>
                         <tr class="row ticket-row">
                             <td class="col s12 m9">
-                                <p class="ticket-title">Member For A Day</p>
+                                <p class="ticket-title">Member For A Day / Golf Clinic</p>
                                 <p class="ticket-price"><b style="text-decoration: line-through; font-weight: 400">$395</b> <b class="sale">&nbsp$375</b> - Early Bird Special for the First 50 Registrants!</p>
-                                <p class="ticket-description">Take advantage of any of the many luxurious amenities at Fiddler's Elbow! Choose from golf clinic and driving range,
-                                    tennis clinic, a yoga class, massage therapy, Boot Camp fitness/exercise or swimming and lounging at the pool. You’ll be notified ahead of time with your
-                                    schedule and availability. Also includes lunch and 3-hour cocktail reception and awards banquet/buffet.</p>
-                                    
+                                <p class="ticket-description">Take advantage of any of the many luxurious amenities at Fiddler's Elbow! Choose from the
+                                  following offerings: Golf clinic - includes ~1 hour lesson with complimentary golf club rentals and
+                                  driving range access, tennis clinic, yoga/fitness classes, massage therapy and/or swimming and
+                                  lounging at the pool. You’ll be notified ahead of time with your schedule and availability. Also
+                                  includes lunch, 3-hour cocktail reception and awards banquet/buffet plus an ETV swag bag</p>
                             </td>
                             <td class="col s12 m3">
                                 <div class="input-field ticket-quantity-input">
@@ -86,8 +87,8 @@
                             <td class="col s12 m9">
                                 <p class="ticket-title">Foursome</p>
                                 <p class="ticket-price">$1,500</p>
-                                <p class="ticket-description">Includes all golf fees, cart, lunch, post-tournament 3-hour cocktail reception and awards
-                                    banquet/buffet, foursome photo</p>
+                                <p class="ticket-description">Includes all golf fees, cart, golfer gift, lunch, post-tournament 3-hour cocktail reception and awards
+                                  banquet/buffet, foursome photo plus an ETV swag bag</p>
                                 
                             </td>
                             <td class="col s12 m3">
@@ -114,46 +115,26 @@
                                 </div>
                             </td>
                         </tr>
-                        <tr class="row ticket-row">
-                            <td class="col s12 m9">
-                                <p class="ticket-title">Golf Clinic</p>
-                                <p class="ticket-price">$295</p>
-                                <p class="ticket-description">Golf Clinic includes 90-minute clinic with lesson that features pitching, chipping, bunker play
-                                    and the art of the famous “flop shot.” Use of private driving range for a 90-minute clinic on full swing and fairway bunkers. Includes complimentary golf club rentals,
-                                    lunch, ETV swag bag, post-tournament 3-hour cocktail reception and awards banquet/buffet.</p>
-                          
-                            </td>
-                            <td class="col s12 m3">
-                                <div class="input-field ticket-quantity-input">
-                                    <select class="qty-counter" tid="3">
-                                    {% if clinic_quantity.quantity > 0 %}
-                                    <option value="{{ clinic_quantity.quantity }}" selected>{{ clinic_quantity.quantity }}</option>
-                                    <option value="0">0</option>
-                                    {% else %}
-                                    <option value="0" selected>0</option>
-                                    {% endif %}
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                    <option value="6">6</option>
-                                    <option value="7">7</option>
-                                    <option value="8">8</option>
-                                    <option value="9">9</option>
-                                    <option value="10">10</option>
-                                    </select>
-                                    <label>Quantity</label>
-                                </div>
-                            </td>
-                        </tr>
                         
+                        <tr class="row ticket-row">
+                          <td class="col s12 m9">
+                              <p class="ticket-title">Power Swing Classic Donation</p>
+                              <p class="ticket-description">Empower ETV to restore prosperity, peace, and power to the Black community!</p>
+                              
+                          </td>
+                          <td class="col s4 m3">
+                              <div class="input-field">
+                                  <input type="text" id="custom-donation-1" placeholder="$">
+                                  <label for="custom-donation-1">Enter Amount</label>
+                              </div>
+                          </td>
+                      </tr>
                     </tbody>
                 </table>
                 
             </form>
             <ul class="collapsible popout">
-              <li>
+              <li class="active">
                 <div class="collapsible-header" style="align-items: center; justify-content: center;"><p class="ticket-title valign-wrapper" style="padding: 0; margin: 0; color: black">Sponsorships <span class="material-icons">
                   keyboard_arrow_down
                   </span></p></div>
@@ -380,12 +361,8 @@
                 </div>
             </div>
             <img class="z-depth-1" src="{% static 'img/golf-header.png' %}" width=100% style="margin-top: 20px">
-            <div class="card center-align" style="padding:1% 5%; width: 100%; margin-top: 20px">
-              
-              <p class="text">Event Registration & Lunch Service Begins at <b style="color: #01a650">11:00am</b></p>
-              <p class="text">Shotgun Starts at <b style="color: #bf1e2d">12:30pm</b></p>
-              <p class="text">Premium Open Bar & Dinner from <b style="color: #01a650">5:30PM-8:30PM</b></p>
-              
+            <div class="card center-align" style="padding:2% 5%; width: 100%; margin-top: 20px">
+              <a>Click for Event Brochure Details!</a>
             </div>
         </div>
     </div>
@@ -725,7 +702,7 @@
     }
     .modal-date {
         font-family: oskar-inline, sans-serif;
-        font-size: 14px
+        font-size: 16px
     }
     .ticket-description{
         font-size: 12px
@@ -758,7 +735,7 @@
     @media only screen and (min-width: 601px){
       .modal-date {
         font-family: oskar-inline, sans-serif;
-        font-size: 20px
+        font-size: 24px
     }
         .btn-ticket {
             font-size: 20px;
@@ -810,6 +787,7 @@
     }
 </style>
 <script>
+    $('#custom-donation-1').maskMoney({prefix:'$ '})
     $('.qty-counter').on('change', function(){
         var qty = $(this).val()
         var tid = $(this).attr('tid')

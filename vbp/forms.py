@@ -118,7 +118,6 @@ CATEGORY_CHOICES_PLAIN = (
     'Other',
 )
 STATE_CHOICES = (
-    ('', 'Select State'),
     ('AL', 'Alabama'),
     ('AK', 'Alaska'),
     ('AZ', 'Arizona'),
@@ -343,6 +342,7 @@ SUBCATEGORY_CHOICES = (
 
 class NominationForm(forms.Form):
     business_name = forms.CharField(label='Business Name', widget=forms.TextInput(attrs={'class':'textfield'}), label_suffix='')
+    business_email = forms.EmailField(label="Business Email", widget=forms.EmailInput(attrs={'class':'textfied'}), label_suffix='')
     website = forms.CharField(label='Business Website', widget=forms.TextInput(attrs={'class':'textfield'}), label_suffix='', required=False)
     instagram = forms.CharField(label='Instagram', widget=forms.TextInput(attrs={'class':'textfield', 'placeholder':'@Instagram'}), label_suffix='', required=False)
     facebook = forms.CharField(label='Facebook', widget=forms.TextInput(attrs={'class':'textfield', 'placeholder':'@Facebook'}), label_suffix='', required=False)

@@ -13,7 +13,59 @@ from content.models import contact_submission
 from django.core.mail import send_mail
 
 import sweetify
-
+STATE_CHOICES = (
+    ('AL', 'Alabama'),
+    ('AK', 'Alaska'),
+    ('AZ', 'Arizona'),
+    ('AR', 'Arkansas'),
+    ('CA', 'California'),
+    ('CO', 'Colorado'),
+    ('CT', 'Connecticut'),
+    ('DE', 'Delaware'),
+    ('DC', 'District of Columbia'),
+    ('FL', 'Florida'),
+    ('GA', 'Georgia'),
+    ('HI', 'Hawaii'),
+    ('ID', 'Idaho'),
+    ('IL', 'Illinois'),
+    ('IN', 'Indiana'),
+    ('IA', 'Iowa'),
+    ('KS', 'Kansas'),
+    ('KY', 'Kentucky'),
+    ('LA', 'Louisiana'),
+    ('ME', 'Maine'),
+    ('MD', 'Maryland'),
+    ('MA', 'Massachusetts'),
+    ('MI', 'Michigan'),
+    ('MN', 'Minnesota'),
+    ('MS', 'Mississippi'),
+    ('MO', 'Missouri'),
+    ('MT', 'Montana'),
+    ('NE', 'Nebraska'),
+    ('NV', 'Nevada'),
+    ('NH', 'New Hampshire'),
+    ('NJ', 'New Jersey'),
+    ('NM', 'New Mexico'),
+    ('NY', 'New York'),
+    ('NC', 'North Carolina'),
+    ('ND', 'North Dakota'),
+    ('OH', 'Ohio'),
+    ('OK', 'Oklahoma'),
+    ('OR', 'Oregon'),
+    ('PA', 'Pennsylvania'),
+    ('RI', 'Rhode Island'),
+    ('SC', 'South Carolina'),
+    ('SD', 'South Dakota'),
+    ('TN', 'Tennessee'),
+    ('TX', 'Texas'),
+    ('UT', 'Utah'),
+    ('VT', 'Vermont'),
+    ('VA', 'Virginia'),
+    ('WA', 'Washington'),
+    ('WV', 'West Virginia'),
+    ('WI', 'Wisconsin'),
+    ('WY', 'Wyoming'),
+)
 def bingo(request):
     bingo = bingo_card.objects.all()
     contact_form = ContactForm()
@@ -524,7 +576,8 @@ def nomination_challenge(request):
         nomination_form = NominationForm()
     context = {
         'title': 'VBP Nomination Challenge | ETV',
-        'nomination_form': nomination_form
+        'nomination_form': nomination_form,
+        'states': STATE_CHOICES,
     }
     return render(request, 'nomination-challenge.html', context)
 
