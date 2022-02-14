@@ -161,6 +161,15 @@ def golf(request):
     platinum = TicketType.objects.filter(title='Platinum Sponsor').first()
     diamond = TicketType.objects.filter(title='Diamond Sponsor').first()
 
+    putting = TicketType.objects.filter(title='Putting Contest Sponsor').first()
+    beverage = TicketType.objects.filter(title='Beverage Station Sponsor').first()
+    golfcart = TicketType.objects.filter(title='Golf Cart Sponsor').first()
+    tee = TicketType.objects.filter(title='Power Swing Tee Sponsor').first()
+    golfergift = TicketType.objects.filter(title='Golfer Gift Sponsor').first()
+    reception = TicketType.objects.filter(title='Cocktail Reception Sponsor').first()
+    holeinone = TicketType.objects.filter(title='Hole In One Sponsor').first()
+    awards = TicketType.objects.filter(title='Awards/Dinner/Banquet Sponsor').first()
+
     (cart_obj) = TicketCart.objects.new_or_get(request, event)
     item_list = ticketItem.objects.filter(cart=cart_obj)
     single_quantity = ticketItem.objects.filter(cart=cart_obj).filter(ticket=single).first()
@@ -174,6 +183,15 @@ def golf(request):
     gold_quantity = ticketItem.objects.filter(cart=cart_obj).filter(ticket=gold).first()
     platinum_quantity = ticketItem.objects.filter(cart=cart_obj).filter(ticket=platinum).first()
     diamond_quantity = ticketItem.objects.filter(cart=cart_obj).filter(ticket=diamond).first()
+
+    putting_quantity = ticketItem.objects.filter(cart=cart_obj).filter(ticket=putting).first()
+    beverage_quantity = ticketItem.objects.filter(cart=cart_obj).filter(ticket=beverage).first()
+    golfcart_quantity = ticketItem.objects.filter(cart=cart_obj).filter(ticket=golfcart).first()
+    tee_quantity = ticketItem.objects.filter(cart=cart_obj).filter(ticket=tee).first()
+    golfergift_quantity = ticketItem.objects.filter(cart=cart_obj).filter(ticket=golfergift).first()
+    reception_quantity = ticketItem.objects.filter(cart=cart_obj).filter(ticket=reception).first()
+    holeinone_quantity = ticketItem.objects.filter(cart=cart_obj).filter(ticket=holeinone).first()
+    awards_quantity = ticketItem.objects.filter(cart=cart_obj).filter(ticket=awards).first()
 
     billing_address_form = BillingAddressForm()
     billing_address_id = request.session.get("billing_address_id", None)
@@ -333,6 +351,15 @@ def golf_checkout(request):
     platinum = TicketType.objects.filter(title='Platinum Sponsor').first()
     diamond = TicketType.objects.filter(title='Diamond Sponsor').first()
 
+    putting = TicketType.objects.filter(title='Putting Contest Sponsor').first()
+    beverage = TicketType.objects.filter(title='Beverage Station Sponsor').first()
+    golfcart = TicketType.objects.filter(title='Golf Cart Sponsor').first()
+    tee = TicketType.objects.filter(title='Power Swing Tee Sponsor').first()
+    golfergift = TicketType.objects.filter(title='Golfer Gift Sponsor').first()
+    reception = TicketType.objects.filter(title='Cocktail Reception Sponsor').first()
+    holeinone = TicketType.objects.filter(title='Hole In One Sponsor').first()
+    awards = TicketType.objects.filter(title='Awards/Dinner/Banquet Sponsor').first()
+
     (cart_obj) = TicketCart.objects.new_or_get(request, event)
     item_list = ticketItem.objects.filter(cart=cart_obj)
     single_quantity = ticketItem.objects.filter(cart=cart_obj).filter(ticket=single).first()
@@ -346,6 +373,15 @@ def golf_checkout(request):
     gold_quantity = ticketItem.objects.filter(cart=cart_obj).filter(ticket=gold).first()
     platinum_quantity = ticketItem.objects.filter(cart=cart_obj).filter(ticket=platinum).first()
     diamond_quantity = ticketItem.objects.filter(cart=cart_obj).filter(ticket=diamond).first()
+
+    putting_quantity = ticketItem.objects.filter(cart=cart_obj).filter(ticket=putting).first()
+    beverage_quantity = ticketItem.objects.filter(cart=cart_obj).filter(ticket=beverage).first()
+    golfcart_quantity = ticketItem.objects.filter(cart=cart_obj).filter(ticket=golfcart).first()
+    tee_quantity = ticketItem.objects.filter(cart=cart_obj).filter(ticket=tee).first()
+    golfergift_quantity = ticketItem.objects.filter(cart=cart_obj).filter(ticket=golfergift).first()
+    reception_quantity = ticketItem.objects.filter(cart=cart_obj).filter(ticket=reception).first()
+    holeinone_quantity = ticketItem.objects.filter(cart=cart_obj).filter(ticket=holeinone).first()
+    awards_quantity = ticketItem.objects.filter(cart=cart_obj).filter(ticket=awards).first()
 
     billing_address_form = BillingAddressForm()
     billing_address_id = request.session.get("billing_address_id", None)
@@ -382,6 +418,15 @@ def golf_checkout(request):
         'platinum': platinum,
         'diamond': diamond,
 
+        'putting': putting,
+        'beverage': beverage,
+        'golfcart': golfcart,
+        'tee': tee,
+        'golfergift': golfergift,
+        'reception': reception,
+        'holeinone': holeinone,
+        'awards': awards,
+
         'single_quantity': single_quantity,
         'foursome_quantity': foursome_quantity,
         'clinic_quantity': clinic_quantity,
@@ -393,6 +438,15 @@ def golf_checkout(request):
         'gold_quantity': gold_quantity,
         'platinum_quantity': platinum_quantity,
         'diamond_quantity': diamond_quantity,
+
+        'putting_quantity': putting_quantity,
+        'beverage_quantity': beverage_quantity,
+        'golfcart_quantity': golfcart_quantity,
+        'tee_quantity': tee_quantity,
+        'golfergift_quantity': golfergift_quantity,
+        'reception_quantity': reception_quantity,
+        'holeinone_quantity': holeinone_quantity,
+        'awards_quantity': awards_quantity,
 
         "billing_profile": billing_profile,
         "billing_address_form":billing_address_form,
@@ -419,6 +473,15 @@ def golf_sponsor_checkout(request):
     platinum = TicketType.objects.filter(title='Platinum Sponsor').first()
     diamond = TicketType.objects.filter(title='Diamond Sponsor').first()
 
+    putting = TicketType.objects.filter(title='Putting Contest Sponsor').first()
+    beverage = TicketType.objects.filter(title='Beverage Station Sponsor').first()
+    golfcart = TicketType.objects.filter(title='Golf Cart Sponsor').first()
+    tee = TicketType.objects.filter(title='Power Swing Tee Sponsor').first()
+    golfergift = TicketType.objects.filter(title='Golfer Gift Sponsor').first()
+    reception = TicketType.objects.filter(title='Cocktail Reception Sponsor').first()
+    holeinone = TicketType.objects.filter(title='Hole In One Sponsor').first()
+    awards = TicketType.objects.filter(title='Awards/Dinner/Banquet Sponsor').first()
+
     (cart_obj) = TicketCart.objects.new_or_get(request, event)
     item_list = ticketItem.objects.filter(cart=cart_obj)
     single_quantity = ticketItem.objects.filter(cart=cart_obj).filter(ticket=single).first()
@@ -432,6 +495,15 @@ def golf_sponsor_checkout(request):
     gold_quantity = ticketItem.objects.filter(cart=cart_obj).filter(ticket=gold).first()
     platinum_quantity = ticketItem.objects.filter(cart=cart_obj).filter(ticket=platinum).first()
     diamond_quantity = ticketItem.objects.filter(cart=cart_obj).filter(ticket=diamond).first()
+
+    putting_quantity = ticketItem.objects.filter(cart=cart_obj).filter(ticket=putting).first()
+    beverage_quantity = ticketItem.objects.filter(cart=cart_obj).filter(ticket=beverage).first()
+    golfcart_quantity = ticketItem.objects.filter(cart=cart_obj).filter(ticket=golfcart).first()
+    tee_quantity = ticketItem.objects.filter(cart=cart_obj).filter(ticket=tee).first()
+    golfergift_quantity = ticketItem.objects.filter(cart=cart_obj).filter(ticket=golfergift).first()
+    reception_quantity = ticketItem.objects.filter(cart=cart_obj).filter(ticket=reception).first()
+    holeinone_quantity = ticketItem.objects.filter(cart=cart_obj).filter(ticket=holeinone).first()
+    awards_quantity = ticketItem.objects.filter(cart=cart_obj).filter(ticket=awards).first()
 
     billing_address_form = BillingAddressForm()
     billing_address_id = request.session.get("billing_address_id", None)
@@ -468,6 +540,15 @@ def golf_sponsor_checkout(request):
         'platinum': platinum,
         'diamond': diamond,
 
+        'putting': putting,
+        'beverage': beverage,
+        'golfcart': golfcart,
+        'tee': tee,
+        'golfergift': golfergift,
+        'reception': reception,
+        'holeinone': holeinone,
+        'awards': awards,
+
         'single_quantity': single_quantity,
         'foursome_quantity': foursome_quantity,
         'clinic_quantity': clinic_quantity,
@@ -479,6 +560,15 @@ def golf_sponsor_checkout(request):
         'gold_quantity': gold_quantity,
         'platinum_quantity': platinum_quantity,
         'diamond_quantity': diamond_quantity,
+
+        'putting_quantity': putting_quantity,
+        'beverage_quantity': beverage_quantity,
+        'golfcart_quantity': golfcart_quantity,
+        'tee_quantity': tee_quantity,
+        'golfergift_quantity': golfergift_quantity,
+        'reception_quantity': reception_quantity,
+        'holeinone_quantity': holeinone_quantity,
+        'awards_quantity': awards_quantity,
 
         "billing_profile": billing_profile,
         "billing_address_form":billing_address_form,

@@ -141,189 +141,441 @@
                 <div class="collapsible-body">
                   <form id="sponsor-form">
                     <table>
-                        <tbody>
-                            <tr class="row ticket-row">
-                                <td class="col s12 m9">
-                                    <p class="ticket-title">Hole Sponsor</p>
-                                    <p class="ticket-description">Covers fees for 1 player, recognition on event signage and digital event brochure, signage at your selected hole, & ETV Swag Bag</p>
-                                    <p class="ticket-price">$1000</p>
-                                </td>
-                                <td class="col s12 m3">
-                                    <div class="input-field ticket-quantity-input">
-                                        <select class="qty-counter" tid="{{ hole.pk }}">
-                                        {% if hole_quantity.quantity is not none %}
-                                        <option value="{{ hole_quantity.quantity }}" selected>{{ hole_quantity.quantity }}</option>
-                                        <option value="0">0</option>
-                                        {% else %}
-                                        <option value="0" selected>0</option>
-                                        {% endif %}
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                        <option value="4">4</option>
-                                        <option value="5">5</option>
-                                        <option value="6">6</option>
-                                        <option value="7">7</option>
-                                        <option value="8">8</option>
-                                        <option value="9">9</option>
-                                        <option value="10">10</option>
-                                        </select>
-                                        <label>Quantity</label>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr class="row ticket-row">
-                                <td class="col s12 m9">
-                                    <p class="ticket-title">Bronze/Golf Clinic Sponsor</p>
-                                    <p class="ticket-description">Covers fees for 2 players, recognition on event signage and digital event brochure, signage at clinic location(s), & ETV Swag Bag</p>
-                                    <p class="ticket-price">$2,500</p>
-                                </td>
-                                <td class="col s12 m3">
-                                    <div class="input-field ticket-quantity-input">
-                                        <select class="qty-counter" tid="{{ bronze.pk }}">
-                                        {% if bronze_quantity.quantity is not none %}
-                                        <option value="{{ bronze_quantity.quantity }}" selected>{{ bronze_quantity.quantity }}</option>
-                                        <option value="0">0</option>
-                                        {% else %}
-                                        <option value="0" selected>0</option>
-                                        {% endif %}
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                        <option value="4">4</option>
-                                        <option value="5">5</option>
-                                        <option value="6">6</option>
-                                        <option value="7">7</option>
-                                        <option value="8">8</option>
-                                        <option value="9">9</option>
-                                        <option value="10">10</option>
-                                        </select>
-                                        <label>Quantity</label>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr class="row ticket-row">
-                                <td class="col s12 m9">
-                                    <p class="ticket-title">Silver Sponsor</p>
-                                    <p class="ticket-description">Customized VIP golfer package, special recognition during event and on event signage at specialty activities (eg. putting contest, golf clinic, hole-in- one, etc.) and digital event brochure, & ETV Swag Bag</p>
-                                    <p class="ticket-price">$5,000</p>
-                                </td>
-                                <td class="col s12 m3">
-                                    <div class="input-field ticket-quantity-input">
-                                        <select class="qty-counter" tid="{{ silver.pk }}">
-                                        {% if silver_quantity.quanity is not none %}
-                                        <option value="{{ silver_quantity.quantity }}" selected>{{ silver_quantity.quantity }}</option>
-                                        <option value="0">0</option>
-                                        {% else %}
-                                        <option value="0" selected>0</option>
-                                        {% endif %}
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                        <option value="4">4</option>
-                                        <option value="5">5</option>
-                                        <option value="6">6</option>
-                                        <option value="7">7</option>
-                                        <option value="8">8</option>
-                                        <option value="9">9</option>
-                                        <option value="10">10</option>
-                                        </select>
-                                        <label>Quantity</label>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr class="row ticket-row">
-                                <td class="col s12 m9">
-                                    <p class="ticket-title">Gold Sponsor</p>
-                                    <p class="ticket-description">Customized VIP golfer package, premier pre-event/event recognition, inclusion in select press coverage, ETV website, event signage, event brochure, premium ETV Swag Bag</p>
-                                    <p class="ticket-price">$10,000</p>
-                                </td>
-                                <td class="col s12 m3">
-                                    <div class="input-field ticket-quantity-input">
-                                        <select class="qty-counter" tid="{{ gold.pk }}">
-                                        {% if gold_quantity.quantity is not none %}
-                                        <option value="{{ gold_quantity.quantity }}" selected>{{ gold_quantity.quantity }}</option>
-                                        <option value="0">0</option>
-                                        {% else %}
-                                        <option value="0" selected>0</option>
-                                        {% endif %}
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                        <option value="4">4</option>
-                                        <option value="5">5</option>
-                                        <option value="6">6</option>
-                                        <option value="7">7</option>
-                                        <option value="8">8</option>
-                                        <option value="9">9</option>
-                                        <option value="10">10</option>
-                                        </select>
-                                        <label>Quantity</label>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr class="row ticket-row">
-                                <td class="col s12 m9">
-                                    <p class="ticket-title">Platinum Sponsor</p>
-                                    <p class="ticket-description">Customize VIP golfer package, speaking opportunity, premier pre-event/event recognition, inclusion in all press, coverage, ETV website, event signage, event brochure, select branding opportunities, premium ETV Swag Bag</p>
-                                    <p class="ticket-price">$20,000</p>
-                                </td>
-                                <td class="col s12 m3">
-                                    <div class="input-field ticket-quantity-input">
-                                        <select class="qty-counter" tid="{{ platinum.pk }}">
-                                        {% if platinum_quantity.quantity is not none %}
-                                        <option value="{{ platinum_quantity.quantity }}" selected>{{ platinum_quantity.quantity }}</option>
-                                        <option value="0">0</option>
-                                        {% else %}
-                                        <option value="0" selected>0</option>
-                                        {% endif %}
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                        <option value="4">4</option>
-                                        <option value="5">5</option>
-                                        <option value="6">6</option>
-                                        <option value="7">7</option>
-                                        <option value="8">8</option>
-                                        <option value="9">9</option>
-                                        <option value="10">10</option>
-                                        </select>
-                                        <label>Quantity</label>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr class="row ticket-row">
-                                <td class="col s12 m9">
-                                    <p class="ticket-title">Diamond Sponsor</p>
-                                    <p class="ticket-description">Customized VIP golfer package, special welcome, speaking opportunity, premier pre-event/event recognition, inclusion in all press coverage, ETV website, event signage, event brochure, collateral material, videoFeature, special giveaway and other branding opportunities, premium ETV Swag Bag</p>
-                                    <p class="ticket-price">$25,000</p>
-                                </td>
-                                <td class="col s12 m3">
-                                    <div class="input-field ticket-quantity-input">
-                                        <select class="qty-counter" tid="{{ diamond.pk }}">
-                                        {% if diamond_quantity.quantity is not none %}
-                                        <option value="{{ diamond_quantity.quantity }}" selected>{{ diamond_quantity.quantity }}</option>
-                                        <option value="0">0</option>
-                                        {% else %}
-                                        <option value="0" selected>0</option>
-                                        {% endif %}
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                        <option value="4">4</option>
-                                        <option value="5">5</option>
-                                        <option value="6">6</option>
-                                        <option value="7">7</option>
-                                        <option value="8">8</option>
-                                        <option value="9">9</option>
-                                        <option value="10">10</option>
-                                        </select>
-                                        <label>Quantity</label>
-                                    </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                      <tbody>
+                        <tr class="row ticket-row">
+                          <td class="col s12 m9">
+                              <p class="ticket-title">Power Swing Tee Sponsor</p>
+                              <p class="ticket-description">Name and logo on sign displayed near tee,
+                                recognition on event signage and digital event
+                                brochure</p>
+                              <p class="ticket-price">$250</p>
+                          </td>
+                          <td class="col s12 m3">
+                              <div class="input-field ticket-quantity-input">
+                                  <select class="qty-counter" tid="{{ tee.pk }}">
+                                  {% if tee_quantity.quantity is not none %}
+                                  <option value="{{ tee_quantity.quantity }}" selected>{{ tee_quantity.quantity }}</option>
+                                  <option value="0">0</option>
+                                  {% else %}
+                                  <option value="0" selected>0</option>
+                                  {% endif %}
+                                  <option value="1">1</option>
+                                  <option value="2">2</option>
+                                  <option value="3">3</option>
+                                  <option value="4">4</option>
+                                  <option value="5">5</option>
+                                  <option value="6">6</option>
+                                  <option value="7">7</option>
+                                  <option value="8">8</option>
+                                  <option value="9">9</option>
+                                  <option value="10">10</option>
+                                  </select>
+                                  <label>Quantity</label>
+                              </div>
+                          </td>
+                      </tr>
+                      <tr class="row ticket-row">
+                        <td class="col s12 m9">
+                            <p class="ticket-title">Golf Cart Sponsor</p>
+                            <p class="ticket-description">Name and logo on four golf carts, recognition
+                              on event signage and digital event brochure</p>
+                            <p class="ticket-price">$500</p>
+                        </td>
+                        <td class="col s12 m3">
+                            <div class="input-field ticket-quantity-input">
+                                <select class="qty-counter" tid="{{ golfcart.pk }}">
+                                {% if golfcart_quantity.quantity is not none %}
+                                <option value="{{ golfcart_quantity.quantity }}" selected>{{ golfcart_quantity.quantity }}</option>
+                                <option value="0">0</option>
+                                {% else %}
+                                <option value="0" selected>0</option>
+                                {% endif %}
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                </select>
+                                <label>Quantity</label>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="row ticket-row">
+                      <td class="col s12 m9">
+                          <p class="ticket-title">Beverage Station Sponsor</p>
+                          <p class="ticket-description">Name and logo on signage at beverage
+                            station, recognition on digital event brochure,
+                            marketing materials on display upon request</p>
+                          <p class="ticket-price">$500</p>
+                      </td>
+                      <td class="col s12 m3">
+                          <div class="input-field ticket-quantity-input">
+                              <select class="qty-counter" tid="{{ beverage.pk }}">
+                              {% if beverage_quantity.quantity is not none %}
+                              <option value="{{ beverage_quantity.quantity }}" selected>{{ beverage_quantity.quantity }}</option>
+                              <option value="0">0</option>
+                              {% else %}
+                              <option value="0" selected>0</option>
+                              {% endif %}
+                              <option value="1">1</option>
+                              <option value="2">2</option>
+                              <option value="3">3</option>
+                              <option value="4">4</option>
+                              <option value="5">5</option>
+                              <option value="6">6</option>
+                              <option value="7">7</option>
+                              <option value="8">8</option>
+                              <option value="9">9</option>
+                              <option value="10">10</option>
+                              </select>
+                              <label>Quantity</label>
+                          </div>
+                      </td>
+                  </tr>
+                  <tr class="row ticket-row">
+                    <td class="col s12 m9">
+                        <p class="ticket-title">Putting Contest Sponsor</p>
+                        <p class="ticket-description">Name and logo on sign and award certificate,
+                          recognition on event signage and digital event
+                          brochure</p>
+                        <p class="ticket-price">$750</p>
+                    </td>
+                    <td class="col s12 m3">
+                        <div class="input-field ticket-quantity-input">
+                            <select class="qty-counter" tid="{{ putting.pk }}">
+                            {% if putting_quantity.quantity is not none %}
+                            <option value="{{ putting_quantity.quantity }}" selected>{{ putting_quantity.quantity }}</option>
+                            <option value="0">0</option>
+                            {% else %}
+                            <option value="0" selected>0</option>
+                            {% endif %}
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            </select>
+                            <label>Quantity</label>
+                        </div>
+                    </td>
+                </tr>
+                          <tr class="row ticket-row">
+                              <td class="col s12 m9">
+                                  <p class="ticket-title">Hole Sponsor</p>
+                                  <p class="ticket-description">Covers fees for 1 player, recognition on event signage and digital event brochure, signage at your selected hole, & ETV Swag Bag</p>
+                                  <p class="ticket-price">$1000</p>
+                              </td>
+                              <td class="col s12 m3">
+                                  <div class="input-field ticket-quantity-input">
+                                      <select class="qty-counter" tid="{{ hole.pk }}">
+                                      {% if hole_quantity.quantity is not none %}
+                                      <option value="{{ hole_quantity.quantity }}" selected>{{ hole_quantity.quantity }}</option>
+                                      <option value="0">0</option>
+                                      {% else %}
+                                      <option value="0" selected>0</option>
+                                      {% endif %}
+                                      <option value="1">1</option>
+                                      <option value="2">2</option>
+                                      <option value="3">3</option>
+                                      <option value="4">4</option>
+                                      <option value="5">5</option>
+                                      <option value="6">6</option>
+                                      <option value="7">7</option>
+                                      <option value="8">8</option>
+                                      <option value="9">9</option>
+                                      <option value="10">10</option>
+                                      </select>
+                                      <label>Quantity</label>
+                                  </div>
+                              </td>
+                          </tr>
+                          <tr class="row ticket-row">
+                            <td class="col s12 m9">
+                                <p class="ticket-title">Hole In One Sponsor</p>
+                                <p class="ticket-description">Includes one registrant, recognition on event
+                                  signage and digital event brochure, name and
+                                  logo on sign and award certificate, ETV Swag Bag</p>
+                                <p class="ticket-price">$1,250</p>
+                            </td>
+                            <td class="col s12 m3">
+                                <div class="input-field ticket-quantity-input">
+                                    <select class="qty-counter" tid="{{ holeinone.pk }}">
+                                    {% if holeinone_quantity.quantity is not none %}
+                                    <option value="{{ holeinone_quantity.quantity }}" selected>{{ holeinone_quantity.quantity }}</option>
+                                    <option value="0">0</option>
+                                    {% else %}
+                                    <option value="0" selected>0</option>
+                                    {% endif %}
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    </select>
+                                    <label>Quantity</label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="row ticket-row">
+                          <td class="col s12 m9">
+                              <p class="ticket-title">Cocktail Reception Sponsor</p>
+                              <p class="ticket-description">Includes one registrant, name and logo
+                                displayed on signage at cocktail reception
+                                area, ETV Swag Bag</p>
+                              <p class="ticket-price">$1,500</p>
+                          </td>
+                          <td class="col s12 m3">
+                              <div class="input-field ticket-quantity-input">
+                                  <select class="qty-counter" tid="{{ reception.pk }}">
+                                  {% if reception_quantity.quantity is not none %}
+                                  <option value="{{ reception_quantity.quantity }}" selected>{{ reception_quantity.quantity }}</option>
+                                  <option value="0">0</option>
+                                  {% else %}
+                                  <option value="0" selected>0</option>
+                                  {% endif %}
+                                  <option value="1">1</option>
+                                  <option value="2">2</option>
+                                  <option value="3">3</option>
+                                  <option value="4">4</option>
+                                  <option value="5">5</option>
+                                  <option value="6">6</option>
+                                  <option value="7">7</option>
+                                  <option value="8">8</option>
+                                  <option value="9">9</option>
+                                  <option value="10">10</option>
+                                  </select>
+                                  <label>Quantity</label>
+                              </div>
+                          </td>
+                      </tr>
+                      <tr class="row ticket-row">
+                        <td class="col s12 m9">
+                            <p class="ticket-title">Golfer Gift Sponsor</p>
+                            <p class="ticket-description">Includes one registrant, name and logo
+                              displayed at golfer gift table, ETV Swag Bag</p>
+                            <p class="ticket-price">$2,000</p>
+                        </td>
+                        <td class="col s12 m3">
+                            <div class="input-field ticket-quantity-input">
+                                <select class="qty-counter" tid="{{ golfergift.pk }}">
+                                {% if golfergift_quantity.quantity is not none %}
+                                <option value="{{ golfergift_quantity.quantity }}" selected>{{ golfergift_quantity.quantity }}</option>
+                                <option value="0">0</option>
+                                {% else %}
+                                <option value="0" selected>0</option>
+                                {% endif %}
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                </select>
+                                <label>Quantity</label>
+                            </div>
+                        </td>
+                    </tr>
+                          <tr class="row ticket-row">
+                              <td class="col s12 m9">
+                                  <p class="ticket-title">Bronze/Golf Clinic Sponsor</p>
+                                  <p class="ticket-description">Covers fees for 2 players, recognition on event signage and digital event brochure, signage at clinic location(s), & ETV Swag Bag</p>
+                                  <p class="ticket-price">$2,500</p>
+                              </td>
+                              <td class="col s12 m3">
+                                  <div class="input-field ticket-quantity-input">
+                                      <select class="qty-counter" tid="{{ bronze.pk }}">
+                                      {% if bronze_quantity.quantity is not none %}
+                                      <option value="{{ bronze_quantity.quantity }}" selected>{{ bronze_quantity.quantity }}</option>
+                                      <option value="0">0</option>
+                                      {% else %}
+                                      <option value="0" selected>0</option>
+                                      {% endif %}
+                                      <option value="1">1</option>
+                                      <option value="2">2</option>
+                                      <option value="3">3</option>
+                                      <option value="4">4</option>
+                                      <option value="5">5</option>
+                                      <option value="6">6</option>
+                                      <option value="7">7</option>
+                                      <option value="8">8</option>
+                                      <option value="9">9</option>
+                                      <option value="10">10</option>
+                                      </select>
+                                      <label>Quantity</label>
+                                  </div>
+                              </td>
+                          </tr>
+                          <tr class="row ticket-row">
+                            <td class="col s12 m9">
+                                <p class="ticket-title">Awards/Dinner/Banquet Sponsor</p>
+                                <p class="ticket-description">Recognition on event signage and digital event brochure, name and logo displayed during dinner/awards ceremony and on ambassador golf cart, ETV Swag Bag</p>
+                                <p class="ticket-price">$3,500</p>
+                            </td>
+                            <td class="col s12 m3">
+                                <div class="input-field ticket-quantity-input">
+                                    <select class="qty-counter" tid="{{ awards.pk }}">
+                                    {% if awards_quantity.quantity is not none %}
+                                    <option value="{{ awards_quantity.quantity }}" selected>{{ awards_quantity.quantity }}</option>
+                                    <option value="0">0</option>
+                                    {% else %}
+                                    <option value="0" selected>0</option>
+                                    {% endif %}
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    </select>
+                                    <label>Quantity</label>
+                                </div>
+                            </td>
+                        </tr>
+                          <tr class="row ticket-row">
+                              <td class="col s12 m9">
+                                  <p class="ticket-title">Silver Sponsor</p>
+                                  <p class="ticket-description">Customized VIP golfer package, special recognition during event and on event signage at specialty activities (eg. putting contest, golf clinic, hole-in- one, etc.) and digital event brochure, & ETV Swag Bag</p>
+                                  <p class="ticket-price">$5,000</p>
+                              </td>
+                              <td class="col s12 m3">
+                                  <div class="input-field ticket-quantity-input">
+                                      <select class="qty-counter" tid="{{ silver.pk }}">
+                                      {% if silver_quantity.quanity is not none %}
+                                      <option value="{{ silver_quantity.quantity }}" selected>{{ silver_quantity.quantity }}</option>
+                                      <option value="0">0</option>
+                                      {% else %}
+                                      <option value="0" selected>0</option>
+                                      {% endif %}
+                                      <option value="1">1</option>
+                                      <option value="2">2</option>
+                                      <option value="3">3</option>
+                                      <option value="4">4</option>
+                                      <option value="5">5</option>
+                                      <option value="6">6</option>
+                                      <option value="7">7</option>
+                                      <option value="8">8</option>
+                                      <option value="9">9</option>
+                                      <option value="10">10</option>
+                                      </select>
+                                      <label>Quantity</label>
+                                  </div>
+                              </td>
+                          </tr>
+                          <tr class="row ticket-row">
+                              <td class="col s12 m9">
+                                  <p class="ticket-title">Gold Sponsor</p>
+                                  <p class="ticket-description">Customized VIP golfer package, premier pre-event/event recognition, inclusion in select press coverage, ETV website, event signage, event brochure, premium ETV Swag Bag</p>
+                                  <p class="ticket-price">$10,000</p>
+                              </td>
+                              <td class="col s12 m3">
+                                  <div class="input-field ticket-quantity-input">
+                                      <select class="qty-counter" tid="{{ gold.pk }}">
+                                      {% if gold_quantity.quantity is not none %}
+                                      <option value="{{ gold_quantity.quantity }}" selected>{{ gold_quantity.quantity }}</option>
+                                      <option value="0">0</option>
+                                      {% else %}
+                                      <option value="0" selected>0</option>
+                                      {% endif %}
+                                      <option value="1">1</option>
+                                      <option value="2">2</option>
+                                      <option value="3">3</option>
+                                      <option value="4">4</option>
+                                      <option value="5">5</option>
+                                      <option value="6">6</option>
+                                      <option value="7">7</option>
+                                      <option value="8">8</option>
+                                      <option value="9">9</option>
+                                      <option value="10">10</option>
+                                      </select>
+                                      <label>Quantity</label>
+                                  </div>
+                              </td>
+                          </tr>
+                          <tr class="row ticket-row">
+                              <td class="col s12 m9">
+                                  <p class="ticket-title">Platinum Sponsor</p>
+                                  <p class="ticket-description">Customize VIP golfer package, speaking opportunity, premier pre-event/event recognition, inclusion in all press, coverage, ETV website, event signage, event brochure, select branding opportunities, premium ETV Swag Bag</p>
+                                  <p class="ticket-price">$20,000</p>
+                              </td>
+                              <td class="col s12 m3">
+                                  <div class="input-field ticket-quantity-input">
+                                      <select class="qty-counter" tid="{{ platinum.pk }}">
+                                      {% if platinum_quantity.quantity is not none %}
+                                      <option value="{{ platinum_quantity.quantity }}" selected>{{ platinum_quantity.quantity }}</option>
+                                      <option value="0">0</option>
+                                      {% else %}
+                                      <option value="0" selected>0</option>
+                                      {% endif %}
+                                      <option value="1">1</option>
+                                      <option value="2">2</option>
+                                      <option value="3">3</option>
+                                      <option value="4">4</option>
+                                      <option value="5">5</option>
+                                      <option value="6">6</option>
+                                      <option value="7">7</option>
+                                      <option value="8">8</option>
+                                      <option value="9">9</option>
+                                      <option value="10">10</option>
+                                      </select>
+                                      <label>Quantity</label>
+                                  </div>
+                              </td>
+                          </tr>
+                          <tr class="row ticket-row">
+                              <td class="col s12 m9">
+                                  <p class="ticket-title">Diamond Sponsor</p>
+                                  <p class="ticket-description">Customized VIP golfer package, special welcome, speaking opportunity, premier pre-event/event recognition, inclusion in all press coverage, ETV website, event signage, event brochure, collateral material, videoFeature, special giveaway and other branding opportunities, premium ETV Swag Bag</p>
+                                  <p class="ticket-price">$25,000</p>
+                              </td>
+                              <td class="col s12 m3">
+                                  <div class="input-field ticket-quantity-input">
+                                      <select class="qty-counter" tid="{{ diamond.pk }}">
+                                      {% if diamond_quantity.quantity is not none %}
+                                      <option value="{{ diamond_quantity.quantity }}" selected>{{ diamond_quantity.quantity }}</option>
+                                      <option value="0">0</option>
+                                      {% else %}
+                                      <option value="0" selected>0</option>
+                                      {% endif %}
+                                      <option value="1">1</option>
+                                      <option value="2">2</option>
+                                      <option value="3">3</option>
+                                      <option value="4">4</option>
+                                      <option value="5">5</option>
+                                      <option value="6">6</option>
+                                      <option value="7">7</option>
+                                      <option value="8">8</option>
+                                      <option value="9">9</option>
+                                      <option value="10">10</option>
+                                      </select>
+                                      <label>Quantity</label>
+                                  </div>
+                              </td>
+                          </tr>
+                      </tbody>
+                  </table>
                 </form>
                 </div>
               </li>
@@ -360,9 +612,9 @@
                         <i class="secure"><i class="fas fa-lock"></i> Secure </i></p>
                 </div>
             </div>
-            <img class="z-depth-1" src="{% static 'img/golf-header.png' %}" width=100% style="margin-top: 20px">
+            <img class="z-depth-1" src="{% static 'img/golf-flyer.png' %}" width=100% style="margin-top: 20px">
             <div class="card center-align" style="padding:2% 5%; width: 100%; margin-top: 20px">
-              <a>Click for Event Brochure Details!</a>
+              <a href="https://issuu.com/empowerthevillage/docs/tournament_information_3_">Click for Event Brochure Details!</a>
             </div>
         </div>
     </div>
@@ -412,7 +664,7 @@
                     <i class="secure"><i class="fas fa-lock"></i> Secure </i></p>
             </div>
             </div>
-            <img class="z-depth-1" src="{% static 'img/golf-header.png' %}" width=100% style="margin-top: 20px">
+            <img class="z-depth-1" src="{% static 'img/golf-flyer.png' %}" width=100% style="margin-top: 20px">
         </div>
     </div>
     <div class="row" id="ticket-checkout-p3" style="display:none">
@@ -581,7 +833,7 @@
                     <i class="secure"><i class="fas fa-lock"></i> Secure </i></p>
             </div>
             </div>
-            <img class="z-depth-1" src="{% static 'img/golf-header.png' %}" width=100% style="margin-top: 20px">
+            <img class="z-depth-1" src="{% static 'img/golf-flyer.png' %}" width=100% style="margin-top: 20px">
         </div>
     </div>
     </div>
