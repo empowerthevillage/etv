@@ -620,6 +620,7 @@ def art_checkout(request):
 
     (cart_obj) = TicketCart.objects.new_or_get(request, event)
     item_list = ticketItem.objects.filter(cart=cart_obj).filter(event=event)
+    donations = ticketDonation.objects.filter(cart=cart_obj).filter(event=event)
     single_quantity = ticketItem.objects.filter(cart=cart_obj).filter(ticket=single).first()
     saturday_quantity = ticketItem.objects.filter(cart=cart_obj).filter(ticket=saturday).first()
     twoday_quantity = ticketItem.objects.filter(cart=cart_obj).filter(ticket=twoday).first()
@@ -657,6 +658,7 @@ def art_checkout(request):
         'title':'ETV | For The Love of Art Juneteenth Fundraiser',
         'ticket_types': ticket_types,
         'item_list': item_list,
+        'donations': donations,
         'cart': cart_obj,
         'single': single,
         'saturday': saturday,

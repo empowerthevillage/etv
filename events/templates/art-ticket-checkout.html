@@ -320,6 +320,13 @@
                             </tr>
                             {% endif %}
                             {% endfor %}
+                            {% for x in donations %}
+                            <tr class="product-row {{ x.pk }}-row">
+                                <td class="product-summary">Custom Donation</td>
+                                <td class="product-summary-price {{ x.pk }}-price">${{ x.amount|intcomma }}</td>
+                                <td class="product-summary-quantity  center-align {{ x.pk }}-quantity">1</td>
+                            </tr>
+                            {% endfor %}
                         </tbody>
                     </table>
                 </div>
