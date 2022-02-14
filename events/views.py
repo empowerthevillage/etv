@@ -11,7 +11,7 @@ from orders.models import Transaction
 import braintree
 import shippo
 
-from carts.models import TicketCart, ticketItem
+from carts.models import TicketCart, ticketItem, ticketDonation
 from .models import *
 from django.conf import settings
 
@@ -77,6 +77,31 @@ def event_home(request):
         'events': events,
     }
     return render(request, "events-home.html", context)
+
+def ticket_cart_donation_update(request):
+    event_title         = request.POST.get('event')
+    event               = Event.objects.filter(title=event_title).first()
+    cart_obj            = TicketCart.objects.new_or_get(request, event)
+    amount              = str(request.POST.get('amount'))[2:].replace(',','')
+    
+    item_obj = ticketDonation()
+    item_obj.amount = amount
+    item_obj.cart = cart_obj
+    item_obj.event = event
+    item_obj.save()
+
+    price = item_obj.amount
+    event = item_obj.event
+    data = {
+        'price': '$%s' %(price),
+        'priceTarget': '.%s-price' %(item_obj.pk),
+        'quantityTarget': '.%s-quantity' %(item_obj.pk),
+        'quantity': '1',
+        'total': '$%s' %(cart_obj.total),
+        'row': '.%s-row' %(item_obj.pk),
+        'pk': item_obj.pk,
+    }
+    return JsonResponse(data)
 
 def ticket_cart_update(request):
     event_title         = request.POST.get('event')

@@ -1,0 +1,2017 @@
+[
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "Barbie Drip GlamHer Room",
+      "website": "http://www.barbiedripglamherroom.com/",
+      "owner_name": "Jasmine Dupree",
+      "city": "St. Charles",
+      "phone": "(314) 662-3664",
+      "owner_email": "",
+      "category": "beauty",
+      "subcategory": "Beauty Salon"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "Honey Hair Co",
+      "website": "https://honeyhairco.com/",
+      "owner_name": "Shannon Aubree Lewis",
+      "city": "St. Louis",
+      "phone": "314.492.4182",
+      "owner_email": "support@honeyhairco.com",
+      "category": "beauty",
+      "subcategory": "Beauty Supply/Hair & Accessories"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "A Cut Above the Rest Barber and Salon",
+      "website": "http://acutabovecolumbia.com/",
+      "owner_name": "Al & deb Harris",
+      "city": "Columbia",
+      "phone": "(573) 815-0114",
+      "owner_email": "",
+      "category": "beauty",
+      "subcategory": "Barber/Beauty salon"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "The W Spot Beauty Supply",
+      "website": "https://www.facebook.com/thewspotllc",
+      "owner_name": "",
+      "city": "Joplin",
+      "phone": "(417) 593-1469",
+      "owner_email": "thewspotllc@gmail.com",
+      "category": "beauty",
+      "subcategory": "Beauty Supply/Hair & Accessories"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "EyeSeeMe",
+      "website": "https://www.eyeseeme.com/",
+      "owner_name": "Jeffery & Pamela Blair",
+      "city": "University City",
+      "phone": "(314) 349-1122",
+      "owner_email": "contact@eyeseeme.com",
+      "category": "books",
+      "subcategory": "Online Publication"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "Davis Auto Repair & Tow",
+      "website": "https://www.facebook.com/DavisAutoRepairAndTow/",
+      "owner_name": "Davis Maceo",
+      "city": "Kansas City",
+      "phone": "816-333-6525",
+      "owner_email": "davisautorepairandtow@gmail.com",
+      "category": "cars",
+      "subcategory": "Auto Repair/Services"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "Watson's Auto Sales",
+      "website": "https://www.watsonsautowholesale.com/",
+      "owner_name": "Marcus Watson",
+      "city": "Kansas City",
+      "phone": "816-363-4573",
+      "owner_email": "",
+      "category": "cars",
+      "subcategory": "Auto Dealership"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "The Maid Did It",
+      "website": "https://www.facebook.com/themaiddiditllc/",
+      "owner_name": "Ashlee Robinson & Nikitta Nixon",
+      "city": "St. Louis",
+      "phone": "(314) 297-9663",
+      "owner_email": "",
+      "category": "cleaning",
+      "subcategory": ""
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "Designs by J. Stocking, LLC",
+      "website": "https://www.designsbyjstocking.com/",
+      "owner_name": "Jasmine Yakale Stocking-Brown",
+      "city": "St. Louis",
+      "phone": "(314) 688-1902",
+      "owner_email": "jstockingb@gmail.com",
+      "category": "clothing",
+      "subcategory": "Apparel"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "E3 Styles",
+      "website": "https://www.e3styles.com/",
+      "owner_name": "Ericka Miller",
+      "city": "Florissant",
+      "phone": "(314) 323-6381",
+      "owner_email": "e3stylesllc@gmail.com",
+      "category": "clothing",
+      "subcategory": "Apparel"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "Honey's Child Boutique",
+      "website": "https://honeyschildboutique.com/",
+      "owner_name": "Letitia A. Young",
+      "city": "St. Louis",
+      "phone": "(314) 875-0011",
+      "owner_email": "hello@honeyschildboutique.com",
+      "category": "clothing",
+      "subcategory": "Apparel"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "Fly Zone Boutique",
+      "website": "https://www.flyzonefashion.com/",
+      "owner_name": "",
+      "city": "Florissant",
+      "phone": "(314) 733-5314",
+      "owner_email": "flyzone85@gmail.com",
+      "category": "clothing",
+      "subcategory": "Apparel"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "La Femme Rebelle Clothing",
+      "website": "https://lafemmerebelleclothing.com/",
+      "owner_name": "Porsha Key",
+      "city": "St. Louis",
+      "phone": "(314) 328-9896",
+      "owner_email": "lafemmerebelleclothing@gmail.com",
+      "category": "clothing",
+      "subcategory": "Apparel"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "Modish Collection",
+      "website": "https://www.shopmodishcollection.com/",
+      "owner_name": "Deanette Thomas",
+      "city": "Ferguson",
+      "phone": "(314) 325-2754",
+      "owner_email": "modishcollectiononline@gmail.com",
+      "category": "clothing",
+      "subcategory": "Apparel"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "My Favorite Scrubs, LLC",
+      "website": "https://myfavoritescrubsllc.com/",
+      "owner_name": "Latifah Robinson",
+      "city": "Charles",
+      "phone": "314-610-7640",
+      "owner_email": "info@myfavoritescrubsllc.com",
+      "category": "clothing",
+      "subcategory": "Apparel"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "I AM Fashion & Accessories",
+      "website": "http://Iamlester.com/",
+      "owner_name": "Nafessah Lester",
+      "city": "St. Louis",
+      "phone": "(314) 637-6355",
+      "owner_email": "nafeesah01@icloud.com",
+      "category": "clothing",
+      "subcategory": "Apparel"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "Brandin Vaughn Collection",
+      "website": "https://brandinvaughn.com/",
+      "owner_name": "Brandin Vaughn",
+      "city": "St. Louis",
+      "phone": "(314) 325-2341",
+      "owner_email": "info@brandinvaughn.com",
+      "category": "clothing",
+      "subcategory": "Apparel"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "Brazen Boutique",
+      "website": "https://shopbrazenboutique.com/pages/about-us",
+      "owner_name": "Jance Chartae",
+      "city": "St. Louis",
+      "phone": "",
+      "owner_email": "support@shopbrazenboutique.com",
+      "category": "clothing",
+      "subcategory": "Apparel"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "Como Beach",
+      "website": "https://www.comobeachclothing.com/",
+      "owner_name": "Matt Warren",
+      "city": "Columbia",
+      "phone": "573-542-0599",
+      "owner_email": "comobeach.help@gmail.com",
+      "category": "clothing",
+      "subcategory": "Apparel"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "Freedom T’s",
+      "website": "http://freedomtsllc.com/",
+      "owner_name": "Vernon T. Diggs",
+      "city": "Columbia",
+      "phone": "(573) 044-10126",
+      "owner_email": "",
+      "category": "clothing",
+      "subcategory": "Apparel"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "TrayJays",
+      "website": "http://www.trayjays.com/",
+      "owner_name": "Tracey Dickerson",
+      "city": "St. Louis",
+      "phone": "314-616-2655",
+      "owner_email": "",
+      "category": "clothing",
+      "subcategory": "Apparel"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "Born Poor Live Rich",
+      "website": "https://www.bornpoorliverich.com/",
+      "owner_name": "Quinton Jackson",
+      "city": "St. Louis",
+      "phone": "(314) 298-5840",
+      "owner_email": "",
+      "category": "clothing",
+      "subcategory": "Apparel"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "BCB",
+      "website": "https://www.bcb3.org/",
+      "owner_name": "Briana, Bianca, Bellicia",
+      "city": "St. Louis",
+      "phone": "385-800-1908",
+      "owner_email": "",
+      "category": "clothing",
+      "subcategory": "Apparel"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "Supreme Men's Clothing",
+      "website": "https://www.facebook.com/suprememanstl/",
+      "owner_name": "",
+      "city": "St. Louis",
+      "phone": "314-528-5555",
+      "owner_email": "suprememanstl@gmail.com",
+      "category": "clothing",
+      "subcategory": "Apparel"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "S.T.L. Emergency Skills Training",
+      "website": "https://www.stlemergencytraining.com/",
+      "owner_name": "Queen Malik",
+      "city": "St. Louis",
+      "phone": "1-888-491-1CPR",
+      "owner_email": "queen@stlemergencytraining.com",
+      "category": "education",
+      "subcategory": ""
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "AndreSheardFoundation",
+      "website": "andresheardfoundation.org",
+      "owner_name": "Andre Sheard",
+      "city": "Hannibal",
+      "phone": "(573) 795-0374",
+      "owner_email": "andre_sheard@yahoo.com",
+      "category": "education",
+      "subcategory": "Enrichment"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "Harris-Stowe State University",
+      "website": "www.hssu.edu",
+      "owner_name": "",
+      "city": "St. Louis",
+      "phone": "(314) 340-3366",
+      "owner_email": "",
+      "category": "education",
+      "subcategory": "Enrichment"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "Resonance",
+      "website": "www.resonanceheadphones.com",
+      "owner_name": "Reggie Stovall",
+      "city": "",
+      "phone": "(314) 458-9350",
+      "owner_email": "info@resonanceheadphones.com",
+      "category": "electronics",
+      "subcategory": "Tech Products"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "Divine Events, LLC",
+      "website": "https://www.mydivineevents.com/",
+      "owner_name": "Aaren Muex",
+      "city": "Maryland Heights",
+      "phone": "(314) 669-5933",
+      "owner_email": "info@mydivineevents.com",
+      "category": "entertainment",
+      "subcategory": "Event Planning/Services"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "MyEventsCoordinator",
+      "website": "https://www.myeventscoordinator.com/",
+      "owner_name": "Arinola Solanke",
+      "city": "St.Louis",
+      "phone": "(314) 874-3016",
+      "owner_email": "info@myeventscoordinator.com",
+      "category": "entertainment",
+      "subcategory": "Event Planning/Services"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "La Patisserie Chouquette",
+      "website": "https://www.simonefaure.com/",
+      "owner_name": "Simone Faure",
+      "city": "St. Louis",
+      "phone": "(314) 932-7935",
+      "owner_email": "",
+      "category": "grocery",
+      "subcategory": "Bakery"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "SweetArt",
+      "website": "http://www.sweetartstl.com/",
+      "owner_name": "Reine Bayoc",
+      "city": "St. Louis",
+      "phone": "(314) 771-4278",
+      "owner_email": "info@sweetartstl.com",
+      "category": "grocery",
+      "subcategory": "Bakery"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "Indie Eatery",
+      "website": "http://www.eatsbyindie.com/",
+      "owner_name": "Shannon Thompson",
+      "city": "Saint Peters",
+      "phone": "(636) 387-1000",
+      "owner_email": "indie4catering@gmail.com",
+      "category": "grocery",
+      "subcategory": "Catering/Chef"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "Spiced Just Right Catering",
+      "website": "https://spicedjustright.com/",
+      "owner_name": "Claudia Davis",
+      "city": "Maryland Heights",
+      "phone": "(314) 266-8884",
+      "owner_email": "spicedjustrightcatering@gmail.com",
+      "category": "grocery",
+      "subcategory": "Catering/Chef"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "Northwest Coffee Roasting Co.",
+      "website": "http://www.northwestcoffee.com/",
+      "owner_name": "Jason K. Wilson",
+      "city": "St. Louis",
+      "phone": "(314) 371-4600",
+      "owner_email": "rick@northwestcoffee.com",
+      "category": "grocery",
+      "subcategory": "Coffee/Tea/Beverages"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "Pharoah’s Donuts",
+      "website": "https://m.facebook.com/Pharaohsbakery/",
+      "owner_name": "Amon Aziz and Syeeda Aziz-Morris",
+      "city": "St. Louis",
+      "phone": "(314) 351-0285",
+      "owner_email": "ladypharaoh07@gmail.com",
+      "category": "grocery",
+      "subcategory": "Bakery"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "Big Laugh Kitchen",
+      "website": "https://www.facebook.com/biglaughcreativekitchen/",
+      "owner_name": "Deva Williamson",
+      "city": "",
+      "phone": "(314) 750-4460",
+      "owner_email": "hello@biglaughkitchen.com",
+      "category": "grocery",
+      "subcategory": "Bakery"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "Healthy Habits Nutrition",
+      "website": "https://www.healthyhabitsstl.com/",
+      "owner_name": "",
+      "city": "Florissant",
+      "phone": "(314) 736-1114",
+      "owner_email": "healthyhabitsstl@gmail.com",
+      "category": "grocery",
+      "subcategory": "Coffee/Tea/Beverages"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "Teatopia",
+      "website": "https://www.teatopiastl.com/",
+      "owner_name": "Reginald Quarles",
+      "city": "St. Louis",
+      "phone": "(314) 553-9402",
+      "owner_email": "dreamteatopia@teatopiastl.com",
+      "category": "grocery",
+      "subcategory": "Coffee/Tea/Beverages"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "DDT Liquor",
+      "website": "https://ddtliquor.com/",
+      "owner_name": "Luther Mcintosh",
+      "city": "St. Louis",
+      "phone": "(314) 721-5308",
+      "owner_email": "ddtliquor@gmail.com",
+      "category": "grocery",
+      "subcategory": "Alcohol"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "Lattebliss",
+      "website": "http://latte-bliss.com/",
+      "owner_name": "Ashley Collins",
+      "city": "St. Louis",
+      "phone": "",
+      "owner_email": "latteblissscrubs@gmail.com",
+      "category": "grocery",
+      "subcategory": "Coffee/Tea/Beverages"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "Bush’s Catering",
+      "website": "http://bushscateringmealprep.com/",
+      "owner_name": "Christopher Knedler-Bush",
+      "city": "Columbia",
+      "phone": "(573) 529-2204",
+      "owner_email": "bushscatering@gmail.com",
+      "category": "grocery",
+      "subcategory": "Catering/Chef"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "Evenflow Coffee",
+      "website": "http://evenflowcoffee.com/",
+      "owner_name": "Jarrell Johnson",
+      "city": "Columbia",
+      "phone": "",
+      "owner_email": "",
+      "category": "grocery",
+      "subcategory": "Coffee/Tea/Beverages"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "Scooter's Food Joint & Catering",
+      "website": "https://www.facebook.com/Scooters-Food-Joint-Catering-1717480645208107/",
+      "owner_name": "D'Auntre Prince",
+      "city": "Columbia",
+      "phone": "573 673 9473",
+      "owner_email": "",
+      "category": "grocery",
+      "subcategory": "Catering/Chef"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "Al’s and Lena’s Catering",
+      "website": "https://www.facebook.com/Al-Lena-Catering-890626111282668",
+      "owner_name": "Al Buford & Lena Cheatman",
+      "city": "Columbia",
+      "phone": "(573) 447-8654",
+      "owner_email": "alcatering573@gmail.com",
+      "category": "grocery",
+      "subcategory": "Catering/Chef"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "Quintilla’s Kitchen",
+      "website": "https://quintillaskitchen.jimdo.com/",
+      "owner_name": "Shannon Wilson",
+      "city": "Columbia",
+      "phone": "(573) 514-3097",
+      "owner_email": "Shannon@quintskitchen.com",
+      "category": "grocery",
+      "subcategory": "Catering/Chef"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "CoCo's Desserts",
+      "website": "http://www.cocosdesserts.com/",
+      "owner_name": "Chukurah",
+      "city": "St. Louis",
+      "phone": "314-922-2505",
+      "owner_email": "cocosdesserts@gmail.com",
+      "category": "grocery",
+      "subcategory": "Bakery"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "Cuzzin’s",
+      "website": "https://www.facebook.com/Cuzzins2019",
+      "owner_name": "Timothy Wiles",
+      "city": "St. Louis",
+      "phone": "(314) 455-9250",
+      "owner_email": "cuzzinsstl@gmail.com",
+      "category": "grocery",
+      "subcategory": "Catering/Chef"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "Sugar Momma's Traditional Treats",
+      "website": "https://sugar-mommas-traditional-treats.business.site/",
+      "owner_name": "Stephanie White",
+      "city": "St. Louis",
+      "phone": "314-449-1390",
+      "owner_email": "",
+      "category": "grocery",
+      "subcategory": ""
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "SweetFixx",
+      "website": "https://sweetfixx.com/",
+      "owner_name": "Katina Mims",
+      "city": "St. Louis",
+      "phone": "(314) 643-9999",
+      "owner_email": "info@sweetfixx.com",
+      "category": "grocery",
+      "subcategory": "Bakery"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "Power Juice Bar",
+      "website": "https://stlcitygreens.org/power-juice-bar/",
+      "owner_name": "Joshua Reed",
+      "city": "St. Louis",
+      "phone": "(314) 884-8460",
+      "owner_email": "powerjuicebar@gmail.com",
+      "category": "grocery",
+      "subcategory": "Coffee/Tea/Beverages"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "Saint Louis Hop Shop",
+      "website": "http://www.saintlouishopshop.com/",
+      "owner_name": "Justin Harris & Ryan Griffin",
+      "city": "St. Louis",
+      "phone": "(314) 261-4011",
+      "owner_email": "info@stlhopshop.com",
+      "category": "grocery",
+      "subcategory": "Alcohol"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "Ari's Ice Cream Parlor & Cafe",
+      "website": "https://arisicecreamparlorandcafe.com/",
+      "owner_name": "Allen Sales",
+      "city": "St. Louis",
+      "phone": "(314) 328-2992",
+      "owner_email": "",
+      "category": "grocery",
+      "subcategory": "Ice Cream Parlor"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "Baby Kakez",
+      "website": "https://babykakez.net/",
+      "owner_name": "Michelle Jones",
+      "city": "St. Louis",
+      "phone": "(314)358-5880",
+      "owner_email": "",
+      "category": "grocery",
+      "subcategory": "Bakery"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "Cupcake Fetish St. Louis",
+      "website": "http://www.cupcakefetish4u.com/",
+      "owner_name": "Yolonda Turner",
+      "city": "St. Louis",
+      "phone": "(314) 339-8860",
+      "owner_email": "",
+      "category": "grocery",
+      "subcategory": "Bakery"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "JuiceMasters",
+      "website": "http://www.juicemasterstl.com/",
+      "owner_name": "Corey Logan",
+      "city": "St. Louis",
+      "phone": "314-337-1014",
+      "owner_email": "info@juice-masters.com",
+      "category": "grocery",
+      "subcategory": "Coffee/Tea/Beverages"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "The Fleetwood Spice Collection",
+      "website": "http://thefleetwoodspicecollection.com/",
+      "owner_name": "",
+      "city": "St. Louis",
+      "phone": "(314) 629-6227",
+      "owner_email": "fleetwoodspice@gmail.com",
+      "category": "grocery",
+      "subcategory": "Specialty"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "Murray's Catering",
+      "website": "http://murrayscatering.net/",
+      "owner_name": "Kimberly & Andrew Murray",
+      "city": "St. Louis",
+      "phone": "314.540.3717",
+      "owner_email": "",
+      "category": "grocery",
+      "subcategory": "Catering/Chef"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "The Goody Bag Stl",
+      "website": "https://www.facebook.com/thegoodybagstl/",
+      "owner_name": "",
+      "city": "St. Louis",
+      "phone": "314-265-7295",
+      "owner_email": "thegoodybagstl@gmail.com",
+      "category": "grocery",
+      "subcategory": "Specialty"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "Big Momma’s Bakery Cafe",
+      "website": "https://bigmommaskc.com/",
+      "owner_name": "Jackie Buycks; Jill Kemp; Joyce Brown",
+      "city": "Kansas City",
+      "phone": "816-765-0800",
+      "owner_email": "",
+      "category": "grocery",
+      "subcategory": "Bakery"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "Love is Key",
+      "website": "https://www.loveiskeykc.com/",
+      "owner_name": "Kenneth Robinett",
+      "city": "Kansas City",
+      "phone": "(816) 569-0440",
+      "owner_email": "loveiskeylik@gmail.com",
+      "category": "grocery",
+      "subcategory": "Bakery"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "Ruby Jean’s Kitchen & Juicery",
+      "website": "https://www.rubyjeansjuicery.com/",
+      "owner_name": "Chris Goode",
+      "city": "Kansas City",
+      "phone": "(816) 321-1440",
+      "owner_email": "info@rubyjeansjuicery.com",
+      "category": "grocery",
+      "subcategory": "Coffee/Tea/Beverages"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "Cake A Boo",
+      "website": "https://cakeaboo.com/",
+      "owner_name": "Jaresha S. Campbell",
+      "city": "Kansas City",
+      "phone": "(913) 915-0194",
+      "owner_email": "info@cakeaboo.com",
+      "category": "grocery",
+      "subcategory": "Bakery"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "Sway Vodka",
+      "website": "http://www.swayvodka.com/",
+      "owner_name": "Meia & David Dunn",
+      "city": "Kansas City",
+      "phone": "",
+      "owner_email": "",
+      "category": "grocery",
+      "subcategory": "Alcohol"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "Ah’Leisha’s Cookie Co.",
+      "website": "https://www.ahleishascookiecompany.com/",
+      "owner_name": "Ah'Leisha Cole",
+      "city": "Kansas City",
+      "phone": "",
+      "owner_email": "info@ahleishascookiecompany.com",
+      "category": "grocery",
+      "subcategory": "Bakery"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "KC Daquiri Shop",
+      "website": "https://kcdaiquirishop.com/",
+      "owner_name": "Calvin Vick",
+      "city": "Kansas City",
+      "phone": "(816) 974-3275",
+      "owner_email": "",
+      "category": "grocery",
+      "subcategory": "Alcohol"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "Mindful Tranquility Counseling",
+      "website": "https://www.constancewestlpc.com/",
+      "owner_name": "Constance West",
+      "city": "St. Charles",
+      "phone": "636-498-9376",
+      "owner_email": "Constance@Constancewestlpc.com",
+      "category": "health",
+      "subcategory": "Mental Health Support"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "TreeBullies Tree Service",
+      "website": "https://treebullies-tree-service.business.site/",
+      "owner_name": "Cinnamon Campbell",
+      "city": "Kansas City",
+      "phone": "(816) 490-7336",
+      "owner_email": "treebullieskc@gmail.com",
+      "category": "home",
+      "subcategory": "Landscaping/Gardening"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "Pure Perfection Candles",
+      "website": "https://pureperfectioncandles.com/",
+      "owner_name": "Ashley Nalls",
+      "city": "St. Louis",
+      "phone": "(314) 769-9334",
+      "owner_email": "PurePerfectionCandles@gmail.com",
+      "category": "home",
+      "subcategory": "Home Goods/Décor"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "Mixon's Gift Shop",
+      "website": "https://mixonsgiftshop.com/",
+      "owner_name": "Tia James & Travis Mixon",
+      "city": "St. Louis",
+      "phone": "",
+      "owner_email": "mixonsgiftshop@gmail.com",
+      "category": "home",
+      "subcategory": "Home Goods/Décor"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "St. Louis Community Credit Union",
+      "website": "https://www.stlouiscommunity.com/about-us",
+      "owner_name": "Gerald & Angela Brooks",
+      "city": "St. Louis",
+      "phone": "314-534-7610",
+      "owner_email": "info@stlouiscommunity.com",
+      "category": "legal",
+      "subcategory": "Financial Services"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "korédé",
+      "website": "https://www.korede.co/",
+      "owner_name": "Ronke Faleti",
+      "city": "St.Louis",
+      "phone": "",
+      "owner_email": "",
+      "category": "jewelery",
+      "subcategory": "Accessories/Handbags"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "Golden Hour Design Co.",
+      "website": "https://goldenhourdesignco.com/",
+      "owner_name": "Mikayla",
+      "city": "St. Louis",
+      "phone": "",
+      "owner_email": "mikayla@goldenhourdesignco.com",
+      "category": "jewelery",
+      "subcategory": "Accessories/Handbags"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "Mahnal",
+      "website": "https://mahnal.com/",
+      "owner_name": "Shayba Muhammad",
+      "city": "St. Louis",
+      "phone": "872-588-0562",
+      "owner_email": "",
+      "category": "jewelery",
+      "subcategory": "Accessories/Handbags"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "Hubbard Cigars",
+      "website": "https://www.rshubbardcigars.com/",
+      "owner_name": "Tamika & Rodney Hubbard",
+      "city": "St. Louis",
+      "phone": "314 308-3709",
+      "owner_email": "",
+      "category": "lifestyle",
+      "subcategory": "Smoking & Paraphernalia"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "Innovations of Excellence",
+      "website": "https://www.innovationsofexcellence.com/",
+      "owner_name": "Porscha Fryar",
+      "city": "St. Louis",
+      "phone": "",
+      "owner_email": "admin@innovationexcellence.com",
+      "category": "marketing",
+      "subcategory": "Marketing/Digital Marketing"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "Onetime Supply Co.",
+      "website": "http://onetimesupplyco.com/",
+      "owner_name": "Pierrce Buttns",
+      "city": "St. Louis",
+      "phone": 3142879966,
+      "owner_email": "",
+      "category": "packaging",
+      "subcategory": "Printing"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "St. John Portraits",
+      "website": "https://stjohnportraits.com/",
+      "owner_name": "Keith A. St. John",
+      "city": "St. Louis",
+      "phone": "(314) 741-0087",
+      "owner_email": "Stjohnportraits@gmail.com",
+      "category": "photography",
+      "subcategory": "Photography"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "SJS. Business Building and More, LLC",
+      "website": "https://sjsbusinessbuilding.com/",
+      "owner_name": "Shamara Stephens",
+      "city": "St. Louis",
+      "phone": "",
+      "owner_email": "info@sjsbusinessbuilding.com",
+      "category": "professional",
+      "subcategory": "Writing Services"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "DK Solutions LLC",
+      "website": "https://dksolutions.org/",
+      "owner_name": "Kristy & James Jackson",
+      "city": "St. Louis",
+      "phone": "(314) 200-4456",
+      "owner_email": "info@dksolutions.org",
+      "category": "professional",
+      "subcategory": "Consulting"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "Mikey’s Munchies Vending",
+      "website": "http://www.mikeyknowsbiz.com/",
+      "owner_name": "Michael Wren",
+      "city": "St. Louis",
+      "phone": "(314) 443-1346",
+      "owner_email": "admin@mikeyknowsbiz.com",
+      "category": "professional",
+      "subcategory": "Speakers"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "Professional Services & Resources",
+      "website": "www.psriusa.com",
+      "owner_name": "",
+      "city": "Jefferson City",
+      "phone": 5736369696,
+      "owner_email": "info@psriusa.com",
+      "category": "professional",
+      "subcategory": "Consulting"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "RoxStar Properties",
+      "website": "https://roxstarproperties.com/",
+      "owner_name": "Roxie Hayes",
+      "city": "St. Louis",
+      "phone": "(636) 229-1188",
+      "owner_email": "info@roxstarproperties.com",
+      "category": "realestate",
+      "subcategory": "Real Estate Agents/Brokers"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "King’s Table Soul Food",
+      "website": "https://www.facebook.com/kingstablesoul/",
+      "owner_name": "Carlos White",
+      "city": "Kansas City",
+      "phone": "(816) 444-0779",
+      "owner_email": "",
+      "category": "restaurants",
+      "subcategory": "BBQ/Soul Food Restaurant"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "District Fish & Pasta",
+      "website": "http://www.districtfishpastahouse.com/",
+      "owner_name": "",
+      "city": "Kansas City",
+      "phone": "(816) 921-0152",
+      "owner_email": "leekocollc@yahoo.com",
+      "category": "restaurants",
+      "subcategory": "BBQ/Soul Food Restaurant"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "Wings N Things",
+      "website": "https://wntexpress.com/",
+      "owner_name": "",
+      "city": "Kansas City",
+      "phone": "(816) 361-9464",
+      "owner_email": "http://darronparker@gmail.com/",
+      "category": "restaurants",
+      "subcategory": ""
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "Gates Bar B-Q",
+      "website": "https://gatesbbq.com/",
+      "owner_name": "George Gates II",
+      "city": "Kansas City",
+      "phone": "(816) 483-3880",
+      "owner_email": "",
+      "category": "restaurants",
+      "subcategory": "BBQ/Soul Food Restaurant"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "Awaze",
+      "website": "http://www.awazekc.com/",
+      "owner_name": "Pablo Brown",
+      "city": "Kansas City",
+      "phone": "(816) 756-5111",
+      "owner_email": "",
+      "category": "restaurants",
+      "subcategory": "Ethiopian/Eritrean Restaurant"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "Mesob Restaurant",
+      "website": "https://www.mesobkc.com/",
+      "owner_name": "Cherven Desauguste & Mehret Tesfamariam",
+      "city": "Kansas City",
+      "phone": "(816) 492-5099",
+      "owner_email": "mesobkc@gmail.com",
+      "category": "restaurants",
+      "subcategory": "Ethiopian/Eritrean Restaurant"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "JC Supper Club",
+      "website": "https://jcsupperclub.com/",
+      "owner_name": "Reggie Brooks",
+      "city": "St. Louis",
+      "phone": "(314) 755-1923",
+      "owner_email": "jcsupperclub@gmail.com",
+      "category": "restaurants",
+      "subcategory": "Bar/ Night Club"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "Bait",
+      "website": "https://www.baitstl.com/",
+      "owner_name": "Kalen Hodgest",
+      "city": "St. Louis",
+      "phone": "(314) 405-2797",
+      "owner_email": "catering@baitstl.com",
+      "category": "restaurants",
+      "subcategory": ""
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "Burger 809",
+      "website": "https://www.burger809.com/",
+      "owner_name": "Tasha Smith",
+      "city": "St. Louis",
+      "phone": "(314) 899-5959",
+      "owner_email": "Info@burger809.com",
+      "category": "restaurants",
+      "subcategory": ""
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "C&K Barbecue",
+      "website": "https://www.ckbbqstl.com/",
+      "owner_name": "Forris King",
+      "city": "St. Louis",
+      "phone": "(314) 385-8100",
+      "owner_email": "info@ckbbqstl.com",
+      "category": "restaurants",
+      "subcategory": "BBQ/ Soul Food Restaurant"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "Cathy's Kitchen",
+      "website": "https://www.cjenkinscompany.com/",
+      "owner_name": "Cathy Jenkins",
+      "city": "Ferguson",
+      "phone": "(314) 524-9200",
+      "owner_email": "cjenkinscompany@gmail.com",
+      "category": "restaurants",
+      "subcategory": "BBQ/ Soul Food Restaurant"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "Drake's Place",
+      "website": "http://www.drakesplacestl.com/",
+      "owner_name": "Sonny Lewis",
+      "city": "Ferguson",
+      "phone": "(314) 736-1140",
+      "owner_email": "blewis@drakesplace.net",
+      "category": "restaurants",
+      "subcategory": "BBQ/ Soul Food Restaurant"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "DSquared Bistro",
+      "website": "https://www.facebook.com/Dsquaredbistro/",
+      "owner_name": "",
+      "city": "St. Louis",
+      "phone": "(314) 405-8015",
+      "owner_email": "dsquaredstl@gmail.com",
+      "category": "restaurants",
+      "subcategory": "Bar/ Night Club"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "Five Aces Bar-B-Que",
+      "website": "http://www.fiveacesbbq.com/",
+      "owner_name": "Antonio & Latoshia Ellis",
+      "city": "St. Louis",
+      "phone": "(314) 771-4001",
+      "owner_email": "FIVEACESBBQ@GMAIL.COM",
+      "category": "restaurants",
+      "subcategory": "BBQ/ Soul Food Restaurant"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "Gobble Stop Smokehouse",
+      "website": "http://www.gobblestopsmokehouse.net/",
+      "owner_name": "DeMarco Howard",
+      "city": "Creve Coeur",
+      "phone": "(314) 878-5586",
+      "owner_email": "GobbleStopSmokehouse@gmail.com",
+      "category": "restaurants",
+      "subcategory": "BBQ/ Soul Food Restaurant"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "Gulf Shores Restaurant & Grill",
+      "website": "https://www.gulfshoresrestaurantandgrill.com/",
+      "owner_name": "Harry & Erica Parker",
+      "city": "Creve Coeur",
+      "phone": "(314) 878-3306",
+      "owner_email": "harryparkr@aol.com",
+      "category": "restaurants",
+      "subcategory": "BBQ/ Soul Food Restaurant"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "Jerk Soul",
+      "website": "https://www.facebook.com/JerkSoulSTL",
+      "owner_name": "Zahra Spencer & Telie Woods",
+      "city": "St. Louis",
+      "phone": "(314) 601-3871",
+      "owner_email": "jerksoulstl@gmail.com",
+      "category": "restaurants",
+      "subcategory": "Caribbean Restaurant"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "Just Chicken",
+      "website": "http://ferguson.justchickenstl.com/",
+      "owner_name": "Antwann Binion",
+      "city": "Ferguson",
+      "phone": "(314) 733-9099",
+      "owner_email": "info@justchickenstl.com",
+      "category": "restaurants",
+      "subcategory": ""
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "Lefty's Fried Rice",
+      "website": "http://leftysfriedrice.com",
+      "owner_name": "Chandra & Lefty Davis",
+      "city": "St. Louis",
+      "phone": "(314) 899-0169",
+      "owner_email": "",
+      "category": "restaurants",
+      "subcategory": ""
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "Prime 55",
+      "website": "http://prime55stl.com/",
+      "owner_name": "Orlando Watson",
+      "city": "St. Louis",
+      "phone": "(314) 553-9595",
+      "owner_email": "info@prime55stl.com",
+      "category": "restaurants",
+      "subcategory": "Bar/ Night Club"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "Roper's Ribs",
+      "website": "www.ropersribs.com",
+      "owner_name": "Carl Roper",
+      "city": "St. Louis",
+      "phone": "(314) 381-6200",
+      "owner_email": "",
+      "category": "restaurants",
+      "subcategory": "BBQ/ Soul Food Restaurant"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "Steve's Hot Dogs",
+      "website": "https://www.steveshotdogsstl.com/",
+      "owner_name": "Steve Ewing",
+      "city": "St. Louis",
+      "phone": "(314) 932-5953",
+      "owner_email": "towergrovehotdogs@gmail.com",
+      "category": "restaurants",
+      "subcategory": ""
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "StLouisianaQ",
+      "website": "https://stlouisianaq.com/",
+      "owner_name": "Pattie Peters & Thomas White",
+      "city": "Wright City",
+      "phone": "(636) 791-1120",
+      "owner_email": "",
+      "category": "restaurants",
+      "subcategory": ""
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "Sweetie Pie's Upper Crust",
+      "website": "",
+      "owner_name": "Robbie Montgomery",
+      "city": "St. Louis",
+      "phone": "(314) 371-0304",
+      "owner_email": "sweetiepiesuppercrust@yahoo.com",
+      "category": "restaurants",
+      "subcategory": "BBQ/ Soul Food Restaurant"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "TKO Grill",
+      "website": "https://www.facebook.com/tkogrillstl/",
+      "owner_name": "Toronza Cozart",
+      "city": "Breckenridge Hills",
+      "phone": "(314) 551-2128",
+      "owner_email": "tko_grill@yahoo.com",
+      "category": "restaurants",
+      "subcategory": "Restaurant"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "Turn",
+      "website": "https://www.turnstl.com/",
+      "owner_name": "David Kirkland",
+      "city": "St. Louis",
+      "phone": "(314) 240-5157",
+      "owner_email": "gm@turnstl.com",
+      "category": "restaurants",
+      "subcategory": ""
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "West End Bistro",
+      "website": "https://www.westendbistro255.com/",
+      "owner_name": "Kevin & Marion Green",
+      "city": "St. Louis",
+      "phone": "(314) 875-9400",
+      "owner_email": "chefkevin2@yahoo.com",
+      "category": "restaurants",
+      "subcategory": ""
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "Gourmet Soul Restaurant and Catering",
+      "website": "http://www.gourmetsoul.com/",
+      "owner_name": "Lavinia McCoy",
+      "city": "St. Louis",
+      "phone": "(314) 339-5658",
+      "owner_email": "gourmetsoul314@gmail.com",
+      "category": "restaurants",
+      "subcategory": "BBQ/ Soul Food Restaurant"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "Niecie’s Restaurant",
+      "website": "https://www.facebook.com/NieciesSoulFood",
+      "owner_name": "Denise & Perry Ward",
+      "city": "Kansas City",
+      "phone": "(816) 444-6006",
+      "owner_email": "thenieciesrestaurant@gmail.com",
+      "category": "restaurants",
+      "subcategory": "BBQ/ Soul Food Restaurant"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "Mr. Murphy’s Stuffed Potatoes",
+      "website": "https://www.facebook.com/Mr-Murphy-Stuffed-Potatoes-401557040683356/",
+      "owner_name": "Jheron Nunnelly",
+      "city": "Columbia",
+      "phone": "(573) 424-9232",
+      "owner_email": "foodpartycomo@gmail.com",
+      "category": "restaurants",
+      "subcategory": "Food Trucks/Carts"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "Vibez Lounge",
+      "website": "https://www.vibezloungecomo.com/",
+      "owner_name": "R'Velle Fair",
+      "city": "Columbia",
+      "phone": "(573) 424-4718",
+      "owner_email": "vibezlounge@gmail.com",
+      "category": "restaurants",
+      "subcategory": "BBQ/ Soul Food Restaurant"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "Munchi’s Fish and Chicc’n",
+      "website": "https://www.facebook.com/munchiscomo/",
+      "owner_name": "Dimetrious Woods",
+      "city": "Columbia",
+      "phone": "(573) 443-0162",
+      "owner_email": "",
+      "category": "restaurants",
+      "subcategory": "Food Trucks/Carts"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "Plush Ultra Lounge",
+      "website": "https://plushlounge.net/",
+      "owner_name": "Adrian Preyer",
+      "city": "Columbia",
+      "phone": "573) 876-0100",
+      "owner_email": "",
+      "category": "restaurants",
+      "subcategory": "BBQ/ Soul Food Restaurant"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "Papadoo’s Soulfood & BBQ",
+      "website": "https://www.facebook.com/Papadoos-soul-food-Bbq-190156828444151/",
+      "owner_name": "Joshua Williams Sr.",
+      "city": "Columbia",
+      "phone": "(409) 996-8788",
+      "owner_email": "",
+      "category": "restaurants",
+      "subcategory": "BBQ/ Soul Food Restaurant"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "Big Daddy’s BBQ",
+      "website": "https://www.facebook.com/BIGDADDYSBBQCOMO/",
+      "owner_name": "Lloyd & Fontella Henry",
+      "city": "Columbia",
+      "phone": "(573) 875-2227",
+      "owner_email": "bigdaddysbbqcomo1@gmail.com",
+      "category": "restaurants",
+      "subcategory": "BBQ/ Soul Food Restaurant"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "Mrs. G’s A Touch of Soul",
+      "website": "https://mrs-gs-a-touch-of-soul.business.site/",
+      "owner_name": "Gabriella Allen",
+      "city": "Columbia",
+      "phone": "(573) 424-3718",
+      "owner_email": "",
+      "category": "restaurants",
+      "subcategory": "BBQ/ Soul Food Restaurant"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "Jamaican Jerk Hut",
+      "website": "https://www.facebook.com/JamJerkHut/",
+      "owner_name": "Rexroy Scott & Colin Russell",
+      "city": "Columbia",
+      "phone": "(573) 616-4399",
+      "owner_email": "",
+      "category": "restaurants",
+      "subcategory": "Caribbean Restaurant"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "De Palm Tree",
+      "website": "http://depalmtreestl.com/",
+      "owner_name": "Tammey Romer",
+      "city": "University City",
+      "phone": "(314) 432-5171",
+      "owner_email": "",
+      "category": "restaurants",
+      "subcategory": "Caribbean Restaurant"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "Irie Eats Jamaican Restaurant",
+      "website": "Irie Eats Jamaican Restaurant",
+      "owner_name": "Carlton Brackett",
+      "city": "University City",
+      "phone": "(314) 395-8821",
+      "owner_email": "irieeatsrestaurant@gmail.com",
+      "category": "restaurants",
+      "subcategory": "Caribbean Restaurant"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "Krab Kingz Seafood St. Louis",
+      "website": "http://www.krabkingzdelmar.com/",
+      "owner_name": "Craig Scott",
+      "city": "St. Louis",
+      "phone": "(314) 390-2004",
+      "owner_email": "",
+      "category": "restaurants",
+      "subcategory": ""
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "Meskerem Ethiopian Restaurant",
+      "website": "https://meskeremstl.com/",
+      "owner_name": "Henok Gerbi",
+      "city": "St. Louis",
+      "phone": "(314) 772-4442",
+      "owner_email": "",
+      "category": "restaurants",
+      "subcategory": "Ethiopian/Eritrean Restaurant"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "Bar Italia",
+      "website": "http://baritaliastl.com/",
+      "owner_name": "Mengesha Yohannes",
+      "city": "St. Louis",
+      "phone": "(314) 361-7010",
+      "owner_email": "",
+      "category": "restaurants",
+      "subcategory": ""
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "Mom’s Soul Food",
+      "website": "http://momssoulfoodkitchen.net/",
+      "owner_name": "Maurice Green",
+      "city": "St. Louis",
+      "phone": "(314) 328-1333",
+      "owner_email": "",
+      "category": "restaurants",
+      "subcategory": "BBQ/ Soul Food Restaurant"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "Ol Henry Restaurant",
+      "website": "http://www.olhenryrestaurant.com/",
+      "owner_name": "Henry Edward Taylor",
+      "city": "Berkeley",
+      "phone": "(314) 736-6800",
+      "owner_email": "info@olhenryrestaurnt.com",
+      "category": "restaurants",
+      "subcategory": "BBQ/ Soul Food Restaurant"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "Diner's Delight",
+      "website": "http://www.dinersdelightstl.com/",
+      "owner_name": "Gregory Houston",
+      "city": "St. Louis",
+      "phone": "314-776-9570",
+      "owner_email": "",
+      "category": "restaurants",
+      "subcategory": "BBQ/ Soul Food Restaurant"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "VEG NATION LLC",
+      "website": "http://vegnationstl.com/",
+      "owner_name": "Christopher Hill",
+      "city": "St. Louis",
+      "phone": "(314) 262-2170",
+      "owner_email": "vegnationstl@gmail.com",
+      "category": "restaurants",
+      "subcategory": ""
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "Harlem Tap Room",
+      "website": "",
+      "owner_name": "Evelyn Manson",
+      "city": "St. Louis",
+      "phone": "(314) 354-6406",
+      "owner_email": "",
+      "category": "restaurants",
+      "subcategory": "Bar/ Night Club"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "Marquee Restaurant & Lounge",
+      "website": "http://www.themarqueestl.com/",
+      "owner_name": "Andre Stith",
+      "city": "St. Louis",
+      "phone": "(314) 943-9657",
+      "owner_email": "info@themarqueestl.com",
+      "category": "restaurants",
+      "subcategory": "Bar/ Night Club"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "STL Pure Heat",
+      "website": "https://stlpureheat.com/",
+      "owner_name": "Reggie D.",
+      "city": "St. Louis",
+      "phone": "(314) 701-0405",
+      "owner_email": "reggied@stlpureheat.com",
+      "category": "restaurants",
+      "subcategory": "BBQ/ Soul Food Restaurant"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "BB's Jazz Blues & Soups",
+      "website": "http://www.bbsjazzbluessoups.com/",
+      "owner_name": "Mark O'Shaughnessy",
+      "city": "St. Louis",
+      "phone": "(314) 436-5222",
+      "owner_email": "info@bbsjazzbluessoups.com",
+      "category": "restaurants",
+      "subcategory": "BBQ/ Soul Food Restaurant"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "African Palace",
+      "website": "http://www.africanpalace.org/",
+      "owner_name": "",
+      "city": "Florissant",
+      "phone": "(314) 921-4600",
+      "owner_email": "thenewap.usa@gmail.com",
+      "category": "restaurants",
+      "subcategory": "Bar/ Night Club"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "Happy Hour Bar & Grill",
+      "website": "http://happyhourstl.com/",
+      "owner_name": "Michael Johnson",
+      "city": "St. Louis",
+      "phone": "(314) 831-8929",
+      "owner_email": "",
+      "category": "restaurants",
+      "subcategory": "BBQ/ Soul Food Restaurant"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "Show Me Fish & Chicken",
+      "website": "https://www.ordershowmefishandchicken.com/#/",
+      "owner_name": "William McClendon",
+      "city": "Raytown",
+      "phone": "(816) 491-2409",
+      "owner_email": "",
+      "category": "restaurants",
+      "subcategory": ""
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "PeachTree Buffet",
+      "website": "http://peachtreerestaurant.com/",
+      "owner_name": "Vera & Lavell",
+      "city": "Kansas City",
+      "phone": "(816) 923-0099",
+      "owner_email": "",
+      "category": "restaurants",
+      "subcategory": "BBQ/ Soul Food Restaurant"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "Fat Jack’s Chicken & Fish",
+      "website": "https://www.fatjackskcmo.com/",
+      "owner_name": "Marcus Crosdale",
+      "city": "Kansas City",
+      "phone": "(816) 216-7686",
+      "owner_email": "",
+      "category": "restaurants",
+      "subcategory": "BBQ/ Soul Food Restaurant"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "Blue Nile Café",
+      "website": "http://www.bluenilekc.com/",
+      "owner_name": "Selam & Daniel",
+      "city": "Kansas City",
+      "phone": "(816) 283-0990",
+      "owner_email": "",
+      "category": "restaurants",
+      "subcategory": "Ethiopian/Eritrean Restaurant"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "JONES BAR-B-Q SAUCE",
+      "website": "https://www.jonesbbqkc.com/",
+      "owner_name": "Deborah and Mary Jones",
+      "city": "Kansas City",
+      "phone": "913-788-5005",
+      "owner_email": "allyson@pagecomms.com",
+      "category": "restaurants",
+      "subcategory": "BBQ/Soul Food Restaurant"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "London's Wing House",
+      "website": "http://www.londonswinghouse.com/",
+      "owner_name": "Hildred & Dale London",
+      "city": "St. Louis",
+      "phone": "314-827-0133",
+      "owner_email": "info@londonswinghouse.com",
+      "category": "restaurants",
+      "subcategory": "BBQ/Soul Food Restaurant"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "Comfort Zone Security, Protection & Investigations, LLC",
+      "website": "www.Comfortzsecurity.com",
+      "owner_name": "Thomas “Mitch” Mitchell",
+      "city": "Wentzville",
+      "phone": "(636) 887-1131",
+      "owner_email": "tmm@comfortzsecurity.com",
+      "category": "security",
+      "subcategory": ""
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "Chauncey's Towing",
+      "website": "http://chaunceytowing.com/",
+      "owner_name": "Tony Stevenson",
+      "city": "St. Louis",
+      "phone": "314-313-3873",
+      "owner_email": "chaunceytowing@yahoo.com",
+      "category": "transportation",
+      "subcategory": ""
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "Ready Set Go Music School",
+      "website": "https://www.facebook.com/readysetgomusicschool/",
+      "owner_name": "Samuel Blue",
+      "city": "St. Louis",
+      "phone": "(314) 301-9885",
+      "owner_email": "readysetgomusicschool@gmail.com",
+      "category": "visual",
+      "subcategory": "Music Lessons/Instruments"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "2.0 LLC",
+      "website": "www.smoketwopoint0.com",
+      "owner_name": "KIRK YOUNG",
+      "city": "Black Jack",
+      "phone": "(312) 823-9190",
+      "owner_email": "smoketwopoint0@gmail.com",
+      "category": "lifestyle",
+      "subcategory": "Smoking & Paraphernalia"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "JM Mobile Notary Services",
+      "website": "http://jmmobilenotaryservices.biz/?utm_source=gmb&utm_medium=referral",
+      "owner_name": "jasmine mckinney",
+      "city": "St. Louis",
+      "phone": "(314) 932-0308",
+      "owner_email": "",
+      "category": "legal",
+      "subcategory": ""
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "Ethnic Twist Designs, Llc",
+      "website": "https://ethnictwistdesignsllc.shop",
+      "owner_name": "",
+      "city": "Overland",
+      "phone": "(314) 724-0662",
+      "owner_email": "ethnictwistdesigner@gmail.com",
+      "category": "clothing",
+      "subcategory": "Apparel"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "Wakava Food & Beverage",
+      "website": "www.wakava.com",
+      "owner_name": "Olamide Adeboye",
+      "city": "St. Louis",
+      "phone": "(314) 458-9336",
+      "owner_email": "info@wakava.com",
+      "category": "grocery",
+      "subcategory": "Food Product/Brand"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "Cutters Professional Painting",
+      "website": "",
+      "owner_name": "Willie Hill",
+      "city": "Kansas City",
+      "phone": "(816) 590-5854",
+      "owner_email": "mrgoodbar7271.lh@gmail.com",
+      "category": "construction",
+      "subcategory": "Painting Services"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "Glass House Incense",
+      "website": "www.glasshouseincense.com",
+      "owner_name": "Melissa Fleming",
+      "city": "Arnold",
+      "phone": "(314) 439-1881",
+      "owner_email": "melissa@glasshouseincense.com",
+      "category": "home",
+      "subcategory": "Home Goods/Décor"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "Head Turners Hair & Nail Designs",
+      "website": "https://www.facebook.com/headturnershair/",
+      "owner_name": "Dianne Lowe",
+      "city": "St. Louis",
+      "phone": "(314) 381-8880",
+      "owner_email": "hair90@headturnershair.com",
+      "category": "beauty",
+      "subcategory": "Beauty Salon"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "Groom Theory Lounge",
+      "website": "https://www.groomtheorylounge.com/",
+      "owner_name": "Haven Hobbs",
+      "city": "St. Charles",
+      "phone": "(636) 493-6764",
+      "owner_email": "",
+      "category": "beauty",
+      "subcategory": "Barber"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "Liberty Bank",
+      "website": "https://www.libertybank.net/",
+      "owner_name": "Alden J. McDonald Jr.",
+      "city": "Kansas City",
+      "phone": "(816) 822-8560",
+      "owner_email": "",
+      "category": "legal",
+      "subcategory": "Financial Services"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "Island Spice",
+      "website": "https://www.islandspicekc.com/",
+      "owner_name": "Veronica & Dave Richards",
+      "city": "Kansas City",
+      "phone": "(816) 523-3974",
+      "owner_email": "",
+      "category": "restaurants",
+      "subcategory": "Caribbean Restaurant"
+}
+},
+    {
+      "model": "vbp.vbp_mo",
+      "fields": {
+"business_name": "Chixen KC",
+      "website": "http://www.chixenkc.com/",
+      "owner_name": "Adam Mark",
+      "city": "Kansas City",
+      "phone": "(816) 368-1234",
+      "owner_email": "order@chixenkc.com",
+      "category": "restaurants",
+      "subcategory": "BBQ/Soul Food Restaurant"
+}
+    }
+  ]

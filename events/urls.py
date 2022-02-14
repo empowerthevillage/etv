@@ -7,6 +7,7 @@ urlpatterns = [
     path('power-swing-classic/', golf, name='golf'),
     path('love-of-art-fundraiser/', art, name='art'),
     path('ticket-update-cart/', ticket_cart_update, name="ticket-update-cart"),
+    path('ticket-donation-update-cart/', ticket_cart_donation_update, name="ticket-update-donation-cart"),
     path('ticket/<ticket_id>/', ticket, name="ticket-detail"),
     path('power-swing-classic/buy-tickets/', golf_checkout, name='golf-checkout'),
     path('power-swing-classic/sponsor/', golf_sponsor_checkout, name='golf-sponsor-checkout'),

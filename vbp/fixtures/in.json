@@ -1,0 +1,5228 @@
+[
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Pampered Hands By Nikki",
+      "website": "www.pampermenikki.com",
+      "owner_name": "Nikki Campbell",
+      "city": "Brownsburg",
+      "phone": "(317) 840-7187",
+      "owner_email": "",
+      "category": "beauty",
+      "subcategory": "Nails"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Elegant Scent-sations, LLC",
+      "website": "https://elegantscent-sationsllc.com",
+      "owner_name": "",
+      "city": "Crown Point",
+      "phone": "(219) 250-9994",
+      "owner_email": "elegantscentsations1@gmail.com",
+      "category": "beauty",
+      "subcategory": "Bath & Body"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Diva Beauty Supply",
+      "website": "https://www.facebook.com/FWDivaBeautySupply/",
+      "owner_name": "Martinez Em(?)",
+      "city": "Fort Wayne",
+      "phone": "(260) 480-9998",
+      "owner_email": "fwdivasbeautysupply@gmail.com",
+      "category": "beauty",
+      "subcategory": "Beauty Supply/Hair & Accessories"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Milizette Beauty & Barber Supply",
+      "website": "https://www.milizette.com/",
+      "owner_name": "Kevin & Betty Lyles",
+      "city": "Gary",
+      "phone": "(219) 882-8200",
+      "owner_email": "info@milizette.com; milizette@live.com",
+      "category": "beauty",
+      "subcategory": "Beauty Supply/Hair & Accessories"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Flawless Allure Spa",
+      "website": "http://www.flawlessallurespa.com/",
+      "owner_name": "",
+      "city": "Hammond",
+      "phone": "(872) 356-1885",
+      "owner_email": "",
+      "category": "beauty",
+      "subcategory": "Beauty Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Super Tight Barbershop",
+      "website": "https://www.instagram.com/supertight317/?igshid=wi2evensdp8z",
+      "owner_name": "",
+      "city": "Indianapolis",
+      "phone": "(317) 541-1840",
+      "owner_email": "",
+      "category": "beauty",
+      "subcategory": "Barber"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Gloss by Res�, LLC",
+      "website": "www.linktr.ee/glossbyrese",
+      "owner_name": "Janea Bell",
+      "city": "Indianapolis",
+      "phone": "(317) 643-9725",
+      "owner_email": "glossbyrese@yahoo.com",
+      "category": "beauty",
+      "subcategory": "Cosmetics"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Aprylspa",
+      "website": "aprylspa.com",
+      "owner_name": "",
+      "city": "Indianapolis",
+      "phone": "(317) 937-4800",
+      "owner_email": "",
+      "category": "beauty",
+      "subcategory": "Cosmetics"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Be Bella Company LLC",
+      "website": "https://www.bebellacompany.com/",
+      "owner_name": "Andrea Brown",
+      "city": "Indianapolis",
+      "phone": "(317) 602-3132",
+      "owner_email": "",
+      "category": "beauty",
+      "subcategory": "Bath & Body"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Bella Body and Skin Studio",
+      "website": "www.bellabodyandskinstudio.com",
+      "owner_name": "Dr. Carla Jenkins",
+      "city": "Indianapolis",
+      "phone": "(317) 296-4577",
+      "owner_email": "",
+      "category": "beauty",
+      "subcategory": "Cosmetics"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Braids By Lian LLC",
+      "website": "https://braidsbylian.setmore.com/",
+      "owner_name": "Lian",
+      "city": "Indianapolis",
+      "phone": "(317) 452-5398",
+      "owner_email": "lianhollis@gmail.com",
+      "category": "beauty",
+      "subcategory": "Beauty Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Confidence upscale studios llc",
+      "website": "https://www.confidenceupscalestudios.com/",
+      "owner_name": "Brittany Smith",
+      "city": "Indianapolis",
+      "phone": "(317) 669-0010",
+      "owner_email": "Confidenceupscalestudios@gmail.com",
+      "category": "beauty",
+      "subcategory": "Beauty Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Crispy Cuts Barbershop",
+      "website": "https://crispy-cuts-barbershop.business.site/",
+      "owner_name": "",
+      "city": "Indianapolis",
+      "phone": "(317) 332-7088",
+      "owner_email": "",
+      "category": "beauty",
+      "subcategory": "Barber"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "D'Fine Style Beauty Bar",
+      "website": "https://dfine-style-beauty-bar.business.site/",
+      "owner_name": "",
+      "city": "Indianapolis",
+      "phone": "(317) 460-3601",
+      "owner_email": "",
+      "category": "beauty",
+      "subcategory": "Beauty Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "DELANDA",
+      "website": "https://www.delandabeauty.com/",
+      "owner_name": "Kyla Thompson",
+      "city": "Indianapolis",
+      "phone": "",
+      "owner_email": "support@delandabeauty.com",
+      "category": "beauty",
+      "subcategory": "Beauty Supply/Hair & Accessories"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Gifts From A Goddess",
+      "website": "https://giftsfromagoddess.acuityscheduling.com/",
+      "owner_name": "Keondraa Water",
+      "city": "Indianapolis",
+      "phone": "",
+      "owner_email": "mskeondraatwater@gmail.com",
+      "category": "beauty",
+      "subcategory": "Beauty Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Jael LLC",
+      "website": "https://www.jaelproducts.com/",
+      "owner_name": "Jerilyn, Janet, Grova, Jeana and Judy Lewis",
+      "city": "Indianapolis",
+      "phone": "(317) 683-3133",
+      "owner_email": "info@jaelproducts.com",
+      "category": "beauty",
+      "subcategory": "Bath & Body"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Jay�s Beauty: Moore Than Makeup",
+      "website": "https://www.jaysbeautyservice.com/",
+      "owner_name": "J�yna Moore",
+      "city": "Indianapolis",
+      "phone": "",
+      "owner_email": "jaysbeautyservice@gmail.com",
+      "category": "beauty",
+      "subcategory": "Taveling Stylist"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Lady Beatz Beauty Brand",
+      "website": "https://ladybeatzbeautybrand.com/",
+      "owner_name": "",
+      "city": "Indianapolis",
+      "phone": "",
+      "owner_email": "ladybeatzbeautybrand@gmail.com",
+      "category": "beauty",
+      "subcategory": "Cosmetics"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Lamaj Salon and Spa",
+      "website": "https://www.lamajsalonandspa.com/",
+      "owner_name": "Jamal",
+      "city": "Indianapolis",
+      "phone": "(317) 925-0922",
+      "owner_email": "lamajsalonandspa@gmail.com",
+      "category": "beauty",
+      "subcategory": "Beauty Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Loc' By OnlyLanette",
+      "website": "http://Locdbyonlylanette.com/",
+      "owner_name": "Lanette",
+      "city": "Indianapolis",
+      "phone": "(317) 289-6133",
+      "owner_email": "hairbyonlylanette@gmail.com",
+      "category": "beauty",
+      "subcategory": "Beauty Supply/Hair & Accessories"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Luminous Skin LLC",
+      "website": "www.Luminousskin.shop",
+      "owner_name": "Najala",
+      "city": "Indianapolis",
+      "phone": "(317) 785-4599",
+      "owner_email": "Contact@LuminousSkin.shop",
+      "category": "beauty",
+      "subcategory": "Cosmetics"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Make It Classy",
+      "website": "makeitclassydiy.com",
+      "owner_name": "Victoria Smith",
+      "city": "Indianapolis",
+      "phone": "",
+      "owner_email": "makeitclassydiy@classycurlies.com.",
+      "category": "beauty",
+      "subcategory": "Cosmetics"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Microblading by Phee",
+      "website": "www.microbladingbyphee.com",
+      "owner_name": "Phee",
+      "city": "Indianapolis",
+      "phone": "(317) 315-9891",
+      "owner_email": "microbladingbyphee@gmail.com",
+      "category": "beauty",
+      "subcategory": "Cosmetics"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Moisturize and Mind Your Business",
+      "website": "moisturizeandmindyourbusiness.com",
+      "owner_name": "",
+      "city": "Indianapolis",
+      "phone": "(317) 956-9989",
+      "owner_email": "contactmarkeeta@gmail.com",
+      "category": "beauty",
+      "subcategory": "Bath & Body"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Naturally tiara",
+      "website": "https://www.naturallytiara.com",
+      "owner_name": "Tiara Nibbs",
+      "city": "Indianapolis",
+      "phone": "(317) 597-5354",
+      "owner_email": "info@naturallytiara.com",
+      "category": "beauty",
+      "subcategory": "Cosmetics"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "NVMy Beard",
+      "website": "www.nvmybeard.com",
+      "owner_name": "",
+      "city": "Indianapolis",
+      "phone": "( 832) 482-8201",
+      "owner_email": "ceonvmybeard@gmail.com",
+      "category": "beauty",
+      "subcategory": "Beauty Supply/Hair & Accessories"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Pink Party Palace",
+      "website": "www.pinkpartypalace.com",
+      "owner_name": "",
+      "city": "Indianapolis",
+      "phone": "(317) 458-9322",
+      "owner_email": "support@pinkpartypalace.com",
+      "category": "beauty",
+      "subcategory": "Beauty Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Posh Coiffure Studios",
+      "website": "www.positiveenergyhealth.org",
+      "owner_name": "Stephanie Williams",
+      "city": "Indianapolis",
+      "phone": "(317) 665-1384",
+      "owner_email": "stephaniewilliams823@icloud.com",
+      "category": "beauty",
+      "subcategory": "Beauty Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Pynk Monky Esthetics & Wellness",
+      "website": "www.thepynkmonky.net",
+      "owner_name": "Rhonda & Elon",
+      "city": "Indianapolis",
+      "phone": "(317) 985-1649",
+      "owner_email": "pynkmonky@gmail.com",
+      "category": "beauty",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "She's Polished",
+      "website": "https://linktr.ee/SPolished",
+      "owner_name": "LaChae",
+      "city": "Indianapolis",
+      "phone": "(317) 366-6450",
+      "owner_email": "shespolishedd@yahoo.com",
+      "category": "beauty",
+      "subcategory": "Nails"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Shear  Elegance  Day Spa",
+      "website": "shearelegancedayspas.com",
+      "owner_name": "Ursurla Shelton",
+      "city": "Indianapolis",
+      "phone": "(317) 983-8143",
+      "owner_email": "ShearEleganceDaySpas@gmail.com",
+      "category": "beauty",
+      "subcategory": "Beauty Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Signature Bodies Day Spa",
+      "website": "https://www.signaturebodiesdayspa.com/",
+      "owner_name": "Jarie Sturdivant",
+      "city": "Indianapolis",
+      "phone": "(317) 886-0449",
+      "owner_email": "info@signaturebodiesdayspa.com",
+      "category": "beauty",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Skin Supremacy",
+      "website": "www.skinsupremacy.care",
+      "owner_name": "Chione DaLiyah",
+      "city": "Indianapolis",
+      "phone": "",
+      "owner_email": "supremacystrandss@gmail.com",
+      "category": "beauty",
+      "subcategory": "Cosmetics"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "SofiYah LLC",
+      "website": "www.sofiyahllc.com",
+      "owner_name": "Mia",
+      "city": "Indianapolis",
+      "phone": "(317) 605-6840",
+      "owner_email": "miaw.sofiyah@gmail.com",
+      "category": "beauty",
+      "subcategory": "Cosmetics"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Starr Studded Nail Lounge",
+      "website": "www.getstarrstudded.com",
+      "owner_name": "Starr Robinson",
+      "city": "Indianapolis",
+      "phone": "(317) 737-7368",
+      "owner_email": "Starr.Robinson@getstarrstudded.com",
+      "category": "beauty",
+      "subcategory": "Nails"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "The D R Barber Salon",
+      "website": "http://www.thedrbarbersalon.com",
+      "owner_name": "Derrick Richard",
+      "city": "Indianapolis",
+      "phone": "(317) 679-3847",
+      "owner_email": "",
+      "category": "beauty",
+      "subcategory": "Barber"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Vonzetta's Lavish Hair Boutique",
+      "website": "vonzettaslavishhair.com",
+      "owner_name": "",
+      "city": "Indianapolis",
+      "phone": "(765) 999-1017",
+      "owner_email": "support@vonzettaslavishhair.com",
+      "category": "beauty",
+      "subcategory": "Beauty Supply/Hair & Accessories"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Whipped by M&S",
+      "website": "www.whippedbyms.bigcartel.com",
+      "owner_name": "Marie Ursery",
+      "city": "Indianapolis",
+      "phone": "",
+      "owner_email": "",
+      "category": "beauty",
+      "subcategory": "Bath & Body"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "WOW Beauty Supply",
+      "website": "https://wow-beauty-supply.business.site/?utm_source=gmb&utm_medium=referral",
+      "owner_name": "",
+      "city": "Indianapolis",
+      "phone": "(317) 493-1130",
+      "owner_email": "",
+      "category": "beauty",
+      "subcategory": "Beauty Supply/Hair & Accessories"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Blended Beauty Total Skincare",
+      "website": "https://blendedbeautyllc.com/",
+      "owner_name": "Bri Davis",
+      "city": "Indianapolis",
+      "phone": "(317) 909-8125",
+      "owner_email": "mzbdavis@gmail.com",
+      "category": "beauty",
+      "subcategory": "Cosmetics"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "All In The Wrist Barbershop",
+      "website": "https://www.facebook.com/Allinthewrists317/",
+      "owner_name": "",
+      "city": "Indianapolis,",
+      "phone": "(317) 929- 1999",
+      "owner_email": "",
+      "category": "beauty",
+      "subcategory": "Barber"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Mielle Organics",
+      "website": "https://www.mielleorganics.com/",
+      "owner_name": "Monique Rodriguez",
+      "city": "Merrilville",
+      "phone": "(800) 436-9165",
+      "owner_email": "pr@mielleorganics.com",
+      "category": "beauty",
+      "subcategory": "Beauty Supply/Hair & Accessories"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Ms. Vals Unisex Salon",
+      "website": "",
+      "owner_name": "Jesse Magee",
+      "city": "Whiting",
+      "phone": "(708) 813-3454",
+      "owner_email": "vjones0624@gmail.com",
+      "category": "beauty",
+      "subcategory": "Beauty Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Flaunt It Beauty Supply",
+      "website": "https://www.flauntitbeautysupply.com/",
+      "owner_name": "",
+      "city": "Anderson",
+      "phone": "(231) 299-7241",
+      "owner_email": "FlauntBeautySupply@gmail.com",
+      "category": "beauty",
+      "subcategory": "Beauty Supply/Hair & Accessories"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Balm'd Out Butters",
+      "website": "https://www.boutbutters.com/",
+      "owner_name": "",
+      "city": "Indiana",
+      "phone": "",
+      "owner_email": "balmdout@gmail.com",
+      "category": "beauty",
+      "subcategory": "Bath & Body"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Leon's Barber Shop",
+      "website": "",
+      "owner_name": "",
+      "city": "Indianapolis",
+      "phone": "(317) 545-2547",
+      "owner_email": "",
+      "category": "beauty",
+      "subcategory": "Barber"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Bel Lumi_re",
+      "website": "https://thebellumiereco.com/",
+      "owner_name": "",
+      "city": "Indianapolis",
+      "phone": "(317) 998-1632",
+      "owner_email": "bellumiereco@gmail.com",
+      "category": "beauty",
+      "subcategory": "Cosmetics"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Qrenee Hair Therapy",
+      "website": "www.qrenee.com",
+      "owner_name": "TaQusia Sharkey",
+      "city": "Indianapolis",
+      "phone": "(317) 288-0144",
+      "owner_email": "qreneeglam@gmail.com",
+      "category": "beauty",
+      "subcategory": "Beauty Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Black Rose Box",
+      "website": "https://blackrosebox.shop/",
+      "owner_name": "",
+      "city": "Indianapolis",
+      "phone": "(317) 804-4180",
+      "owner_email": "",
+      "category": "beauty",
+      "subcategory": "Bath & Body"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "BrepHreshed LLC",
+      "website": "https://www.brephreshed.com/",
+      "owner_name": "",
+      "city": "Indianapolis",
+      "phone": "(317) 520-4467",
+      "owner_email": "",
+      "category": "beauty",
+      "subcategory": "Bath & Body"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Butters by Rae,LLC",
+      "website": "https://buttersbyrae.com/",
+      "owner_name": "",
+      "city": "Indianapolis",
+      "phone": "(317) 676-9411",
+      "owner_email": "buttersbyraellc@gmail.com",
+      "category": "beauty",
+      "subcategory": "Bath & Body"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Down to Earth Tooth Dirt",
+      "website": "https://mothersearth.co/",
+      "owner_name": "Tis Scott",
+      "city": "Indianapolis",
+      "phone": "(317) 758-3339",
+      "owner_email": "HealthIsWealth@MothersEarth.co",
+      "category": "beauty",
+      "subcategory": "Cosmetics"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "FH Beauty",
+      "website": "https://www.beautybyfh.com/",
+      "owner_name": "Natalie Smith",
+      "city": "Indianapolis",
+      "phone": "",
+      "owner_email": "Sales@beautybyfh.com",
+      "category": "beauty",
+      "subcategory": "Cosmetics"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Jewel Essentials Soaps & Beyond LLC",
+      "website": "https://www.jewelessentialsllc.com/",
+      "owner_name": "Precious Jewel",
+      "city": "Indianapolis",
+      "phone": "",
+      "owner_email": "",
+      "category": "beauty",
+      "subcategory": "Bath & Body"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Luxe Locks Curls",
+      "website": "www.luxelockscurls.com",
+      "owner_name": "",
+      "city": "Indianapolis",
+      "phone": "",
+      "owner_email": "luxelockscurls@gmail.com",
+      "category": "beauty",
+      "subcategory": "Beauty Supply/Hair & Accessories"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Nala Baby Cosmetics",
+      "website": "nalababycosmeticss.company.site",
+      "owner_name": "",
+      "city": "Indianapolis",
+      "phone": "(312) 998-0467",
+      "owner_email": "nalababycosmetics@gmail.com",
+      "category": "beauty",
+      "subcategory": "Cosmetics"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Napturals LLC",
+      "website": "www.napturals.net",
+      "owner_name": "Mariah Ruggs",
+      "city": "Indianapolis",
+      "phone": "",
+      "owner_email": "mruggs@napturals.net",
+      "category": "beauty",
+      "subcategory": "Beauty Supply/Hair & Accessories"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Nikki Brown Makeup",
+      "website": "www.nikkibrownmakeup.com",
+      "owner_name": "Nikki Brown",
+      "city": "Indianapolis",
+      "phone": "(317) 507-6155",
+      "owner_email": "nikkibrownmakeup@gmail.com",
+      "category": "beauty",
+      "subcategory": "Traveling Stylist"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Queen2Queen Beauty Boutique",
+      "website": "www.queen2queenbeautyboutique.com",
+      "owner_name": "",
+      "city": "Indianapolis",
+      "phone": "(470) 231-8022",
+      "owner_email": "info@queen2queenbeautyboutique.com",
+      "category": "beauty",
+      "subcategory": "Beauty Supply/Hair & Accessories"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "TAILOR BEAUTY HAIR COLLECTION",
+      "website": "www.tailorbeauty.net",
+      "owner_name": "",
+      "city": "Indianapolis",
+      "phone": "(650) 753-1212",
+      "owner_email": "customerservice@tailorbeautyhaircollection.com",
+      "category": "beauty",
+      "subcategory": "Beauty Supply/Hair & Accessories"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "The Pink Party Palace Indy LLC",
+      "website": "www.pinkpartypalace.com",
+      "owner_name": "Quill & Tenille Redwine",
+      "city": "Indianapolis",
+      "phone": "(317) 458-9322/(317) 292-9117",
+      "owner_email": "support@pinkpartypalace.com",
+      "category": "beauty",
+      "subcategory": "Beauty Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Smell Goods 2",
+      "website": "http://www.facebook.com/smellgoods2",
+      "owner_name": "Theadore Jones",
+      "city": "Indianapolis,",
+      "phone": "(317)603-9656",
+      "owner_email": "gold.budda@hotmail.com",
+      "category": "beauty",
+      "subcategory": "Bath & Body"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Queens Slay LLC",
+      "website": "http://queensslaynaturals.com/",
+      "owner_name": "Markeshia Rayford",
+      "city": "Lawrence",
+      "phone": "(317) 938-6398",
+      "owner_email": "queensslaynaturals@gmail.con",
+      "category": "beauty",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Chic Radiance",
+      "website": "https://chic-radiance.com/",
+      "owner_name": "Crystal",
+      "city": "Mishawaka",
+      "phone": "(480) 862-5411",
+      "owner_email": "Support@Chic-Radiance.com",
+      "category": "beauty",
+      "subcategory": "Cosmetics"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Brave Brothers Books",
+      "website": "https://bravebrothersbooks.com/",
+      "owner_name": "Jermaine and Shawnta Barnes",
+      "city": "Indianapolis",
+      "phone": "",
+      "owner_email": "",
+      "category": "books",
+      "subcategory": "Publishing"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Big Mamma's House Books!",
+      "website": "https://bigmammashousebooks.com/",
+      "owner_name": "Dr. LaWanda Jobe",
+      "city": "Indianapolis",
+      "phone": "(877) 442-4462",
+      "owner_email": "BigMammasHouseBooks@gmail.com",
+      "category": "books",
+      "subcategory": "Authors"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Face A Face (FAF Collective)",
+      "website": "http://fafcollective.com/",
+      "owner_name": "Ariana Beedie  and Jazmine Kempin",
+      "city": "Indianapolis",
+      "phone": "",
+      "owner_email": "fafcollective@gmail.com",
+      "category": "books",
+      "subcategory": "Online Publication"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Drift Taxi",
+      "website": "http://www.TheDriftTaxi.com",
+      "owner_name": "David Adams",
+      "city": "Fishers",
+      "phone": "(317) 572-5590",
+      "owner_email": "david@thedrifttaxi.com",
+      "category": "cars",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "King's Detail",
+      "website": "https://www.facebook.com/kingsdetail/",
+      "owner_name": "Xavier K",
+      "city": "Indianapolis",
+      "phone": "(317) 666-5356",
+      "owner_email": "xavier@kingsdetail.com",
+      "category": "cars",
+      "subcategory": "Car Wash"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Fatman�s Auto Services",
+      "website": "https://fatmansautorepair.ueniweb.com/",
+      "owner_name": "",
+      "city": "Indianapolis",
+      "phone": "(317) 438-6207",
+      "owner_email": "fatmansservices@icloud.com",
+      "category": "cars",
+      "subcategory": "Auto Repair/ Services"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "The Car Shop",
+      "website": "thecarshopindy.com",
+      "owner_name": "Brian Dobbins",
+      "city": "Indianapolis",
+      "phone": "(317) 941-7092",
+      "owner_email": "theindycarshop@gmail.com",
+      "category": "cars",
+      "subcategory": "Auto Dealership"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Champion Chrysler Jeep Dodge",
+      "website": "https://www.championcjdindiana.com/",
+      "owner_name": "Fernando Falcon",
+      "city": "Indianapolis",
+      "phone": "(317) 982-5944",
+      "owner_email": "championcjdr@gmail.com",
+      "category": "cars",
+      "subcategory": "Auto Dealership"
+    }
+},
+    {
+      "model": "",
+      "fields": {
+"business_name": "",
+      "website": "",
+      "owner_name": "",
+      "city": "",
+      "phone": "",
+      "owner_email": "",
+      "category": "",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "MT Valet Services LLC",
+      "website": "www.mtvaletservices.com",
+      "owner_name": "",
+      "city": "Indianapolis",
+      "phone": "(317) 203-9480",
+      "owner_email": "CustomerCare@MTValetServices.com",
+      "category": "cleaning",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Quality Business Janitory",
+      "website": "www.qualitybusinessjanitory.com",
+      "owner_name": "",
+      "city": "Indianapolis",
+      "phone": "(317) 289-0521",
+      "owner_email": "qualitybusinessjanitory@gmail.com",
+      "category": "cleaning",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Sibande Cleaning Services LLC",
+      "website": "www.sibandecleaningservicesllc.com",
+      "owner_name": "",
+      "city": "Indianapolis",
+      "phone": "(317) 742-3276/317-742-3672",
+      "owner_email": "",
+      "category": "cleaning",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Gerron Carpet and Floor Care Services LLC",
+      "website": "https://gerronfloorcare.com/",
+      "owner_name": "Reggie Gerron",
+      "city": "Indianapolis",
+      "phone": "(317) 523-9902",
+      "owner_email": "info@gerronfloorcare.com",
+      "category": "cleaning",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Cleaning with Purpose LLC",
+      "website": "https://cleaningwithpurpose.org/",
+      "owner_name": "",
+      "city": "Kokomo",
+      "phone": "(765) 243-5862",
+      "owner_email": "info@cleaningwithpurpose.org",
+      "category": "cleaning",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Kulture Wears LLC",
+      "website": "https://www.kulturewears.com/",
+      "owner_name": "Robert Christian Jr",
+      "city": "Indianapolis",
+      "phone": "(317) 376-0580",
+      "owner_email": "info@kulturewears.com",
+      "category": "clothing",
+      "subcategory": "Apparel"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Agape Empowerment Boutique",
+      "website": "https://www.agapeboutiques.com/",
+      "owner_name": "Arlinda D. Lindsay",
+      "city": "Indianapolis",
+      "phone": "",
+      "owner_email": "support@agapeboutiques.com",
+      "category": "clothing",
+      "subcategory": "Apparel"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Astrology Trendz",
+      "website": "https://astrologytrendz.com/",
+      "owner_name": "",
+      "city": "Indianapolis",
+      "phone": "(317) 505-1555",
+      "owner_email": "customerservice@astrologytrendz.com",
+      "category": "clothing",
+      "subcategory": "Apparel"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "August Gill Apparel",
+      "website": "www.augustgillapparel.com",
+      "owner_name": "Rannette Archer",
+      "city": "Indianapolis",
+      "phone": "(317) 342-2800",
+      "owner_email": "info@augustgillapparel.com",
+      "category": "clothing",
+      "subcategory": "Apparel"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Autonomy LLC",
+      "website": "autonomycreates.com",
+      "owner_name": "April Elliott",
+      "city": "Indianapolis",
+      "phone": "",
+      "owner_email": "autonomycreates@gmail.com",
+      "category": "clothing",
+      "subcategory": "Apparel"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Blacksheep Collective",
+      "website": "https://www.blkshpco.com/",
+      "owner_name": "Byron Elliott",
+      "city": "Indianapolis",
+      "phone": "",
+      "owner_email": "blkshpco@gmail.com",
+      "category": "clothing",
+      "subcategory": "Apparel"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Designed With U In Mind",
+      "website": "http://www.Etsy.com/shop/designedwithunmind",
+      "owner_name": "Evora Jones",
+      "city": "Indianapolis",
+      "phone": "(317) 408-6984",
+      "owner_email": "ejones10419@icloud.com",
+      "category": "clothing",
+      "subcategory": "Apparel"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Limited Edition Boutique",
+      "website": "https://www.ltdboutique.com/",
+      "owner_name": "LaWanda Davis",
+      "city": "Indianapolis",
+      "phone": "",
+      "owner_email": "limitededitionbouitq@gmail.com",
+      "category": "clothing",
+      "subcategory": "Apparel"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Marie J Boutique",
+      "website": "www.mariejboutique.com",
+      "owner_name": "Marie",
+      "city": "Indianapolis",
+      "phone": "",
+      "owner_email": "mariejboutique@gmail.com",
+      "category": "clothing",
+      "subcategory": "Apparel"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Masterpiece Bow Ties & Apparel",
+      "website": "masterpiecebowtie.com",
+      "owner_name": "",
+      "city": "Indianapolis",
+      "phone": "(317) 643-1643",
+      "owner_email": "masterpiecellc@usa.com",
+      "category": "clothing",
+      "subcategory": "Apparel"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "MELI",
+      "website": "meli-intl.com",
+      "owner_name": "",
+      "city": "Indianapolis",
+      "phone": "(317) 719-0833",
+      "owner_email": "info@meli-intl.com",
+      "category": "clothing",
+      "subcategory": "Apparel"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Mik Mocha Apparel",
+      "website": "mikmochaapparel.com",
+      "owner_name": "Mik",
+      "city": "Indianapolis",
+      "phone": "(317) 970-0170",
+      "owner_email": "mik@mikmochaprints.com",
+      "category": "clothing",
+      "subcategory": "Apparel"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Naturally seductive boutique",
+      "website": "www.naturallyseductives.com",
+      "owner_name": "Destiny",
+      "city": "Indianapolis",
+      "phone": "(317) 261-1238",
+      "owner_email": "naturallyseductiveboutique@gmail.com",
+      "category": "clothing",
+      "subcategory": "Apparel"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Perfect Apparel",
+      "website": "www.perfectapparel.com",
+      "owner_name": "",
+      "city": "Indianapolis",
+      "phone": "(317)389-5553",
+      "owner_email": "onlinesales@perfectapparel.com",
+      "category": "clothing",
+      "subcategory": "Apparel"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Revolutionary Goddess Gear",
+      "website": "https://www.etsy.com/shop/RGGFashions",
+      "owner_name": "DonYajua Mwaafrika",
+      "city": "Indianapolis",
+      "phone": "",
+      "owner_email": "",
+      "category": "clothing",
+      "subcategory": "Apparel"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "The Sophisticated Diva,LLC",
+      "website": "https://the-sophisticated-diva.myshopify.com/",
+      "owner_name": "",
+      "city": "Indianapolis",
+      "phone": "(706) 513-0217",
+      "owner_email": "",
+      "category": "clothing",
+      "subcategory": "Apparel"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Thinking Out Loud, LLC",
+      "website": "https://www.thinkingoutloud.store/",
+      "owner_name": "Walter Blunt",
+      "city": "Indianapolis",
+      "phone": "",
+      "owner_email": "",
+      "category": "clothing",
+      "subcategory": "Apparel"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Trap Junkie LLC",
+      "website": "https://www.facebook.com/trapjunkiellc/",
+      "owner_name": "William Troutman",
+      "city": "Indianapolis",
+      "phone": "(317) 653-9904",
+      "owner_email": "trapjunkiellc@gmail.com",
+      "category": "clothing",
+      "subcategory": "Apparel"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Kushthru",
+      "website": "https://www.kushthru.com/",
+      "owner_name": "",
+      "city": "Lafayette",
+      "phone": "(773) 664-6080",
+      "owner_email": "twon460@gmail.com;KushThru.com",
+      "category": "clothing",
+      "subcategory": "Apparel"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Apollo's Fine Fashion LLC",
+      "website": "http://www.apollosfinefashions.com/",
+      "owner_name": "Apollo Bean",
+      "city": "Lafayette",
+      "phone": "(765) 269-7553",
+      "owner_email": "apollosfinefashions@outlook.com",
+      "category": "clothing",
+      "subcategory": "Apparel"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Powers & Sons Construction Company, Inc.",
+      "website": "https://powersandsons.com/",
+      "owner_name": "Mamon Powers Jr. and Mamon Powers III",
+      "city": "Gary",
+      "phone": "(219) 949-3100",
+      "owner_email": "info@powerandsons.com",
+      "category": "construction",
+      "subcategory": "Construction/ Engineering"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Bledsoe Construction Group Of Indianapolis",
+      "website": "http://www.bledsoeinternational.com",
+      "owner_name": "Ether Bledsoe",
+      "city": "Indianapolis",
+      "phone": "(877) 291-2751",
+      "owner_email": "BledsoeInternational@protonmail.com",
+      "category": "construction",
+      "subcategory": "Roofing & Siding"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "New Creation Building & Maintenance Inc.",
+      "website": "https://www.facebook.com/New-Creation-Building-Maintenance-Inc-101579908180857/?ref=page_internal",
+      "owner_name": "Timothy Douglass",
+      "city": "Indianapolis",
+      "phone": "(317) 772-5137",
+      "owner_email": "tim1@newcreationbmi.com",
+      "category": "construction",
+      "subcategory": "Electrical"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Powers & Sons Construction Company, Inc.",
+      "website": "https://powersandsons.com/",
+      "owner_name": "Mamon Powers Jr. and Mamon Powers III",
+      "city": "Indianapolis",
+      "phone": "(317) 269-2550",
+      "owner_email": "info@powerandsons.com",
+      "category": "construction",
+      "subcategory": "Construction/ Engineering"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "All Things Handy LLC",
+      "website": "https://www.facebook.com/ThingsHandy/",
+      "owner_name": "",
+      "city": "Indianapolis",
+      "phone": "(317) 238-9523",
+      "owner_email": "allthingshandy14@gmail.com",
+      "category": "construction",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Bryant&Son's HVAC/Refrigeration &Maintenance",
+      "website": "http://bryantsonsacmaintenance.com/",
+      "owner_name": "Eric",
+      "city": "Indianapolis",
+      "phone": "(317) 440-6103",
+      "owner_email": "",
+      "category": "construction",
+      "subcategory": "HVAC"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Great Northern Painting",
+      "website": "https://www.facebook.com/Great-Northern-Painting-LLC-292574408267066/",
+      "owner_name": "",
+      "city": "Indianapolis",
+      "phone": "(317) 523-7830",
+      "owner_email": "lcnorthern3@gmail.com",
+      "category": "construction",
+      "subcategory": "Painting Services"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "New Phase Comfort",
+      "website": "Newphasecomfort.com",
+      "owner_name": "Ajay Wooden",
+      "city": "Indianapolis",
+      "phone": "(317) 739-1466",
+      "owner_email": "",
+      "category": "construction",
+      "subcategory": "HVAC"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "The Concrete Man",
+      "website": "Www.tonytheconcreteman.com",
+      "owner_name": "Tony Johnson",
+      "city": "Indianapolis",
+      "phone": "(317) 339-6094",
+      "owner_email": "",
+      "category": "construction",
+      "subcategory": "Construction/ Engineering"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "HCP Incorporated",
+      "website": "https://www.hcoarchitects.com/",
+      "owner_name": "Henry C. Onichie",
+      "city": "Indianapolis",
+      "phone": "(317) 923-3737",
+      "owner_email": "marketing@hcoarchitects.com",
+      "category": "construction",
+      "subcategory": "Construction/ Engineering"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "1St Resource Solutions LLC",
+      "website": "http://www.1stresourcesolutions.com/index.html",
+      "owner_name": "Darryl Sanders",
+      "city": "Marion",
+      "phone": "(800) 803-1030",
+      "owner_email": "dsanders@1stresourcsolutions.com",
+      "category": "construction",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "MCC Indiana",
+      "website": "www.mccindiana.org",
+      "owner_name": "Antonio Lipscomb",
+      "city": "Merrillville",
+      "phone": "(219) 771-4385",
+      "owner_email": "info@mccindiana.org",
+      "category": "construction",
+      "subcategory": "Construction/ Engineering"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Freebirds General Contracting ,LLC",
+      "website": "http://www.freebirdsgeneralcontracting.com/",
+      "owner_name": "Reggie",
+      "city": "Zionsville",
+      "phone": "(217) 597-2867",
+      "owner_email": "reggiesconstruction@yahoo.com",
+      "category": "construction",
+      "subcategory": "Construction/ Engineering"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "DirectEmployers Institue",
+      "website": "https://directemployersinstitute.org/",
+      "owner_name": "",
+      "city": "Indianapolis",
+      "phone": "(317) 388-5362",
+      "owner_email": "Simone@directemployersinstitute.org",
+      "category": "education",
+      "subcategory": "Tutoring/Academic Planning"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Building Blocks Academy",
+      "website": "https://www.buildingblocksacademy-bba.com/",
+      "owner_name": "",
+      "city": "Indianapolis",
+      "phone": "(317) 921-1806",
+      "owner_email": "franze7@hotmail.com",
+      "category": "education",
+      "subcategory": "Enrichment"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "1 Life 2 Live Health and Safety Training",
+      "website": "https://www.1life2livehealthandsafetytraining.org/",
+      "owner_name": "Kiya Beard",
+      "city": "Indianapolis",
+      "phone": "(800) 537-3381",
+      "owner_email": "1life2livecpr@gmail.com",
+      "category": "education",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Allegiant Preparatory Academy",
+      "website": "https://allegiantprep.org/",
+      "owner_name": "Rick Anderson",
+      "city": "Indianapolis",
+      "phone": "(317) 489-6877",
+      "owner_email": "",
+      "category": "education",
+      "subcategory": "Enrichment"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Anda Spanish",
+      "website": "https://andaspanish.com/",
+      "owner_name": "Nicole Montiel",
+      "city": "Indianapolis",
+      "phone": "(317) 983-1251",
+      "owner_email": "info@andaspanish",
+      "category": "education",
+      "subcategory": "Tutoring/Academic Planning"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Arrows Learning Academy",
+      "website": "www.arrowslearningacademy.com",
+      "owner_name": "Jessica Benjamin",
+      "city": "Indianapolis",
+      "phone": "",
+      "owner_email": "admin@arrowslearningacademy.com",
+      "category": "education",
+      "subcategory": "Tutoring/Academic Planning"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Center for Leadership Development",
+      "website": "https://cldinc.org/",
+      "owner_name": "Dennis E. Bland",
+      "city": "Indianapolis",
+      "phone": "(317) 923-8111",
+      "owner_email": "mblack@cldinc.org",
+      "category": "education",
+      "subcategory": "Tutoring/Academic Planning"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Girls STEM Institute",
+      "website": "http://www.girlssteminstitute.org/",
+      "owner_name": "Dr. Crystal Morton",
+      "city": "Indianapolis",
+      "phone": "(317) 274-2732",
+      "owner_email": "girlssteminstitute@gmail.com",
+      "category": "education",
+      "subcategory": "Enrichment"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Jenkins� Career Corner, Inc",
+      "website": "http://www.jenkinscareercornerinc.org/",
+      "owner_name": "Wendy Jenkins",
+      "city": "Indianapolis",
+      "phone": "(317) 435-4791",
+      "owner_email": "",
+      "category": "education",
+      "subcategory": "Enrichment"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Lit Tutoring  LLC",
+      "website": "https://www.lit-tutoring.com/",
+      "owner_name": "Adrianna Norris",
+      "city": "Indianapolis",
+      "phone": "",
+      "owner_email": "littutoring20@gmail.com",
+      "category": "education",
+      "subcategory": "Tutoring/Academic Planning"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Saint Florian Center, Inc.",
+      "website": "www.saintfloriancenter.org",
+      "owner_name": "Tony Williamson",
+      "city": "Indianapolis",
+      "phone": "(317) 442-4508 / (317) 710-1758",
+      "owner_email": "",
+      "category": "education",
+      "subcategory": "Enrichment"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "The EmpowHERment Daily Devotional, Corp.",
+      "website": "www.theempowhermentcorp.com",
+      "owner_name": "Destiney L. Gillespie",
+      "city": "Indianapolis",
+      "phone": "(317) 735-8681",
+      "owner_email": "empowhergroup@theempowhermentcorp.com",
+      "category": "education",
+      "subcategory": "Enrichment"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "The Fuqua Institute of Beauty Culture LLC",
+      "website": "www.fuquainstitute.com",
+      "owner_name": "Jacqueline Fuqua",
+      "city": "Indianapolis",
+      "phone": "(317) 591-1255",
+      "owner_email": "fuquainstitute@gmail.com",
+      "category": "education",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Urban Technology Academy",
+      "website": "http://uta-workbasedlearning.org/",
+      "owner_name": "Daniel Pierson",
+      "city": "Indianapolis",
+      "phone": "",
+      "owner_email": "daniel@uta-workbasedlearning.org",
+      "category": "education",
+      "subcategory": "Enrichment"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Amiable Home Care Inc",
+      "website": "http://amiablehomecare.org/",
+      "owner_name": "Tiffany Crawford",
+      "city": "Indianapolis",
+      "phone": "(317) 802-1746",
+      "owner_email": "amiablecinc@gmail.com",
+      "category": "eldercare",
+      "subcategory": "Home Health Care/ Nursing Services"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Divine Care of Indiana",
+      "website": "https://www.divinecareindiana.com/",
+      "owner_name": "",
+      "city": "Indianapolis",
+      "phone": "(317) 918-7545",
+      "owner_email": "",
+      "category": "eldercare",
+      "subcategory": "Home Health Care/ Nursing Services"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Personal Touch Housecalls, LLC",
+      "website": "www.personaltouchhousecalls.com",
+      "owner_name": "",
+      "city": "Indianapolis",
+      "phone": "(317) 379-3141",
+      "owner_email": "personaltouchhousecalls@gmail.com",
+      "category": "eldercare",
+      "subcategory": "Home Health Care/ Nursing Services"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "PRINCESSIZZY LLC dba SERENIRY CARE SERVICES",
+      "website": "http://www.serenitycareservices.net/index.html",
+      "owner_name": "Angela Lee",
+      "city": "Indianapolis",
+      "phone": "(317) 900-6202",
+      "owner_email": "angie@serenitycareservices.net",
+      "category": "eldercare",
+      "subcategory": "Home Health Care/ Nursing Services"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Nerdz World",
+      "website": "www.nerdzworld.com",
+      "owner_name": "Delisa Payne",
+      "city": "Evansville",
+      "phone": "(812) 205-0601",
+      "owner_email": "",
+      "category": "electronics",
+      "subcategory": "Web Services"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "AIS",
+      "website": "https://aisllp.com/",
+      "owner_name": "Lamont Hatcher",
+      "city": "Indianapolis",
+      "phone": "(317) 751-4332",
+      "owner_email": "",
+      "category": "electronics",
+      "subcategory": "Cybersecurity"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "ECR Computer Repair & Solutions",
+      "website": "https://ecrservices.a-1sites.com/",
+      "owner_name": "William Crayron Smith",
+      "city": "Indianpolis",
+      "phone": "(317) 657-6877",
+      "owner_email": "ecrindyllc@gmail.com",
+      "category": "electronics",
+      "subcategory": "Tech Support/ Repair"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Art Haus Balloon Company LLC",
+      "website": "https://arthausballooncompany.com/",
+      "owner_name": "Rye Von",
+      "city": "Indianapolis",
+      "phone": "(317) 624-2029",
+      "owner_email": "arthaus@arthausballooncompany.com",
+      "category": "entertainment",
+      "subcategory": "Event Planning/Services"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Artistic Motif",
+      "website": "http://www.artisticmotif662.weebly.com/",
+      "owner_name": "",
+      "city": "Indianapolis",
+      "phone": "",
+      "owner_email": "",
+      "category": "entertainment",
+      "subcategory": "Paint & Sip"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "AVI MEDIA",
+      "website": "www.avimediasupply.com",
+      "owner_name": "Dwayne Jarrett",
+      "city": "Indianapolis",
+      "phone": "(317) 622-8493",
+      "owner_email": "info@avimediasupply.com",
+      "category": "entertainment",
+      "subcategory": "Media"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Bashiri Asad",
+      "website": "https://www.bashiriasad.com",
+      "owner_name": "Bashiri Asad",
+      "city": "Indianapolis",
+      "phone": "",
+      "owner_email": "bookingbashiri@gmail.com",
+      "category": "entertainment",
+      "subcategory": "Bands/DJs/Performers"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Kicasso Sneaker Art Bar",
+      "website": "https://www.kicassoindy.com/",
+      "owner_name": "",
+      "city": "Indianapolis",
+      "phone": "(317) 500-7332",
+      "owner_email": "info@kicassoindy.com",
+      "category": "entertainment",
+      "subcategory": "Paint & Sip"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "LoveLight Events LLC",
+      "website": "www.lovelighteventsllc.com",
+      "owner_name": "Traci Fuqua",
+      "city": "Indianapolis",
+      "phone": "(317) 319-5163",
+      "owner_email": "lovelighteventsllc@gmail.com",
+      "category": "entertainment",
+      "subcategory": "Event Planning/Services"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Picture Perfect Planning",
+      "website": "www.pictureperfectplanningindy.weebly.com/",
+      "owner_name": "",
+      "city": "Indianapolis",
+      "phone": "(317) 527-1513",
+      "owner_email": "customerservice@pictureperfectcreationsindy.com",
+      "category": "entertainment",
+      "subcategory": "Event Planning/Services"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Prep Ball Stars",
+      "website": "www.prepballstars.com",
+      "owner_name": "Anthony Leach",
+      "city": "Indianapolis",
+      "phone": "(317) 743-0784",
+      "owner_email": "prepballstars@gmail.com",
+      "category": "entertainment",
+      "subcategory": "Media"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Special MoMents by Mo",
+      "website": "https://www.facebook.com/SpbyMO/",
+      "owner_name": "Monique Overton",
+      "city": "Indianapolis",
+      "phone": "(317) 523-3715",
+      "owner_email": "lynique30@yahoo.com",
+      "category": "entertainment",
+      "subcategory": "Event Planning/Services"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Events by D. Nicole",
+      "website": "https://eventsdnicole.com/",
+      "owner_name": "Danielle Lea",
+      "city": "Indianapolis",
+      "phone": "(317) 965-0190",
+      "owner_email": "dnicoleevents@gmail.com",
+      "category": "entertainment",
+      "subcategory": "Event Planning/Services"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Green with Indy",
+      "website": "https://www.greenwithindy.com/",
+      "owner_name": "",
+      "city": "Indianapolis",
+      "phone": "(317) 450-0951",
+      "owner_email": "info@greenwithindy.com",
+      "category": "farming",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Indy Plants on Plates",
+      "website": "https://indyplantsonplates.weebly.com/",
+      "owner_name": "",
+      "city": "Indianapolis",
+      "phone": "",
+      "owner_email": "indy.plantsonplates@gmail.com",
+      "category": "farming",
+      "subcategory": "Farmer's Market"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "The Plant Whisperer's, Inc.",
+      "website": "https://www.facebook.com/TPWI.2013/",
+      "owner_name": "",
+      "city": "Indianapolis",
+      "phone": "(317) 371-2269",
+      "owner_email": "the_plant_whisperers@hotmail.com",
+      "category": "farming",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "SweeTies Gourmet Treats",
+      "website": "https://www.sweetiesgt.com/",
+      "owner_name": "Tiffany Colvin",
+      "city": "Fishers",
+      "phone": "(317) 436-7503",
+      "owner_email": "info@sweetiesgt.com",
+      "category": "grocery",
+      "subcategory": "Bakery"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Yummy Treats LLC",
+      "website": "https://www.facebook.com/YummyTreatsIndy",
+      "owner_name": "",
+      "city": "Fishers",
+      "phone": "(317) 525-3450",
+      "owner_email": "yummytreats.indy@gmail.com",
+      "category": "grocery",
+      "subcategory": "Specialty"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Cretia Cakes Bake Shop",
+      "website": "https://cretiacakes.com/",
+      "owner_name": "LaCretia Allen",
+      "city": "Indianapolis",
+      "phone": "(317) 929-1560",
+      "owner_email": "info@cretiacakes.com",
+      "category": "grocery",
+      "subcategory": "Bakery"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Gordon's Milkshake Bar",
+      "website": "https://www.instagram.com/milkshakeindy/",
+      "owner_name": "Carl Gordon",
+      "city": "Indianapolis",
+      "phone": "(317) 453-1360",
+      "owner_email": "gordon2634@yahoo.com",
+      "category": "grocery",
+      "subcategory": "Ice Cream Parlor"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Sip & Share Wine",
+      "website": "https://sipandsharewines.com/",
+      "owner_name": "Nicole Kearny",
+      "city": "Indianapolis",
+      "phone": "(909) 747-9463",
+      "owner_email": "Marketing@sipandsharewines.com",
+      "category": "grocery",
+      "subcategory": "Alcohol"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Natural Needs Products",
+      "website": "https://www.naturalneedsproducts.com/",
+      "owner_name": "Daleel Mayfield",
+      "city": "Indianapolis",
+      "phone": "(317) 395-3887",
+      "owner_email": "dm@naturalneedsproducts.com",
+      "category": "grocery",
+      "subcategory": "Specialty"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "SweeTies Gourmet Treats",
+      "website": "https://www.sweetiesgt.com/",
+      "owner_name": "Tiffany Colvin",
+      "city": "Indianapolis",
+      "phone": "(317) 602-3999",
+      "owner_email": "info@sweetiesgt.com",
+      "category": "grocery",
+      "subcategory": "Bakery"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "A&M Catered Baked Goods",
+      "website": "https://ambakery.net/",
+      "owner_name": "George",
+      "city": "Indianapolis",
+      "phone": "(317) 801-2476",
+      "owner_email": "george@ambakery.net",
+      "category": "grocery",
+      "subcategory": "Bakery"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Birdie Brown",
+      "website": "sipbirdie.com",
+      "owner_name": "Dia Simms and Erin Harris",
+      "city": "Indianapolis",
+      "phone": "",
+      "owner_email": "hello@sipbirdie.com",
+      "category": "grocery",
+      "subcategory": "Alcohol"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Chef Tia & Co.",
+      "website": "https://www.ordercheftia.com/",
+      "owner_name": "",
+      "city": "Indianapolis",
+      "phone": "(317) 300-1411",
+      "owner_email": "cheftiaandco@gmail.com",
+      "category": "grocery",
+      "subcategory": "Catering/Chef"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Cies Treats LLC",
+      "website": "https://ciestreatsllc.godaddysites.com/",
+      "owner_name": "",
+      "city": "Indianapolis",
+      "phone": "( 317) 664-2609",
+      "owner_email": "CiesTreats38@gmail.com",
+      "category": "grocery",
+      "subcategory": "Bakery"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Coco's Cakes and Things LLC",
+      "website": "https://cocoscakesandthings.square.site/",
+      "owner_name": "",
+      "city": "Indianapolis",
+      "phone": "",
+      "owner_email": "cocoscakesandthings@gmail.com",
+      "category": "grocery",
+      "subcategory": "Bakery"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Culinary & Co. LLC",
+      "website": "https://culinaryandco.wixsite.com/",
+      "owner_name": "",
+      "city": "Indianapolis",
+      "phone": "",
+      "owner_email": "Culinaryandco@yahoo.com",
+      "category": "grocery",
+      "subcategory": "Catering/Chef"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "FoodLoveTog",
+      "website": "https://foodlovetog.com/",
+      "owner_name": "Candace Boyd",
+      "city": "Indianapolis",
+      "phone": "",
+      "owner_email": "foodlovetog@gmail.com",
+      "category": "grocery",
+      "subcategory": "Catering/Chef"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Forget Me Not Gourmet Treat Company LLC",
+      "website": "https://www.facebook.com/FMNGourmetTreatCompany/",
+      "owner_name": "Keanna",
+      "city": "Indianapolis",
+      "phone": "",
+      "owner_email": "forgetmenottreatcompany@gmail.com",
+      "category": "grocery",
+      "subcategory": "Bakery"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Huge Impact Restaurant",
+      "website": "https://hugeimpactllc.weebly.com/",
+      "owner_name": "",
+      "city": "Indianapolis",
+      "phone": "",
+      "owner_email": "",
+      "category": "grocery",
+      "subcategory": "Catering/Chef"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Juice Remedy",
+      "website": "https://www.juiceremedy.org/",
+      "owner_name": "Bradford & Crystal Usher",
+      "city": "Indianapolis",
+      "phone": "(317) 250-1310",
+      "owner_email": "juiceremedy949@gmail.com",
+      "category": "grocery",
+      "subcategory": "Specialty"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Londo's Flameade",
+      "website": "https://londosflameade.com/",
+      "owner_name": "",
+      "city": "Indianapolis",
+      "phone": "(317) 737-1539",
+      "owner_email": "londosflameade@gmail.com",
+      "category": "grocery",
+      "subcategory": "Specialty"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Mrs. Murry's Naturals",
+      "website": "https://mrsmurrysnaturals.com/",
+      "owner_name": "Joy",
+      "city": "Indianapolis",
+      "phone": "(877) 962-7778",
+      "owner_email": "joy@mrsmurrysnaturals.com",
+      "category": "grocery",
+      "subcategory": "Specialty"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Nature�s Tea Company",
+      "website": "www.naturesteacompany.com",
+      "owner_name": "Kevin & Lisa Gross",
+      "city": "Indianapolis",
+      "phone": "(317) 6362961",
+      "owner_email": "info@naturesteacompany.com",
+      "category": "grocery",
+      "subcategory": "Food Product/Brand"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Phases by Fazle",
+      "website": "https://www.facebook.com/PhasesByFazle",
+      "owner_name": "",
+      "city": "Indianapolis",
+      "phone": "(317) 361-2486",
+      "owner_email": "",
+      "category": "grocery",
+      "subcategory": "Alcohol"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Plate it up catering",
+      "website": "https://www.plateitupcatering.net/",
+      "owner_name": "Felicia Grady",
+      "city": "Indianapolis",
+      "phone": "(317) 658-5927",
+      "owner_email": "felicia.grady@yahoo.com",
+      "category": "grocery",
+      "subcategory": "Catering/Chef"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Pure-trition",
+      "website": "https://www.pure-trition.com",
+      "owner_name": "Aleta",
+      "city": "Indianapolis",
+      "phone": "(317) 775-2655",
+      "owner_email": "theteam@pure-trition.com",
+      "category": "grocery",
+      "subcategory": "Specialty"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Rhonda�s Suga Jars LLC",
+      "website": "www.rhondassugajars.com",
+      "owner_name": "Rhonda Johnson",
+      "city": "Indianapolis",
+      "phone": "",
+      "owner_email": "rhondassugajars@gmail.com",
+      "category": "grocery",
+      "subcategory": "Bakery"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Simply Gourmet Cookies",
+      "website": "simplygourmetcookies.com",
+      "owner_name": "",
+      "city": "Indianapolis",
+      "phone": "",
+      "owner_email": "info@simplygourmetcookies.com",
+      "category": "grocery",
+      "subcategory": "Bakery"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Sincere Catering",
+      "website": "www.thesincerechef.com",
+      "owner_name": "Chef Temicka",
+      "city": "Indianapolis",
+      "phone": "(317) 922-8790",
+      "owner_email": "catering@thesincerechef.com",
+      "category": "grocery",
+      "subcategory": "Catering/Chef"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Stargazer Inc",
+      "website": "www.stargazerinc.net",
+      "owner_name": "Chef Carol Rice",
+      "city": "Indianapolis",
+      "phone": "(317) 210-1980",
+      "owner_email": "",
+      "category": "grocery",
+      "subcategory": "Catering/Chef"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Stars",
+      "website": "www.starsmarkets.com",
+      "owner_name": "T. Anthony",
+      "city": "Indianapolis",
+      "phone": "(317) 822-9999",
+      "owner_email": "tanthony@taimis.com",
+      "category": "grocery",
+      "subcategory": "Food Delivery Service"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "SWEET MINIS",
+      "website": "www.sweetminisindy.com",
+      "owner_name": "Casey Renee Ward",
+      "city": "Indianapolis",
+      "phone": "(317) 618-7460",
+      "owner_email": "sweetminisindy@gmail.com",
+      "category": "grocery",
+      "subcategory": "Bakery"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "SweetCakesbyRonda",
+      "website": "sweetminisindy.com",
+      "owner_name": "Ronda",
+      "city": "Indianapolis",
+      "phone": "(317) 381-9396",
+      "owner_email": "ronda@sweetcakesbyronda.com",
+      "category": "grocery",
+      "subcategory": "Bakery"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "SweeTies Gourmet Treats",
+      "website": "sweetiesgt.com",
+      "owner_name": "Tiffany Colvin",
+      "city": "Indianapolis",
+      "phone": "(317) 602-3999",
+      "owner_email": "info@sweetiesgt.com",
+      "category": "grocery",
+      "subcategory": "Bakery"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Tanorria's Table",
+      "website": "www.tanorriastable.com",
+      "owner_name": "Tanorria Askew",
+      "city": "Indianapolis",
+      "phone": "(317) 782-5449",
+      "owner_email": "hello@tanorriastable.com",
+      "category": "grocery",
+      "subcategory": "Catering/Chef"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "TeeJay�s Sweet Tooth",
+      "website": "https://www.teejayssweettooth.com/",
+      "owner_name": "Taylor & Jerome",
+      "city": "Indianapolis",
+      "phone": "(317) 744-9764",
+      "owner_email": "teejayssweettooth@gmail.com",
+      "category": "grocery",
+      "subcategory": "Ice Cream Parlor"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Too Much SAWCE Catering LLC",
+      "website": "https://www.facebook.com/Too-Much-SAWCE-Catering-LLC-106272194954319",
+      "owner_name": "",
+      "city": "Indianapolis",
+      "phone": "(256) 457-5245",
+      "owner_email": "tmsawcecateringllc@gmail.com",
+      "category": "grocery",
+      "subcategory": "Catering/Chef"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Tweety's Sweeties, LLC",
+      "website": "www.tweetyssweeties.com",
+      "owner_name": "NaTasha Pepper",
+      "city": "Indianapolis",
+      "phone": "317-732-8789",
+      "owner_email": "info@tweetyssweeties.com",
+      "category": "grocery",
+      "subcategory": "Bakery"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Yummy LLC",
+      "website": "www.yummyllc.com",
+      "owner_name": "Jaqueline Wheat",
+      "city": "Indianapolis",
+      "phone": "(317) 426-3179",
+      "owner_email": "jwheat@yummyllc.com",
+      "category": "grocery",
+      "subcategory": "Bakery"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Tonia's On A Roll Specialty Desserts & Catering",
+      "website": "toniasonaroll.com",
+      "owner_name": "Tonia",
+      "city": "Indianpolis",
+      "phone": "(317) 523-8044",
+      "owner_email": "toniaonaroll@gmail.com",
+      "category": "grocery",
+      "subcategory": "Bakery"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Not As Famous Cookie Co.",
+      "website": "https://notasfamouscookie.ecwid.com/",
+      "owner_name": "",
+      "city": "Zionsville",
+      "phone": "",
+      "owner_email": "notasfamousindy@gmail.com",
+      "category": "grocery",
+      "subcategory": "Bakery"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Gym Bully Fitness LLC",
+      "website": "https://www.gymbullyfitness.com/",
+      "owner_name": "Tiffany",
+      "city": "Indianapoils",
+      "phone": "",
+      "owner_email": "",
+      "category": "health",
+      "subcategory": "Fitness/Yoga"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Angel Touch Therapy & Consulting, LLC",
+      "website": "https://www.angeltouchtlc.com/",
+      "owner_name": "Denae Ball",
+      "city": "Indianapolis",
+      "phone": "(317) 744-0579",
+      "owner_email": "angeltouchtlc@gmail.com",
+      "category": "health",
+      "subcategory": "Spa/ Massage Therapy"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "AOG Therapy, LLC",
+      "website": "https://www.aogtherapy.com/",
+      "owner_name": "Kimnetta Snowden",
+      "city": "Indianapolis",
+      "phone": "(317) 500-4932",
+      "owner_email": "Kimnetta@aogtherapy.com",
+      "category": "health",
+      "subcategory": "Mental Health Support"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Best Life Therapy, LLC",
+      "website": "https://bestlifetherapy.net/",
+      "owner_name": "Chesney",
+      "city": "Indianapolis",
+      "phone": "(317) 824-9361",
+      "owner_email": "Chesney@bestlifetherapy.net",
+      "category": "health",
+      "subcategory": "Mental Health Support"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Boot Girl's Bouncers, LLC",
+      "website": "https://www.reboundshoedepot.com/bootgirl",
+      "owner_name": "Deborah",
+      "city": "Indianapolis",
+      "phone": "(317) 340-9286",
+      "owner_email": "deborahthezumbapro@att.net",
+      "category": "health",
+      "subcategory": "Fitness/Yoga"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Capture Fitness",
+      "website": "https://capturefitindy.com/",
+      "owner_name": "Earl Sims",
+      "city": "Indianapolis",
+      "phone": "(317) 997-3653",
+      "owner_email": "2ndfitness@gmail.com",
+      "category": "health",
+      "subcategory": "Fitness/Yoga"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Central Indiana Association of Black Social Workers",
+      "website": "http://cicabsw.weebly.com/",
+      "owner_name": "Catina Anderson",
+      "city": "Indianapolis",
+      "phone": "(317) 767-5502",
+      "owner_email": "cic.absw@gmail.com",
+      "category": "health",
+      "subcategory": "Mental Health Support"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Connected in Community",
+      "website": "https://www.connectedincommunity.org/",
+      "owner_name": "Charla Cannon Yearwood",
+      "city": "Indianapolis",
+      "phone": "(317) 207-0380",
+      "owner_email": "charla@connectedincommunity.org",
+      "category": "health",
+      "subcategory": "Mental Health Support"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Creating Space for You, LLC",
+      "website": "https://www.creatingspace4u.com/",
+      "owner_name": "Kamri Williams",
+      "city": "Indianapolis",
+      "phone": "( 317) 458-2667",
+      "owner_email": "info@creatingspace4u.com",
+      "category": "health",
+      "subcategory": "Mental Health Support"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Empowered Living",
+      "website": "https://www.empoweredlivinginc.net/",
+      "owner_name": "Joni Morse",
+      "city": "Indianapolis",
+      "phone": "(317) 969-5694",
+      "owner_email": "",
+      "category": "health",
+      "subcategory": "Mental Health Support"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Harmonious Insight LLC",
+      "website": "https://www.harmoniousinsight.com/",
+      "owner_name": "Andrea",
+      "city": "Indianapolis",
+      "phone": "",
+      "owner_email": "HarmoniousInsight@gmail.com",
+      "category": "health",
+      "subcategory": "Mental Health Support"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Healthy Lifestyle Change: One Challenge At A Time, LLC",
+      "website": "http://www.healthylifestylechange.info/",
+      "owner_name": "KaSandy Williams",
+      "city": "Indianapolis",
+      "phone": "(317) 855-8116",
+      "owner_email": "coachkasandy@icloud.com",
+      "category": "health",
+      "subcategory": "Nutrition"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "HEROH Functional Institute",
+      "website": "https://drjware.com/",
+      "owner_name": "Dr. Jermaine Ware",
+      "city": "Indianapolis",
+      "phone": "(317) 400-5853",
+      "owner_email": "",
+      "category": "health",
+      "subcategory": "Chiropractor"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Hope Haven Psychological Resource",
+      "website": "http://www.hopehavenpsych.org/",
+      "owner_name": "Benetta E. Johnson",
+      "city": "Indianapolis",
+      "phone": "",
+      "owner_email": "admin@hopehavenpsych.org",
+      "category": "health",
+      "subcategory": "Mental Health Support"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Indiana Black Breastfeeding Coalition",
+      "website": "https://www.indianablackbreastfeedingcoalition.com/",
+      "owner_name": "Paris Curtia",
+      "city": "Indianapolis",
+      "phone": "(317) 434-4930",
+      "owner_email": "inblackbreastfeedingco@gmail.com",
+      "category": "health",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Lena and Lyle Institute",
+      "website": "https://www.llinstitute.org/",
+      "owner_name": "A.J Edwards",
+      "city": "Indianapolis",
+      "phone": "(317) 879-5684",
+      "owner_email": "",
+      "category": "health",
+      "subcategory": "Mental Health Support"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Pacific Haven Therapeutic Massage",
+      "website": "www.massagebook.com/biz/pacific-haven-therapeutic-massage",
+      "owner_name": "Charisse T.",
+      "city": "Indianapolis",
+      "phone": "(317) 403-8600",
+      "owner_email": "",
+      "category": "health",
+      "subcategory": "Spa/ Massage Therapy"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Prestige Touch, LLC",
+      "website": "www.prestigetouchmassage.com",
+      "owner_name": "Kem & Rebecca Williams",
+      "city": "Indianapolis",
+      "phone": "(317) 318-8183",
+      "owner_email": "rebecca.williams@prestigetouchmassage.com",
+      "category": "health",
+      "subcategory": "Spa/ Massage Therapy"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Reecondition Fitness",
+      "website": "http://www.reeconditionfitness.com/",
+      "owner_name": "Marc Smith",
+      "city": "Indianapolis",
+      "phone": "(317) 557-1149",
+      "owner_email": "reecondition@yahoo.com",
+      "category": "health",
+      "subcategory": "Fitness/Yoga"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Rest Wells Relaxation",
+      "website": "www.restwells.com",
+      "owner_name": "Carolyn Wells",
+      "city": "Indianapolis",
+      "phone": "(317) 490-6160",
+      "owner_email": "info@restwells.com",
+      "category": "health",
+      "subcategory": "Spa/ Massage Therapy"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Simple Moments",
+      "website": "www.simplemomentsbyfree.com",
+      "owner_name": "Rita",
+      "city": "Indianapolis",
+      "phone": "(317) 970-3681",
+      "owner_email": "rita@coachingwithfree.com",
+      "category": "health",
+      "subcategory": "Mental Health Support"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Stagz Transitional Housing",
+      "website": "Stagztransitionalhousing.org",
+      "owner_name": "",
+      "city": "Indianapolis",
+      "phone": "(317) 809-3630",
+      "owner_email": "sth@stagztransitionalhousing.org",
+      "category": "health",
+      "subcategory": "Addiction Treatment"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "SweattBoxx Wellness Center LLC",
+      "website": "https://sweattboxxwellness.com",
+      "owner_name": "Daniel & Suzette Sweat",
+      "city": "Indianapolis",
+      "phone": "(317) 800-5657",
+      "owner_email": "sweattboxxwellnesscenter@gmail",
+      "category": "health",
+      "subcategory": "Fitness/Yoga"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Taylor Made Wellness LLC",
+      "website": "https://www.taylormadewellnessindy.com/",
+      "owner_name": "Kelsey Taylor",
+      "city": "Indianapolis",
+      "phone": "(317) 809-6628",
+      "owner_email": "KelseyT@TaylorMadeWellnessIndy.com",
+      "category": "health",
+      "subcategory": "Fitness/Yoga"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "The ALTRUIST Group",
+      "website": "altruistgroup.net",
+      "owner_name": "Jeanine Coleman",
+      "city": "Indianapolis",
+      "phone": "(317) 547-3041",
+      "owner_email": "info@altruistgroup.net",
+      "category": "health",
+      "subcategory": "Mental Health Support"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "The Yoga Counselor",
+      "website": "www.theyogacounselor.com",
+      "owner_name": "Lade Akande",
+      "city": "Indianapolis",
+      "phone": "",
+      "owner_email": "",
+      "category": "health",
+      "subcategory": "Fitness/Yoga"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Urban Family Initiative",
+      "website": "www.ufamilyi.com",
+      "owner_name": "James W. Dix, III",
+      "city": "Indianapolis",
+      "phone": "",
+      "owner_email": "",
+      "category": "health",
+      "subcategory": "Mental Health Support"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Helping Girls In Real Life Situations (GIRLS) Mission, LLC",
+      "website": "http://www.helpinggirlsmissioncom.wordpress.com/",
+      "owner_name": "Whit'ney McTush",
+      "city": "Indianapolis",
+      "phone": "",
+      "owner_email": "helpinggirlsmission@gmail.com",
+      "category": "health",
+      "subcategory": "Mental Health Support"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Alexis B. Holt Design Group LLC",
+      "website": "www.alexisbholt.com",
+      "owner_name": "Adrienne Barron",
+      "city": "Crown Point",
+      "phone": "(312) 428-5650",
+      "owner_email": "adrienne@alexisbholt.com",
+      "category": "home",
+      "subcategory": "Interior Design/ Home Staging"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Bourgeois Wicks",
+      "website": "https://bourgeoiswicks.com/",
+      "owner_name": "",
+      "city": "Indianapolis",
+      "phone": "",
+      "owner_email": "Bourgeoiswicks@bourgeoiswicks.com",
+      "category": "home",
+      "subcategory": "Home Goods/ D�cor"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Designs by DR",
+      "website": "https://www.designsbydr.com/",
+      "owner_name": "DR",
+      "city": "Indianapolis",
+      "phone": "(504) 356-2150",
+      "owner_email": "info@designsbydr.com",
+      "category": "home",
+      "subcategory": "Home Goods/ D�cor"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "HER Home Design LLC",
+      "website": "https://www.herhomedesign.com/meet-her-home-design/",
+      "owner_name": "Keianna Rae Harrison",
+      "city": "Indianapolis",
+      "phone": "(317) 377-4344",
+      "owner_email": "info@herhomedesign.com",
+      "category": "home",
+      "subcategory": "Interior Design/ Home Staging"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Living Spaces LLC",
+      "website": "https://www.livingspaces4u.com/",
+      "owner_name": "",
+      "city": "Indianapolis",
+      "phone": "(317) 349-4455",
+      "owner_email": "Info@livingspaces4u.com",
+      "category": "home",
+      "subcategory": "Interior Design/ Home Staging"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "LoveScent Candle Co",
+      "website": "www.lovescentcandleco.com",
+      "owner_name": "",
+      "city": "Indianapolis",
+      "phone": "",
+      "owner_email": "",
+      "category": "home",
+      "subcategory": "Home Goods/ D�cor"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Shisha Candles",
+      "website": "www.shishacandles.com",
+      "owner_name": "Alisha Thompson",
+      "city": "Indianapolis",
+      "phone": "",
+      "owner_email": "shishacandles@gmail.com",
+      "category": "home",
+      "subcategory": "Home Goods/ D�cor"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Simply Put Organizing, LLc",
+      "website": "www.simplyputorg.com",
+      "owner_name": "Tiffany",
+      "city": "Indianapolis",
+      "phone": "(317) 620-3918",
+      "owner_email": "simplyputorg.llc@gmail.com",
+      "category": "home",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "T. Marie Candle Company",
+      "website": "www.wordsandwicks.com",
+      "owner_name": "Tina Word",
+      "city": "Indianapolis",
+      "phone": "",
+      "owner_email": "info@wordsandwicks.com",
+      "category": "home",
+      "subcategory": "Home Goods/ D�cor"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Three Men Lawn",
+      "website": "threemenlawn.com",
+      "owner_name": "Howard Readus",
+      "city": "Indianapolis",
+      "phone": "(317) 531-9223",
+      "owner_email": "hreadus123@yahoo.com",
+      "category": "home",
+      "subcategory": "Landscaping/Gardening"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Four Thirteen Design, LLC",
+      "website": "https://www.fourthirteendesign.com/",
+      "owner_name": "Lecia",
+      "city": "Lawrence",
+      "phone": "",
+      "owner_email": "",
+      "category": "home",
+      "subcategory": "Home Goods/ D�cor"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "A Scent of Sunshine",
+      "website": "http://www.scentofsunshine.com/",
+      "owner_name": "Erika",
+      "city": "online",
+      "phone": "",
+      "owner_email": "info@scentofsunshine.com",
+      "category": "home",
+      "subcategory": "Home Goods/ D�cor"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "2 Cousins Travel Agency",
+      "website": "https://2cousinstravel.com",
+      "owner_name": "Charlena Kendrick, & Virtal Goode",
+      "city": "Indianapolis",
+      "phone": "(317) 694-8255",
+      "owner_email": "Info@2cousinstravel.com",
+      "category": "hotels",
+      "subcategory": "Travel Agent"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Travel by Dai",
+      "website": "https://avoyatravel.com/ia/daibroadnax",
+      "owner_name": "Dai Broadnax",
+      "city": "Indianapolis",
+      "phone": "(317) 242-8825",
+      "owner_email": "dai.broadnax@avoyatravelnetwork.com",
+      "category": "hotels",
+      "subcategory": "Travel Agent"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Dream Journeys, LLC",
+      "website": "https://www.adreamjourney.com/",
+      "owner_name": "Angel Wilson",
+      "city": "Indianapolis",
+      "phone": "(317) 809-4424",
+      "owner_email": "Angel@DreamjourneyLLC.com",
+      "category": "hotels",
+      "subcategory": "Travel Agent"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Love4traveling LLC",
+      "website": "www.love4traveling.com",
+      "owner_name": "Brandy",
+      "city": "Indianapolis",
+      "phone": "(317) 406-7755",
+      "owner_email": "Brandy@love4traveling.com",
+      "category": "hotels",
+      "subcategory": "Travel Agent"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Rocco�s Rockin Excursions",
+      "website": "https://tashikagarrett.inteletravel.com/booktravel.cfm",
+      "owner_name": "Tashika Garrett",
+      "city": "Indianapolis",
+      "phone": "(812) 305-2005",
+      "owner_email": "tashika77@hotmail.com",
+      "category": "hotels",
+      "subcategory": "Travel Agent"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Jewelry Lady",
+      "website": "https://jewelryladydesigns.com/",
+      "owner_name": "Joann Carter",
+      "city": "Indianapolis",
+      "phone": "(317) 578-2500",
+      "owner_email": "sales@jewelryladydesigns.com",
+      "category": "jewelery",
+      "subcategory": "Fine Jewelry"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Bead It Adornments",
+      "website": "www.beaditadornments.com",
+      "owner_name": "",
+      "city": "Indianapolis",
+      "phone": "(317) 739-8746",
+      "owner_email": "beaditadornments@gmail.com",
+      "category": "jewelery",
+      "subcategory": "Accessories/Handbags"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Earth + Fire",
+      "website": "https://earthandfire.shop/",
+      "owner_name": "Krystal Teela Shalise & Tami Highbaugh-Abdullah",
+      "city": "Indianapolis",
+      "phone": "(317) 345-4182",
+      "owner_email": "earthfireindy@gmail.com",
+      "category": "jewelery",
+      "subcategory": "Accessories/Handbags"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Lovely Jewels with Lady L.",
+      "website": "https://paparazziaccessories.com/268154/",
+      "owner_name": "Lena Dikerson",
+      "city": "Indianapolis",
+      "phone": "317-679-7702",
+      "owner_email": "BlessedLena89@gmail.com",
+      "category": "jewelery",
+      "subcategory": "Accessories/Handbags"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Simply Chic Jewels",
+      "website": "www.simplychicjewels.com",
+      "owner_name": "Donielle",
+      "city": "Indianapolis",
+      "phone": "(317) 689-8619",
+      "owner_email": "simplychicjewels5@gmail.com",
+      "category": "jewelery",
+      "subcategory": "Accessories/Handbags"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Talia's Jewelry Box L.L.C.",
+      "website": "www.taliasjewelrybox.com",
+      "owner_name": "Talia",
+      "city": "Indianapolis",
+      "phone": "",
+      "owner_email": "info@taliasjewelrybox.com",
+      "category": "jewelery",
+      "subcategory": "Accessories/Handbags"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "The J2 Collection",
+      "website": "thej2co.com",
+      "owner_name": "Julian James II",
+      "city": "Indianapolis",
+      "phone": "(317) 827-0430",
+      "owner_email": "Tracy.James@TheJ2Collection.com",
+      "category": "jewelery",
+      "subcategory": "Accessories/Handbags"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Yada Yada",
+      "website": "http://www.etsy.com/shop/shopyadayada",
+      "owner_name": "Chelsea",
+      "city": "Indianapolis",
+      "phone": "",
+      "owner_email": "",
+      "category": "jewelery",
+      "subcategory": "Accessories/Handbags"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Edward Jones",
+      "website": "https://www.edwardjones.com/",
+      "owner_name": "Kennith Meeks",
+      "city": "Fishers",
+      "phone": "(317) 516-5109",
+      "owner_email": "",
+      "category": "legal",
+      "subcategory": "Financial Services"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Tolbert&Tolbert LLC",
+      "website": "http://www.tolbertlegal.com/default.asp",
+      "owner_name": "Michael & Shelice Tolbert",
+      "city": "Gary",
+      "phone": "(219) 427-0094",
+      "owner_email": "stolbert@tolberlegal.com",
+      "category": "legal",
+      "subcategory": "Legal Services (General)"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Rowe and Hamilton",
+      "website": "https://roweandhamilton.com/",
+      "owner_name": "Timothy Rowe & David Hamilton",
+      "city": "Indianapolis",
+      "phone": "(317) 482-7888",
+      "owner_email": "trowelaw@aol.com",
+      "category": "legal",
+      "subcategory": "Legal Services (General)"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Equitable Bookkeeping",
+      "website": "https://equitablebookkeeping.com/",
+      "owner_name": "Philip Melton",
+      "city": "Indianapolis",
+      "phone": "(317) 721-3313",
+      "owner_email": "philipmelton@equitablebookkeeping.com",
+      "category": "legal",
+      "subcategory": "Financial Services"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "A. J. Gaither Financial Advisor with Northwestern Mutual",
+      "website": "http://ajgaither.nm.com/",
+      "owner_name": "A.J. Gaither",
+      "city": "Indianapolis",
+      "phone": "(971) 285-6641",
+      "owner_email": "",
+      "category": "legal",
+      "subcategory": "Financial Services"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "CDL Accounting and Tax Service",
+      "website": "https://cdltaxes.com/",
+      "owner_name": "",
+      "city": "Indianapolis",
+      "phone": "",
+      "owner_email": "",
+      "category": "legal",
+      "subcategory": "Financial Services"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "DeJuan Taylor Bailbonds",
+      "website": "https://taylor-bail-bonds.business.site/",
+      "owner_name": "DeJuan Taylor",
+      "city": "Indianapolis",
+      "phone": "(317) 514-6655",
+      "owner_email": "",
+      "category": "legal",
+      "subcategory": "Bail Bonds Service"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Insight Financial Group",
+      "website": "https://insightfinancialindy.com/",
+      "owner_name": "Linda Diakite Karressy",
+      "city": "Indianapolis",
+      "phone": "",
+      "owner_email": "linda@insightfinancialindy.com",
+      "category": "legal",
+      "subcategory": "Financial Services"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Kellie Taylor State Farm Agency",
+      "website": "https://www.weinsureindy.com/",
+      "owner_name": "Kellie Taylor",
+      "city": "Indianapolis",
+      "phone": "(317) 842-6807",
+      "owner_email": "",
+      "category": "legal",
+      "subcategory": "Insurance"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Laura Tax Services",
+      "website": "https://www.laurataxservices.com/",
+      "owner_name": "",
+      "city": "Indianapolis",
+      "phone": "(317)543-3211",
+      "owner_email": "info@laurataxservices.com",
+      "category": "legal",
+      "subcategory": "Financial Services"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Logan Financial Empowerment LLC",
+      "website": "www.loganfinancialempowerment.com",
+      "owner_name": "Andre Logan",
+      "city": "Indianapolis",
+      "phone": "(317) 941-6272",
+      "owner_email": "andre.logan@loganfinancialempowerment.com",
+      "category": "legal",
+      "subcategory": "Financial Services"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Norton Estate Planning & Elder Law Firm, LLC",
+      "website": "www.estate-planners.org",
+      "owner_name": "Jennifer Norton",
+      "city": "Indianapolis",
+      "phone": "(317) 572-8696",
+      "owner_email": "Help@estate-planners.org",
+      "category": "legal",
+      "subcategory": "Estate Planning/Wills"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Onyx Rising Financial Services",
+      "website": "www.onyxrisingfinancial.com",
+      "owner_name": "Kelli McMiller",
+      "city": "Indianapolis",
+      "phone": "(317) 758-7473",
+      "owner_email": "onyxrisingfinancial@gmail.com",
+      "category": "legal",
+      "subcategory": "Financial Services"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Trinity Financial Consulting",
+      "website": "www.trinityfinancialconsulting.com",
+      "owner_name": "David & Robin Pack",
+      "city": "Indianapolis",
+      "phone": "(317) 362-8959",
+      "owner_email": "info@trinityfinancialconsulting.com",
+      "category": "legal",
+      "subcategory": "Financial Services"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Wize Insurance & Risk Management",
+      "website": "www.getwizeinsurance.com",
+      "owner_name": "Ralph",
+      "city": "Indianapolis",
+      "phone": "(317) 581-6167",
+      "owner_email": "",
+      "category": "legal",
+      "subcategory": "Insurance"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Thyme to Roll Mobile Notary",
+      "website": "https://www.thyme2rollmobilenotary.com/",
+      "owner_name": "Mo'nique Wampler",
+      "city": "Indianapolis",
+      "phone": "(317) 424-0694",
+      "owner_email": "Monique@thymetorollmobilenotar@gmail.com",
+      "category": "legal",
+      "subcategory": "Notary"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Harris Consulting Indy LLC",
+      "website": "https://harrisconsultingindy.com/",
+      "owner_name": "Tiffany Coker",
+      "city": "Indianapolis",
+      "phone": "(317) 863-9557",
+      "owner_email": "tiffany@harrisconsultingindy.com",
+      "category": "legal",
+      "subcategory": "Notary"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Tailor-Made Budgets",
+      "website": "www.tailormadebudgets.com",
+      "owner_name": "Ericka Young",
+      "city": "Indianapolis",
+      "phone": "(317) 537-7862",
+      "owner_email": "ericka@tailormadebudgets.com",
+      "category": "legal",
+      "subcategory": "Financial Services"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Northwestern Mutual",
+      "website": "khalilwilliams.nm.com",
+      "owner_name": "Khalil Williams",
+      "city": "Lafayette",
+      "phone": "(765) 621-1175",
+      "owner_email": "",
+      "category": "legal",
+      "subcategory": "Insurance"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "PharmFree Life CBD Dispensary",
+      "website": "https://www.pharmfreelife.com/",
+      "owner_name": "",
+      "city": "Indianapolis",
+      "phone": "(317) 842-4223",
+      "owner_email": "support@pharmfreelife.com",
+      "category": "lifestyle",
+      "subcategory": "CBD Products"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Prime 357 Cigars",
+      "website": "www.prime357cigars.com",
+      "owner_name": "",
+      "city": "Indianapolis",
+      "phone": "(317) 622-8493",
+      "owner_email": "prime357cigars@gmail.com",
+      "category": "lifestyle",
+      "subcategory": "Smoking & Paraphernalia"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Alsum Organics LLC",
+      "website": "www.alsumorganics.com",
+      "owner_name": "Carmen and Rick Alsum",
+      "city": "Plainfield",
+      "phone": "(317) 203-5419",
+      "owner_email": "alsumorganics@gmail.com",
+      "category": "lifestyle",
+      "subcategory": "CBD Products"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Ratel SEO",
+      "website": "https://ratelseo.com/",
+      "owner_name": "Darrin Marion",
+      "city": "Indianapolis",
+      "phone": "(317) 762-2659",
+      "owner_email": "info@ratelseo.com",
+      "category": "marketing",
+      "subcategory": "Web Services/Social Media"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Carlis Design Studio",
+      "website": "https://carlisdesignstudio.net/landing-page-2",
+      "owner_name": "Hattie L. Carlis",
+      "city": "Indianapolis",
+      "phone": "(317) 659-0115",
+      "owner_email": "info@carlisdesigntudio.net",
+      "category": "marketing",
+      "subcategory": "Marketing/Digital Marketing"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Market*Ting",
+      "website": "https://market-ting.com/",
+      "owner_name": "Ryan Scott",
+      "city": "Indianapolis",
+      "phone": "(317) 847- 3904",
+      "owner_email": "rscott@market-ting.com",
+      "category": "marketing",
+      "subcategory": "Branding/Graphic Design"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Hoosier Web Host LLC",
+      "website": "https://www.hoosierwebhost.page/",
+      "owner_name": "Joshua Chandler",
+      "city": "Indianapolis",
+      "phone": "(765) 393-1284",
+      "owner_email": "info@hoosierwebhost.net",
+      "category": "marketing",
+      "subcategory": "Web Services/ Social Media"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Cerulean Consulting Group",
+      "website": "https://www.ceruleanconsultinggroup.com/",
+      "owner_name": "Ashley G. Scott",
+      "city": "Indianapolis",
+      "phone": "",
+      "owner_email": "ashley@ceruleanconsultinggroup.com",
+      "category": "marketing",
+      "subcategory": "Marketing/Digital Marketing"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "The Artistry Studios",
+      "website": "www.artistrystudios.co",
+      "owner_name": "",
+      "city": "Indianapolis",
+      "phone": "(317) 602-4778",
+      "owner_email": "info@artistrystudios.co",
+      "category": "marketing",
+      "subcategory": "Web Services/Social Media"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Caring Smiles 4U",
+      "website": "https://www.caringsmiles4u.com/",
+      "owner_name": "Juanita R. Taylor",
+      "city": "Indianapolis",
+      "phone": "(317) 968-9700",
+      "owner_email": "",
+      "category": "medical",
+      "subcategory": "Dental/Orthodontics"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Devington Dental Office",
+      "website": "https://www.drmbazilio.com/",
+      "owner_name": "Dr. Bazilio",
+      "city": "Indianapolis",
+      "phone": "(317) 545-1044",
+      "owner_email": "",
+      "category": "medical",
+      "subcategory": "Dental/Orthodontics"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Positive Energy Health Center",
+      "website": "http://powersandsons.com/",
+      "owner_name": "",
+      "city": "Indianapolis",
+      "phone": "(317) 565-7217",
+      "owner_email": "info@positiveenergyhealth.org",
+      "category": "medical",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Scott Dentistry",
+      "website": "www.docscott.com",
+      "owner_name": "Dr. Leonard S. Scott",
+      "city": "Indianapolis",
+      "phone": "(317) 479-2340",
+      "owner_email": "docscott@docscott.com",
+      "category": "medical",
+      "subcategory": "Dental/Orthodontics"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "The Indiana Institute for Behavior Analysis, Inc",
+      "website": "www.tiiba.org",
+      "owner_name": "Angelica Gray",
+      "city": "Indianapolis",
+      "phone": "(317) 388-8131",
+      "owner_email": "",
+      "category": "medical",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "We Heel the Sole Podiatry",
+      "website": "www.weheelthesolepodiatry.com",
+      "owner_name": "Dr. Jerwana Laster",
+      "city": "Indianapolis",
+      "phone": "(317) 441-1093",
+      "owner_email": "drjlaster@gmail.com",
+      "category": "medical",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Run For Life Performance & Physical Therapy",
+      "website": "www.indyperformbetter.com",
+      "owner_name": "Dr. Latisha Williams",
+      "city": "Indianapolis",
+      "phone": "(317) 721-8079",
+      "owner_email": "drlatishapt@gmail.com",
+      "category": "medical",
+      "subcategory": "Physical Therapy"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Link to Learn Behavior Therapy",
+      "website": "https://www.linkedbehavior.com/",
+      "owner_name": "Shaya Bates",
+      "city": "Noblesville",
+      "phone": "(317) 863-8388",
+      "owner_email": "info@linkedbehavior.com",
+      "category": "medical",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Unibuyz",
+      "website": "https://unibuyz.com/",
+      "owner_name": "",
+      "city": "Gary",
+      "phone": "",
+      "owner_email": "united.buyz@gmx.com",
+      "category": "other",
+      "subcategory": "Marketplace"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "BlackStar Tactical LLC",
+      "website": "https://www.blackstartactical.net/",
+      "owner_name": "",
+      "city": "indianapoils",
+      "phone": "(463) 201-4848",
+      "owner_email": "info@blackstartactical.net",
+      "category": "other",
+      "subcategory": "Guns & Shooting Ranges"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Dominique's Enterprise LLC",
+      "website": "https://www.dominiquesbest.com/",
+      "owner_name": "Rochelle R. Asberry",
+      "city": "Indianapolis",
+      "phone": "(317) 879-1599",
+      "owner_email": "shop@dominiquesbest.com",
+      "category": "other",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "A-Way-Out Ministries, Inc",
+      "website": "https://www.a-way-outministries.org/",
+      "owner_name": "Daisy Marrs",
+      "city": "Indianapolis",
+      "phone": "(317) 676-5021",
+      "owner_email": "dmarrs@a-way-outministries.org",
+      "category": "other",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Indiana Black Expo",
+      "website": "https://www.indianablackexpo.com/",
+      "owner_name": "",
+      "city": "Indianapolis",
+      "phone": "(317) 925-2702",
+      "owner_email": "",
+      "category": "other",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Kirkland Funeral and Cremation Services",
+      "website": "https://www.kirklandfuneralandcremation.com/",
+      "owner_name": "Ashley Martin",
+      "city": "Indianapolis",
+      "phone": "(463) 206-2685",
+      "owner_email": "kirklandfuneral@gmail.com",
+      "category": "other",
+      "subcategory": "Mortuary/Funeral Services"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Remitha Lynn & Co",
+      "website": "www.remithalynn.com",
+      "owner_name": "Remitha Lynn",
+      "city": "Indianapolis",
+      "phone": "(317) 600-3480",
+      "owner_email": "remithalynn@gmail.com",
+      "category": "other",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Rocket Teller ATMs",
+      "website": "www.indyatmservices.com",
+      "owner_name": "",
+      "city": "Indianapolis",
+      "phone": "(800) 554-6286",
+      "owner_email": "rocketteller@indyatmservices.com",
+      "category": "other",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "S.H.E. Event Indy LTD",
+      "website": "www.sheeventindy.org",
+      "owner_name": "",
+      "city": "Indianapolis",
+      "phone": "(317) 600-3291",
+      "owner_email": "sheeventindy@outlook.com",
+      "category": "other",
+      "subcategory": "Marketplace"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "The Food Firm LLC",
+      "website": "www.thefoodfirm.biz",
+      "owner_name": "Kirt Maxey",
+      "city": "Indianapolis",
+      "phone": "(317) 341-4048",
+      "owner_email": "",
+      "category": "other",
+      "subcategory": "Marketplace"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Ladies Under Construction Inc",
+      "website": "http://www.ladiesunderconstruction.net/",
+      "owner_name": "Aleanya G. Moore",
+      "city": "Indianapolis",
+      "phone": "(317) 721-4582",
+      "owner_email": "ladiesunderconstruction@gmail.com",
+      "category": "other",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Sprowl Funeral and Cremation Care",
+      "website": "www.sprowlfuneral.com",
+      "owner_name": "Lloyd Sprowl & Lori Hobbs",
+      "city": "Indianapolis",
+      "phone": "(317) 384-1859",
+      "owner_email": "info@sprowlfuneral.com",
+      "category": "other",
+      "subcategory": "Mortuary/Funeral Services"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "OneUnited Bank",
+      "website": "https://www.oneunited.com/",
+      "owner_name": "Kevin Cohee",
+      "city": "",
+      "phone": "",
+      "owner_email": "",
+      "category": "other",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "ColorRush Print Shop",
+      "website": "https://colorrushprintshop.com/",
+      "owner_name": "",
+      "city": "Indianapolis",
+      "phone": "",
+      "owner_email": "",
+      "category": "packaging",
+      "subcategory": "Printing"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Diversity Press",
+      "website": "https://diversity-press.com/",
+      "owner_name": "Darrell Johnson",
+      "city": "Indianapolis",
+      "phone": "(317) 241-4234",
+      "owner_email": "",
+      "category": "packaging",
+      "subcategory": "Printing"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Donna's Global Shipping",
+      "website": "https://www.donnasglobalshipping.com/",
+      "owner_name": "Donna Wise",
+      "city": "Indianapolis",
+      "phone": "(470) 990-6600",
+      "owner_email": "Donna.Wise@Inxpress.com",
+      "category": "packaging",
+      "subcategory": "Shipping"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Ankh Productions",
+      "website": "https://www.ankhproductions.org/",
+      "owner_name": "Chandra Lynch",
+      "city": "Indianapolis",
+      "phone": "",
+      "owner_email": "info@ankhproductions.org",
+      "category": "photography",
+      "subcategory": "Photography"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Captured by Cami Photography",
+      "website": "https://www.capturedbycami.com/",
+      "owner_name": "Antareo & Cami",
+      "city": "Indianapolis",
+      "phone": "(812) 391-9311",
+      "owner_email": "CapturedByCami@live.com",
+      "category": "photography",
+      "subcategory": "Photography"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Circle City Film Festival",
+      "website": "https://www.circlecityfilmfestival.com/",
+      "owner_name": "Rasheda Randle",
+      "city": "Indianapolis",
+      "phone": "",
+      "owner_email": "circlecityfilmfest@gmail.com",
+      "category": "photography",
+      "subcategory": "Videography"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Dai in and Dai Out Productions LLC.",
+      "website": "https://daiinanddaiout.squarespace.com/",
+      "owner_name": "Daiyawn Smith",
+      "city": "Indianapolis",
+      "phone": "(317) 560-6206",
+      "owner_email": "Smithdaiyawn@gmail.com",
+      "category": "photography",
+      "subcategory": "Photography"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Dauss FOTO",
+      "website": "www.daussfoto.com",
+      "owner_name": "Dauss Miller",
+      "city": "Indianapolis",
+      "phone": "(317) 445-6266",
+      "owner_email": "bookmywedding@daussfoto.com",
+      "category": "photography",
+      "subcategory": "Photography"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Dauss Miller Photographer",
+      "website": "www.daussmiller.com",
+      "owner_name": "Dauss Miller",
+      "city": "Indianapolis",
+      "phone": "(317)445-6266",
+      "owner_email": "dauss@daussmiller.com",
+      "category": "photography",
+      "subcategory": "Photography"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Drea & Co LLC",
+      "website": "https://dreaandcompany.com/",
+      "owner_name": "Martina Jackson",
+      "city": "Indianapolis",
+      "phone": "",
+      "owner_email": "martina@dreaandcompany.com",
+      "category": "photography",
+      "subcategory": "Photography"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Elle Woods Film",
+      "website": "https://www.ellewoodsfilm.com/",
+      "owner_name": "Noelle",
+      "city": "Indianapolis",
+      "phone": "",
+      "owner_email": "",
+      "category": "photography",
+      "subcategory": "Photography"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Ellise Smith Photography",
+      "website": "https://ellisesmith.weebly.com/",
+      "owner_name": "Ellise Smith",
+      "city": "Indianapolis",
+      "phone": "",
+      "owner_email": "ellise.a.smith@gmail.com",
+      "category": "photography",
+      "subcategory": "Photography"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Faith Blackwell Photography",
+      "website": "https://faithblackwell.smugmug.com/",
+      "owner_name": "Faith Blackwell",
+      "city": "Indianapolis",
+      "phone": "(317) 414-0621",
+      "owner_email": "faithblackwellcreative@gmail.com",
+      "category": "photography",
+      "subcategory": "Photography"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Iconic Images LLC",
+      "website": "https://www.iconic-images.com/",
+      "owner_name": "Alan",
+      "city": "Indianapolis",
+      "phone": "(317) 820-7837",
+      "owner_email": "",
+      "category": "photography",
+      "subcategory": "Photography"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Loving Life Productions LLC",
+      "website": "lovinglifeproductions.com",
+      "owner_name": "LaKesha Lorene",
+      "city": "Indianapolis",
+      "phone": "(317) 292-7610",
+      "owner_email": "loving.life.productions.llc@gmail.com",
+      "category": "photography",
+      "subcategory": "Videography"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Michael Florence Photography",
+      "website": "https://michaelflorencephotography.com",
+      "owner_name": "Michael Florence",
+      "city": "Indianapolis",
+      "phone": "(317) 292-8815",
+      "owner_email": "mflor51682@aol.com",
+      "category": "photography",
+      "subcategory": "Photography"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "The Moments Between Us",
+      "website": "www.themomentsbetweenus.com",
+      "owner_name": "Azia",
+      "city": "Indianapolis",
+      "phone": "(317) 624-2593",
+      "owner_email": "azia@themomentsbetweenus.com",
+      "category": "photography",
+      "subcategory": "Photography"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Those Mckissics Photography",
+      "website": "www.thosemckissics.com",
+      "owner_name": "Mr. & Ms. Mckissics",
+      "city": "Indianapolis",
+      "phone": "",
+      "owner_email": "",
+      "category": "photography",
+      "subcategory": "Photography"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Through Her Lens Studio",
+      "website": "ericaclaytonphotography.com",
+      "owner_name": "Erica Clayton",
+      "city": "Indianapolis",
+      "phone": "",
+      "owner_email": "eclaytonphotography@yahoo.com",
+      "category": "photography",
+      "subcategory": "Photography"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Eyedea Studio",
+      "website": "https://www.eyedeastudio.net/",
+      "owner_name": "Kamika & Tavarus Perry",
+      "city": "South Bend",
+      "phone": "",
+      "owner_email": "info.eyedeastudio@gmail.com",
+      "category": "photography",
+      "subcategory": "Photography"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Lindsey Vertner, LLC",
+      "website": "http://www.lindseyvertner.com/",
+      "owner_name": "Lindsey Vertner",
+      "city": "Bloomington",
+      "phone": "(812) 391-9203",
+      "owner_email": "gethappy@lindseyvertner.com",
+      "category": "professional",
+      "subcategory": "Speakers"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Carmen's Corner LLC",
+      "website": "http://www.carmenvertner.com/",
+      "owner_name": "Carmen Vertner",
+      "city": "Bloomington",
+      "phone": "(812) 391-9203",
+      "owner_email": "gethappy@lindseyvertner.com",
+      "category": "professional",
+      "subcategory": "Speakers"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Peak Mind LLC",
+      "website": "www.Peakmindllc.com",
+      "owner_name": "Alicia Mckoy",
+      "city": "Carmel",
+      "phone": "(317)499 6879",
+      "owner_email": "connect@peakmindllc.com",
+      "category": "professional",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "S.E.A. Leaders LLC",
+      "website": "www.sealeadersllc.com",
+      "owner_name": "Jennica Anderson",
+      "city": "Indianapolis",
+      "phone": "(855) 732-5323",
+      "owner_email": "traininginfo@sealeadersllc.com",
+      "category": "professional",
+      "subcategory": "Consulting"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "A Total Solution CPA & Consulting Services, Inc.",
+      "website": "https://atotalsolutioncpa.com/",
+      "owner_name": "Crystal D. Allen",
+      "city": "Indianapolis",
+      "phone": "(317) 225-4378",
+      "owner_email": "info@atsindycpa.com",
+      "category": "professional",
+      "subcategory": "Consulting"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "LegalShield",
+      "website": "http://legalshieldassociate.com/pettigrewj",
+      "owner_name": "Jeffrey Pettigrew",
+      "city": "Indianapolis",
+      "phone": "(317) 505-5964",
+      "owner_email": "pettigrewj@legalshieldassociate.com",
+      "category": "professional",
+      "subcategory": "Consulting"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "HR Circle Consulting LLC",
+      "website": "https://www.hrcircleconsulting.com/",
+      "owner_name": "Shelly Woods",
+      "city": "Indianapolis",
+      "phone": "(317) 991- 3190",
+      "owner_email": "circle@hrcircleconsulting.com",
+      "category": "professional",
+      "subcategory": "Human Resources"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Bcforward",
+      "website": "www.bcforward.com",
+      "owner_name": "Justin Christian",
+      "city": "Indianapolis",
+      "phone": "(866) 363-1132",
+      "owner_email": "sales@bcforward.com",
+      "category": "professional",
+      "subcategory": "IT"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Black Onyx Management Inc",
+      "website": "www.blackonyxmanagement.com",
+      "owner_name": "Marshawn Welley",
+      "city": "Indianapolis",
+      "phone": "(317) 258-6429",
+      "owner_email": "projectmanager@blackonyxmanagerment.com",
+      "category": "professional",
+      "subcategory": "Consulting"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Blue Maven IT",
+      "website": "https://bluemavenit.com/",
+      "owner_name": "Angela Lacy",
+      "city": "Indianapolis",
+      "phone": "(317) 751-1705",
+      "owner_email": "Itpro@BlueMavenIT.com",
+      "category": "professional",
+      "subcategory": "IT"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "GS1 CONSULTING LLC",
+      "website": "https://gs1consulting.com/",
+      "owner_name": "Takesha Mcclane",
+      "city": "Indianapolis",
+      "phone": "(574) 315-6988",
+      "owner_email": "tmcclane@gs1consulting.com",
+      "category": "professional",
+      "subcategory": "Consulting"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Hardon Educational Institute",
+      "website": "https://www.hardoneducation.org/",
+      "owner_name": "",
+      "city": "Indianapolis",
+      "phone": "(317) 388-5375",
+      "owner_email": "info@hardoneducation.org",
+      "category": "professional",
+      "subcategory": "Consulting"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "ONYX Staffing & Consulting Firm",
+      "website": "https://www.onyxscf.biz",
+      "owner_name": "S.H. Johnson",
+      "city": "Indianapolis",
+      "phone": "",
+      "owner_email": "",
+      "category": "professional",
+      "subcategory": "Recruiting/Staffing"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Performance 3",
+      "website": "https://www.bestperformance3.com",
+      "owner_name": "Thresette Briggs",
+      "city": "Indianapolis",
+      "phone": "",
+      "owner_email": "thresette@bestperformance3.com",
+      "category": "professional",
+      "subcategory": "Speakers"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Pretty SMART, LLC",
+      "website": "www.prettysmartllc.com",
+      "owner_name": "Alexandra J. Hall",
+      "city": "Indianapolis",
+      "phone": "(317) 296-3468",
+      "owner_email": "",
+      "category": "professional",
+      "subcategory": "Consulting"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Professional Management Enterprises",
+      "website": "www.pme-indy.com",
+      "owner_name": "",
+      "city": "Indianapolis",
+      "phone": "(317) 541-0200",
+      "owner_email": "",
+      "category": "professional",
+      "subcategory": "Recruiting/Staffing"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "ResumeMe, LLC",
+      "website": "www.myresumeme.com",
+      "owner_name": "Joi Redmon",
+      "city": "Indianapolis",
+      "phone": "(317) 969-7111",
+      "owner_email": "info@myresumeme.com",
+      "category": "professional",
+      "subcategory": "Writing Services"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Scriptura Strategies, LLC",
+      "website": "www.ScripturaStrategies.com",
+      "owner_name": "Dountonia S. Batts",
+      "city": "Indianapolis",
+      "phone": "(317) 526-5500",
+      "owner_email": "info@ScripturaStrategies.com",
+      "category": "professional",
+      "subcategory": "Consulting"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Security/ RS Elite Security Enforcement",
+      "website": "rselitesecurity.com",
+      "owner_name": "Rodney Stanback",
+      "city": "Indianapolis",
+      "phone": "(260) 673-5483",
+      "owner_email": "rselitese@gmail.com",
+      "category": "professional",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Sharpened Minds, LLC",
+      "website": "www.sharpenedmindsllc.com",
+      "owner_name": "Nikki J. Henson",
+      "city": "Indianapolis",
+      "phone": "",
+      "owner_email": "nikki@sharpenedmindsllc.com",
+      "category": "professional",
+      "subcategory": "Consulting"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Sustainable Leadership, LLC",
+      "website": "www.aprilervin.com",
+      "owner_name": "April L. Ervin",
+      "city": "Indianapolis",
+      "phone": "(872) 223-5675",
+      "owner_email": "april@aprilervin.com",
+      "category": "professional",
+      "subcategory": "Speakers"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Tiffany Atkinson Consulting",
+      "website": "https://www.tiffanyatkinson.com/",
+      "owner_name": "Tiffany Atkinson",
+      "city": "Indianapolis",
+      "phone": "",
+      "owner_email": "hello@tiffanyatkinson.com",
+      "category": "professional",
+      "subcategory": "Consulting"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "The Executive Impact Group",
+      "website": "www.eigcentral.com",
+      "owner_name": "Calvin E. Ellison Jr.",
+      "city": "Indianapolis",
+      "phone": "(317) 414-5613",
+      "owner_email": "info@theexecutiveimpactgroup.com",
+      "category": "professional",
+      "subcategory": "Consulting"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "The Writique, LLC",
+      "website": "www.thewritique.com",
+      "owner_name": "Alana",
+      "city": "Indianapolis",
+      "phone": "(317)-207-0224",
+      "owner_email": "info@thewritique.com",
+      "category": "professional",
+      "subcategory": "Writing Services"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Workmanship, LLC",
+      "website": "https://www.workmanshipllc.com",
+      "owner_name": "Cheryl R. Perkins",
+      "city": "Indianapolis",
+      "phone": "(317) 969-7640",
+      "owner_email": "wmshipllc@gmail.com",
+      "category": "professional",
+      "subcategory": "Consulting"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Gracious Growth Strategies",
+      "website": "http://www.GraciousGrowth.com",
+      "owner_name": "Ingrid Rounds Hardy",
+      "city": "Lafayette",
+      "phone": "(765) 637-6517",
+      "owner_email": "",
+      "category": "professional",
+      "subcategory": "Consulting"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Double Axis LLC",
+      "website": "https://www.doubleaxisllc.com/",
+      "owner_name": "Falana Kidd",
+      "city": "Merrillville",
+      "phone": "(317) 721-6672",
+      "owner_email": "Sales@doubleaxisllc.com",
+      "category": "professional",
+      "subcategory": "IT"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Fix My Resume Services",
+      "website": "http://www.fixmyresume.net",
+      "owner_name": "Lynette Barnwell",
+      "city": "Merrilville",
+      "phone": "(866) 992-9675",
+      "owner_email": "",
+      "category": "professional",
+      "subcategory": "Writing Services"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Jw Realty Group",
+      "website": "https://www.jwestrealty.com/",
+      "owner_name": "Jeneene West",
+      "city": "Indianapolis",
+      "phone": "(317) 856-4719",
+      "owner_email": "",
+      "category": "realestate",
+      "subcategory": "Real Estate Agents/Brokers"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Reese Group Realty, LLC.",
+      "website": "https://www.reesegrouprealty.com/",
+      "owner_name": "Robin Reese",
+      "city": "Indianapolis",
+      "phone": "(317) 652-7158",
+      "owner_email": "reese1enterprise@aol.com",
+      "category": "realestate",
+      "subcategory": "Real Estate Agents/Brokers"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "BHB REAL ESTATE GROUP",
+      "website": "https://www.bhbindy.net/",
+      "owner_name": "Larry Tracy",
+      "city": "Indianapolis",
+      "phone": "(317) 916-0645",
+      "owner_email": "",
+      "category": "realestate",
+      "subcategory": "Real Estate Agents/Brokers"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Buy With Beanz Real Estate LLC",
+      "website": "https://buywithbeanz.com/",
+      "owner_name": "Hakeem Bean",
+      "city": "Indianapolis",
+      "phone": "(317) 440-8443",
+      "owner_email": "Hakeem.Bean@gmail.com",
+      "category": "realestate",
+      "subcategory": "Real Estate Agents/Brokers"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "BWI, LLC",
+      "website": "https://www.bwillc.com/",
+      "owner_name": "Gary Hobbs",
+      "city": "Indianapolis",
+      "phone": "(317) 377-1790",
+      "owner_email": "",
+      "category": "realestate",
+      "subcategory": "Developers"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Eminent Advising Realty",
+      "website": "https://www.tripleerealty.com/",
+      "owner_name": "Evona & Edwin Watson",
+      "city": "Indianapolis",
+      "phone": "(317) 210-3637",
+      "owner_email": "evona@tripleerealty.com",
+      "category": "realestate",
+      "subcategory": "Real Estate Agents/Brokers"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Ethosity Property Management Group, Inc.",
+      "website": "https://www.ethositypropertymanagement.com/",
+      "owner_name": "Sterling M. Davis",
+      "city": "Indianapolis",
+      "phone": "(888) 212-3764",
+      "owner_email": "",
+      "category": "realestate",
+      "subcategory": "Property Management"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Graystone Realty LLC",
+      "website": "https://www.graystoneindy.com/",
+      "owner_name": "Cory M. Gray",
+      "city": "Indianapolis",
+      "phone": "(317) 793-3884",
+      "owner_email": "cory@graystoneindy.com",
+      "category": "realestate",
+      "subcategory": "Real Estate Agents/Brokers"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Jackson's Properties and Management",
+      "website": "https://reivindy.com/",
+      "owner_name": "Roger Jackson",
+      "city": "Indianapolis",
+      "phone": "(317) 250-6649",
+      "owner_email": "rogermj02@hotmail.com",
+      "category": "realestate",
+      "subcategory": "Real Estate Agents/Brokers"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Pride & Property",
+      "website": "https://welcomehomewithjenna.godaddysites.com/",
+      "owner_name": "Jenna Phillips",
+      "city": "Indianapolis",
+      "phone": "(219) 455-7762",
+      "owner_email": "jenna@scottestates.com",
+      "category": "realestate",
+      "subcategory": "Real Estate Agents/Brokers"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Resilient Realty Investments",
+      "website": "tonyburrisrealestate.com",
+      "owner_name": "Tony Burris",
+      "city": "Indianapolis",
+      "phone": "(317) 657-0923",
+      "owner_email": "rrealtyinvestments@gmail.com",
+      "category": "realestate",
+      "subcategory": "Real Estate Agents/Brokers"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "The Darden Group, LLC",
+      "website": "https://dardengroupllc.com",
+      "owner_name": "Akilah Darden",
+      "city": "Indianapolis",
+      "phone": "(317) 385-8954",
+      "owner_email": "akilah@dardengroupllc.com",
+      "category": "realestate",
+      "subcategory": "Developers"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Triple E Realty & Property Management",
+      "website": "TripleERealty.com",
+      "owner_name": "",
+      "city": "Indianapolis",
+      "phone": "(317) 210-3637",
+      "owner_email": "info@tripleerealty.com",
+      "category": "realestate",
+      "subcategory": "Real Estate Agents/Brokers"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "WDi Architecture, Inc.",
+      "website": "www.WDiarchitecture.com",
+      "owner_name": "",
+      "city": "Indianapolis",
+      "phone": "(317) 251-6172",
+      "owner_email": "daryl_wd@wdiarchitecture.com",
+      "category": "realestate",
+      "subcategory": "Developers"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Heritage Real Estate Services, Inc.",
+      "website": "https://www.heritagerealestateservices.com/",
+      "owner_name": "Binika Henderson",
+      "city": "Merrillville",
+      "phone": "(219) 525-4018",
+      "owner_email": "info@heritagerealestateservices.com",
+      "category": "realestate",
+      "subcategory": "Real Estate Agents/Brokers"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Minus SkateShop Carmel",
+      "website": "minuscarmel.com",
+      "owner_name": "",
+      "city": "Carmel",
+      "phone": "(317) 843.9980",
+      "owner_email": "",
+      "category": "recreation",
+      "subcategory": "Sports Equipment"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Circle City P.R.I.D.E. Sports",
+      "website": "https://palmettopridesports.squarespace.com/",
+      "owner_name": "Sedric M. Warren",
+      "city": "Indianapolis",
+      "phone": "",
+      "owner_email": "info@palmettopridesports.org",
+      "category": "recreation",
+      "subcategory": "Sports"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "GTA Sports, LLC",
+      "website": "https://www.gtasportsnet.com/",
+      "owner_name": "Amirah & Glynnis King; Ty Slatter",
+      "city": "Indianapolis",
+      "phone": "_(317) 747-1752_",
+      "owner_email": "info@gtasports.com",
+      "category": "recreation",
+      "subcategory": "Sports"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Indiana Lyons LLC",
+      "website": "https://indianalyons.com/",
+      "owner_name": "Tyrone & Deborah Brown",
+      "city": "Indianapolis",
+      "phone": "(317) 525-8380",
+      "owner_email": "tyronebrown@indianalyons.com",
+      "category": "recreation",
+      "subcategory": "Sports"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Black Owned Games",
+      "website": "https://blackowned.games/",
+      "owner_name": "",
+      "city": "Indianapolis",
+      "phone": "",
+      "owner_email": "kickbackcards@gmail.com",
+      "category": "recreation",
+      "subcategory": "Gaming"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Illusions Bar & Grill",
+      "website": "https://illusionsbarandgrill.com/",
+      "owner_name": "",
+      "city": "Indianapolis",
+      "phone": "(317) 220-8972",
+      "owner_email": "illusions357@icloud.com_",
+      "category": "restaurants",
+      "subcategory": "Bar/Night Club"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Jamaican Style Jerk",
+      "website": "https://cityseeker.com/",
+      "owner_name": "",
+      "city": "Indianapolis",
+      "phone": "(317) 926-1110",
+      "owner_email": "",
+      "category": "restaurants",
+      "subcategory": "Caribbean Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Missing Brick, The",
+      "website": "https://www.themissingbrick.com/",
+      "owner_name": "Que Wimberly",
+      "city": "Indianapolis",
+      "phone": "(317) 257-7557",
+      "owner_email": "",
+      "category": "restaurants",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Model Sanders Smooth & Spicy BBQ sauce",
+      "website": "Mozelsandersbbq.com",
+      "owner_name": "Amora Scott",
+      "city": "Indianapolis",
+      "phone": "(317) 457.0594",
+      "owner_email": "office@mozelsandersbbq.com",
+      "category": "restaurants",
+      "subcategory": "BBQ/ Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Pull Up Grill and BBQ",
+      "website": "www.pullupgrill.com",
+      "owner_name": "",
+      "city": "Indianapolis",
+      "phone": "(317) 419-3515",
+      "owner_email": "Pullupgrill@gmail.com",
+      "category": "restaurants",
+      "subcategory": "BBQ/ Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "R&R Extreme Wings",
+      "website": "https://www.rrextremewings.com/",
+      "owner_name": "",
+      "city": "Indianapolis",
+      "phone": "",
+      "owner_email": "rrextremewings@yahoo.com",
+      "category": "restaurants",
+      "subcategory": "BBQ/ Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Simply Southern Soul Food Restaurant",
+      "website": "https://www.facebook.com/simplysouthernsoulfood",
+      "owner_name": "Sherry & Robert",
+      "city": "Indianapolis",
+      "phone": "(317) 542-0203",
+      "owner_email": "sherrylynem@gmail.com",
+      "category": "restaurants",
+      "subcategory": "BBQ/ Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Maxine's Chicken & Waffles",
+      "website": "https://www.maxineschicken.com/",
+      "owner_name": "Darrell Bunnell",
+      "city": "Indianapolis",
+      "phone": "(317) 753-2859",
+      "owner_email": "sgrundy@maxineschicken.com",
+      "category": "restaurants",
+      "subcategory": "BBQ/ Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Kountry Kitchen Soulfood Place",
+      "website": "https://www.kountrykitchenindy.com/",
+      "owner_name": "Isaac & Cynthia Wilson",
+      "city": "Indianapolis",
+      "phone": "(317) 635-6000",
+      "owner_email": "info@kountrykitchenindy.com",
+      "category": "restaurants",
+      "subcategory": "BBQ/ Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Axum Ethiopian Restaurant",
+      "website": "https://www.axumindy.com/",
+      "owner_name": "",
+      "city": "Indianapolis",
+      "phone": "(317) 964-0580",
+      "owner_email": "ephreameal@gmail.com",
+      "category": "restaurants",
+      "subcategory": "Ethiopian/Eritrean"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Jamaican Breeze Sports Bar and Grill",
+      "website": "http://jamaicanbreezeindy.com/",
+      "owner_name": "Flora L",
+      "city": "Indianapolis",
+      "phone": "(317) 426-4045",
+      "owner_email": "info@jamaicanbreezeindy.com",
+      "category": "restaurants",
+      "subcategory": "Caribbean Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "St. Yared Ethiopian Restaurant",
+      "website": "Www.styaredcuisine.com",
+      "owner_name": "",
+      "city": "Indianapolis",
+      "phone": "(317) 363-4435",
+      "owner_email": "info@StYaredCuisine.com",
+      "category": "restaurants",
+      "subcategory": "Ethiopian/Eritrean"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Tea's Me Cafe Indy",
+      "website": "https://www.teasmeindy.com/",
+      "owner_name": "Tamika Catchings",
+      "city": "Indianapolis",
+      "phone": "(317) 920-1016",
+      "owner_email": "info@teasmeindy.com",
+      "category": "restaurants",
+      "subcategory": "Caf�"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Da Blue Lagoon",
+      "website": "https://dabluelagoon.com/",
+      "owner_name": "",
+      "city": "Indianapolis",
+      "phone": "(317) 441-4944",
+      "owner_email": "info@dabluelagoon.com",
+      "category": "restaurants",
+      "subcategory": "Caribbean Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Da Spot (Just Wing�n It)",
+      "website": "https://justwingnitindy.com/",
+      "owner_name": "",
+      "city": "Indianapolis",
+      "phone": "(317) 471-1020",
+      "owner_email": "",
+      "category": "restaurants",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Bar-B-Q Heaven",
+      "website": "http://www.barbqheaven1952.com/",
+      "owner_name": "",
+      "city": "Indianapolis",
+      "phone": "(317) 926-1667; (317) 283-0035",
+      "owner_email": "barbqheaven1952@gmail.com",
+      "category": "restaurants",
+      "subcategory": "BBQ/ Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Chef Oya's The Trap",
+      "website": "https://www.chefoya.com/",
+      "owner_name": "Oya Woodruff",
+      "city": "Indianapolis,",
+      "phone": "(317) 762-6172",
+      "owner_email": "Chefoya@chefoya.com",
+      "category": "restaurants",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Amiah J's Barbeque and Catering",
+      "website": "http://amiahjsbbq.com/",
+      "owner_name": "Food Trucks/Carts",
+      "city": "Indianapolis",
+      "phone": "(317) 258-1084",
+      "owner_email": "amiahjllc@gmail.com",
+      "category": "restaurants",
+      "subcategory": "Food Trucks/ Carts"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Bukks BBQ Smokehouse",
+      "website": "https://www.facebook.com/BUKKSBBQSMOKEHOUSE",
+      "owner_name": "",
+      "city": "Indianapolis",
+      "phone": "(317) 600-3236",
+      "owner_email": "",
+      "category": "restaurants",
+      "subcategory": "BBQ/ Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Chuck�s Coney Island",
+      "website": "http://chucks-coney-island.business.site/",
+      "owner_name": "Charles Lovelady",
+      "city": "Indianapolis",
+      "phone": "(317) 426-4945",
+      "owner_email": "",
+      "category": "restaurants",
+      "subcategory": "Caf�"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Circle City Soul Food",
+      "website": "https://www.circlecitysoulfood.com/",
+      "owner_name": "Frank & Maggie",
+      "city": "Indianapolis",
+      "phone": "(317) 924-3485",
+      "owner_email": "info@circlecitysoulfood.com",
+      "category": "restaurants",
+      "subcategory": "BBQ/ Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Cleo's Bodega and Caf�",
+      "website": "https://www.flannerhouse.org/",
+      "owner_name": "Brabdon Cosby",
+      "city": "Indianapolis",
+      "phone": "(317) 925-4231",
+      "owner_email": "info@flannerhouse.org",
+      "category": "restaurants",
+      "subcategory": "Venues/Event Spaces"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Epic Ultra Lounge",
+      "website": "http://www.epicultralounge.comcastbiz.net",
+      "owner_name": "Shauna Burnett",
+      "city": "Indianapolis",
+      "phone": "(317) 577-9800",
+      "owner_email": "info@epicultralounge.com",
+      "category": "restaurants",
+      "subcategory": "Bar/Night Club"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Garrett's Steakhouse and Barbeque",
+      "website": "https://www.garrettsbbq.com/",
+      "owner_name": "",
+      "city": "Indianapolis",
+      "phone": "(317) 722-0506",
+      "owner_email": "",
+      "category": "restaurants",
+      "subcategory": "BBQ/ Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Gran-2-Ma's Kitchen",
+      "website": "https://m.facebook.com/Gran-2-Mas-Kitchen-101619064945345/",
+      "owner_name": "",
+      "city": "Indianapolis",
+      "phone": "(317) 605-7877",
+      "owner_email": "gran2maskitchen@gmail.com",
+      "category": "restaurants",
+      "subcategory": "BBQ/ Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Hank's BBQ",
+      "website": "https://www.hankssmokedbriskets.com/",
+      "owner_name": "Hank",
+      "city": "Indianapolis",
+      "phone": "(317) 925-1689",
+      "owner_email": "",
+      "category": "restaurants",
+      "subcategory": "BBQ/ Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Healthy Soul Meal Prep & Catering LLC/ DBA Black Bow� Bistro & Bakery",
+      "website": "http://www.bistrofoodforthesoul.com/",
+      "owner_name": "",
+      "city": "Indianapolis",
+      "phone": "(317) 210-0345",
+      "owner_email": "info@bistrofoodforthesoul.com",
+      "category": "restaurants",
+      "subcategory": "BBQ/ Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Herd�s",
+      "website": "https://herdsindy.com/",
+      "owner_name": "",
+      "city": "Indianapolis",
+      "phone": "(317) 371-8578",
+      "owner_email": "dcowherd24@gmail.com",
+      "category": "restaurants",
+      "subcategory": "BBQ/ Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "His Place Eatery",
+      "website": "https://hisplaceeatery.com/",
+      "owner_name": "James and Shawn Jones",
+      "city": "Indianapolis",
+      "phone": "(317) 545-4890",
+      "owner_email": "",
+      "category": "restaurants",
+      "subcategory": "BBQ/ Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "King Ribs",
+      "website": "https://www.kingribsbbq.com/",
+      "owner_name": "Theopolis Clardy Sr.",
+      "city": "Indianapolis",
+      "phone": "(317) 488-0223; (317) 543-0841",
+      "owner_email": "info@kingribsbbq.com",
+      "category": "restaurants",
+      "subcategory": "BBQ/ Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Pi Indy",
+      "website": "https://eatbetterpizza.com/",
+      "owner_name": "Lawrence Scully",
+      "city": "Indianapolis",
+      "phone": "(317) 903-2612",
+      "owner_email": "scullyculinary@gmail.com",
+      "category": "restaurants",
+      "subcategory": "Food Trucks/ Carts"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Tammy�s International Pizza",
+      "website": "https://www.facebook.com/tammysinternationalizza/",
+      "owner_name": "David Lee",
+      "city": "Indianapolis",
+      "phone": "(765) 559-8693",
+      "owner_email": "",
+      "category": "restaurants",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Tea's Me Indy",
+      "website": "https://www.teasmeindy.com/",
+      "owner_name": "Tamika Catchings",
+      "city": "Indianapolis",
+      "phone": "(317) 603-2229",
+      "owner_email": "info@teasmeindy.com",
+      "category": "restaurants",
+      "subcategory": "Caf�"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "The Flatiron @ The Point on Penn",
+      "website": "www.thepointonpenn.com",
+      "owner_name": "",
+      "city": "Indianapolis",
+      "phone": "(317)-746-6961",
+      "owner_email": "thepointonpenn@gmail.com",
+      "category": "restaurants",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Yaso",
+      "website": "https://yasogrill.com/",
+      "owner_name": "Jermaine and Ja'Net Dennis",
+      "city": "Indianapolis",
+      "phone": "(317) 744-0011",
+      "owner_email": "",
+      "category": "restaurants",
+      "subcategory": "Caribbean Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Andre's Barbeque & Seafood",
+      "website": "https://www.facebook.com/AndresBBQandSeafood",
+      "owner_name": "Andre Louissaint",
+      "city": "Indianapolis",
+      "phone": "(317) 551-7573",
+      "owner_email": "andresbbqandseafood@gmail.com",
+      "category": "restaurants",
+      "subcategory": "Food Trucks/ Carts"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Exotic on the Run",
+      "website": "https://www.exoticontherunindy.com/",
+      "owner_name": "Nicco Edwards",
+      "city": "Indianapolis",
+      "phone": "(317) 672-7467",
+      "owner_email": "",
+      "category": "restaurants",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "SFI Risk Services",
+      "website": "https://sfirisk.com/",
+      "owner_name": "Keith Shovan",
+      "city": "Indianapolis",
+      "phone": "(833) 734-7475",
+      "owner_email": "info@sfirisk.com; kshovan@sfirisk.com",
+      "category": "security",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "A-TIN Transport LLC",
+      "website": "https://www.a-tin.com/",
+      "owner_name": "Walter Litzlbauer Jr.",
+      "city": "Indianapolis",
+      "phone": "(317) 602-8046",
+      "owner_email": "atin.transport@gmail.com",
+      "category": "transportation",
+      "subcategory": "Commuter/Shuttle Services"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Ballew Moving LLC",
+      "website": "www.ballewmoving.com",
+      "owner_name": "Nilijah Ballew",
+      "city": "Indianapolis",
+      "phone": "(513) 295-9831",
+      "owner_email": "ballewmoving26@gmail.com",
+      "category": "transportation",
+      "subcategory": "Moving Services"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Roscoe's express delivery LLC",
+      "website": "roscoeexpressdelivery.com",
+      "owner_name": "",
+      "city": "Indianapolis",
+      "phone": "(317) 333-1102",
+      "owner_email": "zippmed@yahoo.com_",
+      "category": "transportation",
+      "subcategory": "Moving Services"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Spirit of Excellence Transportation LLC",
+      "website": "www.yitsoe.com",
+      "owner_name": "Carla Renea Dames-Wiggins",
+      "city": "Indianapolis",
+      "phone": "(317) 987-4730",
+      "owner_email": "",
+      "category": "transportation",
+      "subcategory": "Commuter/Shuttle Services"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Touchdown RV Rentals and Sales",
+      "website": "https://touchdownrv.com/",
+      "owner_name": "Keith Dix",
+      "city": "Zionsville",
+      "phone": "(317) 662-0414",
+      "owner_email": "info@touchdownrv.com; keith@touchdownrv.com",
+      "category": "transportation",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Creative Art by J.Mintze",
+      "website": "https://www.judymintze.com/",
+      "owner_name": "Judy Mintze",
+      "city": "Indianapolis",
+      "phone": "(317) 294-7839",
+      "owner_email": "judy.mintze@gmail.com",
+      "category": "visual",
+      "subcategory": "Artists"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Iibada Dance Company",
+      "website": "https://www.iibadadance.org/",
+      "owner_name": "Sabra Logan",
+      "city": "Indianapolis",
+      "phone": "(317) 974-9941",
+      "owner_email": "admin@iibadadance.org",
+      "category": "visual",
+      "subcategory": "Dance Studios/Lessons"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Meraki Dance Company",
+      "website": "www.merakidanceindy.org",
+      "owner_name": "",
+      "city": "Indianapolis",
+      "phone": "(463)-209-3132",
+      "owner_email": "merakidanceindy@gmail.com",
+      "category": "visual",
+      "subcategory": "Dance Studios/Lessons"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Phiri Art Gallery",
+      "website": "www.phiriart.com",
+      "owner_name": "Phiri",
+      "city": "Indianapolis",
+      "phone": "(404) 759-0530",
+      "owner_email": "",
+      "category": "visual",
+      "subcategory": "Artists"
+    }
+},
+    {
+      "model": "vbp.vbp_in",
+      "fields": {
+"business_name": "Freetown Village",
+      "website": "https://www.freetown.org/",
+      "owner_name": "",
+      "city": "Indianapolis",
+      "phone": "(317) 631-1870",
+      "owner_email": "info@freetownvillage.org",
+      "category": "visual",
+      "subcategory": "Art Gallery/Museum"
+    }
+}
+  ]

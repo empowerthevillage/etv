@@ -1,0 +1,1584 @@
+[
+    {
+      "model": "vbp.vbp_ar",
+      "fields": {
+"directory_source": "Rank Tribe",
+      "business_name": "Hair Couture",
+      "owner_name": "Carolyn Brewer and Candice Graham",
+      "owner_email": "",
+      "category": "beauty",
+      "subcategory": "Beauty Supply/ Hair & Accessories",
+      "city": "Fayetteville",
+      "phone": "(479) 935-4852",
+      "website": "https://www.haircoutureboutique.com/"
+    }
+},
+    {
+      "model": "vbp.vbp_ar",
+      "fields": {
+"directory_source": "The Black Community Shoppe",
+      "business_name": "Boon Hands Salon & Barber Shop",
+      "owner_name": "",
+      "owner_email": "boonhands@gmail.com",
+      "category": "beauty",
+      "subcategory": "Barber",
+      "city": "Little Rock",
+      "phone": "(501) 612-1239",
+      "website": "https://www.facebook.com/boonhands/"
+    }
+},
+    {
+      "model": "vbp.vbp_ar",
+      "fields": {
+"directory_source": "The Black Community Shoppe",
+      "business_name": "Real Natural Salon by Alisha",
+      "owner_name": "",
+      "owner_email": "realnaturalsalon@gmail.com",
+      "category": "beauty",
+      "subcategory": "Beauty Salon",
+      "city": "Little Rock",
+      "phone": "(501) 353-2911",
+      "website": "http://realnaturalsalon.com/"
+    }
+},
+    {
+      "model": "vbp.vbp_ar",
+      "fields": {
+"directory_source": "The Black Community Shoppe",
+      "business_name": "Transformed by Melanie Miller",
+      "owner_name": "Paul Mitchell",
+      "owner_email": "",
+      "category": "beauty",
+      "subcategory": "Beauty Salon",
+      "city": "Little Rock",
+      "phone": "(501) 392-2193",
+      "website": "https://transformedbymel.glossgenius.com/"
+    }
+},
+    {
+      "model": "vbp.vbp_ar",
+      "fields": {
+"directory_source": "The Black Community Shoppe",
+      "business_name": "Kayla House of Glam Salon",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "beauty",
+      "subcategory": "Beauty Salon",
+      "city": "Little Rock",
+      "phone": "(682) 251-3422",
+      "website": "https://www.facebook.com/Kaylas-House-of-Glam-161672531214332/"
+    }
+},
+    {
+      "model": "vbp.vbp_ar",
+      "fields": {
+"directory_source": "Blocal",
+      "business_name": "Mahogany Luxury",
+      "owner_name": "Krishna Ellington",
+      "owner_email": "info@mahoganyluxury.com",
+      "category": "beauty",
+      "subcategory": "Bath Body",
+      "city": "Little Rock",
+      "phone": "(501) 404-5933",
+      "website": "https://mahoganyluxury.com/products/lavender"
+    }
+},
+    {
+      "model": "vbp.vbp_ar",
+      "fields": {
+"directory_source": "Rank Tribe",
+      "business_name": "U 4 U",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "beauty",
+      "subcategory": "Beauty Salon",
+      "city": "Little Rock",
+      "phone": "(501) 372-3930",
+      "website": "https://www.facebook.com/U4Ubnb/"
+    }
+},
+    {
+      "model": "vbp.vbp_ar",
+      "fields": {
+"directory_source": "Rank Tribe",
+      "business_name": "RML Automotive",
+      "owner_name": "Robert L. Johnson",
+      "owner_email": "",
+      "category": "cars",
+      "subcategory": "Auto Dealership",
+      "city": "Little Rock",
+      "phone": "(501) 374-4464",
+      "website": "https://www.rmlauto.com/"
+    }
+},
+    {
+      "model": "vbp.vbp_ar",
+      "fields": {
+"directory_source": "The Black Community Shoppe",
+      "business_name": "Riverfront Detail & WiggyWash",
+      "owner_name": "",
+      "owner_email": "waxxed88@gmail.com",
+      "category": "cars",
+      "subcategory": "Car Wash",
+      "city": "Little Rock",
+      "phone": "(501) 280-0026",
+      "website": "https://www.facebook.com/RiverFrontDetail/"
+    }
+},
+    {
+      "model": "vbp.vbp_ar",
+      "fields": {
+"directory_source": "I Am Black Business",
+      "business_name": "New Image Mobile Detail",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "cars",
+      "subcategory": "Car Wash",
+      "city": "Little Rock",
+      "phone": "",
+      "website": "http://nimobiledetail.com/"
+    }
+},
+    {
+      "model": "vbp.vbp_ar",
+      "fields": {
+"directory_source": "I Am Black Business",
+      "business_name": "Urban Air Trampoline & Adventure Park",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "child",
+      "subcategory": "Children's Activities",
+      "city": "Little (West) Rock",
+      "phone": "(501) 404-7422",
+      "website": "https://www.urbanair.com/arkansas-little-rock-west/"
+    }
+},
+    {
+      "model": "vbp.vbp_ar",
+      "fields": {
+"directory_source": "The Black Community Shoppe",
+      "business_name": "Little Rock Laundry",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "cleaning",
+      "subcategory": "Laundry",
+      "city": "Little Rock",
+      "phone": "",
+      "website": "https://www.facebook.com/littlerocklaundry/"
+    }
+},
+    {
+      "model": "vbp.vbp_ar",
+      "fields": {
+"directory_source": "The Black Community Shoppe",
+      "business_name": "Doors & Threads",
+      "owner_name": "",
+      "owner_email": "rosashton1234@aol.com",
+      "category": "clothing",
+      "subcategory": "Apparel",
+      "city": "Little Rock",
+      "phone": "",
+      "website": "https://www.facebook.com/DoorsandThreads/"
+    }
+},
+    {
+      "model": "vbp.vbp_ar",
+      "fields": {
+"directory_source": "Support Black Owned",
+      "business_name": "Socks Of Africa",
+      "owner_name": "Maf Sonko",
+      "owner_email": "hello@socksofafrica.com",
+      "category": "clothing",
+      "subcategory": "Apparel",
+      "city": "Little Rock",
+      "phone": "(501) 232-1054",
+      "website": "https://socksofafrica.com/pages/our-story"
+    }
+},
+    {
+      "model": "vbp.vbp_ar",
+      "fields": {
+"directory_source": "Rank Tribe",
+      "business_name": "RNB Ghanaian Fashion",
+      "owner_name": "",
+      "owner_email": "rnbghanaianfashions@gmail.com",
+      "category": "clothing",
+      "subcategory": "Apparel",
+      "city": "Little Rock",
+      "phone": "",
+      "website": "https://www.facebook.com/RNBGhanaianFashions/"
+    }
+},
+    {
+      "model": "vbp.vbp_ar",
+      "fields": {
+"directory_source": "Official Black Wallstreet",
+      "business_name": "Style and Grace Boutique",
+      "owner_name": "Gynesis Allen",
+      "owner_email": "sgraceboutique1@gmail.com",
+      "category": "clothing",
+      "subcategory": "Apparel",
+      "city": "N/A",
+      "phone": "",
+      "website": "https://styleandgraceboutique.shop/"
+    }
+},
+    {
+      "model": "vbp.vbp_ar",
+      "fields": {
+"directory_source": "Support Black Owned",
+      "business_name": "Rare Talents Contracting, Llc",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "construction",
+      "subcategory": "Appliance Repair",
+      "city": "Little Rock",
+      "phone": "(501) 297-8637",
+      "website": "https://porch.com/north-little-rock-ar/handymen/rare-talents-contracting-llc/pp"
+    }
+},
+    {
+      "model": "vbp.vbp_ar",
+      "fields": {
+"directory_source": "Support Black Owned",
+      "business_name": "Bledsoe Construction Group Of Arkansas",
+      "owner_name": "Ether Bledsoe",
+      "owner_email": "BledsoeInternational@protonmail.com",
+      "category": "construction",
+      "subcategory": "Roofing & Sliding",
+      "city": "Little Rock",
+      "phone": "(877) 291-2751",
+      "website": "https://www.bledsoeinternational.com"
+    }
+},
+    {
+      "model": "vbp.vbp_ar",
+      "fields": {
+"directory_source": "The Black Community Shoppe",
+      "business_name": "Evelyn D. Johnson Child Enrichment Center",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "education",
+      "subcategory": "Enrichment",
+      "city": "Little Rock",
+      "phone": "(501) 313-5339",
+      "website": "https://www.edjchildenrichmentcenter.com/?page_id=525"
+    }
+},
+    {
+      "model": "vbp.vbp_ar",
+      "fields": {
+"directory_source": "National Black Guide",
+      "business_name": "Lessons for Life",
+      "owner_name": "Alexis Ware",
+      "owner_email": "",
+      "category": "education",
+      "subcategory": "Enrichment",
+      "city": "Little Rock",
+      "phone": "(501) 590-7824",
+      "website": "https://lessonsforlife.us/contact/"
+    }
+},
+    {
+      "model": "vbp.vbp_ar",
+      "fields": {
+"directory_source": "Rank Tribe",
+      "business_name": "Arkansas Baptist College",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "education",
+      "subcategory": "Enrichment",
+      "city": "Little Rock",
+      "phone": "(501) 420-1200",
+      "website": "https://www.arkansasbaptist.edu/"
+    }
+},
+    {
+      "model": "vbp.vbp_ar",
+      "fields": {
+"directory_source": "Rank Tribe",
+      "business_name": "Philander Smith College",
+      "owner_name": "",
+      "owner_email": "helpdesk@philander.edu",
+      "category": "education",
+      "subcategory": "Enrichment",
+      "city": "Little Rock",
+      "phone": "(501) 375-9845",
+      "website": "https://www.philander.edu/"
+    }
+},
+    {
+      "model": "vbp.vbp_ar",
+      "fields": {
+"directory_source": "The Black Community Shoppe",
+      "business_name": "Williams Professional Coding Courses & Services",
+      "owner_name": "Vickie A. Williams",
+      "owner_email": "info@wpccourses.com",
+      "category": "education",
+      "subcategory": "Tutoring/Academic Planning",
+      "city": "Little Rock",
+      "phone": "(501) 823-0543",
+      "website": "https://www.wpccourses.com/"
+    }
+},
+    {
+      "model": "vbp.vbp_ar",
+      "fields": {
+"directory_source": "The Black Community Shoppe",
+      "business_name": "Washington Barber College",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "education",
+      "subcategory": "Tutoring/Academic Planning",
+      "city": "Little Rock",
+      "phone": "(501) 568-8800",
+      "website": "https://washingtonbarbercollege.edu/"
+    }
+},
+    {
+      "model": "vbp.vbp_ar",
+      "fields": {
+"directory_source": "Rank Tribe",
+      "business_name": "University of Arkansas at Pine Bluff",
+      "owner_name": "",
+      "owner_email": "webadmin@uapb.edu",
+      "category": "education",
+      "subcategory": "Enrichment",
+      "city": "Pine Bluff",
+      "phone": "(870) 575-8000",
+      "website": "http://www.uapb.edu/"
+    }
+},
+    {
+      "model": "vbp.vbp_ar",
+      "fields": {
+"directory_source": "Blocal",
+      "business_name": "Love & Care Home Care Services, LLC",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "eldercare",
+      "subcategory": "Home Health Care/ Nursing",
+      "city": "Jacksonville",
+      "phone": "(501) 291-0886",
+      "website": "https://www.care.com/b/l/love-care-home-care-services-llc/jacksonville-ar"
+    }
+},
+    {
+      "model": "vbp.vbp_ar",
+      "fields": {
+"directory_source": "The Black Community Shoppe",
+      "business_name": "Sondra's Love and Care In-Home Care & Adult Day Care",
+      "owner_name": "LaSondra McDowell",
+      "owner_email": "",
+      "category": "eldercare",
+      "subcategory": "Home Health Care/ Nursing",
+      "city": "Little Rock",
+      "phone": "(501) 562-1988",
+      "website": "https://web.littlerockchamber.com/Adult-Day-Care-Centers/Sondra%27s-Love-and-Care-InHome-Care-and-Adult-Day-Care,-LLC-13605"
+    }
+},
+    {
+      "model": "vbp.vbp_ar",
+      "fields": {
+"directory_source": "Official Black Wallstreet",
+      "business_name": "Keltech Designs",
+      "owner_name": "",
+      "owner_email": "support@keltechdesigns.com",
+      "category": "electronics",
+      "subcategory": "Web Services",
+      "city": "Little Rock",
+      "phone": "(888) 647-6441",
+      "website": "https://keltechdesigns.com/"
+    }
+},
+    {
+      "model": "vbp.vbp_ar",
+      "fields": {
+"directory_source": "Official Black Wallstreet",
+      "business_name": "Pinot's Palette Little Rock",
+      "owner_name": "Lisa Montgomery",
+      "owner_email": "littlerock@pinotspalette.com",
+      "category": "entertainment",
+      "subcategory": "Paint & Sip",
+      "city": "Little Rock",
+      "phone": "(501) 588-1661",
+      "website": "https://www.instagram.com/pinotslittlerock/?hl=en"
+    }
+},
+    {
+      "model": "vbp.vbp_ar",
+      "fields": {
+"directory_source": "Rank Tribe",
+      "business_name": "Bundtz By Rod",
+      "owner_name": "Rod Cross",
+      "owner_email": "",
+      "category": "grocery",
+      "subcategory": "Bakery",
+      "city": "Arkansas",
+      "phone": "(501) 310-8895",
+      "website": "https://www.bundtzbyrod.com/"
+    }
+},
+    {
+      "model": "vbp.vbp_ar",
+      "fields": {
+"directory_source": "Support Black Owned",
+      "business_name": "Familyfishers",
+      "owner_name": "",
+      "owner_email": "familyfishers@familyfishers.com",
+      "category": "grocery",
+      "subcategory": "Food Product/Brand",
+      "city": "Hot Springs",
+      "phone": "(833) 577-1007",
+      "website": "https://www.familyfishers.com/"
+    }
+},
+    {
+      "model": "vbp.vbp_ar",
+      "fields": {
+"directory_source": "Rank Tribe",
+      "business_name": "Bea Blessed Bakery",
+      "owner_name": "",
+      "owner_email": "b.blessed.bakery@gmail.com",
+      "category": "grocery",
+      "subcategory": "Bakery",
+      "city": "Little Rock",
+      "phone": "(501) 372-1555",
+      "website": "https://www.facebook.com/BeaBlessedBakery"
+    }
+},
+    {
+      "model": "vbp.vbp_ar",
+      "fields": {
+"directory_source": "Rank Tribe",
+      "business_name": "Sweets in a Jar",
+      "owner_name": "Kolby McNeal",
+      "owner_email": "",
+      "category": "grocery",
+      "subcategory": "Bakery",
+      "city": "Little Rock",
+      "phone": "(501) 831-6163",
+      "website": "https://sweetsinajar.com/"
+    }
+},
+    {
+      "model": "vbp.vbp_ar",
+      "fields": {
+"directory_source": "The Black Community Shoppe",
+      "business_name": "House Catering Service",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "grocery",
+      "subcategory": "Catering/Chef",
+      "city": "Little Rock",
+      "phone": "(501) 541-1713",
+      "website": "http://www.cateringservicelittlerock.com/"
+    }
+},
+    {
+      "model": "vbp.vbp_ar",
+      "fields": {
+"directory_source": "The Black Community Shoppe",
+      "business_name": "Haygood BBQ Food Truck",
+      "owner_name": "",
+      "owner_email": "Haygoodbbq1@gmail.com",
+      "category": "grocery",
+      "subcategory": "Catering/Chef",
+      "city": "Little Rock",
+      "phone": "(501) 570-0095",
+      "website": "http://haygoodbbq.com/"
+    }
+},
+    {
+      "model": "vbp.vbp_ar",
+      "fields": {
+"directory_source": "The Black Community Shoppe",
+      "business_name": "RSVP Catering",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "grocery",
+      "subcategory": "Catering/Chef",
+      "city": "Little Rock",
+      "phone": "(501) 225-9594",
+      "website": "http://www.rsvpcatering-ar.com/"
+    }
+},
+    {
+      "model": "vbp.vbp_ar",
+      "fields": {
+"directory_source": "The Black Community Shoppe",
+      "business_name": "Chatz Cafe Smoked Meats & Catering",
+      "owner_name": "Chef Chatz",
+      "owner_email": "chef@chatzcafe.com",
+      "category": "grocery",
+      "subcategory": "Catering/Chef",
+      "city": "Little Rock",
+      "phone": "(501) 562-4949",
+      "website": "https://www.chatzcafe.com/"
+    }
+},
+    {
+      "model": "vbp.vbp_ar",
+      "fields": {
+"directory_source": "National Black Guide",
+      "business_name": "Bryant's BBQ Food Truck & Catering",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "grocery",
+      "subcategory": "Catering/Chef",
+      "city": "Little Rock",
+      "phone": "(501) 650-2839",
+      "website": "http://www.bryantsbbq.net/"
+    }
+},
+    {
+      "model": "vbp.vbp_ar",
+      "fields": {
+"directory_source": "National Black Guide",
+      "business_name": "The Grind Coffee Bistro",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "grocery",
+      "subcategory": "Coffee/ Tea/ Beverage",
+      "city": "Little Rock",
+      "phone": "(501) 476-7511",
+      "website": "https://the-grind-coffee-bistro.business.site/"
+    }
+},
+    {
+      "model": "vbp.vbp_ar",
+      "fields": {
+"directory_source": "Rank Tribe",
+      "business_name": "360Fit Nutrition",
+      "owner_name": "",
+      "owner_email": "360fitnutrition@gmail.com",
+      "category": "grocery",
+      "subcategory": "Coffee/ Tea/ Beverage",
+      "city": "Little Rock",
+      "phone": "(501) 916-2202",
+      "website": "https://360fit-nutrition.business.site/"
+    }
+},
+    {
+      "model": "vbp.vbp_ar",
+      "fields": {
+"directory_source": "The Black Community Shoppe",
+      "business_name": "Sandra Rose Kitchen",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "grocery",
+      "subcategory": "Food Product/Brand",
+      "city": "Little Rock",
+      "phone": "(501) 553-8569",
+      "website": "https://www.sandrarosekitchen.com/"
+    }
+},
+    {
+      "model": "vbp.vbp_ar",
+      "fields": {
+"directory_source": "The Black Community Shoppe",
+      "business_name": "Eden Salt Studio",
+      "owner_name": "",
+      "owner_email": "info@edensaltstudio.com",
+      "category": "health",
+      "subcategory": "Fitness/ Yoga",
+      "city": "Little Rock",
+      "phone": "(501) 563-3683",
+      "website": "https://edensaltstudio.com/"
+    }
+},
+    {
+      "model": "vbp.vbp_ar",
+      "fields": {
+"directory_source": "The Black Community Shoppe",
+      "business_name": "365 Yoga Dream",
+      "owner_name": "Sarah Pilcher",
+      "owner_email": "",
+      "category": "health",
+      "subcategory": "Fitness/ Yoga",
+      "city": "Little Rock",
+      "phone": "",
+      "website": "http://www.365yogadream.com/"
+    }
+},
+    {
+      "model": "vbp.vbp_ar",
+      "fields": {
+"directory_source": "The Black Community Shoppe",
+      "business_name": "REPS Training",
+      "owner_name": "Quen Spencer",
+      "owner_email": "info@corewellnessusa.com",
+      "category": "health",
+      "subcategory": "Fitness/ Yoga",
+      "city": "Little Rock",
+      "phone": "(501) 399-4070",
+      "website": "http://repsfitnation.com/"
+    }
+},
+    {
+      "model": "vbp.vbp_ar",
+      "fields": {
+"directory_source": "The Black Community Shoppe",
+      "business_name": "WOW Fitness",
+      "owner_name": "",
+      "owner_email": "kameelah@wow-fitness.com",
+      "category": "health",
+      "subcategory": "Fitness/ Yoga",
+      "city": "Little Rock",
+      "phone": "(501) 240-2773",
+      "website": "https://www.wow-fitness.com/"
+    }
+},
+    {
+      "model": "vbp.vbp_ar",
+      "fields": {
+"directory_source": "The Black Community Shoppe",
+      "business_name": "River Market Boot Camp: Bodies by Bashay",
+      "owner_name": "",
+      "owner_email": "rivermarketbootcamp@gmail.com",
+      "category": "health",
+      "subcategory": "Fitness/ Yoga",
+      "city": "Little Rock",
+      "phone": "(501) 786-3534",
+      "website": "http://www.bodiesbybashay.com/"
+    }
+},
+    {
+      "model": "vbp.vbp_ar",
+      "fields": {
+"directory_source": "Navigate Black",
+      "business_name": "Eden Salt City",
+      "owner_name": "Tori Jones",
+      "owner_email": "info@edensaltstudio.com",
+      "category": "health",
+      "subcategory": "Fitness/ Yoga",
+      "city": "Little Rock",
+      "phone": "(501) 563-3683",
+      "website": "https://edensaltstudio.com/"
+    }
+},
+    {
+      "model": "vbp.vbp_ar",
+      "fields": {
+"directory_source": "The Black Community Shoppe",
+      "business_name": "Passion Unlimited Counseling & Consulting",
+      "owner_name": "Christina Hopson",
+      "owner_email": "Admin@passionunlimitedllc.com",
+      "category": "health",
+      "subcategory": "Mental Health Support",
+      "city": "Little Rock",
+      "phone": "(501) 825-0189",
+      "website": "https://www.passionunlimitedllc.com/"
+    }
+},
+    {
+      "model": "vbp.vbp_ar",
+      "fields": {
+"directory_source": "Support Black Owned",
+      "business_name": "Arkansas Relationship Counseling Center",
+      "owner_name": "Charlie Simpson",
+      "owner_email": "",
+      "category": "health",
+      "subcategory": "Mental Health Support",
+      "city": "Little Rock",
+      "phone": "(501) 421-3463",
+      "website": "https://www.arkansasrelationshipcenter.com/"
+    }
+},
+    {
+      "model": "vbp.vbp_ar",
+      "fields": {
+"directory_source": "I Am Black Business",
+      "business_name": "Jonesboro Bathtub Refinishing",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "home",
+      "subcategory": "Interior Design/ Home Stage",
+      "city": "Jonesboro",
+      "phone": "(870) 251-8931",
+      "website": "https://www.bathtubrefinishingjonesboro.com/"
+    }
+},
+    {
+      "model": "vbp.vbp_ar",
+      "fields": {
+"directory_source": "The Black Community Shoppe",
+      "business_name": "Norris Furniture",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "home",
+      "subcategory": "Furniture",
+      "city": "Little Rock",
+      "phone": "",
+      "website": "http://norrisfurniturelr.com/"
+    }
+},
+    {
+      "model": "vbp.vbp_ar",
+      "fields": {
+"directory_source": "Blackout Coalition",
+      "business_name": "OneUnited Bank",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "legal",
+      "subcategory": "Financial Services",
+      "city": "Arkansas",
+      "phone": "(877) 663-8648",
+      "website": "https://www.oneunited.com/"
+    }
+},
+    {
+      "model": "vbp.vbp_ar",
+      "fields": {
+"directory_source": "Blackout Coalition",
+      "business_name": "Hope Credit Union",
+      "owner_name": "William J. Bynum",
+      "owner_email": "",
+      "category": "legal",
+      "subcategory": "Financial Services",
+      "city": "College Station",
+      "phone": "1 (877) 214-4673",
+      "website": "https://hopecu.org/"
+    }
+},
+    {
+      "model": "vbp.vbp_ar",
+      "fields": {
+"directory_source": "Blackout Coalition",
+      "business_name": "Hope Credit Union",
+      "owner_name": "William J. Bynum",
+      "owner_email": "",
+      "category": "legal",
+      "subcategory": "Financial Services",
+      "city": "Little Rock",
+      "phone": "(877) 214-4673",
+      "website": "https://hopecu.org/"
+    }
+},
+    {
+      "model": "vbp.vbp_ar",
+      "fields": {
+"directory_source": "Official Black Wallstreet",
+      "business_name": "Insurance Pros of Central Arkansas",
+      "owner_name": "Ebonee Hillery",
+      "owner_email": "lwashington@insuranceprosar.com",
+      "category": "legal",
+      "subcategory": "Insurance",
+      "city": "Little Rock",
+      "phone": "(501) 801-7767",
+      "website": "https://www.insuranceprosar.com/"
+    }
+},
+    {
+      "model": "vbp.vbp_ar",
+      "fields": {
+"directory_source": "Support Black Owned",
+      "business_name": "The Lewis Financial Group - Authorized Progressive Insurance Agent",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "legal",
+      "subcategory": "Insurance",
+      "city": "Little Rock",
+      "phone": "(501) 613-0465",
+      "website": "https://www.facebook.com/rglewislittlerockagent/"
+    }
+},
+    {
+      "model": "vbp.vbp_ar",
+      "fields": {
+"directory_source": "Blocal",
+      "business_name": "Bobby Fairrow Agency",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "legal",
+      "subcategory": "Insurance",
+      "city": "North Little Rock",
+      "phone": "(501) 551-6825",
+      "website": "https://agents.farmers.com/ar/sherwood/bobby-fairrow"
+    }
+},
+    {
+      "model": "vbp.vbp_ar",
+      "fields": {
+"directory_source": "Blackout Coalition",
+      "business_name": "Hope Credit Union",
+      "owner_name": "William J. Bynum",
+      "owner_email": "",
+      "category": "legal",
+      "subcategory": "Financial Services",
+      "city": "Pine Bluff",
+      "phone": "(877) 214-4673",
+      "website": "https://hopecu.org/"
+    }
+},
+    {
+      "model": "vbp.vbp_ar",
+      "fields": {
+"directory_source": "Blackout Coalition",
+      "business_name": "Hope Credit Union",
+      "owner_name": "William J. Bynum",
+      "owner_email": "",
+      "category": "legal",
+      "subcategory": "Financial Services",
+      "city": "West Memphis",
+      "phone": "(877) 214-4673",
+      "website": "https://hopecu.org/"
+    }
+},
+    {
+      "model": "vbp.vbp_ar",
+      "fields": {
+"directory_source": "National Black Guide",
+      "business_name": "Choice Promotions",
+      "owner_name": "",
+      "owner_email": "choicepromotions1@gmail.com",
+      "category": "marketing",
+      "subcategory": "Advertising",
+      "city": "Little Rock",
+      "phone": "(501) 666-9499",
+      "website": "https://www.choicepromousa.com/"
+    }
+},
+    {
+      "model": "vbp.vbp_ar",
+      "fields": {
+"directory_source": "The Black Community Shoppe",
+      "business_name": "Skyway Design & Media",
+      "owner_name": "",
+      "owner_email": "info@skywaydesign.com",
+      "category": "marketing",
+      "subcategory": "Branding/ Graphic Design",
+      "city": "Little Rock",
+      "phone": "(501) 400-7501",
+      "website": "http://www.skywaydesign.com/"
+    }
+},
+    {
+      "model": "vbp.vbp_ar",
+      "fields": {
+"directory_source": "The Black Community Shoppe",
+      "business_name": "Creative Graphics",
+      "owner_name": "",
+      "owner_email": "gaprint42@yahoo.com",
+      "category": "marketing",
+      "subcategory": "Branding/ Graphic Design",
+      "city": "Little Rock",
+      "phone": "(501) 374-0563",
+      "website": "https://www.creativegraphicsar.com/"
+    }
+},
+    {
+      "model": "vbp.vbp_ar",
+      "fields": {
+"directory_source": "The Black Community Shoppe",
+      "business_name": "Arkansas Diagnostic Center",
+      "owner_name": "Dr. Alonzo D. Williams",
+      "owner_email": "",
+      "category": "medical",
+      "subcategory": "Diagonostic Testing/Lab",
+      "city": "Little Rock",
+      "phone": "(501) 227-7688",
+      "website": "https://www.adcgca.com/"
+    }
+},
+    {
+      "model": "vbp.vbp_ar",
+      "fields": {
+"directory_source": "National Black Guide",
+      "business_name": "MCH Physical Therapy Clinic",
+      "owner_name": "Renee’ Crater",
+      "owner_email": "mch.pt@sbcglobal.net",
+      "category": "medical",
+      "subcategory": "Physical Therapy",
+      "city": "Little Rock",
+      "phone": "(501) 223-8992",
+      "website": "https://mchphysicaltherapy.com/"
+    }
+},
+    {
+      "model": "vbp.vbp_ar",
+      "fields": {
+"directory_source": "Rank Tribe",
+      "business_name": "Gates Chapel AME Church",
+      "owner_name": "",
+      "owner_email": "gateschapelame@outlook.com",
+      "category": "other",
+      "subcategory": "",
+      "city": "Crossett",
+      "phone": "(807) 364-3629",
+      "website": "https://www.facebook.com/gateschapelamechurch/"
+    }
+},
+    {
+      "model": "vbp.vbp_ar",
+      "fields": {
+"directory_source": "Rank Tribe",
+      "business_name": "Campbell Chapel AME Church",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "other",
+      "subcategory": "",
+      "city": "Fort Worth",
+      "phone": "(843) 757-3652",
+      "website": "https://www.facebook.com/pages/category/Religious-Organization/Campbell-Chapel-AME-Church-1672999789640425/"
+    }
+},
+    {
+      "model": "vbp.vbp_ar",
+      "fields": {
+"directory_source": "Rank Tribe",
+      "business_name": "Mt. Canaan Missionary Baptist Church",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "other",
+      "subcategory": "",
+      "city": "Gurdon",
+      "phone": "(870) 353-2144",
+      "website": "https://www.facebook.com/Mt.CanaanBaptistChurchGurdon/"
+    }
+},
+    {
+      "model": "vbp.vbp_ar",
+      "fields": {
+"directory_source": "Rank Tribe",
+      "business_name": "Vistor's Chapel AME Church",
+      "owner_name": "Rev. Charlene N. Boone",
+      "owner_email": "RevCharleneNBoone@gmail.com",
+      "category": "other",
+      "subcategory": "",
+      "city": "Hot Springs",
+      "phone": "(501) 623-2975",
+      "website": "https://www.vcame.org/"
+    }
+},
+    {
+      "model": "vbp.vbp_ar",
+      "fields": {
+"directory_source": "Rank Tribe",
+      "business_name": "Larry G. Acklin Funeral Home",
+      "owner_name": "Larry G. Acklin",
+      "owner_email": "",
+      "category": "other",
+      "subcategory": "Mortuary/ Funeral Services",
+      "city": "Little Rock",
+      "phone": "(501) 565-1800",
+      "website": "https://www.larrygacklinfuneralhomes.com/"
+    }
+},
+    {
+      "model": "vbp.vbp_ar",
+      "fields": {
+"directory_source": "The Black Community Shoppe",
+      "business_name": "The Printed Word",
+      "owner_name": "Evelyn Elizabeth Hughes-Bass",
+      "owner_email": "info@theprintedwordinspiration.com",
+      "category": "other",
+      "subcategory": "",
+      "city": "Little Rock",
+      "phone": "(501) 772-6369",
+      "website": "https://testing.theprintedwordinspiration.com/"
+    }
+},
+    {
+      "model": "vbp.vbp_ar",
+      "fields": {
+"directory_source": "The Black Community Shoppe",
+      "business_name": "Better Community Development",
+      "owner_name": "Rev William H Robinson",
+      "owner_email": "bcdinc@bcdinc.org",
+      "category": "other",
+      "subcategory": "",
+      "city": "Little Rock",
+      "phone": "(501) 663-7223",
+      "website": "http://bcdinc.org/"
+    }
+},
+    {
+      "model": "vbp.vbp_ar",
+      "fields": {
+"directory_source": "The Black Community Shoppe",
+      "business_name": "The House of Mental Eatery",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "other",
+      "subcategory": "",
+      "city": "Little Rock",
+      "phone": "(501) 454-1493",
+      "website": "https://www.facebook.com/TheHouseofMental/"
+    }
+},
+    {
+      "model": "vbp.vbp_ar",
+      "fields": {
+"directory_source": "The Black Community Shoppe",
+      "business_name": "Meme Twisted Potato",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "other",
+      "subcategory": "",
+      "city": "Little Rock",
+      "phone": "(501) 960-0499",
+      "website": "http://www.memestwistedpotato.com/"
+    }
+},
+    {
+      "model": "vbp.vbp_ar",
+      "fields": {
+"directory_source": "The Black Community Shoppe",
+      "business_name": "The Veg",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "other",
+      "subcategory": "",
+      "city": "Little Rock",
+      "phone": "(501) 838-3634",
+      "website": "https://www.facebook.com/theveglr/"
+    }
+},
+    {
+      "model": "vbp.vbp_ar",
+      "fields": {
+"directory_source": "National Black Guide",
+      "business_name": "Honee Glitz Salon & Spa",
+      "owner_name": "",
+      "owner_email": "Honeeglitz@gmail.com",
+      "category": "other",
+      "subcategory": "",
+      "city": "Little Rock",
+      "phone": "(501) 650-9755",
+      "website": "https://www.honeeglitz.com/"
+    }
+},
+    {
+      "model": "vbp.vbp_ar",
+      "fields": {
+"directory_source": "Rank Tribe",
+      "business_name": "Holly Grove AME Church",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "other",
+      "subcategory": "",
+      "city": "Little Rock",
+      "phone": "(501) 835-2391",
+      "website": "https://m.facebook.com/profile.php?id=118104334883294&__tn__=C-R"
+    }
+},
+    {
+      "model": "vbp.vbp_ar",
+      "fields": {
+"directory_source": "Rank Tribe",
+      "business_name": "Ward Chapel AME Church",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "other",
+      "subcategory": "",
+      "city": "Little Rock",
+      "phone": "(501) 373-6832",
+      "website": "https://www.facebook.com/pages/category/African-Methodist-Episcopal-Church/Ward-Chapel-AME-Church-Little-Rock-102687408109818/"
+    }
+},
+    {
+      "model": "vbp.vbp_ar",
+      "fields": {
+"directory_source": "Rank Tribe",
+      "business_name": "The House of Mental",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "other",
+      "subcategory": "",
+      "city": "Little Rock",
+      "phone": "(501) 454-1493",
+      "website": "https://www.facebook.com/TheHouseofMental/"
+    }
+},
+    {
+      "model": "vbp.vbp_ar",
+      "fields": {
+"directory_source": "Rank Tribe",
+      "business_name": "Connor Chapel AME Church",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "other",
+      "subcategory": "",
+      "city": "Little Rock",
+      "phone": "(501) 955-2304",
+      "website": "https://www.facebook.com/Connor-Chapel-AME-Church-112172360441502/"
+    }
+},
+    {
+      "model": "vbp.vbp_ar",
+      "fields": {
+"directory_source": "Rank Tribe",
+      "business_name": "MeMe's Twisted Potato",
+      "owner_name": "",
+      "owner_email": "memestwistedpotato@gmail.com",
+      "category": "other",
+      "subcategory": "",
+      "city": "Little Rock",
+      "phone": "(501) 960-0499",
+      "website": "http://www.memestwistedpotato.com/"
+    }
+},
+    {
+      "model": "vbp.vbp_ar",
+      "fields": {
+"directory_source": "Rank Tribe",
+      "business_name": "Community AME Church",
+      "owner_name": "",
+      "owner_email": "communityamec@gmail.com",
+      "category": "other",
+      "subcategory": "",
+      "city": "Little Rock",
+      "phone": "(870) 578-0102",
+      "website": "https://www.facebook.com/community.hghq.ame/"
+    }
+},
+    {
+      "model": "vbp.vbp_ar",
+      "fields": {
+"directory_source": "National Black Guide",
+      "business_name": "BizTek Connection",
+      "owner_name": "Daron Plummer Jr.",
+      "owner_email": "info@biztekconnection.com",
+      "category": "other",
+      "subcategory": "",
+      "city": "North Little Rock",
+      "phone": "(501) 542-4241",
+      "website": "https://biztekconnection.com/"
+    }
+},
+    {
+      "model": "vbp.vbp_ar",
+      "fields": {
+"directory_source": "Rank Tribe",
+      "business_name": "Riverview AME Church",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "other",
+      "subcategory": "",
+      "city": "North Little Rock",
+      "phone": "",
+      "website": "https://www.facebook.com/pg/Connor-Chapel-AME-Church-112172360441502/posts/"
+    }
+},
+    {
+      "model": "vbp.vbp_ar",
+      "fields": {
+"directory_source": "Rank Tribe",
+      "business_name": "Allen Temple AME Church",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "other",
+      "subcategory": "",
+      "city": "Pine Bluff",
+      "phone": "(870) 534-5306",
+      "website": "https://www.faithstreet.com/church/allen-temple-a-dot-m-e-church-pine-bluff-ar"
+    }
+},
+    {
+      "model": "vbp.vbp_ar",
+      "fields": {
+"directory_source": "Rank Tribe",
+      "business_name": "Beech Hill A.M.E. Church",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "other",
+      "subcategory": "",
+      "city": "Stephens",
+      "phone": "(870) 887-3344",
+      "website": "https://www.faithstreet.com/church/beech-hill-a-dot-m-e-church-stephens-ar"
+    }
+},
+    {
+      "model": "vbp.vbp_ar",
+      "fields": {
+"directory_source": "The Black Community Shoppe",
+      "business_name": "Classie Photography",
+      "owner_name": "Classie Ehrhard",
+      "owner_email": "classie@classiephotography.net",
+      "category": "photography",
+      "subcategory": "Photography",
+      "city": "Little Rock",
+      "phone": "(501) 588-7662",
+      "website": "http://classiephotography.com/"
+    }
+},
+    {
+      "model": "vbp.vbp_ar",
+      "fields": {
+"directory_source": "The Black Community Shoppe",
+      "business_name": "Ask Victoria Automotive Consultant",
+      "owner_name": "Victoria",
+      "owner_email": "",
+      "category": "professional",
+      "subcategory": "Consulting",
+      "city": "Little Rock",
+      "phone": "",
+      "website": "https://askvictoria.net/"
+    }
+},
+    {
+      "model": "vbp.vbp_ar",
+      "fields": {
+"directory_source": "National Black Guide",
+      "business_name": "Ask Victoria Automotive Consultant",
+      "owner_name": "Victoria (missing last name)",
+      "owner_email": "victoria@askvictoria.net",
+      "category": "professional",
+      "subcategory": "Consulting",
+      "city": "Little Rock",
+      "phone": "",
+      "website": "https://askvictoria.net/"
+    }
+},
+    {
+      "model": "vbp.vbp_ar",
+      "fields": {
+"directory_source": "The Black Community Shoppe",
+      "business_name": "The Midas Real Estate Group",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "realestate",
+      "subcategory": "Real Estate Agents/Brokers",
+      "city": "Little Rock",
+      "phone": "(501) 313-2899",
+      "website": "https://the-midas-real-estate-group-llc.business.site/"
+    }
+},
+    {
+      "model": "vbp.vbp_ar",
+      "fields": {
+"directory_source": "The Black Community Shoppe",
+      "business_name": "NewG III Realty",
+      "owner_name": "Gwendolyn Parker",
+      "owner_email": "",
+      "category": "realestate",
+      "subcategory": "Real Estate Agents/Brokers",
+      "city": "Little Rock",
+      "phone": "",
+      "website": "https://www.newg3realty.com/"
+    }
+},
+    {
+      "model": "vbp.vbp_ar",
+      "fields": {
+"directory_source": "Support Black Owned",
+      "business_name": "Dragon Shogun Dojo - Central Arkansas",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "recreation",
+      "subcategory": "Martial Arts",
+      "city": "Benton",
+      "phone": "(501) 246-9304",
+      "website": "https://shogunar.wordpress.com/"
+    }
+},
+    {
+      "model": "vbp.vbp_ar",
+      "fields": {
+"directory_source": "The Black Community Shoppe",
+      "business_name": "The Allstar Gym",
+      "owner_name": "Coach Tiffany",
+      "owner_email": "theallstargym@yahoo.com",
+      "category": "recreation",
+      "subcategory": "Sports",
+      "city": "Little Rock",
+      "phone": "(501) 703-3307",
+      "website": "https://www.asgstarz.com/"
+    }
+},
+    {
+      "model": "vbp.vbp_ar",
+      "fields": {
+"directory_source": "Rank Tribe",
+      "business_name": "Rock City taco + Margarita Bar",
+      "owner_name": "",
+      "owner_email": "info@rockcitytaco.com",
+      "category": "restaurants",
+      "subcategory": "Bar/Night Club",
+      "city": "Little Rick",
+      "phone": "(501) 837-9094",
+      "website": "https://www.rockcitytaco.com/"
+    }
+},
+    {
+      "model": "vbp.vbp_ar",
+      "fields": {
+"directory_source": "The Black Community Shoppe",
+      "business_name": "The Wing Shack Bar and Grill",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "restaurants",
+      "subcategory": "BBQ/Soul Food Restaurant",
+      "city": "Little Rock",
+      "phone": "(501) 219-7189",
+      "website": "https://www.facebook.com/thewingshackbarandgrill/"
+    }
+},
+    {
+      "model": "vbp.vbp_ar",
+      "fields": {
+"directory_source": "The Black Community Shoppe",
+      "business_name": "Too Sweet Bar and Grill",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "restaurants",
+      "subcategory": "BBQ/Soul Food Restaurant",
+      "city": "Little Rock",
+      "phone": "(501) 568-7797",
+      "website": "https://www.toosweetbarandgrill.com/"
+    }
+},
+    {
+      "model": "vbp.vbp_ar",
+      "fields": {
+"directory_source": "The Black Community Shoppe",
+      "business_name": "Lassis Inn",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "restaurants",
+      "subcategory": "BBQ/Soul Food Restaurant",
+      "city": "Little Rock",
+      "phone": "(501) 372-8714",
+      "website": "https://www.littlerock.com/little-rock-destinations/lassis-inn"
+    }
+},
+    {
+      "model": "vbp.vbp_ar",
+      "fields": {
+"directory_source": "The Black Community Shoppe",
+      "business_name": "JPauls Express",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "restaurants",
+      "subcategory": "BBQ/Soul Food Restaurant",
+      "city": "Little Rock",
+      "phone": "(501) 747-1551",
+      "website": "https://restaurantjump.com/j-pauls-express-72206/"
+    }
+},
+    {
+      "model": "vbp.vbp_ar",
+      "fields": {
+"directory_source": "The Black Community Shoppe",
+      "business_name": "Wings Take Out",
+      "owner_name": "",
+      "owner_email": "wingtakeout@gmail.com",
+      "category": "restaurants",
+      "subcategory": "BBQ/Soul Food Restaurant",
+      "city": "Little Rock",
+      "phone": "(501) 747-2128",
+      "website": "https://wingstakeoutlr.com/"
+    }
+},
+    {
+      "model": "vbp.vbp_ar",
+      "fields": {
+"directory_source": "The Black Community Shoppe",
+      "business_name": "Sims Bar-B-Que",
+      "owner_name": "Ron Settlers",
+      "owner_email": "",
+      "category": "restaurants",
+      "subcategory": "BBQ/Soul Food Restaurant",
+      "city": "Little Rock",
+      "phone": "(501) 372-6868",
+      "website": "http://simsbbqar.com/"
+    }
+},
+    {
+      "model": "vbp.vbp_ar",
+      "fields": {
+"directory_source": "National Black Guide",
+      "business_name": "Platnum BBQ",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "restaurants",
+      "subcategory": "BBQ/Soul Food Restaurant",
+      "city": "Little Rock",
+      "phone": "(501) 457-3128",
+      "website": "https://platnumbbq.com/"
+    }
+},
+    {
+      "model": "vbp.vbp_ar",
+      "fields": {
+"directory_source": "National Black Guide",
+      "business_name": "Flints Just Like Mom",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "restaurants",
+      "subcategory": "BBQ/Soul Food Restaurant",
+      "city": "Little Rock",
+      "phone": "(501) 500-1300",
+      "website": "https://www.facebook.com/FlintsFood/"
+    }
+},
+    {
+      "model": "vbp.vbp_ar",
+      "fields": {
+"directory_source": "The Black Community Shoppe",
+      "business_name": "Jackie's Mobile Cafe",
+      "owner_name": "Ms. Jackie",
+      "owner_email": "info@jackiesmobilecafe.com",
+      "category": "restaurants",
+      "subcategory": "Cafe",
+      "city": "Little Rock",
+      "phone": "(501) 838-6167",
+      "website": "https://msjackiescafe.com/"
+    }
+},
+    {
+      "model": "vbp.vbp_ar",
+      "fields": {
+"directory_source": "The Black Community Shoppe",
+      "business_name": "The So Full Cafe",
+      "owner_name": "",
+      "owner_email": "info@sofullcafe.com",
+      "category": "restaurants",
+      "subcategory": "Cafe",
+      "city": "Little Rock",
+      "phone": "(501) 631-1797",
+      "website": "https://sofullcafe.com/"
+    }
+},
+    {
+      "model": "vbp.vbp_ar",
+      "fields": {
+"directory_source": "The Black Community Shoppe",
+      "business_name": "Yeh Mon",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "restaurants",
+      "subcategory": "Caribbean Restaurant",
+      "city": "Little Rock",
+      "phone": "(501) 246-4912",
+      "website": "https://www.yehmonrestaurant.com/"
+    }
+},
+    {
+      "model": "vbp.vbp_ar",
+      "fields": {
+"directory_source": "The Black Community Shoppe",
+      "business_name": "Philly Phresh Water Ice",
+      "owner_name": "",
+      "owner_email": "phillyphreshwaterice@gmail.com",
+      "category": "restaurants",
+      "subcategory": "Food Trucks/ Carts",
+      "city": "Little Rock",
+      "phone": "",
+      "website": "https://www.facebook.com/PhillyPhreshice/"
+    }
+},
+    {
+      "model": "vbp.vbp_ar",
+      "fields": {
+"directory_source": "The Black Community Shoppe",
+      "business_name": "The Food Truck Stop @ Station 801",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "restaurants",
+      "subcategory": "Food Trucks/ Carts",
+      "city": "Little Rock",
+      "phone": "(501) 247-6132",
+      "website": "https://lrstation801.com/"
+    }
+},
+    {
+      "model": "vbp.vbp_ar",
+      "fields": {
+"directory_source": "Rank Tribe",
+      "business_name": "Kontiki African Restuarant",
+      "owner_name": "",
+      "owner_email": "kontikikitchen@gmail.com",
+      "category": "restaurants",
+      "subcategory": "West African Restaurant",
+      "city": "Little Rock",
+      "phone": "(501) 615-8504",
+      "website": "https://www.facebook.com/kontikikitchen/"
+    }
+},
+    {
+      "model": "vbp.vbp_ar",
+      "fields": {
+"directory_source": "Official Black Wallstreet",
+      "business_name": "DeJacks Delights",
+      "owner_name": "",
+      "owner_email": "dejacksdelightscatering@yahoo.com",
+      "category": "restaurants",
+      "subcategory": "BBQ/Soul Food Restaurant",
+      "city": "Mabelvale",
+      "phone": "(501) 944-3321",
+      "website": "https://www.facebook.com/DenTip0117/"
+    }
+},
+    {
+      "model": "vbp.vbp_ar",
+      "fields": {
+"directory_source": "Support Black Owned",
+      "business_name": "Jones Bar-B-B-Q Diner",
+      "owner_name": "The Jones Family",
+      "owner_email": "",
+      "category": "restaurants",
+      "subcategory": "BBQ/Soul Food Restaurant",
+      "city": "Marianna",
+      "phone": "(870) 295-3807",
+      "website": "https://www.facebook.com/JonesBarBQDiner/"
+    }
+},
+    {
+      "model": "vbp.vbp_ar",
+      "fields": {
+"directory_source": "Rank Tribe",
+      "business_name": "Daddys Smackin Wings and Things",
+      "owner_name": "Robert Nolan Owens",
+      "owner_email": "",
+      "category": "restaurants",
+      "subcategory": "BBQ/Soul Food Restaurant",
+      "city": "Russellville",
+      "phone": "(720) 646-4917",
+      "website": "https://smackinwings.com/"
+    }
+},
+    {
+      "model": "vbp.vbp_ar",
+      "fields": {
+"directory_source": "The Black Community Shoppe",
+      "business_name": "Lo Lo's Chicken & Waffles",
+      "owner_name": "Larry White",
+      "owner_email": "",
+      "category": "restaurants",
+      "subcategory": "BBQ/Soul Food Restaurant",
+      "city": "Scottsdale",
+      "phone": "(480) 207-6173",
+      "website": "https://loloschickenandwaffles.com/locations/"
+    }
+},
+    {
+      "model": "vbp.vbp_ar",
+      "fields": {
+"directory_source": "The Black Community Shoppe",
+      "business_name": "Hearne Fine Art",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "visual",
+      "subcategory": "Art Gallery/ Museum",
+      "city": "Little Rock",
+      "phone": "(501) 372-6822",
+      "website": "https://hearnefineart.com/"
+    }
+},
+    {
+      "model": "vbp.vbp_ar",
+      "fields": {
+"directory_source": "Rank Tribe",
+      "business_name": "Pyramid Art Books & Custom Framing",
+      "owner_name": "",
+      "owner_email": "pyramidartbooks@gmail.com",
+      "category": "visual",
+      "subcategory": "Art Gallery/ Museum",
+      "city": "Little Rock",
+      "phone": "(572) 372-6822",
+      "website": "https://www.pyramid1988.com/"
+    }
+  }
+  ]

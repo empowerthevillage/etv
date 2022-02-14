@@ -122,12 +122,16 @@
                               <p class="ticket-description">Empower ETV to restore prosperity, peace, and power to the Black community!</p>
                               
                           </td>
-                          <td class="col s4 m3">
-                              <div class="input-field">
-                                  <input type="text" id="custom-donation-1" placeholder="$">
-                                  <label for="custom-donation-1">Enter Amount</label>
+                          <td class="col s4">
+                            <div class="input-field">
+                                <input type="text" id="custom-donation-1" placeholder="$">
+                                <label for="custom-donation-1">Enter Amount</label>
+                                
                               </div>
-                          </td>
+                        </td>
+                        <td class="col s7" id="donation-add">
+                          <div class="btn hidden grey darken-4" id="custom-donation-add">Add to Cart</div>
+                        </td>
                       </tr>
                     </tbody>
                 </table>
@@ -840,6 +844,13 @@
 </div>
 
 <style>
+  #donation-add {
+    height: 79px;
+    padding-bottom: 0 !important;
+    display: flex;
+    align-items: center;
+    margin-left: 20px
+  }
     .summary-card {
       background: white
     }
@@ -1039,6 +1050,34 @@
     }
 </style>
 <script>
+  var $input = $('#custom-donation-1');
+  $input.on('keyup', function () {
+    $('#custom-donation-add').removeClass('hidden')
+  });
+  $('#donation-add').on('click', function(){
+    var data = {
+      'amount': $("#custom-donation-1").val(),
+      'event': 'Power Swing Classic Golf Event',
+      csrfmiddlewaretoken: '{{ csrf_token }}'
+    }
+    $.ajax({
+            data: data,
+            url: '/events/ticket-donation-update-cart/',
+            method: 'POST',
+            success: function(data){
+                var price = data.price
+                var quantity = data.quantity
+              
+                $('.summary-table-body').append('<tr class="product-row '+ data.pk +'-row"><td class="product-summary"> Custom Donation </td><td class="product-summary-price '+ data.pk + '-price">'+ data.price +'</td><td class="product-summary-quantity center-align '+ data.pk +'-quantity"> 1</td></tr>')
+     
+                var total = data.total
+                $('.total-line').html(total)
+                $('#guest-form').load()
+                },
+                error: function(data){
+                }
+          })
+  })
     $('#custom-donation-1').maskMoney({prefix:'$ '})
     $('.qty-counter').on('change', function(){
         var qty = $(this).val()

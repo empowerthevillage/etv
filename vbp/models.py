@@ -118,6 +118,7 @@ class vbpManager(models.Manager):
         return super().get_queryset().filter(approved=False)
 
 class vbp(models.Model):
+    directory_source  = models.CharField(max_length=200, null=True, blank=True)
     business_name    = models.CharField(max_length=200)
     website          = models.URLField(blank=True, max_length=500, null=True)
     instagram        = models.URLField(blank=True, null=True, max_length=200)
@@ -134,6 +135,7 @@ class vbp(models.Model):
     nominator_owner  = models.BooleanField(default=False, blank=True, null=True)
     nominator_recommended  = models.BooleanField(default=False, blank=True, null=True)    
     owner_name   = models.CharField(max_length=300, blank=True, null=True)
+    owner_email   = models.EmailField(blank=True, null=True)
     approved         = models.BooleanField(default=False, null=True)
     created          = models.DateTimeField(auto_now_add=True, blank=True, null=True)
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
@@ -169,6 +171,7 @@ class vbp_book(models.Model):
         verbose_name_plural = 'Books'
 
 class vbp_al(models.Model):
+    directory_source  = models.CharField(max_length=200, null=True, blank=True)
     business_name    = models.CharField(max_length=200)
     website          = models.URLField(blank=True, max_length=500, null=True)
     instagram        = models.URLField(blank=True, null=True, max_length=200)
@@ -185,6 +188,7 @@ class vbp_al(models.Model):
     nominator_owner  = models.BooleanField(default=False, blank=True, null=True)
     nominator_recommended  = models.BooleanField(default=False, blank=True, null=True)    
     owner_name   = models.CharField(max_length=300, blank=True, null=True)
+    owner_email   = models.EmailField(blank=True, null=True)
     approved         = models.BooleanField(default=False, null=True)
     created          = models.DateTimeField(auto_now_add=True, blank=True, null=True)
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
@@ -202,6 +206,7 @@ class vbp_al(models.Model):
         verbose_name_plural = 'Alabama Listings'
 
 class vbp_ak(models.Model):
+    directory_source  = models.CharField(max_length=200, null=True, blank=True)
     business_name    = models.CharField(max_length=200)
     website          = models.URLField(blank=True, max_length=500, null=True)
     instagram        = models.URLField(blank=True, null=True, max_length=200)
@@ -218,6 +223,7 @@ class vbp_ak(models.Model):
     nominator_owner  = models.BooleanField(default=False, blank=True, null=True)
     nominator_recommended  = models.BooleanField(default=False, blank=True, null=True)   
     owner_name   = models.CharField(max_length=300, blank=True, null=True)
+    owner_email   = models.EmailField(blank=True, null=True)
     approved         = models.BooleanField(default=False, null=True)
     created          = models.DateTimeField(auto_now_add=True, blank=True, null=True)
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
@@ -235,6 +241,7 @@ class vbp_ak(models.Model):
         verbose_name_plural = 'Alaska Listings'
 
 class vbp_az(models.Model):
+    directory_source  = models.CharField(max_length=200, null=True, blank=True)
     business_name    = models.CharField(max_length=200)
     website          = models.URLField(blank=True, max_length=500, null=True)
     instagram        = models.URLField(blank=True, null=True, max_length=200)
@@ -251,6 +258,7 @@ class vbp_az(models.Model):
     nominator_owner  = models.BooleanField(default=False, blank=True, null=True)
     nominator_recommended  = models.BooleanField(default=False, blank=True, null=True)   
     owner_name   = models.CharField(max_length=300, blank=True, null=True)
+    owner_email   = models.EmailField(blank=True, null=True)
     approved         = models.BooleanField(default=False, null=True)
     created          = models.DateTimeField(auto_now_add=True, blank=True, null=True)
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
@@ -268,6 +276,7 @@ class vbp_az(models.Model):
         verbose_name_plural = 'Arizona Listings'
 
 class vbp_ar(models.Model):
+    directory_source  = models.CharField(max_length=200, null=True, blank=True)
     business_name    = models.CharField(max_length=200)
     website          = models.URLField(blank=True, max_length=500, null=True)
     instagram        = models.URLField(blank=True, null=True, max_length=200)
@@ -284,6 +293,7 @@ class vbp_ar(models.Model):
     nominator_owner  = models.BooleanField(default=False, blank=True, null=True)
     nominator_recommended  = models.BooleanField(default=False, blank=True, null=True)  
     owner_name   = models.CharField(max_length=300, blank=True, null=True)
+    owner_email   = models.EmailField(blank=True, null=True)
     approved         = models.BooleanField(default=False, null=True)
     created          = models.DateTimeField(auto_now_add=True, blank=True, null=True)
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
@@ -301,6 +311,7 @@ class vbp_ar(models.Model):
         verbose_name_plural = 'Arkansas Listings'
 
 class vbp_ca(models.Model):
+    directory_source  = models.CharField(max_length=200, null=True, blank=True)
     business_name    = models.CharField(max_length=200)
     website          = models.URLField(blank=True, max_length=500, null=True)
     instagram        = models.URLField(blank=True, null=True, max_length=200)
@@ -317,6 +328,7 @@ class vbp_ca(models.Model):
     nominator_owner  = models.BooleanField(default=False, blank=True, null=True)
     nominator_recommended  = models.BooleanField(default=False, blank=True, null=True)    
     owner_name   = models.CharField(max_length=300, blank=True, null=True)
+    owner_email   = models.EmailField(blank=True, null=True)
     approved         = models.BooleanField(default=False, null=True)
     created          = models.DateTimeField(auto_now_add=True, blank=True, null=True)
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
@@ -334,6 +346,7 @@ class vbp_ca(models.Model):
         verbose_name_plural = 'California Listings'
 
 class vbp_co(models.Model):
+    directory_source  = models.CharField(max_length=200, null=True, blank=True)
     business_name    = models.CharField(max_length=200)
     website          = models.URLField(blank=True, max_length=500, null=True)
     instagram        = models.URLField(blank=True, null=True, max_length=200)
@@ -350,6 +363,7 @@ class vbp_co(models.Model):
     nominator_owner  = models.BooleanField(default=False, blank=True, null=True)
     nominator_recommended  = models.BooleanField(default=False, blank=True, null=True)    
     owner_name   = models.CharField(max_length=300, blank=True, null=True)
+    owner_email   = models.EmailField(blank=True, null=True)
     approved         = models.BooleanField(default=False, null=True)
     created          = models.DateTimeField(auto_now_add=True, blank=True, null=True)
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
@@ -367,6 +381,7 @@ class vbp_co(models.Model):
         verbose_name_plural = 'Colorado Listings'
 
 class vbp_ct(models.Model):
+    directory_source  = models.CharField(max_length=200, null=True, blank=True)
     business_name    = models.CharField(max_length=200)
     website          = models.URLField(blank=True, max_length=500, null=True)
     instagram        = models.URLField(blank=True, null=True, max_length=200)
@@ -383,6 +398,7 @@ class vbp_ct(models.Model):
     nominator_owner  = models.BooleanField(default=False, blank=True, null=True)
     nominator_recommended  = models.BooleanField(default=False, blank=True, null=True)    
     owner_name   = models.CharField(max_length=300, blank=True, null=True)
+    owner_email   = models.EmailField(blank=True, null=True)
     approved         = models.BooleanField(default=False, null=True)
     created          = models.DateTimeField(auto_now_add=True, blank=True, null=True)
     updated          = models.DateTimeField(auto_now=True, null=True, blank=True)
@@ -400,6 +416,7 @@ class vbp_ct(models.Model):
         verbose_name_plural = 'Connecticut Listings'
 
 class vbp_de(models.Model):
+    directory_source  = models.CharField(max_length=200, null=True, blank=True)
     business_name    = models.CharField(max_length=200)
     website          = models.URLField(blank=True, max_length=500, null=True)
     instagram        = models.URLField(blank=True, null=True, max_length=200)
@@ -416,6 +433,7 @@ class vbp_de(models.Model):
     nominator_owner  = models.BooleanField(default=False, blank=True, null=True)
     nominator_recommended  = models.BooleanField(default=False, blank=True, null=True)    
     owner_name   = models.CharField(max_length=300, blank=True, null=True)
+    owner_email   = models.EmailField(blank=True, null=True)
     approved         = models.BooleanField(default=False, null=True)
     created          = models.DateTimeField(auto_now_add=True, blank=True, null=True)
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
@@ -433,6 +451,7 @@ class vbp_de(models.Model):
         verbose_name_plural = 'Delaware Listings'
 
 class vbp_dc(models.Model):
+    directory_source  = models.CharField(max_length=200, null=True, blank=True)
     business_name    = models.CharField(max_length=200)
     website          = models.URLField(blank=True, max_length=500, null=True)
     instagram        = models.URLField(blank=True, null=True, max_length=200)
@@ -449,6 +468,7 @@ class vbp_dc(models.Model):
     nominator_owner  = models.BooleanField(default=False, blank=True, null=True)
     nominator_recommended  = models.BooleanField(default=False, blank=True, null=True)   
     owner_name   = models.CharField(max_length=300, blank=True, null=True)
+    owner_email   = models.EmailField(blank=True, null=True)
     approved         = models.BooleanField(default=False, null=True)
     created          = models.DateTimeField(auto_now_add=True, blank=True, null=True)
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
@@ -466,6 +486,7 @@ class vbp_dc(models.Model):
         verbose_name_plural = 'DC Listings'
 
 class vbp_fl(models.Model):
+    directory_source  = models.CharField(max_length=200, null=True, blank=True)
     business_name    = models.CharField(max_length=200)
     website          = models.URLField(blank=True, max_length=500, null=True)
     instagram        = models.URLField(blank=True, null=True, max_length=200)
@@ -482,6 +503,7 @@ class vbp_fl(models.Model):
     nominator_owner  = models.BooleanField(default=False, blank=True, null=True)
     nominator_recommended  = models.BooleanField(default=False, blank=True, null=True)    
     owner_name   = models.CharField(max_length=300, blank=True, null=True)
+    owner_email   = models.EmailField(blank=True, null=True)
     approved         = models.BooleanField(default=False, null=True)
     created          = models.DateTimeField(auto_now_add=True, blank=True, null=True)
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
@@ -499,6 +521,7 @@ class vbp_fl(models.Model):
         verbose_name_plural = 'Florida Listings'
 
 class vbp_ga(models.Model):
+    directory_source  = models.CharField(max_length=200, null=True, blank=True)
     business_name    = models.CharField(max_length=200)
     website          = models.URLField(blank=True, max_length=500, null=True)
     instagram        = models.URLField(blank=True, null=True, max_length=200)
@@ -515,6 +538,7 @@ class vbp_ga(models.Model):
     nominator_owner  = models.BooleanField(default=False, blank=True, null=True)
     nominator_recommended  = models.BooleanField(default=False, blank=True, null=True)    
     owner_name   = models.CharField(max_length=300, blank=True, null=True)
+    owner_email   = models.EmailField(blank=True, null=True)
     approved         = models.BooleanField(default=False, null=True)
     created          = models.DateTimeField(auto_now_add=True, blank=True, null=True)
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
@@ -532,6 +556,7 @@ class vbp_ga(models.Model):
         verbose_name_plural = 'Georgia Listings'
 
 class vbp_hi(models.Model):
+    directory_source  = models.CharField(max_length=200, null=True, blank=True)
     business_name    = models.CharField(max_length=200)
     website          = models.URLField(blank=True, max_length=500, null=True)
     instagram        = models.URLField(blank=True, null=True, max_length=200)
@@ -548,6 +573,7 @@ class vbp_hi(models.Model):
     nominator_owner  = models.BooleanField(default=False, blank=True, null=True)
     nominator_recommended  = models.BooleanField(default=False, blank=True, null=True)    
     owner_name   = models.CharField(max_length=300, blank=True, null=True)
+    owner_email   = models.EmailField(blank=True, null=True)
     approved         = models.BooleanField(default=False, null=True)
     created          = models.DateTimeField(auto_now_add=True, blank=True, null=True)
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
@@ -565,6 +591,7 @@ class vbp_hi(models.Model):
         verbose_name_plural = 'Hawaii Listings'
 
 class vbp_id(models.Model):
+    directory_source  = models.CharField(max_length=200, null=True, blank=True)
     business_name    = models.CharField(max_length=200)
     website          = models.URLField(blank=True, max_length=500, null=True)
     instagram        = models.URLField(blank=True, null=True, max_length=200)
@@ -581,6 +608,7 @@ class vbp_id(models.Model):
     nominator_owner  = models.BooleanField(default=False, blank=True, null=True)
     nominator_recommended  = models.BooleanField(default=False, blank=True, null=True)    
     owner_name   = models.CharField(max_length=300, blank=True, null=True)
+    owner_email   = models.EmailField(blank=True, null=True)
     approved         = models.BooleanField(default=False, null=True)
     created          = models.DateTimeField(auto_now_add=True, blank=True, null=True)
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
@@ -598,6 +626,7 @@ class vbp_id(models.Model):
         verbose_name_plural = 'Idaho Listings'
 
 class vbp_il(models.Model):
+    directory_source  = models.CharField(max_length=200, null=True, blank=True)
     business_name    = models.CharField(max_length=200)
     website          = models.URLField(blank=True, max_length=500, null=True)
     instagram        = models.URLField(blank=True, null=True, max_length=200)
@@ -614,6 +643,7 @@ class vbp_il(models.Model):
     nominator_owner  = models.BooleanField(default=False, blank=True, null=True)
     nominator_recommended  = models.BooleanField(default=False, blank=True, null=True)   
     owner_name   = models.CharField(max_length=300, blank=True, null=True)
+    owner_email   = models.EmailField(blank=True, null=True)
     approved         = models.BooleanField(default=False, null=True)
     created          = models.DateTimeField(auto_now_add=True, blank=True, null=True)
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
@@ -631,6 +661,7 @@ class vbp_il(models.Model):
         verbose_name_plural = 'Illinois Listings'
 
 class vbp_in(models.Model):
+    directory_source  = models.CharField(max_length=200, null=True, blank=True)
     business_name    = models.CharField(max_length=200)
     website          = models.URLField(blank=True, max_length=500, null=True)
     instagram        = models.URLField(blank=True, null=True, max_length=200)
@@ -647,6 +678,7 @@ class vbp_in(models.Model):
     nominator_owner  = models.BooleanField(default=False, blank=True, null=True)
     nominator_recommended  = models.BooleanField(default=False, blank=True, null=True)    
     owner_name   = models.CharField(max_length=300, blank=True, null=True)
+    owner_email   = models.EmailField(blank=True, null=True)
     approved         = models.BooleanField(default=False, null=True)
     created          = models.DateTimeField(auto_now_add=True, blank=True, null=True)
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
@@ -664,6 +696,7 @@ class vbp_in(models.Model):
         verbose_name_plural = 'Indiana Listings'
 
 class vbp_ia(models.Model):
+    directory_source  = models.CharField(max_length=200, null=True, blank=True)
     business_name    = models.CharField(max_length=200)
     website          = models.URLField(blank=True, max_length=500, null=True)
     instagram        = models.URLField(blank=True, null=True, max_length=200)
@@ -680,6 +713,7 @@ class vbp_ia(models.Model):
     nominator_owner  = models.BooleanField(default=False, blank=True, null=True)
     nominator_recommended  = models.BooleanField(default=False, blank=True, null=True)    
     owner_name   = models.CharField(max_length=300, blank=True, null=True)
+    owner_email   = models.EmailField(blank=True, null=True)
     approved         = models.BooleanField(default=False, null=True)
     created          = models.DateTimeField(auto_now_add=True, blank=True, null=True)
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
@@ -697,6 +731,7 @@ class vbp_ia(models.Model):
         verbose_name_plural = 'Iowa Listings'
 
 class vbp_ks(models.Model):
+    directory_source  = models.CharField(max_length=200, null=True, blank=True)
     business_name    = models.CharField(max_length=200)
     website          = models.URLField(blank=True, max_length=500, null=True)
     instagram        = models.URLField(blank=True, null=True, max_length=200)
@@ -713,6 +748,7 @@ class vbp_ks(models.Model):
     nominator_owner  = models.BooleanField(default=False, blank=True, null=True)
     nominator_recommended  = models.BooleanField(default=False, blank=True, null=True)   
     owner_name   = models.CharField(max_length=300, blank=True, null=True)
+    owner_email   = models.EmailField(blank=True, null=True)
     approved         = models.BooleanField(default=False, null=True)
     created          = models.DateTimeField(auto_now_add=True, blank=True, null=True)
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
@@ -730,6 +766,7 @@ class vbp_ks(models.Model):
         verbose_name_plural = 'Kansas Listings'
 
 class vbp_ky(models.Model):
+    directory_source  = models.CharField(max_length=200, null=True, blank=True)
     business_name    = models.CharField(max_length=200)
     website          = models.URLField(blank=True, max_length=500, null=True)
     instagram        = models.URLField(blank=True, null=True, max_length=200)
@@ -746,6 +783,7 @@ class vbp_ky(models.Model):
     nominator_owner  = models.BooleanField(default=False, blank=True, null=True)
     nominator_recommended  = models.BooleanField(default=False, blank=True, null=True)    
     owner_name   = models.CharField(max_length=300, blank=True, null=True)
+    owner_email   = models.EmailField(blank=True, null=True)
     approved         = models.BooleanField(default=False, null=True)
     created          = models.DateTimeField(auto_now_add=True, blank=True, null=True)
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
@@ -763,6 +801,7 @@ class vbp_ky(models.Model):
         verbose_name_plural = 'Kentucky Listings'
 
 class vbp_la(models.Model):
+    directory_source  = models.CharField(max_length=200, null=True, blank=True)
     business_name    = models.CharField(max_length=200)
     website          = models.URLField(blank=True, max_length=500, null=True)
     instagram        = models.URLField(blank=True, null=True, max_length=200)
@@ -779,6 +818,7 @@ class vbp_la(models.Model):
     nominator_owner  = models.BooleanField(default=False, blank=True, null=True)
     nominator_recommended  = models.BooleanField(default=False, blank=True, null=True)    
     owner_name   = models.CharField(max_length=300, blank=True, null=True)
+    owner_email   = models.EmailField(blank=True, null=True)
     approved         = models.BooleanField(default=False, null=True)
     created          = models.DateTimeField(auto_now_add=True, blank=True, null=True)
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
@@ -796,6 +836,7 @@ class vbp_la(models.Model):
         verbose_name_plural = 'Louisiana Listings'
 
 class vbp_me(models.Model):
+    directory_source  = models.CharField(max_length=200, null=True, blank=True)
     business_name    = models.CharField(max_length=200)
     website          = models.URLField(blank=True, max_length=500, null=True)
     instagram        = models.URLField(blank=True, null=True, max_length=200)
@@ -812,6 +853,7 @@ class vbp_me(models.Model):
     nominator_owner  = models.BooleanField(default=False, blank=True, null=True)
     nominator_recommended  = models.BooleanField(default=False, blank=True, null=True)    
     owner_name   = models.CharField(max_length=300, blank=True, null=True)
+    owner_email   = models.EmailField(blank=True, null=True)
     approved         = models.BooleanField(default=False, null=True)
     created          = models.DateTimeField(auto_now_add=True, blank=True, null=True)
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
@@ -829,6 +871,7 @@ class vbp_me(models.Model):
         verbose_name_plural = 'Maine Listings'
 
 class vbp_md(models.Model):
+    directory_source  = models.CharField(max_length=200, null=True, blank=True)
     business_name    = models.CharField(max_length=200)
     website          = models.URLField(blank=True, max_length=500, null=True)
     instagram        = models.URLField(blank=True, null=True, max_length=200)
@@ -845,6 +888,7 @@ class vbp_md(models.Model):
     nominator_owner  = models.BooleanField(default=False, blank=True, null=True)
     nominator_recommended  = models.BooleanField(default=False, blank=True, null=True)    
     owner_name   = models.CharField(max_length=300, blank=True, null=True)
+    owner_email   = models.EmailField(blank=True, null=True)
     approved         = models.BooleanField(default=False, null=True)
     created          = models.DateTimeField(auto_now_add=True, blank=True, null=True)
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
@@ -862,6 +906,7 @@ class vbp_md(models.Model):
         verbose_name_plural = 'Maryland Listings'
 
 class vbp_ma(models.Model):
+    directory_source  = models.CharField(max_length=200, null=True, blank=True)
     business_name    = models.CharField(max_length=200)
     website          = models.URLField(blank=True, max_length=500, null=True)
     instagram        = models.URLField(blank=True, null=True, max_length=200)
@@ -878,6 +923,7 @@ class vbp_ma(models.Model):
     nominator_owner  = models.BooleanField(default=False, blank=True, null=True)
     nominator_recommended  = models.BooleanField(default=False, blank=True, null=True)    
     owner_name   = models.CharField(max_length=300, blank=True, null=True)
+    owner_email   = models.EmailField(blank=True, null=True)
     approved         = models.BooleanField(default=False, null=True)
     created          = models.DateTimeField(auto_now_add=True, blank=True, null=True)
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
@@ -895,6 +941,7 @@ class vbp_ma(models.Model):
         verbose_name_plural = 'Massachusetts Listings'
 
 class vbp_mi(models.Model):
+    directory_source  = models.CharField(max_length=200, null=True, blank=True)
     business_name    = models.CharField(max_length=200)
     website          = models.URLField(blank=True, max_length=500, null=True)
     instagram        = models.URLField(blank=True, null=True, max_length=200)
@@ -911,6 +958,7 @@ class vbp_mi(models.Model):
     nominator_owner  = models.BooleanField(default=False, blank=True, null=True)
     nominator_recommended  = models.BooleanField(default=False, blank=True, null=True)   
     owner_name   = models.CharField(max_length=300, blank=True, null=True)
+    owner_email   = models.EmailField(blank=True, null=True)
     approved         = models.BooleanField(default=False, null=True)
     created          = models.DateTimeField(auto_now_add=True, blank=True, null=True)
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
@@ -928,6 +976,7 @@ class vbp_mi(models.Model):
         verbose_name_plural = 'Michigan Listings'
 
 class vbp_mn(models.Model):
+    directory_source  = models.CharField(max_length=200, null=True, blank=True)
     business_name    = models.CharField(max_length=200)
     website          = models.URLField(blank=True, max_length=500, null=True)
     instagram        = models.URLField(blank=True, null=True, max_length=200)
@@ -944,6 +993,7 @@ class vbp_mn(models.Model):
     nominator_owner  = models.BooleanField(default=False, blank=True, null=True)
     nominator_recommended  = models.BooleanField(default=False, blank=True, null=True)    
     owner_name   = models.CharField(max_length=300, blank=True, null=True)
+    owner_email   = models.EmailField(blank=True, null=True)
     approved         = models.BooleanField(default=False, null=True)
     created          = models.DateTimeField(auto_now_add=True, blank=True, null=True)
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
@@ -961,6 +1011,7 @@ class vbp_mn(models.Model):
         verbose_name_plural = 'Minnesota Listings'
 
 class vbp_ms(models.Model):
+    directory_source  = models.CharField(max_length=200, null=True, blank=True)
     business_name    = models.CharField(max_length=200)
     website          = models.URLField(blank=True, max_length=500, null=True)
     instagram        = models.URLField(blank=True, null=True, max_length=200)
@@ -977,6 +1028,7 @@ class vbp_ms(models.Model):
     nominator_owner  = models.BooleanField(default=False, blank=True, null=True)
     nominator_recommended  = models.BooleanField(default=False, blank=True, null=True)    
     owner_name   = models.CharField(max_length=300, blank=True, null=True)
+    owner_email   = models.EmailField(blank=True, null=True)
     approved         = models.BooleanField(default=False, null=True)
     created          = models.DateTimeField(auto_now_add=True, blank=True, null=True)
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
@@ -994,6 +1046,7 @@ class vbp_ms(models.Model):
         verbose_name_plural = 'Mississippi Listings'
 
 class vbp_mo(models.Model):
+    directory_source  = models.CharField(max_length=200, null=True, blank=True)
     business_name    = models.CharField(max_length=200)
     website          = models.URLField(blank=True, max_length=500, null=True)
     instagram        = models.URLField(blank=True, null=True, max_length=200)
@@ -1010,6 +1063,7 @@ class vbp_mo(models.Model):
     nominator_owner  = models.BooleanField(default=False, blank=True, null=True)
     nominator_recommended  = models.BooleanField(default=False, blank=True, null=True)   
     owner_name   = models.CharField(max_length=300, blank=True, null=True)
+    owner_email   = models.EmailField(blank=True, null=True)
     approved         = models.BooleanField(default=False, null=True)
     created          = models.DateTimeField(auto_now_add=True, blank=True, null=True)
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
@@ -1027,6 +1081,7 @@ class vbp_mo(models.Model):
         verbose_name_plural = 'Missouri Listings'
 
 class vbp_mt(models.Model):
+    directory_source  = models.CharField(max_length=200, null=True, blank=True)
     business_name    = models.CharField(max_length=200)
     website          = models.URLField(blank=True, max_length=500, null=True)
     instagram        = models.URLField(blank=True, null=True, max_length=200)
@@ -1043,6 +1098,7 @@ class vbp_mt(models.Model):
     nominator_owner  = models.BooleanField(default=False, blank=True, null=True)
     nominator_recommended  = models.BooleanField(default=False, blank=True, null=True)    
     owner_name   = models.CharField(max_length=300, blank=True, null=True)
+    owner_email   = models.EmailField(blank=True, null=True)
     approved         = models.BooleanField(default=False, null=True)
     created          = models.DateTimeField(auto_now_add=True, blank=True, null=True)
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
@@ -1060,6 +1116,7 @@ class vbp_mt(models.Model):
         verbose_name_plural = 'Montana Listings'
 
 class vbp_ne(models.Model):
+    directory_source  = models.CharField(max_length=200, null=True, blank=True)
     business_name    = models.CharField(max_length=200)
     website          = models.URLField(blank=True, max_length=500, null=True)
     instagram        = models.URLField(blank=True, null=True, max_length=200)
@@ -1076,6 +1133,7 @@ class vbp_ne(models.Model):
     nominator_owner  = models.BooleanField(default=False, blank=True, null=True)
     nominator_recommended  = models.BooleanField(default=False, blank=True, null=True)   
     owner_name   = models.CharField(max_length=300, blank=True, null=True)
+    owner_email   = models.EmailField(blank=True, null=True)
     approved         = models.BooleanField(default=False, null=True)
     created          = models.DateTimeField(auto_now_add=True, blank=True, null=True)
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
@@ -1093,6 +1151,7 @@ class vbp_ne(models.Model):
         verbose_name_plural = 'Nebraska Listings'
 
 class vbp_nv(models.Model):
+    directory_source  = models.CharField(max_length=200, null=True, blank=True)
     business_name    = models.CharField(max_length=200)
     website          = models.URLField(blank=True, max_length=500, null=True)
     instagram        = models.URLField(blank=True, null=True, max_length=200)
@@ -1109,6 +1168,7 @@ class vbp_nv(models.Model):
     nominator_owner  = models.BooleanField(default=False, blank=True, null=True)
     nominator_recommended  = models.BooleanField(default=False, blank=True, null=True)  
     owner_name   = models.CharField(max_length=300, blank=True, null=True)
+    owner_email   = models.EmailField(blank=True, null=True)
     approved         = models.BooleanField(default=False, null=True)
     created          = models.DateTimeField(auto_now_add=True, blank=True, null=True)
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
@@ -1126,6 +1186,7 @@ class vbp_nv(models.Model):
         verbose_name_plural = 'Nevada Listings'
 
 class vbp_nh(models.Model):
+    directory_source  = models.CharField(max_length=200, null=True, blank=True)
     business_name    = models.CharField(max_length=200)
     website          = models.URLField(blank=True, max_length=500, null=True)
     instagram        = models.URLField(blank=True, null=True, max_length=200)
@@ -1142,6 +1203,7 @@ class vbp_nh(models.Model):
     nominator_owner  = models.BooleanField(default=False, blank=True, null=True)
     nominator_recommended  = models.BooleanField(default=False, blank=True, null=True)  
     owner_name   = models.CharField(max_length=300, blank=True, null=True)
+    owner_email   = models.EmailField(blank=True, null=True)
     approved         = models.BooleanField(default=False, null=True)
     created          = models.DateTimeField(auto_now_add=True, blank=True, null=True)
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
@@ -1159,6 +1221,7 @@ class vbp_nh(models.Model):
         verbose_name_plural = 'New Hampshire Listings'
 
 class vbp_nj(models.Model):
+    directory_source  = models.CharField(max_length=200, null=True, blank=True)
     business_name    = models.CharField(max_length=200)
     website          = models.URLField(blank=True, max_length=500, null=True)
     instagram        = models.URLField(blank=True, null=True, max_length=200)
@@ -1175,6 +1238,7 @@ class vbp_nj(models.Model):
     nominator_owner  = models.BooleanField(default=False, blank=True, null=True)
     nominator_recommended  = models.BooleanField(default=False, blank=True, null=True)  
     owner_name   = models.CharField(max_length=300, blank=True, null=True)
+    owner_email   = models.EmailField(blank=True, null=True)
     approved         = models.BooleanField(default=False, null=True, blank=True)
     created          = models.DateTimeField(auto_now_add=True, blank=True, null=True)
     updated          = models.DateTimeField(auto_now=True, null=True, blank=True)
@@ -1192,6 +1256,7 @@ class vbp_nj(models.Model):
         verbose_name_plural = 'New Jersey Listings'
 
 class vbp_nm(models.Model):
+    directory_source  = models.CharField(max_length=200, null=True, blank=True)
     business_name    = models.CharField(max_length=200)
     website          = models.URLField(blank=True, max_length=500, null=True)
     instagram        = models.URLField(blank=True, null=True, max_length=200)
@@ -1208,6 +1273,7 @@ class vbp_nm(models.Model):
     nominator_owner  = models.BooleanField(default=False, blank=True, null=True)
     nominator_recommended  = models.BooleanField(default=False, blank=True, null=True)    
     owner_name   = models.CharField(max_length=300, blank=True, null=True)
+    owner_email   = models.EmailField(blank=True, null=True)
     approved         = models.BooleanField(default=False, null=True)
     created          = models.DateTimeField(auto_now_add=True, blank=True, null=True)
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
@@ -1225,6 +1291,7 @@ class vbp_nm(models.Model):
         verbose_name_plural = 'New Mexico Listings'
 
 class vbp_ny(models.Model):
+    directory_source  = models.CharField(max_length=200, null=True, blank=True)
     business_name    = models.CharField(max_length=200)
     website          = models.URLField(blank=True, max_length=500, null=True)
     instagram        = models.URLField(blank=True, null=True, max_length=200)
@@ -1242,6 +1309,7 @@ class vbp_ny(models.Model):
     nominator_recommended  = models.BooleanField(default=False, blank=True, null=True)    
     approved         = models.BooleanField(default=False, null=True)
     owner_name   = models.CharField(max_length=300, blank=True, null=True)
+    owner_email   = models.EmailField(blank=True, null=True)
     created          = models.DateTimeField(auto_now_add=True, blank=True, null=True)
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
     user             = models.ForeignKey(User, models.SET_NULL, null=True, blank=True)
@@ -1259,6 +1327,7 @@ class vbp_ny(models.Model):
 
 
 class vbp_nc(models.Model):
+    directory_source  = models.CharField(max_length=200, null=True, blank=True)
     business_name    = models.CharField(max_length=200)
     website          = models.URLField(blank=True, max_length=500, null=True)
     instagram        = models.URLField(blank=True, null=True, max_length=200)
@@ -1275,6 +1344,7 @@ class vbp_nc(models.Model):
     nominator_owner  = models.BooleanField(default=False, blank=True, null=True)
     nominator_recommended  = models.BooleanField(default=False, blank=True, null=True)   
     owner_name   = models.CharField(max_length=300, blank=True, null=True)
+    owner_email   = models.EmailField(blank=True, null=True)
     approved         = models.BooleanField(default=False, null=True)
     created          = models.DateTimeField(auto_now_add=True, blank=True, null=True)
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
@@ -1292,6 +1362,7 @@ class vbp_nc(models.Model):
         verbose_name_plural = 'North Carolina Listings'
 
 class vbp_nd(models.Model):
+    directory_source  = models.CharField(max_length=200, null=True, blank=True)
     business_name    = models.CharField(max_length=200)
     website          = models.URLField(blank=True, max_length=500, null=True)
     instagram        = models.URLField(blank=True, null=True, max_length=200)
@@ -1308,6 +1379,7 @@ class vbp_nd(models.Model):
     nominator_owner  = models.BooleanField(default=False, blank=True, null=True)
     nominator_recommended  = models.BooleanField(default=False, blank=True, null=True)   
     owner_name   = models.CharField(max_length=300, blank=True, null=True)
+    owner_email   = models.EmailField(blank=True, null=True)
     approved         = models.BooleanField(default=False, null=True)
     created          = models.DateTimeField(auto_now_add=True, blank=True, null=True)
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
@@ -1325,6 +1397,7 @@ class vbp_nd(models.Model):
         verbose_name_plural = 'North Dakota Listings'
 
 class vbp_oh(models.Model):
+    directory_source  = models.CharField(max_length=200, null=True, blank=True)
     business_name    = models.CharField(max_length=200)
     website          = models.URLField(blank=True, max_length=500, null=True)
     instagram        = models.URLField(blank=True, null=True, max_length=200)
@@ -1341,6 +1414,7 @@ class vbp_oh(models.Model):
     nominator_owner  = models.BooleanField(default=False, blank=True, null=True)
     nominator_recommended  = models.BooleanField(default=False, blank=True, null=True)    
     owner_name   = models.CharField(max_length=300, blank=True, null=True)
+    owner_email   = models.EmailField(blank=True, null=True)
     approved         = models.BooleanField(default=False, null=True)
     created          = models.DateTimeField(auto_now_add=True, blank=True, null=True)
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
@@ -1358,6 +1432,7 @@ class vbp_oh(models.Model):
         verbose_name_plural = 'Ohio Listings'
 
 class vbp_ok(models.Model):
+    directory_source  = models.CharField(max_length=200, null=True, blank=True)
     business_name    = models.CharField(max_length=200)
     website          = models.URLField(blank=True, max_length=500, null=True)
     instagram        = models.URLField(blank=True, null=True, max_length=200)
@@ -1374,6 +1449,7 @@ class vbp_ok(models.Model):
     nominator_owner  = models.BooleanField(default=False, blank=True, null=True)
     nominator_recommended  = models.BooleanField(default=False, blank=True, null=True)    
     owner_name   = models.CharField(max_length=300, blank=True, null=True)
+    owner_email   = models.EmailField(blank=True, null=True)
     approved         = models.BooleanField(default=False, null=True)
     created          = models.DateTimeField(auto_now_add=True, blank=True, null=True)
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
@@ -1391,6 +1467,7 @@ class vbp_ok(models.Model):
         verbose_name_plural = 'Oklahoma Listings'
 
 class vbp_or(models.Model):
+    directory_source  = models.CharField(max_length=200, null=True, blank=True)
     business_name    = models.CharField(max_length=200)
     website          = models.URLField(blank=True, max_length=500, null=True)
     instagram        = models.URLField(blank=True, null=True, max_length=200)
@@ -1407,6 +1484,7 @@ class vbp_or(models.Model):
     nominator_owner  = models.BooleanField(default=False, blank=True, null=True)
     nominator_recommended  = models.BooleanField(default=False, blank=True, null=True)  
     owner_name   = models.CharField(max_length=300, blank=True, null=True)
+    owner_email   = models.EmailField(blank=True, null=True)
     approved         = models.BooleanField(default=False, null=True)
     created          = models.DateTimeField(auto_now_add=True, blank=True, null=True)
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
@@ -1424,6 +1502,7 @@ class vbp_or(models.Model):
         verbose_name_plural = 'Oregon Listings'
 
 class vbp_pa(models.Model):
+    directory_source  = models.CharField(max_length=200, null=True, blank=True)
     business_name    = models.CharField(max_length=200)
     website          = models.URLField(blank=True, max_length=500, null=True)
     instagram        = models.URLField(blank=True, null=True, max_length=200)
@@ -1440,6 +1519,7 @@ class vbp_pa(models.Model):
     nominator_owner  = models.BooleanField(default=False, blank=True, null=True)
     nominator_recommended  = models.BooleanField(default=False, blank=True, null=True)  
     owner_name   = models.CharField(max_length=300, blank=True, null=True)
+    owner_email   = models.EmailField(blank=True, null=True)
     approved         = models.BooleanField(default=False, null=True)
     created          = models.DateTimeField(auto_now_add=True, blank=True, null=True)
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
@@ -1457,6 +1537,7 @@ class vbp_pa(models.Model):
         verbose_name_plural = 'Pennsylvania Listings'
 
 class vbp_ri(models.Model):
+    directory_source  = models.CharField(max_length=200, null=True, blank=True)
     business_name    = models.CharField(max_length=200)
     website          = models.URLField(blank=True, max_length=500, null=True)
     instagram        = models.URLField(blank=True, null=True, max_length=200)
@@ -1473,6 +1554,7 @@ class vbp_ri(models.Model):
     nominator_owner  = models.BooleanField(default=False, blank=True, null=True)
     nominator_recommended  = models.BooleanField(default=False, blank=True, null=True) 
     owner_name   = models.CharField(max_length=300, blank=True, null=True)
+    owner_email   = models.EmailField(blank=True, null=True)
     approved         = models.BooleanField(default=False, null=True)
     created          = models.DateTimeField(auto_now_add=True, blank=True, null=True)
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
@@ -1490,6 +1572,7 @@ class vbp_ri(models.Model):
         verbose_name_plural = 'Rhode Island Listings'
 
 class vbp_sc(models.Model):
+    directory_source  = models.CharField(max_length=200, null=True, blank=True)
     business_name    = models.CharField(max_length=200)
     website          = models.URLField(blank=True, max_length=500, null=True)
     instagram        = models.URLField(blank=True, null=True, max_length=200)
@@ -1506,6 +1589,7 @@ class vbp_sc(models.Model):
     nominator_owner  = models.BooleanField(default=False, blank=True, null=True)
     nominator_recommended  = models.BooleanField(default=False, blank=True, null=True) 
     owner_name   = models.CharField(max_length=300, blank=True, null=True)
+    owner_email   = models.EmailField(blank=True, null=True)
     approved         = models.BooleanField(default=False, null=True)
     created          = models.DateTimeField(auto_now_add=True, blank=True, null=True)
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
@@ -1523,6 +1607,7 @@ class vbp_sc(models.Model):
         verbose_name_plural = 'South Carolina Listings'
 
 class vbp_sd(models.Model):
+    directory_source  = models.CharField(max_length=200, null=True, blank=True)
     business_name    = models.CharField(max_length=200)
     website          = models.URLField(blank=True, max_length=500, null=True)
     instagram        = models.URLField(blank=True, null=True, max_length=200)
@@ -1539,6 +1624,7 @@ class vbp_sd(models.Model):
     nominator_owner  = models.BooleanField(default=False, blank=True, null=True)
     nominator_recommended  = models.BooleanField(default=False, blank=True, null=True)    
     owner_name   = models.CharField(max_length=300, blank=True, null=True)
+    owner_email   = models.EmailField(blank=True, null=True)
     approved         = models.BooleanField(default=False, null=True)
     created          = models.DateTimeField(auto_now_add=True, blank=True, null=True)
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
@@ -1556,6 +1642,7 @@ class vbp_sd(models.Model):
         verbose_name_plural = 'South Dakota Listings'
 
 class vbp_tn(models.Model):
+    directory_source  = models.CharField(max_length=200, null=True, blank=True)
     business_name    = models.CharField(max_length=200)
     website          = models.URLField(blank=True, max_length=500, null=True)
     instagram        = models.URLField(blank=True, null=True, max_length=200)
@@ -1572,6 +1659,7 @@ class vbp_tn(models.Model):
     nominator_owner  = models.BooleanField(default=False, blank=True, null=True)
     nominator_recommended  = models.BooleanField(default=False, blank=True, null=True) 
     owner_name   = models.CharField(max_length=300, blank=True, null=True)
+    owner_email   = models.EmailField(blank=True, null=True)
     approved         = models.BooleanField(default=False, null=True)
     created          = models.DateTimeField(auto_now_add=True, blank=True, null=True)
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
@@ -1589,6 +1677,7 @@ class vbp_tn(models.Model):
         verbose_name_plural = 'Tennessee Listings'
 
 class vbp_tx(models.Model):
+    directory_source  = models.CharField(max_length=200, null=True, blank=True)
     business_name    = models.CharField(max_length=200)
     website          = models.URLField(blank=True, max_length=500, null=True)
     instagram        = models.URLField(blank=True, null=True, max_length=200)
@@ -1605,6 +1694,7 @@ class vbp_tx(models.Model):
     nominator_owner  = models.BooleanField(default=False, blank=True, null=True)
     nominator_recommended  = models.BooleanField(default=False, blank=True, null=True)   
     owner_name   = models.CharField(max_length=300, blank=True, null=True)
+    owner_email   = models.EmailField(blank=True, null=True)
     approved         = models.BooleanField(default=False, null=True)
     created          = models.DateTimeField(auto_now_add=True, blank=True, null=True)
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
@@ -1622,6 +1712,7 @@ class vbp_tx(models.Model):
         verbose_name_plural = 'Texas Listings'
 
 class vbp_ut(models.Model):
+    directory_source  = models.CharField(max_length=200, null=True, blank=True)
     business_name    = models.CharField(max_length=200)
     website          = models.URLField(blank=True, max_length=500, null=True)
     instagram        = models.URLField(blank=True, null=True, max_length=200)
@@ -1638,6 +1729,7 @@ class vbp_ut(models.Model):
     nominator_owner  = models.BooleanField(default=False, blank=True, null=True)
     nominator_recommended  = models.BooleanField(default=False, blank=True, null=True) 
     owner_name   = models.CharField(max_length=300, blank=True, null=True)
+    owner_email   = models.EmailField(blank=True, null=True)
     approved         = models.BooleanField(default=False, null=True)
     created          = models.DateTimeField(auto_now_add=True, blank=True, null=True)
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
@@ -1655,6 +1747,7 @@ class vbp_ut(models.Model):
         verbose_name_plural = 'Utah Listings'
 
 class vbp_vt(models.Model):
+    directory_source  = models.CharField(max_length=200, null=True, blank=True)
     business_name    = models.CharField(max_length=200)
     website          = models.URLField(blank=True, max_length=500, null=True)
     instagram        = models.URLField(blank=True, null=True, max_length=200)
@@ -1671,6 +1764,7 @@ class vbp_vt(models.Model):
     nominator_owner  = models.BooleanField(default=False, blank=True, null=True)
     nominator_recommended  = models.BooleanField(default=False, blank=True, null=True)    
     owner_name   = models.CharField(max_length=300, blank=True, null=True)
+    owner_email   = models.EmailField(blank=True, null=True)
     approved         = models.BooleanField(default=False, null=True)
     created          = models.DateTimeField(auto_now_add=True, blank=True, null=True)
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
@@ -1688,6 +1782,7 @@ class vbp_vt(models.Model):
         verbose_name_plural = 'Vermont Listings'
 
 class vbp_va(models.Model):
+    directory_source  = models.CharField(max_length=200, null=True, blank=True)
     business_name    = models.CharField(max_length=200)
     website          = models.URLField(blank=True, max_length=500, null=True)
     instagram        = models.URLField(blank=True, null=True, max_length=200)
@@ -1704,6 +1799,7 @@ class vbp_va(models.Model):
     nominator_owner  = models.BooleanField(default=False, blank=True, null=True)
     nominator_recommended  = models.BooleanField(default=False, blank=True, null=True)   
     owner_name   = models.CharField(max_length=300, blank=True, null=True)
+    owner_email   = models.EmailField(blank=True, null=True)
     approved         = models.BooleanField(default=False, null=True)
     created          = models.DateTimeField(auto_now_add=True, blank=True, null=True)
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
@@ -1721,6 +1817,7 @@ class vbp_va(models.Model):
         verbose_name_plural = 'Virginia Listings'
 
 class vbp_wa(models.Model):
+    directory_source  = models.CharField(max_length=200, null=True, blank=True)
     business_name    = models.CharField(max_length=200)
     website          = models.URLField(blank=True, max_length=500, null=True)
     instagram        = models.URLField(blank=True, null=True, max_length=200)
@@ -1737,6 +1834,7 @@ class vbp_wa(models.Model):
     nominator_owner  = models.BooleanField(default=False, blank=True, null=True)
     nominator_recommended  = models.BooleanField(default=False, blank=True, null=True)
     owner_name   = models.CharField(max_length=300, blank=True, null=True)
+    owner_email   = models.EmailField(blank=True, null=True)
     approved         = models.BooleanField(default=False, null=True)
     created          = models.DateTimeField(auto_now_add=True, blank=True, null=True)
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
@@ -1754,6 +1852,7 @@ class vbp_wa(models.Model):
         verbose_name_plural = 'Washington Listings'
 
 class vbp_wv(models.Model):
+    directory_source  = models.CharField(max_length=200, null=True, blank=True)
     business_name    = models.CharField(max_length=200)
     website          = models.URLField(blank=True, max_length=500, null=True)
     instagram        = models.URLField(blank=True, null=True, max_length=200)
@@ -1770,6 +1869,7 @@ class vbp_wv(models.Model):
     nominator_owner  = models.BooleanField(default=False, blank=True, null=True)
     nominator_recommended  = models.BooleanField(default=False, blank=True, null=True) 
     owner_name   = models.CharField(max_length=300, blank=True, null=True)
+    owner_email   = models.EmailField(blank=True, null=True)
     approved         = models.BooleanField(default=False, null=True)
     created          = models.DateTimeField(auto_now_add=True, blank=True, null=True)
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
@@ -1787,6 +1887,7 @@ class vbp_wv(models.Model):
         verbose_name_plural = 'West Virginia Listings'
 
 class vbp_wi(models.Model):
+    directory_source  = models.CharField(max_length=200, null=True, blank=True)
     business_name    = models.CharField(max_length=200)
     website          = models.URLField(blank=True, max_length=500, null=True)
     instagram        = models.URLField(blank=True, null=True, max_length=200)
@@ -1803,6 +1904,7 @@ class vbp_wi(models.Model):
     nominator_owner  = models.BooleanField(default=False, blank=True, null=True)
     nominator_recommended  = models.BooleanField(default=False, blank=True, null=True)    
     owner_name   = models.CharField(max_length=300, blank=True, null=True)
+    owner_email   = models.EmailField(blank=True, null=True)
     approved         = models.BooleanField(default=False, null=True)
     created          = models.DateTimeField(auto_now_add=True, blank=True, null=True)
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
@@ -1820,6 +1922,7 @@ class vbp_wi(models.Model):
         verbose_name_plural = 'Wisconsin Listings'
 
 class vbp_wy(models.Model):
+    directory_source  = models.CharField(max_length=200, null=True, blank=True)
     business_name    = models.CharField(max_length=200)
     website          = models.URLField(blank=True, max_length=500, null=True)
     instagram        = models.URLField(blank=True, null=True, max_length=200)
@@ -1836,6 +1939,7 @@ class vbp_wy(models.Model):
     nominator_owner  = models.BooleanField(default=False, blank=True, null=True)
     nominator_recommended  = models.BooleanField(default=False, blank=True, null=True)   
     owner_name   = models.CharField(max_length=300, blank=True, null=True)
+    owner_email   = models.EmailField(blank=True, null=True)
     approved         = models.BooleanField(default=False, null=True)
     created          = models.DateTimeField(auto_now_add=True, blank=True, null=True)
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)

@@ -122,10 +122,14 @@ class TicketCart(models.Model):
     def total(self):
         cart_id = self.id
         qs = list(ticketItem.objects.filter(cart=cart_id).all())
+        donations = list(ticketDonation.objects.filter(cart=cart_id).all())
         items = qs
         total = 0
         for x in items:
             line_total = x.ticket.price * x.quantity
+            total += line_total
+        for x in donations:
+            line_total = x.amount
             total += line_total
         return total
 
@@ -137,6 +141,18 @@ class ticketItem(models.Model):
     event       = models.ForeignKey(Event, null=True, blank=True, on_delete=models.SET_NULL)
     def subtotal(self):
         return self.ticket.price
+    
+    @property
+    def get_guests(self):
+        return range(self.quantity)
+
+class ticketDonation(models.Model):
+    cart        = models.ForeignKey(TicketCart, on_delete=models.CASCADE, blank=True, null=True)
+    amount      = models.DecimalField(default=0.00, max_digits=8, decimal_places=2)
+    event       = models.ForeignKey(Event, null=True, blank=True, on_delete=models.SET_NULL)
+    
+    def subtotal(self):
+        return str(self.amount)
     
     @property
     def get_guests(self):
