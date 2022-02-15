@@ -6,6 +6,7 @@ from django.urls import reverse
 from itertools import islice
 from etv.utils import unique_ticket_id_generator, unique_slug_generator
 from billing.models import BillingProfile
+from tinymce.models import HTMLField
 
 from ckeditor.fields import RichTextField
 from django_quill.fields import QuillField
@@ -17,6 +18,7 @@ class tag(models.Model):
 
 class Event(models.Model):
     title           = models.CharField(max_length=270)
+    content         = HTMLField()
     slug            = models.SlugField()
     details         = QuillField()
     date            = models.DateTimeField(blank=True, null=True)

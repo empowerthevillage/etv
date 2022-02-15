@@ -393,6 +393,7 @@ def getTile25(request):
 def nomination_challenge(request):
     if request.method == 'POST':
         nomination_form = NominationForm(request.POST)
+        print(nomination_form.data)
         nom_obj = nomination()
         if nomination_form.data['state'] == 'AL':
             obj = vbp_al()

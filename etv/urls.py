@@ -169,6 +169,7 @@ urlpatterns = [
     path('ed2CSwbdsV', ven_home, name='ven-home'),
     path('village-empowerment-network-nomination', venForm, name='ven-nomination'),
     path('village-empowerment-network-individual-nomination', venFamilyForm, name='ven-family-nomination'),
+    path('tinymce/', include('tinymce.urls')),
 ]
 
 if settings.DEBUG:

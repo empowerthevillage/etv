@@ -56,7 +56,7 @@
                 <label>{{ nomination_form.city.label }}<b>*</b></label>
               </div>
               <div class="input-field col s6 l4"  id="state-select">
-                  <select>
+                  <select name="state">
                     <option value="" disabled selected>State</option>
                     {% for x,y in states %}
                     <option value="{{ x }}">{{ y }}</option>
