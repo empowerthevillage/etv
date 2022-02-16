@@ -1,3 +1,4 @@
+
 from datetime import date
 from django.db import models
 from django.db.models.signals import pre_save, post_save
@@ -18,10 +19,14 @@ class tag(models.Model):
 
 class Event(models.Model):
     title           = models.CharField(max_length=270)
-    content         = HTMLField()
+    subtitle        = models.CharField(max_length=270, null=True, blank=True)
+    content         = HTMLField(null=True, blank=True)
     slug            = models.SlugField()
-    details         = QuillField()
     date            = models.DateTimeField(blank=True, null=True)
+    start_date      = models.DateField(blank=True, null=True)
+    end_date        = models.DateField(blank=True, null=True)
+    start_time      = models.TimeField(blank=True, null=True)
+    end_time        = models.TimeField(blank=True, null=True)
     tags            = models.ManyToManyField(tag, blank=True)
     thumbnail       = models.FileField(null=True, blank=True)
 
@@ -30,6 +35,13 @@ class Event(models.Model):
     
     def __str__(self):
         return str(self.title)
+
+    @property
+    def is_multiday(self):
+        if self.end_date > self.start_date:
+            return True
+        else:
+            return False
 
 def event_pre_save_receiver(sender, instance, *args, **kwargs):
     if not instance.slug:
@@ -64,12 +76,19 @@ class TicketType(models.Model):
     title           = models.CharField(max_length=270, null=True, blank=True)
     sponsorship     = models.BooleanField(default=False)
     price           = models.DecimalField(decimal_places=2, max_digits=10)
+    sale            = models.BooleanField(default=False)
+    sale_price      = models.DecimalField(decimal_places=2, max_digits=10, null=True, blank=True)
+    sale_description = models.CharField(max_length=270, null=True, blank=True)
     quantity        = models.IntegerField(null=True, blank=True)
     event           = models.ForeignKey(Event, on_delete=models.CASCADE)
-    
+    description     = models.TextField(null=True, blank=True)
 
     def __str__(self):
         return self.title
+
+    @property
+    def on_sale(self):
+        return self.sale
 
     @property
     def is_sponsorship(self):

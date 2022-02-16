@@ -10,6 +10,7 @@ from orders.models import Transaction
 
 import braintree
 import shippo
+import json
 
 from carts.models import TicketCart, ticketItem, ticketDonation
 from .models import *
@@ -78,6 +79,158 @@ def event_home(request):
     }
     return render(request, "events-home.html", context)
 
+def event_detail(request, slug):
+    print('sanity')
+    print(slug)
+    event = Event.objects.get(slug=slug)
+    context = {
+        'title':'ETV | %s' %(event.title),
+        'event': event,
+    }
+    return render(request, "detail.html", context)
+
+def event_ticket_checkout(request, slug):
+    event = Event.objects.get(slug=slug)
+    ticket_types = TicketType.objects.filter(event=event).filter(sponsorship=False)
+    sponsor_types = TicketType.objects.filter(event=event).filter(sponsorship=True)
+    (cart_obj) = TicketCart.objects.new_or_get(request, event)
+    
+    item_list = ticketItem.objects.filter(cart=cart_obj)
+    donations = ticketDonation.objects.filter(cart=cart_obj)
+    cart_items = list()
+    for x in ticket_types:
+        ticketType = x
+        cartItem = ticketItem.objects.filter(cart=cart_obj).filter(ticket=x).first()
+        dictionary = {
+            "type": ticketType,
+            "cartItem": cartItem,
+            "quantity_list": range(0,11)
+        }
+        cart_items.append(dictionary)
+
+    cart_sponsor_items = list()
+    for x in sponsor_types:
+        ticketType = x
+        cartItem = ticketItem.objects.filter(cart=cart_obj).filter(ticket=x).first()
+        dictionary = {
+            "type": ticketType,
+            "cartItem": cartItem,
+            "quantity_list": range(0,11)
+        }
+        cart_sponsor_items.append(dictionary)
+    billing_address_form = BillingAddressForm()
+    billing_address_id = request.session.get("billing_address_id", None)
+    shipping_address_id = request.session.get("shipping_address_id", None)
+    billing_profile, billing_profile_created = BillingProfile.objects.new_or_get(request)
+    shipping_addresses = None
+    billing_addresses = None
+    address_qs = None
+    default_card = None
+    if billing_profile is not None:
+        if request.user.is_authenticated:
+            address_qs = Address.objects.filter(billing_profile=billing_profile)
+            shipping_addresses = address_qs.filter(address_type='shipping')
+            billing_addresses = address_qs.filter(address_type='billing')
+        
+        has_card = billing_profile.has_card
+        if has_card:
+            default_card = gateway.payment_method.find(billing_profile.default_card.braintree_id)
+            for card in billing_profile.get_cards():
+                card = gateway.payment_method.find(card.braintree_id)
+            customer = gateway.customer.find(billing_profile.customer_id)
+            card_qs = customer.credit_cards
+        else:
+            default_card = None
+    context = {
+        'title':'ETV | %s' %(event.title),
+        'event': event,
+        'ticket_types': ticket_types,
+        'sponsor_types': sponsor_types,
+        'item_list': item_list,
+        'cart_items': cart_items,
+        'cart_sponsor_items': cart_sponsor_items,
+        'cart': cart_obj,
+        'donations': donations,
+        "billing_profile": billing_profile,
+        "billing_address_form":billing_address_form,
+        "address_qs":address_qs,
+        "shipping_addresses":shipping_addresses,
+        "shipping_id": shipping_address_id,
+        "billing_addresses":billing_addresses,
+    }
+    return render(request, "ticket-checkout.html", context)
+
+def event_sponsor_checkout(request, slug):
+    event = Event.objects.get(slug=slug)
+    ticket_types = TicketType.objects.filter(event=event).filter(sponsorship=False)
+    sponsor_types = TicketType.objects.filter(event=event).filter(sponsorship=True)
+    (cart_obj) = TicketCart.objects.new_or_get(request, event)
+    
+    item_list = ticketItem.objects.filter(cart=cart_obj)
+    donations = ticketDonation.objects.filter(cart=cart_obj)
+    cart_items = list()
+    for x in ticket_types:
+        ticketType = x
+        cartItem = ticketItem.objects.filter(cart=cart_obj).filter(ticket=x).first()
+        dictionary = {
+            "type": ticketType,
+            "cartItem": cartItem,
+            "quantity_list": range(0,11)
+        }
+        cart_items.append(dictionary)
+
+    cart_sponsor_items = list()
+    for x in sponsor_types:
+        ticketType = x
+        cartItem = ticketItem.objects.filter(cart=cart_obj).filter(ticket=x).first()
+        dictionary = {
+            "type": ticketType,
+            "cartItem": cartItem,
+            "quantity_list": range(0,11)
+        }
+        cart_sponsor_items.append(dictionary)
+    billing_address_form = BillingAddressForm()
+    billing_address_id = request.session.get("billing_address_id", None)
+    shipping_address_id = request.session.get("shipping_address_id", None)
+    billing_profile, billing_profile_created = BillingProfile.objects.new_or_get(request)
+    shipping_addresses = None
+    billing_addresses = None
+    address_qs = None
+    default_card = None
+    if billing_profile is not None:
+        if request.user.is_authenticated:
+            address_qs = Address.objects.filter(billing_profile=billing_profile)
+            shipping_addresses = address_qs.filter(address_type='shipping')
+            billing_addresses = address_qs.filter(address_type='billing')
+        
+        has_card = billing_profile.has_card
+        if has_card:
+            default_card = gateway.payment_method.find(billing_profile.default_card.braintree_id)
+            for card in billing_profile.get_cards():
+                card = gateway.payment_method.find(card.braintree_id)
+            customer = gateway.customer.find(billing_profile.customer_id)
+            card_qs = customer.credit_cards
+        else:
+            default_card = None
+    context = {
+        'title':'ETV | %s' %(event.title),
+        'event': event,
+        'ticket_types': ticket_types,
+        'sponsor_types': sponsor_types,
+        'item_list': item_list,
+        'cart_items': cart_items,
+        'cart_sponsor_items': cart_sponsor_items,
+        'cart': cart_obj,
+        'donations': donations,
+        "billing_profile": billing_profile,
+        "billing_address_form":billing_address_form,
+        "address_qs":address_qs,
+        "shipping_addresses":shipping_addresses,
+        "shipping_id": shipping_address_id,
+        "billing_addresses":billing_addresses,
+    }
+    return render(request, "sponsor-checkout.html", context)
+
 def ticket_cart_donation_update(request):
     event_title         = request.POST.get('event')
     event               = Event.objects.filter(title=event_title).first()
@@ -107,9 +260,11 @@ def ticket_cart_update(request):
     event_title         = request.POST.get('event')
     event               = Event.objects.filter(title=event_title).first()
     cart_obj            = TicketCart.objects.new_or_get(request, event)
+    request.session['ticket_cart_id'] = cart_obj.pk
     quantity            = request.POST.get('quantity')
     type_id             = request.POST.get('tid')
     item_obj            = ticketItem.objects.filter(cart=cart_obj).filter(ticket=type_id).first()
+    
     previous_quantity   = 0
     if item_obj is not None:
         previous_quantity = item_obj.quantity
@@ -131,45 +286,15 @@ def ticket_cart_update(request):
         'quantity': item_obj.quantity,
         'total': '$%s' %(cart_obj.total),
         'row': '.%s-row' %(item_obj.pk),
+        'counter': '.%s-counter' %(item_obj.ticket.pk),
         'previousQuantity': previous_quantity,
         'pk': item_obj.pk,
+        'typePk': item_obj.ticket.pk,
+        'select': '#%s-counter' %(item_obj.ticket.pk),
         'ticket': str(item_obj.ticket)
     }
     return JsonResponse(data)
 
-def ticket_cart_update(request):
-    event_title         = request.POST.get('event')
-    event               = Event.objects.filter(title=event_title).first()
-    cart_obj            = TicketCart.objects.new_or_get(request, event)
-    quantity            = request.POST.get('quantity')
-    type_id             = request.POST.get('tid')
-    item_obj            = ticketItem.objects.filter(cart=cart_obj).filter(ticket=type_id).first()
-    previous_quantity   = 0
-    if item_obj is not None:
-        previous_quantity = item_obj.quantity
-        item_obj.quantity = quantity
-    else:
-        item_obj = ticketItem.objects.create()
-        item_obj.quantity = quantity
-        item_obj.ticket = TicketType.objects.filter(id=type_id).first()
-        item_obj.cart = cart_obj
-        item_obj.event = item_obj.ticket.event
-
-    item_obj.save()
-    price = int(quantity) * item_obj.ticket.price
-    event = item_obj.event
-    data = {
-        'price': '$%s' %(price),
-        'priceTarget': '.%s-price' %(item_obj.pk),
-        'quantityTarget': '.%s-quantity' %(item_obj.pk),
-        'quantity': item_obj.quantity,
-        'total': '$%s' %(cart_obj.total),
-        'row': '.%s-row' %(item_obj.pk),
-        'previousQuantity': previous_quantity,
-        'pk': item_obj.pk,
-        'ticket': str(item_obj.ticket)
-    }
-    return JsonResponse(data)
     
 def golf(request):
     event = Event.objects.get(slug='power-swing-classic-golf-event')

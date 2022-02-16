@@ -77,7 +77,7 @@ class cartItem(models.Model):
 class TicketCartManager(models.Manager):
     def new_or_get(self, request, event):
         cart_id = request.session.get("ticket_cart_id", None)
-        qs = self.get_queryset().filter(id=cart_id).filter(event=event)
+        qs = self.get_queryset().filter(id=cart_id)
         if qs.count() == 1:
             new_obj = False
             cart_obj = qs.first()
@@ -139,9 +139,14 @@ class ticketItem(models.Model):
     quantity    = models.IntegerField(default=1)
     guests      = models.ManyToManyField(Guest, blank=True)
     event       = models.ForeignKey(Event, null=True, blank=True, on_delete=models.SET_NULL)
+    
     def subtotal(self):
         return self.ticket.price
-    
+
+    def get_total(self):
+        total = self.ticket.price * self.quantity
+        return total
+        
     @property
     def get_guests(self):
         return range(self.quantity)
