@@ -31,8 +31,6 @@
 {% url 'news' as news_url %}
 {% url 'shop' as shop_url %}
 {% url 'merchandise:list' as merchandise_url %}
-{% url 'events:golf' as golf_url %}
-{% url 'events:art' as art_url %}
 {% url 'events:home' as events_url %}
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
@@ -654,10 +652,10 @@
         <div class="row" style="padding-top: 30px">
           <h6 class="center-align" style="color: #149e0f; margin-bottom: 50px;">Join Us for ETV's 2022 Signature Events</h6>
           <div class="col s12 m6">
-            <a href="{{ art_url }}"><img class="z-depth-2" src="{% static 'img/loa-2021.png' %}" style="width: 100%"></a>
+            <a href="events/love-of-art-fundraiser/"><img class="z-depth-2" src="{% static 'img/loa-2021.png' %}" style="width: 100%"></a>
           </div>
           <div class="col s12 l6">
-            <a href="{{ golf_url }}" style="margin-bottom: 20px"><img class="z-depth-2" src="{% static 'img/golf-savethedate.png' %}" style="width: 100%; margin-top: 0px"></a>
+            <a href="events/power-swing-classic/" style="margin-bottom: 20px"><img class="z-depth-2" src="{% static 'img/golf-savethedate.png' %}" style="width: 100%; margin-top: 0px"></a>
             <br>
             <iframe style="margin-top: 30px" class="z-depth-1" width="100%" height="415" src="https://www.youtube.com/embed/-JaP0OkWUoQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             <br>
