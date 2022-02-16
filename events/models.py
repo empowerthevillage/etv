@@ -22,6 +22,7 @@ class Event(models.Model):
     subtitle        = models.CharField(max_length=270, null=True, blank=True)
     content         = HTMLField(null=True, blank=True)
     slug            = models.SlugField()
+    checkout_image  = models.ImageField(blank=True, null=True)
     date            = models.DateTimeField(blank=True, null=True)
     start_date      = models.DateField(blank=True, null=True)
     end_date        = models.DateField(blank=True, null=True)
@@ -42,6 +43,10 @@ class Event(models.Model):
             return True
         else:
             return False
+
+    @property
+    def get_checkout_img_path(self):
+        return 'https://d1z669787inm16.cloudfront.net/media/%s' %(self.checkout_image)
 
 def event_pre_save_receiver(sender, instance, *args, **kwargs):
     if not instance.slug:
