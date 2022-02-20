@@ -87,8 +87,8 @@
                   <form id="sponsor-form">
                     <table>
                         <tbody>
-                            {% for x in cart_sponsor_items %}
-                            <tr class="row ticket-row">
+                          {% for x in cart_sponsor_items %}
+                            <tr class="row ticket-row" style="max-width: 100%">
                                 <td class="col s12 m9">
                                     <p class="ticket-title">{{ x.type.title }}</p>
                                     <p class="ticket-price">${{ x.type.price }}</p>
@@ -114,7 +114,7 @@
                                     </div>
                                 </td>
                             </tr>
-                        {% endfor %}
+                          {% endfor %}
                         </tbody>
                     </table>
                 </form>
@@ -404,7 +404,8 @@
     margin-left: 20px
   }
     .summary-card {
-      background: white
+      background: white;
+      padding: 2% !important
     }
     .secure {
         font-size: 14px;
@@ -495,6 +496,7 @@
     .modal-summary-title {
         font-family: oskar;
         font-size: 28px;
+        margin-top: 10px
     }
     .ticket-title {
         font-family: oskar;
