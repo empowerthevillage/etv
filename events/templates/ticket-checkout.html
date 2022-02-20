@@ -9,7 +9,7 @@
 <div id="page">
     <div id="overlay" style="padding: 5% 2%">
       <div class="row center-align" style="border-bottom: dotted 1px rgb(233, 233, 233); padding-bottom: 2%; margin-bottom: 2%">
-        <a class="valign-wrapper" href="/events/love-of-art-fundraiser"><i class="material-icons" style="font-size: 16px">arrow_back</i>&nbsp; Event Details</a>
+        <a class="valign-wrapper" href="{{ event.get_absolute_url }}"><i class="material-icons" style="font-size: 16px">arrow_back</i>&nbsp; Event Details</a>
         <h6 class="modal-title">{{ event.title }}</h6>
         {% if event.subtitle is not None %}
         <h6 class="modal-title" style="color: black">{{ event.subtitle }}</h6>
