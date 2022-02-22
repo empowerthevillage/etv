@@ -9,7 +9,7 @@
 <div id="page">
     <div id="overlay" style="padding: 5% 2%">
       <div class="row center-align" style="border-bottom: dotted 1px rgb(233, 233, 233); padding-bottom: 2%; margin-bottom: 2%">
-        <a class="valign-wrapper" href="{{ event.get_absolute_url }}"><i class="material-icons" style="font-size: 16px">arrow_back</i>&nbsp; Event Details</a>
+        <a class="valign-wrapper" href="/events/love-of-art-fundraiser"><i class="material-icons" style="font-size: 16px">arrow_back</i>&nbsp; Event Details</a>
         <h6 class="modal-title">{{ event.title }}</h6>
         {% if event.subtitle is not None %}
         <h6 class="modal-title" style="color: black">{{ event.subtitle }}</h6>
@@ -24,10 +24,11 @@
         <div class="col s12 l6">
           <form id="ticket-form">
               <input type="hidden" eventTitle="{{ event.title }}" id="event-title">
-
+            <table>
+                <tbody>
                     {% for x in cart_sponsor_items %}
-                        <div class="row ticket-row">
-                            <div class="col s12 m9">
+                        <tr class="row ticket-row">
+                            <td class="col s12 m9">
                                 <p class="ticket-title">{{ x.type.title }}</p>
                                 {% if x.type.on_sale %}
                                 <p class="ticket-price"><b style="text-decoration: line-through; font-weight:400">${{ x.type.price }}</b> <b class="sale">&nbsp${{ x.type.sale_price }}</b> - {{ x.type.sale_description }}</p>
@@ -35,8 +36,8 @@
                                 <p class="ticket-price">${{ x.type.price }}</p>
                                 {% endif %}
                                 <p class="ticket-description">{{ x.type.description }}</p>
-                            </div>
-                            <div class="col s12 m3">
+                            </td>
+                            <td class="col s12 m3">
                                 <div class="input-field ticket-quantity-input" id="{{ x.type.pk }}-select">
                                     <select class="qty-counter" tid="{{ x.type.pk }}" id="{{ x.type.pk }}-counter">
                                         {% for number in x.quantity_list %}
@@ -54,26 +55,28 @@
                                     </select>
                                     <label>Quantity</label>
                                 </div>
-                              </div>
-                          </div>
+                            </td>
+                        </tr>
                     {% endfor %}
-                    <div class="row ticket-row">
-                        <div class="col s12">
+                    <tr class="row ticket-row">
+                        <td class="col s12">
                             <p class="ticket-title">{{ event.title }} Donation</p>
                             <p class="ticket-description"></p>
                             
-                        </div>
-                        <div class="col s5">
+                        </td>
+                        <td class="col s4">
                             <div class="input-field">
                                 <input type="text" id="custom-donation-1" placeholder="$">
                                 <label for="custom-donation-1">Enter Amount</label>
                                 
-                            </div>
-                        </div>
-                        <div class="col s6" id="donation-add">
+                              </div>
+                        </td>
+                        <td class="col s7" id="donation-add">
                           <div class="btn hidden grey darken-4" id="custom-donation-add">Add to Cart</div>
-                        </div>
-                    </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
           </form>
             <ul class="collapsible popout">
               <li class="active">
@@ -476,10 +479,8 @@
     #ticket-form {
         margin-top: 5%;
     }
-    .ticket-row {
-      border-bottom: solid 1px rgb(221, 221, 221);
-      padding-top: 10px;
-      padding-bottom: 10px
+    .ticket-row td {
+        padding: 0 !important
     }
     .ticket-row p {
         margin: 2px;

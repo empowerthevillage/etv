@@ -391,6 +391,8 @@ def ticket_nb(request):
         email = request.POST.get('email')
         request.session['guest_email'] = email
         billing_profile, billing_profile_created = BillingProfile.objects.new_or_get(request)
+    else:
+        email = billing_profile.email
     event_pk = request.POST.get('event')
     event = Event.objects.filter(pk=event_pk).first()
     cart_obj = TicketCart.objects.new_or_get(request, event)
@@ -414,4 +416,5 @@ def ticket_nb(request):
             for i in range(batch_size):
                 new_ticket = SingleTicket.objects.create(type=ticket, billing_profile=billing_profile, email=email, guest_list=guest_list)
                 ticket_list.append(new_ticket)
-    return HttpResponseRedirect(request.path_info)
+        sweetify.success(request, title='Thank you!', icon='success', text="Your tickets will be emailed to you shortly!", button='OK', timer=4000)
+    return redirect('events:home')
