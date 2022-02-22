@@ -24,7 +24,7 @@ def upload_image_path(instance, filename):
     final_filename = '{new_filename}{ext}'.format(new_filename=new_filename, ext=ext)
     return "vbp/{new_filename}/{final_filename}".format(new_filename=new_filename, final_filename=final_filename)
 
-STATE_CHOICES = (
+STATE_CHOICES = [
     ('AL', 'Alabama'),
     ('AK', 'Alaska'),
     ('AZ', 'Arizona'),
@@ -76,8 +76,8 @@ STATE_CHOICES = (
     ('WV', 'West Virginia'),
     ('WI', 'Wisconsin'),
     ('WY', 'Wyoming'),
-)
-CATEGORY_CHOICES = (
+]
+CATEGORY_CHOICES = [
     ('beauty','Beauty & Personal Grooming'),
     ('books', 'Books & Publishing'),
     ('cars', 'Cars & Automotive'),
@@ -111,11 +111,11 @@ CATEGORY_CHOICES = (
     ('transportation', 'Transportation & Trucking'),
     ('visual', 'Visual & Performing Arts | Culture'),
     ('other', 'Other'),
-)
+]
 
 class vbpManager(models.Manager):
     def get_queryset(self):
-        return super().get_queryset().filter(approved=False)
+        return super().get_queryset().filter(approved=True)
 
 class vbp(models.Model):
     directory_source  = models.CharField(max_length=200, null=True, blank=True)

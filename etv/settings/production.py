@@ -100,13 +100,14 @@ INSTALLED_APPS = [
     'policy',
     'prosperity',
     'phone_field',
-    'vbp',
     'scraper',
     'social_django',
     'sweetify',
     'storages',
     'tinymce',
     'whitenoise.runserver_nostatic',
+    'vbp',
+    'vbpus',
     'ven',
 ]
 

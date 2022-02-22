@@ -157,6 +157,7 @@ def event_ticket_checkout(request, slug):
         "shipping_addresses":shipping_addresses,
         "shipping_id": shipping_address_id,
         "billing_addresses":billing_addresses,
+        "states": STATE_CHOICES
     }
     return render(request, "ticket-checkout.html", context)
 
@@ -228,6 +229,7 @@ def event_sponsor_checkout(request, slug):
         "shipping_addresses":shipping_addresses,
         "shipping_id": shipping_address_id,
         "billing_addresses":billing_addresses,
+        "states": STATE_CHOICES
     }
     return render(request, "sponsor-checkout.html", context)
 

@@ -391,7 +391,9 @@ def ticket_nb(request):
         email = request.POST.get('email')
         request.session['guest_email'] = email
         billing_profile, billing_profile_created = BillingProfile.objects.new_or_get(request)
-    cart_obj = TicketCart.objects.new_or_get(request)
+    event_pk = request.POST.get('event')
+    event = Event.objects.filter(pk=event_pk).first()
+    cart_obj = TicketCart.objects.new_or_get(request, event)
     amount = str(cart_obj.total)
     nonce = request.POST.get('nonce')
     guest_list = request.POST.get('guestList')
