@@ -326,7 +326,7 @@
                         </div>
                         {% endif %}
                     </div>
-                        
+                    <input type="hidden" value="{{ event.pk }}" id="event-hidden-input-sponsor">
                         <div class="col s12 m10 offset-m1 xl6 offset-xl3" style="padding-left:0; padding-right: 0">
                         
                         <div class="center-align">
@@ -1435,6 +1435,7 @@
       var nonce = $('#nonce-input').val()
       var deviceData = $('device-data-input').val()
       var csrf_token = $('[name="csrfmiddlewaretoken"]').val()
+      var event = $('#event-hidden-input-sponsor').val()
       data = {
         csrfmiddlewaretoken: csrf_token,
         'guestList': guestList,
@@ -1443,6 +1444,7 @@
         'billing_address': billing_address,
         'sponsorGuests': sponsorGuests,
         'email': $('input[name=email]').val(),
+        'event': event
       }
       $.ajax({
         url: '/cart/ticket-nb',

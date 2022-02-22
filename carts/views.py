@@ -16,6 +16,7 @@ from itertools import islice
 import braintree
 import shippo
 import sweetify
+from django.core.mail import send_mail
 
 shippo.config.api_key = settings.SHIPPO_KEY
 User = settings.AUTH_USER_MODEL
@@ -417,4 +418,11 @@ def ticket_nb(request):
                 new_ticket = SingleTicket.objects.create(type=ticket, billing_profile=billing_profile, email=email, guest_list=guest_list)
                 ticket_list.append(new_ticket)
         sweetify.success(request, title='Thank you!', icon='success', text="Your tickets will be emailed to you shortly!", button='OK', timer=4000)
+        send_mail(
+            'New %s Ticket Purchase' %(event),
+            str('A ticket purchase has been successfully processed! Purchaser: '+ str(email)),
+            'etvnotifications@gmail.com',
+            ['chandler@eliftcreations.com', 'admin@empowerthevillage.org', 'ayo@empowerthevillage.org'],
+            fail_silently=True
+        )
     return redirect('events:home')
