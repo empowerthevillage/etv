@@ -6,7 +6,8 @@ def home_page(request):
     form = BusinessForm()
     context = {
         'nomination_form': form,
-        'title':'ETV | Home',
+        'title':'Empower The Village',
+        'seo_description': 'Empower The Village, Inc. (ETV) is a data-driven nonprofit 501(c)(3) organization founded in 2018 to develop, guide and implement breakthrough, scalable strategies that empower Black people, businesses and community organizations to realize their full potential.'
     }
     return render(request, "home copy.html", context)
 
