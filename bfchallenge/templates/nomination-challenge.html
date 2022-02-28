@@ -6,17 +6,17 @@
 <div id="page">
   <div class="backpage">
     <div class="row center-align" style="margin-top:0px">
-      <div class="col s10 offset-s1 login-card">
+      <div class="col s12 m10 offset-m1 login-card">
         <h6 id="vbp-nomination-form-title">Village Black Pages™ Nomination Form</h6>
         <p class="right-align" style="margin-top: 0; margin-bottom: 0; margin-right: 50px;"><b class="required">*</b> = required field</p>
           <form method="POST" style="padding-left:10%; padding-right:10%;" id="nomination-form">
             {% csrf_token %}
             <div class="row" style="margin-bottom: 0">
-              <div class="input-field col s12 m5 l6">
+              <div class="input-field col s12 l6">
                 {{ nomination_form.business_name }}
                 <label>{{ nomination_form.business_name.label }}<b>*</b></label>
               </div>
-              <div class="input-field col s12 m7 l6">
+              <div class="input-field col s12 l6">
                 {{ nomination_form.owner_name }}
                 <label>{{ nomination_form.owner_name.label }}<b></b></label>
               </div>
@@ -51,11 +51,11 @@
           </p>
           </div>
             <div class="row">
-              <div class="input-field col s6 l4">
+              <div class="input-field col s12 m6 l4">
                 {{ nomination_form.city }}
                 <label>{{ nomination_form.city.label }}<b>*</b></label>
               </div>
-              <div class="input-field col s6 l4"  id="state-select">
+              <div class="input-field col s12 m6 l4"  id="state-select">
                   <select name="state">
                     <option value="" disabled selected>State</option>
                     {% for x,y in states %}
@@ -129,13 +129,13 @@
             {% if user.is_authenticated %}
             {% else %}
             <div class="row">
-              <div class="input-field col s6">
+              <div class="input-field col s12 m6">
                 {{ nomination_form.nominator_name }}
                 <label>{{ nomination_form.nominator_name.label }}<b>*</b></label>
               </div>
-              <div class="input-field col s6">
+              <div class="input-field col s12 m6">
                 {{ nomination_form.nominator_email }}
-                <label>{{ nomination_form.nominator_email.label }}<b>*</b></label>
+                <label>Your Email<b>*</b></label>
               </div>
             </div>
             {% endif %}
@@ -151,12 +151,25 @@
   
   <style>
     .online-span {
-      margin-bottom: 30px
+      margin-bottom: 50px;
+      line-height: 10px
     }
+    .backpage {
+        width: 100% !important;
+        margin-left: 0%
+      }
+      .login-card {
+        
+        padding-top:20px !important; 
+        padding-bottom:40px !important; 
+        padding-left: 10px !important; 
+        padding-right: 10px !important;
+      }
     @media only screen and (min-width: 663px){
       .online-span {
-      margin-bottom: 0
-    }
+        margin-bottom: 10px;
+        line-height: 10px
+      }
       .login-card {
         
         padding-top:20px !important; 
@@ -175,6 +188,10 @@
       }
     }
     @media only screen and (min-width: 992px){
+      .online-span {
+        margin-bottom: 5px;
+        line-height: 10px
+      }
       .login-card {
         padding-top:50px !important; 
       }
