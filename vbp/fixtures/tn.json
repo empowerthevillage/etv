@@ -1,0 +1,5189 @@
+[
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Hunnee Bz",
+      "website": "http://hunneebz.com",
+      "city": "Antioch",
+      "phone": "",
+      "category": "beauty",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Bath & Body "
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Kinky Rootz Salon",
+      "website": "http://www.kinkyrootzsalon.com",
+      "city": "Antioch",
+      "phone": "(615) 605-6070",
+      "category": "beauty",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Beauty Salon "
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Liyah's Lips Beauty Co.",
+      "website": "http://www.liyahslips.com",
+      "city": "Antioch",
+      "phone": "(615) 546-0220",
+      "category": "beauty",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Cosmetics"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "NAPPY HAIR IS HAPPY HAIR",
+      "website": "http://www.nappyhairishappyhair.com",
+      "city": "Bartlett",
+      "phone": "(901) 826-6885",
+      "category": "beauty",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Beauty Supply/Hair & Accessories "
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Beynaturalz",
+      "website": "https://manghanea.wix.com/gmttinc",
+      "city": "Chattanooga",
+      "phone": "(423) 432-5066",
+      "category": "beauty",
+      "owner_name": "",
+      "owner_email": " gmttinc@outlook.com",
+      "subcategory": "Bath & Body "
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Blue Boy Barber Shop",
+      "website": "",
+      "city": "Chattanooga",
+      "phone": "(423) 756-3716",
+      "category": "beauty",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Barber "
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "NATTY NATURALS",
+      "website": "https://www.nattynaturals.com",
+      "city": "Chattanooga",
+      "phone": "",
+      "category": "beauty",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Bath & Body "
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Three Notes",
+      "website": "http://www.threenotes.com",
+      "city": "Collierville",
+      "phone": "",
+      "category": "beauty",
+      "owner_name": "",
+      "owner_email": "service@threenotes.com",
+      "subcategory": "Bath & Body "
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Bush Whackd",
+      "website": "http://www.bushwhackd.com",
+      "city": "Cordova",
+      "phone": "(901) 310-5144",
+      "category": "beauty",
+      "owner_name": "",
+      "owner_email": "info@bushwhackd.com",
+      "subcategory": "Bath & Body "
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "HerMane",
+      "website": "",
+      "city": "Cordova",
+      "phone": "(901) 438-0847",
+      "category": "beauty",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Beauty Supply/Hair & Accessories "
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Studio Stylize Professional Salon",
+      "website": "",
+      "city": "Cordova",
+      "phone": "(901) 755-7447",
+      "category": "beauty",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Beauty Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Whimsicalclaws",
+      "website": "https://www.whimsicalclaws.com",
+      "city": "Cordova",
+      "phone": "(901) 267-4372",
+      "category": "beauty",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": " Nails "
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Zuuri",
+      "website": "",
+      "city": "Cordova",
+      "phone": "(901) 401-0350",
+      "category": "beauty",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Beauty Supply"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Black Star Beauty Supply",
+      "website": "",
+      "city": "Dyersburg",
+      "phone": "(731) 589-1993",
+      "category": "beauty",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Beauty Supply"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "All Things Curly",
+      "website": "",
+      "city": "Hermitage",
+      "phone": "(615) 512-8043",
+      "category": "beauty",
+      "owner_name": "",
+      "owner_email": "\nallthingscurly@gmail.com",
+      "subcategory": "Beauty Supply/Hair & Accessories "
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Garfield W Mcmahan",
+      "website": "",
+      "city": "Knoxville",
+      "phone": "(865) 525-6225",
+      "category": "beauty",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Barber "
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Mousie's Eyebar & Salon",
+      "website": "",
+      "city": "Knoxville",
+      "phone": "(865) 748-8788",
+      "category": "beauty",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Beauty Salon "
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Natural Aesthetics Diverse Studio",
+      "website": "https://nadiversestudio.com/",
+      "city": "Knoxville",
+      "phone": "(706) 589-1745",
+      "category": "beauty",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Beauty Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Saleem & Sons Barber Shop",
+      "website": "",
+      "city": "Knoxville",
+      "phone": "(865) 523-4582",
+      "category": "beauty",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Barber"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Naturally You Salon",
+      "website": "http://www.naturallyyousalon.com",
+      "city": "Madison",
+      "phone": "(615) 485-6936",
+      "category": "beauty",
+      "owner_name": "",
+      "owner_email": "ebonee@naturallyyousalon.com",
+      "subcategory": "Beauty Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "PlezingScents 4u",
+      "website": "https://plezingscents4u.net/",
+      "city": "Madison",
+      "phone": " (615) 500-3177",
+      "category": "beauty",
+      "owner_name": "",
+      "owner_email": "rbuchanan@plezingscents4u.net",
+      "subcategory": "Bath & Body "
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "A Natural Hair Affair",
+      "website": "http://anaturalaffair.com",
+      "city": "Memphis",
+      "phone": "(901) 320-6300",
+      "category": "beauty",
+      "owner_name": "",
+      "owner_email": " anaturalaffair@gmail.com",
+      "subcategory": "Beauty Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Blands Barber And Beauty Salon",
+      "website": "",
+      "city": "Memphis",
+      "phone": "(901) 527-6695",
+      "category": "beauty",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Barber "
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "FaithOrganixs",
+      "website": "http://www.faithorganixs.com",
+      "city": "Memphis",
+      "phone": "(901) 614-3005",
+      "category": "beauty",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Bath & Body "
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Lip Addyct Cosmetics",
+      "website": "http://www.lipaddyct.com",
+      "city": "Memphis",
+      "phone": "(866) 582-0594",
+      "category": "beauty",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Cosmetics"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Napoleans Barber Shop",
+      "website": "",
+      "city": "Memphis",
+      "phone": "(901) 527-9992",
+      "category": "beauty",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Barber "
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "The Bubble Bistro",
+      "website": "http://www.bubblebistro.com",
+      "city": "Memphis",
+      "phone": "(901) 272-2300",
+      "category": "beauty",
+      "owner_name": "",
+      "owner_email": "info@bubblebistro.com",
+      "subcategory": "Bath & Body "
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Urban Indulgence Handmade",
+      "website": "https://theurbanindulgence.com/collections",
+      "city": "Memphis",
+      "phone": "(901) 730-6507",
+      "category": "beauty",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Bath & Body "
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Vibe Barber College",
+      "website": "",
+      "city": "Memphis",
+      "phone": "(901) 578-3995",
+      "category": "beauty",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Barber "
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Raw Goodness",
+      "website": "https://www.rawgoodness.org",
+      "city": "Murfreesboro",
+      "phone": "",
+      "category": "beauty",
+      "owner_name": "",
+      "owner_email": "rawgoodness1@gmail.com",
+      "subcategory": "Bath & Body "
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "The Natural Spot",
+      "website": "",
+      "city": "Murfreesboro",
+      "phone": "(615) 900-0407",
+      "category": "beauty",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Beauty Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Classic Hair Studio",
+      "website": "http://www.classichairstudio.com",
+      "city": "Nashville",
+      "phone": "(615) 506-4035",
+      "category": "beauty",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Beauty Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Foxie  Cosmetics",
+      "website": "https://foxiecosmetics.com",
+      "city": "Nashville",
+      "phone": "",
+      "category": "beauty",
+      "owner_name": "Kayla Bludglow",
+      "owner_email": "help@foxiebombs.com\n",
+      "subcategory": "Bath & Body "
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "K Taylor",
+      "website": "http://www.ktaylorhair.com",
+      "city": "Nashville",
+      "phone": "(615) 975-3336",
+      "category": "beauty",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Beauty Supply/Hair & Accessories"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "K'Cential Soaps & Skin Care",
+      "website": "http://www.kcentialsoaps.com",
+      "city": "Nashville",
+      "phone": "(615) 549-6459",
+      "category": "beauty",
+      "owner_name": "LaJuan Clark, Teresa King",
+      "owner_email": "info@kcentialsoaps.com",
+      "subcategory": "Bath & Body "
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Kiia Bath & Body",
+      "website": "https://www.etsy.com/shop/kiiabathbody",
+      "city": "Nashville",
+      "phone": "(615) 555-5555",
+      "category": "beauty",
+      "owner_name": "",
+      "owner_email": "kiiabathbody@yahoo.com",
+      "subcategory": "Bath & Body "
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Lash Me Good Lashes",
+      "website": "http://www.lashmegood.business.site",
+      "city": "Nashville",
+      "phone": "(615) 285-9168",
+      "category": "beauty",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Beauty Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "LocsnMore Natural Hair Salon",
+      "website": "https://www.locsnmorenaturals.com",
+      "city": "Nashville",
+      "phone": "(615) 977-0613",
+      "category": "beauty",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Beauty Salon "
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Luxe Salon",
+      "website": "http://www.luxesalontn.com",
+      "city": "Nashville",
+      "phone": "(615) 457-3467",
+      "category": "beauty",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Beauty Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Najeals Hair Studio",
+      "website": "https://www.schedulicity.com/scheduling/nhsjyw",
+      "city": "Nashville",
+      "phone": "(615) 593-8361",
+      "category": "beauty",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Beauty Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Natural Awakenings",
+      "website": "https://www.vagaro.com/naturalawakenings#.VHX7wEtIZzQ",
+      "city": "Nashville",
+      "phone": "(615) 669-1563",
+      "category": "beauty",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Beauty Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Neta's Naturals",
+      "website": "https://netasnatural.com",
+      "city": "Nashville",
+      "phone": "(615) 715-9064",
+      "category": "beauty",
+      "owner_name": "Martha Lupai",
+      "owner_email": "Martha@netasnatural.com",
+      "subcategory": "Bath & Body "
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "S & E African Hair Braiding Salon",
+      "website": "http://www.seafricanhairbraiding.com",
+      "city": "Nashville",
+      "phone": "(615) 321-9777",
+      "category": "beauty",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Beauty Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Showtime Barbershop",
+      "website": "",
+      "city": "Nashville",
+      "phone": "",
+      "category": "beauty",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Barber "
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Upscale Creations Barbershop",
+      "website": "http://www.upscalecreationsbarbershop.com",
+      "city": "Nashville",
+      "phone": "(615) 573-9028",
+      "category": "beauty",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Barber "
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Scents By Stephanie",
+      "website": "https://scents-by-stephani.myshopify.com",
+      "city": "Ooltewah",
+      "phone": "(423) 362-3661",
+      "category": "beauty",
+      "owner_name": "",
+      "owner_email": "sbs@epbfi.com",
+      "subcategory": "Bath & Body "
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Earth's Natural Life",
+      "website": "http://www.earthsnaturallife.com",
+      "city": "Savannah",
+      "phone": "(731) 727-8333",
+      "category": "beauty",
+      "owner_name": "",
+      "owner_email": "customersupport@earthsnaturallife.com",
+      "subcategory": "Bath & Body "
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Natural Cuties",
+      "website": "https://www.iamanaturalcutie.com/",
+      "city": "Memphis",
+      "phone": "",
+      "category": "books",
+      "owner_name": "Pametria Brown",
+      "owner_email": "iamanaturalcutie@gmail.com",
+      "subcategory": "Books & Publishing"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Alkebu lan Images (Book Store)",
+      "website": "http://www.alkebulanimages.com",
+      "city": "Nashville",
+      "phone": "(615) 321-4111",
+      "category": "books",
+      "owner_name": "",
+      "owner_email": "info@alkebulanimages.com",
+      "subcategory": "Book Store"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Airways Radiator & Car Care Service",
+      "website": "",
+      "city": "Memphis",
+      "phone": "(901) 743-8910",
+      "category": "cars",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Auto Repair/ Services "
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Blayde s Auto Service",
+      "website": "",
+      "city": "Memphis",
+      "phone": "(901) 324-5156",
+      "category": "cars",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": " Auto Repair/ Services "
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Hardaways Body Shop",
+      "website": "",
+      "city": "Memphis",
+      "phone": "(901) 785-1428",
+      "category": "cars",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": " Auto Repair/ Services "
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "K C Mobile Wash Service",
+      "website": "",
+      "city": "Memphis",
+      "phone": "(901) 489-0742",
+      "category": "cars",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": " Auto Repair/ Services "
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Lexus of Memphis",
+      "website": "",
+      "city": "Memphis",
+      "phone": "(901) 3349673",
+      "category": "cars",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": " Auto Dealership"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Major Master Muffler",
+      "website": "",
+      "city": "Memphis",
+      "phone": "(901) 743-9314",
+      "category": "cars",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Auto Repair/ Services "
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Mid City Body Works",
+      "website": "",
+      "city": "Memphis",
+      "phone": "(901) 728-4404",
+      "category": "cars",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Auto Repair/ Services "
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "S H Q Auto Body and Paint Shop",
+      "website": "",
+      "city": "Memphis",
+      "phone": "(901) 323-3548",
+      "category": "cars",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Auto Repair/ Services "
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Wells Brothers Auto",
+      "website": "",
+      "city": "Memphis",
+      "phone": "(901) 785-9530",
+      "category": "cars",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Auto Repair/ Services "
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Whitehaven Car Care Center",
+      "website": "",
+      "city": "Memphis",
+      "phone": "(901) 346-2791",
+      "category": "cars",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Auto Repair/ Services "
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Alpha Knight Janitorial Services",
+      "website": "",
+      "city": "Nashville",
+      "phone": "(615) 946-9137",
+      "category": "cleaning",
+      "owner_name": "",
+      "owner_email": "alphaknightjanitorialservices@gmail.com",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "HYDROCLEAN LLC",
+      "website": "https://hydrocleanllc.com/",
+      "city": "Jackson",
+      "phone": "(731) 437-0006",
+      "category": "cleaning",
+      "owner_name": "",
+      "owner_email": "m",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "A Total Cleaning Co,Inc.",
+      "website": "www.atotalcleaningcompany.com",
+      "city": "Memphis",
+      "phone": "(901) 335-4490",
+      "category": "cleaning",
+      "owner_name": "",
+      "owner_email": "atotalcleaningcompany@gmail.com",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Hood & Ducts Of Tennessee Fire Prevention",
+      "website": "",
+      "city": "Nashville",
+      "phone": "(615) 930-4773",
+      "category": "cleaning",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Deyo Boutique",
+      "website": "",
+      "city": "Clarksville",
+      "phone": "(731) 612-3222",
+      "category": "clothing",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Apparel "
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Sunshine Royalty Boutique",
+      "website": "https://www.sunshineroyaltyboutique.com",
+      "city": "Collierville",
+      "phone": "(901) 492-1703",
+      "category": "clothing",
+      "owner_name": "",
+      "owner_email": "sunshineroyaltyboutique@gmail.com",
+      "subcategory": "Apparel "
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Sisters&Co.",
+      "website": "",
+      "city": "Lebanon",
+      "phone": "(615) 480-8709",
+      "category": "clothing",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Apparel "
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "ARCH FOOTWEAR",
+      "website": "http://www.arch-usa.com/",
+      "city": "Memphis",
+      "phone": "(901) 605-5456",
+      "category": "clothing",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Footwear "
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "BeYOUtiful Boutique",
+      "website": "https://www.beyoutifulluxe.com/?fbclid=IwAR0rX-ZTAmLsbNK34ZnZeRl8MzGHY2d92lZhJkNnoeXdr0ZFSPJAHYCxne4",
+      "city": "Memphis",
+      "phone": "(865) 362-5937",
+      "category": "clothing",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Apparel "
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Fabulous Divaz Boutique",
+      "website": "http://www.fabulousdivaz.com",
+      "city": "Memphis",
+      "phone": "(901) 310-5344",
+      "category": "clothing",
+      "owner_name": "",
+      "owner_email": "fabulousdivazboutique@gmail.com",
+      "subcategory": "Apparel "
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Jenuinely Chic Boutique",
+      "website": "http://www.jenuinelychic.com",
+      "city": "Memphis",
+      "phone": "(901) 219-7477",
+      "category": "clothing",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Apparel "
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Kang Apparel",
+      "website": "https://www.kangapparel.com",
+      "city": "Memphis",
+      "phone": "",
+      "category": "clothing",
+      "owner_name": "Rodney Harris",
+      "owner_email": "",
+      "subcategory": "Apparel "
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Klassy Chics Boutique",
+      "website": "http://www.klassy-chic.com",
+      "city": "Memphis",
+      "phone": "(901) 779-3997",
+      "category": "clothing",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Apparel"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "MG Ballard Designs",
+      "website": "https://mgballard.com",
+      "city": "Memphis",
+      "phone": "(901) 249-3082",
+      "category": "clothing",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Apparel"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "New Tribe New Traditions",
+      "website": "https://www.etsy.com/shop/NewTribeNewTradition?ref=seller-platform-mcnav&fbclid=IwAR3Y9DOvTCYkGoFF8x69fXib8Ke0m70Jf5KO0zoQvnNdCOKr3ogs8-7KlbU",
+      "city": "Memphis",
+      "phone": "(901) 438-2272",
+      "category": "clothing",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Apparel"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Sir Eric'S Fashions",
+      "website": "",
+      "city": "Memphis",
+      "phone": "(901) 779-9506",
+      "category": "clothing",
+      "owner_name": "Byron Eric Harrison",
+      "owner_email": "",
+      "subcategory": "Apparel"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Style By Turn Her Style",
+      "website": "http://www.turnherstyle.com",
+      "city": "Memphis",
+      "phone": "(901) 651-8876",
+      "category": "clothing",
+      "owner_name": "",
+      "owner_email": "info@turnherstyle.com",
+      "subcategory": "Apparel"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Leisure & Labels",
+      "website": "http://www.leisureandlabels.com",
+      "city": "Murfreesboro",
+      "phone": "(629) 888-3938",
+      "category": "clothing",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Apparel"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "JazzyNash Mobile Shoetique",
+      "website": "http://www.jazzynash.com",
+      "city": "Nashville",
+      "phone": "(615) 784-5667",
+      "category": "clothing",
+      "owner_name": "Jasmine Darden, Samaki Nash",
+      "owner_email": "info@jazzynash.com",
+      "subcategory": "Footwear "
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Old School World",
+      "website": "http://www.OldSchoolWorld.com",
+      "city": "Nashville",
+      "phone": "(615) 485-2614",
+      "category": "clothing",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Apparel"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Peculiar People Clothing",
+      "website": "http://peculiarpplclothing.bigcartel.com/products",
+      "city": "Nashville",
+      "phone": "",
+      "category": "clothing",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Apparel"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Skinny Girl Attitude",
+      "website": "http://www.skinnygirlattitude.com",
+      "city": "Nashville",
+      "phone": " (931) 486-4086",
+      "category": "clothing",
+      "owner_name": "",
+      "owner_email": "skinnygirlattitude@gmail.com",
+      "subcategory": "Apparel"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Clever Raven LLC",
+      "website": "",
+      "city": "Chattanooga",
+      "phone": "(423) 254-0450",
+      "category": "construction",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Kennedy Services",
+      "website": "",
+      "city": "Clarksville",
+      "phone": "(931) 801-6432",
+      "category": "construction",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Appliance Repair"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Fultons Window Tint",
+      "website": "",
+      "city": "Memphis",
+      "phone": "(901)491-1981",
+      "category": "construction",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Hvac Firm Of Memphis",
+      "website": "",
+      "city": "Memphis",
+      "phone": "(901) 509-3535",
+      "category": "construction",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "HVAC"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Garner Installation Services LLC",
+      "website": "https://www.garnerinstallation.com",
+      "city": "Murfreesboro",
+      "phone": "(615) 626-3454",
+      "category": "construction",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Construction/Engineering"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Schaffhouser Electric",
+      "website": "https://www.schaffhouser.com/",
+      "city": "White House",
+      "phone": "(615) 325-8001",
+      "category": "construction",
+      "owner_name": "",
+      "owner_email": "johns@schaffhouserelectric.com",
+      "subcategory": "Electrical"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Lane College",
+      "website": "http://www.lanecollege.edu",
+      "city": "Jackson",
+      "phone": "(731) 4267-500",
+      "category": "education",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "It Takes A Village Learning Center",
+      "website": "https://shanna785.wixsite.com/ittakesavillage",
+      "city": "Maryville",
+      "phone": "",
+      "category": "education",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Tutoring/ Academic Planning "
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Asase Academy",
+      "website": "",
+      "city": "Memphis",
+      "phone": "(872) ACE-6923",
+      "category": "education",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Tutoring/ Academic Planning "
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Lemoyne-Owen College",
+      "website": "http://www.loc.edu",
+      "city": "Memphis",
+      "phone": "(901) 435-1000",
+      "category": "education",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Possip",
+      "website": "https://www.possipit.com",
+      "city": "Nashville",
+      "phone": "",
+      "category": "education",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Rosedale Baptist Church Child Care",
+      "website": "",
+      "city": "Nashville",
+      "phone": "(616) 255-9755",
+      "category": "education",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Tutoring/ Academic Planning"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Intriguing Journey Enterprise",
+      "website": "",
+      "city": "Chattanooga",
+      "phone": "(423) 300-6378",
+      "category": "electronics",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Design Pros Web Solutions",
+      "website": "https://www.designprowebsolutions.com",
+      "city": "Memphis",
+      "phone": "(901) 275-2749",
+      "category": "electronics",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Web Services"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Sophicware",
+      "website": "http://sophicware.com",
+      "city": "Nashville",
+      "phone": "(615) 258-5547",
+      "category": "electronics",
+      "owner_name": "Jurnell Cockhren",
+      "owner_email": "",
+      "subcategory": "Web Services"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Dijital Technologies",
+      "website": "http://www.dij.io",
+      "city": "Whiteville",
+      "phone": "(470) 231-9637",
+      "category": "electronics",
+      "owner_name": "",
+      "owner_email": "contact@dij.io",
+      "subcategory": "Software Development"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Chattanooga Segway and Bike Tours",
+      "website": "http://chattanoogasegwaytours.com",
+      "city": "Chattanooga",
+      "phone": "(423) 708-5051",
+      "category": "entertainment",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Urban Air Trampoline & Adventure Park",
+      "website": "http://www.urbanairtrampolinepark.com/trampoline-park-locations/cordova-tn/",
+      "city": "Cordova",
+      "phone": "(901) 334-9993",
+      "category": "entertainment",
+      "owner_name": "",
+      "owner_email": "mailto:info@urbanairtrampolinepark.com",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Urban Air Trampoline and Adventure Park",
+      "website": "https://www.urbanairtrampolinepark.com/locations/tennessee/cool-springs",
+      "city": "Franklin",
+      "phone": "(629) 401-3144",
+      "category": "entertainment",
+      "owner_name": "",
+      "owner_email": "mailto:info@urbanairparks.com",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Kbj Records",
+      "website": "http://www.kbjrecords.com",
+      "city": "Memphis",
+      "phone": "(888) 788-1860",
+      "category": "entertainment",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Media"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Linens By Mercedes",
+      "website": "https://www.facebook.com/LinensByMercedes",
+      "city": "Murfreesboro",
+      "phone": "(615) 987-6339",
+      "category": "entertainment",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Event Planning/Services"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Siti Productions LLC.",
+      "website": "",
+      "city": "Murfreesboro TN",
+      "phone": "(615) 631-4475",
+      "category": "entertainment",
+      "owner_name": "Amber Dorsey",
+      "owner_email": "Siti4productions@gmail.com ",
+      "subcategory": "Event Planning/Services"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Holy Mother of Monkeys",
+      "website": "https://holy-mother-of-monkeys.square.site",
+      "city": "Nashville",
+      "phone": "(901) 530-7915",
+      "category": "entertainment",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Paint and Sip"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Jess Events By Design",
+      "website": "http://www.jesseventsbydesign.com",
+      "city": "Nashville",
+      "phone": "(615) 499-6116",
+      "category": "entertainment",
+      "owner_name": "",
+      "owner_email": "jesseventsbydesign@gmail.com",
+      "subcategory": "Event Planning/Services"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Urban Air Trampoline & Adventure Park",
+      "website": "https://www.urbanairtrampolinepark.com/locations/tennessee/nashville",
+      "city": "Old Hickory",
+      "phone": "(615) 972-7172",
+      "category": "entertainment",
+      "owner_name": "",
+      "owner_email": "mailto:stephanie@urbanairnenashville.com",
+      "subcategory": "Event"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Okaeri Farms",
+      "website": "https://www.facebook.com/okaerifarms/",
+      "city": "Clarksville",
+      "phone": "",
+      "category": "farming",
+      "owner_name": "",
+      "owner_email": "farmquestions@okaerifarms.com",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Craft Farms",
+      "website": "https://www.craftorganization.org/",
+      "city": "Collierville",
+      "phone": "(901) 229-2812",
+      "category": "farming",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Craft Farms",
+      "website": "https://www.facebook.com/CraftFarms901/",
+      "city": "Collierville",
+      "phone": "901-229-2812",
+      "category": "farming",
+      "owner_name": "",
+      "owner_email": "CraftFarms901@gmail.com",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Ruby's Happy Farm",
+      "website": "https://rubyshappyfarm.com/",
+      "city": "Cross Plains",
+      "phone": "",
+      "category": "farming",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Lockard's Produce LLC",
+      "website": "",
+      "city": "Memphis",
+      "phone": "901-603-9124 ",
+      "category": "farming",
+      "owner_name": "",
+      "owner_email": "djlmorningsun@gmail.com",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Sneed Farm Inc. ",
+      "website": "",
+      "city": "Millington",
+      "phone": " (901) 835-2223",
+      "category": "farming",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Out the Mud Farm",
+      "website": "https://outthemudfarm.com/",
+      "city": "Murfreesboro",
+      "phone": "(615) 617-3159",
+      "category": "farming",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "SFE Land and Cattle Co.",
+      "website": "https://www.facebook.com/SFE-Land-and-Cattle-Co-100925281630974/",
+      "city": "Murfreesboro",
+      "phone": "(615) 308-7787",
+      "category": "farming",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Albion Street Farmers Market",
+      "website": "",
+      "city": "Nashville",
+      "phone": "(615) 605-0517",
+      "category": "farming",
+      "owner_name": "",
+      "owner_email": "albionstreetfm@gmail.com",
+      "subcategory": "Farmer's Market"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Good Drugs Farm",
+      "website": "http://www.gooddrugsfarm.com/",
+      "city": "Nashville",
+      "phone": "",
+      "category": "farming",
+      "owner_name": "",
+      "owner_email": "\ngooddrugsfarm@yahoo.com",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Plano Produce",
+      "website": "https://www.facebook.com/plano.produce.ky/",
+      "city": "Nashville",
+      "phone": "(270) 792-8548",
+      "category": "farming",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Smith Hatchery Farm",
+      "website": "https://www.facebook.com/Smith-Hatchery-Farm-600981213697930/",
+      "city": "Ooltewah",
+      "phone": "(423) 362-3661",
+      "category": "farming",
+      "owner_name": "",
+      "owner_email": "shf@epbfi.com",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Heniscity Farm",
+      "website": "https://www.facebook.com/HeniscityFarm",
+      "city": "Pegram",
+      "phone": "(423) 291-7001",
+      "category": "farming",
+      "owner_name": "",
+      "owner_email": "heniscityfarm@gmail.com",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Heniscity Farm ",
+      "website": "https://www.facebook.com/HeniscityFarm",
+      "city": "Pegram",
+      "phone": "(423) 291-7001",
+      "category": "farming",
+      "owner_name": "",
+      "owner_email": "heniscityfarm@gmail.com",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Cambridge Creek Ranch",
+      "website": "https://www.cambridgecreekranch.com",
+      "city": "Saulsbury",
+      "phone": "901-291-2274",
+      "category": "farming",
+      "owner_name": "",
+      "owner_email": "info@cambridgecreekranch.co",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Black Thumb Farm",
+      "website": "https://www.instagram.com/blkthumbfarm/",
+      "city": "",
+      "phone": "423-991-4198",
+      "category": "farming",
+      "owner_name": "",
+      "owner_email": " jhmckissic@gmail.com ",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Artreanna's Italian Ice",
+      "website": "https://artreannasitalianiceinc.appv.biz/",
+      "city": "Memphis",
+      "phone": "(901) 606-7403",
+      "category": "grocery",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Ice Cream Parlor"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Loaded & Stuffed",
+      "website": "https://facebook.com/loadedandstuffed",
+      "city": "Madison",
+      "phone": "(615) 640-1680",
+      "category": "grocery",
+      "owner_name": "",
+      "owner_email": "loaded.and.stuffed@gmail.com",
+      "subcategory": "Catering/Chef"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Roxie's Grocery",
+      "website": "https://roxie-s-grocery.hub.biz/",
+      "city": "Memphis",
+      "phone": "(901) 525-2817",
+      "category": "grocery",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "South Memphis Grocery",
+      "website": "https://www.facebook.com/SouthMemphisGrocery/about/?ref=page_internal",
+      "city": "Memphis",
+      "phone": "(901) 775-2135",
+      "category": "grocery",
+      "owner_name": "",
+      "owner_email": "southmemphisgrocery@gmail.com",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Sweet Magnolia Gelato Co.",
+      "website": "http://www.sweetmagnoliagelato.com/",
+      "city": "Memphis",
+      "phone": "(662) 313-6551",
+      "category": "grocery",
+      "owner_name": "",
+      "owner_email": "hugh@sweetmagnoliagelato.com",
+      "subcategory": "Ice Cream Parlor"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Kernels Gourmet Popcorn",
+      "website": "http://kernelsnashville.com",
+      "city": "Nashville",
+      "phone": "(615) 378-7674",
+      "category": "grocery",
+      "owner_name": "",
+      "owner_email": "aheater@kernelsnashville.com",
+      "subcategory": "Food Product/Brand"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Quintessential Sweets",
+      "website": "http://www.quintessentialsweets.com/",
+      "city": "Bartlett",
+      "phone": "(901) 361-3449",
+      "category": "grocery",
+      "owner_name": "",
+      "owner_email": "​info@quintessentialsweets.com",
+      "subcategory": "Bakery"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Taste of Perfection",
+      "website": "http://www.toptasteofperfection.com/#!",
+      "city": "Brentwood",
+      "phone": "(615) 480-6012",
+      "category": "grocery",
+      "owner_name": "",
+      "owner_email": "info@toptasteofperfection.com",
+      "subcategory": "Catering/Chef"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Dipped Fresh",
+      "website": "https://www.dippedfresh.com",
+      "city": "Chattanooga",
+      "phone": "(423) 490-9334",
+      "category": "grocery",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Specialy"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "The Peach Cobbler Factory",
+      "website": "http://www.peachcobblerfactory.com",
+      "city": "Chattanooga",
+      "phone": "(432) 206-9683",
+      "category": "grocery",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Bakery"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Juice & Rootz",
+      "website": "https://juiceandrootz.com/",
+      "city": "Clarksville",
+      "phone": "(931) 553-1045",
+      "category": "grocery",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Coffee/Tea/Beverages"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "The Pie Folks",
+      "website": "http://thepiefolks.com/",
+      "city": "Cordova",
+      "phone": "(901) 752-5454",
+      "category": "grocery",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Bakery"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Yin Yang Cupcake Bar",
+      "website": "https://bespokedessertbar.wixsite.com/yycb",
+      "city": "Johnson City",
+      "phone": "(615) 669-1494",
+      "category": "grocery",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Bakery"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Beale Street Brewing Co.",
+      "website": "http://bealestbrewing.com",
+      "city": "Memphis",
+      "phone": "",
+      "category": "grocery",
+      "owner_name": "",
+      "owner_email": "goodvibes@bealestbrewing.com",
+      "subcategory": "Alcohol"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Blues City Donuts",
+      "website": "https://www.facebook.com/BluesCityDonuts/",
+      "city": "Memphis",
+      "phone": "(901) 266-5152",
+      "category": "grocery",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Food Product/Brand"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Butteriffic Bakery & Cafe",
+      "website": "https://butterifficbakery.com",
+      "city": "Memphis",
+      "phone": "(901) 207-4618",
+      "category": "grocery",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Bakery"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Cupcake Cutie",
+      "website": "https://www.cupcakecutiesweets.com",
+      "city": "Memphis",
+      "phone": "(901) 443 5664",
+      "category": "grocery",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Bakery"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Feast and Graze",
+      "website": "https://www.feastandgraze.com/",
+      "city": "Memphis",
+      "phone": "(901) 654-5926",
+      "category": "grocery",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Specialty"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Grandma's Desserts Etc",
+      "website": "http://grandmasdesserts.com",
+      "city": "Memphis",
+      "phone": "(901) 458-2197",
+      "category": "grocery",
+      "owner_name": "",
+      "owner_email": "grandmasetc@yahoo.com",
+      "subcategory": "Bakery"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Guilt Free Pastries",
+      "website": "http://www.guiltfreepastries.com",
+      "city": "Memphis",
+      "phone": "(901) 563-2861",
+      "category": "grocery",
+      "owner_name": "",
+      "owner_email": "info@guiltfreepastries.com",
+      "subcategory": "Bakery"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Makedas Homemade Butter Cookies",
+      "website": "http://www.makedascookies.com/",
+      "city": "Memphis",
+      "phone": "(901) 572-1582",
+      "category": "grocery",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Food Product/Brand"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Margie's 901 Homemade Ice Cream",
+      "website": "https://sites.google.com/site/margies901homemadeicecream/contacts?authuser=0",
+      "city": "Memphis",
+      "phone": "(901) 522-1912",
+      "category": "grocery",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Ice Cream Parlor"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Muggin Coffee House",
+      "website": "http://www.muggincoffeehouse.com/",
+      "city": "Memphis",
+      "phone": "(901) 529-7759",
+      "category": "grocery",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Coffee/Tea/Beverages"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "My Cup Of Tea",
+      "website": "https://www.shopmycupoftea.com",
+      "city": "Memphis",
+      "phone": "(901) 614-9769",
+      "category": "grocery",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Coffee/Tea/Beverages"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Phillip Ashley Chocolates",
+      "website": "http://www.phillipashleychocolates.com",
+      "city": "Memphis",
+      "phone": "(901) 572-1011",
+      "category": "grocery",
+      "owner_name": "",
+      "owner_email": "sales@phillipashley.com",
+      "subcategory": "Specialty"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "The Cheesecake Corner",
+      "website": "",
+      "city": "Memphis",
+      "phone": "(901) 525-2253",
+      "category": "grocery",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Food Product/Brand"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Two Vegan Sistas",
+      "website": "http://www.twovegansistas.com/",
+      "city": "Memphis",
+      "phone": "(800) 984-0379",
+      "category": "grocery",
+      "owner_name": "",
+      "owner_email": "twovegansistas@gmail.com",
+      "subcategory": "Catering/Chef"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Big Al's Deli & Catering",
+      "website": "http://www.bigalsdeliandcatering.com/",
+      "city": "Nashville",
+      "phone": "(615) 242-8118",
+      "category": "grocery",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Catering/Chef"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Chef Batts Catering",
+      "website": "https://chefbatts.com/",
+      "city": "Nashville",
+      "phone": "(615) 613-7818",
+      "category": "grocery",
+      "owner_name": "Keith Batts",
+      "owner_email": "chefbatts@gmail.com",
+      "subcategory": "Catering/Chef"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Couture Cakes & Sweets",
+      "website": "https://designyouacake.com/",
+      "city": "Nashville",
+      "phone": "(615) 364-0017",
+      "category": "grocery",
+      "owner_name": "",
+      "owner_email": "couturecakestn@yahoo.com",
+      "subcategory": "Bakery"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Guidance Whiskey",
+      "website": "https://www.guidancewhiskey.com/",
+      "city": "Nashville",
+      "phone": "(615) 510-1149",
+      "category": "grocery",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Alcohol"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "HiFi Cookies",
+      "website": "https://www.hificookies.com/",
+      "city": "Nashville",
+      "phone": "(615) 401-9949",
+      "category": "grocery",
+      "owner_name": "",
+      "owner_email": "hello@hificookies.com",
+      "subcategory": "Bakery"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "K Sweets",
+      "website": "https://www.manta.com/c/mtr72wp/k-sweets?__cf_chl_captcha_tk__=61ad5c24e4e6e1b65d2fa7c6b779f97150496f59-1614094990-0-ARqe6fgA2iCTXis28iUY-t6EYIxFXe4NiQu2NJYXcAZNDilWK04WTdMFT0uqgR9deuzD--5zuc1Q2nBNDhfQtCOweR69Af5ehbJSxxV6uplQ8ymrD5YDOl1gwBO8nSv8DJfH-j92hF",
+      "city": "Nashville",
+      "phone": "(615) 484-6212",
+      "category": "grocery",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Kijiji Foods",
+      "website": "https://www.facebook.com/Kijiji-Foods-1868686100013136/",
+      "city": "Nashville",
+      "phone": "",
+      "category": "grocery",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Momma B's Tea & Lemonade, B & Kids Concessions",
+      "website": "",
+      "city": "Nashville",
+      "phone": "(615) 997-0731",
+      "category": "grocery",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Coffee/Tea/Beverages"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Morning Glory Donuts",
+      "website": "",
+      "city": "Nashville",
+      "phone": "(615) 775-3670",
+      "category": "grocery",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Food Product/Brand"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Perfectly Cordial",
+      "website": "http://www.perfectlycordial.com",
+      "city": "Nashville",
+      "phone": "(615) 268-9989",
+      "category": "grocery",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Alcohol"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Rated V",
+      "website": "",
+      "city": "Nashville",
+      "phone": "(615) 249-8683",
+      "category": "grocery",
+      "owner_name": "",
+      "owner_email": "ratedvee@gmail.com",
+      "subcategory": "Catering/Chef"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Robin's Berries",
+      "website": "https://facebook.com/robinholland1983",
+      "city": "Nashville",
+      "phone": "(615) 397-3948",
+      "category": "grocery",
+      "owner_name": "",
+      "owner_email": "hollandrobin@ymail.com",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Rolled 4 Ever Ice Cream",
+      "website": "https://www.rolled4ever.com/menu",
+      "city": "Nashville",
+      "phone": "(615) 712-9125",
+      "category": "grocery",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Ice Cream Parlor"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Sweet Creations Pie Shop",
+      "website": "https://facebook.com/SweetCreationsNashville",
+      "city": "Nashville",
+      "phone": "(615) 255-5519",
+      "category": "grocery",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Bakery"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "The Beignet Bar",
+      "website": "http://thebeignetbar.com",
+      "city": "Nashville",
+      "phone": "(615) 678-8330",
+      "category": "grocery",
+      "owner_name": "",
+      "owner_email": "info@thebeignetbar.com",
+      "subcategory": "Bakery"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "The Cake Project",
+      "website": "http://thecakeproject.com/",
+      "city": "Nashville",
+      "phone": "(615) 538-8271",
+      "category": "grocery",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Bakery"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "The Cupcake Collection",
+      "website": "http://www.thecupcakecollection.com",
+      "city": "Nashville",
+      "phone": "(615) 244-2900",
+      "category": "grocery",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Bakery"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "The Kupcake Barr",
+      "website": "https://www.thekupcakebarr.com",
+      "city": "Nashville",
+      "phone": "(484) 685-1617",
+      "category": "grocery",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Bakery"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "The Salted Table Co.",
+      "website": "https://thesaltedtable.com/salted-table-co/",
+      "city": "Nashville",
+      "phone": "(865) 591-1244",
+      "category": "grocery",
+      "owner_name": "Charles Hunter III",
+      "owner_email": "",
+      "subcategory": "Catering/Chef"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Uncle Nearest Whiskey",
+      "website": "https://unclenearest.com",
+      "city": "Shelbyville",
+      "phone": "(615) 928-1917",
+      "category": "grocery",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Alcohol"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Oatstraw Tea Company",
+      "website": "http://www.oatstrawteacompany.com",
+      "city": "TN.",
+      "phone": "",
+      "category": "grocery",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Coffee/Tea/Beverages"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Minds Matter",
+      "website": "http://www.mindsmattertn.org",
+      "city": "Clarksville 37043-5067",
+      "phone": "(931) 408-9909",
+      "category": "health",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Mental Health Support"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Revvl Health & Chiropractic",
+      "website": "https://www.revvlhealth.com",
+      "city": "Knoxville",
+      "phone": "(865) 675-2050",
+      "category": "health",
+      "owner_name": "",
+      "owner_email": "revvlhealth1@outlook.com",
+      "subcategory": "Chiropractor"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Any Body Yoga",
+      "website": "https://www.anybodyyogamemphis.com",
+      "city": "Memphis",
+      "phone": "(901) 619-4843",
+      "category": "health",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Fitness/Yoga"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "It Works (Healthy with Meredith)",
+      "website": "http://healthywithmeredith.myitworks.com",
+      "city": "Memphis",
+      "phone": "(901) 654-6593",
+      "category": "health",
+      "owner_name": "",
+      "owner_email": "healthywithmeredith@gmail.com",
+      "subcategory": "Nutrition"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Andante Day Spa",
+      "website": "",
+      "city": "Nashville",
+      "phone": "(615) 269-4555",
+      "category": "health",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Spa/Massage Therapy"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Pruitt's Discount Pharmacy",
+      "website": "https://www.pruittsdiscountpharmacy.com",
+      "city": "Nashville",
+      "phone": "(615) 378-3598",
+      "category": "health",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "The Yogi Bassist",
+      "website": "https://www.theyogibassist.com",
+      "city": "Nashville",
+      "phone": "",
+      "category": "health",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Fitness/Yoga"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Celestial Tribe Healing Co.",
+      "website": "https://celestialtribehealing.com",
+      "city": "Stanton",
+      "phone": "",
+      "category": "health",
+      "owner_name": "",
+      "owner_email": "cthealingco@gmail.com",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "MagikFlame",
+      "website": "https://magikflame.com/learning-center/fireplace-mantels/fireplace-mantels/",
+      "city": "La Vergne",
+      "phone": "(954) 389-9550",
+      "category": "home",
+      "owner_name": "",
+      "owner_email": "sales@magikflame.com",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Hampton Inn & Suites at Elliston Vanderbilt - Nashville, TN",
+      "website": "https://hamptoninn3.hilton.com/en/hotels/tennessee/hampton-inn-and-suites-nashville-vanderbilt-elliston-place-BNAUVHX/index.html",
+      "city": "Nashville",
+      "phone": "(61) 320-6060",
+      "category": "hotels",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Hospitality/Hotels/Inns"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Hampton Inn Vanderbilt",
+      "website": "https://hamptoninn3.hilton.com/en/hotels/tennessee/hampton-inn-nashville-vanderbilt-BNAVNHX/index.html",
+      "city": "Nashville",
+      "phone": "(615) 329-1144",
+      "category": "hotels",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Hospitality/Hotels/Inns"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Urban Cowboy B&B",
+      "website": "http://www.urbancowboybnb.com",
+      "city": "Nashville",
+      "phone": "(347) 840-0525",
+      "category": "hotels",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Hospitality/Hotels/Inns"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Chatt Taste",
+      "website": "https://chatttaste.com",
+      "city": "Chattanooga",
+      "phone": "(423) 910-9494",
+      "category": "hotels",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Tours"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Sacred Waters Retreats",
+      "website": "http://sacredwatersretreat.com",
+      "city": "Clarksville",
+      "phone": "(615) 669-4351",
+      "category": "hotels",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Hospitality/Hotels/Inns"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "A Tour Of Possibilities, Llc",
+      "website": "http://www.atopmemphis.com/",
+      "city": "Memphis",
+      "phone": "(901) 326-3736",
+      "category": "hotels",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Tours"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "United Street Tours",
+      "website": "http://www.unitedstreettours.com",
+      "city": "Nashville",
+      "phone": "(615) 965 9791",
+      "category": "hotels",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": " Tour"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Know Definition",
+      "website": "http://knowdefinition.com",
+      "city": "Memphis",
+      "phone": "",
+      "category": "jewelry",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Accessories/ Handbags "
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Everything Will Be Cute",
+      "website": "",
+      "city": "Brentwood",
+      "phone": "",
+      "category": "jewelry",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Accessories/ Handbags "
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Mo's Bows",
+      "website": "https://mosbowsmemphis.com",
+      "city": "Memphis",
+      "phone": "",
+      "category": "jewelry",
+      "owner_name": "Moziah Bridges",
+      "owner_email": "info@mosbowsmemphis.com",
+      "subcategory": "Accessories/ Handbags "
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "College Crib",
+      "website": "http://www.collegecrib.com",
+      "city": "Nashville",
+      "phone": "(615) 329-3885",
+      "category": "jewelry",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Tees"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Klutchfiend Boutique",
+      "website": "",
+      "city": "Nashville",
+      "phone": "(615) 779-3176",
+      "category": "jewelry",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Accessories/ Handbags "
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Windsor Neckties",
+      "website": "http://www.windsorneckwear.com",
+      "city": "Nashville",
+      "phone": "",
+      "category": "jewelry",
+      "owner_name": "",
+      "owner_email": "sales@windsor-neckwear.com",
+      "subcategory": "Accessories/ Handbags "
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "BD Financial Services, P.C.",
+      "website": "https://www.bdfinancialservicesinc.com",
+      "city": "Franklin",
+      "phone": "(615) 662-4440",
+      "category": "legal",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Financial Services"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "BANKS, FINLEY, WHITE & CO",
+      "website": "http://bfwcpa.com/",
+      "city": "Memphis",
+      "phone": "(901) 274-6702",
+      "category": "legal",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Financial Services"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Citizens Savings Bank & Trust",
+      "website": "http://www.bankcbn.com",
+      "city": "Memphis",
+      "phone": "(901) 754-7786",
+      "category": "legal",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Financial Services"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Jones Wealth Management Group",
+      "website": "https://www.joneswealthmgmt.com",
+      "city": "Memphis",
+      "phone": "(901) 312-9166",
+      "category": "legal",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Financial Services"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Tri-State Bank of Memphis ",
+      "website": "",
+      "city": "Memphis",
+      "phone": "(901) 398-1342",
+      "category": "legal",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Financial Services"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Citizens Savings Bank & Trust",
+      "website": "http://www.bankcbn.com",
+      "city": "Nashville",
+      "phone": "(615) 327-9787",
+      "category": "legal",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Financial Services"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Larry R. Williams, PLLC",
+      "website": "https://www.lrwlawfirm.com/nashville-personal-injury-lawyer",
+      "city": "Nashville",
+      "phone": "(615) 256-8880",
+      "category": "legal",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Legal Services (General)"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Miss O The Mobile Notary",
+      "website": "https://www.facebook.com/missothemobilenotary",
+      "city": "Nashville",
+      "phone": "(615) 933-1893",
+      "category": "legal",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Notary"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "One Drop Ink Tattoo Parlour and Gallery",
+      "website": "https://onedropink.com",
+      "city": "Nashville",
+      "phone": "(615) 649-1106",
+      "category": "lifestyle",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Piercings/Tattoos"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Shine Online Urban Marketplace",
+      "website": "http://www.shineoum.net",
+      "city": "Clarksville",
+      "phone": "(931) 274-7600",
+      "category": "marketing",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Advertising"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "FayeVaughn Creative",
+      "website": "https://www.fayevaughn.com",
+      "city": "Madison",
+      "phone": "(615) 953-6361",
+      "category": "marketing",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Marketing/Digital Marketing "
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Mperfection",
+      "website": "",
+      "city": "Memphis",
+      "phone": "(901) 620-9153",
+      "category": "marketing",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Branding/Graphic Design"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Jesterarts",
+      "website": "https://www.jesterarts615.com",
+      "city": "Nashville",
+      "phone": "(615) 796-6485",
+      "category": "marketing",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Branding/Graphic Design"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Vom Marketing Agency",
+      "website": "https://adiabuckley.wixsite.com/vom-marketing-agency",
+      "city": "Savannah",
+      "phone": "(731) 389-5103",
+      "category": "marketing",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Marketing/Digital Marketing "
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Dr. Thomas Caruthers",
+      "website": "",
+      "city": "Bolivar",
+      "phone": "(731) 658-3388",
+      "category": "medical",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "OB/GYN"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Dr. Emily Reeves-Douglas",
+      "website": "",
+      "city": "Chattanooga",
+      "phone": "(423) 894-1355",
+      "category": "medical",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "OB/GYN"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Safe Job Solutions",
+      "website": "https://www.safejobsolutions.com",
+      "city": "Chattanooga",
+      "phone": "(888) 544-9082",
+      "category": "medical",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "KCA Neurology",
+      "website": "https://kcaneurology.com/location-and-hours/",
+      "city": "Clarksville",
+      "phone": "(615) 550-1800",
+      "category": "medical",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Dr. Lane Williams",
+      "website": "",
+      "city": "Jackson",
+      "phone": "(731) 668-4455",
+      "category": "medical",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "OB/GYN"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Dr. Claudette Shephard",
+      "website": "",
+      "city": "Jefferson",
+      "phone": "(706) 650-0705",
+      "category": "medical",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "OB/GYN"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "TLC Dental Care",
+      "website": "https://tlcdentalcare.net/",
+      "city": "Knoxville",
+      "phone": "(865) 247-5570",
+      "category": "medical",
+      "owner_name": "",
+      "owner_email": "mailto:Contact@DrCribbs.com",
+      "subcategory": "Dental/Orthodontics"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": " Center for Oral and Facial Surgery of Memphis",
+      "website": "",
+      "city": "Memphis",
+      "phone": "(901) 398-0793",
+      "category": "medical",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Dental/Orthodontics"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Arbor Stacie DDS",
+      "website": "https://dynamicdentalsmilesofmidtown.com",
+      "city": "Memphis",
+      "phone": "(901) 272-1065",
+      "category": "medical",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Dental/Orthodontics"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Braxton Family Dentistry",
+      "website": "https://www.facebook.com/Braxton-Family-Dentistry-LLC-341825389286004/",
+      "city": "Memphis",
+      "phone": "(90) 177-0870",
+      "category": "medical",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Dental/Orthodontics"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "BROWN, KAYE DR.",
+      "website": "",
+      "city": "Memphis",
+      "phone": "(901) 332-7111",
+      "category": "medical",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Dental/Orthodontics"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Center for Oral and Facial Surgery of Memphis",
+      "website": "",
+      "city": "Memphis",
+      "phone": "(901) 398-0793",
+      "category": "medical",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Dental/Orthodontics"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Dr. Barbara Duncan-Cody",
+      "website": "",
+      "city": "Memphis",
+      "phone": "(901) 278-1412",
+      "category": "medical",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "OB/GYN"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Dr. Charlie Spell, III DDS",
+      "website": "https://www.drcharliespell.com",
+      "city": "Memphis",
+      "phone": "(901) 794-3391",
+      "category": "medical",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Dental/Orthodontics"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Dr. Rani Lewis",
+      "website": "",
+      "city": "Memphis",
+      "phone": "(901) 515-4647",
+      "category": "medical",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "OB/GYN"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Fordjour, Isaac DDS",
+      "website": "",
+      "city": "Memphis",
+      "phone": "(901) 526-3988",
+      "category": "medical",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Dental/Orthodontics"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Glenn Howard DDS",
+      "website": "",
+      "city": "Memphis",
+      "phone": "(901) 789-4891",
+      "category": "medical",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Dental/Orthodontics"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Johnson Dean DDS",
+      "website": "",
+      "city": "Memphis",
+      "phone": "(901) 346-1171",
+      "category": "medical",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Dental/Orthodontics"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Morris, Keith, DDS",
+      "website": "",
+      "city": "Memphis",
+      "phone": "901-371-8850",
+      "category": "medical",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Dental/Orthodontics"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Sheats Endodontic Group",
+      "website": "https://www.sheats-endo.com/",
+      "city": "Murfreesboro",
+      "phone": "(615) 933-9999",
+      "category": "medical",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Dental/Orthodontics"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Dr. Cynthia Wesley",
+      "website": "",
+      "city": "Nashville",
+      "phone": "(615) 459-4441",
+      "category": "medical",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "OB/GYN"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Dr. Dineo Khabele",
+      "website": "",
+      "city": "Nashville",
+      "phone": "(615) 322-7311",
+      "category": "medical",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "OB/GYN"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Dr. Janice Whitty",
+      "website": "",
+      "city": "Nashville",
+      "phone": "(615) 327-6109",
+      "category": "medical",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "OB/GYN"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Dr. Phillip Bourne",
+      "website": "",
+      "city": "Nashville",
+      "phone": "(615) 327-6348",
+      "category": "medical",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "OB/GYN"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Reliable Pharmaceutical Returns",
+      "website": "http://www.rpreturns.com",
+      "city": "Nashville",
+      "phone": "(888) 361-8856",
+      "category": "medical",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Healthcare Products"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Indigo Scents Candle Co",
+      "website": "https://www.indigoscents.com",
+      "city": "Jackson",
+      "phone": "(731) 277-7493",
+      "category": "other",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Gifts & Stationery"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Kandles By Kierra",
+      "website": "http://www.kandlesbykierra.com",
+      "city": "Mt. Juliet",
+      "phone": "(931) 783-1024",
+      "category": "other",
+      "owner_name": "",
+      "owner_email": "http://www.citygirlsoapstn.com",
+      "subcategory": "Gifts & Stationery"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Citizens Safety Academy",
+      "website": "https://citizenssafety.com/",
+      "city": "Murfreesboro",
+      "phone": "(615) 801-8007",
+      "category": "other",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Guns & Shooting Ranges"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Simply Sweet Candle Co",
+      "website": "",
+      "city": "Nashville",
+      "phone": "(561) 880-7470",
+      "category": "other",
+      "owner_name": "",
+      "owner_email": "simplysweetcandleco@gmail.com",
+      "subcategory": "Gifts & Stationery"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Blue Square Logistics",
+      "website": "https://www.facebook.com/bluesquarelogistics/",
+      "city": "Memphis",
+      "phone": "(901) 213-4926",
+      "category": "packaging",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Shipping"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "No Worries Pet & Farm Sitting",
+      "website": "https://franklinpetsitting.com",
+      "city": "Franklin",
+      "phone": "(615) 595-8985",
+      "category": "pets",
+      "owner_name": "",
+      "owner_email": "jeffrilynhurst@gmail.com",
+      "subcategory": "Pet Sitting/Walking"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Keys to a Perfect Pup",
+      "website": "",
+      "city": "Nashville",
+      "phone": "(901) 530-7915",
+      "category": "pets",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Dog Training"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Quin Warfield Photography",
+      "website": "http://www.qwarfieldphotography.com/?fbclid=IwAR28dqYrFrFY2ugMo_8OP6vFlTcirHWb1oeBYaHoiYEX1UheiAE4LYaONkg",
+      "city": "Lavergne",
+      "phone": "",
+      "category": "photography",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Photography"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Tonya Osborne Photography",
+      "website": "https://www.tonyaosbornephoto.com",
+      "city": "Madison",
+      "phone": "(615) 873-0949",
+      "category": "photography",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Photography"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "On The Go Photo",
+      "website": "https://www.onthegophototn.com",
+      "city": "Memphis",
+      "phone": "(901) 859-2089",
+      "category": "photography",
+      "owner_name": "",
+      "owner_email": "onthegophototn@gmail.com",
+      "subcategory": "Photography"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "BCD Elegance Photography",
+      "website": "http://browncolourddoll.wixsite.com/bcd-elegance",
+      "city": "Millington",
+      "phone": "(901) 825-0238",
+      "category": "photography",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Photography"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "CJ Wells Photography",
+      "website": "https://www.facebook.com/cjwellsphotography/",
+      "city": "Nashville",
+      "phone": "(615) 479-3582",
+      "category": "photography",
+      "owner_name": "",
+      "owner_email": "cjwellsphotos@gmail.com",
+      "subcategory": "Photography"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Elle Danielle Photography",
+      "website": "http://elledanielle.com",
+      "city": "Nashville",
+      "phone": "",
+      "category": "photography",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Photography"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Jonathan Snorten Photography",
+      "website": "http://www.jonathansphotography.org",
+      "city": "Nashville",
+      "phone": "",
+      "category": "photography",
+      "owner_name": "",
+      "owner_email": "Jvedoll@gmail.com",
+      "subcategory": "Photography"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Roland's Photography",
+      "website": "http://www.rolandsphotography.net",
+      "city": "Nashville",
+      "phone": "(615) 579-3635",
+      "category": "photography",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Photography"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Sean Ponder Photography",
+      "website": "http://www.photographybyseanponder.com",
+      "city": "Nashville",
+      "phone": "",
+      "category": "photography",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Photography"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Baron Photography Llc",
+      "website": "http://www.baronstudios.com",
+      "city": "Ooltewah",
+      "phone": "(423) 472-9355",
+      "category": "photography",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Photography"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "HMI Corporation",
+      "website": "https://hmi-corp.com/revenue-cycle-management/",
+      "city": "Brentwood",
+      "phone": "(615) 661-5145",
+      "category": "professional",
+      "owner_name": "",
+      "owner_email": "hmicorp3@gmail.com",
+      "subcategory": "Consulting"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Devyne Business Consulting",
+      "website": "http://latresejefferson.wixsite.com/devynesbusiness",
+      "city": "Memphis",
+      "phone": "(901) 318-3635",
+      "category": "professional",
+      "owner_name": "",
+      "owner_email": "info@devynebusiness.com",
+      "subcategory": "Consulting"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "1608 Creatives",
+      "website": "http://www.1608creatives.com",
+      "city": "Nashville",
+      "phone": "(615) 200-0325",
+      "category": "professional",
+      "owner_name": "",
+      "owner_email": "info@1608creatives.com",
+      "subcategory": "Consulting"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Alpha Document Consulting Inc.",
+      "website": "",
+      "city": "Nashville",
+      "phone": "(865) 666-3713",
+      "category": "professional",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Consulting"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Mortgage Investors Group - Chattanooga Mortgage Lender",
+      "website": "http://www.migonline.com/chattanooga-mortgage-lender",
+      "city": "Chattanooga",
+      "phone": "(423) 899-2887",
+      "category": "real estate",
+      "owner_name": "",
+      "owner_email": "mailto:chattanooga@migonline.com",
+      "subcategory": "Mortgage Consulting"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Tennessee Property Liquidators",
+      "website": "https://www.tnpropertyliquidators.com/",
+      "city": "Knoxville",
+      "phone": "(865) 685-4985",
+      "category": "real estate",
+      "owner_name": "",
+      "owner_email": "landsafe225@gmail.com",
+      "subcategory": "Property Management"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Braden, Braden & Braden LLC",
+      "website": "www.bbbcre.com",
+      "city": "Memphis",
+      "phone": "(901) 881-2070",
+      "category": "real estate",
+      "owner_name": "",
+      "owner_email": "tbraden@bbbcre.com",
+      "subcategory": "Real Estate Agents/Brokers"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Adams Barbecue",
+      "website": "https://www.adamsbarbecue.com/",
+      "city": "Adams",
+      "phone": "(615) 638-2485",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Food Trucks/Carts"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Mayos Burgers And Wings",
+      "website": "http://places.singleplatform.com/mayos-burger-and-wings-29/menu",
+      "city": "Arlington",
+      "phone": "(901) 577-5777",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Chattanooga Cigar Club",
+      "website": "https://chattanoogacigarclub.com",
+      "city": "Chattanooga",
+      "phone": "(423) 498-3910",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Bar/Night Club"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Chatterbox Café",
+      "website": "http://Www.chatterbox423.com",
+      "city": "Chattanooga",
+      "phone": "(423) 322-4609",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Food Trucks/Carts"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Uncle Larry's Restaurant",
+      "website": "http://www.unclelarrysrestaurant.com",
+      "city": "Chattanooga",
+      "phone": "(423) 757-5894",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "BBQ/ Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Fat Shack Clarksville",
+      "website": "https://www.fatshack.com",
+      "city": "Clarksville",
+      "phone": "(931) 551-2141",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Fox's BBQ",
+      "website": "https://foxsbbq.com",
+      "city": "Clarksville",
+      "phone": "(931) 896-2678",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "BBQ/ Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Nuttin' But Wings",
+      "website": "https://www.nbwonline.com",
+      "city": "Clarksville",
+      "phone": "(931) 503-0357",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "BBQ/ Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Smoove's Grill",
+      "website": "https://www.facebook.com/smoovesgrilltn/",
+      "city": "Clarksville",
+      "phone": "(931) 378-7247",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "BBQ/ Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Sweet P's Southern Style",
+      "website": "",
+      "city": "Clarksville",
+      "phone": "(931) 368-9522",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "BBQ/ Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "The Kut Wings",
+      "website": "https://www.instagram.com/thekutwings/",
+      "city": "Clarksville",
+      "phone": "(931) 551-2141",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "BBQ/ Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Tropicana Restaurant",
+      "website": "http://places.singleplatform.com/tropicana-restaurant-10/menu?ref=google",
+      "city": "Clarksville",
+      "phone": "(931) 431-7642",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Caribbean Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Battleground South",
+      "website": "http://battlegroundsouth.com",
+      "city": "Columbia",
+      "phone": "(931) 584-2171",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "julian@battlegroundsouth.com",
+      "subcategory": "Cigars"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Papa Turney's old Fashioned BBQ",
+      "website": "https://papaturneysbbq.com/",
+      "city": "Erin",
+      "phone": "(931) 289-2151",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "BBQ/ Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Legin's House of Seafood",
+      "website": "https://www.facebook.com/LeginsHouseOfSeafood/",
+      "city": "Goodlettsville",
+      "phone": "(615) 401-0442",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Grocery & Food Products"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Hurt's Hot Chicken",
+      "website": "https://facebook.com/hurtshotchicken",
+      "city": "Hermitage",
+      "phone": " (615) 862-2327",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "hurtshotchicken@gmail.com",
+      "subcategory": "Food Trucks/Carts"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Chandler's Deli",
+      "website": "http://www.chandlersstore.com/page/page/5751245.htm",
+      "city": "Knoxville",
+      "phone": "(865) 595-0212",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "IDK Foods Crab Shack & More",
+      "website": "",
+      "city": "Knoxville",
+      "phone": "(865) 247-5776",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Pat's Cafe",
+      "website": "https://www.facebook.com/Pats-Cafe-and-Catering-Co-129623907068235/",
+      "city": "Lawrenceburg",
+      "phone": "(931) 762-7972",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "BBQ/ Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "99 Cent Soul Food Express",
+      "website": "      https://food.google.com/chooseprovider?restaurantId=/g/11hy9pfmsd&g2lbs=AGgkzMw67QOESUNgShwdHQgJ_zTRYl8eXOfG6S11_v-yOYS0HvhdggeKzEagiQC1MKUdgIXdJMs5AdVoW8Uh8pnFCFLjUk0nMw%3D%3D&hl=en-US&gl=us&ssta=1&fo_m=MfohQo559jFvMWwP9igWZeWQMczq7voErUdXMT_RFPQ05bfKMQVr5-7IofUJMU_hT8vrWuwRMUOzJVpjPL1YMfaXTPp5KXh-OAE%3D&gei=p0H8YfrcJaaoptQP7IKk8AY&fo_s=OA,AH&orderType=1&sei=CRGNxr5TXh2REWrA654jm7Uj&utm_campaign&utm_source=search",
+      "city": "Memphis",
+      "phone": "(901) 207-5124",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Food Trucks/Carts"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "A&R Bar-B-Que",
+      "website": "http://aandrbbq.com",
+      "city": "Memphis",
+      "phone": "(901) 774-7444",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "BBQ/ Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "African Restaurant",
+      "website": "",
+      "city": "Memphis",
+      "phone": "(902) 346-4611",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "West African Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Alcenia's",
+      "website": "https://www.alcenias.com/",
+      "city": "Memphis",
+      "phone": "(901) 523-0200",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "BBQ/ Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Arnold's BBQ and Grill",
+      "website": "https://www.facebook.com/ArnoldsBBQandGrill/about/?ref=page_internal",
+      "city": "Memphis",
+      "phone": "(901) 730-0290",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "BBQ/ Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "B.B. King's Blues Club (Memphis)",
+      "website": "http://www.bbkings.com/memphis",
+      "city": "Memphis",
+      "phone": "",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Bar/Night Club"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Bala's Bistro",
+      "website": "https://balasbistro.com/",
+      "city": "Memphis",
+      "phone": "901-509-3024",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "West African Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Ballhoggerz",
+      "website": "https://www.facebook.com/ballhoggerzbbq/about/?ref=page_internal",
+      "city": "Memphis",
+      "phone": "(901) 279-1758",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "BBQ/ Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Bar B Q Shop",
+      "website": "http://places.singleplatform.com/the-bar-b-q-shop-restaurant/menu?ref=google",
+      "city": "Memphis",
+      "phone": "(901) 272-1277",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "BBQ/ Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Best Wings of Memphis",
+      "website": "",
+      "city": "Memphis",
+      "phone": "(901) 458-7711",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Bones & Yams",
+      "website": "",
+      "city": "Memphis",
+      "phone": "(901) 779-8095",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "BBQ/ Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Chamber's Southern Smoke",
+      "website": "",
+      "city": "Memphis",
+      "phone": "",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "BBQ/ Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Chef Tam's Underground Cafe",
+      "website": "http://www.thecheftam.com/",
+      "city": "Memphis",
+      "phone": "(901) 207-2598",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "BBQ/ Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Clay's Smoked Tuna",
+      "website": "https://www.facebook.com/clayssmokedtuna/about/?ref=page_internal",
+      "city": "Memphis",
+      "phone": "(901) 848-5640",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Cozy Corner",
+      "website": "https://cozycornerbbq.com/",
+      "city": "Memphis",
+      "phone": "(901) 527-9158",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Food Trucks/Carts"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "D'bo's Wings N More",
+      "website": "http://www.dboswings.com",
+      "city": "Memphis",
+      "phone": "(901) 345-9464",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "DeeO's Seafood",
+      "website": "http://deeosseafood.net/",
+      "city": "Memphis",
+      "phone": "(901) 443-5312",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "East Memphis Pizza & Subs",
+      "website": "https://www.eastmemphispizzaandsubs.com/",
+      "city": "Memphis",
+      "phone": "(901) 794-9600",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Egg King Cafe",
+      "website": "https://www.facebook.com/Egg-King-Cafe-485809305154245/",
+      "city": "Memphis",
+      "phone": "(901) 249-3690",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Cafe"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Eggxactly Breakfast & Deli",
+      "website": "http://eggxactlymemphis.com",
+      "city": "Memphis",
+      "phone": "(901) 729-7598",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Ellens Soul Food",
+      "website": "",
+      "city": "Memphis",
+      "phone": "(901) 274-4222",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "BBQ/ Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Energy Famous Pasta",
+      "website": "https://www.facebook.com/EnergyFamousPasta",
+      "city": "Memphis",
+      "phone": "(901) 236-7320",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Evelyn & Olive",
+      "website": "http://www.evelynandolive.com/",
+      "city": "Memphis",
+      "phone": "(901) 748-5422",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Caribbean Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Fat Charlie's Speakeasy",
+      "website": "http://fcspeakeasy.com/",
+      "city": "Memphis",
+      "phone": "(901) 896-5484",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "quality@fcspeakeasy.com",
+      "subcategory": "Bar/Night Club"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Fish Net",
+      "website": "https://fishnetlamar.com",
+      "city": "Memphis",
+      "phone": " (901) 744-3656",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "fishnet2731@gmail.com",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Four Way Restaurant",
+      "website": "http://www.fourwaymemphis.com",
+      "city": "Memphis",
+      "phone": "(901) 507-1519",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "BBQ/ Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Gay Hawk Restaurant",
+      "website": "https://www.facebook.com/GayHawkRestaurantMemphis/",
+      "city": "Memphis",
+      "phone": "(901) 947-1464",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "BBQ/ Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Gereny East African Mediterranian Restaurant",
+      "website": "",
+      "city": "Memphis",
+      "phone": "(901) 458-6330",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Ethiopian/Eritrean Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Havana Mix Cigar Emporium",
+      "website": "http://havanamix.com",
+      "city": "Memphis",
+      "phone": "(901) 522-2909",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Bar/Night Club"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Humdingers",
+      "website": "http://humdingersrestaurant.com",
+      "city": "Memphis",
+      "phone": "(901) 260-8292",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Interstate Barbecue",
+      "website": "http://interstatebarbecue.com",
+      "city": "Memphis",
+      "phone": "(901) 775-2304",
+      "category": "restaurants",
+      "owner_name": "James L. Neely",
+      "owner_email": "",
+      "subcategory": "BBQ/ Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Jim & Samella's House",
+      "website": "https://www.facebook.com/jimandsamellas/about/?ref=page_internal",
+      "city": "Memphis",
+      "phone": "(901) 265-8761",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "BBQ/ Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Lennys Grill & Sub",
+      "website": "https://www.facebook.com/lennysfrontst",
+      "city": "Memphis",
+      "phone": "(901) 543-9230",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Lil Miracles",
+      "website": "https://www.facebook.com/LilMiraclesFoodtruck/about_contact_and_basic_info",
+      "city": "Memphis",
+      "phone": "(901) 828-9976",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Food Trucks/Carts"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Lot-a-Burger",
+      "website": "http://lotaburgernow.com/",
+      "city": "Memphis",
+      "phone": "(901) 946-2001",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Lunchbox Eats",
+      "website": "http://www.lunchboxeats.com/",
+      "city": "Memphis",
+      "phone": "(901) 526-0820",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Ms. Girlee's Soul Food Restaurant",
+      "website": "http://www.memphis.com/places/ms-girlees-soul-food-restaurant",
+      "city": "Memphis",
+      "phone": "901-522-8778",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "BBQ/ Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Payne's Bar-B-Que",
+      "website": "https://www.facebook.com/pages/Payne's%20Bar-B-Que/157672144255356/about/?ref=page_internal",
+      "city": "Memphis",
+      "phone": "(901) 272-1523",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "BBQ/ Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Phase 1 Salads By Design",
+      "website": "https://www.phase1salads.com/",
+      "city": "Memphis",
+      "phone": "(901) 417-6530",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Phoenix Southern Grill",
+      "website": "https://www.phoenixsoutherngrill.com/",
+      "city": "Memphis",
+      "phone": "(901) 421-5263",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "BBQ/ Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Pollard's BBQ",
+      "website": "https://pollardsbbq.com",
+      "city": "Memphis",
+      "phone": "(901) 398-2987",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "BBQ/ Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Pop's Hot Tamales",
+      "website": "https://www.facebook.com/pages/Pop's%20Hot%20Tamales/530702706988138/about/?ref=page_internal",
+      "city": "Memphis",
+      "phone": "(901) 490-4017",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Prive' Restaurant",
+      "website": "https://www.priveofmemphis.com",
+      "city": "Memphis",
+      "phone": "(901) 552-4760",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Bar/Night Club"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Riko's Kickin Chicken",
+      "website": "https://www.facebook.com/kickinchicken901/",
+      "city": "Memphis",
+      "phone": "(901) 726-5347",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Sage",
+      "website": "http://sagememphis.com/",
+      "city": "Memphis",
+      "phone": "(901) 672-7902",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "info@sagememphis.com",
+      "subcategory": "Food Trucks/Carts"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Slice of Soul Pizza Lounge",
+      "website": "https://www.sospizzalounge.com/",
+      "city": "Memphis",
+      "phone": "(901) 509-2087",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Slim & Husky's",
+      "website": "https://slimandhuskys.com/",
+      "city": "Memphis",
+      "phone": "(901) 617-1655",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Smooth Living",
+      "website": "https://smooth-living.business.site/",
+      "city": "Memphis",
+      "phone": "(901) 308-2994",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Southern Hands Homestyle Cooking",
+      "website": "http://www.southernhandsrestaurant.com",
+      "city": "Memphis",
+      "phone": "(901) 746-9729",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "BBQ/ Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Speed Vegan",
+      "website": "http://speedvegan.org",
+      "city": "Memphis",
+      "phone": "(901) 229-8104",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Stickem",
+      "website": "https://www.facebook.com/stickemfood/about",
+      "city": "Memphis",
+      "phone": "(901) 474-7214",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Food Trucks/Carts"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Straight Drop Seafood Memphis",
+      "website": "http://straighdroprestaurants.com/",
+      "city": "Memphis",
+      "phone": "(901) 425-5080",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Sweden Kream",
+      "website": "",
+      "city": "Memphis",
+      "phone": "(901) 454-5882",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Tailors' Union",
+      "website": "https://tailorsunionmemphis.com/",
+      "city": "Memphis",
+      "phone": "(901) 623-8567",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "The Blue Monkey",
+      "website": "https://bluemonkeymemphis.com",
+      "city": "Memphis",
+      "phone": "(901) 527-6665",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Bar/Night Club"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "The Crock Pot",
+      "website": "",
+      "city": "Memphis",
+      "phone": "(901) 758-2295",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "BBQ/ Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "The Four Way",
+      "website": "https://thefourway901.com/",
+      "city": "Memphis",
+      "phone": "(901) 507-1519",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Food Trucks/Carts"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "The Grille",
+      "website": "http://www.thegrille901.com",
+      "city": "Memphis",
+      "phone": "(901) 375-4050",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "BBQ/ Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "The Kitchen",
+      "website": "https://901kitchen-restaurant.business.site/",
+      "city": "Memphis",
+      "phone": "(901) 552-4495",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "The Original Uncle Lou's",
+      "website": "https://www.unclelousfriedchicken.com/",
+      "city": "Memphis",
+      "phone": "(901) 332-2367",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Food Trucks/Carts"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "The Wing Guru",
+      "website": "http://Thewingguru.com/",
+      "city": "Memphis",
+      "phone": "(901) 509-2405",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "TrapFusion",
+      "website": "http://trapfusion901.com/",
+      "city": "Memphis",
+      "phone": "(901) 207-5565",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "BBQ/ Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Smokin Buttz",
+      "website": "",
+      "city": "Murfreesboro",
+      "phone": "(615) 569-7556",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Food Trucks/Carts"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "400 Degrees Hot Chicken",
+      "website": "http://400degreeshotchicken.com/",
+      "city": "Nashville",
+      "phone": "(615) 244-4467",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "BBQ/ Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "B.B. King's Blues Club (Nashville)",
+      "website": "http://bbkings.com/nashville",
+      "city": "Nashville",
+      "phone": "(615) 256-2727",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Bar/Night Club"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Barr's Music City Soul Food",
+      "website": "http://barrsmusiccitysoulfood.com",
+      "city": "Nashville",
+      "phone": "(615) 429-7836",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "BBQ/ Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Bolton's Spicy Chicken and Fish",
+      "website": "",
+      "city": "Nashville",
+      "phone": "(615) 254-8015",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "BBQ/ Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Bone's Fish & More",
+      "website": "http://bonesfishnmore.com",
+      "city": "Nashville",
+      "phone": " (629) 888-9931",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Daiq's Bar and Grill",
+      "website": "",
+      "city": "Nashville",
+      "phone": "(615) 651-8064",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Bar/Night Club"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Early Eats Truck",
+      "website": "https://www.myearlyeats.com/?fbclid=IwAR31ajcwhwsXZX0XzItnVkroeXFRVhPa1QA5lmtl5QQF2vWCjuoBBC63qyI",
+      "city": "Nashville",
+      "phone": "(615) 567-3287",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "kechelle.williams@gmail.com",
+      "subcategory": "Food Trucks/Carts"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Ed's Fish and Pizza",
+      "website": "https://www.facebook.com/edsfishhouse",
+      "city": "Nashville",
+      "phone": "(615) 255-4362",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Ella Jean's Cafe",
+      "website": "http://www.ellajeanscafe.com",
+      "city": "Nashville",
+      "phone": " (615) 943-2470",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "BBQ/ Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Fannie Mae's",
+      "website": "http://fanniemaesnashville.com",
+      "city": "Nashville",
+      "phone": "(615) 715-8717",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "BBQ/ Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Garden Brunch Cafe",
+      "website": "http://gardenbrunchcafe.com",
+      "city": "Nashville",
+      "phone": "(615)-891-1217",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Cafe"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Ghot Wingz",
+      "website": "",
+      "city": "Nashville",
+      "phone": "(615) 262-9200",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Good 2 Go Food Truck",
+      "website": "",
+      "city": "Nashville",
+      "phone": "(615) 608-2487",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "Info@eatgood2go.com.",
+      "subcategory": "Food Trucks/Carts"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "H&T's Home Cooking",
+      "website": "http://hthomecooking.com",
+      "city": "Nashville",
+      "phone": "(615) 367-0049",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "BBQ/ Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Harold's Chicken",
+      "website": "",
+      "city": "Nashville",
+      "phone": "(901) 213-6072",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Helen's Hot Chicken",
+      "website": "http://www.helenshotchicken.com/home",
+      "city": "Nashville",
+      "phone": "(615) 964-7331",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "BBQ/ Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Jamaica Way Midtown",
+      "website": "https://www.jamaicawayrestaurant.com/menu",
+      "city": "Nashville",
+      "phone": "(615) 255-5920",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "orders.oekb@jamaicawayrestaurant.com",
+      "subcategory": "Carribean Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Jamaicaway Restaurant & Catering",
+      "website": "https://www.jamaicawayrestaurant.com",
+      "city": "Nashville",
+      "phone": "(615) 255-5920",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Caribbean Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Jefferson's Restaurant & Showcase",
+      "website": "https://www.facebook.com/Jeffersons-Restaurant-Showcase-112874668773729/",
+      "city": "Nashville",
+      "phone": "(615) 457-2491",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Kilimandjaro Restaurant",
+      "website": "",
+      "city": "Nashville",
+      "phone": " (615) 367-5284",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Caribbean Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Kingdom Cafe and Grill",
+      "website": "http://www.kingdomcafeandgrill.org/",
+      "city": "Nashville",
+      "phone": "(615) 678-7582",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "BBQ/ Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Mary's Old Fashioned Pit Bar-B-Que",
+      "website": "https://www.marysbbqpit.com/",
+      "city": "Nashville",
+      "phone": "(615) 256-7696",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "BBQ/ Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Meridian Street Cafe",
+      "website": "http://www.meridianstcafe.com/",
+      "city": "Nashville",
+      "phone": "(615) 262-8986",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Café"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Minerva Avenue",
+      "website": "https://www.minervaavenue.com/",
+      "city": "Nashville",
+      "phone": "(615) 973-0962",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Bar/Night Club"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Ooh Wee Barbq",
+      "website": "",
+      "city": "Nashville",
+      "phone": "(615) 200-7191",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "BBQ/ Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Prince's Hot Chicken",
+      "website": "http://princeshotchicken.com",
+      "city": "Nashville",
+      "phone": "(615) 810-9388",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Riddim N'Spice Food Truck",
+      "website": "https://www.riddimnspice.com",
+      "city": "Nashville",
+      "phone": "(615) 953-7121",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Food Trucks/Carts"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Seafood Sensation",
+      "website": "https://www.facebook.com/Seafood-Sensation-331795326850843/",
+      "city": "Nashville",
+      "phone": "(615) 678-1069",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "seafoodsensational@gmail.com",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Shugga Hi Bakery and Cafe",
+      "website": "https://www.shuggahibakeryandcafe.com",
+      "city": "Nashville",
+      "phone": "(615) 928-6576",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "BBQ/ Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Southern Hospitality Diner",
+      "website": "https://shdiner.com",
+      "city": "Nashville",
+      "phone": "(615) 776-1795",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "BBQ/ Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "StrikeOut Wings",
+      "website": "https://www.strikeoutwingztn.com/",
+      "city": "Nashville",
+      "phone": "(615) 891-1298",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Swett's Family Restaurant",
+      "website": "http://swettsrestaurant.com",
+      "city": "Nashville",
+      "phone": "(615) 329-4418",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "BBQ/ Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "The Love Bus",
+      "website": "http://www.lovebusnashville.com",
+      "city": "Nashville",
+      "phone": "(931) 981-5854",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Food Trucks/Carts"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "The Southern V",
+      "website": "http://www.thesouthernv.com/",
+      "city": "Nashville",
+      "phone": "(615) 802-8136",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Vee-Go (Vegan On The Go)",
+      "website": "https://www.vee-go.company",
+      "city": "Nashville",
+      "phone": "(615) 918-1717",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Food Trucks/Carts"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Vege-licious",
+      "website": "http://www.vege-licious.com",
+      "city": "Nashville",
+      "phone": "(615) 942-6978",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Wilkes Wings",
+      "website": "https://wilkeswings.com/",
+      "city": "Nashville",
+      "phone": "(615) 242-8118",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "contactus@wilkeswings.com",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Willie B's",
+      "website": "https://www.thewilliebs.com/our-story",
+      "city": "Nashville",
+      "phone": "(629) 202-4970",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Creole/Cajun Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Davis Wayne's",
+      "website": "https://www.facebook.com/DavisWaynes/",
+      "city": "Ooltewah",
+      "phone": "(423) 269-8969",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "BBQ/ Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Bennett's Pit Bar-B-Que",
+      "website": "",
+      "city": "Pigeon Forge",
+      "phone": "(865) 429-2200",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "BBQ/ Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Joe's Crab Shack",
+      "website": "https://www.joescrabshack.com/location/joes-crab-shack-sevierville/",
+      "city": "Sevierville",
+      "phone": "(865) 774-3023",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Mack's Hot Chicken",
+      "website": "https://www.facebook.com/mackshotchicken/",
+      "city": "Smyrna",
+      "phone": "(615) 7685-477",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "The Rolling Recipe",
+      "website": "https://facebook.com/therollingrecipellc",
+      "city": "Spring Hill",
+      "phone": "(615) 364-3457",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Food Trucks/Carts"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Gojo Ethiopian",
+      "website": "http://gojoethiopiancafe.com/index.php",
+      "city": "",
+      "phone": "(615) 332-0710",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Ethiopian/Eritrean Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "The Inspiration Centre",
+      "website": "",
+      "city": "Nashville",
+      "phone": "(615) 582-2943",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Venues/Event Spaces"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Strike Shield Security",
+      "website": "https://strikeshieldsecurityguard.com",
+      "city": "Nashville",
+      "phone": "(615) 553-7580",
+      "category": "security",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Security & Personal Protection"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Prestigious Moving Services",
+      "website": "http://www.prestigiousmoving.com",
+      "city": "Clarksville",
+      "phone": "(615) 988-1036",
+      "category": "transportation",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Moving Services"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Courtesy Limo",
+      "website": "",
+      "city": "Dickson",
+      "phone": "(615) 740-0125",
+      "category": "transportation",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Limo/Party Bus"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Allex Limo Service",
+      "website": "",
+      "city": "Memphis",
+      "phone": "(901) 596-5577",
+      "category": "transportation",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Limo/ Party Bus "
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Luvs Towing Service",
+      "website": "",
+      "city": "Memphis",
+      "phone": "(901) 485-1517",
+      "category": "transportation",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Spyder Moving Services",
+      "website": "https://spydermoving.com/services/local-movers-tn/memphis/",
+      "city": "Memphis",
+      "phone": "(901) 329-9064",
+      "category": "transportation",
+      "owner_name": "",
+      "owner_email": "info@spydermoving.com",
+      "subcategory": "Moving Services"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Kmt Logistics Llc",
+      "website": "http://www.kmtlogisticsllc.com",
+      "city": "Nashville",
+      "phone": "(615) 712-5946",
+      "category": "transportation",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": " Trucking"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Tight Grip Moving",
+      "website": "http://tightgripmoving.wixsite.com/nashville",
+      "city": "Nashville",
+      "phone": "(615) 854-6995",
+      "category": "transportation",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Moving Services"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "The Hunter Museum of American Art",
+      "website": "https://www.huntermuseum.org",
+      "city": "Chattanooga",
+      "phone": "(423) 267-0968",
+      "category": "visual",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Art Gallery/Museum"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Ashlie Amber",
+      "website": "https://www.ashlieamber.com/?fbclid=IwAR12IsICjkYFycFjPgAZhcepvtb7L2TyGXFbJh1do3G6s2ez4ljPzE1EyCo",
+      "city": "Melrose",
+      "phone": "(615) 839-5200",
+      "category": "visual",
+      "owner_name": "",
+      "owner_email": "contact@ashlieamber.com",
+      "subcategory": "Art Gallery/Museum"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "LaSpiel by Nikko",
+      "website": "",
+      "city": "Memphis",
+      "phone": "",
+      "category": "visual",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Artists"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Park + Cherry",
+      "website": "https://www.dixon.org/about",
+      "city": "Memphis",
+      "phone": "(901) 761-5250",
+      "category": "visual",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Art Gallery/Museum"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Jewels & Gems Art Studio",
+      "website": "https://www.facebook.com/jewelsandgemsartstudio",
+      "city": "Milan",
+      "phone": " (731) 271-8597",
+      "category": "visual",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Art Gallery/Museum"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Michael McBride",
+      "website": "https://www.michaeljmcbrideart.com/contact",
+      "city": "Nashville",
+      "phone": "(615) 788-1397",
+      "category": "visual",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Artists"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Hands On Heart CPR",
+      "website": "",
+      "city": "Chattanooga",
+      "phone": "(888) 544-9082",
+      "category": "other",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": "Other"
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Trap Garden",
+      "website": "https://trapgarden.org",
+      "city": "Nashville",
+      "phone": "",
+      "category": "other",
+      "owner_name": "",
+      "owner_email": "info@trapgarden.org",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_tn",
+      "fields": {
+"business_name": "Zao Farms",
+      "website": "",
+      "city": "",
+      "phone": "",
+      "category": "other",
+      "owner_name": "",
+      "owner_email": "",
+      "subcategory": ""
+    }
+}
+  ]

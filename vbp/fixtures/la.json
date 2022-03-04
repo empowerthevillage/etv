@@ -1,0 +1,4483 @@
+[
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Basic Hair Bows",
+      "website": "",
+      "city": "Baton Rouge",
+      "phone": "(225) 775-1011",
+      "category": "beauty",
+      "owner_name": "Marilyn Webb",
+      "owner_email": "",
+      "address": "12031-A Plank Rd (Brownsfield)",
+      "subcategory": "Beauty Supply/Hair & Accessories"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Sharmooz",
+      "website": "http://www.sharmooz.com",
+      "city": "Baton Rouge",
+      "phone": "(323) 487-0395",
+      "category": "beauty",
+      "owner_name": "Ann Tillage",
+      "owner_email": "info@sharmooz.com",
+      "address": "2635 Choctaw Drive",
+      "subcategory": "Beauty Supply/Hair & Accessories"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Genesis Beauty",
+      "website": "http://www.ourgenesisbeauty.com",
+      "city": "Darrow",
+      "phone": "(225) 279-3273",
+      "category": "beauty",
+      "owner_name": "Shamica Marie Anderson",
+      "owner_email": "genesisbeautyii@gmail.com",
+      "address": "5222 Mercury Drive",
+      "subcategory": "Beauty Supply/Hair & Accessories"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Royal Lashionista Beauty & Bar",
+      "website": "https://www.royallashionista.com/",
+      "city": "Gretna",
+      "phone": "(504) 701-3770",
+      "category": "beauty",
+      "owner_name": "Latasha Marie Smith",
+      "owner_email": "royallashionista@gmail.com",
+      "address": "537 Holmes Blvd., Ste. A",
+      "subcategory": "Cosmetics"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Headlinerz",
+      "website": "https://locality.com/la/houma",
+      "city": "Houma",
+      "phone": "(985) 872-0012",
+      "category": "beauty",
+      "owner_name": "Erica Williams-Parks",
+      "owner_email": "",
+      "address": "1067 Lee Ave",
+      "subcategory": "Hair Salons"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "NAQbyBri",
+      "website": "naqbybri.bigcartel.com",
+      "city": "Kenner",
+      "phone": "(504) 905-3667",
+      "category": "beauty",
+      "owner_name": "Shabri Green",
+      "owner_email": "shabrigreen@yahoo.com",
+      "address": "3519 Colorado Ave.",
+      "subcategory": "Cosmetics"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Skrewed Cosmetics",
+      "website": "https://www.skrewedcosmetics.com",
+      "city": "Kenner",
+      "phone": "(504) 708-5051",
+      "category": "beauty",
+      "owner_name": "Corey Willis",
+      "owner_email": "skrewedcosmetics@gmail.com",
+      "address": "1401 W Esplanade Ave",
+      "subcategory": "Cosmetics"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Above Only Barber & Beauty Salon",
+      "website": "",
+      "city": "New Orleans",
+      "phone": "(504) 243-0500",
+      "category": "beauty",
+      "owner_name": "Tommie Yarls",
+      "owner_email": "",
+      "address": "4711 Downman Rd",
+      "subcategory": "Barbers"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "ASEPSIS BARBER SHOP",
+      "website": "http://www.asepsisbarbers.com/",
+      "city": "New Orleans",
+      "phone": "(504) 354-1723",
+      "category": "beauty",
+      "owner_name": "Taryan Theophile",
+      "owner_email": "",
+      "address": "8480 Morrison Rd Suite B",
+      "subcategory": "Barbers"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "The Love Of People",
+      "website": "http://theloveofpeople.com",
+      "city": "New Orleans",
+      "phone": "(504) 408-1924",
+      "category": "beauty",
+      "owner_name": "Paula Bland",
+      "owner_email": "paula@theloveofpeople.com",
+      "address": "P.O. Box 741638",
+      "subcategory": "Beauty Supply/Hair & Accessories"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "King & Queen Emporium International",
+      "website": "http://www.kingqueenemporium.com/",
+      "city": "New Orleans",
+      "phone": "(504) 317- 7570",
+      "category": "beauty",
+      "owner_name": "Andaiye Alimayu",
+      "owner_email": "",
+      "address": "2500 Bayou Rd.",
+      "subcategory": "Bath & Body"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Magnolia Makeup",
+      "website": "http://www.magnoliamakeup.com",
+      "city": "New Orleans",
+      "phone": "(504) 564-7992",
+      "category": "beauty",
+      "owner_name": "Niala Howard",
+      "owner_email": "admin@magnoliamakeup.com",
+      "address": "5331 Elysian Fields Ave, A",
+      "subcategory": "Cosmetics"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "LaPierre Cosmetics",
+      "website": "https://lapierrecosmetics.com",
+      "city": "New Orleans",
+      "phone": "(504) 264-6446",
+      "category": "beauty",
+      "owner_name": "Brandi Blocker",
+      "owner_email": "info@lapierrecosmetics.com",
+      "address": "",
+      "subcategory": "Cosmetics"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "The Crayon Case",
+      "website": "https://thecrayoncase.com",
+      "city": "New Orleans",
+      "phone": "",
+      "category": "beauty",
+      "owner_name": "Reynell Steward",
+      "owner_email": "customerservice@thecrayoncase.com",
+      "address": "",
+      "subcategory": "Cosmetics"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "CARTER HAIR DESIGNS",
+      "website": "",
+      "city": "New Orleans",
+      "phone": "(504) 822-9857",
+      "category": "beauty",
+      "owner_name": "Edward Carter",
+      "owner_email": "",
+      "address": "2714 Palmyra St",
+      "subcategory": "Barber"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "AFRITUDE HAIR BRAIDING SALON",
+      "website": "",
+      "city": "New Orleans",
+      "phone": "(504) 949-9995",
+      "category": "beauty",
+      "owner_name": "Chantal Water",
+      "owner_email": "",
+      "address": "1418 N Claiborne Ave",
+      "subcategory": "Beauty Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "BEAUTY ON DE BAYOU",
+      "website": "https://www.dwanamakeba.com/",
+      "city": "New Orleans",
+      "phone": "(504) 339-3907",
+      "category": "beauty",
+      "owner_name": "Dwana Makeba",
+      "owner_email": "beautyondebayou@yahoo.com",
+      "address": "1452 N. Broad St. Suite C",
+      "subcategory": "Beauty Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Strawberri Curls",
+      "website": "https://strawberricurls.com/",
+      "city": "New Orleans",
+      "phone": "(504) 457-8671",
+      "category": "beauty",
+      "owner_name": "Gabrielle Allen",
+      "owner_email": "Lizzia@strawberricurls.com",
+      "address": "2804 Higgings Blvd",
+      "subcategory": "Beauty Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "The Pink Lace Brand",
+      "website": "https://thepinklacebrand.com",
+      "city": "New Orleans",
+      "phone": "",
+      "category": "beauty",
+      "owner_name": "Dana",
+      "owner_email": "info@thepinklacebrand.com",
+      "address": "3869 Gentilly Blvd",
+      "subcategory": "Beauty Supply/Hair & Accessories"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Faces of Virtue Makeup Studio",
+      "website": "https://www.facesofvirtue.com/",
+      "city": "New Orleans",
+      "phone": "(504) 408-2794",
+      "category": "beauty",
+      "owner_name": "DeQuindra Rouzan",
+      "owner_email": "drouzan@facesofvirtue.com",
+      "address": "1434 Terpsichore St.",
+      "subcategory": "Beauty Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Natural Mixologist",
+      "website": "https://www.nmbotanical.com/",
+      "city": "New Orleans",
+      "phone": "(628) 400-3649",
+      "category": "beauty",
+      "owner_name": "Donica Johns",
+      "owner_email": "nautralmixologist@nmbotanical.com",
+      "address": "5724 Louis Prima Drive East",
+      "subcategory": "Bath & Body"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Selfe Steam Nola",
+      "website": "https://www.selfesteamnola.com/",
+      "city": "New Orleans",
+      "phone": "(504) 913-3474",
+      "category": "beauty",
+      "owner_name": "Ceret Davis",
+      "owner_email": "hey@selfsteamnola.com",
+      "address": "2100 Rev. Richard Wilson Dr.",
+      "subcategory": "Bath & Body"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Porsha Paints",
+      "website": "http://porshapaints.com/",
+      "city": "New Orleans",
+      "phone": "(504) 648-7877",
+      "category": "beauty",
+      "owner_name": "",
+      "owner_email": "porshapaints@gmail.com",
+      "address": "",
+      "subcategory": "Cosmetics"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Blessed By Beedy Nails",
+      "website": "http://www.nailsblessedbybeedy.com",
+      "city": "New Orleans",
+      "phone": "(504) 223-0391",
+      "category": "beauty",
+      "owner_name": "Bianca Williams",
+      "owner_email": "",
+      "address": "",
+      "subcategory": "Nail"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Genni’s Gems",
+      "website": "https://gennisgems.com/",
+      "city": "Online Only",
+      "phone": "(318) 503-6125",
+      "category": "beauty",
+      "owner_name": "Samantha Lewis",
+      "owner_email": "genni.gems@gmail.com",
+      "address": "Online Only",
+      "subcategory": "Beauty - Custom Nails"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Beard Zion Llc",
+      "website": "http://Beardzion.com",
+      "city": "Slidell",
+      "phone": "(985) 445-1215",
+      "category": "beauty",
+      "owner_name": "Nekeshia Javonna Steen",
+      "owner_email": "contact@beardzion.com;beardzionllccustomers@gmail.com",
+      "address": "1153 Rose Meadow Loop",
+      "subcategory": "Cosmetics"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Tukka Naturals",
+      "website": "https://www.facebook.com/tukkanaturals/",
+      "city": "Slidell",
+      "phone": "(888) 326-4582",
+      "category": "beauty",
+      "owner_name": "Ellisha Powell",
+      "owner_email": "info@tukkanaturals.com",
+      "address": "",
+      "subcategory": "Beauty Supply/Hair & Accessories"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "BLESSED HANDS CONCIERGE",
+      "website": "http://www.blessedhandshairsalon.com/",
+      "city": "Slidell",
+      "phone": "(985) 643-6411",
+      "category": "beauty",
+      "owner_name": "Romona",
+      "owner_email": "",
+      "address": "58465 Tyler St",
+      "subcategory": "Beauty Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "D'Scentz",
+      "website": "https://dscentz.bigcartel.com/",
+      "city": "Stonewall",
+      "phone": "(318) 990-1555",
+      "category": "beauty",
+      "owner_name": "Deaundra",
+      "owner_email": "dscentz40@yahoo.com",
+      "address": "P.O Box 616",
+      "subcategory": "Bath & Body"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Community Book Center",
+      "website": "https://readcbc.com/",
+      "city": "New Orleans",
+      "phone": "(504) 948-7323",
+      "category": "books",
+      "owner_name": "Vera Warren",
+      "owner_email": "",
+      "address": "2523 Bayou Rd",
+      "subcategory": "Book Store"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "On The Move Truck Wash",
+      "website": "https://www.facebook.com/pages/On-the-Move-Car-Truck-Wash/246324805942818",
+      "city": "New Orleans",
+      "phone": "(504) 710-2924",
+      "category": "cars",
+      "owner_name": "Keith Cambrice",
+      "owner_email": "",
+      "address": "4022 Louisa St",
+      "subcategory": "Car Wash"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "BR. Swifter Sweepers",
+      "website": "https://brswiftsweepers.com/",
+      "city": "Baton Rouge",
+      "phone": "(225) 221-0236",
+      "category": "cleaning",
+      "owner_name": "Jonquel Kinnon-Stewart",
+      "owner_email": "Swiftersweepers@gmail.com",
+      "address": "",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "1st Class Cleaning Services",
+      "website": "http://oneclassservice.com/",
+      "city": "Baton Rouge",
+      "phone": "(225) 302-7068",
+      "category": "cleaning",
+      "owner_name": "Marcus Baskerville",
+      "owner_email": "Marcus.B@OneClassService.com",
+      "address": "701 Myrtle Ave",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "A Touch of Brown Cleaning Services",
+      "website": "http://www.atbcleaningservices.com",
+      "city": "Baton Rouge",
+      "phone": "(225) 454-5437",
+      "category": "cleaning",
+      "owner_name": "Yolanda Champion-Brown",
+      "owner_email": "",
+      "address": "",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "A Miracle Cleaning Services",
+      "website": "https://a-miracle-cleaning-services.business.site/",
+      "city": "Houma",
+      "phone": "(985) 791-8895",
+      "category": "cleaning",
+      "owner_name": "Lisa Simmons",
+      "owner_email": "",
+      "address": "",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Bar-B-Clean New Orleans",
+      "website": "https://bar-b-clean.com/neworleans",
+      "city": "New Orleans",
+      "phone": "",
+      "category": "cleaning",
+      "owner_name": "Roderick Franklin",
+      "owner_email": "info@bar-b-clean.com",
+      "address": "",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Brite Shine Cleaning and Floor Care LLC",
+      "website": "https://briteshinecleaningandfloorcare.com/",
+      "city": "Prairieville",
+      "phone": "(225) 319-9505",
+      "category": "cleaning",
+      "owner_name": "",
+      "owner_email": "",
+      "address": "",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Consumer Cleaning Services",
+      "website": "http://www.consumercleaningsvcs.com",
+      "city": "Shreveport",
+      "phone": "(318) 626-5000",
+      "category": "cleaning",
+      "owner_name": "Mario Clinton",
+      "owner_email": "marioclinton421@yahoo.com",
+      "address": "9236 savanna dr",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "SisterHearts Thrift Store",
+      "website": "https://sisterheartsthriftstore.com",
+      "city": "Arabi",
+      "phone": "(504) 345-2276",
+      "category": "clothing",
+      "owner_name": "Maryam Henderson-Uloho",
+      "owner_email": "sisterheartsinfo@gmail.com",
+      "address": "7519 W Judge Perez Dr.",
+      "subcategory": "Apparel"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Kurvy Kloset Boutique",
+      "website": "http://kurvyklosetbtq.bigcartel.com",
+      "city": "Baton Rouge",
+      "phone": "(402) 765-8789",
+      "category": "clothing",
+      "owner_name": "Drakara Judson",
+      "owner_email": "kurvyklosetbtq@gmail.com",
+      "address": "",
+      "subcategory": "Apparel"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "The Carport Boutique",
+      "website": "http://www.thecarportboutique.net",
+      "city": "Baton Rouge",
+      "phone": "(225) 284-6929",
+      "category": "clothing",
+      "owner_name": "Joseph Wiltz JR",
+      "owner_email": "",
+      "address": "1314 Laurel Street St",
+      "subcategory": "Apparel"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Down South Designer Customs",
+      "website": "https//www.dsdcustoms.com",
+      "city": "Baton Rouge",
+      "phone": "(225) 803-1748",
+      "category": "clothing",
+      "owner_name": "Emmanuel Osagie",
+      "owner_email": "info@dsdcustoms.com",
+      "address": "Sherwood Forest Blvd",
+      "subcategory": "Apparel"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Sunglass Desire Llc",
+      "website": "http://www.shopsunglassdesire.com",
+      "city": "Gonzales",
+      "phone": "(225) 284-5733",
+      "category": "clothing",
+      "owner_name": "",
+      "owner_email": "sunglassdesireservice@gmail.com",
+      "address": "",
+      "subcategory": "Apparel"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Sister Stylez Boutique",
+      "website": "http://www.sisterstylez.com",
+      "city": "Gretna",
+      "phone": "(504) 300-4590",
+      "category": "clothing",
+      "owner_name": "",
+      "owner_email": "",
+      "address": "1707 Weyer St",
+      "subcategory": "Apparel"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "RUPELE, LLC",
+      "website": "http://www.rupele.com",
+      "city": "Metairie",
+      "phone": "(877) 658-1496",
+      "category": "clothing",
+      "owner_name": "Leeresa Stewart",
+      "owner_email": "",
+      "address": "PO Box 1432",
+      "subcategory": "Apparel"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Bean's Formal Wear",
+      "website": "",
+      "city": "New Orleans",
+      "phone": "(504) 891-4675",
+      "category": "clothing",
+      "owner_name": "Claud Bean",
+      "owner_email": "",
+      "address": "4900 Freret Saint",
+      "subcategory": "Apparel"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Kay's",
+      "website": "https://shopkays.com/",
+      "city": "New Orleans",
+      "phone": "(504) 301-3366",
+      "category": "clothing",
+      "owner_name": "Kay Charbonnet",
+      "owner_email": "hello@shopkays.com",
+      "address": "602 Toulouse Street",
+      "subcategory": "Apparel"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Bohemian Lioness T-Shirts and Apparel",
+      "website": "https://shop.spreadshirt.com/bohemianlioness/",
+      "city": "New Orleans",
+      "phone": "(800) 381-0815",
+      "category": "clothing",
+      "owner_name": "Nicole Bridgewater",
+      "owner_email": "nbridgewater2003@hotmail.com",
+      "address": "",
+      "subcategory": "Apparel"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "West London BTQ",
+      "website": "https://www.westlondonboutique.com/",
+      "city": "New Orleans",
+      "phone": "(504) 558-4649",
+      "category": "clothing",
+      "owner_name": "Mariah Walton Bencik",
+      "owner_email": "",
+      "address": "3952 Magazine Street",
+      "subcategory": "Apparel"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Kay Kay's Room",
+      "website": "https://kaykaysroom.com",
+      "city": "New Orleans",
+      "phone": "(504) 323-4617",
+      "category": "clothing",
+      "owner_name": "Kayla",
+      "owner_email": "kaykaysroom@gmail.com",
+      "address": "",
+      "subcategory": "Apparel"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "STUDIO BE",
+      "website": "https://studiobenola.com/",
+      "city": "New Orleans",
+      "phone": "(504) 419-9145",
+      "category": "clothing",
+      "owner_name": "Brandan Odums",
+      "owner_email": "studiobenola@gmail.com",
+      "address": "2941 Royal St",
+      "subcategory": "Apparel"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Exodus Goods",
+      "website": "https://www.instagram.com/exodusgoods/?hl=en",
+      "city": "New Orleans",
+      "phone": "(504) 309-2995",
+      "category": "clothing",
+      "owner_name": "Darlene & Lizzy Okpo, Armina Mussa & Solange Knowles",
+      "owner_email": "",
+      "address": "518 Conti St",
+      "subcategory": "Apparel"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Garb",
+      "website": "http://shopgarbboutique.com/",
+      "city": "New Orleans",
+      "phone": "(504) 301-9174",
+      "category": "clothing",
+      "owner_name": "Kenyatta Jones",
+      "owner_email": "",
+      "address": "2108 Magazine St",
+      "subcategory": "Apparel"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Sweetpea Kloset",
+      "website": "https://sweetpeakloset.com/",
+      "city": "Shreveport",
+      "phone": "(318) 683-8707",
+      "category": "clothing",
+      "owner_name": "Sha'Rodni",
+      "owner_email": "",
+      "address": "",
+      "subcategory": "Apparel"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Soirée Consignment",
+      "website": "https://soireeconsignment.com",
+      "city": "Slidell",
+      "phone": "(985) 265-4466",
+      "category": "clothing",
+      "owner_name": "",
+      "owner_email": "info@soireeconsignment.com",
+      "address": "P.O. Box 5923",
+      "subcategory": "Apparel"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Dmounts",
+      "website": "https://tv-mounting-handyman.business.site/?utm_source=gmb&utm_medium=referral",
+      "city": "Baton Rouge",
+      "phone": "(225) 603-5189",
+      "category": "construction",
+      "owner_name": "Demond",
+      "owner_email": "",
+      "address": "",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Stroy Builders & Roofing",
+      "website": "http://www.stroybuildersandroofing.com/",
+      "city": "Hosston",
+      "phone": "(318) 465-0436",
+      "category": "construction",
+      "owner_name": "Michael D. Story",
+      "owner_email": "",
+      "address": "6485 Saint John's Church Rd.",
+      "subcategory": "General Contractors"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "BRC Construction Group, LLC",
+      "website": "http://www.brccg.net/",
+      "city": "Metairie",
+      "phone": "(504) 304-5384",
+      "category": "construction",
+      "owner_name": "",
+      "owner_email": "",
+      "address": "3330 N.Causeway Blvd Suite 326",
+      "subcategory": "Construction/Engineering"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Big Easy Iron Works",
+      "website": "https://www.bigeasyironworks.com/",
+      "city": "New Orleans",
+      "phone": "(504) 732-0066",
+      "category": "construction",
+      "owner_name": "Dean J. Perrin",
+      "owner_email": "crescentcityironworks@outlook.com",
+      "address": "3436 Magazine St #120-B",
+      "subcategory": "Construction/Engineering"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Eastofwick Construction Llc",
+      "website": "https://www.facebook.com/EastOfWickConstructionLLC/",
+      "city": "New Orleans",
+      "phone": "(504) 539-0963",
+      "category": "construction",
+      "owner_name": "Tammy Estwick",
+      "owner_email": "eastofwick@gmail.com",
+      "address": "2137 A. P. Tureaud",
+      "subcategory": "Construction/Engineering"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Condall Consulting Group",
+      "website": "http://www.condall.com/",
+      "city": "New Orleans",
+      "phone": "(504) 592-4000",
+      "category": "construction",
+      "owner_name": "Sharmaine A. James",
+      "owner_email": "corporate@condall.com",
+      "address": "1215 Prytania Street,Suite 330",
+      "subcategory": "Construction/Engineering"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Bledsoe Construction Group Of New Orleans",
+      "website": "http://www.bledsoeinternational.com",
+      "city": "New Orleans",
+      "phone": "(877) 291-2751",
+      "category": "construction",
+      "owner_name": "Ether Bledsoe",
+      "owner_email": "BledsoeInternational@protonmail.com",
+      "address": "",
+      "subcategory": "Roofing & Siding"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Calloway & Sons A/C & Heating",
+      "website": "https://www.callowayhvac.com/",
+      "city": "New Orleans",
+      "phone": "",
+      "category": "construction",
+      "owner_name": "",
+      "owner_email": "contact@callowayhvac.com",
+      "address": "10064 1-10 Service Rd",
+      "subcategory": "HVAC"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Holmes Fence & Gate Service",
+      "website": "https://www.holmesfenceandgateservice.com/",
+      "city": "Shreveport",
+      "phone": "(318) 221-1311",
+      "category": "construction",
+      "owner_name": "Richard Holmes",
+      "owner_email": "richardholmes002@bellsouth.net",
+      "address": "2411 Hanna Street",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Next Level Math Tutoring",
+      "website": "https://www.nextlevelmath.com",
+      "city": "Monroe",
+      "phone": "(318) 460-0912",
+      "category": "education",
+      "owner_name": "Paul Caliste",
+      "owner_email": "info@nextlevelmath.com",
+      "address": "",
+      "subcategory": "Tutoring/ Academic Planning"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Align Education, Llc",
+      "website": "http://www.aligned21.com",
+      "city": "New Orleans",
+      "phone": "(504) 517-2246",
+      "category": "education",
+      "owner_name": "Dr. AnaneOlatunji",
+      "owner_email": "info@AlignEd21.com",
+      "address": "3351 Hyman Place",
+      "subcategory": "Enrichment"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "BENOLA, Inc",
+      "website": "https://blackedunola.org/",
+      "city": "New Orleans",
+      "phone": "",
+      "category": "education",
+      "owner_name": "",
+      "owner_email": "",
+      "address": "",
+      "subcategory": "Enrichment"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Children's Palace Learning Academy 1 & 2",
+      "website": "https://www.cpla-nola.com/",
+      "city": "New Orleans",
+      "phone": "(225) 931-9040",
+      "category": "education",
+      "owner_name": "",
+      "owner_email": "",
+      "address": "5615 Read Blvd,",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Dillard University",
+      "website": "https://www.dillard.edu/",
+      "city": "New Orleans",
+      "phone": "(504) 283-8822",
+      "category": "education",
+      "owner_name": "",
+      "owner_email": "",
+      "address": "2601 Gentilly Blvd",
+      "subcategory": "Enrichment"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Xavier University of LA",
+      "website": "https://www.xula.edu/",
+      "city": "New Orleans",
+      "phone": "(504) 486-7411",
+      "category": "education",
+      "owner_name": "",
+      "owner_email": "",
+      "address": "1 Drexel Dr",
+      "subcategory": "Enrichment"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Agape Care Providers",
+      "website": "",
+      "city": "New Orleans",
+      "phone": "(504) 392-0825",
+      "category": "eldercare",
+      "owner_name": "Sheila M. Brown",
+      "owner_email": "tcpagpexd@gmail.com",
+      "address": "784 Behrman Hwy",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Nerjyzed Entertainment",
+      "website": "",
+      "city": "Baton Rouge",
+      "phone": "(225) 302-5583",
+      "category": "electronics",
+      "owner_name": "Jacqueline Beauchamp",
+      "owner_email": "",
+      "address": "7169 Florida blvd",
+      "subcategory": "Software Development"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "SLT Technology",
+      "website": "http//www.slttechla.com",
+      "city": "Baton Rouge",
+      "phone": "(225) 215-1017",
+      "category": "electronics",
+      "owner_name": "Calvin Mills Jr.",
+      "owner_email": "cmills@slttechla.com",
+      "address": "7117 Florida Blvd",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Qute Events",
+      "website": "http://quteevents.com/",
+      "city": "Breaux Bridge",
+      "phone": "(337) 356-4059",
+      "category": "entertainment",
+      "owner_name": "LaQuata Kennison",
+      "owner_email": "info@QuteEvents.com",
+      "address": "",
+      "subcategory": "Event Planning/Services"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Bae-Bee's Candyland",
+      "website": "https://www.facebook.com/BaeBeesCandyland/",
+      "city": "Lake Charles",
+      "phone": "(337) 287-9374",
+      "category": "entertainment",
+      "owner_name": "Bre Harmmon",
+      "owner_email": "baebeecandyland@aol.com",
+      "address": "",
+      "subcategory": "Event Planning/Services"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "All Bout Dat Tours",
+      "website": "https://www.allboutdat.com",
+      "city": "New Orleans",
+      "phone": "(504) 457-9439",
+      "category": "entertainment",
+      "owner_name": "Mikhala Iversen Afropean",
+      "owner_email": "AllBoutDatTours@gmail.com",
+      "address": "",
+      "subcategory": "Tours, Jazz & Blues"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "2nd Line Tours",
+      "website": "https://www.2ndline.tours/",
+      "city": "New Orleans",
+      "phone": "(504) 463-4090",
+      "category": "entertainment",
+      "owner_name": "Dennis M.",
+      "owner_email": "information@2ndline.tours",
+      "address": "628 N. Rampart St.",
+      "subcategory": "Tours"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Hidden History Tours",
+      "website": "http://www.hiddenhistory.us/",
+      "city": "New Orleans",
+      "phone": "(504) 432-9901",
+      "category": "entertainment",
+      "owner_name": "Leon Waters",
+      "owner_email": "web@hiddenhistory.us",
+      "address": "",
+      "subcategory": "Tours"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Tours By Judy",
+      "website": "http://www.toursbyjudy.com/",
+      "city": "New Orleans",
+      "phone": "(504) 416-7777",
+      "category": "entertainment",
+      "owner_name": "Judy",
+      "owner_email": "toursby.judy@gmail.com",
+      "address": "",
+      "subcategory": "Tours"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Island of Algiers Tours",
+      "website": "https://ioatoursbynate.com/",
+      "city": "New Orleans",
+      "phone": "(504) 442-0253",
+      "category": "entertainment",
+      "owner_name": "Nu'Awlons Nate Scott & Benita W. Scott",
+      "owner_email": "",
+      "address": "",
+      "subcategory": "Tours"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Know NOLA Tours",
+      "website": "http://www.knownolatours.com/",
+      "city": "New Orleans",
+      "phone": "(504) 264-2483",
+      "category": "entertainment",
+      "owner_name": "Mike Bartholomew",
+      "owner_email": "info@Knownolatours.com",
+      "address": "",
+      "subcategory": "Tours"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Le Musee de fpc",
+      "website": "https://www.lemuseedefpc.com/",
+      "city": "New Orleans",
+      "phone": "(504) 323-5074",
+      "category": "entertainment",
+      "owner_name": "Dwight & Beverly Stanton McKenna",
+      "owner_email": "info@lemuseedefpc@gmail.com",
+      "address": "2336 Esplanade Ave.",
+      "subcategory": "Tours"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "ASHÉ CULTURAL ARTS CENTER",
+      "website": "https://www.ashecac.org",
+      "city": "New Orleans",
+      "phone": "(504) 569-9070",
+      "category": "entertainment",
+      "owner_name": "Asali DeVan Ecclesiastes",
+      "owner_email": "info@ashenola.org",
+      "address": "1712 Oretha Castle Haley Blvd",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Lamonette Flowers & Gifts",
+      "website": "https://www.lamonetteflowersandgifts.com/",
+      "city": "Avondale",
+      "phone": "(504) 939-9610",
+      "category": "florists",
+      "owner_name": "Regina Monette Jarrel l",
+      "owner_email": "regina@lamonetteflowersandgifts.com",
+      "address": "237 Bishop Drive",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Mona's Accents Florist & Gift Basket Company",
+      "website": "https://www.monasaccents.com/",
+      "city": "New Orleans",
+      "phone": "(504) 944-7001",
+      "category": "florists",
+      "owner_name": "Romona Baudy",
+      "owner_email": "monasaccentsflorist@yahoo.com",
+      "address": "2109 N Claiborne Ave",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "King Tremaine Premium Candies",
+      "website": "https://www.kingtremaine.com/",
+      "city": "Baton Rouge",
+      "phone": "(225) 283-5777",
+      "category": "grocery",
+      "owner_name": "Serena Tremaine",
+      "owner_email": "hello@kingtremaine.com",
+      "address": "",
+      "subcategory": "Specialty"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Vegan Friendly Foods",
+      "website": "https://http//veganffoods.com",
+      "city": "Baton Rouge",
+      "phone": "(225) 246-8391",
+      "category": "grocery",
+      "owner_name": "Cornelius Roy",
+      "owner_email": "debrambabineaux@gmail.com",
+      "address": "4608 Bennington Ave",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Cupcake Junkie",
+      "website": "https://cupcakejunkiebr.com/",
+      "city": "Baton Rouge",
+      "phone": "(225) 421-1995",
+      "category": "grocery",
+      "owner_name": "Robyn Selders",
+      "owner_email": "",
+      "address": "12240 Coursey Blvd",
+      "subcategory": "Bakery"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Sweets Fiya & Ice LLC",
+      "website": "https://sweets-fiya-ice-llc.business.site/?utm_source=gmb&utm_medium=referral",
+      "city": "Kenner",
+      "phone": "(504) 667-3326",
+      "category": "grocery",
+      "owner_name": "Samyra Paul",
+      "owner_email": "",
+      "address": "2320 Reverend Richard Wilson dr",
+      "subcategory": "Bakery"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Cajun Nation Seasoning",
+      "website": "https://cajun-nation.com/",
+      "city": "Lafayette",
+      "phone": "(337) 322-5602",
+      "category": "grocery",
+      "owner_name": "Troy & Alfonzo Bolden",
+      "owner_email": "info@cajun-nation.com",
+      "address": "",
+      "subcategory": "Specialty"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "D's Dessert Bar",
+      "website": "https://www.dsdessertbar.com/",
+      "city": "Lake Charles",
+      "phone": "(337) 438-7774",
+      "category": "grocery",
+      "owner_name": "",
+      "owner_email": "",
+      "address": "306 Presidential Cir E",
+      "subcategory": "Bakery"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Evelyn's Decorated Sweets",
+      "website": "https://www.facebook.com/evelynsdecoratedsweets/&sa=D&source=editors&ust=1641848916991254&usg=AOvVaw3Gk0aVJHwaGCHP8D4jNkLp",
+      "city": "Lake Charles",
+      "phone": "(956) 572-5074",
+      "category": "grocery",
+      "owner_name": "",
+      "owner_email": "evyt82@gmail.com",
+      "address": "Prien Lake Area",
+      "subcategory": "Bakery"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Ball's Cajun Foods",
+      "website": "http://www.ballscajunfoods.com",
+      "city": "Lake Charles",
+      "phone": "(337) 436-0291",
+      "category": "grocery",
+      "owner_name": "Reginald Ball Jr",
+      "owner_email": "",
+      "address": "PO Box 16552",
+      "subcategory": "Specialty"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "SNO-LA",
+      "website": "https://snolasnowballs.com/",
+      "city": "Metairie",
+      "phone": "(504) 327-7669",
+      "category": "grocery",
+      "owner_name": "Monika & Kerry Crossley",
+      "owner_email": "",
+      "address": "2311 N. Causeway Blvd.",
+      "subcategory": "Ice Cream Parlor"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "BABY'S SNACK BOX",
+      "website": "",
+      "city": "New Orleans",
+      "phone": "(504) 304-5970",
+      "category": "grocery",
+      "owner_name": "Ron Davalos",
+      "owner_email": "",
+      "address": "2025 Orleans Ave.",
+      "subcategory": "Ice Cream Parlor"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "The Royal Cakery",
+      "website": "http://www.royalcakery.com/",
+      "city": "New Orleans",
+      "phone": "(504) 246-2065",
+      "category": "grocery",
+      "owner_name": "Shirelle Royal",
+      "owner_email": "",
+      "address": "10800 Morrison Rd.",
+      "subcategory": "Bakery"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Bernard's Pralines",
+      "website": "https://bernardscandy.com/",
+      "city": "New Orleans",
+      "phone": "(504) 244-0003",
+      "category": "grocery",
+      "owner_name": "Gary Bernard",
+      "owner_email": "bernardscandy@gmail.com",
+      "address": "5741 Crowder Blvd. A7",
+      "subcategory": "Specialty"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Loretta's Authentic Pralines",
+      "website": "http://lorettaspralines.com",
+      "city": "New Orleans",
+      "phone": "(504) 944-7068",
+      "category": "grocery",
+      "owner_name": "Loretta S. Harrison",
+      "owner_email": "lap@lorettaspralines.com",
+      "address": "2101 North Rampart",
+      "subcategory": "Bakery"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "CupCake Fairies Cafe",
+      "website": "http://www.cupcakefairies.com/home",
+      "city": "New Orleans",
+      "phone": "(504) 333-9356",
+      "category": "grocery",
+      "owner_name": "Michele Burton-Oatis",
+      "owner_email": "michele@cupcakefairies.com",
+      "address": "2511 Bayou Road",
+      "subcategory": "Bakery"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "ADRIAN'S BAKERY",
+      "website": "http://www.adrians-bakery.com/",
+      "city": "New Orleans",
+      "phone": "(504) 282-2283",
+      "category": "grocery",
+      "owner_name": "Adrian Darby",
+      "owner_email": "adriansbakery@gmail.com",
+      "address": "4710 Paris Avenue",
+      "subcategory": "Bakery"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Tee-Eva's Old Fashioned Pies & Pralines",
+      "website": "https://www.facebook.com/teeevas/",
+      "city": "New Orleans",
+      "phone": "(504) 905-3030",
+      "category": "grocery",
+      "owner_name": "Eva Louis Perry",
+      "owner_email": "teeevas@yahoo.com",
+      "address": "5201 Magazine Saint",
+      "subcategory": "Specialty"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Second Vine Wine",
+      "website": "http://secondvinewine.com/",
+      "city": "New Orleans",
+      "phone": "(504) 354-9125",
+      "category": "grocery",
+      "owner_name": "Troy Gant & Louis Keyes",
+      "owner_email": "",
+      "address": "4121 Magazine St",
+      "subcategory": "Alcohol"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Cajun Fire Brewing Company",
+      "website": "http://drinkcajunfire.com/",
+      "city": "New Orleans",
+      "phone": "(504) 355-6653",
+      "category": "grocery",
+      "owner_name": "Jon Renthrope, Adam Dawson & Courtney Wilson",
+      "owner_email": "jrent1911@gmail.com",
+      "address": "10555 LAKE FOREST BLVD",
+      "subcategory": "Alcohol"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Ole' Orleans Wines",
+      "website": "https://www.oleorleans.com",
+      "city": "New Orleans",
+      "phone": "(504) 356-1546",
+      "category": "grocery",
+      "owner_name": "Kim Lewis",
+      "owner_email": "",
+      "address": "1232 Oretha Castle Haley Blvd.",
+      "subcategory": "Alcohol"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Papa Yaw's Spicy Agave",
+      "website": "http://www.papayaws.com",
+      "city": "New Orleans",
+      "phone": "",
+      "category": "grocery",
+      "owner_name": "",
+      "owner_email": "papayawsllc@gmail.com",
+      "address": "401 Baronne Saint",
+      "subcategory": "Specialty"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Circle Food Store",
+      "website": "http://www.circlefoodsnola.com",
+      "city": "New Orleans",
+      "phone": "(504) 940-2111",
+      "category": "grocery",
+      "owner_name": "Sidney Torres",
+      "owner_email": "",
+      "address": "1522 Saint Bernard Ave.",
+      "subcategory": "Food Product/ Brand"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Burnell's Lower 9th Ward Market",
+      "website": "",
+      "city": "New Orleans",
+      "phone": "(504) 319-5886",
+      "category": "grocery",
+      "owner_name": "Burnell Cotlon",
+      "owner_email": "ujamaa.bae@gmail.com",
+      "address": "2036 Caffin Ave",
+      "subcategory": "Food Product/ Brand"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Ice Cream 504",
+      "website": "https://icecream504.com/",
+      "city": "New Orleans",
+      "phone": "(504) 266-2708",
+      "category": "grocery",
+      "owner_name": "Michael Southhall",
+      "owner_email": "",
+      "address": "2511 Jena Saint",
+      "subcategory": "Ice Cream Parlor"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Levitate Juice Company, LLC",
+      "website": "http://www.levitatejuice.com",
+      "city": "New Orleans",
+      "phone": "(504) 231-6473",
+      "category": "grocery",
+      "owner_name": "Craig Biagas",
+      "owner_email": "",
+      "address": "1625 Baronne St.",
+      "subcategory": "Coffe/Tea/Beverages"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Grande Krewe Fine Wine & Spirits",
+      "website": "https://store.grandekrewe.com/",
+      "city": "New Orleans",
+      "phone": "(504) 309-8309",
+      "category": "grocery",
+      "owner_name": "Bob, Jane, Roy & Carla",
+      "owner_email": "contact@grandekrewe.com",
+      "address": "2305 Decatur St.",
+      "subcategory": "Alcohol"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "BUTTERMILK DROP BAKERY & CAFE",
+      "website": "http://www.buttermilkdrop.com",
+      "city": "New Orleans",
+      "phone": "(504) 252-4538",
+      "category": "grocery",
+      "owner_name": "Dwight Henry",
+      "owner_email": "buttermilkdropbakery@gmail.com",
+      "address": "1781 N Dorgenois St",
+      "subcategory": "Bakery"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Heavenly Sweets Bakery",
+      "website": "https://www.keepitheavenlysweet.com/",
+      "city": "New Orleans",
+      "phone": "(504) 592-7501",
+      "category": "grocery",
+      "owner_name": "Trinise Prosper",
+      "owner_email": "heavenlysweetsbakeryllc@gmail.com",
+      "address": "5242 Elysian Fields Ave.",
+      "subcategory": "Bakery"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Mad Chef at 59th",
+      "website": "https://chefgonemad.com/",
+      "city": "New Orleans",
+      "phone": "(504) 442-5921",
+      "category": "grocery",
+      "owner_name": "Derek Robinson Jr.",
+      "owner_email": "",
+      "address": "5941 Bullard Ave.",
+      "subcategory": "Specialty"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Mister Apple",
+      "website": "https://www.misterapple.net/",
+      "city": "New Orleans",
+      "phone": "(504) 524-0601",
+      "category": "grocery",
+      "owner_name": "Tim Martin",
+      "owner_email": "misterapplenola@gmail.com",
+      "address": "201 N. Peters",
+      "subcategory": "Specialty"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Stop Jockin' Sno-Ball Stand",
+      "website": "https://www.facebook.com/stopjockinsnoball/",
+      "city": "New Orleans",
+      "phone": "(504) 206-0992",
+      "category": "grocery",
+      "owner_name": "",
+      "owner_email": "sjsnoballs@gmail.com",
+      "address": "3600 St. Bernard Ave.",
+      "subcategory": "Ice Cream Parlor"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Adrian's Bakery",
+      "website": "http://www.adrians-bakery.com/",
+      "city": "New Orleans",
+      "phone": "(504) 282-2283",
+      "category": "grocery",
+      "owner_name": "Adrian Darby",
+      "owner_email": "adiansbakery@gmail.com",
+      "address": "4710 Paris Ave.",
+      "subcategory": "Bakery"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "The Cupcake Collection",
+      "website": "https://www.thecupcakecollection.com/",
+      "city": "New Orleans",
+      "phone": "(504) 383-9322",
+      "category": "grocery",
+      "owner_name": "Mignon Francois",
+      "owner_email": "",
+      "address": "2917 Magazine St. , Suite 102",
+      "subcategory": "Bakery"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Keedy's Kandy Confection",
+      "website": "http://www.keedyskandy.com/",
+      "city": "New Orleans",
+      "phone": "(504) 296-2707",
+      "category": "grocery",
+      "owner_name": "Keedy Johnson",
+      "owner_email": "keedyskandys@icloud.com",
+      "address": "",
+      "subcategory": "Bakery"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "BigEasy Praline Connection Llc",
+      "website": "https://www.bigeasypralineconnection.com/",
+      "city": "New Orleans",
+      "phone": "(504) 214-9453",
+      "category": "grocery",
+      "owner_name": "Eric Jones",
+      "owner_email": "",
+      "address": "",
+      "subcategory": "Bakery"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "A La Carte Specialty Foods LLC",
+      "website": "http://www.alcfood.com",
+      "city": "Westwego",
+      "phone": "(504) 436-8911",
+      "category": "grocery",
+      "owner_name": "Karl Turner",
+      "owner_email": "info@alcfood.com",
+      "address": "501 Louisiana St",
+      "subcategory": "Food Product/ Brand"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "More & More I AM",
+      "website": "https://www.moreiam.org/",
+      "city": "Baton Rouge",
+      "phone": "(225) 418-1914",
+      "category": "health",
+      "owner_name": "",
+      "owner_email": "morenmoreiam@gmail.com",
+      "address": "1714 Florida Blvd",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Yoga Noir Project",
+      "website": "https://nikkyscottinc.com/",
+      "city": "Baton Rouge",
+      "phone": "",
+      "category": "health",
+      "owner_name": "Nicole Scott",
+      "owner_email": "info@nikkyscottinc.com",
+      "address": "",
+      "subcategory": "Fitness/ Yoga"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Detox and Drop Now",
+      "website": "http://www.detoxanddropnow.com",
+      "city": "Lake Charles",
+      "phone": "(832) 545-6979",
+      "category": "health",
+      "owner_name": "",
+      "owner_email": "ktvfobbs@yahoo.com",
+      "address": "621 N GOODMAN RD",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Tree of Life A&C LLC",
+      "website": "http://treeoflifeaandc.com",
+      "city": "Lake Charles",
+      "phone": "",
+      "category": "health",
+      "owner_name": "Candyce Edwards",
+      "owner_email": "Treeoflifeaandc@gmail.com",
+      "address": "4897 E Shoals Creek",
+      "subcategory": "Nutrition"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Magnolia Yoga Studio",
+      "website": "https://www.magnoliayogastudio.com",
+      "city": "New Orleans",
+      "phone": "(504) 302-2304",
+      "category": "health",
+      "owner_name": "Adrianne Jackson",
+      "owner_email": "hello@magnoliayogastudio.com",
+      "address": "301 Basin Saint",
+      "subcategory": "Fitness/ Yoga"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Royal T Fitness",
+      "website": "https://www.royaltfitness.com",
+      "city": "New Orleans",
+      "phone": "(504) 430-7163",
+      "category": "health",
+      "owner_name": "Trennesse Mosley",
+      "owner_email": "tnm@royaltfitness.com",
+      "address": "",
+      "subcategory": "Fitness/ Yoga"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Pro Fitness Trainers",
+      "website": "http://pftrainers.com",
+      "city": "New Orleans",
+      "phone": "(504) 432-5188",
+      "category": "health",
+      "owner_name": "Eric Capers",
+      "owner_email": "pftrainers@gmail.com",
+      "address": "4600 Freret St",
+      "subcategory": "Fitness/ Yoga"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Essential Care Services",
+      "website": "https://essentialcareservices.com/",
+      "city": "New Orleans",
+      "phone": "(504) 267-5712",
+      "category": "health",
+      "owner_name": "Tyra Gonzalez",
+      "owner_email": "essentialcareservices@yahoo.com",
+      "address": "3901 Ulloa Street",
+      "subcategory": "Mental Health Support"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Esthetique Facial Spa",
+      "website": "https://efacialspa.com/",
+      "city": "New Orleans",
+      "phone": "(504) 896-1006",
+      "category": "health",
+      "owner_name": "Jamie Plaia",
+      "owner_email": "efacialspa@gmail.com",
+      "address": "4500 Clearview Pkwy Suite 202",
+      "subcategory": "Spa/Massage Therapy"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Better Decisions Better Health",
+      "website": "https://www.betterdecisionsbetterhealth.com",
+      "city": "New Orleans",
+      "phone": "(803) 597-2324",
+      "category": "health",
+      "owner_name": "Yvette",
+      "owner_email": "yvette@betterdecisionsbetterhealth.com",
+      "address": "",
+      "subcategory": "Mental Health Support"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Empowered Coaching",
+      "website": "https://www.empoweredbycoaching.com",
+      "city": "New Orleans",
+      "phone": "(225) 366-8073",
+      "category": "health",
+      "owner_name": "Kaelysia Cooper",
+      "owner_email": "kaelysia@empoweredbycoaching.com",
+      "address": "",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "It's BEAUTY BY DESIGN",
+      "website": "http://www.itsbeautybydesign.com",
+      "city": "Baton Rouge",
+      "phone": "(225) 456-5741",
+      "category": "home",
+      "owner_name": "LaCarsha Babers",
+      "owner_email": "lacarshababers@gmail.com",
+      "address": "626 Airline Highway",
+      "subcategory": "Home Goods/Decor"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Whitney J Decor",
+      "website": "http://www.whitneyjdecor.com",
+      "city": "New Orleans",
+      "phone": "(504) 300-9698",
+      "category": "home",
+      "owner_name": "Whitney J.",
+      "owner_email": "hello@whitneyjdecor.com",
+      "address": "847 3rd St",
+      "subcategory": "Home Goods/Décor"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Karavan Handmade, LLC",
+      "website": "http://www.karavanhandmade.com",
+      "city": "New Orleans",
+      "phone": "",
+      "category": "home",
+      "owner_name": "Romona Briggans",
+      "owner_email": "karavanhandmade@gmail.com",
+      "address": "E-commerce",
+      "subcategory": "Home Goods/Décor"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "NOPSI Hotel",
+      "website": "http://www.nopsihotel.com",
+      "city": "New Orleans",
+      "phone": "(504) 962-6500",
+      "category": "hotels",
+      "owner_name": "Sheila Johnson",
+      "owner_email": "reservations@nopsihotel.com",
+      "address": "317 BARONNE ST",
+      "subcategory": "Hospitality/Hotels/Inns"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "The Duchess BB",
+      "website": "https://www.theduchessbb.com/",
+      "city": "New Orleans",
+      "phone": "(504) 872-9473",
+      "category": "hotels",
+      "owner_name": "John & Juanita Jackson",
+      "owner_email": "theduchessbb@aol.com",
+      "address": "833 Sixth Saint",
+      "subcategory": "Hospitality/Hotels/Inns"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "La Maison Vacation Rental",
+      "website": "http://lamaisonvacationrentals.com",
+      "city": "New Orleans",
+      "phone": "(504) 527-6479",
+      "category": "hotels",
+      "owner_name": "Jessie Smallwood",
+      "owner_email": "aaars@cox.net",
+      "address": "1740 Jackson Avenue",
+      "subcategory": "Hospitality/Hotels/Inns"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Hubbard Mansion",
+      "website": "https://www.hubbardmansion.com/",
+      "city": "New Orleans",
+      "phone": "(504) 897-3535",
+      "category": "hotels",
+      "owner_name": "Don & Shelia Hubbard",
+      "owner_email": "hubbardmansion@yahoo.com",
+      "address": "3535 Saint Charles Ave.",
+      "subcategory": "Hospitality/Hotels/Inns"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Tigress Handbags",
+      "website": "http://www.tigresshandbags.com",
+      "city": "Monroe",
+      "phone": "(318) 547-6419",
+      "category": "jewelry",
+      "owner_name": "",
+      "owner_email": "",
+      "address": "",
+      "subcategory": "Accessories/Handbags"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "On Time Bail Bonding",
+      "website": "http://batonrougebailbondsman.com/",
+      "city": "Baton Rouge",
+      "phone": "(225) 383-4888",
+      "category": "legal",
+      "owner_name": "Raymond Shall",
+      "owner_email": "",
+      "address": "440 government st",
+      "subcategory": "Bail Bonds Service"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Liberty Bank & Trust",
+      "website": "https://www.libertybank.net",
+      "city": "Baton Rouge",
+      "phone": "(225) 927-2217",
+      "category": "legal",
+      "owner_name": "Alden J. McDonald Jr.",
+      "owner_email": "",
+      "address": "8796 Greenwell Springs Rd",
+      "subcategory": "Financial Services"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Liberty Bank & Trust",
+      "website": "https://www.libertybank.net",
+      "city": "New Orleans",
+      "phone": "(504) 827-0060",
+      "category": "legal",
+      "owner_name": "Alden J. McDonald Jr.",
+      "owner_email": "",
+      "address": "2714 Canal Street",
+      "subcategory": "Financial Services"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Parker & Elder Law",
+      "website": "https://parkerelderlaw.com/",
+      "city": "New Orleans",
+      "phone": "(504) 222-2619",
+      "category": "legal",
+      "owner_name": "LaMarre & Amalfi Elder",
+      "owner_email": "lelder@parkerelderlaw.com",
+      "address": "1100 Poydras St Suite 2900",
+      "subcategory": "Legal Services"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "3rd Millennium Insurance & Financial Services, Inc.",
+      "website": "https://3rdmillennium-ins.com/",
+      "city": "New Orleans",
+      "phone": "",
+      "category": "legal",
+      "owner_name": "",
+      "owner_email": "",
+      "address": "10001 Lake Forest Blvd",
+      "subcategory": "Insurance"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Broussard Dispute Solutions, LLC",
+      "website": "http://www.bdsmediation.com/",
+      "city": "New Orleans",
+      "phone": "(504) 599-9638",
+      "category": "legal",
+      "owner_name": "Terrel J. Broussard",
+      "owner_email": "info@bdsmediation.com",
+      "address": "201 St. Charles Ave.",
+      "subcategory": "Legal Services"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "B.A.D.U. LLC",
+      "website": "https://www.baduenterprises.com/",
+      "city": "New Orleans",
+      "phone": "(773) 819-5675",
+      "category": "legal",
+      "owner_name": "",
+      "owner_email": "baduenterprises@gmail.com",
+      "address": "",
+      "subcategory": "Financial Services"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Bruno & Tervalon, LLP",
+      "website": "ajtervalon@btcpas.com",
+      "city": "New Orleans",
+      "phone": "(504) 284-8733",
+      "category": "legal",
+      "owner_name": "Alcide Tervalon",
+      "owner_email": "ajtervalon@btcpas.com",
+      "address": "4298 Elysian Fields, Suite A",
+      "subcategory": "Financial Services"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Business Council of New Orleans & The River Region",
+      "website": "https://www.bcno.org/",
+      "city": "New Orleans",
+      "phone": "(985) 869-2402",
+      "category": "legal",
+      "owner_name": "Henry L. Coaxum",
+      "owner_email": "",
+      "address": "650 Poydras St. Suite 2825",
+      "subcategory": "Financial Services"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Carriere & Dunn Tax/Accounting Services",
+      "website": "",
+      "city": "New Orleans",
+      "phone": "(504) 949-3095",
+      "category": "legal",
+      "owner_name": "",
+      "owner_email": "",
+      "address": "2014 St. Claude St.",
+      "subcategory": "Financial Services"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "CFO Ink & Notary, LLC",
+      "website": "https://cfoink.com/",
+      "city": "New Orleans",
+      "phone": "(504) 265-9200",
+      "category": "legal",
+      "owner_name": "Patricia Jones",
+      "owner_email": "",
+      "address": "7520 Chef Menteur Hwy #2",
+      "subcategory": "Financial Services"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Bernard Law Firm LLC",
+      "website": "https://bernardlawfirmllc.com/",
+      "city": "New Orleans",
+      "phone": "(504) 231-7113",
+      "category": "legal",
+      "owner_name": "Shawon Bernard",
+      "owner_email": "shawon@bernardlawfirmllc.com",
+      "address": "701 Loyola Ave",
+      "subcategory": "Legal Services"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "1st Lady Lingerie & Novelties",
+      "website": "https://1st-lady-lingerie-novelties.business.site/",
+      "city": "New Orleans",
+      "phone": "(504) 242-2010",
+      "category": "lifestyle",
+      "owner_name": "Evelyn G Sullen",
+      "owner_email": "",
+      "address": "10800 Morrison Rd.",
+      "subcategory": "Adult Novelties"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Aart Accent Tattoos",
+      "website": "https://www.facebook.com/Aartaccent504/",
+      "city": "New Orleans",
+      "phone": "(504) 581-9812",
+      "category": "lifestyle",
+      "owner_name": "Jacci Gresham",
+      "owner_email": "aartaccent504@gmail.com",
+      "address": "1041 N Rampart",
+      "subcategory": "Piercing/Tattoos"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Cuban Crafters Cigar Lounge",
+      "website": "http://www.cigarbarnola.com/",
+      "city": "New Orleans",
+      "phone": "(504) 372-4838",
+      "category": "lifestyle",
+      "owner_name": "",
+      "owner_email": "sales@cigarbarnola.com",
+      "address": "533 Toulouse St",
+      "subcategory": "Smoking & Paraphernalia"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Octagon Media",
+      "website": "https://www.octagonmedia8.com/",
+      "city": "Baton Rouge",
+      "phone": "(225) 663-6878",
+      "category": "marketing",
+      "owner_name": "",
+      "owner_email": "info@octagonmedia8.com",
+      "address": "4626 Sherwood Common Blvd.,",
+      "subcategory": "Advertising"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "NOLA Web Team",
+      "website": "https://nolawebteam.com/",
+      "city": "METAIRIE",
+      "phone": "(504) 729-9860",
+      "category": "marketing",
+      "owner_name": "Brandon Haynes",
+      "owner_email": "bh@nolawebteam.com",
+      "address": "4929 WEST NAPOLEON AVE.",
+      "subcategory": "Web Services/ Social Media"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Blossoming Minds Health Center  LLC",
+      "website": "https://www.blossomingminds.org/",
+      "city": "Gretna",
+      "phone": "(504) 233-2288",
+      "category": "medical",
+      "owner_name": "Ebony Evans",
+      "owner_email": "ebonyevans@blossomingmindscounseling.org",
+      "address": "405 Gretna Blvd. Suite 205",
+      "subcategory": "Psychiatry/ Mental Health"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "For Your Eyes Only 20/20",
+      "website": "https://www.foryoureyesonly2020.com",
+      "city": "New Orleans",
+      "phone": "(504) 896-7661",
+      "category": "medical",
+      "owner_name": "Tara LeBlanc",
+      "owner_email": "fyeo2020@yahoo.com",
+      "address": "4220 Magazine St.",
+      "subcategory": "Vision"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Allimac  Mobile  Phlebotomy  Lab  LLC",
+      "website": "https://allimacmobilelab.com/",
+      "city": "New Orleans",
+      "phone": "(504) 516-5988",
+      "category": "medical",
+      "owner_name": "Camilla Henderson",
+      "owner_email": "",
+      "address": "",
+      "subcategory": "Diagnostic Testing/Labs"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Advanced Allergy Associates",
+      "website": "https://www.neworleansallergy.com/",
+      "city": "New Orleans",
+      "phone": "(504) 702-1263",
+      "category": "medical",
+      "owner_name": "Dr. Cherly Williams",
+      "owner_email": "",
+      "address": "8030 Crowder Blvd. Suite A",
+      "subcategory": "Primary Care"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "LaserRecyclers/ink & toner",
+      "website": "http://www.LaserDiscountToner.com",
+      "city": "Baton Rouge",
+      "phone": "(225) 978-2552",
+      "category": "other",
+      "owner_name": "",
+      "owner_email": "info@ldtink.com",
+      "address": "301 N. Main 2200",
+      "subcategory": "Office Supplies"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Heritage Funeral Directors",
+      "website": "http://www.heritagefuneraldirectors.com",
+      "city": "New Orleans",
+      "phone": "(504) 944-5500",
+      "category": "other",
+      "owner_name": "Thomas Bethke",
+      "owner_email": "heritagefd@yahoo.com",
+      "address": "4101 Saint Claude Avenue",
+      "subcategory": "Mortuary/ Funeral Services"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Angel Arms NOLA",
+      "website": "https://angelarmsnola.com/",
+      "city": "New Orleans",
+      "phone": "(504) 612-4663",
+      "category": "other",
+      "owner_name": "Isaiah Stewart",
+      "owner_email": "",
+      "address": "2912 Conti Street",
+      "subcategory": "Guns & Shooting Ranges"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Subrenia Artemis Photography",
+      "website": "https://subreniaartemisllc.com/",
+      "city": "Baton Rouge",
+      "phone": "(225) 414-3260",
+      "category": "photography",
+      "owner_name": "Subrenia Johnson",
+      "owner_email": "",
+      "address": "8738 Quarters Lake Road Building 12 Suite R-4",
+      "subcategory": "Photography"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "(DRP) Dexter Ruffin Photography",
+      "website": "https://www.dexterruffinphotography.org/",
+      "city": "Gretna",
+      "phone": "(504) 227-2273",
+      "category": "photography",
+      "owner_name": "Shelly & Dexter Ruffin",
+      "owner_email": "Teamruffin@hotmail.com",
+      "address": "1428 1/2 Claire Avenue",
+      "subcategory": "Photography"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Q. Bleu Photography",
+      "website": "http://www.qbleuphoto.com",
+      "city": "New Orleans",
+      "phone": "(504) 345-8903",
+      "category": "photography",
+      "owner_name": "Quinn Gordon",
+      "owner_email": "",
+      "address": "",
+      "subcategory": "Photography"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Memoriez of A Lifetime Photography",
+      "website": "https://memoriezofaphotography.weebly.com",
+      "city": "Zachary",
+      "phone": "(225) 810-9233",
+      "category": "photography",
+      "owner_name": "LeAndrew Coates",
+      "owner_email": "",
+      "address": "3525 Robert St.",
+      "subcategory": "Photography"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Chief of Minds, LLC",
+      "website": "https://www.chiefofminds.com/",
+      "city": "Baton Rouge",
+      "phone": "(225) 754-9506",
+      "category": "professional",
+      "owner_name": "Lakeisha Robichaux",
+      "owner_email": "",
+      "address": "4626 Sherwood Common Blvd",
+      "subcategory": "Human Resources"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Hidden Rootz Ancestral Services",
+      "website": "http://www.hiddenrootz.com",
+      "city": "Kenner",
+      "phone": "(504) 407-1821",
+      "category": "professional",
+      "owner_name": "Tammy Ozier",
+      "owner_email": "",
+      "address": "",
+      "subcategory": "Consulting"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "DetDream Foundation",
+      "website": "https://donteventripdreamfoundation.org/",
+      "city": "Marrero",
+      "phone": "(504) 208-7248",
+      "category": "professional",
+      "owner_name": "Ro Watts & LaJoan Williams",
+      "owner_email": "info@donteventripdreamfoundation.org",
+      "address": "1725 Lincoln Ave",
+      "subcategory": "Speakers"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "LexthomResearch and Development LLC",
+      "website": "https://lexthomresearch.wixsite.com/lexthomresearchandde",
+      "city": "New Orleans",
+      "phone": "(504) 502-2054",
+      "category": "professional",
+      "owner_name": "Alexis Mays",
+      "owner_email": "lexthomresearch@gmail.com",
+      "address": "1100 Poydras Street",
+      "subcategory": "Consulting"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Mays Development Group LLC",
+      "website": "https://www.maysdevelopmentgroup.com/",
+      "city": "New Orleans",
+      "phone": "(504) 502-2054",
+      "category": "professional",
+      "owner_name": "Dr. Alexia Mays",
+      "owner_email": "info@maysdevelopmentgroup.com",
+      "address": "313 Pacific Avenue",
+      "subcategory": "Consulting"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Rswg Consulting, Llc",
+      "website": "http://https:rswgconsulting.solutions",
+      "city": "New Orleans",
+      "phone": "(504) 408-2017",
+      "category": "professional",
+      "owner_name": "Rachel Williams",
+      "owner_email": "",
+      "address": "4019 Pontchartrain Drive",
+      "subcategory": "Consulting"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "A.Leigh Solutions LLC",
+      "website": "https://www.aleighsolutions.com/",
+      "city": "New Orleans",
+      "phone": "(504) 201-7024",
+      "category": "professional",
+      "owner_name": "Amanda Aiken",
+      "owner_email": "amanda@aleighsolutions.com,",
+      "address": "6830 Curran Rd.",
+      "subcategory": "Consulting"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "AJ Williams Consulting, LLC",
+      "website": "https://www.ajwilliams.co/",
+      "city": "New Orleans",
+      "phone": "(504) 284-0712",
+      "category": "professional",
+      "owner_name": "AJ Williams",
+      "owner_email": "hello@ajwilliams.com",
+      "address": "3401 S. Broad",
+      "subcategory": "Consulting"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Champs Real Estate & Property Management",
+      "website": "http://www.champsrealestate.net",
+      "city": "Lafayette",
+      "phone": "(337) 806-8450",
+      "category": "real estate",
+      "owner_name": "Ethel Carter",
+      "owner_email": "ecarter@champsrealestate.com",
+      "address": "104 Row 2",
+      "subcategory": "Real Estate Agents/ Brokers"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "OMNI HOME BUYERS",
+      "website": "https://www.omnifasthomebuyers.com/",
+      "city": "New Orleans",
+      "phone": "(504) 399-3155",
+      "category": "real estate",
+      "owner_name": "",
+      "owner_email": "stevenson@omnirealtyllc.com",
+      "address": "1615 Poydras st",
+      "subcategory": "Real Estate Agents/ Brokers"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Easy Property Search",
+      "website": "https://www.callkevla.com/",
+      "city": "Prairieville",
+      "phone": "(225) 921-2862",
+      "category": "real estate",
+      "owner_name": "Kevin Jones",
+      "owner_email": "kevin@callkevla.com",
+      "address": "CK Realty 17475 Meadow Ridge Circle Prarieville, LA 70769",
+      "subcategory": "Real Estate Agents/ Brokers"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Jamillah Maarij Grant Real Estate Broker",
+      "website": "http://www.jamillahgrant.com",
+      "city": "Kenner",
+      "phone": "(504) 336-4179",
+      "category": "real estate",
+      "owner_name": "Jamillah Maarij Grant",
+      "owner_email": "grant_sells_realestate@yahoo.com",
+      "address": "9 Chateau Magdelaine Drive",
+      "subcategory": "Real Estate Agents/ Brokers"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "SOULFUL EATS",
+      "website": "https://www.facebook.com/TheOriginalSoulfulEats/",
+      "city": "Abbeville",
+      "phone": "(337) 422-5060",
+      "category": "restaurants",
+      "owner_name": "Roderick D.",
+      "owner_email": "theoriginalsoulfuleats@gmail.com",
+      "address": "1815 Charity Street",
+      "subcategory": "BBQ/Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Ruffins II",
+      "website": "https://www.facebook.com/RuffinsII/",
+      "city": "Baker",
+      "phone": "(225) 663-2143",
+      "category": "restaurants",
+      "owner_name": "Lloyd Ruffins",
+      "owner_email": "theclubhousegrill225@gmail.com",
+      "address": "14522 Plank Road",
+      "subcategory": "Bar/ Night Club"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Boil & Roux",
+      "website": "http://boilandroux.com",
+      "city": "Baton Rouge",
+      "phone": "(225) 778-7700",
+      "category": "restaurants",
+      "owner_name": "Adrian Hammond & Maurice Walker",
+      "owner_email": "",
+      "address": "11777 Coursey Boulevard",
+      "subcategory": "Creole/Cajun Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Bayou Café & Catering",
+      "website": "",
+      "city": "Baton Rouge",
+      "phone": "(225) 358-0814",
+      "category": "restaurants",
+      "owner_name": "Frank Brown",
+      "owner_email": "",
+      "address": "5068 Airline Highway",
+      "subcategory": "Creole/Cajun Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "BB & PF",
+      "website": "http://bbandpf.weebly.com/",
+      "city": "Baton Rouge",
+      "phone": "",
+      "category": "restaurants",
+      "owner_name": "Caroline",
+      "owner_email": "",
+      "address": "10248 Florida Blvd.",
+      "subcategory": "West African Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "BullChicks",
+      "website": "https://www.bullchicks.com/",
+      "city": "Baton Rouge",
+      "phone": "(225) 372-2007",
+      "category": "restaurants",
+      "owner_name": "Brent Ramsey",
+      "owner_email": "",
+      "address": "11135 Coursey Blvd.",
+      "subcategory": "BBQ/Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Cafe Express",
+      "website": "https://www.facebook.com/pages/Cafe-Express/115799361773545&sa=D&source=editors&ust=1641848917008119&usg=AOvVaw2BJS5_SI2hb-_IClUPuT0v",
+      "city": "Baton Rouge",
+      "phone": "(225) 383-3282",
+      "category": "restaurants",
+      "owner_name": "Simon LIsom & Vincent Smith",
+      "owner_email": "",
+      "address": "2451 North St.",
+      "subcategory": "Cafe"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Cafe Jeanpierre",
+      "website": "http://cafejeanpierrebr.com/",
+      "city": "Baton Rouge",
+      "phone": "(225) 273-6979",
+      "category": "restaurants",
+      "owner_name": "Lisa Jeanpierre",
+      "owner_email": "info@cafejeanpierre.com",
+      "address": "10500 Greenwell Springs Road Suite B",
+      "subcategory": "Cafe"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Cajun Cowboy Kitchen",
+      "website": "https://www.redmagicseasoning.com/",
+      "city": "Baton Rouge",
+      "phone": "(225) 200-6595",
+      "category": "restaurants",
+      "owner_name": "Kendell King",
+      "owner_email": "orders@redmagicseasoning.com",
+      "address": "4167 Choctaw Drive",
+      "subcategory": "Creole/Cajun Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Chef Schonberg’s Sweets",
+      "website": "https://www.chefschonberg.com/",
+      "city": "Baton Rouge",
+      "phone": "(225) 590-0364",
+      "category": "restaurants",
+      "owner_name": "Amanada Schonberg",
+      "owner_email": "info@chefschonberg.com",
+      "address": "",
+      "subcategory": "Bakery"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Chef Celeste Bistro",
+      "website": "https://chefceleste.com/",
+      "city": "Baton Rouge",
+      "phone": "(225) 324-5616",
+      "category": "restaurants",
+      "owner_name": "Celeste Gill",
+      "owner_email": "info@chefceleste.com",
+      "address": "501 Main St.",
+      "subcategory": "Creole/Cajun Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Chef Payne Catering",
+      "website": "https://www.chefpaynecatering.com/",
+      "city": "Baton Rouge",
+      "phone": "(225) 288-7289",
+      "category": "restaurants",
+      "owner_name": "Neqouia Payne",
+      "owner_email": "chefpaynecatering@gmail.com",
+      "address": "5557 Government St.",
+      "subcategory": "Creole/Cajun Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Chicken Shack",
+      "website": "https://www.facebook.com/ChickenShackBR/&sa=D&source=editors&ust=1641848917009295&usg=AOvVaw2TxQ1m-Id61uMt_p8BYO57",
+      "city": "Baton Rouge",
+      "phone": "(225) 383-0940",
+      "category": "restaurants",
+      "owner_name": "Joe Delpit",
+      "owner_email": "jd@jde.brcoxmail.com",
+      "address": "413 N. Acadian Thruway",
+      "subcategory": "BBQ/Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "DC Eats",
+      "website": "https://www.dceatsbr.com/",
+      "city": "Baton Rouge",
+      "phone": "(225) 357-0027",
+      "category": "restaurants",
+      "owner_name": "Dejon Cage",
+      "owner_email": "",
+      "address": "8150 Plank Road",
+      "subcategory": "BBQ/Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Dorothy’s Soul Food Kitchen",
+      "website": "https://www.facebook.com/DorothysSoulFoodKitchen/?_rdr",
+      "city": "Baton Rouge",
+      "phone": "(225) 757-1146",
+      "category": "restaurants",
+      "owner_name": "Denata Greeley",
+      "owner_email": "chefdeneta@gmail.com",
+      "address": "1221 Gardere Ln",
+      "subcategory": "BBQ/Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "The End-Zone Daquiri BR",
+      "website": "https://www.endzonebr.com/",
+      "city": "Baton Rouge",
+      "phone": "(225) 355-5010",
+      "category": "restaurants",
+      "owner_name": "Jesse Glasper",
+      "owner_email": "ready2geauxendzone.com",
+      "address": "6224 Plank Rd",
+      "subcategory": "Bar/ Night Club"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "The Garden Cafe",
+      "website": "https://www.facebook.com/thegardencafebr/&sa=D&source=editors&ust=1641848917010164&usg=AOvVaw1FdLSBa0cSSZOMZtGDqJwn",
+      "city": "Baton Rouge",
+      "phone": "(225) 248-6300",
+      "category": "restaurants",
+      "owner_name": "Darryl Johnson",
+      "owner_email": "",
+      "address": "7751 Goodwood Blvd.",
+      "subcategory": "Cafe"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "The Grind",
+      "website": "https://www.quartersbr.com/",
+      "city": "Baton Rouge",
+      "phone": "(225) 930-4912",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "address": "4530 S. Sherwood Forest Blvd",
+      "subcategory": "Bar/ Night Club"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Louisiana’s Best & Company",
+      "website": "https://louisianasbestco.wixsite.com/lasbestco",
+      "city": "Baton Rouge",
+      "phone": "(225) 772-6460",
+      "category": "restaurants",
+      "owner_name": "Alvin Williams",
+      "owner_email": "louisianasbestco@gmail.com",
+      "address": "2825 Alaska St.",
+      "subcategory": "Creole/Cajun Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Jay’s Bar-B-Q",
+      "website": "https://www.jaysbbq.com/",
+      "city": "Baton Rouge",
+      "phone": "(225) 293-1232",
+      "category": "restaurants",
+      "owner_name": "Rich Newtown",
+      "owner_email": "info@jaysbarbq.com",
+      "address": "5734 Sherwood Forset Blvd.",
+      "subcategory": "BBQ/Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Krab Queenz Seafood",
+      "website": "https://www.krabqueenz.com/",
+      "city": "Baton Rouge",
+      "phone": "(225) 343-3398",
+      "category": "restaurants",
+      "owner_name": "Tonique Clay",
+      "owner_email": "",
+      "address": "209 W. State St",
+      "subcategory": "Creole/Cajun Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Lillie’s Kitchen",
+      "website": "",
+      "city": "Baton Rouge",
+      "phone": "(225) 359-9555",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "address": "5735 Silverleaf Ave.",
+      "subcategory": "Creole/Cajun Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Millennial Park",
+      "website": "",
+      "city": "Baton Rouge",
+      "phone": "(281)-387-6516",
+      "category": "restaurants",
+      "owner_name": "Cameron Jackson",
+      "owner_email": "camjackson@millennialparkbr.com",
+      "address": "3817 Florida Boulevard,",
+      "subcategory": "BBQ/Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "N & Out Soulfood",
+      "website": "https://www.facebook.com/nandoutsoul/",
+      "city": "Baton Rouge",
+      "phone": "(225) 231-2362",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "address": "9836 Florida Blvd.",
+      "subcategory": "BBQ/Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Neph’s Deli",
+      "website": "https://www.instagram.com/_.nephs._/?hl=en",
+      "city": "Baton Rouge",
+      "phone": "(225) 251-3597",
+      "category": "restaurants",
+      "owner_name": "Jerrell Taylor",
+      "owner_email": "",
+      "address": "2046 Scenic Highway",
+      "subcategory": "BBQ/Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Ooh Dat Sports Bar & Grill",
+      "website": "https://ooh-dat-sports-bar-grill.business.site/?utm_source=gmb&utm_medium=referral",
+      "city": "Baton Rouge",
+      "phone": "(225) 357-0908",
+      "category": "restaurants",
+      "owner_name": "Lisa Jackson",
+      "owner_email": "",
+      "address": "4886 Plank Road",
+      "subcategory": "Bar/ Night Club"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Owen’s Grocery & Market",
+      "website": "https://www.facebook.com/owenssoulfood/",
+      "city": "Baton Rouge",
+      "phone": "(225) 926-5831",
+      "category": "restaurants",
+      "owner_name": "Cynthia Green",
+      "owner_email": "cateredbyowens@gmail.com",
+      "address": "2444 Balis Drive",
+      "subcategory": "BBQ/Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Pappa’s Soul Food",
+      "website": "https://www.facebook.com/pages/Pappas-Soul-Food/114811041871209",
+      "city": "Baton Rouge",
+      "phone": "(225) 201-1048",
+      "category": "restaurants",
+      "owner_name": "Cedric Briggs",
+      "owner_email": "",
+      "address": "8386 Airline Highway",
+      "subcategory": "BBQ/Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Pimanyoli’s Sidewalk Cafe",
+      "website": "http://www.pimanyolisbbq.com/",
+      "city": "Baton Rouge",
+      "phone": "(225) 751-7590",
+      "category": "restaurants",
+      "owner_name": "Yolanda",
+      "owner_email": "",
+      "address": "14241 Airline Highway Ste. 105",
+      "subcategory": "BBQ/Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Pit-N-Peel BBQ & Seafood",
+      "website": "http://www.pit-n-peel.com/",
+      "city": "Baton Rouge",
+      "phone": "(225) 421-1488",
+      "category": "restaurants",
+      "owner_name": "Elvondae Raybon",
+      "owner_email": "",
+      "address": "2101 Government St.",
+      "subcategory": "Creole/Cajun Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Profit Smokin BBQ",
+      "website": "https://www.facebook.com/Profitsmokinbbq-445268865813944/&sa=D&source=editors&ust=1641848917013809&usg=AOvVaw02hTzqDSNpqGyGQIt4zvKG",
+      "city": "Baton Rouge",
+      "phone": "(409) 932-4912",
+      "category": "restaurants",
+      "owner_name": "Aleah Cohn",
+      "owner_email": "profitsmokinbbqcs@gmail.com",
+      "address": "5174 Plank Road",
+      "subcategory": "BBQ/Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Royal Taste of Jamaica",
+      "website": "https://www.facebook.com/1ROYALTASTE",
+      "city": "Baton Rouge",
+      "phone": "(225) 930-5313",
+      "category": "restaurants",
+      "owner_name": "David Suarez",
+      "owner_email": "royaltasteofjamaica@gmail.com",
+      "address": "320 Saint Charles Street",
+      "subcategory": "Caribbean Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Ruffins Downtown Daiquiri Lounge",
+      "website": "https://www.facebook.com/downtowndaiquirilounge/",
+      "city": "Baton Rouge",
+      "phone": "(225) 250-5200",
+      "category": "restaurants",
+      "owner_name": "Lloyd Ruffins",
+      "owner_email": "ruffinsddl@gmail.com",
+      "address": "602 Main St.",
+      "subcategory": "Bar/ Night Club"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Sauce and Bones",
+      "website": "https://www.facebook.com/sauceandbonesbr/",
+      "city": "Baton Rouge",
+      "phone": "(225) 291-2210",
+      "category": "restaurants",
+      "owner_name": "Robbie Hart",
+      "owner_email": "sauceandbonesbr@gmail.com",
+      "address": "2696 S. Sherwood Forest Blvd.",
+      "subcategory": "BBQ/Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "The Smokey Pit",
+      "website": "http://www.thesmokeypit.com/",
+      "city": "Baton Rouge",
+      "phone": "(225) 923-3998",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "address": "1916 Dallas Drive",
+      "subcategory": "BBQ/Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Southern Cofe",
+      "website": "https://www.instagram.com/southerncofe/&sa=D&source=editors&ust=1641848917015230&usg=AOvVaw2sHgpYggxhy4fwPzxJf0OR",
+      "city": "Baton Rouge",
+      "phone": "(225) 953-9488",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "address": "8418 Scotland Ave.",
+      "subcategory": "Cafe"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Vegan Friendly Foods",
+      "website": "https://veganffoods.com/",
+      "city": "Baton Rouge",
+      "phone": "(225) 246-8391",
+      "category": "restaurants",
+      "owner_name": "Cornelius Roy",
+      "owner_email": "",
+      "address": "4608 Bennington Ave.",
+      "subcategory": "BBQ/Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Zeeland Street",
+      "website": "http://zeelandstreet.com/",
+      "city": "Baton Rouge",
+      "phone": "(225) 387-4546",
+      "category": "restaurants",
+      "owner_name": "Stephanie Phares",
+      "owner_email": "",
+      "address": "2031 Perkins Road",
+      "subcategory": "Creole/Cajun Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Sweet and Savory Company",
+      "website": "https://www.facebook.com/sweetsavorycompany/&sa=D&source=editors&ust=1641848917015392&usg=AOvVaw3e-oBSmytvhum2_oytepu9",
+      "city": "Gonzales",
+      "phone": "(225) 647-8686",
+      "category": "restaurants",
+      "owner_name": "Trina K.",
+      "owner_email": "",
+      "address": "1064 E. Worthy St.",
+      "subcategory": "BBQ/Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Big Poppa Burgers Chicken & Waffles",
+      "website": "http://bigpoppaburgers.com",
+      "city": "Harvey",
+      "phone": "(504) 328-8089",
+      "category": "restaurants",
+      "owner_name": "Percy Miller",
+      "owner_email": "",
+      "address": "3300 4th Street",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "The Kitchen",
+      "website": "",
+      "city": "Lake Charles",
+      "phone": "(337) 436-1444",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "address": "417 Prewitt Street",
+      "subcategory": "BBQ/Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "2425 Bar & Lounge",
+      "website": "https://2425bar.com/",
+      "city": "Lake Charles",
+      "phone": "(337) 429-5190",
+      "category": "restaurants",
+      "owner_name": "Ashley C.",
+      "owner_email": "",
+      "address": "2425 Broad Street",
+      "subcategory": "Bar/ Night Club"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Finesse Bar and Lounge",
+      "website": "https://finesse-bar-and-lounge.business.site/",
+      "city": "Lake Charles",
+      "phone": "(337) 499-8992",
+      "category": "restaurants",
+      "owner_name": "Marcus Matthew",
+      "owner_email": "",
+      "address": "2336 Broad Street",
+      "subcategory": "Bar/ Night Club"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "2 Good Sandwiches",
+      "website": "https://www.google.com/url?q=https://www.facebook.com/2GoodSandwiches/&sa=D&source=editors&ust=1641848917016098&usg=AOvVaw3HBrs5a2lM6Ab35wbSmqe6",
+      "city": "Lake Charles",
+      "phone": "(337) 564-5162",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "2goodsandwiches@gmail.com",
+      "address": "1405 Gerstner Memorial Dr.",
+      "subcategory": "Cafe"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Circle 7 Seafood and Daiquiri Hut",
+      "website": "https://www.facebook.com/Circle7Seafood/&sa=D&source=editors&ust=1641848917016541&usg=AOvVaw0SP7t6t_RHO1iPNzbRwVzo",
+      "city": "Lake Charles",
+      "phone": "(337) 274-3229",
+      "category": "restaurants",
+      "owner_name": "Antonio Duhon",
+      "owner_email": "",
+      "address": "1221 N. Martin Luther King Highway",
+      "subcategory": "Creole/Cajun Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "The Foundation House",
+      "website": "https://www.facebook.com/The-Foundation-House-Restaurant-Event-Venue-129603493892149/",
+      "city": "Lake Charles",
+      "phone": "(337) 433-3266",
+      "category": "restaurants",
+      "owner_name": "Dana Guidry-Lewis",
+      "owner_email": "dglewis6695@gmail.com",
+      "address": "720 Enterprise Blvd.",
+      "subcategory": "BBQ/Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Leonards Food Quarters",
+      "website": "http://www.leonardsfoodquarters.com",
+      "city": "Lake Charles",
+      "phone": "(337) 494-0618",
+      "category": "restaurants",
+      "owner_name": "Marlon Fuselier",
+      "owner_email": "",
+      "address": "1708 Gerstner Memorial Drive",
+      "subcategory": "Creole/Cajun Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Willie Mae's Scotch House",
+      "website": "http://www.williemaesnola.com/",
+      "city": "New Orleans",
+      "phone": "(504) 822-9503",
+      "category": "restaurants",
+      "owner_name": "Kerry Seaton Stewart",
+      "owner_email": "hello@fohrmedia.com",
+      "address": "2401 St Ann St",
+      "subcategory": "BBQ/Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Bennachin Restaurant",
+      "website": "http://www.bennachinrestaurant.com",
+      "city": "New Orleans",
+      "phone": "(504) 522-1230",
+      "category": "restaurants",
+      "owner_name": "Gambian Fanta Tambajang",
+      "owner_email": "info@bennachinresturant.com",
+      "address": "1212 Royal St",
+      "subcategory": "West African Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Chicken and Watermelon",
+      "website": "http://www.boogiebird.com",
+      "city": "New Orleans",
+      "phone": "(504) 896-4596",
+      "category": "restaurants",
+      "owner_name": "Ron Woods",
+      "owner_email": "",
+      "address": "3400 S Claiborne Ave",
+      "subcategory": "BBQ/Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Squeezed",
+      "website": "http://pythianmarket.com",
+      "city": "New Orleans",
+      "phone": "(504) 481-9599",
+      "category": "restaurants",
+      "owner_name": "Thomas Morstead & Marques Colston",
+      "owner_email": "",
+      "address": "234 Loyola Ave.",
+      "subcategory": "Cafe"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Salads Galore & More",
+      "website": "http://www.saladsgalorenola.com/",
+      "city": "New Orleans",
+      "phone": "(504) 240-6552",
+      "category": "restaurants",
+      "owner_name": "Lisa Ducre",
+      "owner_email": "",
+      "address": "7011 Read Blvd.",
+      "subcategory": "Cafe"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Snug Harbor Jazz Bistro",
+      "website": "http://www.snugjazz.com",
+      "city": "New Orleans",
+      "phone": "(504) 949-0696",
+      "category": "restaurants",
+      "owner_name": "George Brumat",
+      "owner_email": "",
+      "address": "626 Frenchmen St",
+      "subcategory": "Bar/ Night Club"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Cafe Istanbul",
+      "website": "http://www.cafeistanbulNOLA.com",
+      "city": "New Orleans",
+      "phone": "(504) 975-0286",
+      "category": "restaurants",
+      "owner_name": "Suleyman Aydin & Chuck Perkins",
+      "owner_email": "devrimaydin@gmail.com",
+      "address": "2372 St Claude Ave",
+      "subcategory": "Venues/Events Spaces"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "McHardy's Chicken & Fixin'",
+      "website": "http://www.mchardyschicken.com/",
+      "city": "New Orleans",
+      "phone": "(504) 949-0000",
+      "category": "restaurants",
+      "owner_name": "Rahman Mogilles",
+      "owner_email": "",
+      "address": "1458 North Broad Street",
+      "subcategory": "BBQ/Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Sassafras Restaurant",
+      "website": "http://www.sassafrascreolekitchen.com",
+      "city": "New Orleans",
+      "phone": "(504) 288-3939",
+      "category": "restaurants",
+      "owner_name": "Julia Grother & Richard Stewert",
+      "owner_email": "",
+      "address": "2501 Leon C Simon Blvd",
+      "subcategory": "Creole/Cajun Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "PEPPERONI RAY'S CAFE",
+      "website": "https://pepperonirays.net/",
+      "city": "New Orleans",
+      "phone": "(504) 264-7995",
+      "category": "restaurants",
+      "owner_name": "Raymond Gibson",
+      "owner_email": "pepperonirayscafe@yahoo.com",
+      "address": "5339 Franklin Ave",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Cafe Porche & Snowbar",
+      "website": "https://cafe-porche-snowbar.square.site/",
+      "city": "New Orleans",
+      "phone": "(504) 930-4249",
+      "category": "restaurants",
+      "owner_name": "Coronella Prche-Jenneford",
+      "owner_email": "cafeporche@gmail.com",
+      "address": "1625 Baronne St",
+      "subcategory": "Cafe"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Bywater American Bistro",
+      "website": "http://bywateramericanbistro.com/",
+      "city": "New Orleans",
+      "phone": "(504) 605-3827",
+      "category": "restaurants",
+      "owner_name": "Nina Compton",
+      "owner_email": "info@bywateramericanbistro.com",
+      "address": "2900 Chartres St.",
+      "subcategory": "Cafe"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Catty Car Corner",
+      "website": "",
+      "city": "New Orleans",
+      "phone": "(504) 561-0061",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "cattycar@gmail.com",
+      "address": "1340 Poydras St",
+      "subcategory": "Cafe"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Victory New Orleans",
+      "website": "http://victorynola.com/",
+      "city": "New Orleans",
+      "phone": "(504) 522-8664",
+      "category": "restaurants",
+      "owner_name": "Daniel Victory",
+      "owner_email": "info@victorynola.com",
+      "address": "339 Baronne Saint",
+      "subcategory": "Bar/ Night Club"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Red Rooster",
+      "website": "http://www.redroosternola.com",
+      "city": "New Orleans",
+      "phone": "(504) 895-6786",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "info@redroosternola.com",
+      "address": "2801 Washington Ave",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Dirty Dishes",
+      "website": "http://www.dirtydishesnola.net/",
+      "city": "New Orleans",
+      "phone": "(504) 400-8115",
+      "category": "restaurants",
+      "owner_name": "Andrell Washington",
+      "owner_email": "Dirtydishesnola@gmail.com",
+      "address": "2381 St Claude Ave",
+      "subcategory": "Food Trucks/Carts"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Blaze Bistro",
+      "website": "https://www.instagram.com/blazebistro504/",
+      "city": "New Orleans",
+      "phone": "(504) 975-4377",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "schickajordan@gmail.com",
+      "address": "5941 Bullard Blvd. Ste 6",
+      "subcategory": "Cafe"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Heard Dat Kitchen",
+      "website": "https://www.hearddatkitchen.com/",
+      "city": "New Orleans",
+      "phone": "(504) 510-4248",
+      "category": "restaurants",
+      "owner_name": "Jeffery Heard",
+      "owner_email": "",
+      "address": "2520 Felicity Saint",
+      "subcategory": "BBQ/Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Pra_LEES",
+      "website": "http://pra-lees.business.site",
+      "city": "New Orleans",
+      "phone": "(504) 478-6868",
+      "category": "restaurants",
+      "owner_name": "Bryant Lee",
+      "owner_email": "",
+      "address": "3600 Saint Bernard Avenue",
+      "subcategory": "BBQ/Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Lil Dizzy's Café",
+      "website": "https://www.lildizzyscafe.net/",
+      "city": "New Orleans",
+      "phone": "(504) 569-8997",
+      "category": "restaurants",
+      "owner_name": "Wayne Baquet Sr & Wayne Baquet Jr",
+      "owner_email": "arkesha@lildizzyscafe.net",
+      "address": "1500 Esplanade Ave",
+      "subcategory": "Creole/Cajun Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Cafe Abyssinia",
+      "website": "https://www.cafeabyssinia.com/",
+      "city": "New Orleans",
+      "phone": "(504) 894-6238",
+      "category": "restaurants",
+      "owner_name": "Erimas Alemu",
+      "owner_email": "Cafeabyssinia2020@gmail.com",
+      "address": "3511 Magazine St #B",
+      "subcategory": "Ethiopian/Eritrean Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Backatown Coffee Parlour",
+      "website": "https://www.backatownnola.com/",
+      "city": "New Orleans",
+      "phone": "(504) 372-4442",
+      "category": "restaurants",
+      "owner_name": "Alonzo & Jessica Knox",
+      "owner_email": "info@backatownnola.com",
+      "address": "301 Basin Saint Suite 1",
+      "subcategory": "BBQ/Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "High Hat Cafe",
+      "website": "https://www.highhatcafe.com/",
+      "city": "New Orleans",
+      "phone": "(504) 754-1336",
+      "category": "restaurants",
+      "owner_name": "Adolfo Garcia & Chip Apperson",
+      "owner_email": "highhatcafe@gmail.com",
+      "address": "4500 Freret Street",
+      "subcategory": "Cafe"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Morrow's",
+      "website": "http://morrowsnola.com/",
+      "city": "New Orleans",
+      "phone": "(504) 827-1519",
+      "category": "restaurants",
+      "owner_name": "Larry Morrow",
+      "owner_email": "",
+      "address": "2438 Saint Claude Ave.",
+      "subcategory": "BBQ/Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Ray's on the Ave.",
+      "website": "https://www.facebook.com/raysontheave",
+      "city": "New Orleans",
+      "phone": "(504) 766-6404",
+      "category": "restaurants",
+      "owner_name": "Elray Holmes",
+      "owner_email": "raysontheave@gmail.com",
+      "address": "2005 N. Broad Ave",
+      "subcategory": "BBQ/Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Beaucoup Eats",
+      "website": "https://www.beaucoupeats.com/",
+      "city": "New Orleans",
+      "phone": "(504) 598-5777",
+      "category": "restaurants",
+      "owner_name": "Lakesha Reed",
+      "owner_email": "catering@beaucoupeats.com",
+      "address": "2323 Canal St",
+      "subcategory": "BBQ/Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "We Dat's Chicken & Shrimp",
+      "website": "http://www.wedatschickenandshrimp.com/",
+      "city": "New Orleans",
+      "phone": "(504) 252-4927",
+      "category": "restaurants",
+      "owner_name": "Gregoire Tillery",
+      "owner_email": "info@wedatschickenandshrimp.com",
+      "address": "1407 Canal St",
+      "subcategory": "Food Trucks"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Dooky Chase Restaurant",
+      "website": "https://www.dookychaserestaurants.com/",
+      "city": "New Orleans",
+      "phone": "(504) 821-0600",
+      "category": "restaurants",
+      "owner_name": "Edgar Chase",
+      "owner_email": "info@dookychaserestaurant.com",
+      "address": "2301 Orleans Ave",
+      "subcategory": "Creole/Cajun Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Dunbar's Creole Cooking",
+      "website": "https://dunbarscreole.com/",
+      "city": "New Orleans",
+      "phone": "(504) 509-6287",
+      "category": "restaurants",
+      "owner_name": "Celestine Dunbar",
+      "owner_email": "creolecuisinedunbars@gmail.com",
+      "address": "7834 Earhart Blvd",
+      "subcategory": "Creole/Cajun Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Parkway Bakery",
+      "website": "https://parkwaypoorboys.com/",
+      "city": "New Orleans",
+      "phone": "(504) 482-3047",
+      "category": "restaurants",
+      "owner_name": "Henry Timothy Sr",
+      "owner_email": "parkway@parkwaypoorboys.com",
+      "address": "538 Hagan Avenue",
+      "subcategory": "Creole/Cajun Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Compere Lapin",
+      "website": "http://www.comperelapin.com",
+      "city": "New Orleans",
+      "phone": "(504) 599-2119",
+      "category": "restaurants",
+      "owner_name": "Nina Compton",
+      "owner_email": "hello@comperelapin.com",
+      "address": "535 Tchoupitoulas St",
+      "subcategory": "Creole/Cajun Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Cafe Sbisa",
+      "website": "http://cafesbisanola.com",
+      "city": "New Orleans",
+      "phone": "(504) 522-5565",
+      "category": "restaurants",
+      "owner_name": "Alfred Singleton",
+      "owner_email": "",
+      "address": "1011 Decatur St",
+      "subcategory": "Creole/Cajun Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Gumbo Shop",
+      "website": "http://www.gumboshop.com/",
+      "city": "New Orleans",
+      "phone": "(504) 525-1486",
+      "category": "restaurants",
+      "owner_name": "Jon & Holli Kercher",
+      "owner_email": "gumbo@gumboshop.com",
+      "address": "630 Saint Peter Street",
+      "subcategory": "Creole/Cajun Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Deanie's Seafood",
+      "website": "https://www.deanies.com",
+      "city": "New Orleans",
+      "phone": "(504) 581-1316",
+      "category": "restaurants",
+      "owner_name": "Barbara A. Chific",
+      "owner_email": "",
+      "address": "841 Iberville Street",
+      "subcategory": "Creole/Cajun Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "The Court of Two Sisters",
+      "website": "http://www.courtoftwosisters.com",
+      "city": "New Orleans",
+      "phone": "(504) 522-7261",
+      "category": "restaurants",
+      "owner_name": "Joe Fein Jr.",
+      "owner_email": "Court2si@courtoftwosisters.com",
+      "address": "613 Royal St",
+      "subcategory": "Cajun/Creole"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Coco Hut Carribbean Restaurant",
+      "website": "",
+      "city": "New Orleans",
+      "phone": "(504) 945-8788",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "address": "2515 Bayou Rd",
+      "subcategory": "Caribbean Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Boswell's Jamaican Grill",
+      "website": "https://www.boswellsjamaicangrill.com/",
+      "city": "New Orleans",
+      "phone": "(504) 482-6600",
+      "category": "restaurants",
+      "owner_name": "Boswell Atkinson",
+      "owner_email": "boswellsatkinson@yahoo.com",
+      "address": "3521 Tulane Ave",
+      "subcategory": "Caribbean Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "14 Parishes",
+      "website": "https://www.14parishes.com/",
+      "city": "New Orleans",
+      "phone": "(504) 208-9654",
+      "category": "restaurants",
+      "owner_name": "Charles Blake",
+      "owner_email": "",
+      "address": "8227 Oak St",
+      "subcategory": "Caribbean Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Bullet's Sports Bar",
+      "website": "",
+      "city": "New Orleans",
+      "phone": "(504) 948-4003",
+      "category": "restaurants",
+      "owner_name": "Rollin J. Garcia",
+      "owner_email": "",
+      "address": "2441 A.P. Tureaud St",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "New Orleans Art Bar",
+      "website": "https://nolaartbar.com/",
+      "city": "New Orleans",
+      "phone": "(504) 708-4804",
+      "category": "restaurants",
+      "owner_name": "Richard Anderson",
+      "owner_email": "info@nolaartbar.com",
+      "address": "2128 St. Claude Ave.",
+      "subcategory": "Bar/ Night Club"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Whiskey & Sticks",
+      "website": "https://www.whiskeyandsticks.com/",
+      "city": "New Orleans",
+      "phone": "(504) 259-2025",
+      "category": "restaurants",
+      "owner_name": "Kelda Summers & Ken Jones",
+      "owner_email": "kelder@whiskeyandsticks.com",
+      "address": "2513 Bayou Road",
+      "subcategory": "Bar/ Night Club"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Club Caribbean",
+      "website": "https://www.clubcaribbeanneworleans.com/",
+      "city": "New Orleans",
+      "phone": "(504) 957-9666",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "clubcaribbean@gmail.com",
+      "address": "2441 Bayou Rd.",
+      "subcategory": "Bar/ Night Club"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Sweet Lorraine's Jazz Club",
+      "website": "https://sweetlorrainesjazzclub.com/",
+      "city": "New Orleans",
+      "phone": "(504) 945-9654",
+      "category": "restaurants",
+      "owner_name": "Sylvester",
+      "owner_email": "",
+      "address": "1931 St. Claude Ave.",
+      "subcategory": "Bar/ Night Club"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Bertha's Place Bar and Restaurant",
+      "website": "",
+      "city": "New Orleans",
+      "phone": "(504) 593-9777",
+      "category": "restaurants",
+      "owner_name": "Bertha Bradley",
+      "owner_email": "",
+      "address": "1355 St. Bernard Ave.",
+      "subcategory": "BBQ/Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Carre' Restaurant & Bar",
+      "website": "https://carre-restaurant-and-bar.business.site/",
+      "city": "New Orleans",
+      "phone": "(504) 581-8191",
+      "category": "restaurants",
+      "owner_name": "Korri McElfresh",
+      "owner_email": "",
+      "address": "239 Decatur St.",
+      "subcategory": "Bar/ Night Club"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Vyoone's",
+      "website": "https://www.vyoone.com/",
+      "city": "New Orleans",
+      "phone": "(504) 518-6007",
+      "category": "restaurants",
+      "owner_name": "Vyoone Segue Lewis",
+      "owner_email": "info@vyoone.com",
+      "address": "412 Girod St.",
+      "subcategory": "Cafe"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Neyow's Creole Café",
+      "website": "https://neyows.com/",
+      "city": "New Orleans",
+      "phone": "(504) 827-5474",
+      "category": "restaurants",
+      "owner_name": "Tanya & Timothy Dubutelet",
+      "owner_email": "office@neyows.com",
+      "address": "3332 Bienville St.",
+      "subcategory": "Creole/Cajun Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Rendez-Vous Creole",
+      "website": "https://rendezvouscreole.com/",
+      "city": "New Orleans",
+      "phone": "(504) 354-8062",
+      "category": "restaurants",
+      "owner_name": "Barthelemy Jolly",
+      "owner_email": "konbitgroup@gmail.com",
+      "address": "3042 General Collins Ave.",
+      "subcategory": "Creole/Cajun Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "The Munch Factory",
+      "website": "https://www.themunchfactory.net/",
+      "city": "New Orleans",
+      "phone": "(504) 459-2180",
+      "category": "restaurants",
+      "owner_name": "Alexis & Jordan Ruiz",
+      "owner_email": "",
+      "address": "6514 Congress Dr",
+      "subcategory": "Creole/Cajun Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Barrow's Catfish",
+      "website": "https://www.barrowscatfish.com/",
+      "city": "New Orleans",
+      "phone": "(504) 265-8995",
+      "category": "restaurants",
+      "owner_name": "Deirdre Barrow Johnson",
+      "owner_email": "",
+      "address": "8300 Earhart Blvd.",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "J's Seafood Dock",
+      "website": "",
+      "city": "New Orleans",
+      "phone": "(504) 523-5757",
+      "category": "restaurants",
+      "owner_name": "Omar D.",
+      "owner_email": "",
+      "address": "1100 N Peters St.",
+      "subcategory": "Creole/Cajun Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Sweet Soulfood",
+      "website": "https://www.sweetvegansoulfood.com/",
+      "city": "New Orleans",
+      "phone": "(504) 821-2669",
+      "category": "restaurants",
+      "owner_name": "Chetwan Smith",
+      "owner_email": "",
+      "address": "1025 N. Broad St.",
+      "subcategory": "BBQ/Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Twisted Waffles",
+      "website": "https://twistedwaffles.com/",
+      "city": "New Orleans",
+      "phone": "(504) 635-0033",
+      "category": "restaurants",
+      "owner_name": "Orlando & Jennifer Matthews",
+      "owner_email": "twistedwafflesllc@gmail.com",
+      "address": "725 Howard Ave.",
+      "subcategory": "Cafe"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Fritai",
+      "website": "https://fritai.com/",
+      "city": "New Orleans",
+      "phone": "(504) 264-7899",
+      "category": "restaurants",
+      "owner_name": "Charly Pierre",
+      "owner_email": "",
+      "address": "1535 Basin St.",
+      "subcategory": "Creole/Cajun Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Two Sisters 'N Da East",
+      "website": "",
+      "city": "New Orleans",
+      "phone": "(504) 242-0469",
+      "category": "restaurants",
+      "owner_name": "Shanel Snowton",
+      "owner_email": "",
+      "address": "9901 Chef Menteur Hwy",
+      "subcategory": "BBQ/Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Ma Momma's House of Cornbread, Chicken and Waffles",
+      "website": "https://www.mamommashouse.com/",
+      "city": "New Orleans",
+      "phone": "(504) 244-0021",
+      "category": "restaurants",
+      "owner_name": "Nicole Mackie",
+      "owner_email": "",
+      "address": "5741 Crowder Blvd. Suite A-3",
+      "subcategory": "BBQ/Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "AJ's Jazzy Grill",
+      "website": "http://aj-s-jazzy-grill.edan.io/",
+      "city": "New Orleans",
+      "phone": "(504) 444-6140",
+      "category": "restaurants",
+      "owner_name": "Angelain Dupart",
+      "owner_email": "",
+      "address": "1525 N Claiborne Ave",
+      "subcategory": "BBQ/Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Peewee CrabCakes on the Go",
+      "website": "https://peeweescrabcakes.com/",
+      "city": "New Orleans",
+      "phone": "(504) 582-9364",
+      "category": "restaurants",
+      "owner_name": "Charles Armstrong",
+      "owner_email": "Peeweescrabcakes@outlook.com",
+      "address": "709 St. Charles Ave.",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Nola Cake Studio",
+      "website": "https://nolacakestudio.com/",
+      "city": "New Orleans",
+      "phone": "(504) 309-7169",
+      "category": "restaurants",
+      "owner_name": "Eric Walker",
+      "owner_email": "",
+      "address": "7905 Downman Rd.",
+      "subcategory": "Venues/Events Spaces"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Tasty Treat",
+      "website": "https://www.tastytreatrestaurant.com/",
+      "city": "New Orleans",
+      "phone": "(504) 237-5875",
+      "category": "restaurants",
+      "owner_name": "Blake Cressey",
+      "owner_email": "Tastytreat14@gmail.com",
+      "address": "1900 N. Claiborne Ave.",
+      "subcategory": "Creole/Cajun Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Meals From the Heart Cafe",
+      "website": "https://www.mealsfromtheheartcafe.com/",
+      "city": "New Orleans",
+      "phone": "(504) 525-1953",
+      "category": "restaurants",
+      "owner_name": "Marilyn Doucette",
+      "owner_email": "jayd@mealsfromtheheartcafe.com",
+      "address": "1100 N Peters St. Bay #13",
+      "subcategory": "Cafe"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Best Life Pharmacy and Restaurant",
+      "website": "https://bestlifepharmacy.com/",
+      "city": "New Orleans",
+      "phone": "(504) 264-5100",
+      "category": "restaurants",
+      "owner_name": "Christopher Sylvain",
+      "owner_email": "",
+      "address": "2657 Tulane Ave.",
+      "subcategory": "Cafe"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Addis Nola",
+      "website": "https://www.addisnola.com/",
+      "city": "New Orleans",
+      "phone": "(504) 218-5321",
+      "category": "restaurants",
+      "owner_name": "Biruk Alemayehu",
+      "owner_email": "addisnola@gmail.com",
+      "address": "422 S. Broad St.",
+      "subcategory": "Ethiopian/Eritrean Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Tanjarine Kitchen",
+      "website": "https://www.tanjarinekitchen.com/",
+      "city": "New Orleans",
+      "phone": "(504) 301-6954",
+      "category": "restaurants",
+      "owner_name": "April & Ogban Okpo",
+      "owner_email": "info@tanjarinekitchen.com",
+      "address": "",
+      "subcategory": "Food Trucks/ Carts"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Queen Trini Lisa",
+      "website": "https://www.queentrinilisa.com/",
+      "city": "New Orleans",
+      "phone": "(504) 345-2058",
+      "category": "restaurants",
+      "owner_name": "Lisa Nelson",
+      "owner_email": "queentrinilisa@gmail.com",
+      "address": "4200 D'Hemecourt St.",
+      "subcategory": "Caribbean Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Cooks Gone Krazy",
+      "website": "",
+      "city": "New Orleans",
+      "phone": "(504) 273-7089",
+      "category": "restaurants",
+      "owner_name": "Eric Cook",
+      "owner_email": "cooksgonekrazy@gmail.com",
+      "address": "1233 N. Broad St.",
+      "subcategory": "BBQ/Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Johnny's Jamaican Grill",
+      "website": "https://www.johnnysjamaicangrill.com/",
+      "city": "New Orleans",
+      "phone": "(504) 881-4993",
+      "category": "restaurants",
+      "owner_name": "Clinton Haughton",
+      "owner_email": "",
+      "address": "1681 Religious St.",
+      "subcategory": "Caribbean Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Le Roux's Chicken Shack",
+      "website": "http://www.lerouxssoulfoodseafood.com/",
+      "city": "New Orleans",
+      "phone": "(504) 241-0400",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "address": "7118 Downman Rd.",
+      "subcategory": "Seafood"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Diva Dawgs",
+      "website": "http://www.divadawgtruck.com/",
+      "city": "New Orleans",
+      "phone": "(504) 533-4825",
+      "category": "restaurants",
+      "owner_name": "Ericka Michelle Lassair",
+      "owner_email": "divadawgllc@gmail.com",
+      "address": "2000 oretha castle haley blvd",
+      "subcategory": "Food Trucks/Carts"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Ital Garden",
+      "website": "https://www.italgardennola.com/",
+      "city": "New Orleans",
+      "phone": "(504) 515-7321",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "italgardennola@gmail.com",
+      "address": "1625 Baronne Saint",
+      "subcategory": "Creole/Cajun Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Twisted Burgers",
+      "website": "https://twisted-burgers-restaurant.business.site/?utm_source=gmb&utm_medium=referral",
+      "city": "Plaquemine",
+      "phone": "(225) 238-7770",
+      "category": "restaurants",
+      "owner_name": "Grant Nuckolls",
+      "owner_email": "",
+      "address": "22325 Louisiana",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Jimmy Brown’s",
+      "website": "",
+      "city": "Port Allen",
+      "phone": "(225) 888-3439",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "address": "3867 LA Highway 1 S.",
+      "subcategory": "Cafe"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Odom’s Kitchen",
+      "website": "https://eatwithodoms.com/q",
+      "city": "Prairieville",
+      "phone": "(225) 395-9821​",
+      "category": "restaurants",
+      "owner_name": "Brandon & D'Andra Odom",
+      "owner_email": "",
+      "address": "6120 Airline Highway",
+      "subcategory": "BBQ/Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Eddie's Seafood Restaurant",
+      "website": "http://www.eddiestuffedshrimp",
+      "city": "Shreveport",
+      "phone": "(206) 637-0557",
+      "category": "restaurants",
+      "owner_name": "Mavice Hughes Thigpen",
+      "owner_email": "",
+      "address": "1956 Hollywood Ave",
+      "subcategory": "Creole/Cajun Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Big Mama Cooking & Catering",
+      "website": "https://www.bigmamascountrykitchen.com/",
+      "city": "Slidell",
+      "phone": "(985) 781-0907",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "",
+      "address": "2170 Gause Blvd West Suite 117",
+      "subcategory": "BBQ/Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Estralita's Express",
+      "website": "http://estralitas.com/",
+      "city": "Westwego",
+      "phone": "(504) 340-8517",
+      "category": "restaurants",
+      "owner_name": "Estralita Soniat",
+      "owner_email": "",
+      "address": "1022 Westbank Expressway",
+      "subcategory": "Creole/Cajun Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "The Spicy Nacho",
+      "website": "https://www.facebook.com/thespicynacho",
+      "city": "Zachary",
+      "phone": "",
+      "category": "restaurants",
+      "owner_name": "Carlette Smith",
+      "owner_email": "",
+      "address": "20555 Plank Road",
+      "subcategory": "BBQ/Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Taylor Made Concessions",
+      "website": "https://www.facebook.com/Taylor-Made-Concessions-424224637588588/&sa=D&source=editors&ust=1641848917015648&usg=AOvVaw1XCSgIGKMF9fFuD1wPIPAD",
+      "city": "Zachary",
+      "phone": "(225) 286-5744",
+      "category": "restaurants",
+      "owner_name": "Rivers Taylor",
+      "owner_email": "",
+      "address": "4327 High St., Suite 102",
+      "subcategory": "BBQ/Soul Food Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Bywater American Bistro",
+      "website": "http://bywateramericanbistro.com/",
+      "city": "",
+      "phone": "(504) 605-3827",
+      "category": "restaurants",
+      "owner_name": "Nina Compton",
+      "owner_email": "",
+      "address": "2900 Chartres St.",
+      "subcategory": "Cafe"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Distinct Limo",
+      "website": "https://www.distinctlimo.net/",
+      "city": "Baton Rouge",
+      "phone": "(225) 802-8455",
+      "category": "transportation",
+      "owner_name": "Carl Dawson",
+      "owner_email": "DistinctLimo@yahoo.com",
+      "address": "8190 Tom Dr",
+      "subcategory": "Moving Services"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Rovem Movers",
+      "website": "http://www.RovemMovers.com",
+      "city": "Metairie",
+      "phone": "(504) 313-5025",
+      "category": "transportation",
+      "owner_name": "Reiona Andrews & Ronald Edwards",
+      "owner_email": "rovem@rovemmovers.com",
+      "address": "1325 S. Lester Ave",
+      "subcategory": "Moving Services"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "BOUNDLESS LOGISTICS LLC",
+      "website": "",
+      "city": "Metairie",
+      "phone": "(504) 235-4481",
+      "category": "transportation",
+      "owner_name": "",
+      "owner_email": "",
+      "address": "8814 Veterans Memorial Blvd",
+      "subcategory": "Moving Services"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "MOVING KING LLC",
+      "website": "",
+      "city": "New Orleans",
+      "phone": "(504) 236-6152",
+      "category": "transportation",
+      "owner_name": "Jamal F.",
+      "owner_email": "",
+      "address": "261 Jules Ave 36",
+      "subcategory": "Moving Services"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Cummings Moving Inc",
+      "website": "http://www.cummingsmoving.net/",
+      "city": "Shreveport",
+      "phone": "(318) 636-3367",
+      "category": "transportation",
+      "owner_name": "Al Cummings",
+      "owner_email": "cummingsmovstg@aol.com",
+      "address": "4625 Greenwood Road",
+      "subcategory": "Moving Services"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Terrance Osborne Gallery",
+      "website": "https://terranceosborne.com/",
+      "city": "New Orleans",
+      "phone": "(504) 232-7530",
+      "category": "visual",
+      "owner_name": "Terrance Osborne",
+      "owner_email": "",
+      "address": "3029 Magazine Saint",
+      "subcategory": "Art Gallery/Museum"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "McKenna Museum",
+      "website": "https://www.themckennamuseum.com",
+      "city": "New Orleans",
+      "phone": "(504) 323-5074",
+      "category": "visual",
+      "owner_name": "Dwight McKenna",
+      "owner_email": "",
+      "address": "2003 Carondelet Saint",
+      "subcategory": "Art Gallery/Museum"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Stella Jones Gallery",
+      "website": "http://www.stellajonesgallery.com/",
+      "city": "New Orleans",
+      "phone": "(504) 568-9050",
+      "category": "visual",
+      "owner_name": "Dr. Stella Jones",
+      "owner_email": "stellajonesgallery@gmail.com",
+      "address": "201 Saint Charles Ave.",
+      "subcategory": "Art Gallery/Museum"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Christoff Davis",
+      "website": "http://www.christoffdavis.com",
+      "city": "New Orleans",
+      "phone": "",
+      "category": "visual",
+      "owner_name": "Chanel Davis",
+      "owner_email": "chanel@christoffdavis.com",
+      "address": "",
+      "subcategory": "Artists"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Axiom Art Gallery",
+      "website": "https://www.facebook.com/axiomartgallery/",
+      "city": "New Orleans",
+      "phone": "(504) 230-9240",
+      "category": "visual",
+      "owner_name": "",
+      "owner_email": "",
+      "address": "4613 Freret Saint",
+      "subcategory": "Art Gallery/Museum"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Gallery Cayenne",
+      "website": "http://gallerycayenne.com/",
+      "city": "New Orleans",
+      "phone": "(504) 585-1050",
+      "category": "visual",
+      "owner_name": "B. Cameron White",
+      "owner_email": "",
+      "address": "702 Decatur Saint",
+      "subcategory": "Art Gallery/Museum"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Studio Be",
+      "website": "https://studiobenola.com/visit",
+      "city": "New Orleans",
+      "phone": "(504) 330-6231",
+      "category": "visual",
+      "owner_name": "Brandan Odums",
+      "owner_email": "",
+      "address": "2941 Royal St.",
+      "subcategory": "Artists"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "New Orleans African American Museum",
+      "website": "https://www.noaam.org/",
+      "city": "New Orleans",
+      "phone": "(504) 218-8254",
+      "category": "visual",
+      "owner_name": "Gia M. Hamilton",
+      "owner_email": "info@noaam.org",
+      "address": "1417-1418 Governor Nicholls St.",
+      "subcategory": "Art Gallery/Museum"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Treme's Petit Jazz Museum",
+      "website": "https://www.tremespetitjazzmuseum.com",
+      "city": "New Orleans",
+      "phone": "(504) 715-0332",
+      "category": "visual",
+      "owner_name": "",
+      "owner_email": "",
+      "address": "1500 Governor Nicholls St",
+      "subcategory": "Art Gallery/Museum"
+    }
+},
+    {
+      "model": "vbp.vbp_la",
+      "fields": {
+"business_name": "Le Musee",
+      "website": "https://www.lemuseedefpc.com",
+      "city": "New Orleans",
+      "phone": "(504) 323-5074",
+      "category": "visual",
+      "owner_name": "Dwight & Beverly Stanton McKenna",
+      "owner_email": "info@lemuseedefpc@gmail.com",
+      "address": "2336 Esplanade Ave",
+      "subcategory": "Art Gallery/Museum"
+    }
+}
+    
+  ]

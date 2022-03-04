@@ -1,6 +1,6 @@
 [
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Pampered Hands By Nikki",
       "website": "www.pampermenikki.com",
@@ -13,7 +13,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Elegant Scent-sations, LLC",
       "website": "https://elegantscent-sationsllc.com",
@@ -26,7 +26,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Diva Beauty Supply",
       "website": "https://www.facebook.com/FWDivaBeautySupply/",
@@ -39,7 +39,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Milizette Beauty & Barber Supply",
       "website": "https://www.milizette.com/",
@@ -52,7 +52,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Flawless Allure Spa",
       "website": "http://www.flawlessallurespa.com/",
@@ -65,7 +65,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Super Tight Barbershop",
       "website": "https://www.instagram.com/supertight317/?igshid=wi2evensdp8z",
@@ -78,7 +78,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Gloss by Res�, LLC",
       "website": "www.linktr.ee/glossbyrese",
@@ -91,7 +91,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Aprylspa",
       "website": "aprylspa.com",
@@ -104,7 +104,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Be Bella Company LLC",
       "website": "https://www.bebellacompany.com/",
@@ -117,7 +117,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Bella Body and Skin Studio",
       "website": "www.bellabodyandskinstudio.com",
@@ -130,7 +130,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Braids By Lian LLC",
       "website": "https://braidsbylian.setmore.com/",
@@ -143,7 +143,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Confidence upscale studios llc",
       "website": "https://www.confidenceupscalestudios.com/",
@@ -156,7 +156,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Crispy Cuts Barbershop",
       "website": "https://crispy-cuts-barbershop.business.site/",
@@ -169,7 +169,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "D'Fine Style Beauty Bar",
       "website": "https://dfine-style-beauty-bar.business.site/",
@@ -182,7 +182,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "DELANDA",
       "website": "https://www.delandabeauty.com/",
@@ -195,7 +195,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Gifts From A Goddess",
       "website": "https://giftsfromagoddess.acuityscheduling.com/",
@@ -208,7 +208,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Jael LLC",
       "website": "https://www.jaelproducts.com/",
@@ -221,7 +221,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Jay�s Beauty: Moore Than Makeup",
       "website": "https://www.jaysbeautyservice.com/",
@@ -234,7 +234,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Lady Beatz Beauty Brand",
       "website": "https://ladybeatzbeautybrand.com/",
@@ -247,7 +247,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Lamaj Salon and Spa",
       "website": "https://www.lamajsalonandspa.com/",
@@ -260,7 +260,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Loc' By OnlyLanette",
       "website": "http://Locdbyonlylanette.com/",
@@ -273,7 +273,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Luminous Skin LLC",
       "website": "www.Luminousskin.shop",
@@ -286,7 +286,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Make It Classy",
       "website": "makeitclassydiy.com",
@@ -299,7 +299,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Microblading by Phee",
       "website": "www.microbladingbyphee.com",
@@ -312,7 +312,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Moisturize and Mind Your Business",
       "website": "moisturizeandmindyourbusiness.com",
@@ -325,7 +325,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Naturally tiara",
       "website": "https://www.naturallytiara.com",
@@ -338,7 +338,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "NVMy Beard",
       "website": "www.nvmybeard.com",
@@ -351,7 +351,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Pink Party Palace",
       "website": "www.pinkpartypalace.com",
@@ -364,7 +364,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Posh Coiffure Studios",
       "website": "www.positiveenergyhealth.org",
@@ -377,7 +377,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Pynk Monky Esthetics & Wellness",
       "website": "www.thepynkmonky.net",
@@ -390,7 +390,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "She's Polished",
       "website": "https://linktr.ee/SPolished",
@@ -403,7 +403,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Shear  Elegance  Day Spa",
       "website": "shearelegancedayspas.com",
@@ -416,7 +416,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Signature Bodies Day Spa",
       "website": "https://www.signaturebodiesdayspa.com/",
@@ -429,7 +429,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Skin Supremacy",
       "website": "www.skinsupremacy.care",
@@ -442,7 +442,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "SofiYah LLC",
       "website": "www.sofiyahllc.com",
@@ -455,7 +455,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Starr Studded Nail Lounge",
       "website": "www.getstarrstudded.com",
@@ -468,7 +468,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "The D R Barber Salon",
       "website": "http://www.thedrbarbersalon.com",
@@ -481,7 +481,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Vonzetta's Lavish Hair Boutique",
       "website": "vonzettaslavishhair.com",
@@ -494,7 +494,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Whipped by M&S",
       "website": "www.whippedbyms.bigcartel.com",
@@ -507,7 +507,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "WOW Beauty Supply",
       "website": "https://wow-beauty-supply.business.site/?utm_source=gmb&utm_medium=referral",
@@ -520,7 +520,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Blended Beauty Total Skincare",
       "website": "https://blendedbeautyllc.com/",
@@ -533,7 +533,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "All In The Wrist Barbershop",
       "website": "https://www.facebook.com/Allinthewrists317/",
@@ -546,7 +546,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Mielle Organics",
       "website": "https://www.mielleorganics.com/",
@@ -559,7 +559,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Ms. Vals Unisex Salon",
       "website": "",
@@ -572,7 +572,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Flaunt It Beauty Supply",
       "website": "https://www.flauntitbeautysupply.com/",
@@ -585,7 +585,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Balm'd Out Butters",
       "website": "https://www.boutbutters.com/",
@@ -598,7 +598,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Leon's Barber Shop",
       "website": "",
@@ -611,7 +611,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Bel Lumi_re",
       "website": "https://thebellumiereco.com/",
@@ -624,7 +624,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Qrenee Hair Therapy",
       "website": "www.qrenee.com",
@@ -637,7 +637,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Black Rose Box",
       "website": "https://blackrosebox.shop/",
@@ -650,7 +650,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "BrepHreshed LLC",
       "website": "https://www.brephreshed.com/",
@@ -663,7 +663,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Butters by Rae,LLC",
       "website": "https://buttersbyrae.com/",
@@ -676,7 +676,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Down to Earth Tooth Dirt",
       "website": "https://mothersearth.co/",
@@ -689,7 +689,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "FH Beauty",
       "website": "https://www.beautybyfh.com/",
@@ -702,7 +702,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Jewel Essentials Soaps & Beyond LLC",
       "website": "https://www.jewelessentialsllc.com/",
@@ -715,7 +715,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Luxe Locks Curls",
       "website": "www.luxelockscurls.com",
@@ -728,7 +728,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Nala Baby Cosmetics",
       "website": "nalababycosmeticss.company.site",
@@ -741,7 +741,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Napturals LLC",
       "website": "www.napturals.net",
@@ -754,7 +754,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Nikki Brown Makeup",
       "website": "www.nikkibrownmakeup.com",
@@ -767,7 +767,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Queen2Queen Beauty Boutique",
       "website": "www.queen2queenbeautyboutique.com",
@@ -780,7 +780,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "TAILOR BEAUTY HAIR COLLECTION",
       "website": "www.tailorbeauty.net",
@@ -793,7 +793,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "The Pink Party Palace Indy LLC",
       "website": "www.pinkpartypalace.com",
@@ -806,7 +806,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Smell Goods 2",
       "website": "http://www.facebook.com/smellgoods2",
@@ -819,7 +819,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Queens Slay LLC",
       "website": "http://queensslaynaturals.com/",
@@ -832,7 +832,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Chic Radiance",
       "website": "https://chic-radiance.com/",
@@ -845,7 +845,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Brave Brothers Books",
       "website": "https://bravebrothersbooks.com/",
@@ -858,7 +858,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Big Mamma's House Books!",
       "website": "https://bigmammashousebooks.com/",
@@ -871,7 +871,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Face A Face (FAF Collective)",
       "website": "http://fafcollective.com/",
@@ -884,7 +884,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Drift Taxi",
       "website": "http://www.TheDriftTaxi.com",
@@ -897,7 +897,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "King's Detail",
       "website": "https://www.facebook.com/kingsdetail/",
@@ -910,7 +910,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Fatman�s Auto Services",
       "website": "https://fatmansautorepair.ueniweb.com/",
@@ -923,7 +923,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "The Car Shop",
       "website": "thecarshopindy.com",
@@ -936,7 +936,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Champion Chrysler Jeep Dodge",
       "website": "https://www.championcjdindiana.com/",
@@ -962,7 +962,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "MT Valet Services LLC",
       "website": "www.mtvaletservices.com",
@@ -975,7 +975,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Quality Business Janitory",
       "website": "www.qualitybusinessjanitory.com",
@@ -988,7 +988,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Sibande Cleaning Services LLC",
       "website": "www.sibandecleaningservicesllc.com",
@@ -1001,7 +1001,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Gerron Carpet and Floor Care Services LLC",
       "website": "https://gerronfloorcare.com/",
@@ -1014,7 +1014,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Cleaning with Purpose LLC",
       "website": "https://cleaningwithpurpose.org/",
@@ -1027,7 +1027,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Kulture Wears LLC",
       "website": "https://www.kulturewears.com/",
@@ -1040,7 +1040,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Agape Empowerment Boutique",
       "website": "https://www.agapeboutiques.com/",
@@ -1053,7 +1053,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Astrology Trendz",
       "website": "https://astrologytrendz.com/",
@@ -1066,7 +1066,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "August Gill Apparel",
       "website": "www.augustgillapparel.com",
@@ -1079,7 +1079,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Autonomy LLC",
       "website": "autonomycreates.com",
@@ -1092,7 +1092,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Blacksheep Collective",
       "website": "https://www.blkshpco.com/",
@@ -1105,7 +1105,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Designed With U In Mind",
       "website": "http://www.Etsy.com/shop/designedwithunmind",
@@ -1118,7 +1118,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Limited Edition Boutique",
       "website": "https://www.ltdboutique.com/",
@@ -1131,7 +1131,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Marie J Boutique",
       "website": "www.mariejboutique.com",
@@ -1144,7 +1144,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Masterpiece Bow Ties & Apparel",
       "website": "masterpiecebowtie.com",
@@ -1157,7 +1157,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "MELI",
       "website": "meli-intl.com",
@@ -1170,7 +1170,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Mik Mocha Apparel",
       "website": "mikmochaapparel.com",
@@ -1183,7 +1183,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Naturally seductive boutique",
       "website": "www.naturallyseductives.com",
@@ -1196,7 +1196,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Perfect Apparel",
       "website": "www.perfectapparel.com",
@@ -1209,7 +1209,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Revolutionary Goddess Gear",
       "website": "https://www.etsy.com/shop/RGGFashions",
@@ -1222,7 +1222,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "The Sophisticated Diva,LLC",
       "website": "https://the-sophisticated-diva.myshopify.com/",
@@ -1235,7 +1235,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Thinking Out Loud, LLC",
       "website": "https://www.thinkingoutloud.store/",
@@ -1248,7 +1248,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Trap Junkie LLC",
       "website": "https://www.facebook.com/trapjunkiellc/",
@@ -1261,7 +1261,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Kushthru",
       "website": "https://www.kushthru.com/",
@@ -1274,7 +1274,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Apollo's Fine Fashion LLC",
       "website": "http://www.apollosfinefashions.com/",
@@ -1287,7 +1287,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Powers & Sons Construction Company, Inc.",
       "website": "https://powersandsons.com/",
@@ -1300,7 +1300,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Bledsoe Construction Group Of Indianapolis",
       "website": "http://www.bledsoeinternational.com",
@@ -1313,7 +1313,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "New Creation Building & Maintenance Inc.",
       "website": "https://www.facebook.com/New-Creation-Building-Maintenance-Inc-101579908180857/?ref=page_internal",
@@ -1326,7 +1326,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Powers & Sons Construction Company, Inc.",
       "website": "https://powersandsons.com/",
@@ -1339,7 +1339,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "All Things Handy LLC",
       "website": "https://www.facebook.com/ThingsHandy/",
@@ -1352,7 +1352,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Bryant&Son's HVAC/Refrigeration &Maintenance",
       "website": "http://bryantsonsacmaintenance.com/",
@@ -1365,7 +1365,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Great Northern Painting",
       "website": "https://www.facebook.com/Great-Northern-Painting-LLC-292574408267066/",
@@ -1378,7 +1378,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "New Phase Comfort",
       "website": "Newphasecomfort.com",
@@ -1391,7 +1391,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "The Concrete Man",
       "website": "Www.tonytheconcreteman.com",
@@ -1404,7 +1404,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "HCP Incorporated",
       "website": "https://www.hcoarchitects.com/",
@@ -1417,7 +1417,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "1St Resource Solutions LLC",
       "website": "http://www.1stresourcesolutions.com/index.html",
@@ -1430,7 +1430,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "MCC Indiana",
       "website": "www.mccindiana.org",
@@ -1443,7 +1443,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Freebirds General Contracting ,LLC",
       "website": "http://www.freebirdsgeneralcontracting.com/",
@@ -1456,7 +1456,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "DirectEmployers Institue",
       "website": "https://directemployersinstitute.org/",
@@ -1469,7 +1469,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Building Blocks Academy",
       "website": "https://www.buildingblocksacademy-bba.com/",
@@ -1482,7 +1482,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "1 Life 2 Live Health and Safety Training",
       "website": "https://www.1life2livehealthandsafetytraining.org/",
@@ -1495,7 +1495,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Allegiant Preparatory Academy",
       "website": "https://allegiantprep.org/",
@@ -1508,7 +1508,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Anda Spanish",
       "website": "https://andaspanish.com/",
@@ -1521,7 +1521,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Arrows Learning Academy",
       "website": "www.arrowslearningacademy.com",
@@ -1534,7 +1534,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Center for Leadership Development",
       "website": "https://cldinc.org/",
@@ -1547,7 +1547,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Girls STEM Institute",
       "website": "http://www.girlssteminstitute.org/",
@@ -1560,7 +1560,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Jenkins� Career Corner, Inc",
       "website": "http://www.jenkinscareercornerinc.org/",
@@ -1573,7 +1573,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Lit Tutoring  LLC",
       "website": "https://www.lit-tutoring.com/",
@@ -1586,7 +1586,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Saint Florian Center, Inc.",
       "website": "www.saintfloriancenter.org",
@@ -1599,7 +1599,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "The EmpowHERment Daily Devotional, Corp.",
       "website": "www.theempowhermentcorp.com",
@@ -1612,7 +1612,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "The Fuqua Institute of Beauty Culture LLC",
       "website": "www.fuquainstitute.com",
@@ -1625,7 +1625,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Urban Technology Academy",
       "website": "http://uta-workbasedlearning.org/",
@@ -1638,7 +1638,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Amiable Home Care Inc",
       "website": "http://amiablehomecare.org/",
@@ -1651,7 +1651,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Divine Care of Indiana",
       "website": "https://www.divinecareindiana.com/",
@@ -1664,7 +1664,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Personal Touch Housecalls, LLC",
       "website": "www.personaltouchhousecalls.com",
@@ -1677,7 +1677,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "PRINCESSIZZY LLC dba SERENIRY CARE SERVICES",
       "website": "http://www.serenitycareservices.net/index.html",
@@ -1690,7 +1690,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Nerdz World",
       "website": "www.nerdzworld.com",
@@ -1703,7 +1703,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "AIS",
       "website": "https://aisllp.com/",
@@ -1716,7 +1716,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "ECR Computer Repair & Solutions",
       "website": "https://ecrservices.a-1sites.com/",
@@ -1729,7 +1729,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Art Haus Balloon Company LLC",
       "website": "https://arthausballooncompany.com/",
@@ -1742,7 +1742,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Artistic Motif",
       "website": "http://www.artisticmotif662.weebly.com/",
@@ -1755,7 +1755,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "AVI MEDIA",
       "website": "www.avimediasupply.com",
@@ -1768,7 +1768,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Bashiri Asad",
       "website": "https://www.bashiriasad.com",
@@ -1781,7 +1781,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Kicasso Sneaker Art Bar",
       "website": "https://www.kicassoindy.com/",
@@ -1794,7 +1794,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "LoveLight Events LLC",
       "website": "www.lovelighteventsllc.com",
@@ -1807,7 +1807,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Picture Perfect Planning",
       "website": "www.pictureperfectplanningindy.weebly.com/",
@@ -1820,7 +1820,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Prep Ball Stars",
       "website": "www.prepballstars.com",
@@ -1833,7 +1833,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Special MoMents by Mo",
       "website": "https://www.facebook.com/SpbyMO/",
@@ -1846,7 +1846,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Events by D. Nicole",
       "website": "https://eventsdnicole.com/",
@@ -1859,7 +1859,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Green with Indy",
       "website": "https://www.greenwithindy.com/",
@@ -1872,7 +1872,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Indy Plants on Plates",
       "website": "https://indyplantsonplates.weebly.com/",
@@ -1885,7 +1885,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "The Plant Whisperer's, Inc.",
       "website": "https://www.facebook.com/TPWI.2013/",
@@ -1898,7 +1898,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "SweeTies Gourmet Treats",
       "website": "https://www.sweetiesgt.com/",
@@ -1911,7 +1911,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Yummy Treats LLC",
       "website": "https://www.facebook.com/YummyTreatsIndy",
@@ -1924,7 +1924,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Cretia Cakes Bake Shop",
       "website": "https://cretiacakes.com/",
@@ -1937,7 +1937,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Gordon's Milkshake Bar",
       "website": "https://www.instagram.com/milkshakeindy/",
@@ -1950,7 +1950,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Sip & Share Wine",
       "website": "https://sipandsharewines.com/",
@@ -1963,7 +1963,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Natural Needs Products",
       "website": "https://www.naturalneedsproducts.com/",
@@ -1976,7 +1976,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "SweeTies Gourmet Treats",
       "website": "https://www.sweetiesgt.com/",
@@ -1989,7 +1989,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "A&M Catered Baked Goods",
       "website": "https://ambakery.net/",
@@ -2002,7 +2002,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Birdie Brown",
       "website": "sipbirdie.com",
@@ -2015,7 +2015,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Chef Tia & Co.",
       "website": "https://www.ordercheftia.com/",
@@ -2028,7 +2028,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Cies Treats LLC",
       "website": "https://ciestreatsllc.godaddysites.com/",
@@ -2041,7 +2041,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Coco's Cakes and Things LLC",
       "website": "https://cocoscakesandthings.square.site/",
@@ -2054,7 +2054,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Culinary & Co. LLC",
       "website": "https://culinaryandco.wixsite.com/",
@@ -2067,7 +2067,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "FoodLoveTog",
       "website": "https://foodlovetog.com/",
@@ -2080,7 +2080,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Forget Me Not Gourmet Treat Company LLC",
       "website": "https://www.facebook.com/FMNGourmetTreatCompany/",
@@ -2093,7 +2093,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Huge Impact Restaurant",
       "website": "https://hugeimpactllc.weebly.com/",
@@ -2106,7 +2106,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Juice Remedy",
       "website": "https://www.juiceremedy.org/",
@@ -2119,7 +2119,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Londo's Flameade",
       "website": "https://londosflameade.com/",
@@ -2132,7 +2132,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Mrs. Murry's Naturals",
       "website": "https://mrsmurrysnaturals.com/",
@@ -2145,7 +2145,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Nature�s Tea Company",
       "website": "www.naturesteacompany.com",
@@ -2158,7 +2158,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Phases by Fazle",
       "website": "https://www.facebook.com/PhasesByFazle",
@@ -2171,7 +2171,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Plate it up catering",
       "website": "https://www.plateitupcatering.net/",
@@ -2184,7 +2184,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Pure-trition",
       "website": "https://www.pure-trition.com",
@@ -2197,7 +2197,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Rhonda�s Suga Jars LLC",
       "website": "www.rhondassugajars.com",
@@ -2210,7 +2210,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Simply Gourmet Cookies",
       "website": "simplygourmetcookies.com",
@@ -2223,7 +2223,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Sincere Catering",
       "website": "www.thesincerechef.com",
@@ -2236,7 +2236,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Stargazer Inc",
       "website": "www.stargazerinc.net",
@@ -2249,7 +2249,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Stars",
       "website": "www.starsmarkets.com",
@@ -2262,7 +2262,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "SWEET MINIS",
       "website": "www.sweetminisindy.com",
@@ -2275,7 +2275,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "SweetCakesbyRonda",
       "website": "sweetminisindy.com",
@@ -2288,7 +2288,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "SweeTies Gourmet Treats",
       "website": "sweetiesgt.com",
@@ -2301,7 +2301,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Tanorria's Table",
       "website": "www.tanorriastable.com",
@@ -2314,7 +2314,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "TeeJay�s Sweet Tooth",
       "website": "https://www.teejayssweettooth.com/",
@@ -2327,7 +2327,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Too Much SAWCE Catering LLC",
       "website": "https://www.facebook.com/Too-Much-SAWCE-Catering-LLC-106272194954319",
@@ -2340,7 +2340,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Tweety's Sweeties, LLC",
       "website": "www.tweetyssweeties.com",
@@ -2353,7 +2353,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Yummy LLC",
       "website": "www.yummyllc.com",
@@ -2366,7 +2366,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Tonia's On A Roll Specialty Desserts & Catering",
       "website": "toniasonaroll.com",
@@ -2379,7 +2379,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Not As Famous Cookie Co.",
       "website": "https://notasfamouscookie.ecwid.com/",
@@ -2392,7 +2392,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Gym Bully Fitness LLC",
       "website": "https://www.gymbullyfitness.com/",
@@ -2405,7 +2405,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Angel Touch Therapy & Consulting, LLC",
       "website": "https://www.angeltouchtlc.com/",
@@ -2418,7 +2418,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "AOG Therapy, LLC",
       "website": "https://www.aogtherapy.com/",
@@ -2431,7 +2431,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Best Life Therapy, LLC",
       "website": "https://bestlifetherapy.net/",
@@ -2444,7 +2444,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Boot Girl's Bouncers, LLC",
       "website": "https://www.reboundshoedepot.com/bootgirl",
@@ -2457,7 +2457,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Capture Fitness",
       "website": "https://capturefitindy.com/",
@@ -2470,7 +2470,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Central Indiana Association of Black Social Workers",
       "website": "http://cicabsw.weebly.com/",
@@ -2483,7 +2483,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Connected in Community",
       "website": "https://www.connectedincommunity.org/",
@@ -2496,7 +2496,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Creating Space for You, LLC",
       "website": "https://www.creatingspace4u.com/",
@@ -2509,7 +2509,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Empowered Living",
       "website": "https://www.empoweredlivinginc.net/",
@@ -2522,7 +2522,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Harmonious Insight LLC",
       "website": "https://www.harmoniousinsight.com/",
@@ -2535,7 +2535,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Healthy Lifestyle Change: One Challenge At A Time, LLC",
       "website": "http://www.healthylifestylechange.info/",
@@ -2548,7 +2548,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "HEROH Functional Institute",
       "website": "https://drjware.com/",
@@ -2561,7 +2561,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Hope Haven Psychological Resource",
       "website": "http://www.hopehavenpsych.org/",
@@ -2574,7 +2574,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Indiana Black Breastfeeding Coalition",
       "website": "https://www.indianablackbreastfeedingcoalition.com/",
@@ -2587,7 +2587,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Lena and Lyle Institute",
       "website": "https://www.llinstitute.org/",
@@ -2600,7 +2600,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Pacific Haven Therapeutic Massage",
       "website": "www.massagebook.com/biz/pacific-haven-therapeutic-massage",
@@ -2613,7 +2613,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Prestige Touch, LLC",
       "website": "www.prestigetouchmassage.com",
@@ -2626,7 +2626,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Reecondition Fitness",
       "website": "http://www.reeconditionfitness.com/",
@@ -2639,7 +2639,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Rest Wells Relaxation",
       "website": "www.restwells.com",
@@ -2652,7 +2652,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Simple Moments",
       "website": "www.simplemomentsbyfree.com",
@@ -2665,7 +2665,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Stagz Transitional Housing",
       "website": "Stagztransitionalhousing.org",
@@ -2678,7 +2678,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "SweattBoxx Wellness Center LLC",
       "website": "https://sweattboxxwellness.com",
@@ -2691,7 +2691,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Taylor Made Wellness LLC",
       "website": "https://www.taylormadewellnessindy.com/",
@@ -2704,7 +2704,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "The ALTRUIST Group",
       "website": "altruistgroup.net",
@@ -2717,7 +2717,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "The Yoga Counselor",
       "website": "www.theyogacounselor.com",
@@ -2730,7 +2730,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Urban Family Initiative",
       "website": "www.ufamilyi.com",
@@ -2743,7 +2743,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Helping Girls In Real Life Situations (GIRLS) Mission, LLC",
       "website": "http://www.helpinggirlsmissioncom.wordpress.com/",
@@ -2756,7 +2756,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Alexis B. Holt Design Group LLC",
       "website": "www.alexisbholt.com",
@@ -2769,7 +2769,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Bourgeois Wicks",
       "website": "https://bourgeoiswicks.com/",
@@ -2782,7 +2782,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Designs by DR",
       "website": "https://www.designsbydr.com/",
@@ -2795,7 +2795,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "HER Home Design LLC",
       "website": "https://www.herhomedesign.com/meet-her-home-design/",
@@ -2808,7 +2808,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Living Spaces LLC",
       "website": "https://www.livingspaces4u.com/",
@@ -2821,7 +2821,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "LoveScent Candle Co",
       "website": "www.lovescentcandleco.com",
@@ -2834,7 +2834,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Shisha Candles",
       "website": "www.shishacandles.com",
@@ -2847,7 +2847,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Simply Put Organizing, LLc",
       "website": "www.simplyputorg.com",
@@ -2860,7 +2860,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "T. Marie Candle Company",
       "website": "www.wordsandwicks.com",
@@ -2873,7 +2873,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Three Men Lawn",
       "website": "threemenlawn.com",
@@ -2886,7 +2886,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Four Thirteen Design, LLC",
       "website": "https://www.fourthirteendesign.com/",
@@ -2899,7 +2899,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "A Scent of Sunshine",
       "website": "http://www.scentofsunshine.com/",
@@ -2912,7 +2912,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "2 Cousins Travel Agency",
       "website": "https://2cousinstravel.com",
@@ -2925,7 +2925,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Travel by Dai",
       "website": "https://avoyatravel.com/ia/daibroadnax",
@@ -2938,7 +2938,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Dream Journeys, LLC",
       "website": "https://www.adreamjourney.com/",
@@ -2951,7 +2951,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Love4traveling LLC",
       "website": "www.love4traveling.com",
@@ -2964,7 +2964,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Rocco�s Rockin Excursions",
       "website": "https://tashikagarrett.inteletravel.com/booktravel.cfm",
@@ -2977,7 +2977,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Jewelry Lady",
       "website": "https://jewelryladydesigns.com/",
@@ -2990,7 +2990,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Bead It Adornments",
       "website": "www.beaditadornments.com",
@@ -3003,7 +3003,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Earth + Fire",
       "website": "https://earthandfire.shop/",
@@ -3016,7 +3016,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Lovely Jewels with Lady L.",
       "website": "https://paparazziaccessories.com/268154/",
@@ -3029,7 +3029,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Simply Chic Jewels",
       "website": "www.simplychicjewels.com",
@@ -3042,7 +3042,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Talia's Jewelry Box L.L.C.",
       "website": "www.taliasjewelrybox.com",
@@ -3055,7 +3055,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "The J2 Collection",
       "website": "thej2co.com",
@@ -3068,7 +3068,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Yada Yada",
       "website": "http://www.etsy.com/shop/shopyadayada",
@@ -3081,7 +3081,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Edward Jones",
       "website": "https://www.edwardjones.com/",
@@ -3094,7 +3094,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Tolbert&Tolbert LLC",
       "website": "http://www.tolbertlegal.com/default.asp",
@@ -3107,7 +3107,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Rowe and Hamilton",
       "website": "https://roweandhamilton.com/",
@@ -3120,7 +3120,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Equitable Bookkeeping",
       "website": "https://equitablebookkeeping.com/",
@@ -3133,7 +3133,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "A. J. Gaither Financial Advisor with Northwestern Mutual",
       "website": "http://ajgaither.nm.com/",
@@ -3146,7 +3146,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "CDL Accounting and Tax Service",
       "website": "https://cdltaxes.com/",
@@ -3159,7 +3159,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "DeJuan Taylor Bailbonds",
       "website": "https://taylor-bail-bonds.business.site/",
@@ -3172,7 +3172,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Insight Financial Group",
       "website": "https://insightfinancialindy.com/",
@@ -3185,7 +3185,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Kellie Taylor State Farm Agency",
       "website": "https://www.weinsureindy.com/",
@@ -3198,7 +3198,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Laura Tax Services",
       "website": "https://www.laurataxservices.com/",
@@ -3211,7 +3211,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Logan Financial Empowerment LLC",
       "website": "www.loganfinancialempowerment.com",
@@ -3224,7 +3224,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Norton Estate Planning & Elder Law Firm, LLC",
       "website": "www.estate-planners.org",
@@ -3237,7 +3237,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Onyx Rising Financial Services",
       "website": "www.onyxrisingfinancial.com",
@@ -3250,7 +3250,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Trinity Financial Consulting",
       "website": "www.trinityfinancialconsulting.com",
@@ -3263,7 +3263,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Wize Insurance & Risk Management",
       "website": "www.getwizeinsurance.com",
@@ -3276,7 +3276,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Thyme to Roll Mobile Notary",
       "website": "https://www.thyme2rollmobilenotary.com/",
@@ -3289,7 +3289,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Harris Consulting Indy LLC",
       "website": "https://harrisconsultingindy.com/",
@@ -3302,7 +3302,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Tailor-Made Budgets",
       "website": "www.tailormadebudgets.com",
@@ -3315,7 +3315,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Northwestern Mutual",
       "website": "khalilwilliams.nm.com",
@@ -3328,7 +3328,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "PharmFree Life CBD Dispensary",
       "website": "https://www.pharmfreelife.com/",
@@ -3341,7 +3341,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Prime 357 Cigars",
       "website": "www.prime357cigars.com",
@@ -3354,7 +3354,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Alsum Organics LLC",
       "website": "www.alsumorganics.com",
@@ -3367,7 +3367,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Ratel SEO",
       "website": "https://ratelseo.com/",
@@ -3380,7 +3380,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Carlis Design Studio",
       "website": "https://carlisdesignstudio.net/landing-page-2",
@@ -3393,7 +3393,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Market*Ting",
       "website": "https://market-ting.com/",
@@ -3406,7 +3406,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Hoosier Web Host LLC",
       "website": "https://www.hoosierwebhost.page/",
@@ -3419,7 +3419,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Cerulean Consulting Group",
       "website": "https://www.ceruleanconsultinggroup.com/",
@@ -3432,7 +3432,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "The Artistry Studios",
       "website": "www.artistrystudios.co",
@@ -3445,7 +3445,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Caring Smiles 4U",
       "website": "https://www.caringsmiles4u.com/",
@@ -3458,7 +3458,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Devington Dental Office",
       "website": "https://www.drmbazilio.com/",
@@ -3471,7 +3471,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Positive Energy Health Center",
       "website": "http://powersandsons.com/",
@@ -3484,7 +3484,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Scott Dentistry",
       "website": "www.docscott.com",
@@ -3497,7 +3497,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "The Indiana Institute for Behavior Analysis, Inc",
       "website": "www.tiiba.org",
@@ -3510,7 +3510,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "We Heel the Sole Podiatry",
       "website": "www.weheelthesolepodiatry.com",
@@ -3523,7 +3523,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Run For Life Performance & Physical Therapy",
       "website": "www.indyperformbetter.com",
@@ -3536,7 +3536,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Link to Learn Behavior Therapy",
       "website": "https://www.linkedbehavior.com/",
@@ -3549,7 +3549,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Unibuyz",
       "website": "https://unibuyz.com/",
@@ -3562,7 +3562,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "BlackStar Tactical LLC",
       "website": "https://www.blackstartactical.net/",
@@ -3575,7 +3575,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Dominique's Enterprise LLC",
       "website": "https://www.dominiquesbest.com/",
@@ -3588,7 +3588,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "A-Way-Out Ministries, Inc",
       "website": "https://www.a-way-outministries.org/",
@@ -3601,7 +3601,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Indiana Black Expo",
       "website": "https://www.indianablackexpo.com/",
@@ -3614,7 +3614,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Kirkland Funeral and Cremation Services",
       "website": "https://www.kirklandfuneralandcremation.com/",
@@ -3627,7 +3627,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Remitha Lynn & Co",
       "website": "www.remithalynn.com",
@@ -3640,7 +3640,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Rocket Teller ATMs",
       "website": "www.indyatmservices.com",
@@ -3653,7 +3653,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "S.H.E. Event Indy LTD",
       "website": "www.sheeventindy.org",
@@ -3666,7 +3666,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "The Food Firm LLC",
       "website": "www.thefoodfirm.biz",
@@ -3679,7 +3679,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Ladies Under Construction Inc",
       "website": "http://www.ladiesunderconstruction.net/",
@@ -3692,7 +3692,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Sprowl Funeral and Cremation Care",
       "website": "www.sprowlfuneral.com",
@@ -3705,7 +3705,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "OneUnited Bank",
       "website": "https://www.oneunited.com/",
@@ -3718,7 +3718,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "ColorRush Print Shop",
       "website": "https://colorrushprintshop.com/",
@@ -3731,7 +3731,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Diversity Press",
       "website": "https://diversity-press.com/",
@@ -3744,7 +3744,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Donna's Global Shipping",
       "website": "https://www.donnasglobalshipping.com/",
@@ -3757,7 +3757,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Ankh Productions",
       "website": "https://www.ankhproductions.org/",
@@ -3770,7 +3770,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Captured by Cami Photography",
       "website": "https://www.capturedbycami.com/",
@@ -3783,7 +3783,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Circle City Film Festival",
       "website": "https://www.circlecityfilmfestival.com/",
@@ -3796,7 +3796,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Dai in and Dai Out Productions LLC.",
       "website": "https://daiinanddaiout.squarespace.com/",
@@ -3809,7 +3809,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Dauss FOTO",
       "website": "www.daussfoto.com",
@@ -3822,7 +3822,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Dauss Miller Photographer",
       "website": "www.daussmiller.com",
@@ -3835,7 +3835,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Drea & Co LLC",
       "website": "https://dreaandcompany.com/",
@@ -3848,7 +3848,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Elle Woods Film",
       "website": "https://www.ellewoodsfilm.com/",
@@ -3861,7 +3861,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Ellise Smith Photography",
       "website": "https://ellisesmith.weebly.com/",
@@ -3874,7 +3874,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Faith Blackwell Photography",
       "website": "https://faithblackwell.smugmug.com/",
@@ -3887,7 +3887,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Iconic Images LLC",
       "website": "https://www.iconic-images.com/",
@@ -3900,7 +3900,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Loving Life Productions LLC",
       "website": "lovinglifeproductions.com",
@@ -3913,7 +3913,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Michael Florence Photography",
       "website": "https://michaelflorencephotography.com",
@@ -3926,7 +3926,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "The Moments Between Us",
       "website": "www.themomentsbetweenus.com",
@@ -3939,7 +3939,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Those Mckissics Photography",
       "website": "www.thosemckissics.com",
@@ -3952,7 +3952,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Through Her Lens Studio",
       "website": "ericaclaytonphotography.com",
@@ -3965,7 +3965,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Eyedea Studio",
       "website": "https://www.eyedeastudio.net/",
@@ -3978,7 +3978,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Lindsey Vertner, LLC",
       "website": "http://www.lindseyvertner.com/",
@@ -3991,7 +3991,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Carmen's Corner LLC",
       "website": "http://www.carmenvertner.com/",
@@ -4004,7 +4004,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Peak Mind LLC",
       "website": "www.Peakmindllc.com",
@@ -4017,7 +4017,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "S.E.A. Leaders LLC",
       "website": "www.sealeadersllc.com",
@@ -4030,7 +4030,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "A Total Solution CPA & Consulting Services, Inc.",
       "website": "https://atotalsolutioncpa.com/",
@@ -4043,7 +4043,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "LegalShield",
       "website": "http://legalshieldassociate.com/pettigrewj",
@@ -4056,7 +4056,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "HR Circle Consulting LLC",
       "website": "https://www.hrcircleconsulting.com/",
@@ -4069,7 +4069,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Bcforward",
       "website": "www.bcforward.com",
@@ -4082,7 +4082,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Black Onyx Management Inc",
       "website": "www.blackonyxmanagement.com",
@@ -4095,7 +4095,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Blue Maven IT",
       "website": "https://bluemavenit.com/",
@@ -4108,7 +4108,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "GS1 CONSULTING LLC",
       "website": "https://gs1consulting.com/",
@@ -4121,7 +4121,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Hardon Educational Institute",
       "website": "https://www.hardoneducation.org/",
@@ -4134,7 +4134,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "ONYX Staffing & Consulting Firm",
       "website": "https://www.onyxscf.biz",
@@ -4147,7 +4147,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Performance 3",
       "website": "https://www.bestperformance3.com",
@@ -4160,7 +4160,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Pretty SMART, LLC",
       "website": "www.prettysmartllc.com",
@@ -4173,7 +4173,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Professional Management Enterprises",
       "website": "www.pme-indy.com",
@@ -4186,7 +4186,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "ResumeMe, LLC",
       "website": "www.myresumeme.com",
@@ -4199,7 +4199,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Scriptura Strategies, LLC",
       "website": "www.ScripturaStrategies.com",
@@ -4212,7 +4212,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Security/ RS Elite Security Enforcement",
       "website": "rselitesecurity.com",
@@ -4225,7 +4225,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Sharpened Minds, LLC",
       "website": "www.sharpenedmindsllc.com",
@@ -4238,7 +4238,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Sustainable Leadership, LLC",
       "website": "www.aprilervin.com",
@@ -4251,7 +4251,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Tiffany Atkinson Consulting",
       "website": "https://www.tiffanyatkinson.com/",
@@ -4264,7 +4264,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "The Executive Impact Group",
       "website": "www.eigcentral.com",
@@ -4277,7 +4277,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "The Writique, LLC",
       "website": "www.thewritique.com",
@@ -4290,7 +4290,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Workmanship, LLC",
       "website": "https://www.workmanshipllc.com",
@@ -4303,7 +4303,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Gracious Growth Strategies",
       "website": "http://www.GraciousGrowth.com",
@@ -4316,7 +4316,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Double Axis LLC",
       "website": "https://www.doubleaxisllc.com/",
@@ -4329,7 +4329,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Fix My Resume Services",
       "website": "http://www.fixmyresume.net",
@@ -4342,7 +4342,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Jw Realty Group",
       "website": "https://www.jwestrealty.com/",
@@ -4355,7 +4355,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Reese Group Realty, LLC.",
       "website": "https://www.reesegrouprealty.com/",
@@ -4368,7 +4368,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "BHB REAL ESTATE GROUP",
       "website": "https://www.bhbindy.net/",
@@ -4381,7 +4381,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Buy With Beanz Real Estate LLC",
       "website": "https://buywithbeanz.com/",
@@ -4394,7 +4394,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "BWI, LLC",
       "website": "https://www.bwillc.com/",
@@ -4407,7 +4407,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Eminent Advising Realty",
       "website": "https://www.tripleerealty.com/",
@@ -4420,7 +4420,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Ethosity Property Management Group, Inc.",
       "website": "https://www.ethositypropertymanagement.com/",
@@ -4433,7 +4433,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Graystone Realty LLC",
       "website": "https://www.graystoneindy.com/",
@@ -4446,7 +4446,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Jackson's Properties and Management",
       "website": "https://reivindy.com/",
@@ -4459,7 +4459,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Pride & Property",
       "website": "https://welcomehomewithjenna.godaddysites.com/",
@@ -4472,7 +4472,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Resilient Realty Investments",
       "website": "tonyburrisrealestate.com",
@@ -4485,7 +4485,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "The Darden Group, LLC",
       "website": "https://dardengroupllc.com",
@@ -4498,7 +4498,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Triple E Realty & Property Management",
       "website": "TripleERealty.com",
@@ -4511,7 +4511,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "WDi Architecture, Inc.",
       "website": "www.WDiarchitecture.com",
@@ -4524,7 +4524,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Heritage Real Estate Services, Inc.",
       "website": "https://www.heritagerealestateservices.com/",
@@ -4537,7 +4537,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Minus SkateShop Carmel",
       "website": "minuscarmel.com",
@@ -4550,7 +4550,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Circle City P.R.I.D.E. Sports",
       "website": "https://palmettopridesports.squarespace.com/",
@@ -4563,7 +4563,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "GTA Sports, LLC",
       "website": "https://www.gtasportsnet.com/",
@@ -4576,7 +4576,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Indiana Lyons LLC",
       "website": "https://indianalyons.com/",
@@ -4589,7 +4589,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Black Owned Games",
       "website": "https://blackowned.games/",
@@ -4602,7 +4602,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Illusions Bar & Grill",
       "website": "https://illusionsbarandgrill.com/",
@@ -4615,7 +4615,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Jamaican Style Jerk",
       "website": "https://cityseeker.com/",
@@ -4628,7 +4628,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Missing Brick, The",
       "website": "https://www.themissingbrick.com/",
@@ -4641,7 +4641,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Model Sanders Smooth & Spicy BBQ sauce",
       "website": "Mozelsandersbbq.com",
@@ -4654,7 +4654,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Pull Up Grill and BBQ",
       "website": "www.pullupgrill.com",
@@ -4667,7 +4667,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "R&R Extreme Wings",
       "website": "https://www.rrextremewings.com/",
@@ -4680,7 +4680,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Simply Southern Soul Food Restaurant",
       "website": "https://www.facebook.com/simplysouthernsoulfood",
@@ -4693,7 +4693,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Maxine's Chicken & Waffles",
       "website": "https://www.maxineschicken.com/",
@@ -4706,7 +4706,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Kountry Kitchen Soulfood Place",
       "website": "https://www.kountrykitchenindy.com/",
@@ -4719,7 +4719,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Axum Ethiopian Restaurant",
       "website": "https://www.axumindy.com/",
@@ -4732,7 +4732,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Jamaican Breeze Sports Bar and Grill",
       "website": "http://jamaicanbreezeindy.com/",
@@ -4745,7 +4745,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "St. Yared Ethiopian Restaurant",
       "website": "Www.styaredcuisine.com",
@@ -4758,7 +4758,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Tea's Me Cafe Indy",
       "website": "https://www.teasmeindy.com/",
@@ -4771,7 +4771,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Da Blue Lagoon",
       "website": "https://dabluelagoon.com/",
@@ -4784,7 +4784,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Da Spot (Just Wing�n It)",
       "website": "https://justwingnitindy.com/",
@@ -4797,7 +4797,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Bar-B-Q Heaven",
       "website": "http://www.barbqheaven1952.com/",
@@ -4810,7 +4810,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Chef Oya's The Trap",
       "website": "https://www.chefoya.com/",
@@ -4823,7 +4823,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Amiah J's Barbeque and Catering",
       "website": "http://amiahjsbbq.com/",
@@ -4836,7 +4836,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Bukks BBQ Smokehouse",
       "website": "https://www.facebook.com/BUKKSBBQSMOKEHOUSE",
@@ -4849,7 +4849,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Chuck�s Coney Island",
       "website": "http://chucks-coney-island.business.site/",
@@ -4862,7 +4862,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Circle City Soul Food",
       "website": "https://www.circlecitysoulfood.com/",
@@ -4875,7 +4875,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Cleo's Bodega and Caf�",
       "website": "https://www.flannerhouse.org/",
@@ -4888,7 +4888,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Epic Ultra Lounge",
       "website": "http://www.epicultralounge.comcastbiz.net",
@@ -4901,7 +4901,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Garrett's Steakhouse and Barbeque",
       "website": "https://www.garrettsbbq.com/",
@@ -4914,7 +4914,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Gran-2-Ma's Kitchen",
       "website": "https://m.facebook.com/Gran-2-Mas-Kitchen-101619064945345/",
@@ -4927,7 +4927,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Hank's BBQ",
       "website": "https://www.hankssmokedbriskets.com/",
@@ -4940,7 +4940,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Healthy Soul Meal Prep & Catering LLC/ DBA Black Bow� Bistro & Bakery",
       "website": "http://www.bistrofoodforthesoul.com/",
@@ -4953,7 +4953,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Herd�s",
       "website": "https://herdsindy.com/",
@@ -4966,7 +4966,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "His Place Eatery",
       "website": "https://hisplaceeatery.com/",
@@ -4979,7 +4979,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "King Ribs",
       "website": "https://www.kingribsbbq.com/",
@@ -4992,7 +4992,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Pi Indy",
       "website": "https://eatbetterpizza.com/",
@@ -5005,7 +5005,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Tammy�s International Pizza",
       "website": "https://www.facebook.com/tammysinternationalizza/",
@@ -5018,7 +5018,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Tea's Me Indy",
       "website": "https://www.teasmeindy.com/",
@@ -5031,7 +5031,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "The Flatiron @ The Point on Penn",
       "website": "www.thepointonpenn.com",
@@ -5044,7 +5044,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Yaso",
       "website": "https://yasogrill.com/",
@@ -5057,7 +5057,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Andre's Barbeque & Seafood",
       "website": "https://www.facebook.com/AndresBBQandSeafood",
@@ -5070,7 +5070,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Exotic on the Run",
       "website": "https://www.exoticontherunindy.com/",
@@ -5083,7 +5083,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "SFI Risk Services",
       "website": "https://sfirisk.com/",
@@ -5096,7 +5096,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "A-TIN Transport LLC",
       "website": "https://www.a-tin.com/",
@@ -5109,7 +5109,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Ballew Moving LLC",
       "website": "www.ballewmoving.com",
@@ -5122,7 +5122,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Roscoe's express delivery LLC",
       "website": "roscoeexpressdelivery.com",
@@ -5135,7 +5135,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Spirit of Excellence Transportation LLC",
       "website": "www.yitsoe.com",
@@ -5148,7 +5148,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Touchdown RV Rentals and Sales",
       "website": "https://touchdownrv.com/",
@@ -5161,7 +5161,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Creative Art by J.Mintze",
       "website": "https://www.judymintze.com/",
@@ -5174,7 +5174,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Iibada Dance Company",
       "website": "https://www.iibadadance.org/",
@@ -5187,7 +5187,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Meraki Dance Company",
       "website": "www.merakidanceindy.org",
@@ -5200,7 +5200,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Phiri Art Gallery",
       "website": "www.phiriart.com",
@@ -5213,7 +5213,7 @@
     }
 },
     {
-      "model": "vbp.vbp_in",
+      "model": "vbp.vbp_ind",
       "fields": {
 "business_name": "Freetown Village",
       "website": "https://www.freetown.org/",

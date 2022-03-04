@@ -29,6 +29,19 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 
 <style>
+  main {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    width: 100% !important;
+    overflow: hidden;
+  }
+  .tabs-navigation-menu {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+  .tabs-navigation-menu::-webkit-scrollbar {
+    display: none;
+  }
   input {
     font-family: poppins;
     font-weight: 300;
@@ -330,7 +343,7 @@
             display: none;
         }
     }
-    @media only screen and (max-width: 1420px) {
+    @media only screen and (max-width: 1201px) {
         .icon-wrap-top {
             display: none;
         }
@@ -366,7 +379,7 @@
         .nav-socialmedia:after {
         }
     }
-    @media only screen and (min-width: 1420px) {
+    @media only screen and (min-width: 1201px) {
         #sidenav-menu-trigger {
             display: none;
         }
@@ -386,6 +399,16 @@
             padding-top: 10px
     }
   }
+  @media only screen and (min-width: 680px) {
+    .main-nav-link {
+        font-size:17.25px !important;
+        font-weight: 300;
+        transform: scale(1,0.93);
+        letter-spacing: 0.5px;
+        color: rgb(45, 45, 45);
+        text-transform: uppercase;
+    }
+  }
   @media only screen and (max-width: 680px) {
     #icon-wrap {
       display: none
@@ -399,7 +422,6 @@
         font-size:24px;
     }
     .main-nav-link {
-        font-size:20px;
         font-weight: 300;
         transform: scale(1,0.93);
         letter-spacing: 1px;
@@ -1103,7 +1125,7 @@
   .btn-nominate {
   border: none;
 	font-family: inherit;
-	font-size: 16px;
+	font-size: 18px;
 	color: inherit;
 	cursor: pointer;
 	display: inline-block;
@@ -1123,10 +1145,9 @@
 	transition: none;
   border-radius: 0px;
   line-height: 20px;
-  width:80%; margin-left: 10%;
-  height: 47px;
-  padding-top: 5px; 
-  padding-bottom: 5px
+  width:95%;
+  height: fit-content;
+  padding: 10px 
 }
 .btn-nominate:after {
   content: '';
@@ -1310,7 +1331,7 @@
   .coming-soon-title {
     font-family: oskar-inline; 
     color: rgb(15, 143, 15);
-    font-size: 36px
+    font-size: 42px
   }
   .video-caption {
     margin-top:15; 
@@ -1354,6 +1375,9 @@
   }
 }
 @media only screen and (min-width:601px){
+  nav .brand-logo {
+    left: 160px
+  }
   .phase-one-title {
     font-size: 48px;
   }
@@ -1463,7 +1487,7 @@
       margin-bottom:20px
     }
     .coming-soon-title {
-    font-size: 48px
+    font-size: 62px
   }
   .bag-image {
     width: 40%;
@@ -1478,7 +1502,13 @@
     display: none
   }
 }
+@media only screen and (min-width: 800px) {
+  nav .brand-logo {
+    left: 45%
+  }
+}
 @media only screen and (min-width:993px) {
+
   .phase-one-title {
     font-size: 56px;
     
@@ -1588,6 +1618,7 @@
   }
 }
 @media only screen and (min-width:1025px){
+  
   .strategy-title {
   font-family: oskar-inline; 
   font-weight:400; 
@@ -1621,9 +1652,9 @@
   .btn-nominate {
     font-size: 18px;
     font-weight: 400;
-    height: 70px;
+    height: fit-content;
     width: 80%;
-    margin-left: 10%
+    padding: 10px
   }
     .vbp-text p {
       font-size:24px
@@ -1648,8 +1679,10 @@
   }
   
 }
-@media only screen and (min-width:1200px) {
-  
+@media only screen and (min-width:1201px) {
+  nav .brand-logo {
+    left: 48%;
+  }
   .pillar-collapsible {
     padding:0; 
     width: 80%; 
@@ -1677,11 +1710,11 @@
   .btn-nominate {
     font-size: 28px;
     font-weight: 400;
-    height: 70px;
-    width: 80%;
-    margin-left: 10%;
-    line-height: 28px;
-    padding-top:10px;
+    height: fit-content;
+    width: 65%;
+    margin-left: 0;
+    line-height: 36px;
+    padding: 20px;
     margin-top: 3%;
     margin-bottom: 5%
   }

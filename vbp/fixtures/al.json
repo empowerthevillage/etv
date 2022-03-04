@@ -1,0 +1,4160 @@
+[
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Benton's Beauty Supply",
+      "city": "Alexander City",
+      "owner_email": "bentonsbeauty@hotmail.com",
+      "phone": "(256) 329-3560",
+      "website": "https://www.facebook.com/Bentons-Beauty-Supply-187829497949665/",
+      "category": "beauty",
+      "subcategory": "Beauty Supply/Hair & Accessories",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Uptown Beauty Salon",
+      "city": "Alexander City",
+      "owner_email": "dspencer6@gmail.com",
+      "phone": "",
+      "website": "https://www.facebook.com/utbqueen/",
+      "category": "beauty",
+      "subcategory": "Beauty Salon",
+      "owner_name": "",
+      "directory_source": "Support Black Owned"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "D. Levett’s Universal Kutz",
+      "city": "Auburn",
+      "owner_email": "",
+      "phone": "(334) 303-3774",
+      "website": "https://www.facebook.com/D-Levetts-Universal-Kutz-305464453166956/#",
+      "category": "beauty",
+      "subcategory": "Barber",
+      "owner_name": "",
+      "directory_source": "Black Community Shoppe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "GlamSpot Beauty Lounge",
+      "city": "Auburn",
+      "owner_email": "",
+      "phone": "(334) 521 -7500",
+      "website": "https://www.facebook.com/glamspotbeautylounge/#",
+      "category": "beauty",
+      "subcategory": "Beauty Salon",
+      "owner_name": "",
+      "directory_source": "Black Community Shoppe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Hair Ambition 2000",
+      "city": "Auburn",
+      "owner_email": "",
+      "phone": "(334) 821-4418",
+      "website": "https://www.facebook.com/pages/Hair-Ambition-2000/145205245502746#",
+      "category": "beauty",
+      "subcategory": "Beauty Salon",
+      "owner_name": "",
+      "directory_source": "Black Community Shoppe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Hair Palace",
+      "city": "Auburn",
+      "owner_email": "",
+      "phone": "(334) 821-1316",
+      "website": "https://www.vagaro.com/hairpalace31?fbclid=IwAR0x00vNq80Xfu9loNw43Eb41Zb7qWpbKlz55090mQcV-c_C_QHnZ2gPgvo&ig_fbb=true#",
+      "category": "beauty",
+      "subcategory": "Beauty Salon",
+      "owner_name": "",
+      "directory_source": "Black Community Shoppe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Oliver & Company",
+      "city": "Auburn",
+      "owner_email": "",
+      "phone": "(334) 246-3188",
+      "website": "https://www.facebook.com/Oliver-Company-Hair-Studio-1720849988130945/#",
+      "category": "beauty",
+      "subcategory": "Beauty Salon",
+      "owner_name": "",
+      "directory_source": "Black Community Shoppe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Precision Cuts Barber and Beauty",
+      "city": "Auburn",
+      "owner_email": "",
+      "phone": "(334) 826-0715",
+      "website": "https://www.facebook.com/PrecisionCutsAuburn/#",
+      "category": "beauty",
+      "subcategory": "Barber",
+      "owner_name": "",
+      "directory_source": "Black Community Shoppe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "The Barbers’ Lounge",
+      "city": "Auburn",
+      "owner_email": "",
+      "phone": "(334) 329-7019",
+      "website": "https://booksy.com/en-us/201437_the-barbers-lounge_barber-shop_13730_auburn?do=invite&_branch_match_id=699293679897433709",
+      "category": "beauty",
+      "subcategory": "Barber",
+      "owner_name": "",
+      "directory_source": "Black Community Shoppe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Unique Image",
+      "city": "Auburn",
+      "owner_email": "",
+      "phone": "(334) 826-6001",
+      "website": "https://www.facebook.com/pages/Unique-Image/160548883966196#",
+      "category": "beauty",
+      "subcategory": "Barber",
+      "owner_name": "",
+      "directory_source": "Black Community Shoppe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Aplomb Aromatic",
+      "city": "Birmingham",
+      "owner_email": "aplombaromatic@gmail.com",
+      "phone": "(205) 602-3052",
+      "website": "https://www.aplombaromatic.com/",
+      "category": "beauty",
+      "subcategory": "Bath & Body",
+      "owner_name": "",
+      "directory_source": "Black Business List"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "By L.Jones",
+      "city": "Birmingham",
+      "owner_email": "info@byljonesproducts.com",
+      "phone": "",
+      "website": "https://www.byljonesproducts.com/",
+      "category": "beauty",
+      "subcategory": "Beauty Supply/Hair & Accessories",
+      "owner_name": "LaToya Jones",
+      "directory_source": "Black Community Shoppe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Eye Catchn Lash & Beauty Bar",
+      "city": "Birmingham",
+      "owner_email": "",
+      "phone": "(205) 538-5100",
+      "website": "https://eye-catchn.business.site/",
+      "category": "beauty",
+      "subcategory": "Beauty Salon",
+      "owner_name": "",
+      "directory_source": "National Black Guide"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Fingerpaints Nail Studios",
+      "city": "Birmingham",
+      "owner_email": "",
+      "phone": "205-997-9006",
+      "website": "https://www.yelp.com/biz/fingerpaints-nail-studio-birmingham",
+      "category": "beauty",
+      "subcategory": "Nails",
+      "owner_name": "",
+      "directory_source": "Support Black Owned"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Meeks Lash Bar",
+      "city": "Birmingham",
+      "owner_email": "Meeks.Boutique@gmail.com",
+      "phone": "305.290.1272",
+      "website": "http://www.MeeksLashes.ecwid.com",
+      "category": "beauty",
+      "subcategory": "Cosmetics",
+      "owner_name": "",
+      "directory_source": "I Am Black Business"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Elyse Bundles & Co.",
+      "city": "Huntsville",
+      "owner_email": "",
+      "phone": "937-715-1058",
+      "website": "http://www.elysebundlesco.com",
+      "category": "beauty",
+      "subcategory": "Beauty Supply/Hair & Accessories",
+      "owner_name": "",
+      "directory_source": "Support Black Owned"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Kima Beauty",
+      "city": "Huntsville",
+      "owner_email": "info@kimabeauty.com",
+      "phone": "404.513.5002",
+      "website": "https://kimabeauty.com/",
+      "category": "beauty",
+      "subcategory": "Beauty Supply/Hair & Accessories",
+      "owner_name": "",
+      "directory_source": "I Am Black Business"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "1st Choice Hair & Beauty Supply Store",
+      "city": "Mobile",
+      "owner_email": "info@1stchoicevirginhair.com",
+      "phone": "(251) 345-0550",
+      "website": "http://www.1stchoicevirginhair.com",
+      "category": "beauty",
+      "subcategory": "Beauty Supply/Hair & Accessories",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Allkeline Boost",
+      "city": "Mobile",
+      "owner_email": "contact@allkalelineboost.com",
+      "phone": "251-289-0427",
+      "website": "http://www.allkalelineboost.com/",
+      "category": "beauty",
+      "subcategory": "Bath & Body",
+      "owner_name": "",
+      "directory_source": "Blocal"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "KSR Hair And Beauty Supply",
+      "city": "Mobile",
+      "owner_email": "",
+      "phone": "(251) 434-8266",
+      "website": "https://www.facebook.com/KSRbeautysupply/",
+      "category": "beauty",
+      "subcategory": "Beauty Supply/Hair & Accessories",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Sweet Martha's Holistic Wellness",
+      "city": "Mobile",
+      "owner_email": "sweetmarthasbodycare@gmail.com",
+      "phone": "(404) 573-2238",
+      "website": "www.sweetmarthasholistic.com",
+      "category": "beauty",
+      "subcategory": "Bath & Body",
+      "owner_name": "",
+      "directory_source": "Black Business List"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Braids 2 Fades",
+      "city": "Opelika",
+      "owner_email": "",
+      "phone": "(404) 550-0735",
+      "website": "https://www.instagram.com/braids2fades/#",
+      "category": "beauty",
+      "subcategory": "Beauty Salon",
+      "owner_name": "",
+      "directory_source": "Black Community Shoppe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Distinguished Cuts",
+      "city": "Opelika",
+      "owner_email": "jamaalsankey@yahoo.com",
+      "phone": "(334) 363-2777",
+      "website": "https://www.facebook.com/distinguished.cuts.9/?rf=118978061486999#",
+      "category": "beauty",
+      "subcategory": "Barber",
+      "owner_name": "",
+      "directory_source": "Black Community Shoppe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Diversity Salon",
+      "city": "Opelika",
+      "owner_email": "diversitysalons@gmail.com",
+      "phone": "(334) 203-1032",
+      "website": "https://www.facebook.com/diversitysalonopelika/#",
+      "category": "beauty",
+      "subcategory": "Beauty Salon",
+      "owner_name": "",
+      "directory_source": "Black Community Shoppe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Forever Unique Beauty",
+      "city": "",
+      "owner_email": "",
+      "phone": "205-217-3500",
+      "website": "https://mybeautysite.com/vendor_shop/foreveruniquebeauty.html",
+      "category": "beauty",
+      "subcategory": "Beauty Supply/Hair & Accessories",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "God Healing Devotional Book By: God Through Apostle Prophetess Kamilah Nolon",
+      "city": "Birmingham",
+      "owner_email": "kamilahnolon@yahoo.com",
+      "phone": "205-593-1865",
+      "website": "http://apostleprophetesskamilahnolon.webs.com/",
+      "category": "books",
+      "subcategory": "",
+      "owner_name": "Kamilah Nolon",
+      "directory_source": "Support Black Owned"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Melanated Books",
+      "city": "Birmingham",
+      "owner_email": "",
+      "phone": "205-440-3350",
+      "website": "https://www.melanatedbooks.com",
+      "category": "books",
+      "subcategory": "Book Store",
+      "owner_name": "",
+      "directory_source": "Support Black Owned"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Imperial Publishing House",
+      "city": "",
+      "owner_email": "imperialpublishinghouse17@gmail.com",
+      "phone": "",
+      "website": "https://www.facebook.com/Imperialpublishinghouse/",
+      "category": "books",
+      "subcategory": "Publishing",
+      "owner_name": "",
+      "directory_source": "Black Community Shoppe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Women of Audacity",
+      "city": "",
+      "owner_email": "lasha@womenofaudacity.com",
+      "phone": "(334) 203-4342",
+      "website": "https://www.facebook.com/Womenofaudacity/#",
+      "category": "books",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Black Community Shoppe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Phenomenal Management Partners",
+      "city": "Huntsville",
+      "owner_email": "",
+      "phone": "800.560.4231",
+      "website": "http://www.we-are-pmp.com",
+      "category": "professional",
+      "subcategory": "Consulting",
+      "owner_name": "",
+      "directory_source": "I Am Black Business"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Auburn Collision Center",
+      "city": "Auburn",
+      "owner_email": "",
+      "phone": "(334) 821-0006",
+      "website": "https://www.yelp.com/biz/auburn-collision-center-auburn-4",
+      "category": "cars",
+      "subcategory": "Auto Repair/Services",
+      "owner_name": "",
+      "directory_source": "Black Community Shoppe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Premium Auto Care",
+      "city": "Auburn",
+      "owner_email": "",
+      "phone": "(334) 703-4758",
+      "website": "https://www.instagram.com/p/CBETmmUHUWA/#",
+      "category": "cars",
+      "subcategory": "Auto Repair/Services",
+      "owner_name": "",
+      "directory_source": "Black Community Shoppe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Unique Image Pro Car Care",
+      "city": "Auburn",
+      "owner_email": "",
+      "phone": "(334) 826-6001",
+      "website": "https://www.yellowpages.com/auburn-al/mip/unique-image-5424205",
+      "category": "cars",
+      "subcategory": "Auto Repair/Services",
+      "owner_name": "",
+      "directory_source": "Black Community Shoppe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Lexus of Huntsville",
+      "city": "Huntsville",
+      "owner_email": "",
+      "phone": "(800) 721-9560",
+      "website": "http://www.lexusofhuntsville.com",
+      "category": "cars",
+      "subcategory": "Auto Dealership",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Jacob’s Ladder",
+      "city": "Auburn",
+      "owner_email": "",
+      "phone": "(334) 821-5100",
+      "website": "https://www.facebook.com/pages/Jacobs-Ladder/161939483833910#",
+      "category": "child",
+      "subcategory": "Childcare/Daycare/Preschool",
+      "owner_name": "",
+      "directory_source": "Black Community Shoppe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Sugar Plum Dolls",
+      "city": "Tuskegee",
+      "owner_email": "",
+      "phone": "",
+      "website": "https://www.etsy.com/shop/clothespindolls",
+      "category": "child",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Eula Mae’s",
+      "city": "",
+      "owner_email": "",
+      "phone": "",
+      "website": "https://www.facebook.com/eulamaeclothing/#",
+      "category": "child",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Black Community Shoppe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Affordable Carpet Cleaning",
+      "city": "Auburn",
+      "owner_email": "",
+      "phone": "(334) 502-0807",
+      "website": "https://www.auburncarpetcleaners.com/index.html",
+      "category": "child",
+      "subcategory": "",
+      "owner_name": "George Hunter",
+      "directory_source": "Black Community Shoppe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Auset Cleaning Service Llc.",
+      "city": "Birmingham",
+      "owner_email": "ausetcleaningservice@gmail.com",
+      "phone": "205-261-8353",
+      "website": "http://ausetcleaningservi.wix.com/cynthiap",
+      "category": "child",
+      "subcategory": "",
+      "owner_name": "Cynthia Price",
+      "directory_source": "Support Black Owned"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Falls Facility Services",
+      "city": "Birmingham",
+      "owner_email": "thomas@fallsfacilityservices.com",
+      "phone": "(205) 925-2594",
+      "website": "http://www.fallsfacilityservices.com/",
+      "category": "child",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "LeanPros Professional Cleaning Service",
+      "city": "Salem",
+      "owner_email": "info@leanproscleaning.com",
+      "phone": "334.663.0550",
+      "website": "https://www.facebook.com/LeanProsCleaning/",
+      "category": "child",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "I Am Black Business"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Koko’s African Boutique",
+      "city": "Auburn",
+      "owner_email": "kokosboutique22@gmail.com",
+      "phone": "",
+      "website": "https://kokosboutique22.com/#",
+      "category": "clothing",
+      "subcategory": "Apparel",
+      "owner_name": "",
+      "directory_source": "Black Community Shoppe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "DTrespa Consignment Boutique",
+      "city": "Birmingham",
+      "owner_email": "",
+      "phone": "(205) 383-5164",
+      "website": "http://www.dtrespa.com",
+      "category": "clothing",
+      "subcategory": "Apparel",
+      "owner_name": "",
+      "directory_source": "National Black Guide"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Trendy Chic Boutique",
+      "city": "Clanton",
+      "owner_email": "",
+      "phone": "205-217-3998",
+      "website": "https://trendychicboutique.com/",
+      "category": "clothing",
+      "subcategory": "Apparel",
+      "owner_name": "",
+      "directory_source": "Support Black Owned"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Flawless Belle",
+      "city": "Huntsville",
+      "owner_email": "flawlessbelle11@gmail.com",
+      "phone": "256-653-4862",
+      "website": "http://www.flawless-belle.com/contact.html#/",
+      "category": "clothing",
+      "subcategory": "Apparel",
+      "owner_name": "",
+      "directory_source": "Support Black Owned"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Majority Clothing",
+      "city": "Mobile",
+      "owner_email": "hello@majorityfullfigured.com",
+      "phone": "251-518-5397",
+      "website": "https://www.facebook.com/MajorityFullFiguredFashion/",
+      "category": "clothing",
+      "subcategory": "Apparel",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Produce Section Clothing",
+      "city": "Pleasant Grove",
+      "owner_email": "",
+      "phone": "",
+      "website": "http://www.producesectionclothing.com",
+      "category": "clothing",
+      "subcategory": "Apparel",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "MyVoteMatters Merchandising",
+      "city": "",
+      "owner_email": "myvotemattersinc@gmail.com",
+      "phone": "(919) 358-5860",
+      "website": "https://www.facebook.com/MyVoteMattersMerch/",
+      "category": "clothing",
+      "subcategory": "Apparel",
+      "owner_name": "",
+      "directory_source": "Black Community Shoppe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Shop Young Kings",
+      "city": "",
+      "owner_email": "info@shopyoungkings.com",
+      "phone": "(919) 522-8842",
+      "website": "https://shopyoungkings.com/#",
+      "category": "clothing",
+      "subcategory": "Apparel",
+      "owner_name": "",
+      "directory_source": "Black Community Shoppe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "J&J Warren Concrete",
+      "city": "Auburn",
+      "owner_email": "",
+      "phone": "(334) 703-2088",
+      "website": "https://www.facebook.com/JJ-Concrete-103906784298083/",
+      "category": "construction",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Black Community Shoppe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Brownconst334",
+      "city": "Billingsley",
+      "owner_email": "",
+      "phone": "205-217-8458",
+      "website": "https://www.facebook.com/brownconst2/",
+      "category": "construction",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Support Black Owned"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "008 Services",
+      "city": "Birmingham",
+      "owner_email": "",
+      "phone": "(205) 240-1151",
+      "website": "https://www.instagram.com/008services/?utm_source=ig_embed#",
+      "category": "construction",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Black Community Shoppe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "A G Gaston Construction Company Inc",
+      "city": "Birmingham",
+      "owner_email": "info@aggaston.com",
+      "phone": "(205)328-0376",
+      "website": "https://aggaston.com/",
+      "category": "construction",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Advantage Equipment",
+      "city": "Birmingham",
+      "owner_email": "",
+      "phone": "205-995-0083",
+      "website": "",
+      "category": "construction",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Support Black Owned"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Bledsoe Construction Group Of Birmingham",
+      "city": "Birmingham",
+      "owner_email": "",
+      "phone": "877-291-2751",
+      "website": "http://www.bledsoeinternational.com",
+      "category": "construction",
+      "subcategory": "Roofing & Siding",
+      "owner_name": "",
+      "directory_source": "Support Black Owned"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Dream Home Remodeling",
+      "city": "Birmingham",
+      "owner_email": "bryant.felder89@gmail.com",
+      "phone": "205-503-3272",
+      "website": "https://www.facebook.com/dreamhremodeling/",
+      "category": "construction",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Support Black Owned"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "J&J Warren Concrete",
+      "city": "Birmingham",
+      "owner_email": "",
+      "phone": "(334) 703-2088",
+      "website": "https://www.facebook.com/JJ-Concrete-103906784298083/",
+      "category": "construction",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Black Community Shoppe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "J&J Warren Concrete",
+      "city": "Dothan",
+      "owner_email": "",
+      "phone": "(334) 703-2088",
+      "website": "https://www.facebook.com/JJ-Concrete-103906784298083/",
+      "category": "construction",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Black Community Shoppe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Plumbing Professionals",
+      "city": "Hoover",
+      "owner_email": "service@plumbingprofessionals.net",
+      "phone": "(205) 651-2537",
+      "website": "https://plumbingprofessionals.net/",
+      "category": "construction",
+      "subcategory": "Plumbing",
+      "owner_name": "",
+      "directory_source": "I Am Black Business"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Bledsoe Construction Group Of Montgomery",
+      "city": "Montgomery",
+      "owner_email": "",
+      "phone": "877-291-2751",
+      "website": "http://www.bledsoeinternational.com",
+      "category": "construction",
+      "subcategory": "Roofing & Siding",
+      "owner_name": "",
+      "directory_source": "Support Black Owned"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Cabiness Electric",
+      "city": "Montgomery",
+      "owner_email": "",
+      "phone": "(334) 281-4025",
+      "website": "",
+      "category": "construction",
+      "subcategory": "Electrical",
+      "owner_name": "",
+      "directory_source": "National Black Guide"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Cole Plumbing, Inc.",
+      "city": "Montgomery",
+      "owner_email": "ColePlbg@gmail.com",
+      "phone": "334.279.8919",
+      "website": "https://www.coleplumbing.com/",
+      "category": "construction",
+      "subcategory": "Plumbing",
+      "owner_name": "",
+      "directory_source": "I Am Black Business"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "J&J Warren Concrete",
+      "city": "Montgomery",
+      "owner_email": "",
+      "phone": "(334) 703-2088",
+      "website": "https://www.facebook.com/JJ-Concrete-103906784298083/",
+      "category": "construction",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Black Community Shoppe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "TNOA General Contractors",
+      "city": "Montgomery",
+      "owner_email": "",
+      "phone": "334-356-0824 (O)",
+      "website": "http://www.itnoallc.com/Engineering-Services.html",
+      "category": "construction",
+      "subcategory": "Construction/Engineering",
+      "owner_name": "",
+      "directory_source": "National Black Guide"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Ben Franklin Plumbing",
+      "city": "Opelika",
+      "owner_email": "benfranklinplumb@tutanota.com",
+      "phone": "(334) 249-3593",
+      "website": "http://benfranklinplumbingauburnal.com/",
+      "category": "construction",
+      "subcategory": "Plumbing",
+      "owner_name": "",
+      "directory_source": "I Am Black Business"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Enjoy Learning Center Tutoring",
+      "city": "Montgomery",
+      "owner_email": "",
+      "phone": "(334) 625-9535",
+      "website": "https://www.enjoylearningcenter.com/",
+      "category": "education",
+      "subcategory": "Tutoring/Academic Planning",
+      "owner_name": "Trevor Muhammad",
+      "directory_source": "National Black Guide"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Motivather Inc.",
+      "city": "Montgomery",
+      "owner_email": "",
+      "phone": "678-348-6948",
+      "website": "http://www.reginacoley.com",
+      "category": "education",
+      "subcategory": "",
+      "owner_name": "Regina Coley",
+      "directory_source": "Support Black Owned"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Courageous Leadership International",
+      "city": "",
+      "owner_email": "",
+      "phone": "",
+      "website": "https://www.instagram.com/courageousleadershipintl/?hl=en#",
+      "category": "education",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Black Community Shoppe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Holmes Tutoring",
+      "city": "",
+      "owner_email": "",
+      "phone": "(334) 377-0221",
+      "website": "https://www.holmestutoring.com/#",
+      "category": "education",
+      "subcategory": "Tutoring/Academic Planning",
+      "owner_name": "Keara Holmes",
+      "directory_source": "Black Community Shoppe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Jenkins Enterprise Group",
+      "city": "Montgomery",
+      "owner_email": "",
+      "phone": "334-657-8337",
+      "website": "https://www.jenkins.io/project/roadmap/",
+      "category": "electronics",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "National Black Guide"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Birmingham Times",
+      "city": "Birmingham",
+      "owner_email": "",
+      "phone": "(205) 957-6867",
+      "website": "http://www.birminghamtimes.com",
+      "category": "entertainment",
+      "subcategory": "Media",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Birthday Sugar: Party Designers",
+      "city": "Daleville",
+      "owner_email": "",
+      "phone": "(678) 528-3399",
+      "website": "http://www.BirthdaySugar.net",
+      "category": "entertainment",
+      "subcategory": "Event Planning/Services",
+      "owner_name": "",
+      "directory_source": "National Black Guide"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Gospel Sounds Radio Network",
+      "city": "Mobile",
+      "owner_email": "mygsrn@gmail.com",
+      "phone": "251-268-9501",
+      "website": "http://www.mygsrn.org",
+      "category": "entertainment",
+      "subcategory": "Media",
+      "owner_name": "Elder Gary Johnson",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Sleepover Envy",
+      "city": "Montgomery",
+      "owner_email": "sleepoverenvy@gmail.com",
+      "phone": "210-549-8716",
+      "website": "https://www.facebook.com/sleepoverenvy/",
+      "category": "entertainment",
+      "subcategory": "",
+      "owner_name": "Brittany Harry",
+      "directory_source": "Support Black Owned"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Nov8ive Events & Designs",
+      "city": "Tuskegee",
+      "owner_email": "info@nov8iveevents.com",
+      "phone": "334.521.2008",
+      "website": "http://www.nov8iveevents.com/",
+      "category": "entertainment",
+      "subcategory": "Event Planning/Services",
+      "owner_name": "Garrysa Caffey",
+      "directory_source": "I Am Black Business"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Blooming Flowers",
+      "city": "Mobile",
+      "owner_email": "",
+      "phone": "251-348-7601",
+      "website": "http://Bloomingflowersal.com",
+      "category": "florists",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Support Black Owned"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Flowers By Buck",
+      "city": "Montgomery",
+      "owner_email": "",
+      "phone": "334-264-5080",
+      "website": "https://www.flowershopflorists.com/al/montgomery/flowers-by-buck.html",
+      "category": "florists",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "National Black Guide"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Naughty But Nice Kettle Corn Co.",
+      "city": "Birmingham",
+      "owner_email": "",
+      "phone": "(205) 915-2528",
+      "website": "https://nbnkettlecorn.com/",
+      "category": "grocery",
+      "subcategory": "Food Product/Brand",
+      "owner_name": "",
+      "directory_source": "National Black Guide"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Aliza's Cookies",
+      "city": "Anniston",
+      "owner_email": "alizascookies@att.net",
+      "phone": "256-225-1717",
+      "website": "https://www.facebook.com/ALIZAS-COOKIESINC-181050473774/",
+      "category": "grocery",
+      "subcategory": "Bakery",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Sno Biz",
+      "city": "Auburn",
+      "owner_email": "lashundasankey81@icloud.com",
+      "phone": "(334)-821-4142",
+      "website": "https://www.facebook.com/SnoBizAuburnAlabama/",
+      "category": "grocery",
+      "subcategory": "Ice Cream Parlor",
+      "owner_name": "",
+      "directory_source": "Black Community Shoppe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "A Sweet 4 All",
+      "city": "Birmingham",
+      "owner_email": "asweet4you@gmail.com",
+      "phone": "205.259.8506",
+      "website": "https://a-sweet-4-all.ueniweb.com/",
+      "category": "grocery",
+      "subcategory": "Bakery",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Emily's Heirloom Pound Cakes",
+      "city": "Homewood",
+      "owner_email": "emilyshpc@gmail.com",
+      "phone": "(205) 937-7392",
+      "website": "http://Www.emilysheirloompoundcakes.com",
+      "category": "grocery",
+      "subcategory": "Bakery",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Jazzy's Eats and Treats",
+      "city": "Montgomery",
+      "owner_email": "",
+      "phone": "(334) 549-1792",
+      "website": "https://www.facebook.com/jazzys334/",
+      "category": "grocery",
+      "subcategory": "Bakery",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "JoZettie's Cupcakes",
+      "city": "Montgomery",
+      "owner_email": "jzcupcakes@yahoo.com",
+      "phone": "(334) 239-9289",
+      "website": "http://www.jozettiescupcakes.com",
+      "category": "grocery",
+      "subcategory": "Bakery",
+      "owner_name": "Mrs. Ida",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Edible Arrangements",
+      "city": "Opelika",
+      "owner_email": "",
+      "phone": "(334) 759-7367",
+      "website": "https://www.ediblearrangements.com/stores/3794-pepperell-parkway-auburn-al-36830",
+      "category": "grocery",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Black Community Shoppe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Honestly Smooth",
+      "city": "Opelika",
+      "owner_email": "",
+      "phone": "(334) 203-4234",
+      "website": "https://www.zmenu.com/honestly-smooth-smoothie-opelika-online-menu/",
+      "category": "grocery",
+      "subcategory": "Coffee/Tea/Beverages",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "The Steak Factory",
+      "city": "Opelika",
+      "owner_email": "steakfactory1@yahoo.com",
+      "phone": "(334) 734-0144",
+      "website": "https://www.facebook.com/The-Steak-Factory-on-Frederick-Road-120120794710509/#",
+      "category": "grocery",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Black Community Shoppe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Darden Bridgeforth & Sons",
+      "city": "Tanner",
+      "owner_email": "",
+      "phone": "(256) 497-3590",
+      "website": "http://www.bridgeforthinternational.com",
+      "category": "grocery",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Band of Brothers Brewing Co.",
+      "city": "Tuscaloosa",
+      "owner_email": "bandofbrosbrews@gmail.com",
+      "phone": "(205) 246-2569",
+      "website": "https://www.facebook.com/brewingbrothers/",
+      "category": "grocery",
+      "subcategory": "Alcohol",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Create a Spa Naturale",
+      "city": "Auburn",
+      "owner_email": "nfo@createaspaauburn.com",
+      "phone": "(334) 826-4011",
+      "website": "https://createaspa-auburn.com/#",
+      "category": "health",
+      "subcategory": "Spa/Massage Therapy",
+      "owner_name": "",
+      "directory_source": "Black Community Shoppe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Metrics Fitness Lab",
+      "city": "Auburn",
+      "owner_email": "info@metricsfitnesslab.com",
+      "phone": "(334) 740 - 6442",
+      "website": "https://www.metricsfitnesslab.com/#",
+      "category": "health",
+      "subcategory": "Fitness/Yoga",
+      "owner_name": "",
+      "directory_source": "Black Community Shoppe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Revision Counseling Center",
+      "city": "Auburn",
+      "owner_email": "shelia@revisioncounselingcenter.com",
+      "phone": "(334) 384-8158",
+      "website": "https://revisioncounselingcenter.com/#",
+      "category": "health",
+      "subcategory": "Mental Health Support",
+      "owner_name": "Shelia Holmes",
+      "directory_source": "Black Community Shoppe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "The High Five Fitness",
+      "city": "Auburn",
+      "owner_email": "thehighfivefitness@gmail.com",
+      "phone": "(334) 740-8442",
+      "website": "https://thehighfivefitness.com/#",
+      "category": "health",
+      "subcategory": "Fitness/Yoga",
+      "owner_name": "Chappy",
+      "directory_source": "Black Community Shoppe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Innovate Green",
+      "city": "Birmingham",
+      "owner_email": "",
+      "phone": "205.598.7751",
+      "website": "https://www.instagram.com/innovategreen/?hl=en",
+      "category": "health",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "National Black Guide"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Lotus Counseling Services",
+      "city": "Birmingham",
+      "owner_email": "lotuswomenscounseling@gmail.com",
+      "phone": "205-208-0032",
+      "website": "https://www.lotuswomenscounseling.com/",
+      "category": "health",
+      "subcategory": "Mental Health Support",
+      "owner_name": "Adrienne Cooper",
+      "directory_source": "Support Black Owned"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Nova Essence Medispa",
+      "city": "Birmingham",
+      "owner_email": "novaessence160@gmail.com",
+      "phone": "205-319-4445",
+      "website": "https://www.facebook.com/novaessencemedispa/",
+      "category": "health",
+      "subcategory": "Spa/Massage Therapy",
+      "owner_name": "",
+      "directory_source": "Support Black Owned"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Massage Essential Time",
+      "city": "Daphne",
+      "owner_email": "",
+      "phone": "251-333-8860",
+      "website": "http://massageessentialtime.com",
+      "category": "health",
+      "subcategory": "Spa/Massage Therapy",
+      "owner_name": "Phenicia West",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Prosperity Self Care Essentials",
+      "city": "Huntsville",
+      "owner_email": "prosperityselfcare@gmail.com",
+      "phone": "",
+      "website": "http://www.prosperityselfcare.com",
+      "category": "health",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Support Black Owned"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "4 Fabulous Girls LLC",
+      "city": "Jasper",
+      "owner_email": "Sales@4fabulousgirls.com",
+      "phone": "",
+      "website": "https://www.4fabulousgirls.com/#",
+      "category": "health",
+      "subcategory": "",
+      "owner_name": "Danielle Alvarez",
+      "directory_source": "Black Community Shoppe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Body Wraps By Sheneka",
+      "city": "Madison",
+      "owner_email": "bodywrapsbysheneka@gmail.com",
+      "phone": "256-258-9478",
+      "website": "https://www.facebook.com/BodyWrapsbySheneka/",
+      "category": "health",
+      "subcategory": "",
+      "owner_name": "Sheneka ---",
+      "directory_source": "Support Black Owned"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Restoration Mind Body & Sole",
+      "city": "Opelika",
+      "owner_email": "",
+      "phone": "(334) 521-6080",
+      "website": "https://www.massagebook.com/Opelika~Massage~RestorationMBS?src=external#",
+      "category": "health",
+      "subcategory": "Spa/Massage Therapy",
+      "owner_name": "",
+      "directory_source": "Black Community Shoppe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Bea BOLD FiTness & Nutrition",
+      "city": "",
+      "owner_email": "bea@beaboldfitness.com",
+      "phone": "(334) 703-2169",
+      "website": "https://www.beaboldfitness.com/home#",
+      "category": "health",
+      "subcategory": "Fitness/Yoga",
+      "owner_name": "Bea Cornelius",
+      "directory_source": "Black Community Shoppe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Coming With The Consistency",
+      "city": "",
+      "owner_email": "comingwiththeconsistency@gmail.com",
+      "phone": "",
+      "website": "https://www.facebook.com/ComingWithTheConsistency/",
+      "category": "health",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Black Community Shoppe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "CRaezy Fitness",
+      "city": "",
+      "owner_email": "support@gocraezyfitness.com",
+      "phone": "",
+      "website": "https://gocraezyfitness.com/#",
+      "category": "health",
+      "subcategory": "Fitness/Yoga",
+      "owner_name": "",
+      "directory_source": "Black Community Shoppe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Sherina Today",
+      "city": "",
+      "owner_email": "",
+      "phone": "",
+      "website": "https://sherinatoday.com/#",
+      "category": "health",
+      "subcategory": "Mental Health Support",
+      "owner_name": "Sherina Hill",
+      "directory_source": "Black Community Shoppe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Bonanza Wellness",
+      "city": "Huntsville",
+      "owner_email": "rendon@bonanzawellness.com",
+      "phone": "205.482.0627",
+      "website": "https://www.bonanzawellness.com/",
+      "category": "health",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "I Am Black Business"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Auburn Candle Company",
+      "city": "Auburn",
+      "owner_email": "",
+      "phone": "(334) 209-2955",
+      "website": "https://auburncandle.com/#",
+      "category": "home",
+      "subcategory": "Home Goods/Decor",
+      "owner_name": "",
+      "directory_source": "Black Community Shoppe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Paradise Views",
+      "city": "Auburn",
+      "owner_email": "",
+      "phone": "(334) 591-7299",
+      "website": "https://www.thumbtack.com/al/auburn/lawn-care/paradise-views-llc/service/365389105612488706",
+      "category": "home",
+      "subcategory": "Landscaping/Gardening",
+      "owner_name": "Johnnie Enels",
+      "directory_source": "Black Community Shoppe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Allsteel Fence Co",
+      "city": "Birmingham",
+      "owner_email": "info@allsteelfence.com",
+      "phone": "205-942-8249",
+      "website": "http://allsteelfence.com/",
+      "category": "home",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Support Black Owned"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "J & L Candles",
+      "city": "Birmingham",
+      "owner_email": "",
+      "phone": "334-333-5181",
+      "website": "http://www.JLCandles.net",
+      "category": "home",
+      "subcategory": "Home Goods/Decor",
+      "owner_name": "",
+      "directory_source": "Support Black Owned"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "The Tree Man",
+      "city": "Birmingham",
+      "owner_email": "",
+      "phone": "205-480-9627",
+      "website": "https://the-tree-man.business.site/",
+      "category": "home",
+      "subcategory": "Landscaping/Gardening",
+      "owner_name": "",
+      "directory_source": "Support Black Owned"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "JB&B Au Naturels",
+      "city": "Mobile",
+      "owner_email": "",
+      "phone": "251-533-9212",
+      "website": "http://www.Jbbaunaturels.com",
+      "category": "home",
+      "subcategory": "Home Goods/Decor",
+      "owner_name": "",
+      "directory_source": "Blocal"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Grosouth Inc",
+      "city": "Montgomery",
+      "owner_email": "",
+      "phone": "334-265-8241",
+      "website": "https://grosouth.com/",
+      "category": "home",
+      "subcategory": "Landscaping/Gardening",
+      "owner_name": "",
+      "directory_source": "Support Black Owned"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Trendy Kreations Wreaths, Crafts and More",
+      "city": "",
+      "owner_email": "trendykreations@gmail.com",
+      "phone": "",
+      "website": "https://www.facebook.com/tkwreaths/#",
+      "category": "home",
+      "subcategory": "Home Goods/Decor",
+      "owner_name": "",
+      "directory_source": "Black Community Shoppe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Lawanda Baker",
+      "city": "Alabaster",
+      "owner_email": "lookbookandgotravel@gmail.com",
+      "phone": "(205) 378-8133",
+      "website": "LookBookandGo.com",
+      "category": "hotels",
+      "subcategory": "Travel Agent",
+      "owner_name": "Lawanda Baker",
+      "directory_source": "Black Business List"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Honeymoonns & Vacations By Vonda",
+      "city": "Dothan",
+      "owner_email": "info@honeymoonsbyvonda.com",
+      "phone": "334-595-9642",
+      "website": "http://www.honeymoonsbyvonda.com",
+      "category": "hotels",
+      "subcategory": "Travel Agent",
+      "owner_name": "Kavonda L. Rogers",
+      "directory_source": "Support Black Owned"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Sparkles And Diamonds Travel",
+      "city": "Huntsville",
+      "owner_email": "",
+      "phone": "256-583-4547",
+      "website": "http://brendamoore.InteleTravel.com",
+      "category": "hotels",
+      "subcategory": "Travel Agent",
+      "owner_name": "",
+      "directory_source": "Support Black Owned"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Fox Travel Agency Llc",
+      "city": "Mobile",
+      "owner_email": "fox2jones@gmail.com",
+      "phone": "251-487-8744",
+      "website": "http://www.fox2jones.com",
+      "category": "hotels",
+      "subcategory": "Travel Agent",
+      "owner_name": "",
+      "directory_source": "Support Black Owned"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Wingate by Wyndham Mobile",
+      "city": "Mobile",
+      "owner_email": "",
+      "phone": "",
+      "website": "https://www.wyndhamhotels.com/wingate/mobile-alabama/wingate-by-wyndham-mobile-al/overview",
+      "category": "hotels",
+      "subcategory": "Hospitality/Hotels/Inns",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "ISM Chick",
+      "city": "Hueytown",
+      "owner_email": "",
+      "phone": "",
+      "website": "https://www.instagram.com/ismchick/?hl=en",
+      "category": "jewelry",
+      "subcategory": "Accessories/Handbags",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Unlimited Creations",
+      "city": "",
+      "owner_email": "tshicks@yahoo.com",
+      "phone": "(334) 695-0006",
+      "website": "https://www.facebook.com/1stUnlimitedCreations/?eid=ARA2ftH_3OdUV1AMsXHvGDEBlVOS-Afj4yDPWQmxNlpEyrN0Z2Xw49GAB9XUpVyA8bAuemG47yAPK_kp&timeline_context_item_type=intro_card_work&timeline_context_item_source=560352483&fref=tag#",
+      "category": "jewelry",
+      "subcategory": "Accessories/Handbags",
+      "owner_name": "",
+      "directory_source": "Black Community Shoppe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Alamerica Bank",
+      "city": "Birmingham",
+      "owner_email": "",
+      "phone": "(205) 558-4600",
+      "website": "https://www.alamericabank.com/#",
+      "category": "legal",
+      "subcategory": "Financial Services",
+      "owner_name": "",
+      "directory_source": "Black Community Shoppe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Banks, Finley, White & Co",
+      "city": "Birmingham",
+      "owner_email": "",
+      "phone": "(205) 326-6660",
+      "website": "http://bfwcpa.com/",
+      "category": "legal",
+      "subcategory": "Financial Services",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Citizens Trust Bank",
+      "city": "Birmingham",
+      "owner_email": "contactus@ctbatl.com",
+      "phone": "(678) 406-4000",
+      "website": "https://ctbconnect.com/#",
+      "category": "legal",
+      "subcategory": "Financial Services",
+      "owner_name": "",
+      "directory_source": "Black Community Shoppe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Claude Houser State Farm Insurance, LLC",
+      "city": "Birmingham",
+      "owner_email": "",
+      "phone": "(205) 798-8446",
+      "website": "http://www.claudehouser.com",
+      "category": "legal",
+      "subcategory": "Insurance",
+      "owner_name": "Claude Houser",
+      "directory_source": "National Black Guide"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Lightfoot, Franklin & White, LLC",
+      "city": "Birmingham",
+      "owner_email": "",
+      "phone": "(205) 581-0700",
+      "website": "http://www.lightfootlaw.com/",
+      "category": "legal",
+      "subcategory": "Legal Services",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "The Cain Law Firm",
+      "city": "Birmingham",
+      "owner_email": "",
+      "phone": "205-202-4077",
+      "website": "http://cainlawbham.com",
+      "category": "legal",
+      "subcategory": "Legal Services",
+      "owner_name": "Tanita Cain",
+      "directory_source": "Support Black Owned"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Walker Law LLC",
+      "city": "Birmingham",
+      "owner_email": "",
+      "phone": "205-252-2770",
+      "website": "",
+      "category": "legal",
+      "subcategory": "Legal Services",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Wiggins Childs Quinn & Pantazis, LLC",
+      "city": "Birmingham",
+      "owner_email": "info@wigginschilds.com",
+      "phone": "205-314-0500",
+      "website": "http://www.wcqp.com/",
+      "category": "legal",
+      "subcategory": "Legal Services",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Wiggins Law Firm LLC",
+      "city": "Birmingham",
+      "owner_email": "",
+      "phone": "205-257-2643",
+      "website": "http://www.wigginslawfirm.net/",
+      "category": "legal",
+      "subcategory": "Legal Services",
+      "owner_name": "SAMUEL E. WIGGINS, III",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Commonwealth National Bank - Crichton Branch",
+      "city": "Mobile",
+      "owner_email": "customerservice@ecommonwealthbank.com",
+      "phone": "251.478.1222",
+      "website": "https://www.ecommonwealthbank.com",
+      "category": "legal",
+      "subcategory": "Financial Services",
+      "owner_name": "",
+      "directory_source": "I Am Black Business"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Commonwealth National Bank - Downtown Branch",
+      "city": "Mobile",
+      "owner_email": "customerservice@ecommonwealthbank.com",
+      "phone": "251.434.0696",
+      "website": "https://www.ecommonwealthbank.com/",
+      "category": "legal",
+      "subcategory": "Financial Services",
+      "owner_name": "",
+      "directory_source": "I Am Black Business"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Commonwealth National Bank - Main Branch",
+      "city": "Mobile",
+      "owner_email": "customerservice@ecommonwealthbank.com",
+      "phone": "251.476.5938",
+      "website": "https://www.ecommonwealthbank.com",
+      "category": "legal",
+      "subcategory": "Financial Services",
+      "owner_name": "",
+      "directory_source": "I Am Black Business"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Commonwealth National Bank (Crichton Branch)",
+      "city": "Mobile",
+      "owner_email": "customerservice@ecommonwealthbank.com",
+      "phone": "251-478-1222",
+      "website": "https://www.ecommonwealthbank.com/",
+      "category": "legal",
+      "subcategory": "Financial Services",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Commonwealth National Bank (Downtown Branch)",
+      "city": "Mobile",
+      "owner_email": "customerservice@ecommonwealthbank.com",
+      "phone": "251-434-0696",
+      "website": "https://www.ecommonwealthbank.com/",
+      "category": "legal",
+      "subcategory": "Financial Services",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Liberty Bank & Trust",
+      "city": "Montgomery",
+      "owner_email": "",
+      "phone": "334-262-0800",
+      "website": "https://www.libertybank.net/montgomery/",
+      "category": "legal",
+      "subcategory": "Financial Services",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Wares Ferry Accounting & Tax",
+      "city": "Montgomery",
+      "owner_email": "",
+      "phone": "(334) 409-5758",
+      "website": "",
+      "category": "legal",
+      "subcategory": "Financial Services",
+      "owner_name": "",
+      "directory_source": "National Black Guide"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Chestnut Law",
+      "city": "Selma",
+      "owner_email": "chestnutlaw@att.net",
+      "phone": "334-875-7779",
+      "website": "http://princechestnutlaw.com",
+      "category": "legal",
+      "subcategory": "Legal Services",
+      "owner_name": "Prince Chestnut",
+      "directory_source": "Support Black Owned"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Liberty Bank & Trust",
+      "city": "Tuskegee",
+      "owner_email": "",
+      "phone": "334-727-2560",
+      "website": "https://www.libertybank.net/montgomery/",
+      "category": "legal",
+      "subcategory": "Financial Services",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Fagin Financial Services",
+      "city": "",
+      "owner_email": "hello@faginfinancial.com",
+      "phone": "(205) 319-1171",
+      "website": "https://faginfinancial.com/",
+      "category": "legal",
+      "subcategory": "Financial Services",
+      "owner_name": "Carmen Fagin",
+      "directory_source": "Black Community Shoppe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Pure Romance by Starlite",
+      "city": "Hartselle",
+      "owner_email": "pureromancebystarlite@gmail.com",
+      "phone": "1 (256) 275-7434",
+      "website": "https://www.facebook.com/TheShootingStar78",
+      "category": "lifestyle",
+      "subcategory": "Adult Novelties",
+      "owner_name": "",
+      "directory_source": "Blocal"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "CLR Solutions LLC",
+      "city": " birmingham",
+      "owner_email": "cruffin@clrsolutions.net",
+      "phone": "(205) 249-5454",
+      "website": "https://clrsolutions.net/",
+      "category": "marketing",
+      "subcategory": "Web Services/Social Media",
+      "owner_name": "",
+      "directory_source": "Black Business List"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Greater Works Business Services",
+      "city": "Birmingham",
+      "owner_email": "",
+      "phone": "(205) 578-2037",
+      "website": "https://www.gwbs.biz",
+      "category": "marketing",
+      "subcategory": "Branding/Graphic Design",
+      "owner_name": "",
+      "directory_source": "National Black Guide"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Fma Graphics",
+      "city": "Montgomery",
+      "owner_email": "info@fmagraphics.com",
+      "phone": "972-863-1799",
+      "website": "https://www.fmagraphics.com/",
+      "category": "marketing",
+      "subcategory": "Branding/Graphic Design",
+      "owner_name": "",
+      "directory_source": "Support Black Owned"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Zenegra 50 Mg",
+      "city": "Alaska",
+      "owner_email": "jacobwilliam56456@gmail.com",
+      "phone": "",
+      "website": "https://www.edgenericstore.com/product/zenegra-50-mg/",
+      "category": "medical",
+      "subcategory": "Healthcare Products",
+      "owner_name": "",
+      "directory_source": "I Am Black Business"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Doug Lewis Dentistry",
+      "city": "Birmingham",
+      "owner_email": "",
+      "phone": "205.933.2460",
+      "website": "http://douglewisdmd.com",
+      "category": "medical",
+      "subcategory": "Dental/Orthodontics",
+      "owner_name": "Dr. Doug Lewis",
+      "directory_source": "I Am Black Business"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Dr. Brenda Taylor",
+      "city": "Birmingham",
+      "owner_email": "",
+      "phone": "205-930-1800",
+      "website": "https://healthcare.ascension.org/doctors/1558370619/brenda-carter-taylor-birmingham-al",
+      "category": "medical",
+      "subcategory": "OB/GYNs",
+      "owner_name": "Dr. Brenda Taylor",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Dr. Isaac Ravizee",
+      "city": "Birmingham",
+      "owner_email": "",
+      "phone": "205-870-1262",
+      "website": "https://health.usnews.com/doctors/isaac-ravizee-373357",
+      "category": "medical",
+      "subcategory": "OB/GYNs",
+      "owner_name": "Dr. Isaac Ravizee",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Dr. Stacy Haynes",
+      "city": "Birmingham",
+      "owner_email": "",
+      "phone": "205-980-0514",
+      "website": "https://www.drstacyhaynes.com/",
+      "category": "medical",
+      "subcategory": "Dermatology",
+      "owner_name": "Dr. Stacy Haynes",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Robert E. Agee Jr. Md",
+      "city": "Birmingham",
+      "owner_email": "",
+      "phone": "20-539-7520",
+      "website": "https://precisionsportsortho.com/providers/robert-agee-jr-md/",
+      "category": "medical",
+      "subcategory": "",
+      "owner_name": "Robert E. Agee Jr. Md",
+      "directory_source": "Support Black Owned"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Dr. Joel Powell",
+      "city": "Decatur",
+      "owner_email": "",
+      "phone": "(256) 340-1068",
+      "website": "",
+      "category": "medical",
+      "subcategory": "OB/GYNs",
+      "owner_name": "Dr. Joel Powell",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Cumberland Dental",
+      "city": "Gadsden",
+      "owner_email": "",
+      "phone": "(256) 686-6119",
+      "website": "http://newpatient.cumberlanddental.com/",
+      "category": "medical",
+      "subcategory": "Dental/Orthodontics",
+      "owner_name": "",
+      "directory_source": "National Black Guide"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Dr. Kenneth Pitts",
+      "city": "Huntsville",
+      "owner_email": "",
+      "phone": "(256) 883-9044",
+      "website": "",
+      "category": "medical",
+      "subcategory": "OB/GYNs",
+      "owner_name": "Dr. Kenneth Pitts",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Samuel Johnson Dmd",
+      "city": "Mobile",
+      "owner_email": "",
+      "phone": "251-639-0911",
+      "website": "https://www.facebook.com/Samuel-L-Johnson-DDS-231551926886570/",
+      "category": "medical",
+      "subcategory": "Dental/Orthodontics",
+      "owner_name": "Samuel Johnson Dmd",
+      "directory_source": "Support Black Owned"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Dr. Roosevelt McCorvey",
+      "city": "Montgomery",
+      "owner_email": "",
+      "phone": "(334) 281-6100",
+      "website": "https://www.baptistfirst.org/find-a-doctor/roosevelt-mccorvey-md-obstetricsgynecology",
+      "category": "medical",
+      "subcategory": "OB/GYNs",
+      "owner_name": "Dr. Roosevelt McCorvey",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Woods PT LLC",
+      "city": "Montgomery ",
+      "owner_email": "lwoods@woodsptal.com",
+      "phone": "(334) 226-0550",
+      "website": "www.woodsptal.com",
+      "category": "medical",
+      "subcategory": "Physical Therapy",
+      "owner_name": "",
+      "directory_source": "Black Business List"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Wright and Associates Medical Logistics",
+      "city": "Weaver",
+      "owner_email": "WAMLogistics@yahoo.com",
+      "phone": "(256) 581-5708",
+      "website": "http://www.wamlog.com",
+      "category": "medical",
+      "subcategory": "Healthcare Products",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Etch America Engravings, LLC",
+      "city": " mobile",
+      "owner_email": "etchamerica@gmail.com",
+      "phone": "(334) 505-0333",
+      "website": "EtchAmerica.com",
+      "category": "other",
+      "subcategory": "Gifts & Stationery",
+      "owner_name": "",
+      "directory_source": "Black Business List"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Great Bethel Missionary Baptist Church",
+      "city": "Alexander City",
+      "owner_email": "",
+      "phone": "256-234-5513",
+      "website": "",
+      "category": "other",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Support Black Owned"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Great Bethel Missionary Baptist Church",
+      "city": "Alexander City",
+      "owner_email": "",
+      "phone": "(256) 234-5513",
+      "website": "https://www.facebook.com/gbmbcac/",
+      "category": "other",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Bethel AME Church Parsonage",
+      "city": "Andalusia",
+      "owner_email": "",
+      "phone": "",
+      "website": "https://www.facebook.com/Bethel-AME-Church-Andalusia-Alabama-158817014326070/",
+      "category": "other",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "First Baptist Church",
+      "city": "Andalusia",
+      "owner_email": "",
+      "phone": "(334) 222-5152",
+      "website": "https://fbcandalusia.org/",
+      "category": "other",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Auburn AME Zion Church",
+      "city": "Auburn",
+      "owner_email": "",
+      "phone": "",
+      "website": "http://www.auburnamezionchurch.com/",
+      "category": "other",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Lee'S Chapel AME Church",
+      "city": "Auburn",
+      "owner_email": "",
+      "phone": "(334) 821-9407",
+      "website": "https://www.facebook.com/LeeChapelAMEAuburn/",
+      "category": "other",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Abyssinia Missionary Baptist Church",
+      "city": "Birmingham",
+      "owner_email": "",
+      "phone": "",
+      "website": "https://www.facebook.com/abyssiniambchurch/",
+      "category": "other",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Allen Chapel AME Church",
+      "city": "Birmingham",
+      "owner_email": "",
+      "phone": "(205) 595-8040",
+      "website": "https://www.yelp.com/biz/allen-chapel-ame-church-birmingham",
+      "category": "other",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Antioch Baptist Church",
+      "city": "Birmingham",
+      "owner_email": "",
+      "phone": "",
+      "website": "https://theambc.org/",
+      "category": "other",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Bethel AME Church",
+      "city": "Birmingham",
+      "owner_email": "",
+      "phone": "",
+      "website": "https://www.facebook.com/Bethelameensley/",
+      "category": "other",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Bethlehem Missionary Baptist Church",
+      "city": "Birmingham",
+      "owner_email": "",
+      "phone": "",
+      "website": "https://www.facebook.com/New-Bethlehem-Missionary-Baptist-Church-115322898487340/",
+      "category": "other",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Bryant Chapel AME Church",
+      "city": "Birmingham",
+      "owner_email": "",
+      "phone": "",
+      "website": "https://www.bryantchapelamechurch.com/",
+      "category": "other",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Emanuel AME Church",
+      "city": "Birmingham",
+      "owner_email": "",
+      "phone": "",
+      "website": "https://www.faithstreet.com/church/emanuel-a-dot-m-e-church-birmingham-al",
+      "category": "other",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Faith Chapel Christian Center",
+      "city": "Birmingham",
+      "owner_email": "",
+      "phone": "(205) 785-9673",
+      "website": "https://www.faithchapel.net/",
+      "category": "other",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "First Bethlehem Missionary Baptist Church",
+      "city": "Birmingham",
+      "owner_email": "",
+      "phone": "334-247-9878",
+      "website": "",
+      "category": "other",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Support Black Owned"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "First Memorial Baptist Church",
+      "city": "Birmingham",
+      "owner_email": "",
+      "phone": "(205) 254-8006",
+      "website": "https://www.firstmemorialbc.org/",
+      "category": "other",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Gaines Chapel Ame Church",
+      "city": "Birmingham",
+      "owner_email": "",
+      "phone": "205-791-6603",
+      "website": "http://gaines-chapel-ame-church-al-2.hub.biz",
+      "category": "other",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Support Black Owned"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Gaines Chapel AME Church",
+      "city": "Birmingham",
+      "owner_email": "",
+      "phone": "(205) 791-6603",
+      "website": "https://www.facebook.com/gaineschapelamechurch/",
+      "category": "other",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Grant Chapel AME Church",
+      "city": "Birmingham",
+      "owner_email": "",
+      "phone": "(205) 591-0820",
+      "website": "https://m.facebook.com/profile.php?id=120649327951266",
+      "category": "other",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Harmony Street Baptist Church",
+      "city": "Birmingham",
+      "owner_email": "",
+      "phone": "(205) 591-1833",
+      "website": "",
+      "category": "other",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Hopewell AME Church",
+      "city": "Birmingham",
+      "owner_email": "",
+      "phone": "(205) 595-1231",
+      "website": "https://www.hopewellamechurch.net/",
+      "category": "other",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Metropolitan AME Zion Church",
+      "city": "Birmingham",
+      "owner_email": "",
+      "phone": "(205) 252-8503",
+      "website": "https://www.facebook.com/Metropolitan-AME-Zion-Church-96337827468/",
+      "category": "other",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Mile Memorial AME Church",
+      "city": "Birmingham",
+      "owner_email": "",
+      "phone": "(205) 841-8014",
+      "website": "",
+      "category": "other",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "New Allen Temple AME Church",
+      "city": "Birmingham",
+      "owner_email": "",
+      "phone": "(205) 841-1577",
+      "website": "https://www.facebook.com/Allen-Temple-AME-Church-119355314741575/",
+      "category": "other",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Nichols Temple AME Church",
+      "city": "Birmingham",
+      "owner_email": "",
+      "phone": "(205) 786-1642",
+      "website": "https://nicholstempleamechurch.org/",
+      "category": "other",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Old Ship AME Zion Church",
+      "city": "Birmingham",
+      "owner_email": "",
+      "phone": "(205) 595-8117",
+      "website": "https://oldshipamezionchurch.org/",
+      "category": "other",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Rising Star Ame Zion Church",
+      "city": "Birmingham",
+      "owner_email": "",
+      "phone": "(205) 925-7796",
+      "website": "",
+      "category": "other",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Saint James AME Church",
+      "city": "Birmingham",
+      "owner_email": "",
+      "phone": "(205) 591-1238",
+      "website": "https://www.facebook.com/sjameavondale/",
+      "category": "other",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Saint John AME Church",
+      "city": "Birmingham",
+      "owner_email": "",
+      "phone": "(205) 251-3764",
+      "website": "http://stjohnbirmingham.com/",
+      "category": "other",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Saint Luke AME Church",
+      "city": "Birmingham",
+      "owner_email": "",
+      "phone": "(205) 202-4009",
+      "website": "https://www.facebook.com/StLukeAmeZionChurch/",
+      "category": "other",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Saint Mark AME Church",
+      "city": "Birmingham",
+      "owner_email": "",
+      "phone": "",
+      "website": "https://stmarkrc.org/",
+      "category": "other",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Saint Matthew AME Church",
+      "city": "Birmingham",
+      "owner_email": "",
+      "phone": "",
+      "website": "https://www.facebook.com/saintmatthewame/",
+      "category": "other",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Ebenezer Baptist Church",
+      "city": "Brierfield",
+      "owner_email": "",
+      "phone": "(205) 665-0413",
+      "website": "",
+      "category": "other",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Word Of Life Community Church",
+      "city": "Chickasaw",
+      "owner_email": "",
+      "phone": "(251) 456-2652",
+      "website": "https://powerintheword.org/pitw/",
+      "category": "other",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Cherry Street AME Church",
+      "city": "Dothan",
+      "owner_email": "",
+      "phone": "",
+      "website": "https://www.facebook.com/CherryStreetAME/",
+      "category": "other",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Park Chapel Ame Church",
+      "city": "Dothan",
+      "owner_email": "",
+      "phone": "334-671-2866",
+      "website": "http://www.ame-church.com",
+      "category": "other",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Support Black Owned"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Park Chapel AME Church",
+      "city": "Dothan",
+      "owner_email": "",
+      "phone": "",
+      "website": "https://m.facebook.com/profile.php?id=111667625531794",
+      "category": "other",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Johns Chapel Amechurch",
+      "city": "Enterprise",
+      "owner_email": "",
+      "phone": "334-393-2661",
+      "website": "http://johnschapelamec.org",
+      "category": "other",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Support Black Owned"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Milledgeville AME Church",
+      "city": "Evergreen",
+      "owner_email": "",
+      "phone": "",
+      "website": "https://www.churchangel.com/directory/listing/milledgeville-amez-church",
+      "category": "other",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Old Field Ame Zion Church",
+      "city": "Evergreen",
+      "owner_email": "",
+      "phone": "251-578-4008",
+      "website": "",
+      "category": "other",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Support Black Owned"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Old Field AME Zion Church",
+      "city": "Evergreen",
+      "owner_email": "",
+      "phone": "",
+      "website": "https://www.yelp.com/biz/old-field-ame-zion-church-evergreen",
+      "category": "other",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Greater Saint Paul AME Church",
+      "city": "Florence",
+      "owner_email": "",
+      "phone": "(256) 764-3900",
+      "website": "https://www.facebook.com/GSPAMEFlorence/",
+      "category": "other",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Oak Grove AME Church",
+      "city": "Florence",
+      "owner_email": "",
+      "phone": "(256) 766-6975",
+      "website": "https://www.oakgroveflorence.org/",
+      "category": "other",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Pisgah AME Church",
+      "city": "Florence",
+      "owner_email": "",
+      "phone": "(256) 710-8578",
+      "website": "https://www.facebook.com/New-Pisgah-AME-Church-Florence-280053932046308/",
+      "category": "other",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Greater Saint Paul Ame Church",
+      "city": "Geneva",
+      "owner_email": "",
+      "phone": "256-764-3900",
+      "website": "",
+      "category": "other",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Support Black Owned"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Bay Springs AME Zion Church",
+      "city": "Greensboro",
+      "owner_email": "",
+      "phone": "",
+      "website": "https://www.facebook.com/Bay-Springs-Africian-Methodist-Episcopal-Zion-Church-134085066657271/",
+      "category": "other",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "First Missionary Baptist Church",
+      "city": "Huntsville",
+      "owner_email": "",
+      "phone": "256-852-4318",
+      "website": "http://fmbc.org",
+      "category": "other",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Support Black Owned"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Goodsell United Methodist Church",
+      "city": "Lanett",
+      "owner_email": "",
+      "phone": "(334) 642-3541",
+      "website": "https://www.facebook.com/1007CherryDrive/",
+      "category": "other",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Aimwell Baptist Church",
+      "city": "Mobile",
+      "owner_email": "",
+      "phone": "",
+      "website": "http://thewellmobile.org/",
+      "category": "other",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Big Zion AME Zion Church",
+      "city": "Mobile",
+      "owner_email": "",
+      "phone": "",
+      "website": "https://www.mobile.org/listing/big-zion-a-m-e-zion-church/411/",
+      "category": "other",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Ebenezer AME Zion Church",
+      "city": "Mobile",
+      "owner_email": "",
+      "phone": "(251) 479-9873",
+      "website": "https://www.facebook.com/Ebenezer-AME-Zion-Church-104145850949863/",
+      "category": "other",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Girl Be Brave",
+      "city": "Mobile",
+      "owner_email": "web.girlbebrave@gmail.com",
+      "phone": "251.304.3200",
+      "website": "http://girlbebrave.com",
+      "category": "other",
+      "subcategory": "Gifts & Stationery",
+      "owner_name": "",
+      "directory_source": "I Am Black Business"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Greater Pine Grove AME Church",
+      "city": "Mobile",
+      "owner_email": "",
+      "phone": "",
+      "website": "https://www.facebook.com/Pine-Grove-AME-Church-436564636439662/",
+      "category": "other",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Hope Chapel Ame Zion Church",
+      "city": "Mobile",
+      "owner_email": "",
+      "phone": "251-456-7638",
+      "website": "",
+      "category": "other",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Support Black Owned"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Hope Chapel AME Zion Church",
+      "city": "Mobile",
+      "owner_email": "",
+      "phone": "",
+      "website": "https://m.facebook.com/profile.php?id=121992871144743",
+      "category": "other",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Metropolitan AME Church",
+      "city": "Mobile",
+      "owner_email": "",
+      "phone": "(251) 433-4282",
+      "website": "https://www.metro750.org/",
+      "category": "other",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Mount Hebron AME Zion Church",
+      "city": "Mobile",
+      "owner_email": "",
+      "phone": "(251) 457-9900",
+      "website": "http://www.mthebroncm.org/",
+      "category": "other",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Mount Olive AME Zion Church",
+      "city": "Mobile",
+      "owner_email": "",
+      "phone": "(251) 456-2058",
+      "website": "https://www.facebook.com/MountOliveAMEZion/",
+      "category": "other",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Pilgrim Rest AME Zion Church",
+      "city": "Mobile",
+      "owner_email": "",
+      "phone": "(251) 456-5629",
+      "website": "https://pilgrimrestamezion.org/",
+      "category": "other",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Resurrection Life Church",
+      "city": "Mobile",
+      "owner_email": "",
+      "phone": "(251) 633-5433",
+      "website": "https://www.facebook.com/ResurrectionLifeMobile/",
+      "category": "other",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Al-Fl-AME Zion Church",
+      "city": "Montgomery",
+      "owner_email": "",
+      "phone": "334-269-6365",
+      "website": "https://amez.org/our-church/",
+      "category": "other",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "National Black Guide"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Al-Fl-AME Zion Church",
+      "city": "Montgomery",
+      "owner_email": "",
+      "phone": "(334) 269-6365",
+      "website": "",
+      "category": "other",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Coles Chapel Baptist Church",
+      "city": "Montgomery",
+      "owner_email": "",
+      "phone": "(334) 263-5034",
+      "website": "",
+      "category": "other",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "National Black Guide"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Coles Chapel Baptist Church",
+      "city": "Montgomery",
+      "owner_email": "",
+      "phone": "(334) 263-5034",
+      "website": "https://www.facebook.com/ColesChapelChurch/",
+      "category": "other",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Community Congregational Church (UCC)",
+      "city": "Montgomery",
+      "owner_email": "",
+      "phone": "(334) 265-4411",
+      "website": "https://cccmontgomery.org/",
+      "category": "other",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Dexter Avenue Baptist Church",
+      "city": "Montgomery",
+      "owner_email": "",
+      "phone": "(334) 263-3970",
+      "website": "https://www.dexterkingmemorial.org/about/",
+      "category": "other",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "National Black Guide"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Dexter Avenue Baptist Church",
+      "city": "Montgomery",
+      "owner_email": "",
+      "phone": "(334) 263-3970",
+      "website": "https://www.dexterkingmemorial.org/",
+      "category": "other",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Greater Faith Full Gospel Baptist Church",
+      "city": "Montgomery",
+      "owner_email": "",
+      "phone": "334.832.4845",
+      "website": "http://www.faithchurches.net/",
+      "category": "other",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "National Black Guide"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Greater Faith Full Gospel Baptist Church",
+      "city": "Montgomery",
+      "owner_email": "",
+      "phone": "(334) 832-4845",
+      "website": "http://www.faithchurches.net/about/our-history/",
+      "category": "other",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Jericho AME Zion Church",
+      "city": "Montgomery",
+      "owner_email": "",
+      "phone": "(334) 284-3354",
+      "website": "https://www.facebook.com/5251hobbieroad/",
+      "category": "other",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Collin Chapel AME Church",
+      "city": "New Brockton",
+      "owner_email": "",
+      "phone": "",
+      "website": "https://www.faithstreet.com/church/collins-chapel-a-dot-m-e-church-new-brockton-al",
+      "category": "other",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Burrell Chapel Ame Church",
+      "city": "Opelika",
+      "owner_email": "",
+      "phone": "334-749-5655",
+      "website": "",
+      "category": "other",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Support Black Owned"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Burrell Chapel AME Church",
+      "city": "Opelika",
+      "owner_email": "",
+      "phone": "(334) 749-5655",
+      "website": "https://www.faithstreet.com/church/burrell-chapel-a-dot-m-e-church-beulah-al",
+      "category": "other",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Greater Peace Missionary Baptist Church",
+      "city": "Opelika",
+      "owner_email": "",
+      "phone": "",
+      "website": "http://greaterpeacechurch.org/index.htm",
+      "category": "other",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Franchise Missionary Baptist Church",
+      "city": "Phenix City",
+      "owner_email": "",
+      "phone": "(334) 298-2803",
+      "website": "https://www.franchisebaptist.org/",
+      "category": "other",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "First Bethlehem Missionary Baptist Church",
+      "city": "Riverfall",
+      "owner_email": "firstbethlehembaptistchurch@gmail.com",
+      "phone": "(334) 833-1633",
+      "website": "https://www.facebook.com/firstbethlehemmissionarybaptisitchurch/",
+      "category": "other",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Pleasant Hill AME Church",
+      "city": "Salem",
+      "owner_email": "",
+      "phone": "(334) 749-3985",
+      "website": "https://pleasanthillame.org/",
+      "category": "other",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Pleasant View Missionary Baptist Church",
+      "city": "Salem",
+      "owner_email": "",
+      "phone": "(334) 749-8942",
+      "website": "https://m.facebook.com/Pleasant-view-Missionary-Baptist-Church-179019975635896/",
+      "category": "other",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Dunn's Chapel AME Church",
+      "city": "Troy",
+      "owner_email": "",
+      "phone": "334-670-0700",
+      "website": "https://www.faithstreet.com/church/dunns-chapel-a-dot-m-e-church-troy-al",
+      "category": "other",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Beautiful Zion AME Zion Church",
+      "city": "Tuscaloosa",
+      "owner_email": "",
+      "phone": "",
+      "website": "http://bzamez.org/",
+      "category": "other",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Cornerstone Full Gospel Baptist Church",
+      "city": "Tuscaloosa",
+      "owner_email": "",
+      "phone": "(205) 345-4892",
+      "website": "https://www.cornerstonefgbc.org/",
+      "category": "other",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Elizabeth Baptist Church",
+      "city": "Tuscaloosa",
+      "owner_email": "",
+      "phone": "(205) 752-7320",
+      "website": "https://elizabethbaptist.net/",
+      "category": "other",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Friendship Missionary Baptist Church",
+      "city": "Tuscaloosa",
+      "owner_email": "",
+      "phone": "(205) 759-5044",
+      "website": "https://friendshiptuscaloosa.com/",
+      "category": "other",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Cornerstone AME Zion Church",
+      "city": "Union Springs",
+      "owner_email": "",
+      "phone": "(334) 738-2773",
+      "website": "",
+      "category": "other",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Picture Me Portrait Studios",
+      "city": "Anniston",
+      "owner_email": "",
+      "phone": "256-820-4202",
+      "website": "",
+      "category": "photography",
+      "subcategory": "Photography",
+      "owner_name": "",
+      "directory_source": "Support Black Owned"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Game Changer Photography",
+      "city": "",
+      "owner_email": "gamechangerphotography@gmail.com",
+      "phone": "(205) 779-8555",
+      "website": "https://gamechangerphotography.proofpix.com/?fbclid=IwAR0GRlt_w-hGAZjEkB78s7p-SySFaflVSPqaP9bTM0JALpDPf6EJPrDfhV0#",
+      "category": "photography",
+      "subcategory": "Photography",
+      "owner_name": "",
+      "directory_source": "Black Community Shoppe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Trillion Communications Corporation",
+      "city": "Bessemer",
+      "owner_email": "",
+      "phone": "(205)481-1678",
+      "website": "https://www.trillionusa.com/",
+      "category": "professional",
+      "subcategory": "Consulting",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Carter Consulting, Corp",
+      "city": "Birmingham",
+      "owner_email": "info@carterconsultingcorp.com",
+      "phone": "205-835-6131",
+      "website": "http://www.carterconsultingcorp.com",
+      "category": "professional",
+      "subcategory": "Consulting",
+      "owner_name": "",
+      "directory_source": "Support Black Owned"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "DataCom Solutions, Inc.",
+      "city": "Huntsville",
+      "owner_email": "info@datacomusa.net",
+      "phone": "256.203.6334",
+      "website": "http://www.datacomusa.net",
+      "category": "professional",
+      "subcategory": "Consulting",
+      "owner_name": "",
+      "directory_source": "I Am Black Business"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "PMP: Phenomenal Management Partners and Phenomenal Media Productions",
+      "city": "Madison",
+      "owner_email": "vp@we-are-pmp.com",
+      "phone": "276.732.3408",
+      "website": "http://www.we-are-pmp.com",
+      "category": "professional",
+      "subcategory": "Consulting",
+      "owner_name": "",
+      "directory_source": "I Am Black Business"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Mary M. Williams at Keller Williams",
+      "city": "Auburn",
+      "owner_email": "mlminniefield@gmail.com",
+      "phone": "(251) 593-3879",
+      "website": "https://www.facebook.com/Mary-M-Williams-The-Virtual-Realty-Group-107374827542031/#",
+      "category": "real estate",
+      "subcategory": "Real Estate Agents/Brokers",
+      "owner_name": "Mary Williams",
+      "directory_source": "Black Community Shoppe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Janel Walton Choice, Realtorse",
+      "city": "Montgomery",
+      "owner_email": "",
+      "phone": "334-303-3400",
+      "website": "https://www.realtor.com/realestateagents/57c389510e22930100a9baf2",
+      "category": "real estate",
+      "subcategory": "Real Estate Agents/Brokers",
+      "owner_name": "Janel Walton Choice",
+      "directory_source": "Support Black Owned"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "BNB Associates, Real Estate",
+      "city": "Opelika",
+      "owner_email": "troy@bnbassociatesllc.com",
+      "phone": "(877) 846-6307",
+      "website": "https://www.bnb-associatesllc.com/#",
+      "category": "real estate",
+      "subcategory": "Real Estate Agents/Brokers",
+      "owner_name": "Troy Booth",
+      "directory_source": "Black Community Shoppe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Concorde Real Estate Advisors",
+      "city": "Troy",
+      "owner_email": "",
+      "phone": "402-476-0086",
+      "website": "",
+      "category": "real estate",
+      "subcategory": "Real Estate Agents/Brokers",
+      "owner_name": "",
+      "directory_source": "Support Black Owned"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Magic City Surge",
+      "city": "Birmingham",
+      "owner_email": "",
+      "phone": "(317) 762-5733",
+      "website": "https://www.magiccitysurge.com/",
+      "category": "recreation",
+      "subcategory": "Sports",
+      "owner_name": "",
+      "directory_source": "National Black Guide"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "NERDtorch Café",
+      "city": "Opelika",
+      "owner_email": "",
+      "phone": "(334) 787-9554",
+      "website": "https://www.nerdtorch.com/",
+      "category": "recreation",
+      "subcategory": "Gaming",
+      "owner_name": "",
+      "directory_source": "Black Community Shoppe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Urban Air Trampoline & Adventure Park",
+      "city": "Spanish Fort",
+      "owner_email": "parties@urbanairspanishfort.com",
+      "phone": "256.269.3213",
+      "website": "https://www.urbanairtrampolinepark.com/locations/alabama/spanish-fort",
+      "category": "recreation",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "I Am Black Business"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "The Station's Best",
+      "city": "Alexander City",
+      "owner_email": "",
+      "phone": "256-234-3500",
+      "website": "https://www.stationsbest.com/",
+      "category": "restaurants",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "End Zone Bar and Grill",
+      "city": "Auburn",
+      "owner_email": "theendzonelounge@gmail.com",
+      "phone": "(334) 209-2963",
+      "website": "https://www.facebook.com/EndZoneBarGrillandlounge/",
+      "category": "restaurants",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Gametime Sports Bar & Grill",
+      "city": "Auburn",
+      "owner_email": "gametimesportsbarandgrill@gmail.com",
+      "phone": "(334) 246-3106",
+      "website": "https://gametime-sports-bar-and-grill.onmediapage.com/?fbclid=IwAR1pLShSNLk2wwU_Ar2zgKUPdX5HAKX5q5RwTXxpu3yCRXvBq9-3LLDHvaU#",
+      "category": "restaurants",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Black Community Shoppe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Insomnia Steak and Grill",
+      "city": "Auburn",
+      "owner_email": "insomniastk@yahoo.com",
+      "phone": "(334) 821-4146",
+      "website": "https://www.facebook.com/InsomniaSteak/#",
+      "category": "restaurants",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Black Community Shoppe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Pannie-George’s Kitchen",
+      "city": "Auburn",
+      "owner_email": "",
+      "phone": "(334) 821-4142",
+      "website": "https://www.panniegeorgeskitchen.com/#",
+      "category": "restaurants",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Black Community Shoppe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Twice Baked",
+      "city": "Auburn",
+      "owner_email": "",
+      "phone": "(334) 209-0292",
+      "website": "https://www.twicebakedopelika.com/",
+      "category": "restaurants",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Black Community Shoppe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Uncle Charley’z",
+      "city": "Auburn",
+      "owner_email": "",
+      "phone": "(334) 209-1605",
+      "website": "https://uncle-charleyz.business.site/#",
+      "category": "restaurants",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Black Community Shoppe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "VooDoo Wings",
+      "city": "Auburn",
+      "owner_email": "info@voodoowingco.com",
+      "phone": "(334) 329-7777",
+      "website": "https://www.voodoowingco.com/#",
+      "category": "restaurants",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Black Community Shoppe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Eagle's Restaurant",
+      "city": "Birmingham",
+      "owner_email": "",
+      "phone": "(205) 320-0099",
+      "website": "http://www.eaglesrestaurant.com",
+      "category": "restaurants",
+      "subcategory": "BBQ/Soul Food Restaurant",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Egghouse and Wings",
+      "city": "Birmingham",
+      "owner_email": "",
+      "phone": "(205) 518-0666",
+      "website": "https://www.facebook.com/EggHouseandWings/",
+      "category": "restaurants",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Eugene's Hot Chicken",
+      "city": "Birmingham",
+      "owner_email": "info@EugenesHotChicken.com",
+      "phone": "(205) 322-7555",
+      "website": "http://www.eugeneshotchicken.com/",
+      "category": "restaurants",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "National Black Guide"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "J. Alexander's Redlands Grill",
+      "city": "Birmingham",
+      "owner_email": "",
+      "phone": "(205) 733-9995",
+      "website": "https://redlandsgrill.com/",
+      "category": "restaurants",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Mikey's Grill",
+      "city": "Birmingham",
+      "owner_email": "",
+      "phone": "(205) 538-7637",
+      "website": "https://www.facebook.com/MikeysGrill/?ref=page_internal",
+      "category": "restaurants",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Seasons 52",
+      "city": "Birmingham",
+      "owner_email": "",
+      "phone": "(205) 968-5152",
+      "website": "http://www.seasons52.com/locations/al/birmingham/birmingham/4525",
+      "category": "restaurants",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Travis Chicago Style",
+      "city": "Birmingham",
+      "owner_email": "",
+      "phone": "",
+      "website": "https://www.facebook.com/Travis-Chicago-Style-Polish-Sausage-Bear-Burger-1288971697828001/",
+      "category": "restaurants",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Yo' Mama's Restaurant",
+      "city": "Birmingham",
+      "owner_email": "",
+      "phone": "205-957-6545",
+      "website": "https://www.yomamasrestaurant.com",
+      "category": "restaurants",
+      "subcategory": "BBQ/Soul Food Restaurant",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Drexell & Honeybees",
+      "city": "Brewton",
+      "owner_email": "",
+      "phone": "Visit Website",
+      "website": "https://www.drexellandhoneybees.com/",
+      "category": "restaurants",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "National Black Guide"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Big Daddy's Real Pit Bar B Que",
+      "city": "Enterprise",
+      "owner_email": "bigdaddysbbqpit@gmail.com",
+      "phone": "(334) 393-6019",
+      "website": "https://www.facebook.com/BigDaddysRealPitBBQ/",
+      "category": "restaurants",
+      "subcategory": "BBQ/Soul Food Restaurant",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Perfect Note",
+      "city": "Hoover",
+      "owner_email": "info@perfectnotelive.com",
+      "phone": "205-986-7280",
+      "website": "https://www.perfectnotelive.com",
+      "category": "restaurants",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Underground Vegan",
+      "city": "Hoover",
+      "owner_email": "eat@undergroundv.com",
+      "phone": "(205) 667-3560",
+      "website": "https://www.undergroundv.com/",
+      "category": "restaurants",
+      "subcategory": "",
+      "owner_name": "Khalilah Sowell",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Betty Mae's Restaurant",
+      "city": "Huntsville",
+      "owner_email": "",
+      "phone": "(256) 533-2188",
+      "website": "http://bettymaes.restaurantsnapshot.com/",
+      "category": "restaurants",
+      "subcategory": "BBQ/Soul Food Restaurant",
+      "owner_name": "",
+      "directory_source": "National Black Guide"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Frankie's Crab Shack",
+      "city": "Huntsville",
+      "owner_email": "",
+      "phone": "256-851-9953",
+      "website": "https://www.frankiescs.com/",
+      "category": "restaurants",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "National Black Guide"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "2 Southern Belles",
+      "city": "Mobile",
+      "owner_email": "2southernbellesofmobileal@gmail.com",
+      "phone": "(251) 378-5144",
+      "website": "http://2southernbelles.com",
+      "category": "restaurants",
+      "subcategory": "BBQ/Soul Food Restaurant",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Hart's Fried Chicken",
+      "city": "Mobile",
+      "owner_email": "cs@hartsfriedchicken.com",
+      "phone": "251-471-2491",
+      "website": "https://www.hartsfriedchicken.com/",
+      "category": "restaurants",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Kazoola Eatery & Entertainment",
+      "city": "Mobile",
+      "owner_email": "",
+      "phone": "(251) 308-2261",
+      "website": "http://www.kazoolamob.com",
+      "category": "restaurants",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "SOCU Southern Kitchen and Oyster Bar",
+      "city": "Mobile",
+      "owner_email": "socurestaurant1@gmail.com",
+      "phone": "(251) 287-6766",
+      "website": "http://www.socumobile.com",
+      "category": "restaurants",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Up All Nite Wings and Thingz",
+      "city": "Mobile",
+      "owner_email": "",
+      "phone": "(251) 228-9626",
+      "website": "https://up-all-nite-wingz-and-thingz.business.site/",
+      "category": "restaurants",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Another Level Seafood Pub & Grill",
+      "city": "Montgomery",
+      "owner_email": "",
+      "phone": "",
+      "website": "https://www.facebook.com/pages/category/Sports-Bar/Another-Level-Seafood-Sports-Bar-Grill-897696013676826/",
+      "category": "restaurants",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "National Black Guide"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Btopspot",
+      "city": "Montgomery",
+      "owner_email": "btopspot@yahoo.com",
+      "phone": "(334) 593-0149",
+      "website": "https://www.facebook.com/btopspot/",
+      "category": "restaurants",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Can A Brotha Get A Slice",
+      "city": "Montgomery",
+      "owner_email": "pizzamanlegacy@yahoo.com",
+      "phone": "(334) 603-2075",
+      "website": "https://www.facebook.com/pieflipperuniversity/",
+      "category": "restaurants",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Mrs Bs Home Cooking",
+      "city": "Montgomery",
+      "owner_email": "",
+      "phone": "(334) 264-5495",
+      "website": "http://mrs-bs-home-cooking.cafes-city.com",
+      "category": "restaurants",
+      "subcategory": "BBQ/Soul Food Restaurant",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Pannie-George’s Kitchen",
+      "city": "Montgomery",
+      "owner_email": "",
+      "phone": "(334) 386-9116",
+      "website": "https://www.panniegeorgeskitchen.com/#",
+      "category": "restaurants",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Black Community Shoppe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Thats My Dog Jr.",
+      "city": "Montgomery",
+      "owner_email": "info@thatsmychild.org",
+      "phone": "(334) 593-1522",
+      "website": "https://www.thatsmychildmgm.org/tmdjr",
+      "category": "restaurants",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "VooDoo Wings",
+      "city": "Tuscaloosa",
+      "owner_email": "info@voodoowingco.com",
+      "phone": "(205) 764-9616",
+      "website": "https://www.voodoowingco.com/#",
+      "category": "restaurants",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Black Community Shoppe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Larkin's Restaurant & Deli",
+      "city": "York",
+      "owner_email": "",
+      "phone": "(205) 392-9988",
+      "website": "https://www.instagram.com/larkinsrestaurant/?hl=en",
+      "category": "restaurants",
+      "subcategory": "BBQ/Soul Food Restaurant",
+      "owner_name": "",
+      "directory_source": "Rank Tribe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "RightThere Corporation",
+      "city": "Birmingham",
+      "owner_email": "info@rtcprotech.com",
+      "phone": "205-623-7023",
+      "website": "https://rtcprotech.com/",
+      "category": "security",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "National Black Guide"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "All-Out Security Llc",
+      "city": "Mobile",
+      "owner_email": "jonesmarcelj52@gmail.com",
+      "phone": "1251-401-9373",
+      "website": "https://www.facebook.com/All-Out-Security-LLC-354239182201851/",
+      "category": "security",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Support Black Owned"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Residential Movers Birmingham",
+      "city": "Birmingham",
+      "owner_email": "info@residentialmoversbirmingham.com",
+      "phone": "205-937-8217",
+      "website": "http://residentialmoversbirmingham.com/",
+      "category": "transportation",
+      "subcategory": "Moving Services",
+      "owner_name": "",
+      "directory_source": "Support Black Owned"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Chandler Towing and Recovery",
+      "city": "Huntsville",
+      "owner_email": "",
+      "phone": "(256) 690-9754",
+      "website": "https://chandlertowingservice.com/?fbclid=IwAR3XvkiK2jnRAZCzBZWL4t0je66-AwMws1t6cNaCrgMIAvWdCvkNvvf08JY#",
+      "category": "transportation",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "Black Community Shoppe"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Danzell Gas & Service Station",
+      "city": "Montgomery",
+      "owner_email": "",
+      "phone": "(334) 262-1188",
+      "website": "",
+      "category": "transportation",
+      "subcategory": "",
+      "owner_name": "",
+      "directory_source": "National Black Guide"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Studio 2500",
+      "city": "Birmingham",
+      "owner_email": "",
+      "phone": "(205) 324-4855",
+      "website": "https://studio25.gallery/",
+      "category": "visual",
+      "subcategory": "Art Gallery/Museum",
+      "owner_name": "",
+      "directory_source": "National Black Guide"
+    }
+},
+    {
+      "model": "vbp.vbp_al",
+      "fields": {
+"business_name": "Slaysia Digitals",
+      "city": "",
+      "owner_email": "",
+      "phone": "",
+      "website": "https://www.etsy.com/shop/slaysiadigitals#",
+      "category": "visual",
+      "subcategory": "",
+      "owner_name": "Asia Howard",
+      "directory_source": "Black Community Shoppe"
+    }
+}
+  ]

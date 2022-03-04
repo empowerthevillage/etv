@@ -84,61 +84,61 @@
   });
       </script>
       <main>
-          <nav id="navbar" class="nav-extended">
-            <div class="nav-wrapper z-depth-0" id="navbar-div">
+        <nav id="navbar" class="nav-extended">
+          <div class="nav-wrapper z-depth-0" id="navbar-div">
+              
+            <i class="left sidenav-trigger material-icons" data-target="side-nav" id="sidenav-menu-trigger" style="z-index: 2;">menu</i>
+      
+              <div class="left nav-row-left valign-wrapper" id="nav-top-left"> 
                 
-              <i class="left sidenav-trigger material-icons" data-target="side-nav" id="sidenav-menu-trigger" style="z-index: 2;">menu</i>
-        
-                <div class="left nav-row-left valign-wrapper" id="nav-top-left"> 
+                  <a class="main-nav-link ul-effect valign-wrapper {% if request.path == home_url %}active{% endif %}" href="{{ home_url }}">Home</a>
+                    <div class="navbar-slash"> | </div>
+                  <a class="main-nav-link ul-effect valign-wrapper {% if request.path == about_url %}active{% endif %}" href="{{ about_url }}">About</a>
+                    <div class="navbar-slash"> | </div>
+                  <a class="main-nav-link ul-effect valign-wrapper {% if request.path == contact_url %}active{% endif %}" href="{{ contact_url }}">Contact</a>
+                    <div class="navbar-slash"> | </div>
+                    <a class="main-nav-link dropdown-trigger ul-effect valign-wrapper" data-target='top-dropdown-sp'>Programs</a>
+                    <div class="navbar-slash"> | </div>
+                    <a class="main-nav-link ul-effect valign-wrapper {% if request.path == events_url %}active{% endif %}" href="{{ events_url }}">Events</a>
+                    <div class="navbar-slash"> | </div>
+                    <a class="main-nav-link ul-effect valign-wrapper {% if request.path == merchandise_url %}active{% endif %}" href="{{ merchandise_url }}">Shop</a>
                   
-                    <a class="main-nav-link ul-effect valign-wrapper {% if request.path == home_url %}active{% endif %}" href="{{ home_url }}">Home</a>
-                      <div class="navbar-slash"> | </div>
-                    <a class="main-nav-link ul-effect valign-wrapper {% if request.path == about_url %}active{% endif %}" href="{{ about_url }}">About</a>
-                      <div class="navbar-slash"> | </div>
-                    <a class="main-nav-link ul-effect valign-wrapper {% if request.path == contact_url %}active{% endif %}" href="{{ contact_url }}">Contact</a>
-                      <div class="navbar-slash"> | </div>
-                      <a class="main-nav-link dropdown-trigger ul-effect valign-wrapper" data-target='top-dropdown-sp'>Programs</a>
-                      <div class="navbar-slash"> | </div>
-                      <a class="main-nav-link ul-effect valign-wrapper {% if request.path == events_url %}active{% endif %}" href="{{ events_url }}">Events</a>
-                      <div class="navbar-slash"> | </div>
-                      <a class="main-nav-link ul-effect valign-wrapper {% if request.path == merchandise_url %}active{% endif %}" href="{{ merchandise_url }}">Shop</a>
-                    
-                     
-                </div>
-                <div class="center">
-                  <a href="{{ home_url }}" class="center brand-logo"><img src="{% static 'img/logo.jpeg' %}" height=110></a>
-                </div>
-                <div class="right valign-wrapper" style="height:100%">
-                  
-                    {% if request.user.is_authenticated %}
-                    <a href="{{ account_url }}" class="main-nav-link valign-wrapper welcome-back">Welcome Back!</a>
+                   
+              </div>
+                <a href="{{ home_url }}" class="brand-logo"><img src="{% static 'img/logo.jpeg' %}" height=110></a>
+       
+              <div class="right valign-wrapper" style="height:100%">
+                
+                  {% if request.user.is_authenticated %}
+                 
                     <a href="{{ account_url }}" id="account-icon"><i class="material-icons" style="color: grey; font-size: 36px; padding-top:30px;padding-left:10px">account_circle</i></a>
-                      <div class="navbar-slash"> | </div>
-                    <a href="{{ logout_url }}" class="main-nav-link ul-effect valign-wrapper"> Logout</a>
-                    <div class="navbar-slash"> | </div>
-                    {% else %}
-                    <a class="main-nav-link valign-wrapper ul-effect {% if request.path == login_url %}active{% endif %}" href="{{ login_url }}" style="">Login</a>
-                    <div class="navbar-slash"> | </div>
-                    <a class="main-nav-link valign-wrapper ul-effect {% if request.path == register_url %}active{% endif %}" href="{{ register_url }}" style="">Register</a>
-                    <div class="navbar-slash"> | </div>
-                    <a class="main-nav-link valign-wrapper ul-effect" style="cursor: pointer" id="join-village-topnav">Join</a>
-                    {% endif %}
-                  
-                  <a class="btn btn-large waves-effect waves-light donate-btn-navbar" href="{{ donate_url }}" id="donate-btn-navbar">DONATE</a>
-                </div>
-            </div>
-            
-            <div class="nav-content ">
-              <ul class="tabs tabs-transparent tabs-fixed-width z-depth-2">
-                <li class="tab"><a class="nav-tab dropdown-trigger {% if request.path == pillars_url %}active{% endif %}" data-target="nav-dropdown-sp">SIGNATURE PROGRAMS</a></li>
-                <li class="tab"><a class="nav-tab dropdown-trigger {% if request.path == ep_url %}active{% endif %}" href="{{ ep_url }}" data-target="nav-dropdown-ep">Economic Prosperity</a></li>
-                <li class="tab"><a style="margin-left: 6px" class="nav-tab dropdown-trigger {% if request.path == policy_url %}active{% endif %}" href="{{ policy_url }}" data-target="nav-dropdown-pp">Policy & Power</a></li>
-                <li class="tab"><a style="margin-left: 6px" class="nav-tab dropdown-trigger {% if request.path == health_url %}active{% endif %}" href="{{ health_url }}" data-target="nav-dropdown-hw">Health & Wellness</a></li>
-                <li class="tab"><a class="nav-tab dropdown-trigger {% if request.path == education_url %}active{% endif %}" href="{{ education_url }}" data-target="nav-dropdown-ee">Education & Employment</a></li>
+                    
+                  <div class="navbar-slash"> | </div>
+                  <a href="{{ logout_url }}" class="main-nav-link ul-effect valign-wrapper"> Logout</a>
+                  <div class="navbar-slash"> | </div>
+                  {% else %}
+                  <a class="main-nav-link valign-wrapper ul-effect {% if request.path == login_url %}active{% endif %}" href="{{ login_url }}" style="">Login</a>
+                  <div class="navbar-slash"> | </div>
+                  <a class="main-nav-link valign-wrapper ul-effect {% if request.path == register_url %}active{% endif %}" href="{{ register_url }}" style="">Register</a>
+                  <div class="navbar-slash"> | </div>
+                  <a class="main-nav-link valign-wrapper ul-effect" style="cursor: pointer" id="join-village-topnav">Join</a>
+                  {% endif %}
                 
-              </ul>
-            </div>
-          </nav>
+                <a class="btn btn-large waves-effect waves-light donate-btn-navbar" href="{{ donate_url }}" id="donate-btn-navbar">DONATE</a>
+              </div>
+          </div>
+          <div class="dropdown-container">
+            <ul id="top-dropdown-sp" class="dropdown-content dd-base">
+              <li><a class="center-align valign-wrapper {% if request.path == efbf_url %}active{% endif %}" href="{{ pillars_url }}">Strategic Pillars</a></li>
+                <li><a class="center-align valign-wrapper {% if request.path == efbf_url %}active{% endif %}" href="{{ efbf_url }}">MAKE EVERY FRIDAY, BLACK FRIDAY!™</a></li>
+                <li><a class="center-align valign-wrapper {% if request.path == vbp_url %}active{% endif %}" href="{{ vbp_url }}" style="padding-left:10px">VILLAGE BLACK PAGES™</a></li>
+                <li><a class="center-align valign-wrapper {% if request.path == bf_home_url %}active{% endif %}" data-target="nav-dropdown-bf" href="{{ bf_home_url }}">BLACK FRIDAY CHALLENGE™</a></li>
+                <li><a class="center-align valign-wrapper {% if request.path == voting_url %}active{% endif %}" data-target="nav-dropdown-pp" href="{{ voting_url }}">OPERATION: BALLOT BOX™</a></li>
+            </ul>
+          </div>
+        </div>
+        
+        </nav>
           
           <ul id="side-nav" class="sidenav" style="background-color:rgba(255, 255, 255, 0.899)">
             <li style="margin-bottom: 2px; background-color: rgb(230, 229, 228);"><img src="{% static 'img/footer-logo.png' %}" width="95%" style="margin-left:2.5%; padding-top:19px"></li>

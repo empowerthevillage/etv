@@ -104,15 +104,15 @@
                     
                      
                 </div>
-                <div class="center">
-                  <a href="{{ home_url }}" class="center brand-logo"><img src="{% static 'img/logo.jpeg' %}" height=110></a>
-                </div>
+                  <a href="{{ home_url }}" class="brand-logo"><img src="{% static 'img/logo.jpeg' %}" height=110></a>
+         
                 <div class="right valign-wrapper" style="height:100%">
                   
                     {% if request.user.is_authenticated %}
-                    <a href="{{ account_url }}" class="main-nav-link valign-wrapper welcome-back">Welcome Back!</a>
-                    <a href="{{ account_url }}" id="account-icon"><i class="material-icons" style="color: grey; font-size: 36px; padding-top:30px;padding-left:10px">account_circle</i></a>
-                      <div class="navbar-slash"> | </div>
+                   
+                      <a href="{{ account_url }}" id="account-icon"><i class="material-icons" style="color: grey; font-size: 36px; padding-top:30px;padding-left:10px">account_circle</i></a>
+                      
+                    <div class="navbar-slash"> | </div>
                     <a href="{{ logout_url }}" class="main-nav-link ul-effect valign-wrapper"> Logout</a>
                     <div class="navbar-slash"> | </div>
                     {% else %}
@@ -138,25 +138,19 @@
           </div>
           
           </nav>
-          <div class="center-align top-scroll" style="padding-top: 4px;margin-top: 30px; height: 50px;background: rgb(4, 4, 4) !important; color: rgb(168, 233, 150);font-family: poppins; font-weight: 500; text-transform: capitalize;">
-
-            <div id="top-scroll-mobile">
-                <div style="margin:0 !important">Restoring prosperity, peace & power </div>
-                <div style="margin:0 !important">to the black community</div>
-            </div>
-            <div id="top-scroll-mid">
-                <div style="margin:0 !important">Restoring prosperity, peace & power to the black community</div>
-            </div>
-            <div id="top-scroll-full">
-              It takes a village . . . Empower the Village &nbsp;|&nbsp; Restoring prosperity, peace & power to the black community</div>
-            </div>
-          </div>
+          
           <style>
               #navbar {
                   height: 130px !important
               }
                 .top-scroll{
-                      margin-top: 10px !important;
+                    margin-top: 0; 
+                    padding-top: 4px; 
+                    height: 50px;
+                    background: rgb(4, 4, 4) !important; 
+                    color: rgb(168, 233, 150);
+                    font-family: poppins; font-weight: 500; 
+                    text-transform: capitalize;
                   }
                 #top-scroll-mobile {
                     display: block
@@ -337,7 +331,15 @@
               <a href="https://www.youtube.com/channel/UCKMNMY8pqCId-PY4dCcKtaQ" class="youtube nav-socialmedia" target="_blank"><i class="fab fa-youtube nav-socialmedia-icon"></i></a>
             </div>
           </ul>
-          
+          <div class="nav-content z-depth-1" style="margin-top: 10px">
+            <ul class="tabs tabs-transparent tabs-fixed-width z-depth-2 tabs-navigation-menu">
+              <li class="tab"><a class="nav-tab dropdown-trigger {% if request.path == pillars_url %}active{% endif %}" data-target="nav-dropdown-pillars">Strategic Pillars</a></li>
+              <li class="tab"><a class="nav-tab dropdown-trigger {% if request.path == pillars_url %}active{% endif %}" data-target="nav-dropdown-sp">Programs</a></li>
+              <li class="tab"><a style="margin-left: 6px" class="nav-tab {% if request.path == efbf_url %}active{% endif %}" href="{{ efbf_url }}">Make Every Friday, Black Friday™</a></li>
+              <li class="tab"><a style="margin-left: 6px" class="nav-tab {% if request.path == vbp_url %}active{% endif %}" href="{{ vbp_url }}">Village Black Pages™</a></li>
+              <li class="tab"><a style="margin-left: 6px" class="nav-tab {% if request.path == voting_url %}active{% endif %}" href="{{ voting_url }}">Operation: Ballot Box™</a></li>
+            </ul>
+          </div>
           
         <div style="z-index: -1">
         {% block content %}
@@ -602,15 +604,20 @@
                     It takes a village . . . Empower the Village &nbsp;|&nbsp; Restoring prosperity, peace & power to the black community</div>
                 </div>
         </div>
-        <div class="nav-content " style="margin-top: 0px">
-          <ul class="tabs tabs-transparent tabs-fixed-width z-depth-2">
-            <li class="tab"><a class="nav-tab dropdown-trigger {% if request.path == pillars_url %}active{% endif %}" data-target="nav-dropdown-pillars">Strategic Pillars</a></li>
-            <li class="tab"><a class="nav-tab dropdown-trigger {% if request.path == pillars_url %}active{% endif %}" data-target="nav-dropdown-sp">Programs</a></li>
-            <li class="tab"><a style="margin-left: 6px" class="nav-tab {% if request.path == efbf_url %}active{% endif %}" href="{{ efbf_url }}">Make Every Friday, Black Friday™</a></li>
-            <li class="tab"><a style="margin-left: 6px" class="nav-tab {% if request.path == vbp_url %}active{% endif %}" href="{{ vbp_url }}">Village Black Pages™</a></li>
-            <li class="tab"><a style="margin-left: 6px" class="nav-tab {% if request.path == voting_url %}active{% endif %}" href="{{ voting_url }}">Operation: Ballot Box™</a></li>
-          </ul>
+        <div class="center-align top-scroll z-depth-1">
+
+          <div id="top-scroll-mobile">
+              <div style="margin:0 !important">Restoring prosperity, peace & power </div>
+              <div style="margin:0 !important">to the black community</div>
+          </div>
+          <div id="top-scroll-mid">
+              <div style="margin:0 !important">Restoring prosperity, peace & power to the black community</div>
+          </div>
+          <div id="top-scroll-full">
+            It takes a village . . . Empower the Village &nbsp;|&nbsp; Restoring prosperity, peace & power to the black community</div>
+          </div>
         </div>
+        
         <style>
           .nav-content {
             background: rgb(4, 4, 4)
@@ -618,7 +625,7 @@
         </style>
     </div>
     <div>
-      <h6 class="center-align" style="color: #bf1e2d">ETV Mission & Vision Video!</h6>
+      <h6 class="center-align" style="color: #bf1e2d; margin-top: 30px; margin-bottom: 30px">ETV Mission & Vision Video!</h6>
         <div class="center-align" style="background: url('{% static 'img/collage1.png' %}'); background-size: 50%">
           <div style="background-color: rgba(223, 223, 223, 0.632);">
             <iframe class="mission-video" width="80%" src="https://www.youtube.com/embed/7ypFvkUOtwo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -651,17 +658,27 @@
         <div class="divider" style="border-bottom: solid 1px rgb(233, 233, 233); margin-top: 30px; width: 80%; margin-left: 10%"></div>
         <div class="container center-align">
           <h6 class="center-align" style="color: #bf1e2d">ETV Press Release</h6>
-          <p class="left-align">
-            <b>February 23, 2022 - Morristown, New Jersey –</b> Black History Month should be a prelude to Black
-            empowerment and equity according to “Empower The Village,” a non-profit 501(c)(3) organization founded in
-            2018 to develop, guide and implement breakthrough, scalable strategies that empower Black people, businesses
-            and community organizations to realize their full potential, which has led to ETV’s co-sponsorship and
-            participation in a virtual program on Thursday. Empower The Village (ETV) Founder Ayo Sanderson Wilson
-            will join other panelists to discuss Post Traumatic Slave Syndrome and its connection to eliminating the racial
-            wealth gap on Thursday, February 24 from 6:30 to 8 p.m. You can register for the virtual program by
-            <a href="https://us02web.zoom.us/meeting/register/tZ0qc-mvqzgjEtX6q-qdVN6kHcXt-9IlWjNJ">clicking this link.</a>
-          </p>
-          <a href="https://issuu.com/empowerthevillage/docs/press_release_empower_the_village_says_february_is?mode=window" class="btn grey darken-4">Full Press Release</a>
+          <div class="row">
+            <div class="col s12 m6 offset-m3 l6">
+              <img src="{% static 'img/ptss-flyer.jpg' %}" width="100%" style="margin-top: 20px">
+    
+            </div>
+            <div class="col s12 l6">
+              <p class="left-align">
+                <b>February 23, 2022 - Morristown, New Jersey –</b> Black History Month should be a prelude to Black
+                empowerment and equity according to “Empower The Village,” a non-profit 501(c)(3) organization founded in
+                2018 to develop, guide and implement breakthrough, scalable strategies that empower Black people, businesses
+                and community organizations to realize their full potential, which has led to ETV’s co-sponsorship and
+                participation in a virtual educational program on Thursday. Empower The Village (ETV) Founder Ayo Sanderson Wilson
+                will join other panelists to discuss Post Traumatic Slave Syndrome and its connection to eliminating the racial
+                wealth gap on Thursday, February 24 from 6:30 to 8 p.m. You can register for the virtual educational program by
+                <a href="https://us02web.zoom.us/meeting/register/tZ0qc-mvqzgjEtX6q-qdVN6kHcXt-9IlWjNJ">clicking this link.</a>
+              </p>
+              <a href="https://issuu.com/empowerthevillage/docs/press_release_empower_the_village_says_february_is?mode=window" class="btn grey darken-4">Full Press Release</a>
+              
+            </div>
+          </div>
+          
           
         </div>
         <div class="divider" style="border-bottom: solid 1px rgb(233, 233, 233); margin-top: 30px; width: 80%; margin-left: 10%"></div>

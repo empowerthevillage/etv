@@ -1,3 +1,4 @@
+from ctypes import addressof
 import random
 import os
 from django.db import models
@@ -158,6 +159,7 @@ class vbp_book(models.Model):
     state           = models.CharField(max_length=50, choices=STATE_CHOICES)
     cover           = models.ImageField(null=True, blank=True)
     published       = models.BooleanField(default=False)
+    featured        = models.BooleanField(default=False)
     
     def __str__(self):
         return str(self.state)
@@ -692,6 +694,41 @@ class vbp_in(models.Model):
          return self.approved
 
     class Meta:
+        verbose_name = 'Indiana 1 Listing'
+        verbose_name_plural = 'Indiana 1 Listings'
+
+class vbp_ind(models.Model):
+    directory_source  = models.CharField(max_length=200, null=True, blank=True)
+    business_name    = models.CharField(max_length=200)
+    website          = models.URLField(blank=True, max_length=500, null=True)
+    instagram        = models.URLField(blank=True, null=True, max_length=200)
+    twitter          = models.URLField(blank=True, null=True, max_length=200)
+    facebook         = models.URLField(blank=True, null=True, max_length=200)
+    city             = models.CharField(max_length=100, null=True, blank=True)
+    county           = models.CharField(max_length=300, blank=True, null=True)
+    phone            = PhoneField(blank=True, help_text='Business Phone Number')
+    category         = models.CharField(max_length=100, choices=CATEGORY_CHOICES, null=True, blank=True)
+    subcategory      = models.CharField(max_length=200, blank=True, null=True)
+    online_only      = models.BooleanField(default=False)
+    nominator_name   = models.CharField(max_length=300, blank=True, null=True)
+    nominator_email  = models.EmailField(blank=True, null=True)
+    nominator_owner  = models.BooleanField(default=False, blank=True, null=True)
+    nominator_recommended  = models.BooleanField(default=False, blank=True, null=True)    
+    owner_name   = models.CharField(max_length=300, blank=True, null=True)
+    owner_email   = models.EmailField(blank=True, null=True)
+    approved         = models.BooleanField(default=False, null=True)
+    created          = models.DateTimeField(auto_now_add=True, blank=True, null=True)
+    updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
+    user             = models.ForeignKey(User, models.SET_NULL, null=True, blank=True)
+    team             = models.ForeignKey(Team, models.SET_NULL, null=True, blank=True)
+
+    def __str__(self):
+        return str(self.business_name)
+    @property
+    def is_approved(self):
+         return self.approved
+
+    class Meta:
         verbose_name = 'Indiana Listing'
         verbose_name_plural = 'Indiana Listings'
 
@@ -807,6 +844,7 @@ class vbp_la(models.Model):
     instagram        = models.URLField(blank=True, null=True, max_length=200)
     twitter          = models.URLField(blank=True, null=True, max_length=200)
     facebook         = models.URLField(blank=True, null=True, max_length=200)
+    address          = models.CharField(max_length=270, null=True, blank=True)
     city             = models.CharField(max_length=100, null=True, blank=True)
     county           = models.CharField(max_length=300, blank=True, null=True)
     phone            = PhoneField(blank=True, help_text='Business Phone Number')
@@ -1578,6 +1616,8 @@ class vbp_sc(models.Model):
     instagram        = models.URLField(blank=True, null=True, max_length=200)
     twitter          = models.URLField(blank=True, null=True, max_length=200)
     facebook         = models.URLField(blank=True, null=True, max_length=200)
+    address          = models.CharField(max_length=400, null=True, blank=True)
+    zip_code         = models.CharField(max_length=100, null=True, blank=True)
     city             = models.CharField(max_length=100, null=True, blank=True)
     county           = models.CharField(max_length=300, blank=True, null=True)
     phone            = PhoneField(blank=True, help_text='Business Phone Number')

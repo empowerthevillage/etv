@@ -30,9 +30,9 @@ class VBPBook(admin.ModelAdmin):
     make_inactive.short_description = "Mark selected VBP books as not approved"
 
 class VBPAdmin(admin.ModelAdmin):
-    list_display = ['business_name', 'approved', 'city', 'state']
-    list_filter = ['approved', 'state', 'online_only', 'category', 'subcategory']
-    search_fields = ['business_name', 'state', 'city', 'category', 'subcategory']
+    list_display = ['business_name', 'approved', 'city', 'state', 'nominator_name']
+    list_filter = ['approved', 'state', 'online_only', 'category', 'subcategory', 'nominator_name']
+    search_fields = ['business_name', 'state', 'city', 'category', 'subcategory', 'nominator_name', 'nominator_email']
     ordering = ['state', 'business_name']
     actions = ['make_active', 'make_inactive']
     fieldsets = (
@@ -88,9 +88,9 @@ class VBPAdmin(admin.ModelAdmin):
     make_inactive.short_description = "Mark selected submissions as not approved"
 
 class VBPStateAdmin(admin.ModelAdmin):
-    list_display = ['business_name', 'approved', 'website', 'category', 'city']
-    list_filter = ['county', 'city','approved', 'online_only', 'category', 'subcategory', 'team']
-    search_fields = ['business_name', 'city', 'category', 'subcategory', 'user']
+    list_display = ['business_name', 'approved', 'website', 'category', 'city', 'updated', 'nominator_name']
+    list_filter = ['county', 'city','approved', 'online_only', 'category', 'subcategory', 'team', 'nominator_name']
+    search_fields = ['business_name', 'city', 'category', 'subcategory', 'user', 'nominator_name']
     ordering = ['-updated', 'business_name']
     actions = ['make_active', 'make_inactive', 'download_csv']
     fieldsets = (

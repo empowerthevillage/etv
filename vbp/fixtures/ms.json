@@ -1,0 +1,1861 @@
+[
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Beauty Box Hair Supply LLC",
+      "website": "https://www.facebook.com/BeautyBoxHairSupply/?eid=ARACn0eXw7tauuwaNCyvcjVBUNhRqmofSlqYq7Tb2J97ssir_QdBVedDTp-0FN1W77YO5Jb93up__lxX",
+      "owner_name": "",
+      "city": "Biloxi",
+      "phone": "228-207-1066",
+      "owner_email": "hairsupply@beautyboxllc.com",
+      "category": "beauty",
+      "subcategory": "Beauty Supply Store"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "CroSlay Hairtique",
+      "website": "https://www.facebook.com/CroSlay-Hairtique-103782511149366/",
+      "owner_name": "Tiara Shardey",
+      "city": "Biloxi",
+      "phone": "",
+      "owner_email": "croslayhairtique@yahoo.com",
+      "category": "beauty",
+      "subcategory": "Salon & Beauty products"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Taylor Made Beauty Salon",
+      "website": "https://taylor-made-beauty-salon.business.site/?utm_source=gmb&utm_medium=referral",
+      "owner_name": "",
+      "city": "Columbus",
+      "phone": "662-574-9525",
+      "owner_email": "",
+      "category": "beauty",
+      "subcategory": "Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Skin & Soul",
+      "website": "https://www.skinnsoulllc.com/",
+      "owner_name": "",
+      "city": "D'Iberville",
+      "phone": "",
+      "owner_email": "skinnsoulllc@gmail.com",
+      "category": "beauty",
+      "subcategory": "Beauty Products"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Essential No.9",
+      "website": "https://essentialno9.com/",
+      "owner_name": "",
+      "city": "Gautier",
+      "phone": "(228) 355-7371",
+      "owner_email": "",
+      "category": "beauty",
+      "subcategory": "Beauty Products"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "GlamTique Beauty Studio",
+      "website": "https://www.facebook.com/GlamShopStop/",
+      "owner_name": "",
+      "city": "Gulfport",
+      "phone": "228-731-9946",
+      "owner_email": "shontegibson2008@gmail.com",
+      "category": "beauty",
+      "subcategory": "Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "DiVerse Cosmetics",
+      "website": "https://diverse.simplybook.me/v2/",
+      "owner_name": "",
+      "city": "Gulfport",
+      "phone": "601-928-8525",
+      "owner_email": "diversecosmetics@gmail.com",
+      "category": "beauty",
+      "subcategory": "Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Diva Styles by Shaun",
+      "website": "https://www.facebook.com/DivaStylesByShaun/",
+      "owner_name": "",
+      "city": "Gulfport",
+      "phone": "(228) 343-8994",
+      "owner_email": "",
+      "category": "beauty",
+      "subcategory": "Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Perfectly Posh with Sam",
+      "website": "https://www.facebook.com/SamsPerfectlyPosh/",
+      "owner_name": "Bethella Sam Phillips",
+      "city": "Gulfport",
+      "phone": "228-224-0378",
+      "owner_email": "bethellasamphillips@outlook.com",
+      "category": "beauty",
+      "subcategory": "Beauty Products"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Diamond Lotus Health and Beauty Holistic Spa",
+      "website": "https://diamondlotusllc.com/",
+      "owner_name": "Simarjit Ponder",
+      "city": "Ocean Springs",
+      "phone": "228-238-9637",
+      "owner_email": "diamondlotus04@gmail.com",
+      "category": "beauty",
+      "subcategory": "Spa"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Naturally Jasmine's Products",
+      "website": "https://www.naturallyjasmineproducts.com/",
+      "owner_name": "",
+      "city": "Pascagoula",
+      "phone": "228-217-3190",
+      "owner_email": "naturallyjasminesproducts@gmail.com",
+      "category": "beauty",
+      "subcategory": "Salon & Beauty products"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Product Junkie Naturals",
+      "website": "https://www.productjunkienaturals.com/",
+      "owner_name": "Denise Gathings",
+      "city": "Pearl",
+      "phone": "601-665-4495",
+      "owner_email": "customersvc@productjunkienaturals.com",
+      "category": "beauty",
+      "subcategory": "Hair & Body Products"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Wonders of the World Book and Toy Store",
+      "website": "https://wowbookandtoy.com/",
+      "owner_name": "Tonisha Kimble",
+      "city": "Gulfport",
+      "phone": "(228) 229-6873",
+      "owner_email": "info@wowbookandtoy.com",
+      "category": "books",
+      "subcategory": "Bookstore"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Medea Publishing",
+      "website": "",
+      "owner_name": "",
+      "city": "Madison",
+      "phone": "(601) 307-1902",
+      "owner_email": "",
+      "category": "books",
+      "subcategory": "Publishing"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Mr Klean Detail Services",
+      "website": "https://mr-klean-detail-services.business.site/",
+      "owner_name": "Robert J",
+      "city": "Biloxi",
+      "phone": "(228) 263-5793",
+      "owner_email": "",
+      "category": "cars",
+      "subcategory": "Car Wash"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Johnson Paint Body & Collision",
+      "website": "https://jpbcollision.vpweb.com/",
+      "owner_name": "",
+      "city": "Gulfport",
+      "phone": "(228) 297-1719",
+      "owner_email": "jpbcollision@gmail.com",
+      "category": "cars",
+      "subcategory": "Auto Repairs & Services"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Import Performance",
+      "website": "https://www.importperformancellc.com/",
+      "owner_name": "Pamela Jones",
+      "city": "Gulfport",
+      "phone": "228-896-4880",
+      "owner_email": "",
+      "category": "cars",
+      "subcategory": "Auto Dealership"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Dream Big Learn and Play Center",
+      "website": "",
+      "owner_name": "Sharita Hansford",
+      "city": "Biloxi",
+      "phone": "(228) 967-7511",
+      "owner_email": "dreambiglearnandplay@yahoo.com",
+      "category": "child",
+      "subcategory": "Childcare/Daycare"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Brilliant Childcare and Learning Center",
+      "website": "https://www.facebook.com/Brilliant-Childcare-and-Learning-Center-586369204881779/",
+      "owner_name": "",
+      "city": "Gulfport",
+      "phone": "(228) 822-1103",
+      "owner_email": "brilliantchildcare123@gmail.com",
+      "category": "child",
+      "subcategory": "Childcare/Daycare"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "BCS Bauble Cleaning Service",
+      "website": "https://www.facebook.com/BaubleCleaningService/",
+      "owner_name": "",
+      "city": "",
+      "phone": "601-394-7387",
+      "owner_email": "bcs.baublecleaningservice@gmail.com",
+      "category": "cleaning",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Divine Style",
+      "website": "https://www.etsy.com/shop/LoveDivineStyle",
+      "owner_name": "",
+      "city": "Gautier",
+      "phone": "(228) 238-6814",
+      "owner_email": "",
+      "category": "clothing",
+      "subcategory": "Apparel"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Black Diamond Beauty & Fashion",
+      "website": "https://blackdiamondbeauties.com/",
+      "owner_name": "Genia Antoinette",
+      "city": "Gulfcoast",
+      "phone": "",
+      "owner_email": "blackdiamondbeautyandfashion@gmail.com",
+      "category": "clothing",
+      "subcategory": "Apparel"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Accessory Fix",
+      "website": "https://www.accessoryfix.com/",
+      "owner_name": "",
+      "city": "Gulfport",
+      "phone": "",
+      "owner_email": "accessoryfixllc@yahoo.com",
+      "category": "clothing",
+      "subcategory": "Apparel"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Aloha Glamour",
+      "website": "https://alohaglamour.shop/",
+      "owner_name": "",
+      "city": "Gulfport",
+      "phone": "(662) 883-0332",
+      "owner_email": "cs@alohaglamour.shop",
+      "category": "clothing",
+      "subcategory": "Apparel"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Coast Life LLC",
+      "website": "https://mississippicoastlife.com/",
+      "owner_name": "Troy Jones JR",
+      "city": "Gulfport",
+      "phone": "",
+      "owner_email": "",
+      "category": "clothing",
+      "subcategory": "Apparel"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Fanci Things with SK",
+      "website": "https://www.fancithingzwithsk.com/",
+      "owner_name": "Savannah Kemp",
+      "city": "Gulfport",
+      "phone": "228-313-7146",
+      "owner_email": "Savannahkemp73@gmail.com",
+      "category": "clothing",
+      "subcategory": "Apparel"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "LOTg Clothing",
+      "website": "",
+      "owner_name": "",
+      "city": "Hattiesburg",
+      "phone": "601-297-2822",
+      "owner_email": "",
+      "category": "clothing",
+      "subcategory": "Apparel"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Princess Lyriq Kidtique",
+      "website": "https://www.facebook.com/princesslyriq/?ref=page_internal",
+      "owner_name": "",
+      "city": "Jackson",
+      "phone": "",
+      "owner_email": "princesslyriq@yahoo.com",
+      "category": "clothing",
+      "subcategory": "Apparel"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "The Plug Collections",
+      "website": "https://www.theplugcollections.com/",
+      "owner_name": "",
+      "city": "Southaven",
+      "phone": "(662) 659-5475",
+      "owner_email": "",
+      "category": "clothing",
+      "subcategory": "Apparel"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Maci-Ann's Closet",
+      "website": "https://maciannscloset.bigcartel.com/",
+      "owner_name": "Catherine McKnight",
+      "city": "",
+      "phone": "662-588-6042",
+      "owner_email": "maciannscloset2019@yahoo.com",
+      "category": "clothing",
+      "subcategory": "Apparel"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Pop's Discount Store",
+      "website": "https://http//www.popsdiscountstore.com",
+      "owner_name": "",
+      "city": "Mendenhall",
+      "phone": "(601) 559-1728",
+      "owner_email": "popsdiscountstore@gmail.com",
+      "category": "construction",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Holt Home Inspections LLc",
+      "website": "http://www.holthomeinspectionsllc.com/",
+      "owner_name": "Loretta Holt",
+      "city": "",
+      "phone": "​225-993-2197",
+      "owner_email": "Info@HoltHomeInspectionsLLC.com.",
+      "category": "construction",
+      "subcategory": "Inspections"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Coahoma Community College",
+      "website": "http://www.coahomacc.edu/",
+      "owner_name": "",
+      "city": "Clarksdale",
+      "phone": "662-627-2571",
+      "owner_email": "",
+      "category": "education",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Mississippi Valley State University",
+      "website": "https://www.mvsu.edu/",
+      "owner_name": "",
+      "city": "Itta Bena",
+      "phone": "662-254-9041",
+      "owner_email": "",
+      "category": "education",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Jackson State University",
+      "website": "https://www.jsums.edu/",
+      "owner_name": "",
+      "city": "Jackson",
+      "phone": "601-979-2121",
+      "owner_email": "",
+      "category": "education",
+      "subcategory": "HBCU"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Alcorn State University",
+      "website": "https://www.alcorn.edu/",
+      "owner_name": "",
+      "city": "Lorman",
+      "phone": "601-877-6100",
+      "owner_email": "",
+      "category": "education",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Hinds Community College",
+      "website": "https://www.hindscc.edu/",
+      "owner_name": "",
+      "city": "Raymond",
+      "phone": "1-800-HINDSCC",
+      "owner_email": "",
+      "category": "education",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Tougaloo College",
+      "website": "https://www.tougaloo.edu/",
+      "owner_name": "",
+      "city": "Tougaloo",
+      "phone": "601-977-7700",
+      "owner_email": "",
+      "category": "education",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Affordable Computer Repair",
+      "website": "https://www.affcomprepair.net/",
+      "owner_name": "Kelvin Sanders",
+      "city": "Biloxi",
+      "phone": "(228) 261-1702",
+      "owner_email": "affcomprepair@outlook.com",
+      "category": "electronics",
+      "subcategory": "Tech support/repair"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Gray Gatherings",
+      "website": "https://www.graygatherings.com/",
+      "owner_name": "Gayla Jones & Ravin Nettles",
+      "city": "Gulfport",
+      "phone": "",
+      "owner_email": "info@graygatherings.com",
+      "category": "entertainment",
+      "subcategory": "Event Planning/Services"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "B-Wize Rentals",
+      "website": "https://www.bwizerentals.com/",
+      "owner_name": "Kevin & Ungel Lock",
+      "city": "Gulfport",
+      "phone": "(228) 822-0707",
+      "owner_email": "info@bwizerentals.com",
+      "category": "entertainment",
+      "subcategory": "Event Planning/Services"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Terrence Tickets",
+      "website": "http://terrencetickets.com/?utm_source=gmb&utm_medium=referral",
+      "owner_name": "",
+      "city": "Jackson",
+      "phone": "(202) 239-0662",
+      "owner_email": "",
+      "category": "entertainment",
+      "subcategory": "Sports tickets"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Game on Gulf Coast",
+      "website": "http://gameongulfcoast.com/contact-us-mobile-gaming-trailer/",
+      "owner_name": "",
+      "city": "Online",
+      "phone": "228-284-9087",
+      "owner_email": "",
+      "category": "entertainment",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Chef Bre Catering & Cakes",
+      "website": "https://thechefbre.net/",
+      "owner_name": "Ambreia",
+      "city": "Biloxi",
+      "phone": "(228) 861- 9228",
+      "owner_email": "info@thechefbre.net",
+      "category": "grocery",
+      "subcategory": "Catering"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Juiced UP",
+      "website": "https://www.facebook.com/Juiced-UP-113858570068896/?ref=page_internal",
+      "owner_name": "Artina T Graves",
+      "city": "Gulfport",
+      "phone": "(228) 437-0701",
+      "owner_email": "tgraves428@gmail.com",
+      "category": "grocery",
+      "subcategory": "Food Product/Brand"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Combest Catering",
+      "website": "https://combestcatering.com/",
+      "owner_name": "Chef Raneisha",
+      "city": "Gulfport",
+      "phone": "601-740-0335",
+      "owner_email": "chefraneisha@combestcatering.com",
+      "category": "grocery",
+      "subcategory": "Catering"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Brummi's Yummies",
+      "website": "http://www.brummisyummies.com/",
+      "owner_name": "Eve & Gene",
+      "city": "Hazelhurst",
+      "phone": "601-894-CAKE",
+      "owner_email": "hellobrummi@gmail.com",
+      "category": "grocery",
+      "subcategory": "Bakery"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Taylor's Candy Company",
+      "website": "https://www.facebook.com/taylorscandycompany/",
+      "owner_name": "",
+      "city": "Jackson",
+      "phone": "(601) 352-3462",
+      "owner_email": "taylorscandyco@gmail.com",
+      "category": "grocery",
+      "subcategory": "Food Product/Brand"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Sugar Tribe Sweets And Events",
+      "website": "https://www.facebook.com/sugartribesweets/",
+      "owner_name": "Jennifer Mayfield",
+      "city": "Ocean Springs",
+      "phone": "(228) 234-7266",
+      "owner_email": "sugartribesweets@gmail.com",
+      "category": "grocery",
+      "subcategory": "Bakery"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Sweet Magnolia Icecream Co",
+      "website": "https://www.sweetmagnoliagelato.com/",
+      "owner_name": "Hugh Balthrop",
+      "city": "Oxford",
+      "phone": "662-313-6551",
+      "owner_email": "hugh@sweetmagnoliagelato.com",
+      "category": "grocery",
+      "subcategory": "Food Product/Brand"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Nura Juice Bar",
+      "website": "",
+      "owner_name": "Marcel Kinnard",
+      "city": "Pascagoula",
+      "phone": "(228) 217-6021",
+      "owner_email": "nurajuice@icloud.com",
+      "category": "grocery",
+      "subcategory": "Food Product/Brand"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Sweet O'Mississippi",
+      "website": "https://mississippi8treats.com/",
+      "owner_name": "Tae Hubbard",
+      "city": "Vicksburg",
+      "phone": "601-618-3756",
+      "owner_email": "mississippi8treats@mississippi8treats.com",
+      "category": "grocery",
+      "subcategory": "Bakery"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Zula Ki Let’s Go Travel & Eat",
+      "website": "https://foodladyzu.com/?fbclid=IwAR1GXEhIw_w0f5OIelv4daG84NsPOu_X4wNq4fUc3alKgE1mBushKMfRZcs",
+      "owner_name": "",
+      "city": "",
+      "phone": "",
+      "owner_email": "foodladyzu@gmail.com",
+      "category": "grocery",
+      "subcategory": "Food Product/Brand"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Armstrong-King Chiropractic",
+      "website": "https://armstrong-king.com/",
+      "owner_name": "Dr. Billie King",
+      "city": "Jackson",
+      "phone": "601-957-7374",
+      "owner_email": "",
+      "category": "health",
+      "subcategory": "Chiropractor"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Ebony Sage Apothecary",
+      "website": "https://www.google.com/url?q=https://www.ebonysage.com/&sa=D&source=editors&ust=1641849790747167&usg=AOvVaw2YiplVYlj8iIjmL-VsiT6T",
+      "owner_name": "Toni Maurice-Milburn",
+      "city": "Waveland",
+      "phone": "601-255-8410",
+      "owner_email": "Toni@ebonysage.com",
+      "category": "health",
+      "subcategory": "Holistic Products & Services"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Symply Blessed Candle Company",
+      "website": "https://www.symplyblessedcandles.com/",
+      "owner_name": "Shalanda",
+      "city": "Chitto",
+      "phone": "(601) 695-4844",
+      "owner_email": "symplybcandles@gmail.com",
+      "category": "home",
+      "subcategory": "Home Décor"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "TAC Lawn Service",
+      "website": "https://www.facebook.com/bubbacollinslawnservice/",
+      "owner_name": "",
+      "city": "Saucier",
+      "phone": "228-365-6452",
+      "owner_email": "bubbacollin@bellsouth.net",
+      "category": "home",
+      "subcategory": "Landscaping/gardening"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Douglas Agricultural Consulting",
+      "website": "",
+      "owner_name": "Myron Douglas",
+      "city": "Starkville",
+      "phone": "662-321-2890",
+      "owner_email": "",
+      "category": "home",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "The Almanett Hotel & Bistro",
+      "website": "http://www.thealmanett.com/HomePage.aspx",
+      "owner_name": "Mike Daniels",
+      "city": "Gulfport",
+      "phone": "228-865-9901",
+      "owner_email": "info@thealmanett.com",
+      "category": "hotels",
+      "subcategory": "Hotel"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Leisure Enrichment Travels, Jessica Reed",
+      "website": "https://jessicareed.inteletravel.com/booktravel.cfm",
+      "owner_name": "Jessica Reed",
+      "city": "Long Beach",
+      "phone": "601-83204909",
+      "owner_email": "JessicaReedTravelAgent@gmail.com",
+      "category": "hotels",
+      "subcategory": "Travel Agent"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Concord Quarters",
+      "website": "https://www.concordquarters.com/",
+      "owner_name": "",
+      "city": "Natchez",
+      "phone": "601-442-5687",
+      "owner_email": "concordquarters@gmail.com",
+      "category": "hotels",
+      "subcategory": "Hotel"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Harvest Time Guest House",
+      "website": "https://www.airbnb.com/rooms/20787042?source_impression_id=p3_1644946389_qaA9fW5v%2FHv%2B%2Ba8v",
+      "owner_name": "Alice Richmond",
+      "city": "Tylertown",
+      "phone": "(601) 876-3634",
+      "owner_email": "",
+      "category": "hotels",
+      "subcategory": "Hotel"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Rukiya Waist Beads",
+      "website": "https://www.etsy.com/shop/Rukiyawaistbeads",
+      "owner_name": "Tiffany Hunt",
+      "city": "Bay Saint Louis",
+      "phone": "504-326-7258",
+      "owner_email": "rukiyawaistbeads@gmail.com",
+      "category": "jewelry",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "RediTax, Inc",
+      "website": "https://reditaxinc.com/",
+      "owner_name": "Allison Gates",
+      "city": "Biloxi",
+      "phone": "228-432-2536",
+      "owner_email": "info@reditaxinc.com",
+      "category": "legal",
+      "subcategory": "Financial Services"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "IDR Agency",
+      "website": "https://idrgulfcoast.com/",
+      "owner_name": "Courtney L. Jacobs",
+      "city": "Biloxi",
+      "phone": "228-273-4062",
+      "owner_email": "info@idrgulfcoast.com",
+      "category": "legal",
+      "subcategory": "Insurance"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Hope Credit Union",
+      "website": "https://hopecu.org/",
+      "owner_name": "",
+      "city": "Biloxi",
+      "phone": "228-374-1554",
+      "owner_email": "",
+      "category": "legal",
+      "subcategory": "Bank"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Blackmon & Blackmon PLLC",
+      "website": "http://blackmonlawfirm.com/",
+      "owner_name": "",
+      "city": "Canton",
+      "phone": "601-859-1567",
+      "owner_email": "",
+      "category": "legal",
+      "subcategory": "Legal services"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Genuine Tax Service",
+      "website": "https://www.facebook.com/Genuine-Tax-Service-2226711437553344/",
+      "owner_name": "Bettina James",
+      "city": "D'Iberville",
+      "phone": "(228) 229-4923",
+      "owner_email": "genuinetaxservice@gmail.com",
+      "category": "legal",
+      "subcategory": "Financial Services"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Liberated Services LLC",
+      "website": "https://www.google.com/url?q=https://liberatedservices.com/&sa=D&source=editors&ust=1641849790753912&usg=AOvVaw3nle7nugkWBnXDJ7K_yhST",
+      "owner_name": "Deloris Braxton",
+      "city": "Gautier",
+      "phone": "601-228-1134",
+      "owner_email": "deloris@liberatedservices.com",
+      "category": "legal",
+      "subcategory": "Financial Services"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Nicks Law Firm",
+      "website": "https://thenickslawfirm.com/",
+      "owner_name": "Shantrell Nicks",
+      "city": "Gulfport",
+      "phone": "228-896-6425",
+      "owner_email": "",
+      "category": "legal",
+      "subcategory": "Legal services"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Liberty Bank",
+      "website": "https://www.libertybank.net/",
+      "owner_name": "",
+      "city": "Jackson",
+      "phone": "601-987-6730",
+      "owner_email": "",
+      "category": "legal",
+      "subcategory": "Bank"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Malcolm O. Harrison, Esq",
+      "website": "http://www.malcolmharrisonlawoffice.com/",
+      "owner_name": "Malcom O. Harrison",
+      "city": "Jackson",
+      "phone": "601-948-5044",
+      "owner_email": "Malcolm.Harrison@Comcast.net",
+      "category": "legal",
+      "subcategory": "Legal services"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Gibbs Travis PLLC",
+      "website": "http://www.gibbstravis.com/",
+      "owner_name": "",
+      "city": "Jackson",
+      "phone": "601-487-2640",
+      "owner_email": "info@gibbstravis.com",
+      "category": "legal",
+      "subcategory": "Legal services"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Life Prosperity",
+      "website": "https://www.lifeprospersity.com/",
+      "owner_name": "Victoria Haston",
+      "city": "Moss Point",
+      "phone": "601-308-3606",
+      "owner_email": "shepherdlifellc@yahoo.com",
+      "category": "legal",
+      "subcategory": "Financial Services"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Visual Tax & Credit Service",
+      "website": "https://visual-tax.ueniweb.com/",
+      "owner_name": "",
+      "city": "Senatobia",
+      "phone": "",
+      "owner_email": "protxlady@gmail.com",
+      "category": "legal",
+      "subcategory": "Financial Services"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Perry Griffin PC",
+      "website": "https://perrygriffin.com/",
+      "owner_name": "",
+      "city": "Southaven",
+      "phone": "662-536-6868",
+      "owner_email": "RG@PerryGriffin.com",
+      "category": "legal",
+      "subcategory": "Legal services"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Geaux Fig",
+      "website": "https://www.geauxfig.com/",
+      "owner_name": "Rita M. Green",
+      "city": "Biloxi",
+      "phone": "(504) 233-2252",
+      "owner_email": "rita@geauxfig.com",
+      "category": "marketing",
+      "subcategory": "Web Services/Social Media"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Nenykay Designs",
+      "website": "https://www.nenykaydesigns.com/",
+      "owner_name": "Nenyatta Smith",
+      "city": "Gulfport",
+      "phone": "",
+      "owner_email": "nenykaydesigns@gmail.com",
+      "category": "marketing",
+      "subcategory": "Graphic Design"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Double A Marketing",
+      "website": "http://doubleamandc.com/",
+      "owner_name": "",
+      "city": "Horn Lake",
+      "phone": "(662) 855-1223",
+      "owner_email": "inquiry@doubleamandc.com",
+      "category": "marketing",
+      "subcategory": "Marketing Services"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Dr. Robert Tatum",
+      "website": "",
+      "owner_name": "",
+      "city": "Canton",
+      "phone": "(601) 859-1929",
+      "owner_email": "",
+      "category": "medical",
+      "subcategory": "Primary Care"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Dr David Williams",
+      "website": "",
+      "owner_name": "",
+      "city": "Clinton",
+      "phone": "(601) 924-1544",
+      "owner_email": "",
+      "category": "medical",
+      "subcategory": "Primary Care"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "South Mississippi Urgent Care",
+      "website": "",
+      "owner_name": "Jennifer Mayfield-Echols",
+      "city": "D'Iberville",
+      "phone": "(228) 354-0022",
+      "owner_email": "",
+      "category": "medical",
+      "subcategory": "Urgent care"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Dr. Paul D Jackson",
+      "website": "",
+      "owner_name": "",
+      "city": "Greenville",
+      "phone": "(662) 335-4000",
+      "owner_email": "",
+      "category": "medical",
+      "subcategory": "OBGYN"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Healthy Smiles Family Dentistry",
+      "website": "https://www.healthysmilesgulfport.com/",
+      "owner_name": "Dr. Kinyatta Bennett",
+      "city": "Gulfport",
+      "phone": "228-832-1000",
+      "owner_email": "",
+      "category": "medical",
+      "subcategory": "Dental/Orthodontics"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Divine Dentist",
+      "website": "https://www.divinedentist.com/",
+      "owner_name": "Dr. Andrea L. Davis",
+      "city": "Gulfport",
+      "phone": "(228) 863-4009",
+      "owner_email": "drdavis@divinedentist.com",
+      "category": "medical",
+      "subcategory": "Dental/Orthodontics"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Secure Home Healthcare",
+      "website": "https://securehomehealthcare.com/",
+      "owner_name": "",
+      "city": "Gulfport",
+      "phone": "228-233-8927",
+      "owner_email": "christina@securehomehealthcare.com",
+      "category": "medical",
+      "subcategory": "Home healthcare services"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Dr. Rosie Walker-Mcnair",
+      "website": "",
+      "owner_name": "Dr. Rosie Walker-McNair",
+      "city": "Jackson",
+      "phone": "601-362-5321",
+      "owner_email": "",
+      "category": "medical",
+      "subcategory": "Primary Care"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Dr. Bob Hutchins",
+      "website": "",
+      "owner_name": "",
+      "city": "Jackson",
+      "phone": "(601) 362-5321",
+      "owner_email": "",
+      "category": "medical",
+      "subcategory": "Primary Care"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Medi-Surg Medical And Office Supplies, Llc",
+      "website": "",
+      "owner_name": "",
+      "city": "Ridgeland",
+      "phone": "601-291-1923",
+      "owner_email": "",
+      "category": "medical",
+      "subcategory": "Medical Supplies"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Dr. Charles L Davis",
+      "website": "",
+      "owner_name": "",
+      "city": "Robinsonville",
+      "phone": "(662) 363-3224",
+      "owner_email": "",
+      "category": "medical",
+      "subcategory": "OBGYN"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Dr. Rome Sherrod",
+      "website": "",
+      "owner_name": "",
+      "city": "Southaven",
+      "phone": "662-342-1005",
+      "owner_email": "",
+      "category": "medical",
+      "subcategory": "OBGYN"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Dickey Brothers Memorial Funeral Home",
+      "website": "https://www.dickeybrothersmemorial.net/",
+      "owner_name": "Pamela Dickey",
+      "city": "Biloxi",
+      "phone": "228-436-6589",
+      "owner_email": "dickeybrothers@gmail.com",
+      "category": "other",
+      "subcategory": "Mortuary/Funeral Services"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Mt. Horeb MB Church",
+      "website": "https://www.facebook.com/Mt-Horeb-MB-Church-794385264104577/",
+      "owner_name": "",
+      "city": "Greenville",
+      "phone": "(662) 335-1605",
+      "owner_email": "",
+      "category": "other",
+      "subcategory": "Church"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "MommyGyrl Custom Creations",
+      "website": "https://mommygyrl.myshopify.com/",
+      "owner_name": "Shana Pegues",
+      "city": "Gulfport",
+      "phone": "850-764-2144",
+      "owner_email": "mommygyrl1216@yahoo.com",
+      "category": "other",
+      "subcategory": "Retail/Online Store"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "GrammaKreations",
+      "website": "https://www.facebook.com/GrammasKreations/",
+      "owner_name": "Ashley Gramma",
+      "city": "Gulfport",
+      "phone": "",
+      "owner_email": "grammaskreations@mail.com",
+      "category": "other",
+      "subcategory": "Retail/Online Store"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "M'Collection",
+      "website": "https://www.facebook.com/groups/1433452216840499/about/",
+      "owner_name": "",
+      "city": "Meridian",
+      "phone": "601-480-9094",
+      "owner_email": "",
+      "category": "other",
+      "subcategory": "Retail/Online Store"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Pass Cigars",
+      "website": "https://www.facebook.com/PassCigars/",
+      "owner_name": "",
+      "city": "Pass Christian",
+      "phone": "228-222-2525",
+      "owner_email": "passcigars@gmail.com",
+      "category": "other",
+      "subcategory": "Cigar Shop"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Imani Brand Scrub Company, LLC",
+      "website": "https://www.weareimanimed.com/",
+      "owner_name": "Marjada Tucker",
+      "city": "Pearl",
+      "phone": "601-499-5755",
+      "owner_email": "info@weareimanimed.com",
+      "category": "other",
+      "subcategory": "Scrubs/Medical apparel"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Queens Galore",
+      "website": "https://queensgalore.com/",
+      "owner_name": "",
+      "city": "Toomsuba",
+      "phone": "",
+      "owner_email": "Queensgaloreqg@gmail.com",
+      "category": "other",
+      "subcategory": "Retail/Online Store"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "YJ Empowerment Solutions",
+      "website": "https://www.iamyolandajerry.com/",
+      "owner_name": "Dr. Yolanda Jerry",
+      "city": "D’Iberville",
+      "phone": "228-207-3391",
+      "owner_email": "yolanda@yjempowers.com",
+      "category": "other",
+      "subcategory": "Counseling, Lifecoaching"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Valerie Inspired Presents",
+      "website": "https://www.valerieinspiredpresents.com/",
+      "owner_name": "Valerie Purnell",
+      "city": "Biloxi",
+      "phone": "769-206-1041",
+      "owner_email": "valerieinspiredpresents@gmail.com",
+      "category": "other",
+      "subcategory": "Retail/Online Store"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "61 One Stop",
+      "website": "https://www.facebook.com/GasFoodFunHwy61OneStop",
+      "owner_name": "",
+      "city": "Fayette",
+      "phone": "601-786-8371",
+      "owner_email": "61onestop@gmail.com",
+      "category": "other",
+      "subcategory": "Convenience store"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "CJ Shaw the Brand",
+      "website": "https://cjshaw.com/book-shop-create",
+      "owner_name": "CJ Shaw",
+      "city": "Gulfcoast",
+      "phone": "(504) 232-8722",
+      "owner_email": "",
+      "category": "other",
+      "subcategory": "Retail/Online Store"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Diva's Designs",
+      "website": "https://www.facebook.com/divasdesigns2019",
+      "owner_name": "",
+      "city": "Gulfcoast",
+      "phone": "(228) 218-3699",
+      "owner_email": "divasdesigns2019@gmail.com",
+      "category": "other",
+      "subcategory": "Product"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Mississippi Youth Community Gardens",
+      "website": "https://www.my-crop.com/",
+      "owner_name": "",
+      "city": "Gunnison",
+      "phone": "662-987-0009",
+      "owner_email": "INFO@MY-CROP.COM",
+      "category": "other",
+      "subcategory": "Community garden/ community orgranization"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "New Levels Coaching LLC",
+      "website": "",
+      "owner_name": "Sanedra Walker",
+      "city": "Jackson",
+      "phone": "(601) 861-5040",
+      "owner_email": "",
+      "category": "other",
+      "subcategory": "Life Coach"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Unity Funeral Home & Cremation Services",
+      "website": "https://www.unityfh.net/",
+      "owner_name": "Rodney D. Swilley",
+      "city": "Moss Point",
+      "phone": "228-475-2538",
+      "owner_email": "unityfh@gmail.com",
+      "category": "other",
+      "subcategory": "Mortuary/Funeral Services"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Big Face Music Group LLC",
+      "website": "https://bigfacemusicgroup.business.site/",
+      "owner_name": "Christi B",
+      "city": "Pascagoula",
+      "phone": "228-382-3300",
+      "owner_email": "",
+      "category": "other",
+      "subcategory": "Recording Studio"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "The Fancy Wick",
+      "website": "https://www.facebook.com/thefancywick",
+      "owner_name": "Jasmine Rankins",
+      "city": "Pascagoula",
+      "phone": "",
+      "owner_email": "thefancywick@yahoo.com",
+      "category": "other",
+      "subcategory": "Graphic design and other prodcuts"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Million Prints",
+      "website": "https://www.facebook.com/MillionPrints1/",
+      "owner_name": "Khaalia Johnson",
+      "city": "Gulfport",
+      "phone": "228-206-1289",
+      "owner_email": "millionprints@gmail.com",
+      "category": "packaging",
+      "subcategory": "Printing"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Elysian Printing & Apparel",
+      "website": "https://elysianprinting.com/",
+      "owner_name": "",
+      "city": "Saucier",
+      "phone": "(601) 651-7230",
+      "owner_email": "elysianprntaprl@gmail.com",
+      "category": "packaging",
+      "subcategory": "Printing"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Unicorn Dog grooming LLC",
+      "website": "http://unicorndoggrooming.com/?utm_source=gmb&utm_medium=referral",
+      "owner_name": "",
+      "city": "Yazoo City",
+      "phone": "(662) 528-0755",
+      "owner_email": "theunicorngroomer@gmail.com",
+      "category": "pets",
+      "subcategory": "Pet grooming"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "DP Photography",
+      "website": "https://dpphotographyllc.com/",
+      "owner_name": "David L. Pittman Jr",
+      "city": "Biloxi",
+      "phone": "228-281-9126",
+      "owner_email": "dpphotographyllc@gmail.com",
+      "category": "photography",
+      "subcategory": "Photography"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Creative Images LLC",
+      "website": "https://www.facebook.com/creativeimagesllc/",
+      "owner_name": "",
+      "city": "Gulfport",
+      "phone": "(228) 213-4636",
+      "owner_email": "creativeimagesllc.ms@gmail.com",
+      "category": "photography",
+      "subcategory": "Photography"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Askew Creative Photography",
+      "website": "https://www.askewcreativephotography.com/index",
+      "owner_name": "Andre Askew",
+      "city": "Ocean Springs",
+      "phone": "760-805-4790",
+      "owner_email": "info@askewcreativephotography.com",
+      "category": "photography",
+      "subcategory": "Photography"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Life Long Productions, Llc",
+      "website": "",
+      "owner_name": "Derek Brown",
+      "city": "Oxford",
+      "phone": "(662) 715-9950",
+      "owner_email": "",
+      "category": "photography",
+      "subcategory": "Videography"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Divine Image Photography",
+      "website": "https://www.divineimagephilly.com/",
+      "owner_name": "Marquita Bell",
+      "city": "Columbus",
+      "phone": "(312) 937-6135",
+      "owner_email": "",
+      "category": "photography",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Brazzle Billing Services",
+      "website": "https://www.brazzlebillingservices.com/",
+      "owner_name": "",
+      "city": "Biloxi",
+      "phone": "(601) 207-0031",
+      "owner_email": "brazzlebilling@mail.com",
+      "category": "professional",
+      "subcategory": "Medical Billing services"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Heavenly Ink Credentialing, LLC",
+      "website": "https://www.heavenlyinkcredentialing.com/",
+      "owner_name": "Nisha Clinkscale",
+      "city": "Gulfport",
+      "phone": "228-424-6436",
+      "owner_email": "nisha@heavenlyinkcredentialing.com",
+      "category": "professional",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "AGF Business Consulting LLC",
+      "website": "https://www.agfbusinessconsulting.com/",
+      "owner_name": "Anthony Fairley",
+      "city": "Ridgeland",
+      "phone": "877-216-1186",
+      "owner_email": "anthony@agfbusinessconsulting.com",
+      "category": "professional",
+      "subcategory": "Consulting"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "CLM Realty Group LLC",
+      "website": "https://www.clmrealtygroup.com/",
+      "owner_name": "Keidra Martin",
+      "city": "Biloxi",
+      "phone": "228-223-4424",
+      "owner_email": "keidramartin@clmrealtygroup.com",
+      "category": "real estate",
+      "subcategory": "Real  Estate agent"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Adkins Realty LLC",
+      "website": "https://www.facebook.com/agentaadkins/",
+      "owner_name": "Angelia L. Adkins",
+      "city": "Long Beach",
+      "phone": "228-326-4149",
+      "owner_email": "agentangie44@gmail.com",
+      "category": "real estate",
+      "subcategory": "Real  Estate agent"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Urban Air Trampoline and Adventure Park",
+      "website": "https://www.urbanairtrampolinepark.com/locations/mississippi/southaven",
+      "owner_name": "",
+      "city": "Southaven",
+      "phone": "(662) 351-2141",
+      "owner_email": "",
+      "category": "recreation",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Brick & Spoon",
+      "website": "https://www.brickandspoonrestaurant.com/biloxi",
+      "owner_name": "Kerry Paul & Britni Thompson",
+      "city": "Biloxi",
+      "phone": "(228) 388-5162",
+      "owner_email": "brickandspoonbiloxi@gmail.com",
+      "category": "restaurants",
+      "subcategory": "Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Taste of Detroit",
+      "website": "http://tasteofdetroit.info/about.html",
+      "owner_name": "John Owens",
+      "city": "Brandon",
+      "phone": "(601) 706-4062",
+      "owner_email": "tasteofdetroit@yahoo.com",
+      "category": "restaurants",
+      "subcategory": "Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Liz & Nomie’s Gourmet Eats",
+      "website": "https://www.facebook.com/Liz.NomiesGourmetEats/",
+      "owner_name": "",
+      "city": "Gulfport",
+      "phone": "228-563-0363",
+      "owner_email": "liz_nomiesgourmeteats@yahoo.com",
+      "category": "restaurants",
+      "subcategory": "Food truck/Catering"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "McInnis 12 Bone BBQ",
+      "website": "https://www.facebook.com/profile.php?id=100045429097266",
+      "owner_name": "Sonzie McInnis",
+      "city": "Gulfport",
+      "phone": "(228) 314-3150",
+      "owner_email": "ssomackcreations@gmail.com",
+      "category": "restaurants",
+      "subcategory": "Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Twillie Phillly",
+      "website": "https://www.facebook.com/TwilliePhillySubsAndMore/",
+      "owner_name": "Carlos Twillie",
+      "city": "Hattiesburg",
+      "phone": "601-467-5492",
+      "owner_email": "twilliephilly@gmail.com",
+      "category": "restaurants",
+      "subcategory": "Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Lounge 114",
+      "website": "",
+      "owner_name": "",
+      "city": "Jackson",
+      "phone": "769-257-6223",
+      "owner_email": "",
+      "category": "restaurants",
+      "subcategory": "Bar/Lounge"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Johnny T's Bistro & Blues",
+      "website": "https://johnnytsbistroandblues.com/",
+      "owner_name": "John Tierre",
+      "city": "Jackson",
+      "phone": "",
+      "owner_email": "johnnytsbistroandblues@gmail.com",
+      "category": "restaurants",
+      "subcategory": "Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "GW & Jo's Café",
+      "website": "https://www.facebook.com/WilliamsonGWJoCafe/",
+      "owner_name": "",
+      "city": "Magee",
+      "phone": "601-439-7116",
+      "owner_email": "gwjocafe@gmail.com",
+      "category": "restaurants",
+      "subcategory": "Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Binke's Restaurant",
+      "website": "",
+      "owner_name": "Martha Alford",
+      "city": "Meridian",
+      "phone": "(601) 693-4852",
+      "owner_email": "",
+      "category": "restaurants",
+      "subcategory": "Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "One Stop Grille",
+      "website": "http://www.onestopwingsandpoboys.com/",
+      "owner_name": "Byron & Gary",
+      "city": "Moss Point",
+      "phone": "228-591-8274",
+      "owner_email": "",
+      "category": "restaurants",
+      "subcategory": "Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "The Scratch Kitchen & Bar",
+      "website": "https://www.thescratchkitchen228.com/?fbclid=IwAR3ciiUXkzbHoBjFcLZ7c1lZjGz3ZsdDKzJ6syh2LPEAR9QSvjD3QhxckmE",
+      "owner_name": "",
+      "city": "Ocean Springs",
+      "phone": "",
+      "owner_email": "thescratchkitchen228@gmail.com",
+      "category": "restaurants",
+      "subcategory": "Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Mama Nature's Juice Bar",
+      "website": "https://www.mamanatureswellness.com/",
+      "owner_name": "T'Keyah Williams",
+      "city": "Ridgeland",
+      "phone": "(601) 499-4936",
+      "owner_email": "contactus@mamanaturesjuicebar.com",
+      "category": "restaurants",
+      "subcategory": "Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Ridgeland Coffee Co",
+      "website": "https://www.ridgelandcoffeeco.com/",
+      "owner_name": "Antuwan Shade",
+      "city": "Ridgeland",
+      "phone": "(601) 856-7374",
+      "owner_email": "info@ridgelandcoffeeco.com",
+      "category": "restaurants",
+      "subcategory": "Coffee Shop"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Alma Jean's Southern Kookin",
+      "website": "",
+      "owner_name": "",
+      "city": "Senatobia",
+      "phone": "(662) 301-0066",
+      "owner_email": "",
+      "category": "restaurants",
+      "subcategory": "Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Vibe & Paint",
+      "website": "https://www.facebook.com/vibeandpaint/",
+      "owner_name": "",
+      "city": "Biloxi",
+      "phone": "(228) 243-0213",
+      "owner_email": "vibeandpaint@gmail.com",
+      "category": "visual",
+      "subcategory": "Sip & Paint"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Sweetwater Memories",
+      "website": "https://www.facebook.com/wreathdesigner.net/",
+      "owner_name": "Kimberly Gowdy",
+      "city": "Gulfcoast",
+      "phone": "228-217-0047",
+      "owner_email": "kimgow@aol.com",
+      "category": "visual",
+      "subcategory": "Sip & Paint"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Archibald Beats",
+      "website": "https://archibaldbeats.wixsite.com/archibaldbeats",
+      "owner_name": "",
+      "city": "Jackson",
+      "phone": "601-862-3553",
+      "owner_email": "",
+      "category": "visual",
+      "subcategory": "Music Producer"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Bclarkart",
+      "website": "https://www.bclarkart.com/",
+      "owner_name": "Brian Clark",
+      "city": "Vicksburg",
+      "phone": "(601) 631-4183",
+      "owner_email": "contact@bclarkart.shop",
+      "category": "visual",
+      "subcategory": "Art"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Peaceful Paint & Sip",
+      "website": "https://www.facebook.com/peacefulpaintandsip/?ref=page_internal",
+      "owner_name": "Tenesha Lombard",
+      "city": "",
+      "phone": "(228) 257-5674",
+      "owner_email": "peacefulpaint&sip@gmail.com",
+      "category": "visual",
+      "subcategory": "Sip & Paint"
+    }
+},
+    {
+      "model": "vbp.vbp_ms",
+      "fields": {
+"business_name": "Rudy King",
+      "website": "https://www.therudyking.com/",
+      "owner_name": "Rudy King",
+      "city": "",
+      "phone": "901-500-5946",
+      "owner_email": "kingrudy45@yahoo.com",
+      "category": "visual",
+      "subcategory": "Art Gallery"
+    }
+}
+  ]

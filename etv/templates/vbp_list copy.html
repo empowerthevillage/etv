@@ -1,0 +1,1233 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}ETV | Village Black Pages™{% endblock %}
+{% block canonical %}https://www.empowerthevillage.org/village-black-pages/{% endblock %}
+{% block seo_description %}Village Black Pages™ (VBP) is the critical resource Americans can rely on to locate Black-owned businesses to support when responding to our charge to Make Every Friday, Black Friday™!{% endblock %}
+
+
+{% block content %}
+<div class="content-container">
+<div class="parallax-container box-shadow valign-wrapper">
+    
+    <div class="container z-depth-4 center-align parallax-banner" style="background:rgba(255, 255, 255, 0.906); border: rgb(43, 43, 43) 3px solid;">
+        <img src="{% static 'img/vbp_new.png' %}" width="90%" style="margin:0; padding: 0">
+    </div>
+    <div class="parallax" style="opacity: 1;">
+        <img src='{% static "img/vbp-collage.png" %}' height=200%>
+    </div>
+
+</div>
+
+    <ul class="tabs tabs-fixed-width vbp-tabs z-depth-1">
+        <li class="tab"><a class="active" href="#vbp-overview">Overview</a></li>
+        <li class="tab"><a href="#vbp-resources">VBP State Directory Resources</a></li>
+        
+    </ul>
+    <div id="vbp-overview" class="col s12">
+        <div class="z-depth-4" style="background-color:rgb(255, 255, 255);">
+            <div class="" style="margin-bottom: 0;">
+                <div class="row valign-wrapper" style="padding-left: 5%; padding-right: 5%">
+                        <div class="col s1 m4 l3 vbp-bag-col" style="padding-top:2%">
+                            <img src="{% static 'img/VBP Bag.png' %}" width=100%>
+                        </div>
+                        <div class="vbp-text col s12 m8 l9" style="padding: 2% 0; padding-bottom: 0">
+                
+                            <p><b>Village Black Pages™</b> (VBP) is the critical resource Americans can rely on to locate Black-owned businesses to support when responding to our charge to <b>Make Every Friday, Black Friday™!</b> All Black-owned businesses are listed for <b style="color: rgb(15, 155, 15)">FREE</b> in the Village Black Pages™!
+                            <p>Our goal is to elevate the overall prosperity of the Black community by building wealth and creating jobs. </p>
+                            <a href="{{ nomination_url }}" class="btn btn-nominate waves-effect">NOMINATE YOUR FAVORITE BLACK-OWNED BUSINESS TODAY!</a>
+                        </div>
+                </div>
+                
+                </div>
+                <div class="divider" style="width:70%; margin-left:15%; margin-bottom: -50px; margin-top: 30px"></div>
+                <div>
+                    <div class="carousel" id="carousel-sm">
+                        
+                        {% for vbp_book in covers_qs %}
+                            <div class="carousel-item" id="carousel{{ vbp_book.state }}" name="US-{{ vbp_book.state }}" style="background-image:url({{ vbp_book.cover.url }}); background-size: 100%; cursor: pointer;"></div>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="divider" style="width:70%; margin-left:15%"></div>
+                <div style="text-align: justify; width: 100%;">
+                    <h4 class="center-align strategy-title"><a id="state-strategy-title" style="color:#bf1e2d; filter: brightness(0.8)">Phase One Agenda:</a> 25-State* Targeted Strategy</h4>
+                    <div class="row center-align" style="margin-top:15px">
+                        <img src="{% static 'img/90percent.png' %}" width=15%>
+                        
+                        <img src="{% static 'img/people graphic.png' %}" width=15% style="margin-left:2%">
+                    </div>
+                    <div class="vbp-text" style="margin-top: 30px">
+                        <p class="center-align" style="margin-bottom:0"><b>90+% of Black Americans (~43M+) live, work</b></p>
+                        <p class="center-align" style="margin-top:0"><b>and own businesses in only 25 States*</b></p>
+                        <p class="center-align" style="margin-left: 5%; margin-right: 5%">ETV’s Phase One Agenda executes on a 25-State* Strategic Action Plan to achieve racial equity and social justice for Black America in partnership with The Village - individuals, corporations, community, government and nonprofit entities.
+        
+                    </p>
+                    </div>
+                </div>
+                
+                <ul>
+                    <li class="divider" style="margin-top:0px; margin-bottom: 30px; width:80%; margin-left: 10%"></li>
+                </ul>
+                
+                <iframe class="z-depth-3" width="80%" style="margin-left: 10%" height="500" src="https://www.youtube.com/embed/5bMNJbW0AvI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <ul>
+                    <li class="divider" style="margin-top:30px; margin-bottom: 30px; width:80%; margin-left: 10%"></li>
+                </ul>
+                <div class="sponsor-info center-align z-depth-3">
+                    <div class="sponsor-info-container" style="margin:0;width:100%; margin-left: 0%">
+                    <h6>Interested in advertising your business?</h6>
+                    <a href="{{ contact_url }}" class="col s12 m6 btn-contact waves-effect">Click Here to Contact Us!</a>
+                    <p id="free-line" style="margin-top: -1%; font-size: 32px">All Black-owned businesses are listed in the Village Black Pages for <b style="font-weight: 600; color: rgb(20, 155, 20)">FREE!</b></p>
+                    <p style="margin-top: -0; color: white;">If you would like a larger spotlight on your Black-owned business, ETV offers half and full page ads in our Village Black Pages!</p>
+                    <p style="margin-bottom:0"><b><u>Advertising Rates</u></b></p>
+                    <p style="margin:0;">*For Black-Owned Businesses with revenue less than $1M*</p>
+              
+                        <div class="price-row center-align">
+                            <div class="card row center-align">
+                                <div class="col s6">
+                                <p style="padding-top: 1vw; font-size:24px">Quarterly</p>
+                                <ul class="quarterly-list">
+                                    <li>Half Page - $250</li>
+                                    <li>Full Page - $500</li>
+                                </ul>
+                                </div>
+                                <div class="col s6">
+                                    <p style="padding-top: 1vw; font-size: 24px">Annual</p>
+                                    <ul class="annual-list">
+                                        <li>Half Page - $750</li>
+                                        <li>Full Page - $1500</li>
+                                    </ul>
+                                </div>
+                            </div>
+                    </div>
+                    
+                </div>
+                
+                </div>
+                
+            </div>
+    </div>
+    <div id="vbp-resources" class="col s12">
+        <div class="vbp-text container-fluid" style="padding: 30px 5% 10px 5%">
+            <p>ETV's Village Black Pages™ (VBP) is a critical resource Americans can rely on to locate Black-owned businesses to support when responding to our charge to Make Every Friday, Black Friday™! Our goal is to elevate the overall prosperity of the Black community by promoting commerce.</p>
+            <p><b>ETV is already promoting 10,000+ businesses for free and has garnered more than 1,500+ searches in less than 6 months!</b></p>
+        </div>
+        <ul>
+            <li class="divider" style="margin-top:0px; margin-bottom: 20px; width:80%; margin-left: 10%"></li>
+        </ul>
+        
+        <div class="row" id="cover-grid">
+            <div class="vbp-text" style="padding: 10px 15%">
+                <p class="center-align map-helper-text" style="font-weight:500; color:#bf1e2d">Select a cover to explore the Village Black Pages!</p>
+            </div>     
+            {% for vbp_book in covers_qs %}
+            <div class="col s6 m3"  style="padding: 1%">
+                <img class="z-depth-2 grid-item" src="{{ vbp_book.cover.url }}" id="grid-{{ vbp_book.state }}" name="US-{{ vbp_book.state }}" width="100%" style="cursor:pointer">
+            </div>
+            {% endfor %}
+        </div>
+        <div class="z-depth-4 row vbp-booklet-container" style="margin:0; background: white; padding-top: 20px" id="vbp-row">
+            <a class="display-all valign-wrapper hidden" id="vbp-grid-display-all" style="margin-left: 30px; margin-bottom: 10px; cursor: pointer"><span class="material-icons" id="toggle-arrow-grid">
+                keyboard_double_arrow_up
+                </span> Display all</a>
+            <div class="col s12" id="book">
+               
+                <div class="center-align preloader" style="padding: 30px; display:none" >
+                    <div class="preloader-wrapper big active">
+                        <div class="spinner-layer spinner-blue">
+                        <div class="circle-clipper left">
+                            <div class="circle"></div>
+                        </div><div class="gap-patch">
+                            <div class="circle"></div>
+                        </div><div class="circle-clipper right">
+                            <div class="circle"></div>
+                        </div>
+                        </div>
+                
+                        <div class="spinner-layer spinner-red">
+                        <div class="circle-clipper left">
+                            <div class="circle"></div>
+                        </div><div class="gap-patch">
+                            <div class="circle"></div>
+                        </div><div class="circle-clipper right">
+                            <div class="circle"></div>
+                        </div>
+                        </div>
+                
+                        <div class="spinner-layer spinner-yellow">
+                        <div class="circle-clipper left">
+                            <div class="circle"></div>
+                        </div><div class="gap-patch">
+                            <div class="circle"></div>
+                        </div><div class="circle-clipper right">
+                            <div class="circle"></div>
+                        </div>
+                        </div>
+                
+                        <div class="spinner-layer spinner-green">
+                        <div class="circle-clipper left">
+                            <div class="circle"></div>
+                        </div><div class="gap-patch">
+                            <div class="circle"></div>
+                        </div><div class="circle-clipper right">
+                            <div class="circle"></div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <style>
+        .btn-contact {
+            border: none;
+            margin-left: 0;
+            font-size: 16px;
+            font-family: inherit;
+            color: inherit;
+            cursor: pointer;
+            display: inline-block;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 500;
+            outline: none;
+            position: relative;
+            -webkit-transition: all 0.3s;
+            -moz-transition: all 0.3s;
+            transition: all 0.3s;
+            background: rgb(38, 109, 18);;
+            color: #fff;
+            box-shadow: 0 6px rgb(30, 82, 14);
+            -webkit-transition: none;
+            -moz-transition: none;
+            transition: none;
+            border-radius: 0px;
+            line-height: 20px;
+            width: 50%;
+            height: 47px;
+            padding: 20px;
+            padding-top: 15px;
+            margin-bottom: 50px;
+            margin-top: 40px
+}
+.btn-nominate:after {
+  content: '';
+	position: absolute;
+	z-index: -1;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+ 
+        .sponsor-info {
+            background-color: rgb(23, 23, 23);
+            padding: 30px
+        }
+        
+        .quarterly-list li {
+            color: white;
+            font-size: 16px;
+            font-weight: 200;
+        }
+        .annual-list li {
+            color: white;
+            font-size: 16px;
+            font-weight: 200;
+        }
+        .price-row .card {
+            background-color:rgb(40, 40, 40);
+         
+            padding: 20px;
+        }
+        .card p {
+            margin:0;
+            text-transform: uppercase;
+            text-decoration: underline;
+        }
+        @media only screen and (max-width: 600px) {
+            .price-row .card {
+        }
+        .btn-contact {
+            width: 100%;
+        }
+        .sponsor-info h6 {
+            font-size: 52px
+        }
+        }
+        @media only screen and (min-width: 601px) {
+            .price-row .card {
+            width: 60%; margin-left: 20%
+        }
+            .btn-contact {
+                width: 55%;
+                font-size: 18px
+            }
+            .quarterly-list li {
+            color: white;
+            font-size: 18px;
+            font-weight: 200;
+        }
+        .sponsor-info h6 {
+            font-size: 62px
+        }
+        .annual-list li {
+            color: white;
+            font-size: 18px;
+            font-weight: 200;
+        }
+        .sponsor-info p {
+            font-size: 22px
+        }
+        }
+        @media only screen and (min-width: 993px) {
+            .price-row .card {
+            width: 50%; margin-left: 25%
+        }
+            .btn-contact {
+                width: 45%;
+                font-size: 22px
+            }
+            .quarterly-list li {
+            color: white;
+            font-size: 22px;
+            font-weight: 200;
+        }
+        .annual-list li {
+            color: white;
+            font-size: 22px;
+            font-weight: 200;
+        }
+        .sponsor-info p {
+            font-size: 22px
+        }
+        }
+    </style>
+</div>
+
+<script>
+$(document).ready(function(){
+    $('.carousel').carousel({
+            indicators: true, numVisible: 10,
+        });
+        $('.tabs').tabs();
+    $('.collapsible').collapsible();
+    $('.parallax').parallax();
+    $('.dropdown-trigger').dropdown({hover: true, constrainWidth: false, coverTrigger: false, container:'.dropdown-container'});
+    $('.sidenav').sidenav();
+    $('select').formSelect();
+    $('.carousel').carousel({indicators: true, numVisible: 10,});
+    $('.tooltipped').tooltip({'margin':'0', 'transitionMovement': '0',});
+    $('.phone_us').mask('(000) 000-0000');
+    $('.money').mask('000,000.00', {reverse: true});
+    $('#other-donation').mask('000,000', {reverse: true});
+    $('.datepicker').datepicker();
+    $('.ways-to-play-tabs').tabs();
+});
+$('#category-select').on('change', function(){
+    var category = $(this).find(':selected').val()
+    $('#disabled-subcat').hide()
+    $('[cat="'+ category +'"]').removeClass('hidden')
+    $('.subcat-div[cat!="'+ category +'"]').addClass('hidden')
+});
+$('svg').resize(function(event){
+    event.preventDefault();
+})
+    $(function() {
+    $(".carousel-item").click(function() {
+            
+            var carouselState = $(".carousel-item.active").attr("name");
+            var data = {
+                'state': carouselState,
+            }
+            $('#cover-grid').addClass('hidden')
+            var instance = M.Tabs.getInstance($('.vbp-tabs'));
+            instance.select('vbp-resources');
+            var state = data
+            $.ajax({
+                data: data,
+                state: state,
+                url: '/village-black-pages/get-state',
+                beforeSend: function(){
+                    $('.preloader').show();
+                    $('#flipbook-mobile-container').hide();
+                    $('#flipbook-container').hide();
+                },
+                method: "GET",
+                success: function(data) {
+                    $('.preloader').hide();
+                    $('#book').html(data);
+                    $('#mobile-book').html(data);
+                    $('#cover-page').attr('value', carouselState);
+                    $('#cover-page-mobile').attr('value', carouselState);
+                    $('#filter-submit').attr('id', 'filter-submit-state'+ carouselState +'');
+                    $('#vbp-flipbook').attr('value', carouselState);
+                    $('#vbp-flipbook-mobile').attr('value', carouselState);
+                    $('#filter-form-state').attr('value', carouselState);
+                    $('#filter-form-state-mobile').attr('value', carouselState);
+                }
+            })
+            $([document.documentElement, document.body]).animate({
+            scrollTop: $("#book").offset().top
+            }, 500);
+            
+        })
+    });
+    
+    $('#vbp-grid-display-all').on('click', function(){
+        
+        $('#cover-grid').toggleClass('hidden');
+    });
+    $('#vbp-grid-display').on('hover', function(){
+        $('#toggle-arrow-grid').toggleClass('rotated')
+    })
+    $('.grid-item').on('click', function(){
+        var carouselState = $(this).attr("name");
+            var data = {
+                'state': carouselState,
+            }
+            $('#cover-grid').addClass('hidden')
+            $('#vbp-grid-display-all').removeClass('hidden')
+            var state = data
+            $.ajax({
+                data: data,
+                state: state,
+                url: '/village-black-pages/get-state',
+                beforeSend: function(){
+                    $('.preloader').show();
+                    $('#flipbook-mobile-container').hide();
+                    $('#flipbook-container').hide();
+                },
+                method: "GET",
+                success: function(data) {
+                    $('.preloader').hide();
+                    $('#book').html(data);
+                    $('#mobile-book').html(data);
+                    $('#cover-page').attr('value', carouselState);
+                    $('#cover-page-mobile').attr('value', carouselState);
+                    $('#filter-submit').attr('id', 'filter-submit-state'+ carouselState +'');
+                    $('#vbp-flipbook').attr('value', carouselState);
+                    $('#vbp-flipbook-mobile').attr('value', carouselState);
+                    $('#filter-form-state').attr('value', carouselState);
+                    $('#filter-form-state-mobile').attr('value', carouselState);
+                }
+            })
+            $([document.documentElement, document.body]).animate({
+            scrollTop: $("#book").offset().top
+            }, 500);
+    });
+    
+</script>
+
+<style>
+    .rotated {
+        transform: rotate(90deg)
+    }
+    .vbp-text {
+        text-align: center;
+    }
+    .vbp-tabs {
+        background-color: black;
+    }
+    .vbp-tabs li:nth-of-type(0) {
+        width: 25%
+    }
+    .vbp-tabs li:nth-of-type(0) {
+        width: 75%
+    }
+    .vbp-tabs a {
+        background-color: black;
+        color: white !important;
+        font-size: 12px !important;
+    }
+    .vbp-tabs a.active {
+        color: rgb(39, 187, 3) !important
+    }
+    .vbp-tabs .indicator {
+        background-color: rgb(39, 187, 3) !important;
+    }
+    .vbp-tabs .indicator:nth-of-type(0) {
+        width: 25%
+    }
+    .vbp-tabs .indicator:nth-of-type(1) {
+        width: 75%
+    }
+    .btn-nominate:focus {
+        background-color: rgb(196, 66, 66) !important
+    }
+    #vbp-nomination-form b {
+        color: red
+    }
+    @media only screen and (min-width: 401px) {
+        .vbp-tabs a {
+            font-size: 14px !important;
+        }
+    }
+    @media only screen and (min-width: 601px){
+        .vbp-tabs a {
+            font-size: 18px !important;
+        }
+        #nomination-form .input-field input{
+        font-size: 16px;
+        font-weight: 300;
+        letter-spacing: 1px;
+        padding: 0
+        }
+        .owned-label {
+            font-size: 16px
+        }
+        .recommend-label {
+            font-size: 16px
+        }
+        [type="radio"]:not(:checked)+span, [type="radio"]:checked+span {
+            font-size: 16px !important;
+        }
+        .helper-text {
+            font-size: 16px !important;
+        }
+        #nomination-form .input-field label{
+            font-size: 16px
+        }
+        .dropdown-content li>a, .dropdown-content li>span {
+            font-size: 16px;
+            color:rgb(44, 113, 38)
+        }
+    }
+    @media only screen and (min-width: 992px){
+        .vbp-tabs a {
+            font-size: 22px !important;
+        }
+        .vbp-tabs li:nth-of-type(0) {
+            width: 50%
+        }
+        .vbp-tabs li:nth-of-type(0) {
+            width: 50%
+        }
+        .vbp-tabs .indicator:nth-of-type(0) {
+            width: 50%
+        }
+        .vbp-tabs .indicator:nth-of-type(1) {
+            width: 50%
+        }
+    }
+    @media only screen and (min-width: 1201px){
+
+}
+    #nomination-form .input-field input{
+        font-size: 16px;
+        font-weight: 300;
+        letter-spacing: 1px;
+        padding: 0
+        }
+        .owned-label {
+            font-size: 16px
+        }
+        .recommend-label {
+            font-size: 16px
+        }
+        [type="radio"]:not(:checked)+span, [type="radio"]:checked+span {
+            font-size: 16px !important;
+        }
+        .helper-text {
+            font-size: 16px !important;
+        }
+        #nomination-form .input-field label{
+            font-size: 16px
+        }
+        .dropdown-content li>a, .dropdown-content li>span {
+            font-size: 16px;
+            color:rgb(44, 113, 38)
+        }
+    .carousel .indicators .indicator-item {
+        background-color: rgba(208, 208, 208, 0.5);
+    }
+    .carousel .indicators .indicator-item.active {
+        background-color: rgba(118, 193, 111, 0.5);
+    }
+    
+    .hidden {
+        display: none;
+    }
+    .flipbook-wrapper {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        margin: 0%;
+        width: 90%;
+    }
+    #next {
+        padding:2%;
+        transition: all 0.3s ease-in-out;
+    }
+    #prev {
+        padding:2%;
+        transition: all 0.3s ease-in-out;
+    }
+    .aspect {
+        padding-bottom: 70%;
+        position: relative;
+        width: 100%;
+    }
+    .aspect-inner {
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .page {
+        background-color: white;
+    }
+    #flipbook {
+        height:93%;
+        transition: margin-left 0.25s ease-out;
+        width: 100%;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+    @media only screen and (max-width: 992px){
+        #flipbook-mobile-container {
+            display: block;
+            height: 220vw
+        }
+        #flipbook-fullsize-container {
+            display: none
+        }
+    }
+    @media only screen and (min-width: 993px){
+        #flipbook-mobile-container {
+            display: none;
+            
+        }
+        #flipbook-fullsize-container {
+            display: block
+        }
+    }
+    #flipbook-mobile {
+        transition: margin-left 0.25s ease-out;
+        width: 100%;
+        height: 186%;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+    .flipbook .shadow {
+        box-shadow: 0 4px 10px #666;
+    }
+    .flipbook a {
+        transition: color 0.3s ease-in-out
+    }
+    .flipbook a:hover {
+        color: rgb(73, 113, 216);
+    }
+    @media only screen and (max-width:992px) {
+        .flipbook-arrows {
+        font-size: 28px;
+        cursor: crosshair;
+        color:rgb(113, 112, 112);
+        padding-left:0;
+    }
+    }
+    @media only screen and (min-width:993px) {
+        .flipbook-arrows {
+        font-size: 36px;
+        cursor: crosshair;
+        color:rgb(113, 112, 112);
+        padding-left:0;
+    }
+    }
+    .flipbook .page {
+        height: 100%;
+        width: 100%;
+    }
+    .intro-page1{
+        height:100%;
+        width:100%;
+    }
+    .intro-page1 p {
+        margin-bottom:0;
+        margin-top:0;
+        font-weight:200;
+        letter-spacing:0.25px;
+        font-size: 0.7vw;
+    }
+    .intro-page1 a {
+        font-weight:200;
+        letter-spacing:0.25px;
+        transform: scale(1,0.9);
+        font-size: 0.7vw;
+        color:rgb(176, 176, 176);
+    }
+    tr {
+        border-bottom: sollid rgb(136, 136, 136) 1px;
+    }
+    .td.sc-td {
+        font-size: 0.5vw
+    }
+  @media only screen and (max-width: 400px) {
+        td {
+            font-size: 10px;
+        }
+        td, th {
+        padding: 0;
+        }
+        #prev-mobile {
+            font-size: 16px !important
+        }
+        #next-mobile {
+            font-size: 16px !important
+        }
+        .roomformore p {
+            font-size: 8px
+        }
+        .tc-title{
+            font-size: 16px
+        }
+}
+    @media only screen and (min-width: 401px) {
+        td {
+            font-size: 12px;
+        }
+        td, th {
+            padding: 0;
+        }
+        .roomformore p {
+            font-size: 10px
+        }
+        .tc-title{
+            font-size: 18px
+        }
+    }
+    @media only screen and (min-width: 490px) {
+        td {
+            font-size: 13;
+        }
+        td, th {
+            padding: 1px;
+        }
+        .roomformore p {
+            font-size: 13
+        }
+        .tc-title{
+            font-size: 19px
+        }
+    }
+    @media only screen and (min-width: 540px) {
+        td {
+            font-size: 14;
+        }
+        td, th {
+            padding: 1.2px;
+        }
+        .roomformore p {
+            font-size: 14
+        }
+        .tc-title{
+            font-size: 20px
+        }
+    }
+    @media only screen and (min-width: 601px) {
+        td {
+            font-size: 15;
+        }
+        td, th {
+            padding: 2;
+        }
+        .tc-title{
+            font-size: 17px
+        }
+    }
+    @media only screen and (min-width: 660px) {
+        td {
+            font-size: 16;
+        }
+        td, th {
+            padding: 2px;
+        }
+        .roomformore p {
+            font-size: 15
+        }
+        .tc-title{
+            font-size: 22px
+        }
+    }
+    @media only screen and (min-width: 701px) {
+        td {
+            font-size: 18;
+        }
+        td, th {
+            padding: 3px;
+        }
+        .roomformore p {
+            font-size: 17
+        }
+        .tc-title{
+            font-size: 24px
+        }
+    }
+    @media only screen and (min-width: 800px) {
+        td {
+            font-size: 20;
+        }
+        td, th {
+            padding: 3px;
+        }
+        .roomformore p {
+            font-size: 18
+        }
+        .tc-title{
+            font-size: 26px
+        }
+    }
+    @media only screen and (min-width: 993px) {
+        td {
+            font-size: 12;
+        }
+        td, th {
+            padding: 1px;
+        }
+        .roomformore p {
+            font-size: 12
+        }
+        .tc-title{
+            font-size: 18px
+        }
+}
+    @media only screen and (min-width: 1125px) {
+        td {
+            font-size: 13;
+        }
+        td, th {
+            padding: 1.2px;
+        }
+        .roomformore p {
+            font-size: 12
+        }
+        .tc-title{
+            font-size: 20px
+        }
+    }
+    @media only screen and (min-width: 1300px) {
+        td {
+            font-size: 14;
+        }
+        td, th {
+            padding: 1.1px;
+        }
+        .roomformore p {
+            font-size: 12
+        }
+        .tc-title{
+            font-size: 21px
+        }
+    }
+    @media only screen and (min-width: 1400px) {
+        td {
+            font-size: 15;
+        }
+        td, th {
+            padding: 1.1px;
+        }
+        .roomformore p {
+            font-size: 13
+        }
+        .tc-title{
+            font-size: 22px
+        }
+    }
+    @media only screen and (min-width: 1500px) {
+        td {
+            font-size: 16;
+        }
+        td, th {
+            padding: 1.2px;
+        }
+        .roomformore p {
+            font-size: 16
+        }
+        .tc-title{
+            font-size: 23px
+        }
+    }
+    @media only screen and (min-width: 1600px) {
+        td {
+            font-size: 18;
+        }
+        td, th {
+            padding: 1.5px;
+        }
+        .roomformore p {
+            font-size: 16
+        }
+        .tc-title{
+            font-size: 24px
+        }
+    }
+    @media only screen and (min-width: 1700px) {
+        td {
+            font-size: 19;
+        }
+        td, th {
+            padding: 1.7px;
+        }
+        .roomformore p {
+            font-size: 17
+        }
+        .tc-title{
+            font-size: 25px
+        }
+    }
+    @media only screen and (min-width: 1800px) {
+        td {
+            font-size: 20;
+        }
+        td, th {
+            padding: 2px;
+        }
+        .roomformore p {
+            font-size: 17
+        }
+        .tc-title{
+            font-size: 26px
+        }
+    }
+    td {
+        font-weight:300;
+        letter-spacing: 0px;
+    }
+    
+    .select-wrapper input {
+        color:white
+    }
+    #select-options-c18df006-ccb4-46e4-d0d7-bcc6fa78a6b4{
+        color:white
+    }
+    .submit-btn {
+    border: solid 1px rgb(237, 237, 237);
+    background-color: rgb(57, 57, 57);
+    cursor: pointer;
+    padding: 30px 0px;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 300;
+    outline: none;
+    position: relative;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    overflow: hidden;
+    border-radius:0;
+    transform:scale(1,0.9);
+    line-height:0px;
+    width:40%;
+    font-size:16px
+  }
+  .view-btn {
+      background-color:rgba(68, 140, 32, 0.66); 
+      font-size: 16px; 
+      width:120px;
+      margin-top:20px;
+      margin-bottom:0
+    }
+  .submit-btn:after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    width: 100%;
+    height: 0;
+    top: 50%;
+    left: 50%;
+    background: rgb(237, 237, 237);
+    opacity: 0;
+    -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    -moz-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    -ms-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  }
+  .submit-btn:hover,
+  .submit-btn:active {
+    color: #319657;
+    background-color: rgb(89, 121, 89);
+  }
+
+  .submit-btn:hover:after {
+    height: 300%;
+    opacity: 1;
+  }
+  .submit-btn2 {
+    border: solid 1px rgb(237, 237, 237);
+    background-color: rgb(57, 57, 57);
+    cursor: pointer;
+    padding: 30px 0px;
+    display: inline-block;
+    margin: 15px 5px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 300;
+    outline: none;
+    position: relative;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    overflow: hidden;
+    border-radius:0;
+    transform:scale(1,0.9);
+    line-height:0px;
+    width:40%;
+    font-size:16px
+  }
+  .submit-btn2:after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    width: 100%;
+    height: 0;
+    top: 50%;
+    left: 50%;
+    background: rgb(237, 237, 237);
+    opacity: 0;
+    -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    -moz-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    -ms-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  }
+  .submit-btn2:hover,
+  .submit-btn2:active {
+    color: #319657;
+    background-color: rgb(89, 121, 89);
+  }
+  .jvectormap-legend-tick {
+        background: url("https://empowerthevillage.s3.amazonaws.com/static/img/mapstard.png");
+        background-size: 97%;
+        background-repeat:no-repeat;
+        background-position-y: -2px
+    }
+    
+              .jvectormap-legend-tick-text {
+                  font-size: 10px;
+                  padding: 10px;
+                  font-weight: 800
+              }
+  .submit-btn2:hover:after {
+    height: 200%;
+    opacity: 1;
+  }
+  #state-strategy-title {
+      font-family: oskar-inline;
+      color: rgb(157, 59, 59);
+  }
+ .map-container {
+     padding:0;
+     padding-bottom: 60px
+ }
+ #map {
+     width: 100%
+ }
+ @media only screen and (max-width: 500px) {
+    .jvectormap-container {
+     max-height: 400px
+ }
+
+ .jvectormap-container svg {
+      width: 100%;
+      height: 300px;
+      zoom: 100%
+  }
+  .jvectormap-marker {
+    width: 30px;
+    transform: translateX(485px) translateY(485px) !important;
+    height: 30px !important;
+    opacity: 0.7
+}
+}
+@media only screen and (min-width: 501px) {
+    .jvectormap-container {
+     max-height: 450px
+ }
+
+ .jvectormap-container svg {
+      width: 100%;
+      height: 400px;
+  }
+ 
+  .jvectormap-marker {
+    width: 40px;
+    transform: translateX(479px) translateY(480px);
+    height: 40px !important;
+}
+}
+@media only screen and (min-width: 701px) {
+    .jvectormap-container {
+     max-height: 500px;
+ }
+
+ .jvectormap-container svg {
+      width: 100%;
+      height: 400px;
+  }
+  
+}
+@media only screen and (min-width: 992px) {
+    .jvectormap-container {
+     max-height: 700px
+ }
+
+ .jvectormap-container svg {
+      width: 100%;
+      height: 600px;
+  }
+}
+
+
+  [type="radio"]:checked+span:after, [type="radio"].with-gap:checked+span:before, [type="radio"].with-gap:checked+span:after {
+    border: 2px solid rgb(67, 135, 33);
+}
+[type="radio"]:checked+span:after, [type="radio"].with-gap:checked+span:after {
+    background-color: rgb(67, 135, 33);
+}
+    .textfield {
+      font-family: 'Poppins';
+      font-weight: 300;
+      letter-spacing: 1px;
+      color:rgb(60, 60, 60);
+      font-size:18px
+    }
+    .input-field {
+      padding-bottom: 10px;
+    }
+    /* label color */
+   .input-field label {
+     color: rgb(128, 128, 128);;
+     font-family: 'Poppins';
+      font-weight: 300;
+      letter-spacing: 1px;
+      font-size:14px;
+      padding-bottom:10px
+    }
+    /* label focus color */
+    .input-field input[type=text]:focus + label {
+      color: rgb(67, 135, 33) !important;
+    }
+    /* label underline focus color */
+    .input-field input[type=text]:focus {
+      border-bottom: 1px solid rgb(67, 135, 33) !important;
+      box-shadow: 0 1px 0 0 rgb(67, 135, 33) !important;
+    }
+    
+    /* icon prefix focus color */
+    .input-field .prefix.active {
+      color: #000;
+    }
+    .select-wrapper input {
+    color: rgb(60, 60, 60);
+}
+    .select-dropdown {
+      font-family: 'Poppins';
+      font-weight: 300;
+      color:rgb(60, 60, 60);
+      letter-spacing: 1px;
+      padding-top: 10px
+    }
+    #page {
+      background-image: url("https://empowerthevillage.s3.amazonaws.com/static/img/login-collage.png");
+      background-size: 100%;
+      background-repeat: repeat;
+    }
+    .submit-btn {
+    border: solid 1px rgb(237, 237, 237);
+    background-color: rgb(57, 57, 57);
+    cursor: pointer;
+    padding: 30px 0px;
+    display: inline-block;
+    margin: 15px 5px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 300;
+    outline: none;
+    position: relative;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    overflow: hidden;
+    border-radius:0;
+    transform:scale(1,0.9);
+    line-height:0px;
+    width:40%;
+    font-size:16px
+  }
+  .swal2-confirm {
+      display: none !important
+  }
+  .submit-btn:after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    width: 100%;
+    height: 0;
+    top: 50%;
+    left: 50%;
+    background: rgb(237, 237, 237);
+    opacity: 0;
+    -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    -moz-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    -ms-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  }
+  .submit-btn:hover,
+  .submit-btn:active {
+    color: #319657;
+    background-color: rgb(89, 121, 89);
+  }
+
+  .submit-btn:hover:after {
+    height: 300%;
+    opacity: 1;
+  }
+  .recommended-label {
+    color: rgb(128, 128, 128);;
+     font-family: 'Poppins';
+      font-weight: 300;
+      letter-spacing: 1px;
+      font-size:16px;
+      padding-bottom:0px
+  }
+  .owned-label {
+    color: rgb(128, 128, 128);;
+     font-family: 'Poppins';
+      font-weight: 300;
+      letter-spacing: 1px;
+      font-size:16px;
+      padding-bottom:0px
+  }
+  
+  {% for vbp_book in covers_qs %}
+  #cover-page[value~='US-{{ vbp_book.state }}']{
+      background-image: url('https://empowerthevillage.s3.amazonaws.com/media/{{ vbp_book.state }}-cover.png');
+        background-size: 100%
+    }
+    #cover-page-mobile[value~='US-{{ vbp_book.state }}']{
+      background-image: url('https://empowerthevillage.s3.amazonaws.com/media/{{ vbp_book.state }}-cover.png');
+        background-size: 100%
+    }
+  {% endfor %}
+</style>
+{% endblock %}
