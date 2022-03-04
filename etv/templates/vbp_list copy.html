@@ -32,9 +32,8 @@
                             <img src="{% static 'img/VBP Bag.png' %}" width=100%>
                         </div>
                         <div class="vbp-text col s12 m8 l9" style="padding: 2% 0; padding-bottom: 0">
-                
-                            <p><b>Village Black Pages™</b> (VBP) is the critical resource Americans can rely on to locate Black-owned businesses to support when responding to our charge to <b>Make Every Friday, Black Friday™!</b> All Black-owned businesses are listed for <b style="color: rgb(15, 155, 15)">FREE</b> in the Village Black Pages™!
-                            <p>Our goal is to elevate the overall prosperity of the Black community by building wealth and creating jobs. </p>
+                            <p><b>ETV's Village Black Pages™ </b>(VBP) is a critical resource Americans can rely on to locate Black-owned businesses to support when responding to our charge to Make Every Friday, Black Friday™! Our goal is to elevate the overall prosperity of the Black community by promoting commerce, increasing revenue and wealth, and creating jobs.</p>
+                            <p>ETV is already promoting nearly 20,000 businesses for free and has garnered 1000s of searches in less than 6 months since its launch in 20 ETV's Village Black Pages™ (VBP) is a critical resource Americans can rely on to locate Black-owned businesses to support when responding to our charge to Make Every Friday, Black Friday™! Our goal is to elevate the overall prosperity of the Black community by promoting commerce.</p>
                             <a href="{{ nomination_url }}" class="btn btn-nominate waves-effect">NOMINATE YOUR FAVORITE BLACK-OWNED BUSINESS TODAY!</a>
                         </div>
                 </div>
@@ -65,7 +64,210 @@
                     </p>
                     </div>
                 </div>
+                <ul>
+                    <li class="divider" style="margin-top:0px; margin-bottom: 30px; width:80%; margin-left: 10%"></li>
+                </ul>
                 
+                <div class="map-container valign-wrapper">
+                    <div class='vbp-text'>
+                        <p class="center-align map-helper-text" style="font-weight:400;">Click on your state to view its Village Black Pages!</p>
+                    </div>
+                    <div class="row valign-wrapper">
+                        <div id="map" class="col s12 m11" style="padding-right:0">
+                            
+                        </div>
+                        
+                        <div class="col s1" style="padding:0">
+                            <div id="legend-container">
+                                <img src="{% static 'img/legendStarDE.png' %}" class="legendStar2">
+                                <br>
+                                <img src="{% static 'img/legendStarMD.png' %}" class="legendStar3">
+                                <br>
+                                <img src="{% static 'img/legendStarDC.png' %}" class="legendStar">
+                                <br>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div id="legend-container-mobile">
+                        <img src="{% static 'img/legendStarDE.png' %}" class="legendStar2">
+                        <img src="{% static 'img/legendStarMD.png' %}" class="legendStar3">
+                        <img src="{% static 'img/legendStarDC.png' %}" class="legendStar"> 
+                    </div>
+                    <div class="valign-wrapper published-key" ><img src="{% static 'img/mapstard.png' %}" class="legendStar4"><p><b> &nbsp = Coming Soon</b></p></div>
+                    <div class="valign-wrapper published-key-large" ><img src="{% static 'img/mapstard.png' %}" class="legendStar4"><p><b> &nbsp = Coming Soon</b></p></div>
+                    
+                    
+                    <style>
+                        #legend-container img {
+                            cursor: pointer;
+                        }
+                        .legendStar4 {
+                            position: relative;
+                            width: 10%;
+                            cursor: text !important
+                        }
+                        .published-key{
+                            margin-left: 70%; 
+                        }
+                        .legendStar:hover {
+                            cursor: pointer
+                        }
+                        .legendStar2:hover {
+                            cursor: pointer
+                        }
+                        .legendStar3:hover {
+                            cursor: pointer
+                        }
+                        .swal-nominate {
+                            font-size: 18px;
+                            margin:0;
+                            padding: 10px 5px;
+                            height: auto
+                        }
+                        .swal2-popup .select-wrapper {
+                            display: none;
+                        }
+                        @media only screen and (max-width:500px){
+                            .swal-nominate {
+                                font-size: 16px;
+                            }
+                            #legend-container .legendStar {
+                            display: none
+                            }
+                            #legend-container .legendStar2 {
+                            display: none;
+                        }
+                        #legend-container .legendStar3 {
+                            display: none;
+                        }
+                        #legend-container-mobile {
+                            margin-left: 50%;
+                            margin-top: -100px;
+                            margin-bottom: 0px;
+                        }
+                        #legend-container-mobile .legendStar {
+                            width: 17%;
+                            }
+                            #legend-container-mobile .legendStar2 {
+                            width: 17%
+                        }
+                        #legend-container-mobile .legendStar3 {
+                            width: 17%
+                        }
+                        .legendStar4 {
+                            position: relative;
+                            width: 15%
+                        }
+                        .published-key{
+                            margin-left: 45%;
+                            margin-top: -10px;
+                            margin-bottom: 0
+                        }
+                        .published-key-large {
+                            display:none
+                        }
+                        }
+                        @media only screen and (min-width:501px){
+                            .published-key {
+                                display:none
+                            }
+                            .published-key-large {
+                                margin-left:52%;
+                                margin-top: -120px;
+                            }
+                            #legend-container-mobile .legendStar {
+                            display:none
+                            }
+                            #legend-container-mobile .legendStar2 {
+                            display: none
+                            }
+                            #legend-container-mobile .legendStar3 {
+                                display: none
+                            }
+                            #legend-container {
+                                margin-left: -20px;
+                                margin-top: -20px
+                            }
+                            #legend-container .legendStar {
+                            position: relative; 
+                            margin-left:0;
+                            width: 65%;
+                            padding-right: 25%;
+                            margin-bottom: 80px
+                            }
+                            
+                            #legend-container .legendStar2 {
+                                position: relative; 
+                                margin-top: 0; 
+                                margin-left: 0;
+                                width: 65%;
+                                padding-right: 25%
+                            }
+                            #legend-container .legendStar3 {
+                                position: relative; 
+                                margin-top: 0; 
+                                margin-left: 0;
+                                width: 65%;
+                                padding-right: 25%;
+                            }
+                        }
+                      
+                        @media only screen and (min-width: 801px){
+                            #legend-container {
+                                margin-left: -80px;
+                                margin-top: -20px
+                            }
+                            #legend-container .legendStar {
+                            position: relative; 
+                            margin-left:0;
+                            width: 50%;
+                            padding-right: 25%;
+                            margin-bottom: 80px
+                            }
+                            
+                            #legend-container .legendStar2 {
+                                position: relative; 
+                                margin-top: 0; 
+                                margin-left: 0;
+                                width: 50%;
+                                padding-right: 25%
+                            }
+                            #legend-container .legendStar3 {
+                                position: relative; 
+                                margin-top: 0; 
+                                margin-left: 0;
+                                width: 50%;
+                                padding-right: 25%;
+                                
+                            }
+                            .legendStar4 {
+                            position: relative;
+                            width: 10%
+                        }
+                        }
+                        @media only screen and (min-width: 992px){
+                            
+                        }
+                        @media only screen and (min-width: 1200px){
+                            #legend-container {
+                                margin-left: -140px;
+                                width: 150%
+                            }
+                            .legendStar4 {
+                            position: relative;
+                            width: 5%
+                        }
+                        }
+                        @media only screen and (min-width: 1350px){
+                            #legend-container {
+                                margin-left: -210%;
+                                width: 110%
+                            }
+                        }
+                        
+                    </style>
+                </div>
                 <ul>
                     <li class="divider" style="margin-top:0px; margin-bottom: 30px; width:80%; margin-left: 10%"></li>
                 </ul>
@@ -306,7 +508,279 @@
         }
     </style>
 </div>
-
+<script src="{% static 'js/raphael.js' %}"></script>
+<script src="{% static 'js/jquery.usmap.js' %}"></script>
+<script src="{% static 'js/jquery-jvectormap-2.0.5.min.js' %}"></script>
+<script src="{% static 'js/jquery-jvectormap-us-aea.js' %}"></script>
+<script>
+    
+    $(function(){
+    map = new jvm.Map({
+        map: 'us_aea',
+        container: $('#map'),
+        height: '700px',
+        width: '900px',
+        markerStyle: {
+            initial: {
+                image: 'https://empowerthevillage.s3.amazonaws.com/static/img/mapstarc.png',
+                "z-index": '2',
+                }
+            },
+        markers: [
+            {latLng: [36.9450, -119.424], name: 'CA'},
+            {latLng: [31.2686, -99.9518], name: 'TX'},
+            {latLng: [28.0050, -81.4158], name: 'FL'},
+            {latLng: [32.8000, -83.2001], name: 'GA'},
+            {latLng: [35.7596, -80.0001], name: 'NC'},
+        ],
+        zoomOnScroll: false,
+        regionLabelStyle: {
+          initial: {
+            fill: 'black',
+            'font-family': 'Poppins',
+          },
+          hover: {
+            fill: 'grey'
+          },
+        },
+        backgroundColor: 'white',
+        labels: {
+          regions: {
+            render: function(code){
+              var doNotShow = ['US-RI', 'US-DC', 'US-DE', 'US-MD'];
+    
+              if (doNotShow.indexOf(code) === -1) {
+                return code.split('-')[1];
+              }
+            },
+            offsets: function(code){
+              return {
+                'CA': [-10, 10],
+                'ID': [0, 40],
+                'OK': [25, 0],
+                'LA': [-20, 0],
+                'FL': [45, 0],
+                'KY': [10, 5],
+                'VA': [15, 5],
+                'MI': [30, 30],
+                'AK': [50, -25],
+                'HI': [25, 50]
+              }[code.split('-')[1]];
+            }
+          }
+        },
+        regionStyle: {
+            initial: {
+                fill: '#cccccc',
+            },
+            hover: {
+                "fill-opacity": 0.9,
+            }
+        },
+        regionLabelStyle: {
+            "z-index": '3'
+        },
+        series: {
+            regions: [{
+                scale: {
+                    'published': '#19b529',
+                    'soon': '#199456',
+                },
+                attribute: 'fill',
+                values: {
+                    'US-TX': 'soon',
+                    'US-FL': 'soon',
+                    'US-NY': 'published',
+                    'US-GA': 'soon',
+                    'US-CA': 'soon',
+                    'US-NC': 'soon',
+                    'US-IL': 'published',
+                    'US-MD': 'published',
+                    'US-VA': 'published',
+                    'US-PA': 'published',
+                    'US-OH': 'published',
+                    'US-LA': 'published',
+                    'US-MI': 'published',
+                    'US-NJ': 'published',
+                    'US-SC': 'published',
+                    'US-AL': 'published',
+                    'US-TN': 'published',
+                    'US-MS': 'published',
+                    'US-MO': 'published',
+                    'US-IN': 'published',
+                    'US-MA': 'published',
+                    'US-AR': 'published',
+                    'US-CT': 'published',
+                    'US-DC': 'published',
+                    'US-DE': 'published',
+                },
+                
+            }],
+        },
+        onRegionClick: function(event, code) {
+            var regionName = map.getRegionName(code);
+            var publishedStates = ["US-CT", "US-DC", "US-DE", "US-MD", "US-NY", "US-OH", "US-PA", "US-VA", "US-NJ", "US-MA", "US-AR", "US-AL", "US-IL", "US-MI", "US-MO", "US-IN", "US-SC", "US-TN", "US-LA", "US-MS"];
+            var phaseOne = ['US-TX', 'US-FL', 'US-GA', 'US-CA', 'US-NC']
+            if (phaseOne.indexOf(code) != -1) {
+                Swal.fire({
+                    title:'Village Black Pages: '+regionName+' Coming Soon!',
+                    html: '<a class="btn btn-nominate swal-nominate waves-effect" href="{{ nomination_url }}">NOMINATE YOUR FAVORITE BLACK-OWNED BUSINESS TODAY!<a>',
+                    showComfirmButton: false,
+                    showCancelButton: false,
+                    showCloseButton: false,
+                    text:'Village Black Pages: '+regionName+' Coming Soon!',
+                });
+            } else if (publishedStates.indexOf(code) != -1) {
+                var data = {
+                    'state': code,
+                }
+                var state = code
+                $('#flipbook-mobile-container').hide();
+                $('#flipbook-container').hide();
+                $('.preloader').show();
+                $('#cover-grid').addClass('hidden')
+                $('#vbp-grid-display-all').removeClass('hidden')
+                var instance = M.Tabs.getInstance($('.vbp-tabs'));
+                instance.select('vbp-resources');
+                $.ajax({
+                    data: data,
+                    state: state,
+                    url: '/village-black-pages/get-state',
+                    method: "GET",
+                    success: function(data) {
+                        $('.preloader').hide();
+                        $('#book').html(data);
+                        $('#mobile-book').html(data);
+                        $('#cover-page').attr('value', state);
+                        $('#cover-page-mobile').attr('value', state);
+                        $('#vbp-flipbook').attr('value', state);
+                        $('#vbp-flipbook-mobile').attr('value', state);
+                        $('#filter-form-state').attr('value', state);
+                        $('#filter-form-state-mobile').attr('value', state);
+                        ;
+                    },
+                })
+                $([document.documentElement, document.body]).animate({
+                scrollTop: $("#book").offset().top
+                }, 500);
+                
+            }
+        },
+       
+      });
+    });
+</script>
+    <script>
+    
+        $(".legendStar").on('click', function(){
+            var data = {
+                    'state': 'US-DC',
+                }
+                var state = data
+                $.ajax({
+                    data: data,
+                    state: state,
+                    url: '/village-black-pages/get-state',
+                    beforeSend: function(){
+                        $('.preloader').show();
+                        $('#flipbook-mobile-container').hide();
+                        $('#flipbook-container').hide();
+                        $('#cover-grid').addClass('hidden')
+                        $('#vbp-grid-display-all').removeClass('hidden')
+                        var instance = M.Tabs.getInstance($('.vbp-tabs'));
+                        instance.select('vbp-resources');
+                    },
+                    method: "GET",
+                    success: function(data) {
+                        $('.preloader').hide();
+                        $('#book').html(data);
+                        $('#mobile-book').html(data);
+                        $('#cover-page').attr('value', 'US-DC');
+                        $('#cover-page-mobile').attr('value', 'US-DC');
+                        $('#vbp-flipbook').attr('value', 'US-DC');
+                        $('#vbp-flipbook-mobile').attr('value', 'US-DC');
+                        $('#filter-form-state').attr('value', 'US-DC');
+                        $('#filter-form-state-mobile').attr('value', 'US-DC');
+                        
+                    }
+                })
+                $([document.documentElement, document.body]).animate({
+                scrollTop: $("#book").offset().top
+                }, 500);
+        });
+        $('.legendStar2').on('click', function(){
+            var data = {
+                    'state': 'US-DE',
+                }
+                var state = data
+                $.ajax({
+                    data: data,
+                    state: state,
+                    url: '/village-black-pages/get-state',
+                    beforeSend: function(){
+                        $('.preloader').show();
+                        $('#flipbook-mobile-container').hide();
+                        $('#flipbook-container').hide();
+                        $('#cover-grid').addClass('hidden')
+                        $('#vbp-grid-display-all').removeClass('hidden')
+                        var instance = M.Tabs.getInstance($('.vbp-tabs'));
+                        instance.select('vbp-resources');
+                    },
+                    method: "GET",
+                    success: function(data) {
+                        $('.preloader').hide();
+                        $('#book').html(data);
+                        $('#mobile-book').html(data);
+                        $('#cover-page').attr('value', 'US-DE');
+                        $('#cover-page-mobile').attr('value', 'US-DE');
+                        $('#vbp-flipbook').attr('value', 'US-DE');
+                        $('#vbp-flipbook-mobile').attr('value', 'US-DE');
+                        $('#filter-form-state').attr('value', 'US-DE');
+                        $('#filter-form-state-mobile').attr('value', 'US-DE');
+                    }
+                })
+                $([document.documentElement, document.body]).animate({
+                scrollTop: $("#book").offset().top
+                }, 500);
+        });
+        $('.legendStar3').on('click', function(){
+            var data = {
+                    'state': 'US-MD',
+                }
+                var state = data
+                $.ajax({
+                    data: data,
+                    state: state,
+                    url: '/village-black-pages/get-state',
+                    beforeSend: function(){
+                        $('.preloader').show();
+                        $('#flipbook-mobile-container').hide();
+                        $('#flipbook-container').hide();
+                        $('#cover-grid').addClass('hidden')
+                        $('#vbp-grid-display-all').removeClass('hidden')
+                        var instance = M.Tabs.getInstance($('.vbp-tabs'));
+                        instance.select('vbp-resources');
+                    },
+                    method: "GET",
+                    success: function(data) {
+                        $('.preloader').hide();
+                        $('#book').html(data);
+                        $('#mobile-book').html(data);
+                        $('#cover-page').attr('value', 'US-MD');
+                        $('#cover-page-mobile').attr('value', 'US-MD');
+                        $('#vbp-flipbook').attr('value', 'US-MD');
+                        $('#vbp-flipbook-mobile').attr('value', 'US-MD');
+                        $('#filter-form-state').attr('value', 'US-MD');
+                        $('#filter-form-state-mobile').attr('value', 'US-MD');
+                        
+                    }
+                })
+                $([document.documentElement, document.body]).animate({
+                scrollTop: $("#book").offset().top
+                }, 500);
+        });
+        
+    </script>
 <script>
 $(document).ready(function(){
     $('.carousel').carousel({
@@ -343,6 +817,7 @@ $('svg').resize(function(event){
                 'state': carouselState,
             }
             $('#cover-grid').addClass('hidden')
+            $('#vbp-grid-display-all').removeClass('hidden')
             var instance = M.Tabs.getInstance($('.vbp-tabs'));
             instance.select('vbp-resources');
             var state = data
