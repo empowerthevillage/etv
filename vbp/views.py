@@ -4319,7 +4319,7 @@ def home(request):
     visualsc = VISUAL_CHOICES 
     return render(
         request, 
-        'vbp_list.html', 
+        'vbp_list copy.html', 
         {
         'covers_qs': covers_qs,
         'title': 'ETV | Village Black Pages',
