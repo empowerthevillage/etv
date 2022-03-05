@@ -160,7 +160,9 @@ class SingleTicket(models.Model):
     add_ons         = models.ManyToManyField(AddOn, blank=True)
     qr_code         = models.ImageField(null=True, blank=True)
     guest_list      = models.TextField(null=True, blank=True)
-
+    first_name      = models.CharField(max_length=100, null=True, blank=True)
+    last_name       = models.CharField(max_length=100, null=True, blank=True)
+    
     def __str__(self):
         return self.ticket_id
 

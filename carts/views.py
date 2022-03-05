@@ -424,6 +424,8 @@ def ticket_nb(request):
                     event=event,
                     billing_profile=billing_profile, 
                     email=email, 
+                    first_name=first_name,
+                    last_name=last_name,
                     guest_list=guest_list)
                 ticket_list.append(new_ticket)
         cart_obj.active = False
