@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "33efcf1841022b66c3f5226e6c2a2f8d289f839250874a980b16f6586103bd07"
+            "sha256": "ce64d8659b9cdeaf86a846dad98db2b47f22e2776278502848288fd803b7b0a3"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -847,6 +847,13 @@
             "index": "pypi",
             "version": "==21.0.0"
         },
+        "pypng": {
+            "hashes": [
+                "sha256:76f8a1539ec56451da7ab7121f12a361969fe0f2d48d703d198ce2a99d6c5afd"
+            ],
+            "index": "pypi",
+            "version": "==0.0.21"
+        },
         "python-dateutil": {
             "hashes": [
                 "sha256:0123cacc1627ae19ddf3c27a5de5bd67ee4586fbdd6440d9748f8abb483d3e86",
@@ -878,6 +885,13 @@
             ],
             "index": "pypi",
             "version": "==2021.3"
+        },
+        "qrcode": {
+            "hashes": [
+                "sha256:375a6ff240ca9bd41adc070428b5dfc1dcfbb0f2507f1ac848f6cded38956578"
+            ],
+            "index": "pypi",
+            "version": "==7.3.1"
         },
         "queuelib": {
             "hashes": [

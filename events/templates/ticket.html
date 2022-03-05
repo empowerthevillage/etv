@@ -8,7 +8,7 @@
             <div class="row center-align">
                 <img class="col s12" src="{% static 'img/footer-logo.png' %}" id="ticket-logo">
                 <p class="col s12 ticket-title">{{ object.event }} Ticket</p>
-                <p class="ticket-detail">Ticket Number: {{ object.ticket_id }}</p>
+                <p class="ticket-detail">Ticket ID: {{ object.ticket_id }}</p>
                 <p class="ticket-detail">{{ object.type }}</p>
                 <p class="ticket-detail">{{ object.email }}</p>
                 <img src="{{ object.get_qr_code_path }}" width=30%>
@@ -36,7 +36,7 @@
         font-size: 24px
     }
     p {
-        font-size: 16px
+        font-size: 20px
     }
     .ticket-card {
         width: 80%;
@@ -59,7 +59,7 @@
         font-size: 32px
     }
     p {
-        font-size: 22px
+        font-size: 24px
     }
     .ticket-card {
         width: 80%;

@@ -175,6 +175,18 @@
                     <p class="ticket-description">Let us know who's coming for speedier check-in!</p>
                     <div class="divider"></div>
                     <form id="guest-form">
+                      <div class="input-field col s6">
+                        <input id="ticketholder_first_name" name="first-name" type="text" required>
+                        <label for="ticketholder_first_name">Your First Name<b class="required">*</b></label>
+                      </div>
+                      <div class="input-field col s6">
+                        <input id="ticketholder_last_name" name="last-name" type="text" required>
+                        <label for="ticketholder_last_name">Your Last Name<b class="required">*</b></label>
+                      </div>
+                      <div class="input-field col s12">
+                        <input id="ticketholder_email" name="email" type="email" required>
+                        <label for="ticketholder_email">Your Email<b class="required">*</b></label>
+                      </div>
                       <div class="input-field col s12">
                         <i class="material-icons prefix">mode_edit</i>
                         <textarea id="ticket-guest-list" class="materialize-textarea" rows="4"></textarea>
@@ -273,65 +285,7 @@
                         </div>
                         </div>
                     </div>
-                    {% if not billing_address_id %}
-                    <div>
-                        {% if billing_addresses.count > 0 %}
-                        <div>
-                            <p class="p-title">Saved Billing Addresses</p>
-                            {% for address in billing_addresses %}
-                            <p>
-                            <label class="address-label">
-                                <input class="with-gap" name="billing-address-group" type="radio" value="{{ address.id }}"/>
-                                <span></span>{{ address.get_address }}
-                            </label>
-                            </p>
-                            {% endfor %}
-                            <input type="hidden" id="saved-billing-id">
-                        </div>
-                        <div style="margin-top: 15px; margin-bottom: 10px;font-family: oskar;">OR</div>
-                        {% endif %}
-                        <div class="btn" id="add-new-billing">Add New Billing Address</div>
-                        <div id="new-billing-address-form">
-                        
-                        <p class="p-title">New Billing Address</p>
-                            <div class="input-field" >
-                            <input type="text" name="name">
-                            <label>{{ billing_address_form.name.label }}</label>
-                            </div>
-                            <div class="input-field" >
-                                <input type="email" name="email">
-                                <label>{{ billing_address_form.email.label }}</label>
-                                </div>
-                            <div class="input-field" >
-                            <input type="text" name="address_line_1">
-                            <label>{{ billing_address_form.address_line_1.label }}</label>
-                            </div>
-                            <div class="input-field">
-                            <input type="text" name="address_line_2">
-                            <label>{{ billing_address_form.address_line_2.label }} (Optional)</label>
-                            </div>
-                            <div class="row">
-                            <div class="col s4 input-field" >
-                                <input type="text" name="city">
-                                <label>{{ billing_address_form.city.label }}</label>
-                            </div>
-                            <div class="col s4 input-field" >
-                              <select name="state" id="id_state">
-                                <option value=""></option>
-                                {% for key, value in states %}
-                                <option value="{{ key }}">{{ value }}</option>
-                                {% endfor %}
-                              </select>
-                                <label>{{ billing_address_form.state.label }}</label>
-                            </div>
-                            <div class="col s4 input-field">
-                                <input type="text" name="zip_code">
-                                <label>{{ billing_address_form.zip_code.label }}</label>
-                            </div>
-                            </div>
-                        </div>
-                        {% endif %}
-                    </div>
+                  
                         <input type="hidden" value="{{ event.pk }}" id="event-hidden-input-sponsor">
                         <div class="col s12 m10 offset-m1 xl6 offset-xl3" style="padding-left:0; padding-right: 0">
                         
@@ -1310,8 +1264,8 @@
       }).then(function (isReadyToPay) {
         if (isReadyToPay.result) {
           googleButton.addEventListener('click', function(event){
+            event.preventDefault();
             var totalPrice = String($('#final-total').attr('value'))
-            
             var paymentDataRequest = googlePaymentInstance.createPaymentDataRequest({
               transactionInfo: {
                 currencyCode: 'USD',
@@ -1431,9 +1385,10 @@
     ticketNB();
   }
   function ticketNB(){
-      var guestList = $('#guest-form').serialize()
-      var sponsorGuests = $('#sponsor-guest-request').val()
-      var billing_address = $('#billing-form').serialize()
+      var guestList = $('#ticket-guest-list').val()
+      var first_name = $('#ticketholder_first_name').val()
+      var last_name = $('#ticketholder_last_name').val()
+      var email = $('#ticketholder_email').val()
       var nonce = $('#nonce-input').val()
       var deviceData = $('device-data-input').val()
       var csrf_token = $('[name="csrfmiddlewaretoken"]').val()
@@ -1443,9 +1398,9 @@
         'guestList': guestList,
         'nonce': nonce,
         'deviceData': deviceData,
-        'billing_address': billing_address,
-        'sponsorGuests': sponsorGuests,
-        'email': $('input[name=email]').val(),
+        'email': email,
+        'first_name': first_name,
+        'last_name': last_name,
         'event': event
       }
       $.ajax({
@@ -1457,7 +1412,10 @@
             icon: 'success',
             title: 'Thank You!',
             text: 'You will receive an email with your tickets shortly!',
-          })
+            timer: 3000,
+          });
+          var delay = 3000
+          setTimeout(function(){ window.location.replace('/events/') }, delay);
         },
         error: function(data){
           Swal.fire({

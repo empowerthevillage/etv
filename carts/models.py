@@ -77,7 +77,7 @@ class cartItem(models.Model):
 class TicketCartManager(models.Manager):
     def new_or_get(self, request, event):
         cart_id = request.session.get("ticket_cart_id", None)
-        qs = self.get_queryset().filter(id=cart_id)
+        qs = self.get_queryset().filter(id=cart_id).filter(active=True)
         if qs.count() == 1:
             new_obj = False
             cart_obj = qs.first()
@@ -126,7 +126,10 @@ class TicketCart(models.Model):
         items = qs
         total = 0
         for x in items:
-            line_total = x.ticket.price * x.quantity
+            if x.ticket.on_sale:
+                line_total = x.ticket.sale_price * x.quantity
+            else:
+                line_total = x.ticket.price * x.quantity
             total += line_total
         for x in donations:
             line_total = x.amount
@@ -144,7 +147,10 @@ class ticketItem(models.Model):
         return self.ticket.price
 
     def get_total(self):
-        total = self.ticket.price * self.quantity
+        if self.ticket.on_sale:
+            total = self.ticket.sale_price * self.quantity
+        else:
+            total = self.ticket.price * self.quantity
         return total
         
     @property

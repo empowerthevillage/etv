@@ -25,12 +25,12 @@ gateway = settings.GATEWAY
 
 def send_test_email(request):
     send_mail(
-                'Test!',
-                'A successful test email has been sent',
-                'etvnotifications@gmail.com',
-                ['admin@empowerthevillage.org', 'chandler@eliftcreations.com', 'ayo@empowerthevillage.org'],
-                fail_silently=False
-            )
+        'Test!',
+        'A successful test email has been sent',
+        'etvnotifications@gmail.com',
+        ['chandler@eliftcreations.com'],
+        fail_silently=False
+    )
     return HttpResponse('mail sent')
 
 def mail_test(request):

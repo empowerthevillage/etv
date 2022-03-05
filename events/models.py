@@ -8,6 +8,11 @@ from itertools import islice
 from etv.utils import unique_ticket_id_generator, unique_slug_generator
 from billing.models import BillingProfile
 from tinymce.models import HTMLField
+import qrcode
+from PIL import Image, ImageDraw
+import qrcode.image.svg
+from io import BytesIO
+from django.core.files import File
 
 from ckeditor.fields import RichTextField
 from django_quill.fields import QuillField
@@ -96,6 +101,13 @@ class TicketType(models.Model):
         return self.sale
 
     @property
+    def get_price(self):
+        if self.sale == True:
+            return self.sale_price
+        else:
+            return self.price
+
+    @property
     def is_sponsorship(self):
         return self.sponsorship
 
@@ -165,5 +177,16 @@ class SingleTicket(models.Model):
 def ticket_pre_save_receiver(sender, instance, *args, **kwargs):
     if not instance.ticket_id:
         instance.ticket_id = unique_ticket_id_generator(instance)
+    if not instance.qr_code:
+        url = "https://www.empowerthevillage.org/events/ticket/%s" %(instance.ticket_id)
+        print(url)
+        code = qrcode.make(str(url))
+        canvas = Image.new("RGB", (415,415), "white")
+        draw = ImageDraw.Draw(canvas)
+        canvas.paste(code)
+        buffer = BytesIO()
+        canvas.save(buffer, "PNG")
+        instance.qr_code.save("qr-code-%s.png" %(instance.ticket_id),File(buffer),save=False)
+        canvas.close()
 
 pre_save.connect(ticket_pre_save_receiver, sender=SingleTicket)

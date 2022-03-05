@@ -80,8 +80,6 @@ def event_home(request):
     return render(request, "events-home.html", context)
 
 def event_detail(request, slug):
-    print('sanity')
-    print(slug)
     event = Event.objects.get(slug=slug)
     context = {
         'title':'ETV | %s' %(event.title),
@@ -279,7 +277,7 @@ def ticket_cart_update(request):
         item_obj.event = item_obj.ticket.event
 
     item_obj.save()
-    price = int(quantity) * item_obj.ticket.price
+    price = int(quantity) * item_obj.ticket.get_price
     event = item_obj.event
     data = {
         'price': '$%s' %(price),

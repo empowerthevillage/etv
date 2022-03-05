@@ -1,5 +1,6 @@
 from django.conf import settings
 from django.http import JsonResponse, HttpResponseRedirect
+from django.template.loader import render_to_string
 from django.shortcuts import render
 from django.shortcuts import redirect
 from .models import *
@@ -389,11 +390,14 @@ def checkout_done(request):
 def ticket_nb(request):
     billing_profile, billing_profile_created = BillingProfile.objects.new_or_get(request)
     if billing_profile is None:
-        email = request.POST.get('email')
+        email = request.POST.get('guestList[email]')
         request.session['guest_email'] = email
         billing_profile, billing_profile_created = BillingProfile.objects.new_or_get(request)
     else:
         email = billing_profile.email
+    email = request.POST.get('email')
+    first_name = request.POST.get('first_name')
+    last_name = request.POST.get('last_name')
     event_pk = request.POST.get('event')
     event = Event.objects.filter(pk=event_pk).first()
     cart_obj = TicketCart.objects.new_or_get(request, event)
@@ -415,9 +419,25 @@ def ticket_nb(request):
             batch_size = x.quantity
             ticket = x.ticket
             for i in range(batch_size):
-                new_ticket = SingleTicket.objects.create(type=ticket, billing_profile=billing_profile, email=email, guest_list=guest_list)
+                new_ticket = SingleTicket.objects.create(
+                    type=ticket,
+                    event=event,
+                    billing_profile=billing_profile, 
+                    email=email, 
+                    guest_list=guest_list)
                 ticket_list.append(new_ticket)
-        sweetify.success(request, title='Thank you!', icon='success', text="Your tickets will be emailed to you shortly!", button='OK', timer=4000)
+        cart_obj.active = False
+        cart_obj.save()
+        confirmation_subject = 'ETV Ticket Purchase Confirmation'
+        from_email = 'etvnotifications@gmail.com'
+        confirmation_content = render_to_string('ticket-email.html',
+        {
+            'tickets': ticket_list,
+            'event': event
+        })
+        confirmation_plain_text = 'View email in browser'      
+        
+        send_mail(confirmation_subject, confirmation_plain_text, from_email, [str(email)], html_message=confirmation_content)
         send_mail(
             'New %s Ticket Purchase' %(event),
             str('A ticket purchase has been successfully processed! Purchaser: '+ str(email)),
