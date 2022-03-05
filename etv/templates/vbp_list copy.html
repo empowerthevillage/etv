@@ -45,7 +45,7 @@
                     <div class="carousel" id="carousel-sm">
                         
                         {% for vbp_book in covers_qs %}
-                            <div class="carousel-item" id="carousel{{ vbp_book.state }}" name="US-{{ vbp_book.state }}" style="background-image:url({{ vbp_book.cover.url }}); background-size: 100%; cursor: pointer;"></div>
+                            <div class="carousel-item c1" id="carousel{{ vbp_book.state }}" name="US-{{ vbp_book.state }}" style="background-image:url({{ vbp_book.cover.url }}); background-size: 100%; cursor: pointer;"></div>
                         {% endfor %}
                     </div>
                 </div>
@@ -317,9 +317,15 @@
             <p><b>ETV is already promoting <b style="color:#13b852">~20,000 businesses across 20 different states for free</b> and the Village Black Pages has garnered 1000s of searches in less than 6 months since its launch in 2020!</b></p>
         </div>
         <ul>
-            <li class="divider" style="margin-top:0px; margin-bottom: 20px; width:80%; margin-left: 10%"></li>
+            <li class="divider" style="margin-top:0px; margin-bottom: -70px; width:80%; margin-left: 10%"></li>
         </ul>
         
+            <div class="carousel" id="carousel-cr">
+                {% for vbp_book in covers_qs %}
+                    <div class="carousel-item c2" id="carousel{{ vbp_book.state }}-2" name="US-{{ vbp_book.state }}" style="background-image:url({{ vbp_book.cover.url }}); background-size: 100%; cursor: pointer;"></div>
+                {% endfor %}
+            </div>
+                <div class="divider" style="width:70%; margin-left:15%"></div>
         <div class="row" id="cover-grid">
             <div class="vbp-text" style="padding: 10px 15%">
                 <p class="center-align map-helper-text" style="font-weight:500; color:#bf1e2d">Select a cover to explore the Village Black Pages!</p>
@@ -811,9 +817,9 @@ $('svg').resize(function(event){
     event.preventDefault();
 })
     $(function() {
-    $(".carousel-item").click(function() {
+    $(".c1").click(function() {
             
-            var carouselState = $(".carousel-item.active").attr("name");
+            var carouselState = $(".c1.active").attr("name");
             var data = {
                 'state': carouselState,
             }
@@ -851,7 +857,45 @@ $('svg').resize(function(event){
             
         })
     });
-    
+    $(".c2").click(function() {
+            
+            var carouselState = $(".c2.active").attr("name");
+            var data = {
+                'state': carouselState,
+            }
+            $('#cover-grid').addClass('hidden')
+            $('#vbp-grid-display-all').removeClass('hidden')
+            var instance = M.Tabs.getInstance($('.vbp-tabs'));
+            instance.select('vbp-resources');
+            var state = data
+            $.ajax({
+                data: data,
+                state: state,
+                url: '/village-black-pages/get-state',
+                beforeSend: function(){
+                    $('.preloader').show();
+                    $('#flipbook-mobile-container').hide();
+                    $('#flipbook-container').hide();
+                },
+                method: "GET",
+                success: function(data) {
+                    $('.preloader').hide();
+                    $('#book').html(data);
+                    $('#mobile-book').html(data);
+                    $('#cover-page').attr('value', carouselState);
+                    $('#cover-page-mobile').attr('value', carouselState);
+                    $('#filter-submit').attr('id', 'filter-submit-state'+ carouselState +'');
+                    $('#vbp-flipbook').attr('value', carouselState);
+                    $('#vbp-flipbook-mobile').attr('value', carouselState);
+                    $('#filter-form-state').attr('value', carouselState);
+                    $('#filter-form-state-mobile').attr('value', carouselState);
+                }
+            })
+            $([document.documentElement, document.body]).animate({
+            scrollTop: $("#book").offset().top
+            }, 500);
+            
+        })
     $('#vbp-grid-display-all').on('click', function(){
         
         $('#cover-grid').toggleClass('hidden');

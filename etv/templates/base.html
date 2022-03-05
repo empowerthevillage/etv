@@ -97,11 +97,11 @@
                     <div class="navbar-slash"> | </div>
                   <a class="main-nav-link ul-effect valign-wrapper {% if request.path == contact_url %}active{% endif %}" href="{{ contact_url }}">Contact</a>
                     <div class="navbar-slash"> | </div>
-                    <a class="main-nav-link dropdown-trigger ul-effect valign-wrapper" data-target='top-dropdown-sp'>Programs</a>
+                  <a class="main-nav-link dropdown-trigger ul-effect valign-wrapper" data-target='top-dropdown-sp'>Programs</a>
                     <div class="navbar-slash"> | </div>
-                    <a class="main-nav-link ul-effect valign-wrapper {% if request.path == events_url %}active{% endif %}" href="{{ events_url }}">Events</a>
-                    <div class="navbar-slash"> | </div>
-                    <a class="main-nav-link ul-effect valign-wrapper {% if request.path == merchandise_url %}active{% endif %}" href="{{ merchandise_url }}">Shop</a>
+                  <a class="main-nav-link ul-effect valign-wrapper {% if request.path == events_url %}active{% endif %}" href="{{ events_url }}">Events</a>
+                   
+                  
                   
                    
               </div>
@@ -110,18 +110,19 @@
               <div class="right valign-wrapper" style="height:100%">
                 
                   {% if request.user.is_authenticated %}
-                 
-                    <a href="{{ account_url }}" id="account-icon"><i class="material-icons" style="color: grey; font-size: 36px; padding-top:30px;padding-left:10px">account_circle</i></a>
-                    
-                  <div class="navbar-slash"> | </div>
+                  <a class="main-nav-link ul-effect valign-wrapper {% if request.path == merchandise_url %}active{% endif %}" href="{{ merchandise_url }}">Shop</a>
+                  <a href="{{ account_url }}" id="account-icon"><i class="material-icons" style="color: grey; font-size: 36px; padding-top:30px;padding-left:10px">account_circle</i></a>
+                    <div class="navbar-slash"> | </div>
                   <a href="{{ logout_url }}" class="main-nav-link ul-effect valign-wrapper"> Logout</a>
-                  <div class="navbar-slash"> | </div>
+                    <div class="navbar-slash"> | </div>
                   {% else %}
-                  <a class="main-nav-link valign-wrapper ul-effect {% if request.path == login_url %}active{% endif %}" href="{{ login_url }}" style="">Login</a>
+                 
+                  <a class="main-nav-link ul-effect valign-wrapper {% if request.path == merchandise_url %}active{% endif %}" href="{{ merchandise_url }}">Shop</a>
                   <div class="navbar-slash"> | </div>
-                  <a class="main-nav-link valign-wrapper ul-effect {% if request.path == register_url %}active{% endif %}" href="{{ register_url }}" style="">Register</a>
+                  <a class="main-nav-link valign-wrapper ul-effect {% if request.path == login_url %}active{% endif %}" href="{{ login_url }}">Login</a>
                   <div class="navbar-slash"> | </div>
                   <a class="main-nav-link valign-wrapper ul-effect" style="cursor: pointer" id="join-village-topnav">Join</a>
+                  <div class="navbar-slash"> | </div>
                   {% endif %}
                 
                 <a class="btn btn-large waves-effect waves-light donate-btn-navbar" href="{{ donate_url }}" id="donate-btn-navbar">DONATE</a>
