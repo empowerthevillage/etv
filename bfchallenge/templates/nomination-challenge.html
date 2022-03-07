@@ -56,7 +56,7 @@
                 <label>{{ nomination_form.city.label }}<b>*</b></label>
               </div>
               <div class="input-field col s12 m6 l4"  id="state-select">
-                  <select name="state">
+                  <select name="state" required>
                     <option value="" disabled selected>State</option>
                     {% for x,y in states %}
                     <option value="{{ x }}">{{ y }}</option>
@@ -87,17 +87,391 @@
               </div>
             </div>
             <div class="row" style="margin-bottom: 0">
-                <div class="input-field col s12 l6">
-                  {{ nomination_form.category }}
-                  <label>{{ nomination_form.category.label }}<b>*</b></label>
+               
+              
+              <div class="input-field col s12 l6">
+                <select name="category" id="category-select">
+                    <option value="" selected>Choose A Category</option>
+                    {% for category,verbose in nomination_form.get_categories %}
+                    <option value="{{ category }}">{{ verbose }}</option>
+                    {% endfor %}
+                    </select>
+                    <label>Category<b class="required">*</b></label>
                 </div>
-                <div class="input-field col s12 l6">
-                  {{ nomination_form.subcategory }}
-                  <label>{{ nomination_form.subcategory.label }}</label>
+                <div class="input-field hidden col s12 l6 subcat-div" cat="beauty">
+                    <select name="subcategory-disabled">
+                        <option value="" selected>Choose A Subcategory</option>
+                        <option value="Barber" cat="Beauty & Personal Grooming">Barber</option>
+                        <option value="Bath & Body" cat="Beauty & Personal Grooming">Bath & Body</option>
+                        <option value="Beauty Salon" cat="Beauty & Personal Grooming">Beauty Salon</option>
+                        <option value="Beauty Supply/Hair & Accessories" cat="Beauty & Personal Grooming">Beauty Supply/Hair & Accessories</option>
+                        <option value="Cosmetics" cat="Beauty & Personal Grooming">Cosmetics</option>
+                        <option value="Nails" cat="Beauty & Personal Grooming">Nails</option>
+                    </select>
+                    <label>Subcategory</label>
+                </div>
+                <div class="input-field hidden col s12 l6 subcat-div" cat="books">
+                    <select name="subcategory-disabled">
+                        <option value="" selected>Choose A Subcategory</option>
+                        <option value="Book Store" cat="Books & Publishing">Book Store</option>
+                        <option value="Online Publication" cat="Books & Publishing">Online Publication</option>
+                        <option value="Publishing" cat="Books & Publishing">Publishing</option>
+                        <option value="Authors" cat="Books & Publishing">Authors</option>
+                    </select>
+                    <label>Subcategory</label>
+                </div>
+                <div class="input-field hidden col s12 l6 subcat-div" cat="cars">
+                    <select name="subcategory-disabled">
+                        <option value="" selected>Choose A Subcategory</option>
+                        <option value="Auto Dealership" cat="Cars & Automotive">Auto Dealership</option>
+                        <option value="Auto Repair/ Services" cat="Cars & Automotive">Auto Repair/ Services</option>
+                        <option value="Car Wash" cat="Cars & Automotive">Car Wash</option>
+                        <option value="Gas Station" cat="Cars & Automotive">Gas Station</option>
+                    </select>
+                    <label>Subcategory</label>
+                </div>
+                <div class="input-field hidden col s12 l6 subcat-div" cat="child">
+                    <select name="subcategory-disabled">
+                        <option value="" selected>Choose A Subcategory</option>
+                        <option value="Baby Products" cat="Childcare | Children's Services & Products">Baby Products</option>
+                        <option value="Childcare/Daycare/ Preschool" cat="Childcare | Children's Services & Products">Childcare/Daycare/ Preschool</option>
+                        <option value="Children’s Books" cat="Childcare | Children's Services & Products">Children’s Books</option>
+                        <option value=">Children’s Activities" cat="Childcare | Children's Services & Products">Children’s Activities</option>
+                    </select>
+                    <label>Subcategory</label>
+                </div>
+                <div class="input-field hidden col s12 l6 subcat-div" cat="cleaning">
+                    <select name="subcategory-disabled">
+                        <option value="" selected>Choose A Subcategory</option>
+                        <option value="Cleaning Products" cat="Cleaning">Cleaning Products</option>
+                        <option value="Dry Cleaning" cat="Cleaning">Dry Cleaning</option>
+                        <option value="Laundry" cat="Cleaning">Laundry</option>
+                    </select>
+                    <label>Subcategory</label>
+                </div>
+                <div class="input-field hidden col s12 l6 subcat-div" cat="clothing">
+                    <select name="subcategory-disabled">
+                        <option value="" selected>Choose A Subcategory</option>
+                        <option value="Apparel" cat="Clothing & Fashion">Apparel</option>
+                        <option value="Stylist" cat="Clothing & Fashion">Stylist</option>
+                        <option value="Footwear" cat="Clothing & Fashion">Footwear</option>
+                        <option value="Fabric/Yarn" cat="Clothing & Fashion">Fabric/Yarn</option>
+                    </select>
+                    <label>Subcategory</label>
+                </div>
+                <div class="input-field hidden col s12 l6 subcat-div" cat="construction">
+                    <select name="subcategory-disabled">
+                        <option value="" selected>Choose A Subcategory</option>
+                        <option value="Appliance Repair" cat="Construction & Trades">Appliance Repair</option>
+                        <option value="Construction/ Engineering" cat="Construction & Trades">Construction/ Engineering</option>
+                        <option value="Electrical" cat="Construction & Trades">Electrical</option>
+                        <option value="HVAC" cat="Construction & Trades">HVAC</option>
+                        <option value="Plumbing" cat="Construction & Trades">Plumbing</option>
+                        <option value="Power Washing" cat="Construction & Trades">Power Washing</option>
+                        <option value="Roofing & Siding" cat="Construction & Trades">Roofing & Siding</option>
+                        <option value="Painting Services" cat="Construction & Trades">Painting Services</option>
+                    </select>
+                    <label>Subcategory</label>
+                </div>
+                <div class="input-field hidden col s12 l6 subcat-div" cat="education">
+                    <select name="subcategory-disabled">
+                        <option value="" selected>Choose A Subcategory</option>
+                        <option value="Tutoring/ Academic Planning" cat="Education">Tutoring/ Academic Planning</option>
+                        <option value="Driving/ Aviation" cat="Education">Driving/ Aviation</option>
+                        <option value="Enrichment" cat="Education">Enrichment</option>
+                    </select>
+                    <label>Subcategory</label>
+                </div>
+                <div class="input-field hidden col s12 l6 subcat-div" cat="eldercare">
+                    <select name="subcategory-disabled">
+                        <option value="" selected>Choose A Subcategory</option>
+                        <option value="Assisted Living/Nursing Home" cat="Eldercare">Assisted Living/Nursing Home</option>
+                        <option value="Home Health Care/ Nursing Services" cat="Eldercare">Home Health Care/ Nursing Services</option>
+                        <option value="Adult Day Care Center" cat="Eldercare">Adult Day Care Center</option>
+                        <option value="Cybersecurity" cat="Eldercare">Cybersecurity</option>
+                    </select>
+                    <label>Subcategory</label>
+                </div>
+                <div class="input-field hidden col s12 l6 subcat-div" cat="electronics">
+                    <select name="subcategory-disabled">
+                        <option value="" selected>Choose A Subcategory</option>
+                        <option value="Software Development" cat="Electronics & Technology">Software Development</option>
+                        <option value="Tech Support/ Repair" cat="Electronics & Technology">Tech Support/ Repair</option>
+                        <option value="Tech Products" cat="Electronics & Technology">Tech Products</option>
+                        <option value="Web Services" cat="Electronics & Technology">Web Services</option>
+                    </select>
+                    <label>Subcategory</label>
+                </div>
+                <div class="input-field hidden col s12 l6 subcat-div" cat="entertainment">
+                    <select name="subcategory-disabled">
+                        <option value="" selected>Choose A Subcategory</option>
+                        <option value="Bands/DJs/Performers" cat="Entertainment">Bands/DJs/Performers</option>
+                        <option value="Comedian" cat="Entertainment">Comedian</option>
+                        <option value="Event Planning/Services" cat="Entertainment">Event Planning/Services</option>
+                        <option value="Media" cat="Entertainment">Media</option>
+                        <option value="Paint & Sip" cat="Entertainment">Paint & Sip</option>
+                    </select>
+                    <label>Subcategory</label>
+                </div>
+                <div class="input-field hidden col s12 l6 subcat-div" cat="farming">
+                    <select name="subcategory-disabled">
+                        <option value="" selected>Choose A Subcategory</option>
+                        <option value="Farmer’s Market" cat="Farming & Agriculture">Farmer’s Market</option>
+                        <option value="Vineyard" cat="Farming & Agriculture">Vineyard</option>
+                    </select>
+                    <label>Subcategory</label>
+                </div>
+                <div class="input-field hidden col s12 l6 subcat-div" cat="grocery">
+                    <select name="subcategory-disabled">
+                        <option value="" selected>Choose A Subcategory</option>
+                        <option value="Bakery" cat="Grocery & Food Services">Bakery</option>
+                        <option value="Catering/ Chef" cat="Grocery & Food Services">Catering/ Chef</option>
+                        <option value="Coffee/Tea/Beverages" cat="Grocery & Food Services">Coffee/Tea/Beverages</option>
+                        <option value="Food Delivery Service" cat="Grocery & Food Services">Food Delivery Service</option>
+                        <option value="Ice Cream Parlor" cat="Grocery & Food Services">Ice Cream Parlor</option>
+                        <option value="Alcohol" cat="Grocery & Food Services">Alcohol</option>
+                        <option value="Specialty" cat="Grocery & Food Services">Specialty</option>
+                    </select>
+                    <label>Subcategory</label>
+                </div>
+                <div class="input-field hidden col s12 l6 subcat-div" cat="health">
+                    <select name="subcategory-disabled">
+                        <option value="" selected>Choose A Subcategory</option>
+                        <option value="Addiction Treatment" cat="Health & Wellness">Addiction Treatment</option>
+                        <option value="Chiropractor" cat="Health & Wellness">Chiropractor</option>
+                        <option value="Fitness/ Yoga" cat="Health & Wellness">Fitness/ Yoga</option>
+                        <option value="Spa/ Massage Therapy" cat="Health & Wellness">Spa/ Massage Therapy</option>
+                        <option value="Mental Health Support" cat="Health & Wellness">Mental Health Support</option>
+                        <option value="Nutrition" cat="Health & Wellness">Nutrition</option>
+                    </select>
+                    <label>Subcategory</label>
+                </div>
+                <div class="input-field hidden col s12 l6 subcat-div" cat="home">
+                    <select name="subcategory-disabled">
+                        <option value="" selected>Choose A Subcategory</option>
+                        <option value="Furniture" cat="Home & Garden">Furniture</option>
+                        <option value="Landscaping/Gardening" cat="Home & Garden">Landscaping/Gardening</option>
+                        <option value="Interior Design/ Home Staging" cat="Home & Garden">Interior Design/ Home Staging</option>
+                        <option value="Pest Control" cat="Home & Garden">Pest Control</option>
+                        <option value="Home Goods/Décor" cat="Home & Garden">Home Goods/Décor</option>
+                    </select>
+                    <label>Subcategory</label>
+                </div>
+                <div class="input-field hidden col s12 l6 subcat-div" cat="hotels">
+                    <select name="subcategory-disabled">
+                        <option value="" selected>Choose A Subcategory</option>
+                        <option value="Travel Agent" cat="Hotels & Hospitality | Travel">Travel Agent</option>
+                        <option value="Hospitality/Hotels/Inns" cat="Hotels & Hospitality | Travel">Hospitality/Hotels/Inns</option>
+                        <option value="Tours" cat="Hotels & Hospitality | Travel">Tours</option>
+                    </select>
+                    <label>Subcategory</label>
+                </div>
+                <div class="input-field hidden col s12 l6 subcat-div" cat="jewelry">
+                    <select name="subcategory-disabled">
+                        <option value="" selected>Choose A Subcategory</option>
+                        <option value="Accessories/ Handbags" cat="Jewelry & Accessories">Accessories/ Handbags</option>
+                        <option value="Fine Jewelry" cat="Jewelry & Accessories">Fine Jewelry</option>
+                    </select>
+                    <label>Subcategory</label>
+                </div>
+                <div class="input-field hidden col s12 l6 subcat-div" cat="legal">
+                    <select name="subcategory-disabled">
+                        <option value="" selected>Choose A Subcategory</option>
+                        <option value="Financial Services" cat="Legal & Financial Services">Financial Services</option>
+                        <option value="Notary" cat="Legal & Financial Services">Notary</option>
+                        <option value="Bail Bonds Service" cat="Legal & Financial Services">Bail Bonds Service</option>
+                        <option value="Legal Services (General)" cat="Legal & Financial Services">Legal Services (General)</option>
+                        <option value="Real Estate Law" cat="Legal & Financial Services">Real Estate Law</option>
+                        <option value="Estate Planning/Wills" cat="Legal & Financial Services">Estate Planning/Wills</option>
+                        <option value="Corporate Law" cat="Legal & Financial Services">Corporate Law</option>
+                        <option value="Insurance" cat="Legal & Financial Services">Insurance</option>
+                    </select>
+                    <label>Subcategory</label>
+                </div>
+                <div class="input-field hidden col s12 l6 subcat-div" cat="lifestyle">
+                    <select name="subcategory-disabled">
+                        <option value="" selected>Choose A Subcategory</option>
+                        <option value="Adult Novelties" cat="Lifestyle">Adult Novelties</option>
+                        <option value="CBD Products" cat="Lifestyle">CBD Products</option>
+                        <option value="Smoking & Paraphernalia" cat="Lifestyle">Smoking & Paraphernalia</option>
+                        <option value="Tarot" cat="Lifestyle">Tarot</option>
+                        <option value=">Piercing/ Tattoos" cat="Lifestyle">Piercing/ Tattoos</option>
+                    </select>
+                    <label>Subcategory</label>
+                </div>
+                <div class="input-field hidden col s12 l6 subcat-div" cat="marketing">
+                    <select name="subcategory-disabled">
+                        <option value="" selected>Choose A Subcategory</option>
+                        <option value="Advertising" cat="Marketing & Advertising">Advertising</option>
+                        <option value="Branding/ Graphic Design" cat="Marketing & Advertising">Branding/ Graphic Design</option>
+                        <option value="Marketing/ Digital Marketing" cat="Marketing & Advertising">Marketing/ Digital Marketing</option>
+                        <option value="Web Services/ Social Media" cat="Marketing & Advertising">Web Services/ Social Media</option>
+                    </select>
+                    <label>Subcategory</label>
+                </div>
+                <div class="input-field hidden col s12 l6 subcat-div" cat="medical">
+                    <select name="subcategory-disabled">
+                        <option value="" selected>Choose A Subcategory</option>
+                        <option value="Dental/ Orthodontics" cat="Medical Services">Dental/ Orthodontics</option>
+                        <option value="Medical Billing" cat="Medical Services">Medical Billing</option>
+                        <option value="Physical Therapy" cat="Medical Services">Physical Therapy</option>
+                        <option value="Speech Pathologist" cat="Medical Services">Speech Pathologist</option>
+                        <option value="Diagnostic Testing/Labs" cat="Medical Services">Diagnostic Testing/Labs</option>
+                        <option value="Vision" cat="Medical Services">Vision</option>
+                        <option value="Healthcare Products" cat="Medical Services">Healthcare Products</option>
+                        <option value="Primary Care" cat="Medical Services">Primary Care</option>
+                        <option value="OB/GYNs" cat="Medical Services">OB/GYNs</option>
+                        <option value="Pediatrics" cat="Medical Services">Pediatrics</option>
+                        <option value="Dermatology" cat="Medical Services">Dermatology</option>
+                        <option value="Psychiatry/Mental Health" cat="Medical Services">Psychiatry/Mental Health</option>
+                    </select>
+                    <label>Subcategory</label>
+                </div>
+                <div class="input-field hidden col s12 l6 subcat-div" cat="other">
+                    <select name="subcategory-disabled">
+                        <option value="" selected>Choose A Subcategory</option>
+                        <option value="Antiques & Collectibles" cat="Other">Antiques & Collectibles</option>
+                        <option value="Guns & Shooting Ranges" cat="Other">Guns & Shooting Ranges</option>
+                        <option value="Gifts & Stationery" cat="Other">Gifts & Stationery</option>
+                        <option value="Mortuary/ Funeral Services" cat="Other">Mortuary/ Funeral Services</option>
+                        <option value="Marketplace" cat="Other">Marketplace</option>
+                        <option value="Translation Services" cat="Other">Translation Services</option>
+                    </select>
+                    <label>Subcategory</label>
+                </div>
+                <div class="input-field hidden col s12 l6 subcat-div" cat="packaging">
+                    <select name="subcategory-disabled">
+                        <option value="" selected>Choose A Subcategory</option>
+                        <option value="Office Supplies" cat="Packaging | Delivery | Shipping">Office Supplies</option>
+                        <option value="Courier" cat="Packaging | Delivery | Shipping">Courier</option>
+                        <option value="Printing" cat="Packaging | Delivery | Shipping">Printing</option>
+                        <option value="Shipping" cat="Packaging | Delivery | Shipping">Shipping</option>
+                    </select>
+                    <label>Subcategory</label>
+                </div>
+                <div class="input-field hidden col s12 l6 subcat-div" cat="pets">
+                    <select name="subcategory-disabled">
+                        <option value="" selected>Choose A Subcategory</option>
+                        <option value="Dog Training" cat="Pets & Animal Care">Dog Training</option>
+                        <option value="Pet Sitting/ Walking" cat="Pets & Animal Care">Pet Sitting/ Walking</option>
+                        <option value="Veterinarian" cat="Pets & Animal Care">Veterinarian</option>
+                        <option value="Pet Grooming" cat="Pets & Animal Care">Pet Grooming</option>
+                    </select>
+                    <label>Subcategory</label>
+                </div>
+                <div class="input-field hidden col s12 l6 subcat-div" cat="photography">
+                    <select name="subcategory-disabled">
+                        <option value="" selected>Choose A Subcategory</option>
+                        <option value="Videography" cat="Photography & Video">Videography</option>
+                        <option value="Photography" cat="Photography & Video">Photography</option>
+                    </select>
+                    <label>Subcategory</label>
+                </div>
+                <div class="input-field hidden col s12 l6 subcat-div" cat="professional">
+                    <select name="subcategory-disabled">
+                        <option value="" selected>Choose A Subcategory</option>
+                        <option value="Consulting" cat="Professional Services">Consulting</option>
+                        <option value="Human Resources" cat="Professional Services">Human Resources</option>
+                        <option value="IT" cat="Professional Services">IT</option>
+                        <option value="Recruiting/ Staffing" cat="Professional Services">Recruiting/ Staffing</option>
+                        <option value="Private Investigator" cat="Professional Services">Private Investigator</option>
+                        <option value="Writing Services" cat="Professional Services">Writing Services</option>
+                        <option value="Speakers" cat="Professional Services">Speakers</option>
+                        <option value="Administrative Support" cat="Professional Services">Administrative Support</option>
+                    </select>
+                    <label>Subcategory</label>
+                </div>
+                <div class="input-field hidden col s12 l6 subcat-div" cat="realestate">
+                    <select name="subcategory-disabled">
+                        <option value="" selected>Choose A Subcategory</option>
+                        <option value="Developers" cat="Real Estate">Developers</option>
+                        <option value="Home Inspection" cat="Real Estate">Home Inspection</option>
+                        <option value="Mortgage Consulting" cat="Real Estate">Mortgage Consulting</option>
+                        <option value="Property Management" cat="Real Estate">Property Management</option>
+                        <option value="Real Estate Agents/ Brokers" cat="Real Estate">Real Estate Agents/ Brokers</option>
+                        <option value="Title Services" cat="Real Estate">Title Services</option>
+                    </select>
+                    <label>Subcategory</label>
+                </div>
+                <div class="input-field hidden col s12 l6 subcat-div" cat="recreation">
+                    <select name="subcategory-disabled">
+                        <option value="" selected>Choose A Subcategory</option>
+                        <option value="Arcade/Laser Tag" cat="Recreation & Sports">Arcade/Laser Tag</option>
+                        <option value="Sports" cat="Recreation & Sports">Sports</option>
+                        <option value="Martial Arts" cat="Recreation & Sports">Martial Arts</option>
+                        <option value="Sports Equipment" cat="Recreation & Sports">Sports Equipment</option>
+                        <option value="Pool Tables" cat="Recreation & Sports">Pool Tables</option>
+                        <option value="Gaming" cat="Recreation & Sports">Gaming</option>
+                    </select>
+                    <label>Subcategory</label>
+                </div>
+                <div class="input-field hidden col s12 l6 subcat-div" cat="restaurants">
+                    <select name="subcategory-disabled">
+                        <option value="" selected>Choose A Subcategory</option>
+                        <option value="Bar/Night Club" cat="Restaurants & Bars | Event Spaces">Bar/Night Club</option>
+                        <option value="BBQ/ Soul Food Restaurant" cat="Restaurants & Bars | Event Spaces">BBQ/ Soul Food Restaurant</option>
+                        <option value="Café" cat="Restaurants & Bars | Event Spaces">Café</option>
+                        <option value="Caribbean Restaurant" cat="Restaurants & Bars | Event Spaces">Caribbean Restaurant</option>
+                        <option value="Creole/Cajun Restaurant" cat="Restaurants & Bars | Event Spaces">Creole/Cajun Restaurant</option>
+                        <option value="Ethiopian/Eritrean Restaurant" cat="Restaurants & Bars | Event Spaces">Ethiopian/Eritrean Restaurant</option>
+                        <option value="Venues/Event Spaces" cat="Restaurants & Bars | Event Spaces">Venues/Event Spaces</option>
+                        <option value="West African Restaurant" cat="Restaurants & Bars | Event Spaces">West African Restaurant</option>
+                        <option value="Food Trucks/Carts" cat="Restaurants & Bars | Event Spaces">Food Trucks/Carts</option>
+                    </select>
+                    <label>Subcategory</label>
+                </div>
+                <div class="input-field hidden col s12 l6 subcat-div" cat="transportation">
+                    <select name="subcategory-disabled">
+                        <option value="" selected>Choose A Subcategory</option>
+                        <option value="Commuter/Shuttle Services" cat="Transportation & Trucking">Commuter/Shuttle Services</option>
+                        <option value="Mortuary Transport" cat="Transportation & Trucking">Mortuary Transport</option>
+                        <option value="Moving Services" cat="Transportation & Trucking">Moving Services</option>
+                        <option value="Parking" cat="Transportation & Trucking">Parking</option>
+                        <option value="Taxi" cat="Transportation & Trucking">Taxi</option>
+                        <option value="Limo/ Party Bus" cat="Transportation & Trucking">Limo/ Party Bus</option>
+                        <option value="Trucking" cat="Transportation & Trucking">Trucking</option>
+                        <option value="Valet" cat="Transportation & Trucking">Valet</option>
+                    </select>
+                    <label>Subcategory</label>
+                </div>
+                <div class="input-field hidden col s12 l6 subcat-div" cat="visual">
+                    <select name="subcategory-disabled">
+                        <option value="" selected>Choose A Subcategory</option>
+                        <option value="Art Gallery/ Museum" cat="Visual & Performing Arts | Culture">Art Gallery/ Museum</option>
+                        <option value="Dance Studios/Lessons" cat="Visual & Performing Arts | Culture">Dance Studios/Lessons</option>
+                        <option value="Artists" cat="Visual & Performing Arts | Culture">Artists</option>
+                        <option value="Theater/Acting Lessons" cat="Visual & Performing Arts | Culture">Theater/Acting Lessons</option>
+                        <option value="Music Lessons/Instruments" cat="Visual & Performing Arts | Culture">Music Lessons/Instruments</option>
+                    </select>
+                    <label>Subcategory</label>
+                </div>
+              
+                <div class="input-field col s12 l6" id="disabled-subcat">
+                    <select disabled>
+                        <option>Choose A Subcategory</option>
+                    </select>
+                    <label>Subcategory</label>
                 </div>
               </div>
-              
-          
+                <div class="left-align">
+                    <p>This Business Operates:</p>
+                <p>
+                    <label>
+                        <input class="with-gap" name="online-only" type="radio" value="yes"/>
+                        <span>Online Only</span>
+                    </label>
+                </p>
+                <p style="margin-bottom: 30px">
+                    <label>
+                        <input class="with-gap" name="online-only" type="radio" value="no"/>
+                        <span>Physical Presence</span>
+                    </label>
+                </p>
+                </div>
+
+
+
+
             
           
             <div class="left-align">
@@ -411,6 +785,15 @@
         'Wyoming': null,
       },
     });
+    $('#category-select').on('change', function(){
+        var category = $(this).find(':selected').val()
+        $('#disabled-subcat').hide()
+        $('[cat="'+ category +'"]').removeClass('hidden')
+        $('.subcat-div[cat="'+ category +'"] select').attr('name', 'subcategory')
+        $('.subcat-div[cat!="'+ category +'"]').addClass('hidden')
+        $('.subcat-div[cat!="'+ category +'"] select').attr('name', 'subcategory-disabled')
+    });
+    
   });
   </script>
   
