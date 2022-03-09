@@ -53,11 +53,11 @@
                                     </div>
                                     {% if obj.get_sizes|length > 1 %}
                                     <div class="row size-row">
-                                        <div class="input-field size-field">
+                                        <div class="input-field size-field" style="z-index:500">
                                             <select class="size-select">
                                                 <option value="" selected style="color: grey">Choose Size</option>
                                                 {% for size in obj.get_sizes %}
-                                                    <option value="{{ size }}">{{ size }}</option>
+                                                    <option value="{{ size }}" style="z-index:500">{{ size }}</option>
                                                 {% endfor %}
                                             </select>
                                         </div>
