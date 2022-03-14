@@ -69,15 +69,16 @@
                                         {% endfor %}
                                     </div>
                                     {% if object.get_sizes|length > 1 %}
-                                    <div class="row size-row" style="margin-bottom: 0">
-                                        <div class="input-field size-field">
-                                            <select class="size-select">
-                                                <option value="" selected style="color: grey">Choose Size</option>
-                                                {% for size in object.get_sizes %}
-                                                    <option value="{{ size.size }}">{{ size.size }}</option>
-                                                {% endfor %}
-                                            </select>
-                                        </div>
+                                   
+                                    <div class="row size-row" style="margin-bottom: 20;">
+                                        {% for size in object.get_sizes %}
+                                            <p style="margin-right: 10px">
+                                                <label>
+                                                  <input name="size" type="radio" value="{{ size.size }}"/>
+                                                  <span>{{ size.size }}</span>
+                                                </label>
+                                            </p>
+                                        {% endfor %}
                                     </div>
                                     {% else %}
                                     <div class="size-select" style="display:none">
@@ -519,7 +520,7 @@
         productForm.submit(function(event){
             event.preventDefault();
             var thisForm = $(this);
-            var size = $(thisForm).find("option:selected").val()
+            var size = $(thisForm).find("input[name=size]:checked").val()
             var color = $(thisForm).find("input[class=select-color]:checked").val()
             var type = $(thisForm).children('.product-id-hidden').val()
 

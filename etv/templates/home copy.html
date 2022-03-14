@@ -32,6 +32,8 @@
 {% url 'shop' as shop_url %}
 {% url 'merchandise:list' as merchandise_url %}
 {% url 'events:home' as events_url %}
+{% url 'ven-home' as ven_url %}
+{% url 'education:village-at-work' as vaw_url %}
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 <!-- JQuery Mask -->
@@ -84,30 +86,30 @@
       </script>
       <main>
         <nav id="navbar" class="nav-extended">
-          <div class="nav-wrapper z-depth-0" id="navbar-div">
+          <div class="nav-wrapper z-depth-0" id="navbar-div" style="display: flex; align-items: center;">
               
             <i class="left sidenav-trigger material-icons" data-target="side-nav" id="sidenav-menu-trigger" style="z-index: 2;">menu</i>
-      
+            <a href="{{ home_url }}" class="brand-logo"><img src="{% static 'img/logo.jpeg' %}" height=110></a>
               <div class="left nav-row-left valign-wrapper" id="nav-top-left"> 
                 
-                  <a class="main-nav-link ul-effect valign-wrapper {% if request.path == home_url %}active{% endif %}" href="{{ home_url }}">Home</a>
+              </div>
+              <div class="center-align nav-tagline" style="font-size: 14px;height: 100%; line-height: 24px; position: absolute; left: 190px; top: 25px">
+                  <h7 style="color:black; text-align: center; font-family: oskar; font-size: 16px"><b style="color:#bf1e2d; font-weight: 300">Restoring</b></h7><br>
+                    <h7 style="color:black; text-align: center; font-family: oskar; font-size: 16px">Prosperity, Peace & Power</h7><br>
+                      <h7 style="color:black; text-align: center; font-family: oskar; font-size: 16px"><b style="color:#01a650; font-weight: 300">To The Black Community</b></h7>
+
+              </div>
+       
+              <div class="right valign-wrapper" style="height:100%; position: absolute; right: 20px">
+                <a class="main-nav-link ul-effect valign-wrapper {% if request.path == home_url %}active{% endif %}" href="{{ home_url }}">Home</a>
                     <div class="navbar-slash"> | </div>
                   <a class="main-nav-link ul-effect valign-wrapper {% if request.path == about_url %}active{% endif %}" href="{{ about_url }}">About</a>
                     <div class="navbar-slash"> | </div>
-                  <a class="main-nav-link ul-effect valign-wrapper {% if request.path == contact_url %}active{% endif %}" href="{{ contact_url }}">Contact</a>
-                    <div class="navbar-slash"> | </div>
+                  
                   <a class="main-nav-link dropdown-trigger ul-effect valign-wrapper" data-target='top-dropdown-sp'>Programs</a>
                     <div class="navbar-slash"> | </div>
-                  <a class="main-nav-link ul-effect valign-wrapper {% if request.path == events_url %}active{% endif %}" href="{{ events_url }}">Events</a>
-                   
-                  
-                  
-                   
-              </div>
-                <a href="{{ home_url }}" class="brand-logo"><img src="{% static 'img/logo.jpeg' %}" height=110></a>
-       
-              <div class="right valign-wrapper" style="height:100%">
-                
+                    <a class="main-nav-link valign-wrapper ul-effect" style="cursor: pointer" id="join-village-topnav">Join</a>
+                  <div class="navbar-slash"> | </div>
                   {% if request.user.is_authenticated %}
                   <a class="main-nav-link ul-effect valign-wrapper {% if request.path == merchandise_url %}active{% endif %}" href="{{ merchandise_url }}">Shop</a>
                   <a href="{{ account_url }}" id="account-icon"><i class="material-icons" style="color: grey; font-size: 36px; padding-top:30px;padding-left:10px">account_circle</i></a>
@@ -115,15 +117,14 @@
                   <a href="{{ logout_url }}" class="main-nav-link ul-effect valign-wrapper"> Logout</a>
                     <div class="navbar-slash"> | </div>
                   {% else %}
-                 
                   <a class="main-nav-link ul-effect valign-wrapper {% if request.path == merchandise_url %}active{% endif %}" href="{{ merchandise_url }}">Shop</a>
                   <div class="navbar-slash"> | </div>
                   <a class="main-nav-link valign-wrapper ul-effect {% if request.path == login_url %}active{% endif %}" href="{{ login_url }}">Login</a>
                   <div class="navbar-slash"> | </div>
-                  <a class="main-nav-link valign-wrapper ul-effect" style="cursor: pointer" id="join-village-topnav">Join</a>
-                  <div class="navbar-slash"> | </div>
+            
                   {% endif %}
-                
+                <a class="main-nav-link ul-effect valign-wrapper {% if request.path == contact_url %}active{% endif %}" href="{{ contact_url }}">Contact</a>
+                    
                 <a class="btn btn-large waves-effect waves-light donate-btn-navbar" href="{{ donate_url }}" id="donate-btn-navbar">DONATE</a>
               </div>
           </div>
@@ -132,8 +133,9 @@
               <li><a class="center-align valign-wrapper {% if request.path == efbf_url %}active{% endif %}" href="{{ pillars_url }}">Strategic Pillars</a></li>
                 <li><a class="center-align valign-wrapper {% if request.path == efbf_url %}active{% endif %}" href="{{ efbf_url }}">MAKE EVERY FRIDAY, BLACK FRIDAY!™</a></li>
                 <li><a class="center-align valign-wrapper {% if request.path == vbp_url %}active{% endif %}" href="{{ vbp_url }}" style="padding-left:10px">VILLAGE BLACK PAGES™</a></li>
+                <li><a class="center-align valign-wrapper {% if request.path == voting_url %}active{% endif %}" data-target="nav-dropdown-pp" href="{{ ven_url }}">VILLAGE EMPOWERMENT NETWORK™</a></li>
+                <li><a class="center-align valign-wrapper {% if request.path == voting_url %}active{% endif %}" data-target="nav-dropdown-pp" href="{{ ven_url }}">VILLAGE@WORK™</a></li>
                 <li><a class="center-align valign-wrapper {% if request.path == bf_home_url %}active{% endif %}" data-target="nav-dropdown-bf" href="{{ bf_home_url }}">BLACK FRIDAY CHALLENGE™</a></li>
-                <li><a class="center-align valign-wrapper {% if request.path == voting_url %}active{% endif %}" data-target="nav-dropdown-pp" href="{{ voting_url }}">OPERATION: BALLOT BOX™</a></li>
             </ul>
           </div>
         </div>
@@ -335,11 +337,17 @@
           <div class="nav-content z-depth-1" style="margin-top: 10px">
             <ul class="tabs tabs-transparent tabs-fixed-width z-depth-2 tabs-navigation-menu">
               <li class="tab"><a class="nav-tab dropdown-trigger {% if request.path == pillars_url %}active{% endif %}" data-target="nav-dropdown-pillars">Strategic Pillars</a></li>
-              <li class="tab"><a class="nav-tab dropdown-trigger {% if request.path == pillars_url %}active{% endif %}" data-target="nav-dropdown-sp">Programs</a></li>
-              <li class="tab"><a style="margin-left: 6px" class="nav-tab {% if request.path == efbf_url %}active{% endif %}" href="{{ efbf_url }}">Make Every Friday, Black Friday™</a></li>
-              <li class="tab"><a style="margin-left: 6px" class="nav-tab {% if request.path == vbp_url %}active{% endif %}" href="{{ vbp_url }}">Village Black Pages™</a></li>
-              <li class="tab"><a style="margin-left: 6px" class="nav-tab {% if request.path == voting_url %}active{% endif %}" href="{{ voting_url }}">Operation: Ballot Box™</a></li>
+              <li class="tab"><a style="margin-left: 6px" class="nav-tab {% if request.path == efbf_url %}active{% endif %}" href="{{ efbf_url }}">Make Every Friday, Black Friday®</a></li>
+              <li class="tab"><a style="margin-left: 6px" class="nav-tab {% if request.path == vbp_url %}active{% endif %}" href="{{ vbp_url }}">Village Black Pages®</a></li>
+              <li class="tab"><a style="margin-left: 6px" class="nav-tab {% if request.path == ven_url %}active{% endif %}" href="{{ ven_url }}">Village Empowerment Network™</a></li>
+              <li class="tab"><a style="margin-left: 6px" class="nav-tab {% if request.path == vaw_url %}active{% endif %}" href="{{ vaw_url }}">Village@Work™</a></li>
+              
             </ul>
+            <style>
+              .tabs-navigation-menu li a {
+                padding: 0px 5px !important
+              }
+            </style>
           </div>
           
         <div style="z-index: -1">
@@ -658,23 +666,18 @@
         </div> 
         <div class="divider" style="border-bottom: solid 1px rgb(233, 233, 233); margin-top: 30px; width: 80%; margin-left: 10%"></div>
         <div class="container center-align">
-          <h6 class="center-align" style="color: #bf1e2d">ETV Press Release</h6>
+          
           <div class="row">
-            <div class="col s12 m6 offset-m3 l6">
-              <img src="{% static 'img/ptss-flyer.jpg' %}" width="100%" style="margin-top: 20px">
-    
+            <div class="col s12 m8 l6 offset-m2 offset-l3">
+                <a href="https://issuu.com/empowerthevillage/docs/press_release_empower_the_village_says_february_is?mode=window" target="_blank"><img class="z-depth-2" src="{% static 'img/ptss-flyer.jpg' %}" width="100%" style="margin-top: 20px; margin-bottom: 20px"></a>
             </div>
-            <div class="col s12 l6">
+            <h6 class="center-align col s12" style="color: #bf1e2d">ETV Press Release</h6>
+            
+            <div class="col s12">
               <p class="left-align">
-                <b>February 23, 2022 - Morristown, New Jersey –</b> Black History Month should be a prelude to Black
-                empowerment and equity according to “Empower The Village,” a non-profit 501(c)(3) organization founded in
-                2018 to develop, guide and implement breakthrough, scalable strategies that empower Black people, businesses
-                and community organizations to realize their full potential, which has led to ETV’s co-sponsorship and
-                participation in a virtual educational program on Thursday. Empower The Village (ETV) Founder Ayo Sanderson Wilson
-                will join other panelists to discuss Post Traumatic Slave Syndrome and its connection to eliminating the racial
-                wealth gap on Thursday, February 24 from 6:30 to 8 p.m. You can register for the virtual educational program by
-                <a href="https://us02web.zoom.us/meeting/register/tZ0qc-mvqzgjEtX6q-qdVN6kHcXt-9IlWjNJ">clicking this link.</a>
-              </p>
+                <b>February 24th, 2022 - Morristown, New Jersey –</b> ETV co-hosts an educational  panel and its founder explores the vestiges of PTSS, the impact of U.S. policy and actions throughout history that have shaped the state of the Black economy today and offers solutions on accelerating positive change through accurately reframing the narrative, leaning into a growth mindset and take economic-based action.</p>
+
+                <p><a href="">Check out excerpts from the roundtable.</a></p>
               <a href="https://issuu.com/empowerthevillage/docs/press_release_empower_the_village_says_february_is?mode=window" class="btn grey darken-4">Full Press Release</a>
               
             </div>
@@ -909,6 +912,10 @@
                 }
             }
             @media only screen and (min-width:601px){
+              p {
+                font-size: 16px;
+                line-height: 32px
+              }
               .home-page-sh6 { 
                 font-size: 32px;
                 line-height: 42px; 
@@ -951,6 +958,10 @@
                 }
             }
             @media only screen and (min-width:993px){
+              p {
+                font-size: 18px;
+                line-height: 32px
+              }
               .home-page-sh6 { 
                 font-size: 42px;
                 line-height: 54px; 
@@ -970,6 +981,10 @@
                 }
             }
             @media only screen and (min-width:1225px){
+              p {
+                font-size: 20px;
+                line-height: 36px
+              }
               #home-carousel {
                   height: 430px !important;
                 }

@@ -1,0 +1,674 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}ETV | Village Empowerment Network{% endblock %}
+
+{% block content %}
+<script>
+    $(document).ready(function(){
+        $('.tabs').tabs();
+        $('.slider').slider();
+        $('.carousel').carousel({
+              indicators: true,
+          
+            });
+    });
+</script>
+<div class="parallax-container z-depth-3 box-shadow valign-wrapper">
+    
+    <div class="container z-depth-4 center-align parallax-banner">
+        <img src='{% static "img/ven-long.png" %}' style="width:100%; padding: 4%">
+    </div>
+    <div class="parallax">
+        <img src="{% static 'img/vbp-collage.png' %}" style="width: 100%; opacity: 1; ">
+    </div>
+
+</div>
+<div style="background: url('{% static 'img/ed_collage_big.png' %}'); background-size: 180%; height: 100%">
+    <div class="row" style="height: 100%; background-color: rgba(255, 255, 255, 0.781); width:100%">
+        <ul class="tabs tabs-fixed-width tab-demo z-depth-1">
+            <li class="tab" style="width: 25%"><a class="active" href="#ven-home">Overview</a></li>
+            <li class="tab" style="width: 25%"><a href="#sbpro"><img src="{% static 'img/sbpro-logo-expanded.png' %}" height=45px ></a></li>
+            <li class="tab" style="width: 25%"><a href="#massm"><img src="{% static 'img/mass-mutual-logo.svg' %}" height=25px style="margin-top: 12px"></a></li>
+            <li class="tab" style="width: 25%"><a href="#chase"><img src="{% static 'img/chase-logo.svg' %}" height=30px style="margin-top: 10px"></a></li>
+            
+        </ul>
+        <div id="ven-home" class="col s12">
+            <div class="col s12 l10 offset-l1  pillar-body">
+                <div class="row center-align" style="width: 90%; margin-left: 5%">
+                    <div class="efbf_text1 coming-soon-group" style="text-align: justify; display:block; padding-bottom: 0;">
+                        
+                        <div class="row hide-on-small-only">
+                            
+                            <div class="col s12">
+                                <p style="padding-top: 0; padding-bottom: 0; margin-bottom: 0" class="ven-top-text"><b style="color:rgb(18, 148, 18)">Village</b> <b>Empowerment</b> <b style="color:rgb(204, 22, 22)">Network™</b> provides the expertise Black entrepreneurs and families need to thrive. Black business owners can receive one-on-one strategy, planning, and technical counseling from experts to grow revenue, access funding, manage employees and expenses, protect assets, and expand their network. Individuals and families will receive financial planning and budgeting services. ETV will also offer access to online, on-demand trainings and workshops through its VEN Partners designed to ensure that entrepreneurs and families can learn and access the information they need at their own pace to build generational wealth.
+                                
+                                </p>
+                            </div>
+                            <div class="row valign-wrapper" style="padding: 0px 20px">
+                                <a href="/village-empowerment-network-nomination" class="col s6" style="margin-right: 10px; margin-top: 15px"><img width=100% src="{% static 'img/clipboard-business.png' %}"></a>
+                                <a href="/village-empowerment-network-individual-nomination" class="col s6" style="margin-right: 10px; margin-top: 15px"><img width=100% src="{% static 'img/clipboard-fam.png' %}"></a>
+                            </div>
+                        </div>
+                        <div class="row hide-on-med-and-up" style="padding-top: 20px">
+                            <div class="col s12 center-align">
+                                <a href="/village-empowerment-network-nomination"><img width=70% src="{% static 'img/clipboard-vertical2.png' %}"></a>
+                            </div>
+                            <div class="col s12">
+                                <p style="padding-top: 0; text-align: center;"><b>Village Empowerment Network</b>™ provides the expertise Black entrepreneurs and families need to thrive. Black business owners can receive one-on-one strategy, planning, and technical counseling from experts to grow revenue, access funding, manage employees and expenses, protect assets, and expand their network. Individuals and families will receive financial planning and budgeting services. ETV will also offer access to online, on-demand trainings and workshops through its VEN Partners designed to ensure that entrepreneurs and families can learn and access the information they need at their own pace to build generational wealth.
+                                
+                                </p>
+                                
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="divider" style="margin-top: 20px; margin-bottom: 20px"></div>
+                <div class="row center-align">
+                    <h5 style="line-height: 40px; margin-bottom: 10px">ETV funds exclusive one-on-one counseling, workshops, and <br>on-demand trainings for VEN registrants offered by</h5>
+                    <h5 class="dyk" style="color:black; margin-bottom: 50px"><b style="color:rgb(18, 148, 18); font-weight: 300">VILLAGE </b><b style="color:black; font-weight: 300">EMPOWERMENT </b><b style="color:rgb(184, 34, 34); font-weight: 300">NETWORK</b> PARTNERS</h5>
+                    
+                    <div class="row partner-logo-row">
+                        <div class="col s12 m4 " style="height: 100%">
+                            <img width=250px height=250px class="z-depth-1" src="{% static 'img/michelle-harlan.jpeg' %}" style="margin-top: 10px; border-radius: 50%;">
+                            <p style="margin: 0; margin-top: 20px; padding: 0; font-weight: 600; font-size: 1.64rem">Michelle Harlan</p>
+                            <p style="margin: 5px 0px; padding: 0; font-size: 18px">VEN Business & Wealth Strategist</p>
+                            <a href="#massm"><img style="margin-top: 20px" class="partner-img" src="{% static 'img/mass-mutual-logo.svg' %}"></a>
+                            
+                        </div>
+                        <div class="col s12 m4" style="height: 100%">
+                            <img width=250px height=250px class="z-depth-1" src="{% static 'img/andrew-frazier.jpg' %}" style="margin-top: 10px; border-radius: 50%;">
+                            <p style="margin: 0; margin-top: 20px; padding: 0; font-weight: 600; font-size: 1.64rem">Andrew Frazier</p>
+                            <p style="margin: 5px 0px; padding: 0; font-size: 18px">VEN Lead Business Strategist</p>
+                            <a href="#sbpro"><img class="partner-img" src="{% static 'img/sbpro-logo-expanded.png' %}" width=120% style="margin-top: 0px;"></a>
+                            
+                        </div>
+                        <div class="col s12 m4 " style="height: 100%">
+                            <img width=250px height=250px class="z-depth-1" src="{% static 'img/chase-counselor-2.png' %}" style="margin-top: 10px; border-radius: 50%;">
+                            <p style="margin: 0; margin-top: 20px; padding: 0; font-weight: 600; font-size: 1.64rem">Jumoke Fagbayi-Butts</p>
+                            <p style="margin: 5px 0px; padding: 0; font-size: 18px">VEN Business & Wealth Strategist</p>
+                            <a href="#chase"><img style="margin-top: 15px" class="partner-img" src="{% static 'img/chase-logo.svg' %}"></a>
+                            
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                <div class="divider" style="margin-top: 40px; margin-bottom: 20px"></div>
+                
+                    <img class="z-depth-1" src="{% static 'img/coming-soon-harriet.png' %}" width=80% style="margin-left: 10%">
+             
+                
+            </div>
+        </div>
+        <div id="chase" class="col s12">
+            <div class="col s12 l10 offset-l1  pillar-body">
+                <div class="row" style="width: 90%; margin-left: 5%">
+                    <div class="row center-align">
+                        
+                        <div class="row">
+                            <img class="hide-on-med-and-up success-mobile" src="{% static 'img/chase-success-mobile.png' %}">
+                            <img class="hide-on-small-only success-large" src="{% static 'img/chase-success.png' %}">
+                        </div>
+                        
+                        <div class="divider"></div>
+                        <a href=""><h4 style="font-family: oskar; color:rgb(184, 34, 34); text-align: center;">VEN registrants, click to schedule your initial consultation today! <i class="material-icons">open_in_new</i></h4></a>
+                        <div class="row" style="margin-bottom: 0; padding-top: 3%; padding-left: 1%; padding-right: 1%">
+                            <div class="slider">
+                                <ul class="slides">
+                                  <li>
+                                    <img src="{% static 'img/chase-banner.jpeg' %}"> <!-- random image -->
+                                   
+                                  </li>
+                                  <li>
+                                    <img src="{% static 'img/chase-img-1.jpeg' %}"> <!-- random image -->
+                               
+                                  </li>
+                                  <li>
+                                    <img src="{% static 'img/chase-img-2.jpeg' %}"> <!-- random image -->
+                            
+                                  </li>
+                                  <li>
+                                    <img src="{% static 'img/chase-img-4.jpeg' %}"> <!-- random image -->
+                                
+                                  </li>
+                                </ul>
+                            </div>
+                            <div class="divider" style="margin-top: 20px; margin-bottom: 20px"></div>
+                            <div class="row chase-card-row">
+                                <h5 class="dyk" style="font-size: 42px; color: black">Online, On-Demand Courses</h5>
+                                
+                                <div class="col s12 m6 l4">
+                                    <div class="card center-align">
+                                        <h6>Session One:<br>Reclaim the future</h6>
+                                        <p>How your business can rise to the challenges of COVID-19</p>
+                                    </div>
+                                </div>
+                                <div class="col s12 m6 l4">
+                                    <div class="card center-align">
+                                        <h6>Session Two:<br>The Power of Capital</h6>
+                                        <p>How to fuel the growth of your business</p>
+                                    </div>
+                                </div>
+                                <div class="col s12 m6 l4">
+                                    <div class="card center-align">
+                                        <h6>Session Three:<br>Navigating Your Cash Flow</h6>
+                                        <p>How to use cash flow to maximize your business’s success</p>
+                                    </div>
+                                </div>
+                                <div class="col s12 m6 l4">
+                                    <div class="card center-align">
+                                        <h6>Session Four:<br>Your Next-Level Business</h6>
+                                        <p>How to build a foundation that lasts</p>
+                                    </div>
+                                </div>
+                                <div class="col s12 m6 l4">
+                                    <div class="card center-align">
+                                        <h6>Session Five:<br>Marketing in a Digital World</h6>
+                                        <p>How to get noticed and build community online</p>
+                                    </div>
+                                </div>
+                                <div class="col s12 m6 l4">
+                                    <div class="card center-align">
+                                        <h6>Session Six:<br>Windows of Opportunity</h6>
+                                        <p>How to discover capital and networking opportunities</p>
+                                    </div>
+                                </div>
+                                <h5 class="dyk" style="font-size: 42px; color: black; margin-top: 20px">One-on-One Wealth-Building & Business Counseling</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>  
+            </div>
+        </div>
+          <div id="massm" class="col s12">
+            <div class="col s12 l10 offset-l1  pillar-body">
+                <div class="row" style="width: 90%; margin-left: 5%">
+                    <div class="row center-align">
+                        <div class="row">
+                            <img class="hide-on-med-and-up success-mobile" src="{% static 'img/mm-success-mobile.png' %}">
+                            <img class="hide-on-small-only success-large" src="{% static 'img/mm-success.png' %}">
+                        </div>
+                        <div class="divider" style="margin-top: 10px;margin-bottom: 10px"></div>
+                        <a href=""><h4 style="font-family: oskar; color:rgb(184, 34, 34); text-align: center;">VEN registrants, click to schedule your initial consultation today! <i class="material-icons">open_in_new</i></h4></a>
+                        <div class="row" style="margin-bottom: 0; padding-top: 3%; padding-left: 1%; padding-right: 1%">
+                            
+                            
+                            <div class="row" style="margin-bottom: 0; padding-top: 3%; padding-left: 1%; padding-right: 1%">
+                                <div class="slider">
+                                    <ul class="slides">
+                                        <li>
+                                            <a target="_blank" href="https://small-business-like-a-pro.thinkific.com/courses/overcome-your-fear-of-selling"><img src="{% static 'img/fear-of-selling.jpg' %}"></a>
+                                        </li>
+                                        <li>
+                                            <a target="_blank" href="https://small-business-like-a-pro.thinkific.com/courses/video-marketing-course"><img src="{% static 'img/video-marketing.jpg' %}"></a>
+                                        </li>
+                                        <li>
+                                            <a target="_blank" href="https://small-business-like-a-pro.thinkific.com/courses/how-did-i-get-here"><img src="{% static 'img/how-did-i-get-here.jpeg' %}"></a>
+                                        </li>
+                                        <li>
+                                            <a target="_blank" href="https://small-business-like-a-pro.thinkific.com/courses/be-most-likely-to-succeed"><img src="{% static 'img/most-likely-to-succeed.jpeg' %}"></a>
+                                        </li>
+                                        <li>
+                                            <a target="blank" href="https://small-business-like-a-pro.thinkific.com/courses/3-books-every-entrepreneur-must-read"><img src="{% static 'img/3-books.jpeg' %}"></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="divider" style="margin-top: 20px; margin-bottom: 20px"></div>
+                                <ul class="collection with-header">
+                                    <li class="collection-header"><h5>Resources from SBPro University</h5></li>
+                                    <li class="collection-item"><div class="center-align"><a class="valign-wrapper" target="_blank" href="https://small-business-like-a-pro.thinkific.com/courses/overcome-your-fear-of-selling">Overcome Your Fear of Selling &nbsp;<i class="material-icons">open_in_new</i></a></div></li>
+                                    <li class="collection-item"><div class="center-align"><a class="valign-wrapper" target="_blank" href="https://small-business-like-a-pro.thinkific.com/courses/video-marketing-course">Video Marketing Course &nbsp;<i class="material-icons">open_in_new</i></a></div></li>
+                                    <li class="collection-item"><div class="center-align"><a class="valign-wrapper" target="_blank" href="https://small-business-like-a-pro.thinkific.com/courses/how-did-i-get-here">Andrew Frazier, MBA, CFA - How Did I Get Here? &nbsp;<i class="material-icons">open_in_new</i></a></div></li>
+                                    <li class="collection-item"><div class="center-align"><a class="valign-wrapper" target="_blank" href="https://small-business-like-a-pro.thinkific.com/courses/3-books-every-entrepreneur-must-read">3 Books Every Entrepreneur Must Read &nbsp;<i class="material-icons">open_in_new</i></a></div></li>
+                                    <li class="collection-item"><div class="center-align"><a class="valign-wrapper" target="_blank" href="https://small-business-like-a-pro.thinkific.com/courses/be-most-likely-to-succeed">Be Most Likely To Succeed &nbsp;<i class="material-icons">open_in_new</i></a></div></li>
+                                </ul>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>  
+            </div>
+          </div>
+          <div id="sbpro" class="col s12">
+            <div class="col s12 l10 offset-l1  pillar-body">
+                <div class="row" style="width: 90%; margin-left: 5%">
+                    <div class="row center-align">
+                        <div class="row">
+                            <img class="hide-on-med-and-up success-mobile" src="{% static 'img/sbpro-success-mobile.png' %}">
+                            <img class="hide-on-small-only success-large" src="{% static 'img/sb-success.png' %}">
+                        <div class="divider" style="margin-top: 20px"></div>
+                        <a href=""><h4 style="font-family: oskar; color:rgb(184, 34, 34); text-align: center;">VEN registrants, click to schedule your initial consultation today! <i class="material-icons">open_in_new</i></h4></a>
+                        <div class="row" style="margin-bottom: 0; padding-top: 3%; padding-left: 1%; padding-right: 1%">
+                            <div class="slider">
+                                <ul class="slides">
+                                    <li>
+                                        <a target="_blank" href="https://small-business-like-a-pro.thinkific.com/courses/overcome-your-fear-of-selling"><img src="{% static 'img/fear-of-selling.jpg' %}"></a>
+                                    </li>
+                                    <li>
+                                        <a target="_blank" href="https://small-business-like-a-pro.thinkific.com/courses/video-marketing-course"><img src="{% static 'img/video-marketing.jpg' %}"></a>
+                                    </li>
+                                    <li>
+                                        <a target="_blank" href="https://small-business-like-a-pro.thinkific.com/courses/how-did-i-get-here"><img src="{% static 'img/how-did-i-get-here.jpeg' %}"></a>
+                                    </li>
+                                    <li>
+                                        <a target="_blank" href="https://small-business-like-a-pro.thinkific.com/courses/be-most-likely-to-succeed"><img src="{% static 'img/most-likely-to-succeed.jpeg' %}"></a>
+                                    </li>
+                                    <li>
+                                        <a target="blank" href="https://small-business-like-a-pro.thinkific.com/courses/3-books-every-entrepreneur-must-read"><img src="{% static 'img/3-books.jpeg' %}"></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="divider" style="margin-top: 20px; margin-bottom: 20px"></div>
+                            <ul class="collection with-header">
+                                <li class="collection-header"><h5>Resources from SBPro University</h5></li>
+                                <li class="collection-item"><div class="center-align"><a class="valign-wrapper" target="_blank" href="https://small-business-like-a-pro.thinkific.com/courses/overcome-your-fear-of-selling">Overcome Your Fear of Selling &nbsp;<i class="material-icons">open_in_new</i></a></div></li>
+                                <li class="collection-item"><div class="center-align"><a class="valign-wrapper" target="_blank" href="https://small-business-like-a-pro.thinkific.com/courses/video-marketing-course">Video Marketing Course &nbsp;<i class="material-icons">open_in_new</i></a></div></li>
+                                <li class="collection-item"><div class="center-align"><a class="valign-wrapper" target="_blank" href="https://small-business-like-a-pro.thinkific.com/courses/how-did-i-get-here">Andrew Frazier, MBA, CFA - How Did I Get Here? &nbsp;<i class="material-icons">open_in_new</i></a></div></li>
+                                <li class="collection-item"><div class="center-align"><a class="valign-wrapper" target="_blank" href="https://small-business-like-a-pro.thinkific.com/courses/3-books-every-entrepreneur-must-read">3 Books Every Entrepreneur Must Read &nbsp;<i class="material-icons">open_in_new</i></a></div></li>
+                                <li class="collection-item"><div class="center-align"><a class="valign-wrapper" target="_blank" href="https://small-business-like-a-pro.thinkific.com/courses/be-most-likely-to-succeed">Be Most Likely To Succeed &nbsp;<i class="material-icons">open_in_new</i></a></div></li>
+                            </ul>
+                        </div>
+                        <div class="divider"></div>
+                        
+                <img src="{% static 'img/calendly-demo.jpeg' %}" width=100%>
+                    </div>
+                    
+                </div>  
+            </div>
+          </div>
+        <style>
+            .tab-demo a {
+                color: black !important;
+                font-size: 18px !important
+            }
+            .tab-demo a.active {
+                color: rgb(39, 187, 3) !important
+            }
+            .indicator {
+                background-color: rgb(39, 187, 3) !important;
+                width: 25%
+            }
+        </style>
+       
+    </div>
+</div>
+<style>
+    .ven-top-text b {
+        font-weight: 600;
+        font-size: 24px
+    }
+    .success-mobile {
+        width: 100%
+    }
+    .success-large {
+        width: 100%
+    }
+    .dyk b {
+        font-weight: 300;
+    }
+    .partner-logo-row {
+        height: 420px
+    }
+    .partner-img {
+        width: 50%;
+        max-height: 120px
+    }
+    .chase-card-row .card {
+        padding: 20px;
+        height: 170px
+    }
+    .chase-card-row .card p{
+        margin: 0;
+        padding: 0
+    }
+    .chase-card-row .card h6{
+        line-height: 24px;
+        color:rgb(18, 148, 18);
+        border-bottom: dotted 2px rgb(226, 226, 226);
+        padding-bottom: 10px
+    }
+    .collection {
+        border: none !important;
+        
+    }
+    .collection.with-header .collection-header {
+        background-color: transparent;
+    }
+    .collection .collection-item{
+        background-color: transparent;
+        border-bottom: dotted 2px rgb(235, 235, 235)
+    }
+    .valign-wrapper {
+        justify-content: center;
+    }
+    .slider .slides{
+        height: 200px !important
+    }
+    .slider {
+        height: 240px !important
+    }
+    #sbpro .slides li {
+        background-color: #012060
+    }
+    .slides li {
+        background-color: black;
+    }
+    #sbpro .slider .slides li img {
+        width: 350px;
+        height: 200px
+    }
+    #chase .slider .slides li img {
+        width: 100%;
+        height: 200px
+    }
+    .pillar-body {
+        height: 100%
+    }
+    @media only screen and (max-width: 850px){
+        .pillar-nav {
+        display: none !important
+    }
+    }
+    @media only screen and (min-width: 600px){
+        .chase-card-row .card {
+            padding: 20px;
+            height: 200px
+        }
+        .partner-logo-row {
+            height: 420px
+        }
+        .partner-img {
+            width: 100%;
+            height: auto;
+            max-height:min-content
+        }
+        #sbpro .slider .slides li img {
+            width: 600px;
+            height: 400px;
+        }
+        #chase .slider .slides li img {
+            width: 800px;
+            height: 300px
+        }
+        #sbpro .slider .slides{
+            height: 400px !important
+        }
+        #sbpro .slider {
+            height: 440px !important
+        }
+        #chase .slider .slides {
+            height: 300px !important
+        }
+        #chase .slider {
+            height: 340px !important
+        }
+        .collection {
+            width: 70%;
+            margin-left: 15%
+        }
+    }
+    @media only screen and (min-width:663px){
+        .subnav-link {
+            font-size: 16px !important;
+            font-weight: 500 !important;
+        }
+        .pillar-nav {
+            display: none;
+        }
+        
+    }
+    @media only screen and (min-width:992px){
+        .partner-logo-row {
+       height: 430px
+    }
+        .partner-img {
+            width: 80%;
+            height: auto;
+            max-height:min-content
+        }
+        .subnav-link {
+            font-size: 20px !important;
+            font-weight: 500 !important;
+        }
+        .pillar-nav {
+            display:-webkit-flex !important
+        }
+        .parallax-banner {
+            width: 75% !important
+        }
+    }
+    @media only screen and (min-width: 1200px){
+        .parallax-banner {
+            width: 50% !important
+        }    
+    }
+    .subnav-link {
+        font-size: 14px;
+        font-weight: 500 !important
+    }
+    
+</style>
+<style>
+    .pillar-nav {
+        background-color: rgb(0, 0, 0);
+    }
+    .pillar-nav li a {
+        color: rgb(255, 255, 255) !important;
+    }
+    .dyk-quote {
+        text-align: left;
+        border-left: dotted rgb(184, 34, 34) 2px;
+        padding-left: 3% !important;
+        margin-left: 2% !important
+    }
+    .divider {
+        margin: 0;
+        width: 90%;
+        margin-left: 5%;
+    }
+    
+    p {
+        font-weight: 400;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        text-align: center;
+    }
+    
+    .facts-ul li {
+        padding-bottom: 15px;
+        font-weight: 300;
+    }
+    .dyk {
+        font-family: oskar-inline;
+        color:rgba(60, 60, 60, 0.947);
+        text-transform: uppercase;
+    }
+    .goals-header {
+        background: rgb(191,23,23);
+        background: linear-gradient(90deg, rgba(191,23,23,0.8365721288515406) 0%, rgba(156,96,30,0.738532913165266) 49%, rgba(0, 0, 0, 0.399) 100%); 
+    }
+    .solutions-header {
+        background: rgb(191,23,23);
+        background: linear-gradient(90deg, rgba(0, 0, 0, 0.603) 0%, rgba(137, 143, 65, 0.739) 49%, rgba(44, 129, 15, 0.739) 100%); 
+    }
+    .cs-title {
+        color: black
+    }
+    @media only screen and (min-width: 0px) {
+        .ee-image img {
+            width: 60%
+        }
+        .program-text {
+            text-align: center;
+            width: 90%;
+            margin-left: 5%;
+            font-size: 14px
+        }
+        .dyk {
+            font-size: 38px;
+            letter-spacing: 2px;
+        }
+        .dyk-quote {
+            font-size: 14px
+        }
+        .collapsible-body-image-cs {
+            width: 64px !important;
+            height: 64px;
+            margin-left: 5%;
+            margin-right: 1%
+        }
+        .cs-title {
+            font-size: 28px;
+            text-align: left;
+            padding-left: 1%
+        }
+        .health-main-title {
+        font-family: oskar-inline;
+        font-size: 36px;
+        text-align: center;
+        color:rgb(18, 148, 18);
+        margin-bottom: 0;
+        margin-top: 20px
+    }
+    .health-main-text {
+        font-size: 18px;
+        line-height: 30px;
+        text-align: center;
+    }
+        .mi-row {
+            width: 100%;
+            padding-left: 5%
+        }
+        .dyk-quote {
+            font-size: 14px
+        }
+        blockquote {
+            font-size: 16px;
+            font-weight: 300;
+            margin-top: 20px !important;
+        }
+        .unemployment-seesaw img {
+            width: 100%;
+            padding-top: 40px;
+        }
+        .education-seesaw img {
+            padding-top: 20px;
+            width: 105%;
+        }
+        .statistic-title {
+            font-family: poppins;
+            font-weight: 600;
+            font-size: 16px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            text-transform: scale(1, 0.9);
+            text-align: center;
+            background-color: rgba(154, 22, 22, 0.947);
+            padding: 15px 5px;
+            color: white
+        }
+        .collapsible li {
+            margin: 0 !important;
+        }
+        .degree-attainment-small {
+            display: block;
+            padding: 0% 5%;
+        }
+        .degree-attainment {
+            display: none;
+            padding: 0% 5%;
+        }
+        blockquote {
+            width: 90%;
+            margin-left: 5%;
+            margin-top: 7%;
+        }
+    }
+    @media only screen and (min-width: 420px) {
+        .statistic-title {
+            font-size: 20px;
+            padding: 15px 10px;
+        }
+    }
+    @media only screen and (min-width: 601px) {
+        .ee-image img {
+            width: 60%
+        }
+        .program-text {
+            text-align: center;
+            width: 90%;
+            margin-left: 5%;
+            font-size: 16px
+        }
+        .goals-li {
+            width: 95%;
+    }
+    .solutions-li {
+        width: 95%;
+    }
+        .dyk {
+        font-size: 42px
+    }
+        .dyk-quote {
+            font-size: 16px
+        }
+        blockquote {
+            font-size: 20px;
+        }
+        .degree-attainment-small {
+            display: none;
+        }
+        .degree-attainment {
+            display: block;
+        }
+        .unemployment-seesaw img {
+            width: 91%;
+            padding-top: 20px;
+        }
+        .education-seesaw img {
+            padding-top: 20px;
+            width: 100%;
+        }
+        .statistic-title-large {
+            font-family: poppins;
+            width: 80%;
+            margin-left: 10%;
+            font-weight: 600;
+            font-size: 24px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            text-transform: scale(1, 0.9);
+            text-align: center;
+            background-color: rgba(207, 25, 25, 0.865);
+            padding: 15px 5px;
+            color: white
+        }
+    }
+    @media only screen and (min-width: 993px) {
+        .ee-image img {
+            width: 110%;
+            margin-top: 3%
+        }
+        .program-text {
+            text-align: left;
+            font-size: 22px
+        }
+        .dyk {
+        font-size: 58px
+    }
+        .dyk-quote {
+            font-size: 20px
+        }
+        blockquote {
+            font-size: 24px;
+        }
+        .ven-top-text b {
+        font-weight: 600;
+        font-size: 30px
+    }
+    }
+</style>
+{% endblock %}

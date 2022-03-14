@@ -1,5 +1,4 @@
 {% load static %}
-{% load humanize %}
 {% load mailchimp_tags %}
 {% include 'base/css.html' %}
 {% include 'base/js.html' %}
@@ -30,11 +29,11 @@
 {% url 'education:education-phase-one' as education_initiatives_url %}
 {% url 'prosperity' as ep_url %}
 {% url 'news' as news_url %}
+{% url 'shop' as shop_url %}
 {% url 'merchandise:list' as merchandise_url %}
-{% url 'carts:home' as cart_home_url %}
-{% url 'carts:checkout' as checkout_url %}
-{% url 'carts:checkout-confirm' as checkout_confirm_url %}
 {% url 'events:home' as events_url %}
+{% url 'ven-home' as ven_url %}
+{% url 'education:village-at-work' as vaw_url %}
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 <!-- JQuery Mask -->
@@ -85,30 +84,30 @@
       </script>
       <main>
         <nav id="navbar" class="nav-extended">
-          <div class="nav-wrapper z-depth-0" id="navbar-div">
+          <div class="nav-wrapper z-depth-0" id="navbar-div" style="display: flex; align-items: center;">
               
             <i class="left sidenav-trigger material-icons" data-target="side-nav" id="sidenav-menu-trigger" style="z-index: 2;">menu</i>
-      
+            <a href="{{ home_url }}" class="brand-logo"><img src="{% static 'img/logo.jpeg' %}" height=110></a>
               <div class="left nav-row-left valign-wrapper" id="nav-top-left"> 
                 
-                  <a class="main-nav-link ul-effect valign-wrapper {% if request.path == home_url %}active{% endif %}" href="{{ home_url }}">Home</a>
+              </div>
+              <div class="center-align nav-tagline" style="font-size: 14px;height: 100%; line-height: 24px; position: absolute; left: 190px; top: 25px">
+                  <h7 style="color:black; text-align: center; font-family: oskar; font-size: 16px"><b style="color:#bf1e2d; font-weight: 300">Restoring</b></h7><br>
+                    <h7 style="color:black; text-align: center; font-family: oskar; font-size: 16px">Prosperity, Peace & Power</h7><br>
+                      <h7 style="color:black; text-align: center; font-family: oskar; font-size: 16px"><b style="color:#01a650; font-weight: 300">To The Black Community</b></h7>
+
+              </div>
+       
+              <div class="right valign-wrapper" style="height:100%; position: absolute; right: 20px">
+                <a class="main-nav-link ul-effect valign-wrapper {% if request.path == home_url %}active{% endif %}" href="{{ home_url }}">Home</a>
                     <div class="navbar-slash"> | </div>
                   <a class="main-nav-link ul-effect valign-wrapper {% if request.path == about_url %}active{% endif %}" href="{{ about_url }}">About</a>
                     <div class="navbar-slash"> | </div>
-                  <a class="main-nav-link ul-effect valign-wrapper {% if request.path == contact_url %}active{% endif %}" href="{{ contact_url }}">Contact</a>
-                    <div class="navbar-slash"> | </div>
+                  
                   <a class="main-nav-link dropdown-trigger ul-effect valign-wrapper" data-target='top-dropdown-sp'>Programs</a>
                     <div class="navbar-slash"> | </div>
-                  <a class="main-nav-link ul-effect valign-wrapper {% if request.path == events_url %}active{% endif %}" href="{{ events_url }}">Events</a>
-                   
-                  
-                  
-                   
-              </div>
-                <a href="{{ home_url }}" class="brand-logo"><img src="{% static 'img/logo.jpeg' %}" height=110></a>
-       
-              <div class="right valign-wrapper" style="height:100%">
-                
+                    <a class="main-nav-link valign-wrapper ul-effect" style="cursor: pointer" id="join-village-topnav">Join</a>
+                  <div class="navbar-slash"> | </div>
                   {% if request.user.is_authenticated %}
                   <a class="main-nav-link ul-effect valign-wrapper {% if request.path == merchandise_url %}active{% endif %}" href="{{ merchandise_url }}">Shop</a>
                   <a href="{{ account_url }}" id="account-icon"><i class="material-icons" style="color: grey; font-size: 36px; padding-top:30px;padding-left:10px">account_circle</i></a>
@@ -116,15 +115,14 @@
                   <a href="{{ logout_url }}" class="main-nav-link ul-effect valign-wrapper"> Logout</a>
                     <div class="navbar-slash"> | </div>
                   {% else %}
-                 
                   <a class="main-nav-link ul-effect valign-wrapper {% if request.path == merchandise_url %}active{% endif %}" href="{{ merchandise_url }}">Shop</a>
                   <div class="navbar-slash"> | </div>
                   <a class="main-nav-link valign-wrapper ul-effect {% if request.path == login_url %}active{% endif %}" href="{{ login_url }}">Login</a>
                   <div class="navbar-slash"> | </div>
-                  <a class="main-nav-link valign-wrapper ul-effect" style="cursor: pointer" id="join-village-topnav">Join</a>
-                  <div class="navbar-slash"> | </div>
+            
                   {% endif %}
-                
+                <a class="main-nav-link ul-effect valign-wrapper {% if request.path == contact_url %}active{% endif %}" href="{{ contact_url }}">Contact</a>
+                    
                 <a class="btn btn-large waves-effect waves-light donate-btn-navbar" href="{{ donate_url }}" id="donate-btn-navbar">DONATE</a>
               </div>
           </div>
@@ -133,8 +131,9 @@
               <li><a class="center-align valign-wrapper {% if request.path == efbf_url %}active{% endif %}" href="{{ pillars_url }}">Strategic Pillars</a></li>
                 <li><a class="center-align valign-wrapper {% if request.path == efbf_url %}active{% endif %}" href="{{ efbf_url }}">MAKE EVERY FRIDAY, BLACK FRIDAY!™</a></li>
                 <li><a class="center-align valign-wrapper {% if request.path == vbp_url %}active{% endif %}" href="{{ vbp_url }}" style="padding-left:10px">VILLAGE BLACK PAGES™</a></li>
+                <li><a class="center-align valign-wrapper {% if request.path == voting_url %}active{% endif %}" data-target="nav-dropdown-pp" href="{{ ven_url }}">VILLAGE EMPOWERMENT NETWORK™</a></li>
+                <li><a class="center-align valign-wrapper {% if request.path == voting_url %}active{% endif %}" data-target="nav-dropdown-pp" href="{{ ven_url }}">VILLAGE@WORK™</a></li>
                 <li><a class="center-align valign-wrapper {% if request.path == bf_home_url %}active{% endif %}" data-target="nav-dropdown-bf" href="{{ bf_home_url }}">BLACK FRIDAY CHALLENGE™</a></li>
-                <li><a class="center-align valign-wrapper {% if request.path == voting_url %}active{% endif %}" data-target="nav-dropdown-pp" href="{{ voting_url }}">OPERATION: BALLOT BOX™</a></li>
             </ul>
           </div>
         </div>

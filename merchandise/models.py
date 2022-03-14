@@ -13,14 +13,16 @@ class VariationManager(models.Manager):
             return qs.first()
         return None
     
-
 class size(models.Model):
     size        = models.CharField(max_length=270)
+    order       = models.IntegerField(null=True, blank=True)
 
     objects     = VariationManager()
     def __str__(self):
         return self.size
 
+    class Meta:
+        ordering = ['order',]
 
 class color(models.Model):
     color   = models.CharField(max_length=270)
@@ -93,7 +95,7 @@ class newProduct(models.Model):
 
     @property
     def get_sizes(self):
-        sizes = set(self.inventory.select_related('size').distinct('size').all())
+        sizes = self.inventory.distinct('size').all()
         return sizes
 
 def newproduct_pre_save_receiver(sender, instance, *args, **kwargs):

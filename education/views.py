@@ -11,8 +11,14 @@ def education_home(request):
     }
     return render(request, "education_home.html", context)
 
-def education_phase_one(request):
+def village_at_work(request):
     context = {
-        'title': 'ETV | Education & Employment Phase One',
+        'title': 'ETV | Village@Work',
     }
-    return render(request, "education_phase_one.html", context)
+    return render(request, "village_at_work.html", context)
+
+def village_strivers(request):
+    context = {
+        'title': 'ETV | Village Strivers',
+    }
+    return render(request, "village_strivers.html", context)

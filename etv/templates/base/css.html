@@ -29,6 +29,10 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 
 <style>
+ 
+  .nav-tagline {
+    display: none
+  }
   main {
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
@@ -86,11 +90,13 @@
                   font-weight: 500
                 }
   #navbar .donate-btn-navbar {
+    text-align: center;
     height:65px;
     line-height:12px;
-    width:180px;
+    width:130px;
     background-color:#08c10e;
-    font-size:22px
+    font-size:22px;
+    padding-left: 15.5;
   }
   .donate-btn-navbar:after {
     content: '';
@@ -323,7 +329,7 @@
       filter:brightness(1)
     }
     nav .brand-logo {
-      left: 45%
+      left: 160px
     }
     #navbar {
         height:120px;
@@ -394,17 +400,21 @@
     }
     @media only screen and (max-width: 600px) {
         .donate-btn-navbar {
-            width: 80px !important;
+            width: 90px !important;
             margin-right: 0;
-            padding: 0;
+            padding: 10px 5px !important;
             font-size: 14px !important;
             height: 35px !important;
             padding-top: 10px
     }
   }
   @media only screen and (min-width: 680px) {
+    .nav-tagline {
+      display: block;
+      margin-left: 30px
+    }
     .main-nav-link {
-        font-size:17.25px !important;
+        font-size:17px !important;
         font-weight: 300;
         transform: scale(1,0.93);
         letter-spacing: 0.5px;
@@ -420,7 +430,6 @@
     #sidenav-menu-trigger {
         color: rgb(75, 75, 75); 
         margin-left: 20px; 
-        line-height:130px; 
         cursor: pointer; 
         font-size:24px;
     }
@@ -1379,7 +1388,7 @@
 }
 @media only screen and (min-width:601px){
   nav .brand-logo {
-    left: 160px
+    left: 140px
   }
   .phase-one-title {
     font-size: 48px;
@@ -1505,11 +1514,6 @@
     display: none
   }
 }
-@media only screen and (min-width: 800px) {
-  nav .brand-logo {
-    left: 45%
-  }
-}
 @media only screen and (min-width:993px) {
 
   .phase-one-title {
@@ -1621,7 +1625,13 @@
   }
 }
 @media only screen and (min-width:1025px){
-  
+  nav .brand-logo {
+    left: 80px !important
+  }
+  .nav-tagline {
+      display: block;
+      margin-left: 50px
+    }
   .strategy-title {
   font-family: oskar-inline; 
   font-weight:400; 
@@ -1684,7 +1694,10 @@
 }
 @media only screen and (min-width:1201px) {
   nav .brand-logo {
-    left: 44%;
+    left: 5px !important
+  }
+  .nav-tagline {
+      margin-left: -35px
   }
   .pillar-collapsible {
     padding:0; 
