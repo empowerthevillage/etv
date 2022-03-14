@@ -140,98 +140,98 @@
         
         </nav>
           
-          <ul id="side-nav" class="sidenav" style="background-color:rgba(255, 255, 255, 0.899)">
-            <li style="margin-bottom: 2px; background-color: rgb(230, 229, 228);"><img src="{% static 'img/footer-logo.png' %}" width="95%" style="margin-left:2.5%; padding-top:19px"></li>
-            <li><a href="{{ home_url }}" class="waves-effect">Home</a></li>
-            <li><a href="{{ about_url }}" class="waves-effect">About</a></li>
-            <li><a href="{{ contact_url }}" class="waves-effect">Contact</a></li>
-            <li><a href="{{ events_url }}" class="waves-effect">Events</a></li>
-            <li><a href="{{ merchandise_url }}" class="waves-effect">Shop</a></li>
+        <ul id="side-nav" class="sidenav" style="background-color:rgba(255, 255, 255, 0.899)">
+          <li style="margin-bottom: 2px; background-color: rgb(230, 229, 228);"><img src="{% static 'img/footer-logo.png' %}" width="95%" style="margin-left:2.5%; padding-top:19px"></li>
+          <li><a href="{{ home_url }}" class="waves-effect">Home</a></li>
+          <li><a href="{{ about_url }}" class="waves-effect">About</a></li>
+          <li><a href="{{ contact_url }}" class="waves-effect">Contact</a></li>
+          <li><a class="waves-effect" href="{{ events_url }}">Events</a></li>
+          <li><a class="waves-effect" href="{{ merchandise_url }}">Shop</a></li>
+          <li class="divider"></li>
+          <li class="">
             
-            <li class="divider"></li>
-            <li class="">
-              
-              <ul class="collapsible collapsible-accordion" style="padding-left: 4.5%">
-                <li>
-                  <a class="collapsible-header ">Signature Programs</a>
-                  <div class="collapsible-body">
-                    <ul>
-                      <li><a href="{{ pillars_url }}">Strategic Pillars</a></li>
-                      <li><a href="{{ efbf_url }}">Make Every Friday, Black Friday!™</a></li>
-                      <li><a href="{{ vbp_url }}">Village Black Pages™</a></li>
-                      <li><a href="{{ bf_home_url }}">Black Friday Challenge™</a></li>
-                      <li><a href="{{ voting_url }}">Operation: Ballot Box™</a></li>
-                    </ul>
-                  </div>
-                </li>
-              </ul>
-            </li>
-            <li class="">
-              
-              <ul class="collapsible collapsible-accordion" style="padding-left: 4.5%">
-                <li>
-                  <a class="collapsible-header ">Economic Prosperity</a>
-                  <div class="collapsible-body">
-                    <ul>
-                      <li><a href="{{ ep_url }}">Overview</a></li>
-                      <li><a href="{{ efbf_url }}">Make Every Friday, Black Friday!</a></li>
-                      <li><a href="{{ vbp_url }}">Village Black Pages</a></li>
-                      <li><a href="{{ bf_home_url }}">Black Friday Challenge</a></li>
-                    </ul>
-                  </div>
-                </li>
-              </ul>
-            </li>
-            <li class="">
-              <ul class="collapsible collapsible-accordion" style="padding-left: 4.5%">
-                <li>
-                  <a class="collapsible-header ">Policy & Power</a>
-                  <div class="collapsible-body">
-                    <ul>
-                      <li><a href="{{ policy_url }}">Overview</a></li>
-                      <li><a href="{{ voting_url }}">Operation: Ballot Box™</a></li>
-                    </ul>
-                  </div>
-                </li>
-              </ul>
-            </li>
+            <ul class="collapsible collapsible-accordion" style="padding-left: 4.5%">
+              <li>
+                <a class="collapsible-header ">Signature Programs</a>
+                <div class="collapsible-body">
+                  <ul>
+                    <li><a href="{{ pillars_url }}">Strategic Pillars</a></li>
+                    <li><a href="{{ efbf_url }}">Make Every Friday, Black Friday!™</a></li>
+                    <li><a href="{{ vbp_url }}">Village Black Pages™</a></li>
+                    <li><a href="{{ ven_url }}">Village Empowerment Network™</a></li>
+                    <li><a href="{{ vaw_url }}">Village@Work™</a></li>
+                    <li><a href="{{ bf_home_url }}">Black Friday Challenge™</a></li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <li class="">
             
-            <li class="">
-              <ul class="" style="padding-left: 0">
-                <li>
-                  <a href="{{ health_url }}">Health & Wellness</a>
-                  
-                </li>
-              </ul>
-            </li>
-            
-            
-            <li class="">
-              <ul class="" style="padding-left: 0%">
-                <li>
-                  <a href="{{ education_url }}">Education & Employment</a>
-                  
-                </li>
-              </ul>
-            </li>
-            <li class="divider"></li>
-            {% if request.user.is_authenticated %}
-            <li><a href="{{ account_url }}" class="waves-effect">Account</a></li>
-            <li><a href="{{ logout_url }}" class="waves-effect">Logout</a></li>
-            {% else %}
-            <li><a href="{{ login_url }}" class="waves-effect">Login</a></li>
-            <li><a href="{{ register_url }}" class="waves-effect">Register</a></li>
-            <li><a class="waves-effect" id="join-village-sidenav">Join The Village</a></li>
-            {% endif %}
-            <li class="divider"></li>
-            <a class="btn btn-large waves-effect waves-light donate-btn-sidenav" style="line-height: 50px; width: 93%" href="{{ donate_url }}" id="donate-btn-navbar">DONATE</a>
-            <div class="icon-wrap valign-wrapper" id="icon-wrap" style="display: flex; justify-content: center; margin">
-              <a href="https://www.facebook.com/Empower-The-Village-Nonprofit-Organization-105185814766521/" class="facebook nav-socialmedia" target="_blank"><i class="fab fa-facebook nav-socialmedia-icon"></i></a>
-              <a href="https://www.instagram.com/empower_etv/" class="instagram nav-socialmedia" target="_blank"><i class="fab fa-instagram nav-socialmedia-icon"></i></a>
-              <a href="http://linkedin.com/company/empower-the-village" class="linkedin nav-socialmedia" target="_blank"><i class="fab fa-linkedin nav-socialmedia-icon"></i></a>
-              <a href="https://www.youtube.com/channel/UCKMNMY8pqCId-PY4dCcKtaQ" class="youtube nav-socialmedia" target="_blank"><i class="fab fa-youtube nav-socialmedia-icon"></i></a>
-            </div>
-          </ul>
+            <ul class="collapsible collapsible-accordion" style="padding-left: 4.5%">
+              <li>
+                <a class="collapsible-header ">Economic Prosperity</a>
+                <div class="collapsible-body">
+                  <ul>
+                    <li><a href="{{ ep_url }}">Overview</a></li>
+                    <li><a href="{{ efbf_url }}">Make Every Friday, Black Friday!</a></li>
+                    <li><a href="{{ vbp_url }}">Village Black Pages</a></li>
+                    <li><a href="{{ bf_home_url }}">Black Friday Challenge</a></li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <li class="">
+            <ul class="collapsible collapsible-accordion" style="padding-left: 4.5%">
+              <li>
+                <a class="collapsible-header ">Policy & Power</a>
+                <div class="collapsible-body">
+                  <ul>
+                    <li><a href="{{ policy_url }}">Overview</a></li>
+                    <li><a href="{{ voting_url }}">Operation: Ballot Box™</a></li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </li>
+          
+          <li class="">
+            <ul class="" style="padding-left: 0">
+              <li>
+                <a href="{{ health_url }}">Health & Wellness</a>
+                
+              </li>
+            </ul>
+          </li>
+          
+          
+          <li class="">
+            <ul class="" style="padding-left: 0%">
+              <li>
+                <a href="{{ education_url }}">Education & Employment</a>
+                
+              </li>
+            </ul>
+          </li>
+          <li class="divider"></li>
+          {% if request.user.is_authenticated %}
+          <li><a href="{{ account_url }}" class="waves-effect">Account</a></li>
+          <li><a href="{{ logout_url }}" class="waves-effect">Logout</a></li>
+          {% else %}
+          <li><a href="{{ login_url }}" class="waves-effect">Login</a></li>
+          <li><a href="{{ register_url }}" class="waves-effect">Register</a></li>
+          <li><a class="waves-effect" id="join-village-sidenav">Join The Village</a></li>
+          {% endif %}
+          <li class="divider"></li>
+          <a class="btn btn-large waves-effect waves-light donate-btn-sidenav" style="line-height: 50px; width: 93%" href="{{ donate_url }}" id="donate-btn-navbar">DONATE</a>
+          <div class="icon-wrap valign-wrapper" id="icon-wrap" style="display: flex; justify-content: center;">
+            <a href="https://www.facebook.com/Empower-The-Village-Nonprofit-Organization-105185814766521/" class="facebook nav-socialmedia" target="_blank"><i class="fab fa-facebook nav-socialmedia-icon"></i></a>
+            <a href="https://www.instagram.com/empower_etv/" class="instagram nav-socialmedia" target="_blank"><i class="fab fa-instagram nav-socialmedia-icon"></i></a>
+            <a href="http://linkedin.com/company/empower-the-village" class="linkedin nav-socialmedia" target="_blank"><i class="fab fa-linkedin nav-socialmedia-icon"></i></a>
+            <a href="https://www.youtube.com/channel/UCKMNMY8pqCId-PY4dCcKtaQ" class="youtube nav-socialmedia" target="_blank"><i class="fab fa-youtube nav-socialmedia-icon"></i></a>
+          </div>
+        </ul>
           <div class="dropdown-container">
             <ul id="nav-dropdown-sp" class="dropdown-content dd-base">
               <li><a class="center-align valign-wrapper {% if request.path == efbf_url %}active{% endif %}" href="{{ pillars_url }}">Strategic Pillars</a></li>
