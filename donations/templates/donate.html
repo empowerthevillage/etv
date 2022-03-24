@@ -68,95 +68,127 @@ ETV | Donate
               <input type="hidden" value="" id="donation-level">
                 <fieldset class="checkout-fieldset z-depth-1">
                     <div class="row" style="margin-bottom: 0">
-                    <div class="col s12 valign-wrapper" style="padding-left: 0; padding-right: 0">
-                      <h5 class="fieldset-title">Donate Now</h5><h6 class="valign-wrapper secure-checkout align" style="margin-bottom:0; margin-left: 10px"><span class="material-icons">
-                        lock
-                        </span>&nbsp;SECURE
-                      </h6>
-                      
-                    </div>
-                    <div class="col s12 xl6" style="margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0">
-                    <input type="hidden" id="donation-level-input">
-                    <input type="hidden" id="frequency-input">
-                    <input type="hidden" id="frequency-verbose-input">
-                      <p>
-                          <label>
-                          <input class="with-gap" name="donation_level" type="radio" value="25" plan-id='4w72'>
-                          <span>Village Member - $25</span>
-                          </label>
-                      </p>
-                      <p>
-                          <label>
-                          <input class="with-gap" name="donation_level" type="radio" value="50" plan-id="jtkb">
-                          <span>Village Patron - $50</span>
-                          </label>
-                      </p>
-                      <p>
-                          <label>
-                          <input class="with-gap" name="donation_level" type="radio" value="100" plan-id='bvd6'>
-                          <span>Village Supporter - $100</span>
-                          </label>
-                      </p>
-                    </div>
-                    <div class="col s12 xl6" style="margin-top: 0; padding-left: 0; padding-right: 0">
-                      <p>
-                          <label>
-                          <input class="with-gap" name="donation_level" type="radio" value="500" plan-id='rsrg'>
-                          <span>Village Leader - $500</span>
-                          </label>
-                      </p>
-                      <p class="">
-                        <label>
-                        <input class="with-gap" name="donation_level" type="radio" value="1000" plan-id='7vsm'>
-                        <span>Village Ambassador - $1000</span>
-                        </label>
-                      </p>
-                      <p id="custom-amount">
-                        <label>
-                          <input class="with-gap other" name="donation_level" type="radio">
-                          <span>Other</span>
-                        </label>
-                      </p>
-                      <div class="other-input hidden text-field">
-                        <div class="valign-wrapper">$<input type="number" id="other-donation" style="width: 50%; padding-left: 10px"></div>
-                        <label>Enter a Custom Amount</label>
-                      </div>
-                    </div>
-                    
+                        <div class="col s12 valign-wrapper" style="padding-left: 0; padding-right: 0">
+                          <h5 class="fieldset-title">Donate Now</h5><h6 class="valign-wrapper secure-checkout align" style="margin-bottom:0; margin-left: 10px"><span class="material-icons">
+                            lock
+                            </span>&nbsp;SECURE
+                          </h6>
+                        </div>
+                        <div class="col s12 xl6" style="margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0">
+                        <input type="hidden" id="donation-level-input">
+                        <input type="hidden" id="frequency-input">
+                        <input type="hidden" id="frequency-verbose-input">
+                          <p>
+                              <label>
+                              <input class="with-gap" name="donation_level" type="radio" value="25" plan-id='4w72'>
+                              <span>Village Member - $25</span>
+                              </label>
+                          </p>
+                          <p>
+                              <label>
+                              <input class="with-gap" name="donation_level" type="radio" value="50" plan-id="jtkb">
+                              <span>Village Patron - $50</span>
+                              </label>
+                          </p>
+                          <p>
+                              <label>
+                              <input class="with-gap" name="donation_level" type="radio" value="100" plan-id='bvd6'>
+                              <span>Village Supporter - $100</span>
+                              </label>
+                          </p>
+                        </div>
+                        <div class="col s12 xl6" style="margin-top: 0; padding-left: 0; padding-right: 0">
+                          <p>
+                              <label>
+                              <input class="with-gap" name="donation_level" type="radio" value="500" plan-id='rsrg'>
+                              <span>Village Leader - $500</span>
+                              </label>
+                          </p>
+                          <p class="">
+                            <label>
+                            <input class="with-gap" name="donation_level" type="radio" value="1000" plan-id='7vsm'>
+                            <span>Village Ambassador - $1000</span>
+                            </label>
+                          </p>
+                          <p id="custom-amount">
+                            <label>
+                              <input class="with-gap other" name="donation_level" type="radio">
+                              <span>Other</span>
+                            </label>
+                          </p>
+                          <div class="other-input hidden text-field">
+                            <div class="valign-wrapper">$<input type="number" id="other-donation" style="width: 50%; padding-left: 10px"></div>
+                            <label>Enter a Custom Amount</label>
+                          </div>
+                        </div>
                     </div>
                     <div class="row" style="margin-bottom: 0">
-                    <div class="col s12" style="padding-left: 0; padding-right: 0">
-                      <h6 class="fieldset-subtitle" style="margin-top: 10px">Founder's Circle</h6>
+                        <div class="col s12" style="padding-left: 0; padding-right: 0">
+                          <h6 class="fieldset-subtitle" style="margin-top: 10px">Founder's Circle</h6>
+                        </div>
+                        <div class="col s12 m6" style="padding-left: 0; padding-right: 0">
+                          <p>
+                            <label>
+                              <input class="with-gap" name="donation_level" type="radio" value="5000" plan-id='nt5w'>
+                              <span>Bronze - $5,000</span>
+                            </label>
+                          </p>
+                          <p>
+                            <label>
+                              <input class="with-gap" name="donation_level" type="radio" value="10000" plan-id='ftyr'>
+                              <span>Silver - $10,000</span>
+                            </label>
+                          </p>
+                        </div>
+                        <div class="col s12 m6" style="padding-left: 0; padding-right: 0">
+                          <p>
+                            <label>
+                              <input class="with-gap" name="donation_level" type="radio" value="15000" plan-id='vsc2'>
+                              <span>Gold - $15,000</span>
+                            </label>
+                          </p>
+                          <p>
+                            <label>
+                              <input class="with-gap" name="donation_level" type="radio" value="25000" plan-id='26fw'>
+                              <span>Platinum - $25,000</span>
+                            </label>
+                          </p>
+                        </div>
                     </div>
-                    <div class="col s12 m6" style="padding-left: 0; padding-right: 0">
-                      <p>
-                        <label>
-                          <input class="with-gap" name="donation_level" type="radio" value="5000" plan-id='nt5w'>
-                          <span>Bronze - $5,000</span>
-                        </label>
-                      </p>
-                      <p>
-                        <label>
-                          <input class="with-gap" name="donation_level" type="radio" value="10000" plan-id='ftyr'>
-                          <span>Silver - $10,000</span>
-                        </label>
-                      </p>
-                    </div>
-                    <div class="col s12 m6" style="padding-left: 0; padding-right: 0">
-                      <p>
-                        <label>
-                          <input class="with-gap" name="donation_level" type="radio" value="15000" plan-id='vsc2'>
-                          <span>Gold - $15,000</span>
-                        </label>
-                      </p>
-                      <p>
-                        <label>
-                          <input class="with-gap" name="donation_level" type="radio" value="25000" plan-id='26fw'>
-                          <span>Platinum - $25,000</span>
-                        </label>
-                      </p>
-                    </div>
-                    </div>
+                    <div class="row" style="margin-bottom: 0">
+                      <div class="col s12" style="padding-left: 0; padding-right: 0">
+                        <h6 class="fieldset-subtitle" style="margin-top: 10px">Village Empowerment Network™ Sponsor</h6>
+                      </div>
+                      <div class="col s12" style="padding-left: 0; padding-right: 0">
+                        
+                        <p style="margin-bottom: 0 !important">
+                          <label>
+                            <input id="ven-sponsor" class="with-gap" name="donation_level" type="radio" value="1500" plan-id='hkm6'>
+                            <span id="ven-sponsor-amount">$1,500</span>
+                          </label>
+                        </p>
+                        <div class="col s12 hidden" style="padding: 0" id="ven-quantity">
+                          <div class="valign-wrapper" style="color: rgb(145, 145, 145)">
+                            I'd like to sponsor 
+                            <div class="input-field col s2" style="padding-left: 0; margin-bottom: 0; margin-top: 0px; margin-left: 10px; margin-right: 5px">
+                              <select id="ven-select">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                              </select>
+                            </div>
+                            <div id="ven-label-end"> registrant</div>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
                     <div id="make-my-donation">
                         <div class="row" style='margin-bottom: 0'>
                           <h6 class="fieldset-title" style="color: rgb(23, 159, 23); margin-top: 20px">Please Make My Donation:</h6>
@@ -179,7 +211,6 @@ ETV | Donate
                           </div>
                         </div>
                     </div>
-                  
                 </fieldset>
                 <fieldset class="checkout-fieldset z-depth-1">
                   <h5 class="fieldset-title">Donor Details</h5>
@@ -842,9 +873,30 @@ function handleVenmoSuccess(payload) {
 })
 </script>
 <script>
+  $('#ven-select').on('change', function(){
+    var quantity = $(this).val()
+    var total = 1500*quantity
+    $('#ven-sponsor-amount').text('$'+total.toLocaleString())
+    $('#ven-sponsor').attr('value', total)
+    $('#donation-level-input').attr('value', total)
+    if(quantity != 1){
+      $('#ven-label-end').text('registrants')
+    }else{
+      $('#ven-label-end').text('registrant')
+    }
+  })
   $('[name="donation_level"]').on('change', function(){
       var level = $(this).val()
       $('#donation-level-input').attr('value', level)
+      if($('#ven-sponsor').is(':checked')){
+        $('#ven-quantity').removeClass('hidden')
+      }else{
+        $('#ven-quantity').addClass('hidden')
+        $('#ven-sponsor-amount').text('$1,500')
+        $('#ven-sponsor').attr('value', 1500)
+        $('#ven-label-end').text('registrant')
+        $('#ven-quantity .select-dropdown.dropdown-trigger').val(1)
+      }
     });
     $('#other-donation').on('keyup', function(){
       var level = $(this).val()
@@ -979,6 +1031,7 @@ function handleVenmoSuccess(payload) {
         $('#other-donation').val('');
         $('#make-my-donation').show()
     });
+    
     $(".other").change(function() {
         $('.other-input').removeClass('hidden');
     });
@@ -1039,6 +1092,9 @@ function handleVenmoSuccess(payload) {
   })
 </script>
 <style>
+  #donation-form [type="radio"]:not(:checked)+span, [type="radio"]:checked+span {
+    height: 30px !important
+  }
   .p-title {
     font-family: oskar;
     font-size: 18px;
@@ -1184,6 +1240,7 @@ function handleVenmoSuccess(payload) {
     }
 
     @media only screen and (min-width:601px){
+     
       .p-title {
           font-family: oskar;
           font-size: 20px;
@@ -1215,6 +1272,9 @@ function handleVenmoSuccess(payload) {
         }
     }
     @media only screen and (min-width:993px){
+      #donation-form [type="radio"]:not(:checked)+span, [type="radio"]:checked+span {
+        height: 25px !important
+      }
       .p-title {
           font-family: oskar;
           font-size: 26px;
@@ -1429,5 +1489,4 @@ function handleVenmoSuccess(payload) {
   color: rgb(186, 186, 186) !important
 }
 </style>
-
 {% endblock %}

@@ -122,6 +122,32 @@ class Nomination(models.Model):
         return str(self.business_name)
 
     class Meta:
-        verbose_name = 'Village Empowerment Network Nomination'
-        verbose_name_plural = 'Village Empowerment Network Nominations'
+        verbose_name = 'VEN Business Nomination'
+        verbose_name_plural = 'VEN Business Nominations'
+
+class FamilyNomination(models.Model):
+    name                = models.CharField(max_length=200)
+    email               = models.EmailField(blank=True, null=True)
+    city                = models.CharField(max_length=100, null=True, blank=True)
+    state               = models.CharField(max_length=270, choices=STATE_CHOICES)
+    phone               = PhoneField(blank=True, help_text='Business Phone Number')
+    created             = models.DateTimeField(auto_now_add=True, blank=True, null=True)
+    updated             = models.DateTimeField(auto_now=True, blank=True, null=True)
+    employment_status   = models.CharField(max_length=270, blank=True, null=True)
+    age_range           = models.CharField(max_length=270, blank=True, null=True)
+    household_size      = models.CharField(max_length=270, blank=True, null=True)
+    income              = models.CharField(max_length=270, blank=True, null=True)
+    priority1           = models.CharField(max_length=270, blank=True, null=True)
+    other1              = models.CharField(max_length=270, blank=True, null=True)
+    priority2           = models.CharField(max_length=270, blank=True, null=True)
+    other2              = models.CharField(max_length=270, blank=True, null=True)
+    priority3           = models.CharField(max_length=270, blank=True, null=True)
+    other3              = models.CharField(max_length=270, blank=True, null=True)
+    
+    def __str__(self):
+        return str(self.name)
+
+    class Meta:
+        verbose_name = 'VEN Family Nomination'
+        verbose_name_plural = 'VEN Family Nominations'
 

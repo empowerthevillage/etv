@@ -17,7 +17,7 @@
         {% if event.is_multiday %}
         <h6 class="modal-date" style="width: 100%">{{ event.start_date|date:"F jS" }} & {{ event.end_date|date:"jS" }}, {{ event.end_date|date:"Y"}}</h6>
         {% else %}
-        <h6 class="modal-date" style="width: 100%">{{ event.start_date|date:"F jS Y" }}, {{ event.start_time|date:"P" }}</h6>
+        <h6 class="modal-date" style="width: 100%">{{ event.start_date|date:"F jS Y" }}</h6>
         {% endif %}
     </div>
     <div class="row" id="ticket-checkout-p1">
@@ -32,7 +32,7 @@
                                 {% if x.type.on_sale %}
                                 <p class="ticket-price"><b style="text-decoration: line-through; font-weight:400">${{ x.type.price }}</b> <b class="sale">&nbsp${{ x.type.sale_price }}</b> - {{ x.type.sale_description }}</p>
                                 {% else %}
-                                <p class="ticket-price">${{ x.type.price }}</p>
+                                <p class="ticket-price">${{ x.type.price }} {% if x.type.price_description is not none %}- {{ x.type.price_description }}{% endif %}</p>
                                 {% endif %}
                                 <p class="ticket-description">{{ x.type.description }}</p>
                             </div>

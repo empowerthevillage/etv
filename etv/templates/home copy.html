@@ -111,13 +111,14 @@
                     <a class="main-nav-link valign-wrapper ul-effect" style="cursor: pointer" id="join-village-topnav">Join</a>
                   <div class="navbar-slash"> | </div>
                   {% if request.user.is_authenticated %}
-                  <a class="main-nav-link ul-effect valign-wrapper {% if request.path == merchandise_url %}active{% endif %}" href="{{ merchandise_url }}">Shop</a>
+                  <a class="main-nav-link ul-effect valign-wrapper {% if request.path == events_url %}active{% endif %}" href="{{ events_url }}">Events</a>
+                  <div class="navbar-slash"> | </div>
                   <a href="{{ account_url }}" id="account-icon"><i class="material-icons" style="color: grey; font-size: 36px; padding-top:30px;padding-left:10px">account_circle</i></a>
                     <div class="navbar-slash"> | </div>
                   <a href="{{ logout_url }}" class="main-nav-link ul-effect valign-wrapper"> Logout</a>
                     <div class="navbar-slash"> | </div>
                   {% else %}
-                  <a class="main-nav-link ul-effect valign-wrapper {% if request.path == merchandise_url %}active{% endif %}" href="{{ merchandise_url }}">Shop</a>
+                  <a class="main-nav-link ul-effect valign-wrapper {% if request.path == events_url %}active{% endif %}" href="{{ events_url }}">Events</a>
                   <div class="navbar-slash"> | </div>
                   <a class="main-nav-link valign-wrapper ul-effect {% if request.path == login_url %}active{% endif %}" href="{{ login_url }}">Login</a>
                   <div class="navbar-slash"> | </div>
@@ -665,22 +666,24 @@
             }
           </style>
         </div> 
-        <div class="divider" style="border-bottom: solid 1px rgb(233, 233, 233); margin-top: 30px; width: 80%; margin-left: 10%"></div>
-        <div class="container center-align">
-          
-          <div class="row">
-            <div class="col s12 m8 l6 offset-m2 offset-l3">
-                <a href="https://issuu.com/empowerthevillage/docs/press_release_empower_the_village_says_february_is?mode=window" target="_blank"><img class="z-depth-2" src="{% static 'img/ptss-flyer.jpg' %}" width="100%" style="margin-top: 20px; margin-bottom: 20px"></a>
+        <div class="divider" style="border-bottom: solid 1px rgb(233, 233, 233); margin-top: 30px; width: 80%; margin-left: 10%; margin-bottom: 30px"></div>
+        <div class="center-align">
+          <h6 class="center-align" style="color: #bf1e2d; margin-bottom: 50px; padding-left: 30px; padding-right: 30px; margin-bottom: 0">Community Education Panel - Post Traumatic Slave Syndrome & Reframing the Narrative</h6>
+          <div class="divider" style="width: 40%; margin-left: 30%; margin-top: 20px; margin-bottom: 30px"></div>
+          <div class="row valign-lg">
+            <div class="col s12 l6">
+              <iframe class="z-depth-2" width="100%" height="375" src="https://www.youtube.com/embed/_n_nhM18zk0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <a target="_blank" href="https://youtu.be/ql8U8oy12wA"><h5>Watch The Full Video Here!</h5></a>
             </div>
-            <h6 class="center-align col s12" style="color: #bf1e2d">ETV Press Release</h6>
-            
-            <div class="col s12">
-              <p class="left-align">
-                <b>February 24th, 2022 - Morristown, New Jersey –</b> ETV co-hosts an educational  panel and its founder explores the vestiges of PTSS, the impact of U.S. policy and actions throughout history that have shaped the state of the Black economy today and offers solutions on accelerating positive change through accurately reframing the narrative, leaning into a growth mindset and take economic-based action.</p>
-
-                <p><a href="">Check out excerpts from the roundtable.</a></p>
-              <a href="https://issuu.com/empowerthevillage/docs/press_release_empower_the_village_says_february_is?mode=window" class="btn grey darken-4">Full Press Release</a>
+            <div class="col s12 l6">
               
+              <h6 class="center-align col s12" style="color: #060606">ETV Press Release</h6>
+              <div class="col s12">
+                <p class="left-align">
+                  <b>February 24th, 2022 - Morristown, New Jersey –</b> ETV co-hosts an educational  panel and its founder explores the vestiges of PTSS, the impact of U.S. policy and actions throughout history that have shaped the state of the Black economy today and offers solutions on accelerating positive change through accurately reframing the narrative, leaning into a growth mindset and take economic-based action.</p>
+                  <!-- <p><a href="">Check out excerpts from the roundtable.</a></p> -->
+                <a target="_blank" href="https://issuu.com/empowerthevillage/docs/press_release_empower_the_village_says_february_is?mode=window" class="btn grey darken-4">Full Press Release</a>
+              </div>
             </div>
           </div>
           
@@ -689,19 +692,22 @@
         <div class="divider" style="border-bottom: solid 1px rgb(233, 233, 233); margin-top: 30px; width: 80%; margin-left: 10%"></div>
         <div class="row" style="padding-top: 30px">
           <h6 class="center-align" style="color: #149e0f; margin-bottom: 50px;">Join Us for ETV's 2022 Signature Events</h6>
-          <div class="col s12 l6">
+          <div class="col s12 m6">
             <a href="events/love-of-art-fundraiser/"><img class="z-depth-2" src="{% static 'img/loa-2021.png' %}" style="width: 100%"></a>
           </div>
-          <div class="col s12 l6">
-            <a href="events/power-swing-classic/" style="margin-bottom: 20px"><img class="z-depth-2" src="{% static 'img/golf-savethedate.png' %}" style="width: 100%; margin-top: 0px"></a>
-            <br>
-            <iframe style="margin-top: 30px" class="z-depth-1" width="100%" height="415" src="https://www.youtube.com/embed/-JaP0OkWUoQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <div class="col s12 m6">
+            <a href="events/power-swing-classic/"><img class="z-depth-1" src="{% static 'img/golf-flyer.png' %}" width=100%></a>
+            
             <br>
             
           </div>
-          <div class="col s12 center-align" style="padding-top: 30px">
-            <div class="card juneteenth-card center-align col s12 xl8 offset-xl2" style="padding: 2%">
-              <h6 style="color:#bf1e2d">Join us on June 18 & 19, 2022<br>at Montclair Art Museum</h6>
+          <div class="col s12 l5 xl6">
+            <iframe style="margin-top: 30px" class="z-depth-1" width="100%" height="415" src="https://www.youtube.com/embed/-JaP0OkWUoQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="col s12 l7 xl6 center-align" style="padding-top: 22px">
+            <div class="card juneteenth-card center-align" style="padding: 2%; height: 415; background: rgb(63,180,58);
+            background: linear-gradient(59deg, rgba(63,180,58,0.1) 0%, rgba(244,169,43,0.1) 48%, rgba(253,29,29,0.1) 100%);">
+              <h6 style="color:#bf1e2d; font-size: 42px">Join us on June 18 & 19, 2022<br>at Montclair Art Museum</h6>
               <p style="font-size: 18px">Special VIP Passes Available for ETV's Jazz Cocktail Reception and Art Preview on Saturday, June 18th! Be the first to see and purchase your favorite pieces while enjoying great music, food and open bar!
               </p>
               <p style="color:rgb(34, 170, 34); font-size: 18px">Official Juneteenth  & Father's Day Celebration Sunday, June 19th!</p>
@@ -713,8 +719,8 @@
       
       <div class="z-depth-2 center-align" style="margin-top:-10px; margin-top: 20px;padding-bottom: 5%">
         
-        <div class="row">
-            <h6>Check Out ETV’s 2022 Annual Report</h6>
+        <div class="row" style="padding-top: 30px">
+            <h6>Check Out ETV’s 2021 Annual Report</h6>
             <h5 style="font-weight: 600; font-size: 24px">Learn how we Empower The Village!</h5>
         </div>
   

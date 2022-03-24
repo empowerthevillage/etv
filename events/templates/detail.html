@@ -13,7 +13,7 @@
         {% if event.is_multiday %}
         <h6 class="modal-date" style="width: 100%">{{ event.start_date|date:"F jS" }} & {{ event.end_date|date:"jS" }}, {{ event.end_date|date:"Y"}}</h6>
         {% else %}
-        <h6 class="modal-date" style="width: 100%">{{ event.start_date|date:"F jS Y" }}, {{ event.start_time|date:"P" }}</h6>
+        <h6 class="modal-date" style="width: 100%">{{ event.start_date|date:"F jS Y" }}</h6>
         {% endif %}
         <div class="divider-dotted"></div>
         {{ event.content|safe }}

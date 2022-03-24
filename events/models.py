@@ -35,6 +35,7 @@ class Event(models.Model):
     end_time        = models.TimeField(blank=True, null=True)
     tags            = models.ManyToManyField(tag, blank=True)
     thumbnail       = models.FileField(null=True, blank=True)
+    price_description = models.CharField(max_length=270, null=True, blank=True)
 
     def get_absolute_url(self):
         return reverse("events:detail", kwargs={"slug":self.slug})
@@ -92,6 +93,7 @@ class TicketType(models.Model):
     quantity        = models.IntegerField(null=True, blank=True)
     event           = models.ForeignKey(Event, on_delete=models.CASCADE)
     description     = models.TextField(null=True, blank=True)
+    price_description = models.CharField(max_length=270, null=True, blank=True)
 
     def __str__(self):
         return self.title

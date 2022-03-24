@@ -5,6 +5,7 @@ import sweetify
 
 def venForm(request):
     if request.method == 'POST':
+        print(request.POST.get('submission-type'))
         nomination_form = BusinessForm(request.POST)
         obj = Nomination()
         obj.nominator_name = nomination_form.data['nominator-name']

@@ -84,7 +84,7 @@
       </script>
       <main>
         <nav id="navbar" class="nav-extended">
-          <div class="nav-wrapper z-depth-0" id="navbar-div" style="display: flex; align-items: center;">
+          <div class="nav-wrapper z-depth-1" id="navbar-div" style="display: flex; align-items: center;">
               
             <i class="left sidenav-trigger material-icons" data-target="side-nav" id="sidenav-menu-trigger" style="z-index: 2;">menu</i>
             <a href="{{ home_url }}" class="brand-logo"><img src="{% static 'img/logo.jpeg' %}" height=110></a>
@@ -109,13 +109,14 @@
                     <a class="main-nav-link valign-wrapper ul-effect" style="cursor: pointer" id="join-village-topnav">Join</a>
                   <div class="navbar-slash"> | </div>
                   {% if request.user.is_authenticated %}
-                  <a class="main-nav-link ul-effect valign-wrapper {% if request.path == merchandise_url %}active{% endif %}" href="{{ merchandise_url }}">Shop</a>
+                  <a class="main-nav-link ul-effect valign-wrapper {% if request.path == events_url %}active{% endif %}" href="{{ events_url }}">Events</a>
+                  <div class="navbar-slash"> | </div>
                   <a href="{{ account_url }}" id="account-icon"><i class="material-icons" style="color: grey; font-size: 36px; padding-top:30px;padding-left:10px">account_circle</i></a>
                     <div class="navbar-slash"> | </div>
                   <a href="{{ logout_url }}" class="main-nav-link ul-effect valign-wrapper"> Logout</a>
                     <div class="navbar-slash"> | </div>
                   {% else %}
-                  <a class="main-nav-link ul-effect valign-wrapper {% if request.path == merchandise_url %}active{% endif %}" href="{{ merchandise_url }}">Shop</a>
+                  <a class="main-nav-link ul-effect valign-wrapper {% if request.path == events_url %}active{% endif %}" href="{{ events_url }}">Events</a>
                   <div class="navbar-slash"> | </div>
                   <a class="main-nav-link valign-wrapper ul-effect {% if request.path == login_url %}active{% endif %}" href="{{ login_url }}">Login</a>
                   <div class="navbar-slash"> | </div>

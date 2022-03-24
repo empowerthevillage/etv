@@ -334,7 +334,6 @@ class BusinessForm(forms.Form):
     owned = forms.ChoiceField(label='Do you own this business?', widget=forms.RadioSelect(choices=TRUEFALSE_CHOICES,), label_suffix='', choices=TRUEFALSE_CHOICES, required=False)
     recommended = forms.ChoiceField(label='Have you used the product or service(s) offered by this business and recommend it to others?', widget=forms.RadioSelect(choices=TRUEFALSE_CHOICES),choices=TRUEFALSE_CHOICES, required=False)
     
-
     def save(self):
             vbp = super(BusinessForm, self).save()
             return vbp
