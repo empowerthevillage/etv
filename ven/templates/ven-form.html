@@ -1,57 +1,1226 @@
 {% extends 'base.html' %}
 {% load static %}
-
+{% block title %}{{ title }}{% endblock%}
 {% block content %}
 <div class="" style="background:url('https://empowerthevillage.s3.amazonaws.com/static/img/VBP+collage.png'); background-size: 100%; height:100%">
-<div style="background: rgba(255, 255, 255, 0.964); height: 100%; padding-top: 5%; min-height: 500px">
-    <div class="center-align col s12">
-      <h6 class="center-align" id="ven-nomination-form-title" style="color: #01a650; padding-bottom: 0;">Village Empowerment Network™ <br>Registration Form</h6>
-      <div class="divider" style="width: 80%; margin-left: 10%;margin-top: 30px; margin-bottom: 30px"></div>
-      <h6>I would like to nominate:</h6>
-      <div class="valign-500">
-        <p class="">
-          <label>
-            <input type="radio" name="nomination-type" value="business" class="with-gap">
-            <span style="font-size: 16px">A Business</span>
-          </label>
-        </p>
-        <p class="" style="margin-left: 30px">
-          <label>
-            <input type="radio" name="nomination-type" value="individual" class="with-gap">
-            <span style="font-size: 16px">An Individual or Family</span>
-          </label>
-        </p>
+  <div style="background: rgba(255, 255, 255, 0.964); height: 100%; padding-top: 5%; min-height: 500px">
+      <div class="center-align col s12">
+          <h6 class="center-align" id="ven-nomination-form-title" style="color: #01a650; padding-bottom: 0;">Village Empowerment Network™ <br>Registration Form</h6>
+          <div class="divider" style="width: 80%; margin-left: 10%;margin-top: 30px; margin-bottom: 30px"></div>
+          <h6 class="fieldset-title">I would like to register as:</h6>
+          <div class="valign-600">
+              <p class="">
+                <label>
+                  <input type="radio" name="nomination-type" value="business" class="with-gap">
+                  <span style="font-size: 16px">A Business</span>
+                </label>
+              </p>
+              <p class="" style="margin-left: 30px">
+                <label>
+                  <input type="radio" name="nomination-type" value="individual" class="with-gap">
+                  <span style="font-size: 16px">An Individual or Family</span>
+                </label>
+              </p>
+              <p class="" style="margin-left: 30px">
+                <label>
+                  <input type="radio" name="nomination-type" value="both" class="with-gap">
+                  <span style="font-size: 16px">Both</span>
+                </label>
+              </p>
+          </div>
       </div>
-    </div>
-    <div id="vbp-business-nomination-form" class="row hidden">
-      
-          <form class="col s12 l10 offset-l1 xl8 offset-xl2" method="POST" action="/village-empowerment-network-nomination/" id="nomination-form">
-            {% csrf_token %}
-            <input type="hidden" name="submission-type" value="business">
-            <div class="col s12 m6 l4">
+      <div id="vbp-business-nomination-form" class="row hidden">
+            <form class="col s12 l10 offset-l1 xl8 offset-xl2" method="POST" action="/village-empowerment-network-nomination/" id="nomination-form">
+              {% csrf_token %}
+              <input type="hidden" name="submission-type" value="business">
+              <div class="col s12 m6 l4">
+                <div class="input-field">
+                  <input name="nominator-name" id="vbp-name" type="text" required>
+                  <label for="vbp-name">Your Name<b class="required">*</b></label>
+                </div>
+              </div>
+              <div class="col s12 m6 l4">
+                <div class="input-field">
+                    <input id="vbp-email" name="nominator-email" type="text" required>
+                    <label for="vbp-email">Your Email<b class="required">*</b></label>
+                </div>
+              </div>
+              <div class="col s12 m6 l4">
+                <div class="input-field">
+                  <input id="owner-name" name="owner-name" type="text" required>
+                  <label for="owner-name">Business Owner Name(s)<b class="required">*</b></label>
+                </div>
+              </div>
+              <div class="col s12 m6 l4">
+                <div class="input-field">
+                  {{ nomination_form.business_name }}
+                  <label>{{ nomination_form.business_name.label }}<b class="required">*</b></label>
+                </div>
+                
+              </div>
+              <div class="col s12 m6 l8">
+                <div class="input-field">
+                  {{ nomination_form.website }}
+                  <label>{{ nomination_form.website.label }}</label>
+                </div>
+              </div>
+              <div class="col s12 m6 l4">
+                <div class="input-field">
+                  {{ nomination_form.city }}
+                  <label>{{ nomination_form.city.label }}<b class="required">*</b></label>
+                </div>
+              </div>
+              <div class="input-field col s12 m6 l4">
+                  {{ nomination_form.state }}
+                  <label>Business State<b class="required">*</b></label>
+              </div>
+              <div class="col s12 m6 l4">
+                <div class="input-field">
+                  {{ nomination_form.phone }}
+                  <label>{{ nomination_form.phone.label }}<b class="required">*</b></label>
+                </div>
+              </div>
+              <div>
+                <div class="input-field col s12 l6">
+                    <select name="category" id="category-select">
+                        {% for category,verbose in nomination_form.get_categories %}
+                        <option value="{{ category }}">{{ verbose }}</option>
+                        {% endfor %}
+                    </select>
+                    <label>Category<b class="required">*</b></label>
+                </div>
+                <div class="input-field hidden col s12 m6 subcat-div" cat="beauty">
+                    <select name="subcategory-disabled">
+                        <option value="" selected>Choose A Subcategory</option>
+                        <option value="Barber" cat="Beauty & Personal Grooming">Barber</option>
+                        <option value="Bath & Body" cat="Beauty & Personal Grooming">Bath & Body</option>
+                        <option value="Beauty Salon" cat="Beauty & Personal Grooming">Beauty Salon</option>
+                        <option value="Beauty Supply/Hair & Accessories" cat="Beauty & Personal Grooming">Beauty Supply/Hair & Accessories</option>
+                        <option value="Cosmetics" cat="Beauty & Personal Grooming">Cosmetics</option>
+                        <option value="Nails" cat="Beauty & Personal Grooming">Nails</option>
+                    </select>
+                    <label>Subcategory</label>
+                </div>
+                <div class="input-field hidden col s12 m6 subcat-div" cat="books">
+                    <select name="subcategory-disabled">
+                        <option value="" selected>Choose A Subcategory</option>
+                        <option value="Book Store" cat="Books & Publishing">Book Store</option>
+                        <option value="Online Publication" cat="Books & Publishing">Online Publication</option>
+                        <option value="Publishing" cat="Books & Publishing">Publishing</option>
+                        <option value="Authors" cat="Books & Publishing">Authors</option>
+                    </select>
+                    <label>Subcategory</label>
+                </div>
+                <div class="input-field hidden col s12 m6 subcat-div" cat="cars">
+                    <select name="subcategory-disabled">
+                        <option value="" selected>Choose A Subcategory</option>
+                        <option value="Auto Dealership" cat="Cars & Automotive">Auto Dealership</option>
+                        <option value="Auto Repair/ Services" cat="Cars & Automotive">Auto Repair/ Services</option>
+                        <option value="Car Wash" cat="Cars & Automotive">Car Wash</option>
+                        <option value="Gas Station" cat="Cars & Automotive">Gas Station</option>
+                    </select>
+                    <label>Subcategory</label>
+                </div>
+                <div class="input-field hidden col s12 m6 subcat-div" cat="child">
+                    <select name="subcategory-disabled">
+                        <option value="" selected>Choose A Subcategory</option>
+                        <option value="Baby Products" cat="Childcare | Children's Services & Products">Baby Products</option>
+                        <option value="Childcare/Daycare/ Preschool" cat="Childcare | Children's Services & Products">Childcare/Daycare/ Preschool</option>
+                        <option value="Children’s Books" cat="Childcare | Children's Services & Products">Children’s Books</option>
+                        <option value=">Children’s Activities" cat="Childcare | Children's Services & Products">Children’s Activities</option>
+                    </select>
+                    <label>Subcategory</label>
+                </div>
+                <div class="input-field hidden col s12 m6 subcat-div" cat="cleaning">
+                    <select name="subcategory-disabled">
+                        <option value="" selected>Choose A Subcategory</option>
+                        <option value="Cleaning Products" cat="Cleaning">Cleaning Products</option>
+                        <option value="Dry Cleaning" cat="Cleaning">Dry Cleaning</option>
+                        <option value="Laundry" cat="Cleaning">Laundry</option>
+                    </select>
+                    <label>Subcategory</label>
+                </div>
+                <div class="input-field hidden col s12 m6 subcat-div" cat="clothing">
+                    <select name="subcategory-disabled">
+                        <option value="" selected>Choose A Subcategory</option>
+                        <option value="Apparel" cat="Clothing & Fashion">Apparel</option>
+                        <option value="Stylist" cat="Clothing & Fashion">Stylist</option>
+                        <option value="Footwear" cat="Clothing & Fashion">Footwear</option>
+                        <option value="Fabric/Yarn" cat="Clothing & Fashion">Fabric/Yarn</option>
+                    </select>
+                    <label>Subcategory</label>
+                </div>
+                <div class="input-field hidden col s12 m6 subcat-div" cat="construction">
+                    <select name="subcategory-disabled">
+                        <option value="" selected>Choose A Subcategory</option>
+                        <option value="Appliance Repair" cat="Construction & Trades">Appliance Repair</option>
+                        <option value="Construction/ Engineering" cat="Construction & Trades">Construction/ Engineering</option>
+                        <option value="Electrical" cat="Construction & Trades">Electrical</option>
+                        <option value="HVAC" cat="Construction & Trades">HVAC</option>
+                        <option value="Plumbing" cat="Construction & Trades">Plumbing</option>
+                        <option value="Power Washing" cat="Construction & Trades">Power Washing</option>
+                        <option value="Roofing & Siding" cat="Construction & Trades">Roofing & Siding</option>
+                        <option value="Painting Services" cat="Construction & Trades">Painting Services</option>
+                    </select>
+                    <label>Subcategory</label>
+                </div>
+                <div class="input-field hidden col s12 m6 subcat-div" cat="education">
+                    <select name="subcategory-disabled">
+                        <option value="" selected>Choose A Subcategory</option>
+                        <option value="Tutoring/ Academic Planning" cat="Education">Tutoring/ Academic Planning</option>
+                        <option value="Driving/ Aviation" cat="Education">Driving/ Aviation</option>
+                        <option value="Enrichment" cat="Education">Enrichment</option>
+                    </select>
+                    <label>Subcategory</label>
+                </div>
+                <div class="input-field hidden col s12 m6 subcat-div" cat="eldercare">
+                    <select name="subcategory-disabled">
+                        <option value="" selected>Choose A Subcategory</option>
+                        <option value="Assisted Living/Nursing Home" cat="Eldercare">Assisted Living/Nursing Home</option>
+                        <option value="Home Health Care/ Nursing Services" cat="Eldercare">Home Health Care/ Nursing Services</option>
+                        <option value="Adult Day Care Center" cat="Eldercare">Adult Day Care Center</option>
+                        <option value="Cybersecurity" cat="Eldercare">Cybersecurity</option>
+                    </select>
+                    <label>Subcategory</label>
+                </div>
+                <div class="input-field hidden col s12 m6 subcat-div" cat="electronics">
+                    <select name="subcategory-disabled">
+                        <option value="" selected>Choose A Subcategory</option>
+                        <option value="Software Development" cat="Electronics & Technology">Software Development</option>
+                        <option value="Tech Support/ Repair" cat="Electronics & Technology">Tech Support/ Repair</option>
+                        <option value="Tech Products" cat="Electronics & Technology">Tech Products</option>
+                        <option value="Web Services" cat="Electronics & Technology">Web Services</option>
+                    </select>
+                    <label>Subcategory</label>
+                </div>
+                <div class="input-field hidden col s12 m6 subcat-div" cat="entertainment">
+                    <select name="subcategory-disabled">
+                        <option value="" selected>Choose A Subcategory</option>
+                        <option value="Bands/DJs/Performers" cat="Entertainment">Bands/DJs/Performers</option>
+                        <option value="Comedian" cat="Entertainment">Comedian</option>
+                        <option value="Event Planning/Services" cat="Entertainment">Event Planning/Services</option>
+                        <option value="Media" cat="Entertainment">Media</option>
+                        <option value="Paint & Sip" cat="Entertainment">Paint & Sip</option>
+                    </select>
+                    <label>Subcategory</label>
+                </div>
+                <div class="input-field hidden col s12 m6 subcat-div" cat="farming">
+                    <select name="subcategory-disabled">
+                        <option value="" selected>Choose A Subcategory</option>
+                        <option value="Farmer’s Market" cat="Farming & Agriculture">Farmer’s Market</option>
+                        <option value="Vineyard" cat="Farming & Agriculture">Vineyard</option>
+                    </select>
+                    <label>Subcategory</label>
+                </div>
+                <div class="input-field hidden col s12 m6 subcat-div" cat="grocery">
+                    <select name="subcategory-disabled">
+                        <option value="" selected>Choose A Subcategory</option>
+                        <option value="Bakery" cat="Grocery & Food Services">Bakery</option>
+                        <option value="Catering/ Chef" cat="Grocery & Food Services">Catering/ Chef</option>
+                        <option value="Coffee/Tea/Beverages" cat="Grocery & Food Services">Coffee/Tea/Beverages</option>
+                        <option value="Food Delivery Service" cat="Grocery & Food Services">Food Delivery Service</option>
+                        <option value="Ice Cream Parlor" cat="Grocery & Food Services">Ice Cream Parlor</option>
+                        <option value="Alcohol" cat="Grocery & Food Services">Alcohol</option>
+                        <option value="Specialty" cat="Grocery & Food Services">Specialty</option>
+                    </select>
+                    <label>Subcategory</label>
+                </div>
+                <div class="input-field hidden col s12 m6 subcat-div" cat="health">
+                    <select name="subcategory-disabled">
+                        <option value="" selected>Choose A Subcategory</option>
+                        <option value="Addiction Treatment" cat="Health & Wellness">Addiction Treatment</option>
+                        <option value="Chiropractor" cat="Health & Wellness">Chiropractor</option>
+                        <option value="Fitness/ Yoga" cat="Health & Wellness">Fitness/ Yoga</option>
+                        <option value="Spa/ Massage Therapy" cat="Health & Wellness">Spa/ Massage Therapy</option>
+                        <option value="Mental Health Support" cat="Health & Wellness">Mental Health Support</option>
+                        <option value="Nutrition" cat="Health & Wellness">Nutrition</option>
+                    </select>
+                    <label>Subcategory</label>
+                </div>
+                <div class="input-field hidden col s12 m6 subcat-div" cat="home">
+                    <select name="subcategory-disabled">
+                        <option value="" selected>Choose A Subcategory</option>
+                        <option value="Furniture" cat="Home & Garden">Furniture</option>
+                        <option value="Landscaping/Gardening" cat="Home & Garden">Landscaping/Gardening</option>
+                        <option value="Interior Design/ Home Staging" cat="Home & Garden">Interior Design/ Home Staging</option>
+                        <option value="Pest Control" cat="Home & Garden">Pest Control</option>
+                        <option value="Home Goods/Décor" cat="Home & Garden">Home Goods/Décor</option>
+                    </select>
+                    <label>Subcategory</label>
+                </div>
+                <div class="input-field hidden col s12 m6 subcat-div" cat="hotels">
+                    <select name="subcategory-disabled">
+                        <option value="" selected>Choose A Subcategory</option>
+                        <option value="Travel Agent" cat="Hotels & Hospitality | Travel">Travel Agent</option>
+                        <option value="Hospitality/Hotels/Inns" cat="Hotels & Hospitality | Travel">Hospitality/Hotels/Inns</option>
+                        <option value="Tours" cat="Hotels & Hospitality | Travel">Tours</option>
+                    </select>
+                    <label>Subcategory</label>
+                </div>
+                <div class="input-field hidden col s12 m6 subcat-div" cat="jewelry">
+                    <select name="subcategory-disabled">
+                        <option value="" selected>Choose A Subcategory</option>
+                        <option value="Accessories/ Handbags" cat="Jewelry & Accessories">Accessories/ Handbags</option>
+                        <option value="Fine Jewelry" cat="Jewelry & Accessories">Fine Jewelry</option>
+                    </select>
+                    <label>Subcategory</label>
+                </div>
+                <div class="input-field hidden col s12 m6 subcat-div" cat="legal">
+                    <select name="subcategory-disabled">
+                        <option value="" selected>Choose A Subcategory</option>
+                        <option value="Financial Services" cat="Legal & Financial Services">Financial Services</option>
+                        <option value="Notary" cat="Legal & Financial Services">Notary</option>
+                        <option value="Bail Bonds Service" cat="Legal & Financial Services">Bail Bonds Service</option>
+                        <option value="Legal Services (General)" cat="Legal & Financial Services">Legal Services (General)</option>
+                        <option value="Real Estate Law" cat="Legal & Financial Services">Real Estate Law</option>
+                        <option value="Estate Planning/Wills" cat="Legal & Financial Services">Estate Planning/Wills</option>
+                        <option value="Corporate Law" cat="Legal & Financial Services">Corporate Law</option>
+                        <option value="Insurance" cat="Legal & Financial Services">Insurance</option>
+                    </select>
+                    <label>Subcategory</label>
+                </div>
+                <div class="input-field hidden col s12 m6 subcat-div" cat="lifestyle">
+                    <select name="subcategory-disabled">
+                        <option value="" selected>Choose A Subcategory</option>
+                        <option value="Adult Novelties" cat="Lifestyle">Adult Novelties</option>
+                        <option value="CBD Products" cat="Lifestyle">CBD Products</option>
+                        <option value="Smoking & Paraphernalia" cat="Lifestyle">Smoking & Paraphernalia</option>
+                        <option value="Tarot" cat="Lifestyle">Tarot</option>
+                        <option value=">Piercing/ Tattoos" cat="Lifestyle">Piercing/ Tattoos</option>
+                    </select>
+                    <label>Subcategory</label>
+                </div>
+                <div class="input-field hidden col s12 m6 subcat-div" cat="marketing">
+                    <select name="subcategory-disabled">
+                        <option value="" selected>Choose A Subcategory</option>
+                        <option value="Advertising" cat="Marketing & Advertising">Advertising</option>
+                        <option value="Branding/ Graphic Design" cat="Marketing & Advertising">Branding/ Graphic Design</option>
+                        <option value="Marketing/ Digital Marketing" cat="Marketing & Advertising">Marketing/ Digital Marketing</option>
+                        <option value="Web Services/ Social Media" cat="Marketing & Advertising">Web Services/ Social Media</option>
+                    </select>
+                    <label>Subcategory</label>
+                </div>
+                <div class="input-field hidden col s12 m6 subcat-div" cat="medical">
+                    <select name="subcategory-disabled">
+                        <option value="" selected>Choose A Subcategory</option>
+                        <option value="Dental/ Orthodontics" cat="Medical Services">Dental/ Orthodontics</option>
+                        <option value="Medical Billing" cat="Medical Services">Medical Billing</option>
+                        <option value="Physical Therapy" cat="Medical Services">Physical Therapy</option>
+                        <option value="Speech Pathologist" cat="Medical Services">Speech Pathologist</option>
+                        <option value="Diagnostic Testing/Labs" cat="Medical Services">Diagnostic Testing/Labs</option>
+                        <option value="Vision" cat="Medical Services">Vision</option>
+                        <option value="Healthcare Products" cat="Medical Services">Healthcare Products</option>
+                        <option value="Primary Care" cat="Medical Services">Primary Care</option>
+                        <option value="OB/GYNs" cat="Medical Services">OB/GYNs</option>
+                        <option value="Pediatrics" cat="Medical Services">Pediatrics</option>
+                        <option value="Dermatology" cat="Medical Services">Dermatology</option>
+                        <option value="Psychiatry/Mental Health" cat="Medical Services">Psychiatry/Mental Health</option>
+                    </select>
+                    <label>Subcategory</label>
+                </div>
+                <div class="input-field hidden col s12 m6 subcat-div" cat="other">
+                    <select name="subcategory-disabled">
+                        <option value="" selected>Choose A Subcategory</option>
+                        <option value="Antiques & Collectibles" cat="Other">Antiques & Collectibles</option>
+                        <option value="Guns & Shooting Ranges" cat="Other">Guns & Shooting Ranges</option>
+                        <option value="Gifts & Stationery" cat="Other">Gifts & Stationery</option>
+                        <option value="Mortuary/ Funeral Services" cat="Other">Mortuary/ Funeral Services</option>
+                        <option value="Marketplace" cat="Other">Marketplace</option>
+                        <option value="Translation Services" cat="Other">Translation Services</option>
+                    </select>
+                    <label>Subcategory</label>
+                </div>
+                <div class="input-field hidden col s12 m6 subcat-div" cat="packaging">
+                    <select name="subcategory-disabled">
+                        <option value="" selected>Choose A Subcategory</option>
+                        <option value="Office Supplies" cat="Packaging | Delivery | Shipping">Office Supplies</option>
+                        <option value="Courier" cat="Packaging | Delivery | Shipping">Courier</option>
+                        <option value="Printing" cat="Packaging | Delivery | Shipping">Printing</option>
+                        <option value="Shipping" cat="Packaging | Delivery | Shipping">Shipping</option>
+                    </select>
+                    <label>Subcategory</label>
+                </div>
+                <div class="input-field hidden col s12 m6 subcat-div" cat="pets">
+                    <select name="subcategory-disabled">
+                        <option value="" selected>Choose A Subcategory</option>
+                        <option value="Dog Training" cat="Pets & Animal Care">Dog Training</option>
+                        <option value="Pet Sitting/ Walking" cat="Pets & Animal Care">Pet Sitting/ Walking</option>
+                        <option value="Veterinarian" cat="Pets & Animal Care">Veterinarian</option>
+                        <option value="Pet Grooming" cat="Pets & Animal Care">Pet Grooming</option>
+                    </select>
+                    <label>Subcategory</label>
+                </div>
+                <div class="input-field hidden col s12 m6 subcat-div" cat="photography">
+                    <select name="subcategory-disabled">
+                        <option value="" selected>Choose A Subcategory</option>
+                        <option value="Videography" cat="Photography & Video">Videography</option>
+                        <option value="Photography" cat="Photography & Video">Photography</option>
+                    </select>
+                    <label>Subcategory</label>
+                </div>
+                <div class="input-field hidden col s12 m6 subcat-div" cat="professional">
+                    <select name="subcategory-disabled">
+                        <option value="" selected>Choose A Subcategory</option>
+                        <option value="Consulting" cat="Professional Services">Consulting</option>
+                        <option value="Human Resources" cat="Professional Services">Human Resources</option>
+                        <option value="IT" cat="Professional Services">IT</option>
+                        <option value="Recruiting/ Staffing" cat="Professional Services">Recruiting/ Staffing</option>
+                        <option value="Private Investigator" cat="Professional Services">Private Investigator</option>
+                        <option value="Writing Services" cat="Professional Services">Writing Services</option>
+                        <option value="Speakers" cat="Professional Services">Speakers</option>
+                        <option value="Administrative Support" cat="Professional Services">Administrative Support</option>
+                    </select>
+                    <label>Subcategory</label>
+                </div>
+                <div class="input-field hidden col s12 m6 subcat-div" cat="realestate">
+                    <select name="subcategory-disabled">
+                        <option value="" selected>Choose A Subcategory</option>
+                        <option value="Developers" cat="Real Estate">Developers</option>
+                        <option value="Home Inspection" cat="Real Estate">Home Inspection</option>
+                        <option value="Mortgage Consulting" cat="Real Estate">Mortgage Consulting</option>
+                        <option value="Property Management" cat="Real Estate">Property Management</option>
+                        <option value="Real Estate Agents/ Brokers" cat="Real Estate">Real Estate Agents/ Brokers</option>
+                        <option value="Title Services" cat="Real Estate">Title Services</option>
+                    </select>
+                    <label>Subcategory</label>
+                </div>
+                <div class="input-field hidden col s12 m6 subcat-div" cat="recreation">
+                    <select name="subcategory-disabled">
+                        <option value="" selected>Choose A Subcategory</option>
+                        <option value="Arcade/Laser Tag" cat="Recreation & Sports">Arcade/Laser Tag</option>
+                        <option value="Sports" cat="Recreation & Sports">Sports</option>
+                        <option value="Martial Arts" cat="Recreation & Sports">Martial Arts</option>
+                        <option value="Sports Equipment" cat="Recreation & Sports">Sports Equipment</option>
+                        <option value="Pool Tables" cat="Recreation & Sports">Pool Tables</option>
+                        <option value="Gaming" cat="Recreation & Sports">Gaming</option>
+                    </select>
+                    <label>Subcategory</label>
+                </div>
+                <div class="input-field hidden col s12 m6 subcat-div" cat="restaurants">
+                    <select name="subcategory-disabled">
+                        <option value="" selected>Choose A Subcategory</option>
+                        <option value="Bar/Night Club" cat="Restaurants & Bars | Event Spaces">Bar/Night Club</option>
+                        <option value="BBQ/ Soul Food Restaurant" cat="Restaurants & Bars | Event Spaces">BBQ/ Soul Food Restaurant</option>
+                        <option value="Café" cat="Restaurants & Bars | Event Spaces">Café</option>
+                        <option value="Caribbean Restaurant" cat="Restaurants & Bars | Event Spaces">Caribbean Restaurant</option>
+                        <option value="Creole/Cajun Restaurant" cat="Restaurants & Bars | Event Spaces">Creole/Cajun Restaurant</option>
+                        <option value="Ethiopian/Eritrean Restaurant" cat="Restaurants & Bars | Event Spaces">Ethiopian/Eritrean Restaurant</option>
+                        <option value="Venues/Event Spaces" cat="Restaurants & Bars | Event Spaces">Venues/Event Spaces</option>
+                        <option value="West African Restaurant" cat="Restaurants & Bars | Event Spaces">West African Restaurant</option>
+                        <option value="Food Trucks/Carts" cat="Restaurants & Bars | Event Spaces">Food Trucks/Carts</option>
+                    </select>
+                    <label>Subcategory</label>
+                </div>
+                <div class="input-field hidden col s12 m6 subcat-div" cat="transportation">
+                    <select name="subcategory-disabled">
+                        <option value="" selected>Choose A Subcategory</option>
+                        <option value="Commuter/Shuttle Services" cat="Transportation & Trucking">Commuter/Shuttle Services</option>
+                        <option value="Mortuary Transport" cat="Transportation & Trucking">Mortuary Transport</option>
+                        <option value="Moving Services" cat="Transportation & Trucking">Moving Services</option>
+                        <option value="Parking" cat="Transportation & Trucking">Parking</option>
+                        <option value="Taxi" cat="Transportation & Trucking">Taxi</option>
+                        <option value="Limo/ Party Bus" cat="Transportation & Trucking">Limo/ Party Bus</option>
+                        <option value="Trucking" cat="Transportation & Trucking">Trucking</option>
+                        <option value="Valet" cat="Transportation & Trucking">Valet</option>
+                    </select>
+                    <label>Subcategory</label>
+                </div>
+                <div class="input-field hidden col s12 m6 subcat-div" cat="visual">
+                    <select name="subcategory-disabled">
+                        <option value="" selected>Choose A Subcategory</option>
+                        <option value="Art Gallery/ Museum" cat="Visual & Performing Arts | Culture">Art Gallery/ Museum</option>
+                        <option value="Dance Studios/Lessons" cat="Visual & Performing Arts | Culture">Dance Studios/Lessons</option>
+                        <option value="Artists" cat="Visual & Performing Arts | Culture">Artists</option>
+                        <option value="Theater/Acting Lessons" cat="Visual & Performing Arts | Culture">Theater/Acting Lessons</option>
+                        <option value="Music Lessons/Instruments" cat="Visual & Performing Arts | Culture">Music Lessons/Instruments</option>
+                    </select>
+                    <label>Subcategory</label>
+                </div>
+                <div class="input-field col s12 m6" id="disabled-subcat">
+                  <select disabled>
+                      <option>Choose A Subcategory</option>
+                  </select>
+                  <label>Subcategory</label>
+                </div>
+              </div>
+              <div class="col s12">
+                  <div class="input-field col s8 m4" style="margin-left:-7">
+                    <i class="fab fa-instagram prefix" ></i>
+                    {{ nomination_form.instagram }}
+                  </div>
+                  <div class="input-field col s8 m4">
+                    <i class="fab fa-facebook prefix"></i>
+                    {{ nomination_form.facebook }}
+                  </div>
+                  <div class="input-field col s8 m4">
+                    <i class="fab fa-twitter prefix"></i>
+                    {{ nomination_form.twitter }}
+                  </div>
+              </div>
+              <div class="left-align col s12">
+                <p class="owned-label">{{ nomination_form.owned.label }}<b class="required">*</b></p>
+                  <p class="col s3">
+                    <label>
+                      <input type="radio" name="owned" value="True" class="with-gap">
+                      <span>Yes</span>
+                    </label>
+                  </p>
+                  <p class="col s3">
+                    <label>
+                      <input type="radio" name="owned" value="False" class="with-gap">
+                      <span>No</span>
+                    </label>
+                  </p>
+              </div>
+              <div class="col s12 m6">
+                <p>Number of Years in Business<b class="required">*</b></p>
+                
+                <p>
+                    <label>
+                      <input class="with-gap" value="Less than 2 years" name="years-active" type="radio" required/>
+                      <span>Less than 2 years</span>
+                    </label>
+                  </p>
+                  <p>
+                    <label>
+                      <input class="with-gap" value="3-5 years" name="years-active" type="radio"  />
+                      <span>3-5 years</span>
+                    </label>
+                  </p>
+                  <p>
+                    <label>
+                      <input class="with-gap" value="5-10 years" name="years-active" type="radio"  />
+                      <span>5-10 years</span>
+                    </label>
+                  </p>
+                  <p>
+                    <label>
+                      <input class="with-gap" value="10-15 years" name="years-active" type="radio"  />
+                      <span>10-15 years</span>
+                    </label>
+                  </p>
+                  <p>
+                    <label>
+                      <input class="with-gap"value="More than 15 years" name="years-active" type="radio"/>
+                      <span>More than 15 years</span>
+                    </label>
+                  </p>
+              </div>
+              <div class="col s12 m6">
+                <p>Number of Employees<b class="required">*</b>
+                </p>
+                <p>
+                  <label>
+                    <input class="with-gap" value="0-4" name="employees" type="radio" required/>
+                    <span>0-4 people</span>
+                  </label>
+                </p>
+                <p>
+                  <label>
+                    <input class="with-gap" value="5-10" name="employees" type="radio"  />
+                    <span>5-10 people</span>
+                    
+                  </label>
+                </p>
+                <p>
+                  <label>
+                    <input class="with-gap" value="11-20" name="employees" type="radio"  />
+                    <span>11-20</span>
+                    
+                  </label>
+                </p>
+                <p>
+                  <label>
+                    <input class="with-gap" value="21-30" name="employees" type="radio"  />
+                    <span>21-30 people</span>
+                    
+                  </label>
+                </p>
+                <p>
+                  <label>
+                    <input class="with-gap" value="More than 30" name="employees" type="radio"  />
+                    <span>More than 30 people</span>
+                    
+                  </label>
+                </p> 
+              </div>
+              <div class="col s12 m6">
+                <p>Estimated 2021 Revenue<b class="required">*</b>
+                  <p>
+                    <label>
+                      <input class="with-gap" value="Less than $50,000" name="revenue" type="radio" required/>
+                      <span>Less than $50,000</span>
+                      
+                    </label>
+                  </p>
+                  <p>
+                    <label>
+                      <input class="with-gap" value="$51,000-$100,000" name="revenue" type="radio"  />
+                      <span>$51,000-$100,000</span>
+                      
+                    </label>
+                  </p>
+                  <p>
+                    <label>
+                      <input class="with-gap" value="$101,000-$250,000" name="revenue" type="radio"  />
+                      <span>$101,000-$250,000</span>
+                      
+                    </label>
+                  </p>
+                  <p>
+                    <label>
+                      <input class="with-gap" value="$251,000-$500,000" name="revenue" type="radio"  />
+                      <span>$251,000-$500,000</span>
+                      
+                    </label>
+                  </p>
+                  <p>
+                    <label>
+                      <input class="with-gap" value="More than $500,000" name="revenue" type="radio" />
+                      <span>More than $500,000</span>
+                      
+                    </label>
+                  </p>
+                  
+                </p>
+              </div>
+              <div class="col s12 m6">
+                <p>Current Business Structure:</p>
+                <input class="hidden" type="radio" value='' name="structure" checked>
+                <p>
+                  <label>
+                    <input class="with-gap" value="Sole Proprietorship" name="structure" type="radio"  />
+                    <span id="spu">Sole Proprietorship (unincorporated)</span>
+                    
+                  </label>
+                </p>
+                <p>
+                  <label>
+                    <input class="with-gap" value="Incorporated Entity" name="structure" type="radio" />
+                    <span>Incorporated Entity (Inc.)</span>
+                    
+                  </label>
+                </p>
+                <p>
+                  <label>
+                    <input class="with-gap" value="Official Partnership" name="structure" type="radio" />
+                    <span>Official Partnership (e.g., LP)</span>
+                    
+                  </label>
+                </p>
+                <p>
+                  <label>
+                    <input class="with-gap" value="LLC" name="structure" type="radio" />
+                    <span id="llc">Limited Liability Corporation (LLC)</span>
+                    
+                  </label>
+                </p>
+                <p>
+                  <label>
+                    <input class="with-gap" value="None" name="structure" type="radio" />
+                    <span>None of the Above</span>
+                    
+                  </label>
+                </p>
+              </div>
+              <div class="col s12 center-align">
+                <p><b>Rank Your Top 3 Business Priorities in Order of Need from 1-3.</b></p>
+                <p>Revenue/Sales, Business Loans/Acquire Financing, Staffing/Employees, Marketing/Advertising, <br>E-Commerce, Exiting, Estate Planning, Other</p>
+                <div class="col s12 m8 offset-m2" style="margin-top: 20px">
+                  <div class="input-field">
+                    <select name="priority1" id="priority1" required>
+                      <option value="" disabled selected>Select Your #1 Priority</option>
+                      <option value="Revenue/Sales">Revenue/Sales</option>
+                      <option value="Business Loans/Acquire Financing">Business Loans/Acquire Financing</option>
+                      <option value="Staffing/Employees">Staffing/Employees</option>
+                      <option value="Marketing/Advertising">Marketing/Advertising</option>
+                      <option value="E-Commerce">E-Commerce</option>
+                      <option value="Exiting">Exiting</option>
+                      <option value="Estate Planning">Estate Planning</option>
+                      <option value="Other" id="other1">Other</option>
+                    </select>
+                    <label>#1 Priority<b class="required">*</b></label>
+                  </div>
+                  <div class="input-field" style="display:none" id="other1-input">
+                    <input type=text name="other1-custom" placeholder="List Your #1 Priority Here">
+                  </div>
+                </div>
+                <div class="col s12 m8 offset-m2" style="margin-top: 20px">
+                  <div class="input-field">
+                    <select name="priority2" id="priority2">
+                      <option value="" selected>Select Your #2 Priority</option>
+                      <option value="Revenue/Sales">Revenue/Sales</option>
+                      <option value="Business Loans/Acquire Financing">Business Loans/Acquire Financing</option>
+                      <option value="Staffing/Employees">Staffing/Employees</option>
+                      <option value="Marketing/Advertising">Marketing/Advertising</option>
+                      <option value="E-Commerce">E-Commerce</option>
+                      <option value="Exiting">Exiting</option>
+                      <option value="Estate Planning">Estate Planning</option>
+                      <option value="Other" id="other2">Other</option>
+                    </select>
+                    <label>#2 Priority</label>
+                  </div>
+                  <div class="input-field" style="display:none" id="other2-input">
+                    <input type=text name="other2-custom" placeholder="List Your #2 Priority Here">
+                  </div>
+                </div>
+                <div class="col s12 m8 offset-m2" style="margin-top: 20px">
+                  <div class="input-field">
+                    <select name="priority3" id="priority3">
+                      <option value="" selected>Select Your #3 Priority</option>
+                      <option value="Revenue/Sales">Revenue/Sales</option>
+                      <option value="Business Loans/Acquire Financing">Business Loans/Acquire Financing</option>
+                      <option value="Staffing/Employees">Staffing/Employees</option>
+                      <option value="Marketing/Advertising">Marketing/Advertising</option>
+                      <option value="E-Commerce">E-Commerce</option>
+                      <option value="Exiting">Exiting</option>
+                      <option value="Estate Planning">Estate Planning</option>
+                      <option value="Other" id="other3">Other</option>
+                    </select>
+                    <label>#3 Priority</label>
+                  </div>
+                  <div class="input-field" style="display:none" id="other3-input">
+                    <input type=text name="other3-custom" placeholder="List Your #3 Priority Here">
+                  </div>
+                </div>
+                
+              </div>
+              <div class="col s12 center-align">
+                <button class="btn btn-large submit-btn nomination-submit" type="submit">
+                  SUBMIT
+              </button>
+              </div>
+            </form>
+      </div>
+      <div id="vbp-family-nomination-form" class="row hidden container">
+            <form class="col s12 l10 offset-l1 xl8 offset-xl2" method="POST" action="/village-empowerment-network-nomination/" id="nomination-form">
+                {% csrf_token %}
+                <input type="hidden" name="submission-type" value="family">
+
+                <div class="col s12 m6 l4">
+                  <div class="input-field">
+                    <input name="name" id="vbp-name" type="text" required>
+                    <label for="vbp-name">Name<b class="required">*</b></label>
+                  </div>
+                </div>
+
+                <div class="col s12 m6 l4">
+                  <div class="input-field">
+                      <input id="vbp-email" name="email" type="text" required>
+                      <label for="vbp-email">Email<b class="required">*</b></label>
+                  </div>
+                </div>
+
+                <div class="col s12 m6 l4">
+                  <div class="input-field">
+                    {{ nomination_form.phone }}
+                    <label>Phone<b class="required">*</b></label>
+                  </div>
+                </div>
+
+                <div class="col s12 m6 ">
+                  <div class="input-field">
+                    {{ nomination_form.city }}
+                    <label>City<b class="required">*</b></label>
+                  </div>
+                </div>
+                
+                <div class="input-field col s12 m6 ">
+                    {{ nomination_form.state }}
+                    <label>State<b class="required">*</b></label>
+                </div>
+                
+                <div class="left-align col s12">
+                    <p class="owned-label">Employment Status<b class="required">*</b></p>
+                      
+                      <p class="col s4">
+                        <label>
+                          <input type="radio" name="employmentstatus" value="Employed" class="with-gap">
+                          <span>Employed</span>
+                        </label>
+                      </p>
+                      <p class="col s4">
+                        <label>
+                          <input type="radio" name="employmentstatus" value="Self-Employed" class="with-gap">
+                          <span>Self-Employed</span>
+                        </label>
+                      </p>
+                      <p class="col s4">
+                        <label>
+                          <input type="radio" name="employmentstatus" value="Unemployed" class="with-gap">
+                          <span>Unemployed</span>
+                        </label>
+                      </p>
+                </div>
+
+                <div class="col s12">
+                  <div class="row">
+                    <div class="col s12 m6">
+                      <p>Age Range<b class="required">*</b></p>
+                      <p>
+                          <label>
+                            <input class="with-gap" value="Under 18" name="age-range" type="radio" required/>
+                            <span>Under 18</span>
+                          </label>
+                        </p>
+                        <p>
+                          <label>
+                            <input class="with-gap" value="18-30 years" name="age-range" type="radio"  />
+                            <span>18-30 years</span>
+                          </label>
+                        </p>
+                        <p>
+                          <label>
+                            <input class="with-gap" value="31-45 years" name="age-range" type="radio"  />
+                            <span>31-45 years</span>
+                          </label>
+                        </p>
+                        <p>
+                          <label>
+                            <input class="with-gap" value="46-64 years" name="age-range" type="radio"  />
+                            <span>46-64 years</span>
+                          </label>
+                        </p>
+                        <p>
+                          <label>
+                            <input class="with-gap"value="65 and older" name="age-range" type="radio"/>
+                            <span>65 and older</span>
+                          </label>
+                        </p>
+                    </div>
+                    <div class="col s12 m6">
+                      <p>Household Size<b class="required">*</b>
+                      </p>
+                      <p>
+                        <label>
+                          <input class="with-gap" value="1 person" name="household-size" type="radio" required/>
+                          <span>1 person</span>
+                        </label>
+                      </p>
+                      <p>
+                        <label>
+                          <input class="with-gap" value="2-3 people" name="household-size" type="radio"  />
+                          <span>2-3 people</span>
+                          
+                        </label>
+                      </p>
+                      <p>
+                        <label>
+                          <input class="with-gap" value="4 people" name="household-size" type="radio"  />
+                          <span>4 people</span>
+                          
+                        </label>
+                      </p>
+                      <p>
+                        <label>
+                          <input class="with-gap" value="More than 4 people" name="household-size" type="radio"  />
+                          <span>More than 4 people</span>
+                          
+                        </label>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="row">
+                      <p>Estimated 2021 Income<b class="required">*</b>
+                    <div class="col s12 m6">
+                      
+                        <p>
+                          <label>
+                            <input class="with-gap" value="Less than $30,000" name="income" type="radio" required/>
+                            <span>Less than $30,000</span>
+                            
+                          </label>
+                        </p>
+                        <p>
+                          <label>
+                            <input class="with-gap" value="$30,000-$50,000" name="income" type="radio"  />
+                            <span>$30,000-$50,000</span>
+                            
+                          </label>
+                        </p>
+                        <p>
+                          <label>
+                            <input class="with-gap" value="$50,000-$75,000" name="income" type="radio"  />
+                            <span>$50,000-$75,000</span>
+                            
+                          </label>
+                        </p>
+                        <p>
+                          <label>
+                            <input class="with-gap" value="$75,001-$100,000" name="income" type="radio"  />
+                            <span>$75,000-$100,000</span>
+                            
+                          </label>
+                        </p>
+                        
+                    </div>
+                    <div class="col s12 m6">
+                      <p>
+                          <label>
+                            <input class="with-gap" value="$100,000-$250,000" name="income" type="radio"  />
+                            <span>$100,000-$250,000</span>
+                            
+                          </label>
+                        </p>
+                        <p>
+                          <label>
+                            <input class="with-gap" value="$250,000-$500,00" name="income" type="radio"  />
+                            <span>$250,000-$500,000</span>
+                            
+                          </label>
+                        </p>
+                        <p>
+                          <label>
+                            <input class="with-gap" value="More than $500,000" name="income" type="radio" />
+                            <span>More than $500,000</span>
+                            
+                          </label>
+                        </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col s12 center-align">
+                  <p><b>Rank Your Top 3 Priorities in Order of Need from 1-3.</b></p>
+                  <p>Budgeting/Saving, Home Ownership, Home Ownership, Tax Planning, College Planning/Saving, Retirment Planning, Exploring Entrepreneurship, Transferring Wealth/Estate Planning, Other</p>
+                  <div class="col s12 m8  offset-m2" style="margin-top: 20px">
+                    <div class="input-field">
+                      <select name="priority1" id="priority1-family" required>
+                        <option value="" disabled selected>Select Your #1 Priority</option>
+                        <option value="Budgeting/Saving">Budgeting/Saving</option>
+                        <option value="Home Ownership">Home Ownership</option>
+                        <option value="Tax Planning">Tax Planning</option>
+                        <option value="College Planning/Saving">College Planning/Saving</option>
+                        <option value="Retirment Planning">Retirment Planning</option>
+                        <option value="Exploring Entrepreneurship">Exploring Entrepreneurship</option>
+                        <option value="Transferring Wealth/Estate Planning">Transferring Wealth/Estate Planning</option>
+                        <option value="Other" id="other1-family">Other</option>
+                      </select>
+                      <label>#1 Priority<b class="required">*</b></label>
+                    </div>
+                    <div class="input-field" style="display:none" id="other1-input-family">
+                      <input type=text name="other1-custom" placeholder="List Your #1 Priority Here">
+                    </div>
+                  </div>
+                  <div class="col s12 m8 offset-m2" style="margin-top: 20px">
+                    <div class="input-field">
+                      <select name="priority2" id="priority2-family">
+                        <option value="" disabled selected>Select Your #2 Priority</option>
+                        <option value="Budgeting/Saving">Budgeting/Saving</option>
+                        <option value="Home Ownership">Home Ownership</option>
+                        <option value="Tax Planning">Tax Planning</option>
+                        <option value="College Planning/Saving">College Planning/Saving</option>
+                        <option value="Retirment Planning">Retirment Planning</option>
+                        <option value="Exploring Entrepreneurship">Exploring Entrepreneurship</option>
+                        <option value="Transferring Wealth/Estate Planning">Transferring Wealth/Estate Planning</option>
+                        <option value="Other" id="other2-family">Other</option>
+                      </select>
+                      <label>#2 Priority</label>
+                    </div>
+                    <div class="input-field" style="display:none" id="other2-input-family">
+                      <input type=text name="other2-custom" placeholder="List Your #2 Priority Here">
+                    </div>
+                  </div>
+                  <div class="col s12 m8  offset-m2" style="margin-top: 20px">
+                    <div class="input-field">
+                      <select name="priority3" id="priority3-family">
+                        <option value="" disabled selected>Select Your #3 Priority</option>
+                        <option value="Budgeting/Saving">Budgeting/Saving</option>
+                        <option value="Home Ownership">Home Ownership</option>
+                        <option value="Tax Planning">Tax Planning</option>
+                        <option value="College Planning/Saving">College Planning/Saving</option>
+                        <option value="Retirment Planning">Retirment Planning</option>
+                        <option value="Exploring Entrepreneurship">Exploring Entrepreneurship</option>
+                        <option value="Transferring Wealth/Estate Planning">Transferring Wealth/Estate Planning</option>
+                        <option value="Other" id="other3-family">Other</option>
+                      </select>
+                      <label>#3 Priority</label>
+                    </div>
+                    <div class="input-field" style="display:none" id="other3-input-family">
+                      <input type=text name="other3-custom" placeholder="List Your #3 Priority Here">
+                    </div>
+                  </div>
+                  
+                </div>
+            
+                <div class="col s12 center-align">
+                  <button class="btn btn-large submit-btn nomination-submit" type="submit">
+                    SUBMIT
+                </button>
+                </div>
+            </form>
+      </div>
+      <div id="vbp-both-nomination-form" class="row hidden">
+        <form class="col s12 l10 offset-l1 xl8 offset-xl2" method="POST" action="/village-empowerment-network-nomination/" id="nomination-form">
+          {% csrf_token %}
+          <input type="hidden" name="submission-type" value="both">
+          
+          <fieldset>
+            <h6 class="fieldset-title">Individual/Family Details</h6>
+            <div class="col s12 m6">
               <div class="input-field">
-                <input name="nominator-name" id="vbp-name" type="text" required>
-                <label for="vbp-name">Your Name<b class="required">*</b></label>
+                <input name="full-name-individual" type="text" required>
+                <label>Name<b class="required">*</b></label>
               </div>
             </div>
-            <div class="col s12 m6 l4">
+
+            <div class="col s12 m6">
               <div class="input-field">
-                  <input id="vbp-email" name="nominator-email" type="text" required>
-                  <label for="vbp-email">Your Email<b class="required">*</b></label>
+                  <input name="email-individual" type="text" required>
+                  <label>Email<b class="required">*</b></label>
               </div>
             </div>
-            <div class="col s12 m6 l4">
+
+            <div class="col s12 m4">
               <div class="input-field">
-                <input id="owner-name" name="owner-name" type="text" required>
-                <label for="owner-name">Business Owner Name(s)<b class="required">*</b></label>
+                <input type="text" name="phone-individual" class="textfield phone_us">
+                <label>Phone</label>
               </div>
             </div>
+
+            <div class="col s12 m4">
+              <div class="input-field">
+                <input type="text" name="city-individual" class="textfield">
+                <label>City<b class="required">*</b></label>
+              </div>
+            </div>
+            
+            <div class="input-field col s12 m4">
+                {{ nomination_form.individual_state }}
+                <label>State<b class="required">*</b></label>
+            </div>
+            <div class="col s12">
+                <p class="owned-label">Employment Status<b class="required">*</b></p>
+                  <div class="col 12 m4" style="padding: 0; margin: 0">
+                    <p style="margin-top: 0">
+                      <label>
+                        <input type="radio" name="employmentstatus" value="Employed" class="with-gap">
+                        <span>Employed</span>
+                      </label>
+                    </p>
+                  </div>
+                  <div class="col s12 m4" style="padding: 0; margin: 0">
+                    <p style="margin-top: 0">
+                      <label>
+                        <input type="radio" name="employmentstatus" value="Self-Employed" class="with-gap">
+                        <span>Self-Employed</span>
+                      </label>
+                    </p>
+                  </div>
+                  <div class="col s12 m4" style="padding: 0; margin: 0">
+                    <p style="margin-top: 0">
+                      <label>
+                        <input type="radio" name="employmentstatus" value="Unemployed" class="with-gap">
+                        <span>Unemployed</span>
+                      </label>
+                    </p>
+                  </div>
+            </div>
+
+            <div class="col s12">
+              <div class="row">
+                <div class="col s12 m6">
+                  <p>Age Range<b class="required">*</b></p>
+                  <p>
+                      <label>
+                        <input class="with-gap" value="Under 18" name="age-range" type="radio" required/>
+                        <span>Under 18</span>
+                      </label>
+                    </p>
+                    <p>
+                      <label>
+                        <input class="with-gap" value="18-30 years" name="age-range" type="radio"  />
+                        <span>18-30 years</span>
+                      </label>
+                    </p>
+                    <p>
+                      <label>
+                        <input class="with-gap" value="31-45 years" name="age-range" type="radio"  />
+                        <span>31-45 years</span>
+                      </label>
+                    </p>
+                    <p>
+                      <label>
+                        <input class="with-gap" value="46-64 years" name="age-range" type="radio"  />
+                        <span>46-64 years</span>
+                      </label>
+                    </p>
+                    <p>
+                      <label>
+                        <input class="with-gap"value="65 and older" name="age-range" type="radio"/>
+                        <span>65 and older</span>
+                      </label>
+                    </p>
+                </div>
+                <div class="col s12 m6">
+                  <p>Household Size<b class="required">*</b>
+                  </p>
+                  <p>
+                    <label>
+                      <input class="with-gap" value="1 person" name="household-size" type="radio" required/>
+                      <span>1 person</span>
+                    </label>
+                  </p>
+                  <p>
+                    <label>
+                      <input class="with-gap" value="2-3 people" name="household-size" type="radio"  />
+                      <span>2-3 people</span>
+                      
+                    </label>
+                  </p>
+                  <p>
+                    <label>
+                      <input class="with-gap" value="4 people" name="household-size" type="radio"  />
+                      <span>4 people</span>
+                      
+                    </label>
+                  </p>
+                  <p>
+                    <label>
+                      <input class="with-gap" value="More than 4 people" name="household-size" type="radio"  />
+                      <span>More than 4 people</span>
+                      
+                    </label>
+                  </p>
+                </div>
+              </div>
+              <div class="row">
+                <p class="col s12">Estimated 2021 Income<b class="required">*</b>
+                <div class="col s12 m6">
+                  
+                    <p>
+                      <label>
+                        <input class="with-gap" value="Less than $30,000" name="income" type="radio" required/>
+                        <span>Less than $30,000</span>
+                        
+                      </label>
+                    </p>
+                    <p>
+                      <label>
+                        <input class="with-gap" value="$30,000-$50,000" name="income" type="radio"  />
+                        <span>$30,000-$50,000</span>
+                        
+                      </label>
+                    </p>
+                    <p>
+                      <label>
+                        <input class="with-gap" value="$50,000-$75,000" name="income" type="radio"  />
+                        <span>$50,000-$75,000</span>
+                        
+                      </label>
+                    </p>
+                    <p>
+                      <label>
+                        <input class="with-gap" value="$75,001-$100,000" name="income" type="radio"  />
+                        <span>$75,000-$100,000</span>
+                        
+                      </label>
+                    </p>
+                    
+                </div>
+                <div class="col s12 m6">
+                  <p>
+                      <label>
+                        <input class="with-gap" value="$100,000-$250,000" name="income" type="radio"  />
+                        <span>$100,000-$250,000</span>
+                        
+                      </label>
+                    </p>
+                    <p>
+                      <label>
+                        <input class="with-gap" value="$250,000-$500,00" name="income" type="radio"  />
+                        <span>$250,000-$500,000</span>
+                        
+                      </label>
+                    </p>
+                    <p>
+                      <label>
+                        <input class="with-gap" value="More than $500,000" name="income" type="radio" />
+                        <span>More than $500,000</span>
+                        
+                      </label>
+                    </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col s12 center-align">
+              <p><b>Rank Your Top 3 Priorities in Order of Need from 1-3.</b></p>
+              <p>Budgeting/Saving, Home Ownership, Home Ownership, Tax Planning, College Planning/Saving, Retirment Planning, Exploring Entrepreneurship, Transferring Wealth/Estate Planning, Other</p>
+              <div class="col s12 m8  offset-m2" style="margin-top: 20px">
+                <div class="input-field">
+                  <select name="priority1-family" id="priority1-family-both" required>
+                    <option value="" disabled selected>Select Your #1 Priority</option>
+                    <option value="Budgeting/Saving">Budgeting/Saving</option>
+                    <option value="Home Ownership">Home Ownership</option>
+                    <option value="Tax Planning">Tax Planning</option>
+                    <option value="College Planning/Saving">College Planning/Saving</option>
+                    <option value="Retirment Planning">Retirment Planning</option>
+                    <option value="Exploring Entrepreneurship">Exploring Entrepreneurship</option>
+                    <option value="Transferring Wealth/Estate Planning">Transferring Wealth/Estate Planning</option>
+                    <option value="Other" id="other1-family-both">Other</option>
+                  </select>
+                  <label>#1 Priority<b class="required">*</b></label>
+                </div>
+                <div class="input-field" style="display:none" id="other1-input-family-both">
+                  <input type=text name="other1-custom-family" placeholder="List Your #1 Priority Here">
+                </div>
+              </div>
+              <div class="col s12 m8 offset-m2" style="margin-top: 20px">
+                <div class="input-field">
+                  <select name="priority2-family" id="priority2-family-both">
+                    <option value="" disabled selected>Select Your #2 Priority</option>
+                    <option value="Budgeting/Saving">Budgeting/Saving</option>
+                    <option value="Home Ownership">Home Ownership</option>
+                    <option value="Tax Planning">Tax Planning</option>
+                    <option value="College Planning/Saving">College Planning/Saving</option>
+                    <option value="Retirment Planning">Retirment Planning</option>
+                    <option value="Exploring Entrepreneurship">Exploring Entrepreneurship</option>
+                    <option value="Transferring Wealth/Estate Planning">Transferring Wealth/Estate Planning</option>
+                    <option value="Other" id="other2-family-both">Other</option>
+                  </select>
+                  <label>#2 Priority</label>
+                </div>
+                <div class="input-field" style="display:none" id="other2-input-family-both">
+                  <input type=text name="other2-custom-family" placeholder="List Your #2 Priority Here">
+                </div>
+              </div>
+              <div class="col s12 m8  offset-m2" style="margin-top: 20px">
+                <div class="input-field">
+                  <select name="priority3-family" id="priority3-family-both">
+                    <option value="" disabled selected>Select Your #3 Priority</option>
+                    <option value="Budgeting/Saving">Budgeting/Saving</option>
+                    <option value="Home Ownership">Home Ownership</option>
+                    <option value="Tax Planning">Tax Planning</option>
+                    <option value="College Planning/Saving">College Planning/Saving</option>
+                    <option value="Retirment Planning">Retirment Planning</option>
+                    <option value="Exploring Entrepreneurship">Exploring Entrepreneurship</option>
+                    <option value="Transferring Wealth/Estate Planning">Transferring Wealth/Estate Planning</option>
+                    <option value="Other" id="other3-family-both">Other</option>
+                  </select>
+                  <label>#3 Priority</label>
+                </div>
+                <div class="input-field" style="display:none" id="other3-input-family-both">
+                  <input type=text name="other3-custom-family" placeholder="List Your #3 Priority Here">
+                </div>
+              </div>
+              
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <h6 class="fieldset-title">Business Details</h6>
             <div class="col s12 m6 l4">
               <div class="input-field">
                 {{ nomination_form.business_name }}
                 <label>{{ nomination_form.business_name.label }}<b class="required">*</b></label>
               </div>
-              
+            </div>
+            <div class="col s12 m6 l8">
+              <div class="input-field">
+                <input id="owner-name" name="owner-name" type="text" required>
+                <label for="owner-name">Business Owner Name(s)<b class="required">*</b></label>
+              </div>
             </div>
             <div class="col s12 m6 l8">
               <div class="input-field">
@@ -65,25 +1234,380 @@
                 <label>{{ nomination_form.city.label }}<b class="required">*</b></label>
               </div>
             </div>
-            <div class="input-field col s12 m6 l4">
+            <div class="input-field col s12 m6">
                 {{ nomination_form.state }}
                 <label>Business State<b class="required">*</b></label>
             </div>
-            <div class="col s12 m6 l4">
+            <div class="col s12 m6">
               <div class="input-field">
                 {{ nomination_form.phone }}
                 <label>{{ nomination_form.phone.label }}<b class="required">*</b></label>
               </div>
             </div>
-            <div class="input-field col s12 m6">
-              {{ nomination_form.category }}
-              <label>{{ nomination_form.category.label }}<b class="required">*</b></label>
-            </div>  
-            <div class="input-field col s12 m6">
-                {{ nomination_form.subcategory }}
-                <label>{{ nomination_form.subcategory.label }}</label>
+            <div>
+              <div class="input-field col s12 l6">
+                  <select name="category" id="category-select-both">
+                      {% for category,verbose in nomination_form.get_categories %}
+                      <option value="{{ category }}">{{ verbose }}</option>
+                      {% endfor %}
+                  </select>
+                  <label>Category<b class="required">*</b></label>
+              </div>
+              <div class="input-field hidden col s12 m6 subcat-div" cat="both-beauty">
+                  <select name="subcategory-disabled">
+                      <option value="" selected>Choose A Subcategory</option>
+                      <option value="Barber" cat="both-Beauty & Personal Grooming">Barber</option>
+                      <option value="Bath & Body" cat="both-Beauty & Personal Grooming">Bath & Body</option>
+                      <option value="Beauty Salon" cat="both-Beauty & Personal Grooming">Beauty Salon</option>
+                      <option value="Beauty Supply/Hair & Accessories" cat="both-Beauty & Personal Grooming">Beauty Supply/Hair & Accessories</option>
+                      <option value="Cosmetics" cat="both-Beauty & Personal Grooming">Cosmetics</option>
+                      <option value="Nails" cat="both-Beauty & Personal Grooming">Nails</option>
+                  </select>
+                  <label>Subcategory</label>
+              </div>
+              <div class="input-field hidden col s12 m6 subcat-div" cat="both-books">
+                  <select name="subcategory-disabled">
+                      <option value="" selected>Choose A Subcategory</option>
+                      <option value="Book Store" cat="both-Books & Publishing">Book Store</option>
+                      <option value="Online Publication" cat="both-Books & Publishing">Online Publication</option>
+                      <option value="Publishing" cat="both-Books & Publishing">Publishing</option>
+                      <option value="Authors" cat="both-Books & Publishing">Authors</option>
+                  </select>
+                  <label>Subcategory</label>
+              </div>
+              <div class="input-field hidden col s12 m6 subcat-div" cat="both-cars">
+                  <select name="subcategory-disabled">
+                      <option value="" selected>Choose A Subcategory</option>
+                      <option value="Auto Dealership" cat="both-Cars & Automotive">Auto Dealership</option>
+                      <option value="Auto Repair/ Services" cat="both-Cars & Automotive">Auto Repair/ Services</option>
+                      <option value="Car Wash" cat="both-Cars & Automotive">Car Wash</option>
+                      <option value="Gas Station" cat="both-Cars & Automotive">Gas Station</option>
+                  </select>
+                  <label>Subcategory</label>
+              </div>
+              <div class="input-field hidden col s12 m6 subcat-div" cat="both-child">
+                  <select name="subcategory-disabled">
+                      <option value="" selected>Choose A Subcategory</option>
+                      <option value="Baby Products" cat="both-Childcare | Children's Services & Products">Baby Products</option>
+                      <option value="Childcare/Daycare/ Preschool" cat="both-Childcare | Children's Services & Products">Childcare/Daycare/ Preschool</option>
+                      <option value="Children’s Books" cat="both-Childcare | Children's Services & Products">Children’s Books</option>
+                      <option value=">Children’s Activities" cat="both-Childcare | Children's Services & Products">Children’s Activities</option>
+                  </select>
+                  <label>Subcategory</label>
+              </div>
+              <div class="input-field hidden col s12 m6 subcat-div" cat="both-cleaning">
+                  <select name="subcategory-disabled">
+                      <option value="" selected>Choose A Subcategory</option>
+                      <option value="Cleaning Products" cat="both-Cleaning">Cleaning Products</option>
+                      <option value="Dry Cleaning" cat="both-Cleaning">Dry Cleaning</option>
+                      <option value="Laundry" cat="both-Cleaning">Laundry</option>
+                  </select>
+                  <label>Subcategory</label>
+              </div>
+              <div class="input-field hidden col s12 m6 subcat-div" cat="both-clothing">
+                  <select name="subcategory-disabled">
+                      <option value="" selected>Choose A Subcategory</option>
+                      <option value="Apparel" cat="both-Clothing & Fashion">Apparel</option>
+                      <option value="Stylist" cat="both-Clothing & Fashion">Stylist</option>
+                      <option value="Footwear" cat="both-Clothing & Fashion">Footwear</option>
+                      <option value="Fabric/Yarn" cat="both-Clothing & Fashion">Fabric/Yarn</option>
+                  </select>
+                  <label>Subcategory</label>
+              </div>
+              <div class="input-field hidden col s12 m6 subcat-div" cat="both-construction">
+                  <select name="subcategory-disabled">
+                      <option value="" selected>Choose A Subcategory</option>
+                      <option value="Appliance Repair" cat="both-Construction & Trades">Appliance Repair</option>
+                      <option value="Construction/ Engineering" cat="both-Construction & Trades">Construction/ Engineering</option>
+                      <option value="Electrical" cat="both-Construction & Trades">Electrical</option>
+                      <option value="HVAC" cat="both-Construction & Trades">HVAC</option>
+                      <option value="Plumbing" cat="both-Construction & Trades">Plumbing</option>
+                      <option value="Power Washing" cat="both-Construction & Trades">Power Washing</option>
+                      <option value="Roofing & Siding" cat="both-Construction & Trades">Roofing & Siding</option>
+                      <option value="Painting Services" cat="both-Construction & Trades">Painting Services</option>
+                  </select>
+                  <label>Subcategory</label>
+              </div>
+              <div class="input-field hidden col s12 m6 subcat-div" cat="both-education">
+                  <select name="subcategory-disabled">
+                      <option value="" selected>Choose A Subcategory</option>
+                      <option value="Tutoring/ Academic Planning" cat="both-Education">Tutoring/ Academic Planning</option>
+                      <option value="Driving/ Aviation" cat="both-Education">Driving/ Aviation</option>
+                      <option value="Enrichment" cat="both-Education">Enrichment</option>
+                  </select>
+                  <label>Subcategory</label>
+              </div>
+              <div class="input-field hidden col s12 m6 subcat-div" cat="both-eldercare">
+                  <select name="subcategory-disabled">
+                      <option value="" selected>Choose A Subcategory</option>
+                      <option value="Assisted Living/Nursing Home" cat="both-Eldercare">Assisted Living/Nursing Home</option>
+                      <option value="Home Health Care/ Nursing Services" cat="both-Eldercare">Home Health Care/ Nursing Services</option>
+                      <option value="Adult Day Care Center" cat="both-Eldercare">Adult Day Care Center</option>
+                      <option value="Cybersecurity" cat="both-Eldercare">Cybersecurity</option>
+                  </select>
+                  <label>Subcategory</label>
+              </div>
+              <div class="input-field hidden col s12 m6 subcat-div" cat="both-electronics">
+                  <select name="subcategory-disabled">
+                      <option value="" selected>Choose A Subcategory</option>
+                      <option value="Software Development" cat="both-Electronics & Technology">Software Development</option>
+                      <option value="Tech Support/ Repair" cat="both-Electronics & Technology">Tech Support/ Repair</option>
+                      <option value="Tech Products" cat="both-Electronics & Technology">Tech Products</option>
+                      <option value="Web Services" cat="both-Electronics & Technology">Web Services</option>
+                  </select>
+                  <label>Subcategory</label>
+              </div>
+              <div class="input-field hidden col s12 m6 subcat-div" cat="both-entertainment">
+                  <select name="subcategory-disabled">
+                      <option value="" selected>Choose A Subcategory</option>
+                      <option value="Bands/DJs/Performers" cat="both-Entertainment">Bands/DJs/Performers</option>
+                      <option value="Comedian" cat="both-Entertainment">Comedian</option>
+                      <option value="Event Planning/Services" cat="both-Entertainment">Event Planning/Services</option>
+                      <option value="Media" cat="both-Entertainment">Media</option>
+                      <option value="Paint & Sip" cat="both-Entertainment">Paint & Sip</option>
+                  </select>
+                  <label>Subcategory</label>
+              </div>
+              <div class="input-field hidden col s12 m6 subcat-div" cat="both-farming">
+                  <select name="subcategory-disabled">
+                      <option value="" selected>Choose A Subcategory</option>
+                      <option value="Farmer’s Market" cat="both-Farming & Agriculture">Farmer’s Market</option>
+                      <option value="Vineyard" cat="both-Farming & Agriculture">Vineyard</option>
+                  </select>
+                  <label>Subcategory</label>
+              </div>
+              <div class="input-field hidden col s12 m6 subcat-div" cat="both-grocery">
+                  <select name="subcategory-disabled">
+                      <option value="" selected>Choose A Subcategory</option>
+                      <option value="Bakery" cat="both-Grocery & Food Services">Bakery</option>
+                      <option value="Catering/ Chef" cat="both-Grocery & Food Services">Catering/ Chef</option>
+                      <option value="Coffee/Tea/Beverages" cat="both-Grocery & Food Services">Coffee/Tea/Beverages</option>
+                      <option value="Food Delivery Service" cat="both-Grocery & Food Services">Food Delivery Service</option>
+                      <option value="Ice Cream Parlor" cat="both-Grocery & Food Services">Ice Cream Parlor</option>
+                      <option value="Alcohol" cat="both-Grocery & Food Services">Alcohol</option>
+                      <option value="Specialty" cat="both-Grocery & Food Services">Specialty</option>
+                  </select>
+                  <label>Subcategory</label>
+              </div>
+              <div class="input-field hidden col s12 m6 subcat-div" cat="both-health">
+                  <select name="subcategory-disabled">
+                      <option value="" selected>Choose A Subcategory</option>
+                      <option value="Addiction Treatment" cat="both-Health & Wellness">Addiction Treatment</option>
+                      <option value="Chiropractor" cat="both-Health & Wellness">Chiropractor</option>
+                      <option value="Fitness/ Yoga" cat="both-Health & Wellness">Fitness/ Yoga</option>
+                      <option value="Spa/ Massage Therapy" cat="both-Health & Wellness">Spa/ Massage Therapy</option>
+                      <option value="Mental Health Support" cat="both-Health & Wellness">Mental Health Support</option>
+                      <option value="Nutrition" cat="both-Health & Wellness">Nutrition</option>
+                  </select>
+                  <label>Subcategory</label>
+              </div>
+              <div class="input-field hidden col s12 m6 subcat-div" cat="both-home">
+                  <select name="subcategory-disabled">
+                      <option value="" selected>Choose A Subcategory</option>
+                      <option value="Furniture" cat="both-Home & Garden">Furniture</option>
+                      <option value="Landscaping/Gardening" cat="both-Home & Garden">Landscaping/Gardening</option>
+                      <option value="Interior Design/ Home Staging" cat="both-Home & Garden">Interior Design/ Home Staging</option>
+                      <option value="Pest Control" cat="both-Home & Garden">Pest Control</option>
+                      <option value="Home Goods/Décor" cat="both-Home & Garden">Home Goods/Décor</option>
+                  </select>
+                  <label>Subcategory</label>
+              </div>
+              <div class="input-field hidden col s12 m6 subcat-div" cat="both-hotels">
+                  <select name="subcategory-disabled">
+                      <option value="" selected>Choose A Subcategory</option>
+                      <option value="Travel Agent" cat="both-Hotels & Hospitality | Travel">Travel Agent</option>
+                      <option value="Hospitality/Hotels/Inns" cat="both-Hotels & Hospitality | Travel">Hospitality/Hotels/Inns</option>
+                      <option value="Tours" cat="both-Hotels & Hospitality | Travel">Tours</option>
+                  </select>
+                  <label>Subcategory</label>
+              </div>
+              <div class="input-field hidden col s12 m6 subcat-div" cat="both-jewelry">
+                  <select name="subcategory-disabled">
+                      <option value="" selected>Choose A Subcategory</option>
+                      <option value="Accessories/ Handbags" cat="both-Jewelry & Accessories">Accessories/ Handbags</option>
+                      <option value="Fine Jewelry" cat="both-Jewelry & Accessories">Fine Jewelry</option>
+                  </select>
+                  <label>Subcategory</label>
+              </div>
+              <div class="input-field hidden col s12 m6 subcat-div" cat="both-legal">
+                  <select name="subcategory-disabled">
+                      <option value="" selected>Choose A Subcategory</option>
+                      <option value="Financial Services" cat="both-Legal & Financial Services">Financial Services</option>
+                      <option value="Notary" cat="both-Legal & Financial Services">Notary</option>
+                      <option value="Bail Bonds Service" cat="both-Legal & Financial Services">Bail Bonds Service</option>
+                      <option value="Legal Services (General)" cat="both-Legal & Financial Services">Legal Services (General)</option>
+                      <option value="Real Estate Law" cat="both-Legal & Financial Services">Real Estate Law</option>
+                      <option value="Estate Planning/Wills" cat="both-Legal & Financial Services">Estate Planning/Wills</option>
+                      <option value="Corporate Law" cat="both-Legal & Financial Services">Corporate Law</option>
+                      <option value="Insurance" cat="both-Legal & Financial Services">Insurance</option>
+                  </select>
+                  <label>Subcategory</label>
+              </div>
+              <div class="input-field hidden col s12 m6 subcat-div" cat="both-lifestyle">
+                  <select name="subcategory-disabled">
+                      <option value="" selected>Choose A Subcategory</option>
+                      <option value="Adult Novelties" cat="both-Lifestyle">Adult Novelties</option>
+                      <option value="CBD Products" cat="both-Lifestyle">CBD Products</option>
+                      <option value="Smoking & Paraphernalia" cat="both-Lifestyle">Smoking & Paraphernalia</option>
+                      <option value="Tarot" cat="both-Lifestyle">Tarot</option>
+                      <option value=">Piercing/ Tattoos" cat="both-Lifestyle">Piercing/ Tattoos</option>
+                  </select>
+                  <label>Subcategory</label>
+              </div>
+              <div class="input-field hidden col s12 m6 subcat-div" cat="both-marketing">
+                  <select name="subcategory-disabled">
+                      <option value="" selected>Choose A Subcategory</option>
+                      <option value="Advertising" cat="both-Marketing & Advertising">Advertising</option>
+                      <option value="Branding/ Graphic Design" cat="both-Marketing & Advertising">Branding/ Graphic Design</option>
+                      <option value="Marketing/ Digital Marketing" cat="both-Marketing & Advertising">Marketing/ Digital Marketing</option>
+                      <option value="Web Services/ Social Media" cat="both-Marketing & Advertising">Web Services/ Social Media</option>
+                  </select>
+                  <label>Subcategory</label>
+              </div>
+              <div class="input-field hidden col s12 m6 subcat-div" cat="both-medical">
+                  <select name="subcategory-disabled">
+                      <option value="" selected>Choose A Subcategory</option>
+                      <option value="Dental/ Orthodontics" cat="both-Medical Services">Dental/ Orthodontics</option>
+                      <option value="Medical Billing" cat="both-Medical Services">Medical Billing</option>
+                      <option value="Physical Therapy" cat="both-Medical Services">Physical Therapy</option>
+                      <option value="Speech Pathologist" cat="both-Medical Services">Speech Pathologist</option>
+                      <option value="Diagnostic Testing/Labs" cat="both-Medical Services">Diagnostic Testing/Labs</option>
+                      <option value="Vision" cat="both-Medical Services">Vision</option>
+                      <option value="Healthcare Products" cat="both-Medical Services">Healthcare Products</option>
+                      <option value="Primary Care" cat="both-Medical Services">Primary Care</option>
+                      <option value="OB/GYNs" cat="both-Medical Services">OB/GYNs</option>
+                      <option value="Pediatrics" cat="both-Medical Services">Pediatrics</option>
+                      <option value="Dermatology" cat="both-Medical Services">Dermatology</option>
+                      <option value="Psychiatry/Mental Health" cat="both-Medical Services">Psychiatry/Mental Health</option>
+                  </select>
+                  <label>Subcategory</label>
+              </div>
+              <div class="input-field hidden col s12 m6 subcat-div" cat="both-other">
+                  <select name="subcategory-disabled">
+                      <option value="" selected>Choose A Subcategory</option>
+                      <option value="Antiques & Collectibles" cat="both-Other">Antiques & Collectibles</option>
+                      <option value="Guns & Shooting Ranges" cat="both-Other">Guns & Shooting Ranges</option>
+                      <option value="Gifts & Stationery" cat="both-Other">Gifts & Stationery</option>
+                      <option value="Mortuary/ Funeral Services" cat="both-Other">Mortuary/ Funeral Services</option>
+                      <option value="Marketplace" cat="both-Other">Marketplace</option>
+                      <option value="Translation Services" cat="both-Other">Translation Services</option>
+                  </select>
+                  <label>Subcategory</label>
+              </div>
+              <div class="input-field hidden col s12 m6 subcat-div" cat="both-packaging">
+                  <select name="subcategory-disabled">
+                      <option value="" selected>Choose A Subcategory</option>
+                      <option value="Office Supplies" cat="both-Packaging | Delivery | Shipping">Office Supplies</option>
+                      <option value="Courier" cat="both-Packaging | Delivery | Shipping">Courier</option>
+                      <option value="Printing" cat="both-Packaging | Delivery | Shipping">Printing</option>
+                      <option value="Shipping" cat="both-Packaging | Delivery | Shipping">Shipping</option>
+                  </select>
+                  <label>Subcategory</label>
+              </div>
+              <div class="input-field hidden col s12 m6 subcat-div" cat="both-pets">
+                  <select name="subcategory-disabled">
+                      <option value="" selected>Choose A Subcategory</option>
+                      <option value="Dog Training" cat="both-Pets & Animal Care">Dog Training</option>
+                      <option value="Pet Sitting/ Walking" cat="both-Pets & Animal Care">Pet Sitting/ Walking</option>
+                      <option value="Veterinarian" cat="both-Pets & Animal Care">Veterinarian</option>
+                      <option value="Pet Grooming" cat="both-Pets & Animal Care">Pet Grooming</option>
+                  </select>
+                  <label>Subcategory</label>
+              </div>
+              <div class="input-field hidden col s12 m6 subcat-div" cat="both-photography">
+                  <select name="subcategory-disabled">
+                      <option value="" selected>Choose A Subcategory</option>
+                      <option value="Videography" cat="both-Photography & Video">Videography</option>
+                      <option value="Photography" cat="both-Photography & Video">Photography</option>
+                  </select>
+                  <label>Subcategory</label>
+              </div>
+              <div class="input-field hidden col s12 m6 subcat-div" cat="both-professional">
+                  <select name="subcategory-disabled">
+                      <option value="" selected>Choose A Subcategory</option>
+                      <option value="Consulting" cat="both-Professional Services">Consulting</option>
+                      <option value="Human Resources" cat="both-Professional Services">Human Resources</option>
+                      <option value="IT" cat="both-Professional Services">IT</option>
+                      <option value="Recruiting/ Staffing" cat="both-Professional Services">Recruiting/ Staffing</option>
+                      <option value="Private Investigator" cat="both-Professional Services">Private Investigator</option>
+                      <option value="Writing Services" cat="both-Professional Services">Writing Services</option>
+                      <option value="Speakers" cat="both-Professional Services">Speakers</option>
+                      <option value="Administrative Support" cat="both-Professional Services">Administrative Support</option>
+                  </select>
+                  <label>Subcategory</label>
+              </div>
+              <div class="input-field hidden col s12 m6 subcat-div" cat="both-realestate">
+                  <select name="subcategory-disabled">
+                      <option value="" selected>Choose A Subcategory</option>
+                      <option value="Developers" cat="both-Real Estate">Developers</option>
+                      <option value="Home Inspection" cat="both-Real Estate">Home Inspection</option>
+                      <option value="Mortgage Consulting" cat="both-Real Estate">Mortgage Consulting</option>
+                      <option value="Property Management" cat="both-Real Estate">Property Management</option>
+                      <option value="Real Estate Agents/ Brokers" cat="both-Real Estate">Real Estate Agents/ Brokers</option>
+                      <option value="Title Services" cat="both-Real Estate">Title Services</option>
+                  </select>
+                  <label>Subcategory</label>
+              </div>
+              <div class="input-field hidden col s12 m6 subcat-div" cat="both-recreation">
+                  <select name="subcategory-disabled">
+                      <option value="" selected>Choose A Subcategory</option>
+                      <option value="Arcade/Laser Tag" cat="both-Recreation & Sports">Arcade/Laser Tag</option>
+                      <option value="Sports" cat="both-Recreation & Sports">Sports</option>
+                      <option value="Martial Arts" cat="both-Recreation & Sports">Martial Arts</option>
+                      <option value="Sports Equipment" cat="both-Recreation & Sports">Sports Equipment</option>
+                      <option value="Pool Tables" cat="both-Recreation & Sports">Pool Tables</option>
+                      <option value="Gaming" cat="both-Recreation & Sports">Gaming</option>
+                  </select>
+                  <label>Subcategory</label>
+              </div>
+              <div class="input-field hidden col s12 m6 subcat-div" cat="both-restaurants">
+                  <select name="subcategory-disabled">
+                      <option value="" selected>Choose A Subcategory</option>
+                      <option value="Bar/Night Club" cat="both-Restaurants & Bars | Event Spaces">Bar/Night Club</option>
+                      <option value="BBQ/ Soul Food Restaurant" cat="both-Restaurants & Bars | Event Spaces">BBQ/ Soul Food Restaurant</option>
+                      <option value="Café" cat="both-Restaurants & Bars | Event Spaces">Café</option>
+                      <option value="Caribbean Restaurant" cat="both-Restaurants & Bars | Event Spaces">Caribbean Restaurant</option>
+                      <option value="Creole/Cajun Restaurant" cat="both-Restaurants & Bars | Event Spaces">Creole/Cajun Restaurant</option>
+                      <option value="Ethiopian/Eritrean Restaurant" cat="both-Restaurants & Bars | Event Spaces">Ethiopian/Eritrean Restaurant</option>
+                      <option value="Venues/Event Spaces" cat="both-Restaurants & Bars | Event Spaces">Venues/Event Spaces</option>
+                      <option value="West African Restaurant" cat="both-Restaurants & Bars | Event Spaces">West African Restaurant</option>
+                      <option value="Food Trucks/Carts" cat="both-Restaurants & Bars | Event Spaces">Food Trucks/Carts</option>
+                  </select>
+                  <label>Subcategory</label>
+              </div>
+              <div class="input-field hidden col s12 m6 subcat-div" cat="both-transportation">
+                  <select name="subcategory-disabled">
+                      <option value="" selected>Choose A Subcategory</option>
+                      <option value="Commuter/Shuttle Services" cat="both-Transportation & Trucking">Commuter/Shuttle Services</option>
+                      <option value="Mortuary Transport" cat="both-Transportation & Trucking">Mortuary Transport</option>
+                      <option value="Moving Services" cat="both-Transportation & Trucking">Moving Services</option>
+                      <option value="Parking" cat="both-Transportation & Trucking">Parking</option>
+                      <option value="Taxi" cat="both-Transportation & Trucking">Taxi</option>
+                      <option value="Limo/ Party Bus" cat="both-Transportation & Trucking">Limo/ Party Bus</option>
+                      <option value="Trucking" cat="both-Transportation & Trucking">Trucking</option>
+                      <option value="Valet" cat="both-Transportation & Trucking">Valet</option>
+                  </select>
+                  <label>Subcategory</label>
+              </div>
+              <div class="input-field hidden col s12 m6 subcat-div" cat="both-visual">
+                  <select name="subcategory-disabled">
+                      <option value="" selected>Choose A Subcategory</option>
+                      <option value="Art Gallery/ Museum" cat="both-Visual & Performing Arts | Culture">Art Gallery/ Museum</option>
+                      <option value="Dance Studios/Lessons" cat="both-Visual & Performing Arts | Culture">Dance Studios/Lessons</option>
+                      <option value="Artists" cat="both-Visual & Performing Arts | Culture">Artists</option>
+                      <option value="Theater/Acting Lessons" cat="both-Visual & Performing Arts | Culture">Theater/Acting Lessons</option>
+                      <option value="Music Lessons/Instruments" cat="both-Visual & Performing Arts | Culture">Music Lessons/Instruments</option>
+                  </select>
+                  <label>Subcategory</label>
+              </div>
+              <div class="input-field col s12 m6" id="disabled-subcat-both">
+                <select disabled>
+                    <option>Choose A Subcategory</option>
+                </select>
+                <label>Subcategory</label>
+              </div>
             </div>
-            <div class="col s12">
+            <div class="col s12" style="padding-bottom: 20px">
                 <div class="input-field col s8 m4" style="margin-left:-7">
                   <i class="fab fa-instagram prefix" ></i>
                   {{ nomination_form.instagram }}
@@ -97,502 +1621,259 @@
                   {{ nomination_form.twitter }}
                 </div>
             </div>
-            <div class="left-align col s12">
-              <p class="owned-label">{{ nomination_form.owned.label }}<b class="required">*</b></p>
-                <p class="col s3">
-                  <label>
-                    <input type="radio" name="owned" value="True" class="with-gap">
-                    <span>Yes</span>
-                  </label>
-                </p>
-                <p class="col s3">
-                  <label>
-                    <input type="radio" name="owned" value="False" class="with-gap">
-                    <span>No</span>
-                  </label>
-                </p>
-            </div>
-            <div class="col s12 m6">
-              <p>Number of Years in Business<b class="required">*</b></p>
-              
-              <p>
-                  <label>
-                    <input class="with-gap" value="Less than 2 years" name="years-active" type="radio" required/>
-                    <span>Less than 2 years</span>
-                  </label>
-                </p>
-                <p>
-                  <label>
-                    <input class="with-gap" value="3-5 years" name="years-active" type="radio"  />
-                    <span>3-5 years</span>
-                  </label>
-                </p>
-                <p>
-                  <label>
-                    <input class="with-gap" value="5-10 years" name="years-active" type="radio"  />
-                    <span>5-10 years</span>
-                  </label>
-                </p>
-                <p>
-                  <label>
-                    <input class="with-gap" value="10-15 years" name="years-active" type="radio"  />
-                    <span>10-15 years</span>
-                  </label>
-                </p>
-                <p>
-                  <label>
-                    <input class="with-gap"value="More than 15 years" name="years-active" type="radio"/>
-                    <span>More than 15 years</span>
-                  </label>
-                </p>
-            </div>
-            <div class="col s12 m6">
-              <p>Number of Employees<b class="required">*</b>
-              </p>
-              <p>
-                <label>
-                  <input class="with-gap" value="0-4" name="employees" type="radio" required/>
-                  <span>0-4 people</span>
-                </label>
-              </p>
-              <p>
-                <label>
-                  <input class="with-gap" value="5-10" name="employees" type="radio"  />
-                  <span>5-10 people</span>
-                  
-                </label>
-              </p>
-              <p>
-                <label>
-                  <input class="with-gap" value="11-20" name="employees" type="radio"  />
-                  <span>11-20</span>
-                  
-                </label>
-              </p>
-              <p>
-                <label>
-                  <input class="with-gap" value="21-30" name="employees" type="radio"  />
-                  <span>21-30 people</span>
-                  
-                </label>
-              </p>
-              <p>
-                <label>
-                  <input class="with-gap" value="More than 30" name="employees" type="radio"  />
-                  <span>More than 30 people</span>
-                  
-                </label>
-              </p> 
-            </div>
-            <div class="col s12 m6">
-              <p>Estimated 2021 Revenue<b class="required">*</b>
-                <p>
-                  <label>
-                    <input class="with-gap" value="Less than $50,000" name="revenue" type="radio" required/>
-                    <span>Less than $50,000</span>
-                    
-                  </label>
-                </p>
-                <p>
-                  <label>
-                    <input class="with-gap" value="$51,000-$100,000" name="revenue" type="radio"  />
-                    <span>$51,000-$100,000</span>
-                    
-                  </label>
-                </p>
-                <p>
-                  <label>
-                    <input class="with-gap" value="$101,000-$250,000" name="revenue" type="radio"  />
-                    <span>$101,000-$250,000</span>
-                    
-                  </label>
-                </p>
-                <p>
-                  <label>
-                    <input class="with-gap" value="$251,000-$500,000" name="revenue" type="radio"  />
-                    <span>$251,000-$500,000</span>
-                    
-                  </label>
-                </p>
-                <p>
-                  <label>
-                    <input class="with-gap" value="More than $500,000" name="revenue" type="radio" />
-                    <span>More than $500,000</span>
-                    
-                  </label>
-                </p>
-                
-              </p>
-            </div>
-            <div class="col s12 m6">
-              <p>Current Business Structure:</p>
-              <input class="hidden" type="radio" value='' name="structure" checked>
-              <p>
-                <label>
-                  <input class="with-gap" value="Sole Proprietorship" name="structure" type="radio"  />
-                  <span id="spu">Sole Proprietorship (unincorporated)</span>
-                  
-                </label>
-              </p>
-              <p>
-                <label>
-                  <input class="with-gap" value="Incorporated Entity" name="structure" type="radio" />
-                  <span>Incorporated Entity (Inc.)</span>
-                  
-                </label>
-              </p>
-              <p>
-                <label>
-                  <input class="with-gap" value="Official Partnership" name="structure" type="radio" />
-                  <span>Official Partnership (e.g., LP)</span>
-                  
-                </label>
-              </p>
-              <p>
-                <label>
-                  <input class="with-gap" value="LLC" name="structure" type="radio" />
-                  <span id="llc">Limited Liability Corporation (LLC)</span>
-                  
-                </label>
-              </p>
-              <p>
-                <label>
-                  <input class="with-gap" value="None" name="structure" type="radio" />
-                  <span>None of the Above</span>
-                  
-                </label>
-              </p>
-            </div>
-            <div class="col s12 center-align">
-              <p><b>Rank Your Top 3 Business Priorities in Order of Need from 1-3.</b></p>
-              <p>Revenue/Sales, Business Loans/Acquire Financing, Staffing/Employees, Marketing/Advertising, <br>E-Commerce, Exiting, Estate Planning, Other</p>
-              <div class="col s12 m8 offset-m2" style="margin-top: 20px">
-                <div class="input-field">
-                  <select name="priority1" id="priority1" required>
-                    <option value="" disabled selected>Select Your #1 Priority</option>
-                    <option value="Revenue/Sales">Revenue/Sales</option>
-                    <option value="Business Loans/Acquire Financing">Business Loans/Acquire Financing</option>
-                    <option value="Staffing/Employees">Staffing/Employees</option>
-                    <option value="Marketing/Advertising">Marketing/Advertising</option>
-                    <option value="E-Commerce">E-Commerce</option>
-                    <option value="Exiting">Exiting</option>
-                    <option value="Estate Planning">Estate Planning</option>
-                    <option value="Other" id="other1">Other</option>
-                  </select>
-                  <label>#1 Priority<b class="required">*</b></label>
-                </div>
-                <div class="input-field" style="display:none" id="other1-input">
-                  <input type=text name="other1-custom" placeholder="List Your #1 Priority Here">
-                </div>
+              <div class="left-align col s12">
+                <p class="owned-label">{{ nomination_form.owned.label }}<b class="required">*</b></p>
+                  <p class="col s3">
+                    <label>
+                      <input type="radio" name="owned" value="True" class="with-gap">
+                      <span>Yes</span>
+                    </label>
+                  </p>
+                  <p class="col s3">
+                    <label>
+                      <input type="radio" name="owned" value="False" class="with-gap">
+                      <span>No</span>
+                    </label>
+                  </p>
               </div>
-              <div class="col s12 m8 offset-m2" style="margin-top: 20px">
-                <div class="input-field">
-                  <select name="priority2" id="priority2">
-                    <option value="" selected>Select Your #2 Priority</option>
-                    <option value="Revenue/Sales">Revenue/Sales</option>
-                    <option value="Business Loans/Acquire Financing">Business Loans/Acquire Financing</option>
-                    <option value="Staffing/Employees">Staffing/Employees</option>
-                    <option value="Marketing/Advertising">Marketing/Advertising</option>
-                    <option value="E-Commerce">E-Commerce</option>
-                    <option value="Exiting">Exiting</option>
-                    <option value="Estate Planning">Estate Planning</option>
-                    <option value="Other" id="other2">Other</option>
-                  </select>
-                  <label>#2 Priority</label>
-                </div>
-                <div class="input-field" style="display:none" id="other2-input">
-                  <input type=text name="other2-custom" placeholder="List Your #2 Priority Here">
-                </div>
-              </div>
-              <div class="col s12 m8 offset-m2" style="margin-top: 20px">
-                <div class="input-field">
-                  <select name="priority3" id="priority">
-                    <option value="" selected>Select Your #3 Priority</option>
-                    <option value="Revenue/Sales">Revenue/Sales</option>
-                    <option value="Business Loans/Acquire Financing">Business Loans/Acquire Financing</option>
-                    <option value="Staffing/Employees">Staffing/Employees</option>
-                    <option value="Marketing/Advertising">Marketing/Advertising</option>
-                    <option value="E-Commerce">E-Commerce</option>
-                    <option value="Exiting">Exiting</option>
-                    <option value="Estate Planning">Estate Planning</option>
-                    <option value="Other" id="other3">Other</option>
-                  </select>
-                  <label>#3 Priority</label>
-                </div>
-                <div class="input-field" style="display:none" id="other3-input">
-                  <input type=text name="other3-custom" placeholder="List Your #3 Priority Here">
-                </div>
-              </div>
-              
-            </div>
-            <div class="col s12 center-align">
-              <button class="btn btn-large submit-btn nomination-submit" type="submit">
-                SUBMIT
-            </button>
-            </div>
-          </form>
-      
-    </div>
-    <div id="vbp-family-nomination-form" class="row hidden container">
-      <form class="col s12 l10 offset-l1 xl8 offset-xl2" method="POST" action="/village-empowerment-network-nomination/" id="nomination-form">
-            {% csrf_token %}
-            <input type="hidden" name="submission-type" value="family">
-            <div class="col s12 m6 l4">
-              <div class="input-field">
-                <input name="nominator-name" id="vbp-name" type="text" required>
-                <label for="vbp-name">Name<b class="required">*</b></label>
-              </div>
-            </div>
-            <div class="col s12 m6 l4">
-              <div class="input-field">
-                  <input id="vbp-email" name="nominator-email" type="text" required>
-                  <label for="vbp-email">Email<b class="required">*</b></label>
-              </div>
-            </div>
-            <div class="col s12 m6 l4">
-              <div class="input-field">
-                {{ nomination_form.phone }}
-                <label>Phone<b class="required">*</b></label>
-              </div>
-            </div>
-                  <div class="col s12 m6 ">
-                    <div class="input-field">
-                      {{ nomination_form.city }}
-                      <label>City<b class="required">*</b></label>
-                    </div>
-                  </div>
-                  <div class="input-field col s12 m6 ">
-                    {{ nomination_form.state }}
-                    <label>State<b class="required">*</b></label>
-                </div>
-                
-                  
-                  <div class="left-align col s12">
-                      <p class="owned-label">Employment Status<b class="required">*</b></p>
-                        
-                        <p class="col s4">
-                          <label>
-                            <input type="radio" name="owned" value="False" class="with-gap">
-                            <span>Employed</span>
-                          </label>
-                        </p>
-                        <p class="col s4">
-                          <label>
-                            <input type="radio" name="owned" value="False" class="with-gap">
-                            <span>Self-Employed</span>
-                          </label>
-                        </p>
-                        <p class="col s4">
-                          <label>
-                            <input type="radio" name="owned" value="True" class="with-gap">
-                            <span>Unemployed</span>
-                          </label>
-                        </p>
-                    </div>
-          <div class="col s12">
-            <div class="row">
               <div class="col s12 m6">
-                <p>Age Range<b class="required">*</b></p>
+                <p>Number of Years in Business<b class="required">*</b></p>
+                
                 <p>
                     <label>
                       <input class="with-gap" value="Less than 2 years" name="years-active" type="radio" required/>
-                      <span>Under 18</span>
+                      <span>Less than 2 years</span>
                     </label>
                   </p>
                   <p>
                     <label>
                       <input class="with-gap" value="3-5 years" name="years-active" type="radio"  />
-                      <span>18-30 years</span>
+                      <span>3-5 years</span>
                     </label>
                   </p>
                   <p>
                     <label>
                       <input class="with-gap" value="5-10 years" name="years-active" type="radio"  />
-                      <span>31-45 years</span>
+                      <span>5-10 years</span>
                     </label>
                   </p>
                   <p>
                     <label>
                       <input class="with-gap" value="10-15 years" name="years-active" type="radio"  />
-                      <span>46-64 years</span>
+                      <span>10-15 years</span>
                     </label>
                   </p>
                   <p>
                     <label>
                       <input class="with-gap"value="More than 15 years" name="years-active" type="radio"/>
-                      <span>65 and older</span>
+                      <span>More than 15 years</span>
                     </label>
                   </p>
               </div>
               <div class="col s12 m6">
-                <p>Household Size<b class="required">*</b>
+                <p>Number of Employees<b class="required">*</b>
                 </p>
                 <p>
                   <label>
                     <input class="with-gap" value="0-4" name="employees" type="radio" required/>
-                    <span>1 person</span>
+                    <span>0-4 people</span>
                   </label>
                 </p>
                 <p>
                   <label>
                     <input class="with-gap" value="5-10" name="employees" type="radio"  />
-                    <span>2-3 people</span>
+                    <span>5-10 people</span>
                     
                   </label>
                 </p>
                 <p>
                   <label>
                     <input class="with-gap" value="11-20" name="employees" type="radio"  />
-                    <span>4 people</span>
+                    <span>11-20</span>
                     
                   </label>
                 </p>
                 <p>
                   <label>
                     <input class="with-gap" value="21-30" name="employees" type="radio"  />
-                    <span>More than 4 people</span>
+                    <span>21-30 people</span>
                     
                   </label>
                 </p>
-              </div>
-            </div>
-            <div class="row">
-                <p>Estimated 2021 Income<b class="required">*</b>
-              <div class="col s12 m6">
-                
-                  <p>
-                    <label>
-                      <input class="with-gap" value="Less than $30,000" name="revenue" type="radio" required/>
-                      <span>Less than $30,000</span>
-                      
-                    </label>
-                  </p>
-                  <p>
-                    <label>
-                      <input class="with-gap" value="$31,000-$50,000" name="revenue" type="radio"  />
-                      <span>$30,000-$50,000</span>
-                      
-                    </label>
-                  </p>
-                  <p>
-                    <label>
-                      <input class="with-gap" value="$51,000-$75,000" name="revenue" type="radio"  />
-                      <span>$50,000-$75,000</span>
-                      
-                    </label>
-                  </p>
-                  <p>
-                    <label>
-                      <input class="with-gap" value="$75,001-$100,000" name="revenue" type="radio"  />
-                      <span>$75,000-$100,000</span>
-                      
-                    </label>
-                  </p>
-                  
-              </div>
-              <div class="col s12 m6">
                 <p>
+                  <label>
+                    <input class="with-gap" value="More than 30" name="employees" type="radio"  />
+                    <span>More than 30 people</span>
+                    
+                  </label>
+                </p> 
+              </div>
+              <div class="col s12 m6">
+                <p>Estimated 2021 Revenue<b class="required">*</b>
+                  <p>
+                    <label>
+                      <input class="with-gap" value="Less than $50,000" name="revenue" type="radio" required/>
+                      <span>Less than $50,000</span>
+                      
+                    </label>
+                  </p>
+                  <p>
+                    <label>
+                      <input class="with-gap" value="$51,000-$100,000" name="revenue" type="radio"  />
+                      <span>$51,000-$100,000</span>
+                      
+                    </label>
+                  </p>
+                  <p>
                     <label>
                       <input class="with-gap" value="$101,000-$250,000" name="revenue" type="radio"  />
-                      <span>$100,000-$250,000</span>
+                      <span>$101,000-$250,000</span>
                       
                     </label>
                   </p>
                   <p>
                     <label>
-                      <input class="with-gap" value="$75,001-$100,000" name="revenue" type="radio"  />
-                      <span>$250,000-$500,000</span>
+                      <input class="with-gap" value="$251,000-$500,000" name="revenue" type="radio"  />
+                      <span>$251,000-$500,000</span>
                       
                     </label>
                   </p>
                   <p>
                     <label>
-                      <input class="with-gap" value="More than $100,000" name="revenue" type="radio" />
+                      <input class="with-gap" value="More than $500,000" name="revenue" type="radio" />
                       <span>More than $500,000</span>
                       
                     </label>
                   </p>
+                  
+                </p>
               </div>
-            </div>
-          </div>
-            <div class="col s12 center-align">
-              <p><b>Rank Your Top 3 Business Priorities in Order of Need from 1-3.</b></p>
-              <p>Budgeting/Saving, Home Ownership, Home Ownership, Tax Planning, College Planning/Saving, Retirment Planning, Exploring Entrepreneurship, Transferring Wealth/Estate Planning, Other</p>
-              <div class="col s12 m8  offset-m2" style="margin-top: 20px">
-                <div class="input-field">
-                  <select name="priority1" id="priority1" required>
-                    <option value="" disabled selected>Select Your #1 Priority</option>
-                    <option value="Revenue/Sales">Budgeting/Saving</option>
-                    <option value="Revenue/Sales">Home Ownership</option>
-                    <option value="Revenue/Sales">Tax Planning</option>
-                    <option value="Revenue/Sales">College Planning/Saving</option>
-                    <option value="Business Loans/Acquire Financing">Retirment Planning</option>
-                    <option value="Staffing/Employees">Exploring Entrepreneurship</option>
-                    <option value="Marketing/Advertising">Transferring Wealth/Estate Planning</option>
-                    <option value="Other" id="other1">Other</option>
-                  </select>
-                  <label>#1 Priority<b class="required">*</b></label>
-                </div>
-                <div class="input-field" style="display:none" id="other1-input">
-                  <input type=text name="other1-custom" placeholder="List Your #1 Priority Here">
-                </div>
+              <div class="col s12 m6">
+                <p>Current Business Structure:</p>
+                <input class="hidden" type="radio" value='' name="structure" checked>
+                <p>
+                  <label>
+                    <input class="with-gap" value="Sole Proprietorship" name="structure" type="radio"  />
+                    <span id="spu">Sole Proprietorship (unincorporated)</span>
+                    
+                  </label>
+                </p>
+                <p>
+                  <label>
+                    <input class="with-gap" value="Incorporated Entity" name="structure" type="radio" />
+                    <span>Incorporated Entity (Inc.)</span>
+                    
+                  </label>
+                </p>
+                <p>
+                  <label>
+                    <input class="with-gap" value="Official Partnership" name="structure" type="radio" />
+                    <span>Official Partnership (e.g., LP)</span>
+                    
+                  </label>
+                </p>
+                <p>
+                  <label>
+                    <input class="with-gap" value="LLC" name="structure" type="radio" />
+                    <span id="llc">Limited Liability Corporation (LLC)</span>
+                    
+                  </label>
+                </p>
+                <p>
+                  <label>
+                    <input class="with-gap" value="None" name="structure" type="radio" />
+                    <span>None of the Above</span>
+                    
+                  </label>
+                </p>
               </div>
-              <div class="col s12 m8 offset-m2" style="margin-top: 20px">
-                <div class="input-field">
-                  <select name="priority2" id="priority2">
-                      <option value="" disabled selected>Select Your #2 Priority</option>
-                      <option value="Revenue/Sales">Budgeting/Saving</option>
-                      <option value="Revenue/Sales">Home Ownership</option>
-                      <option value="Revenue/Sales">Tax Planning</option>
-                      <option value="Revenue/Sales">College Planning/Saving</option>
-                      <option value="Business Loans/Acquire Financing">Retirment Planning</option>
-                      <option value="Staffing/Employees">Exploring Entrepreneurship</option>
-                      <option value="Marketing/Advertising">Transferring Wealth/Estate Planning</option>
-                      <option value="Other" id="other1">Other</option>
-                  </select>
-                  <label>#2 Priority</label>
-                </div>
-                <div class="input-field" style="display:none" id="other2-input">
-                  <input type=text name="other2-custom" placeholder="List Your #2 Priority Here">
-                </div>
-              </div>
-              <div class="col s12 m8  offset-m2" style="margin-top: 20px">
-                <div class="input-field">
-                  <select name="priority3" id="priority">
-                      <option value="" disabled selected>Select Your #3 Priority</option>
-                      <option value="Revenue/Sales">Budgeting/Saving</option>
-                      <option value="Revenue/Sales">Home Ownership</option>
-                      <option value="Revenue/Sales">Tax Planning</option>
-                      <option value="Revenue/Sales">College Planning/Saving</option>
-                      <option value="Business Loans/Acquire Financing">Retirment Planning</option>
-                      <option value="Staffing/Employees">Exploring Entrepreneurship</option>
-                      <option value="Marketing/Advertising">Transferring Wealth/Estate Planning</option>
-                      <option value="Other" id="other1">Other</option>
-                  </select>
-                  <label>#3 Priority</label>
-                </div>
-                <div class="input-field" style="display:none" id="other3-input">
-                  <input type=text name="other3-custom" placeholder="List Your #3 Priority Here">
-                </div>
-              </div>
-              
-            </div>
-            
-            
-              
               <div class="col s12 center-align">
-                <button class="btn btn-large submit-btn nomination-submit" type="submit">
-                  SUBMIT
-              </button>
+                <p><b>Rank Your Top 3 Business Priorities in Order of Need from 1-3.</b></p>
+                <p>Revenue/Sales, Business Loans/Acquire Financing, Staffing/Employees, Marketing/Advertising, <br>E-Commerce, Exiting, Estate Planning, Other</p>
+                <div class="col s12 m8 offset-m2" style="margin-top: 20px">
+                  <div class="input-field">
+                    <select name="priority1" id="priority1-both" required>
+                      <option value="" disabled selected>Select Your #1 Priority</option>
+                      <option value="Revenue/Sales">Revenue/Sales</option>
+                      <option value="Business Loans/Acquire Financing">Business Loans/Acquire Financing</option>
+                      <option value="Staffing/Employees">Staffing/Employees</option>
+                      <option value="Marketing/Advertising">Marketing/Advertising</option>
+                      <option value="E-Commerce">E-Commerce</option>
+                      <option value="Exiting">Exiting</option>
+                      <option value="Estate Planning">Estate Planning</option>
+                      <option value="Other" id="other1-both">Other</option>
+                    </select>
+                    <label>#1 Priority<b class="required">*</b></label>
+                  </div>
+                  <div class="input-field" style="display:none" id="other1-input-both">
+                    <input type=text name="other1-custom" placeholder="List Your #1 Priority Here">
+                  </div>
+                </div>
+                <div class="col s12 m8 offset-m2" style="margin-top: 20px">
+                  <div class="input-field">
+                    <select name="priority2" id="priority2-both">
+                      <option value="" selected>Select Your #2 Priority</option>
+                      <option value="Revenue/Sales">Revenue/Sales</option>
+                      <option value="Business Loans/Acquire Financing">Business Loans/Acquire Financing</option>
+                      <option value="Staffing/Employees">Staffing/Employees</option>
+                      <option value="Marketing/Advertising">Marketing/Advertising</option>
+                      <option value="E-Commerce">E-Commerce</option>
+                      <option value="Exiting">Exiting</option>
+                      <option value="Estate Planning">Estate Planning</option>
+                      <option value="Other" id="other2-both">Other</option>
+                    </select>
+                    <label>#2 Priority</label>
+                  </div>
+                  <div class="input-field" style="display:none" id="other2-input-both">
+                    <input type=text name="other2-custom" placeholder="List Your #2 Priority Here">
+                  </div>
+                </div>
+                <div class="col s12 m8 offset-m2" style="margin-top: 20px">
+                  <div class="input-field">
+                    <select name="priority3" id="priority3-both">
+                      <option value="" selected>Select Your #3 Priority</option>
+                      <option value="Revenue/Sales">Revenue/Sales</option>
+                      <option value="Business Loans/Acquire Financing">Business Loans/Acquire Financing</option>
+                      <option value="Staffing/Employees">Staffing/Employees</option>
+                      <option value="Marketing/Advertising">Marketing/Advertising</option>
+                      <option value="E-Commerce">E-Commerce</option>
+                      <option value="Exiting">Exiting</option>
+                      <option value="Estate Planning">Estate Planning</option>
+                      <option value="Other" id="other3-both">Other</option>
+                    </select>
+                    <label>#3 Priority</label>
+                  </div>
+                  <div class="input-field" style="display:none" id="other3-input-both">
+                    <input type=text name="other3-custom" placeholder="List Your #3 Priority Here">
+                  </div>
+                </div>
+                
               </div>
-            
-          </form>
+          </fieldset>
+          
+          <div class="col s12 center-align">
+            <button class="btn btn-large submit-btn nomination-submit" type="submit">
+              SUBMIT
+          </button>
+          </div>
+        </form>
       </div>
-    </div>
-    </div>
+  </div>
 </div>
 
 <style>
+  .fieldset-title {
+    text-align: center;
+    font-family: oskar;
+    font-size: 26px
+  }
+  fieldset {
+    padding: 20px 5%;
+    border-top: dotted 2px rgb(223, 223, 223);
+    border-left: none;
+    border-right: none;
+    border-bottom: none
+  }
   .hidden {
     display: none
   }
@@ -704,6 +1985,22 @@
   }
 </style>
 <script>
+  $('#category-select-both').on('change', function(){
+        var category = $(this).find(':selected').val()
+        $('#disabled-subcat-both').hide()
+        $('[cat="both-'+ category +'"]').removeClass('hidden')
+        $('.subcat-div[cat="both-'+ category +'"] select').attr('name', 'subcategory')
+        $('.subcat-div[cat!="both-'+ category +'"]').addClass('hidden')
+        $('.subcat-div[cat!="both-'+ category +'"] select').attr('name', 'subcategory-disabled')
+    });
+    $('#category-select').on('change', function(){
+        var category = $(this).find(':selected').val()
+        $('#disabled-subcat').hide()
+        $('[cat="'+ category +'"]').removeClass('hidden')
+        $('.subcat-div[cat="'+ category +'"] select').attr('name', 'subcategory')
+        $('.subcat-div[cat!="'+ category +'"]').addClass('hidden')
+        $('.subcat-div[cat!="'+ category +'"] select').attr('name', 'subcategory-disabled')
+    });
   $('#priority1').on('change', function(){
     if($('#other1').is(':selected')){
       $('#other1-input').css('display','block')
@@ -725,14 +2022,85 @@
       $('#other3-input').css('display','none')
     }
   });
+  $('#priority1-both').on('change', function(){
+    if($('#other1-both').is(':selected')){
+      $('#other1-input-both').css('display','block')
+    } else {
+      $('#other1-input-both').css('display','none')
+    }
+    });
+    $('#priority2-both').on('change', function(){
+    if($('#other2-both').is(':selected')){
+      $('#other2-input-both').css('display','block')
+    } else {
+      $('#other2-input-both').css('display','none')
+    }
+    });
+    $('#priority3-both').on('change', function(){
+    if($('#other3-both').is(':selected')){
+      $('#other3-input-both').css('display','block')
+    } else {
+      $('#other3-input-both').css('display','none')
+    }
+  });
+  $('#priority1-family').on('change', function(){
+    if($('#other1-family').is(':selected')){
+      $('#other1-input-family').css('display','block')
+    } else {
+      $('#other1-input-family').css('display','none')
+    }
+    });
+    $('#priority2-family').on('change', function(){
+    if($('#other2-family').is(':selected')){
+      $('#other2-input-family').css('display','block')
+    } else {
+      $('#other2-input-family').css('display','none')
+    }
+    });
+    $('#priority3-family').on('change', function(){
+    if($('#other3-family').is(':selected')){
+      $('#other3-input-family').css('display','block')
+    } else {
+      $('#other3-input-family').css('display','none')
+    }
+  });
+  $('#priority1-family-both').on('change', function(){
+    if($('#other1-family-both').is(':selected')){
+      $('#other1-input-family-both').css('display','block')
+    } else {
+      $('#other1-input-family-both').css('display','none')
+    }
+    });
+    $('#priority2-family-both').on('change', function(){
+    if($('#other2-family-both').is(':selected')){
+      $('#other2-input-family-both').css('display','block')
+    } else {
+      $('#other2-input-family-both').css('display','none')
+    }
+    });
+    $('#priority3-family-both').on('change', function(){
+    if($('#other3-family-both').is(':selected')){
+      $('#other3-input-family-both').css('display','block')
+    } else {
+      $('#other3-input-family-both').css('display','none')
+    }
+  });
+  
   $('input[name="nomination-type"]').on('change', function(){
     if($(this).val() == 'business'){
       $('#vbp-business-nomination-form').removeClass('hidden')
       $('#vbp-family-nomination-form').addClass('hidden')
+      $('#vbp-both-nomination-form').addClass('hidden')
     }
     if($(this).val() == 'individual'){
       $('#vbp-business-nomination-form').addClass('hidden')
       $('#vbp-family-nomination-form').removeClass('hidden')
+      $('#vbp-both-nomination-form').addClass('hidden')
+    }
+    if($(this).val() == 'both'){
+      $('#vbp-business-nomination-form').addClass('hidden')
+      $('#vbp-family-nomination-form').addClass('hidden')
+      $('#vbp-both-nomination-form').removeClass('hidden')
     }
   })
 </script>

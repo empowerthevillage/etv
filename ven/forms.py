@@ -331,9 +331,14 @@ class BusinessForm(forms.Form):
     online_only = forms.ChoiceField(label='Does this business operate online only?', widget=forms.RadioSelect(), label_suffix='', choices=TRUEFALSE_CHOICES, required=False)
     city = forms.CharField(label='Business City', widget=forms.TextInput(attrs={'class':'textfield'}), label_suffix='', required=True)
     state = forms.CharField(label='Business State', widget=forms.Select(choices=STATE_CHOICES), label_suffix='', required=True)
+    individual_state = forms.CharField(label='State', widget=forms.Select(choices=STATE_CHOICES), label_suffix='', required=True)
     owned = forms.ChoiceField(label='Do you own this business?', widget=forms.RadioSelect(choices=TRUEFALSE_CHOICES,), label_suffix='', choices=TRUEFALSE_CHOICES, required=False)
     recommended = forms.ChoiceField(label='Have you used the product or service(s) offered by this business and recommend it to others?', widget=forms.RadioSelect(choices=TRUEFALSE_CHOICES),choices=TRUEFALSE_CHOICES, required=False)
     
     def save(self):
             vbp = super(BusinessForm, self).save()
             return vbp
+    
+    def get_categories(self):
+        categories = CATEGORY_CHOICES
+        return categories
