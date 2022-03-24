@@ -445,8 +445,13 @@
       </script>
       <script>
         $(document).ready(function(){
-    $('.modal').modal();
-  });
+          $('.modal').modal();
+          $('label').on('click', function(){
+            $(this).addClass('active')
+            $(this).closest('.input-field').find('input').focus()
+          });
+        });
+        
         $('#join-village-topnav').click(function(){
             Swal.fire({
                 html: '<h3 class="join-tv-title">Join The Village!</h3><p>Enter your email address to join the ETV mailing list.</p><form method="POST" action="/mailchimp-signup/" id="mailchimp-nav-form">{% csrf_token %}<div class="input-field"><input required id="mailchimp-email-nav" name="email" type="email"><label for="mailchimp-email-nav">Email</label></div><button type="submit" class="btn light-green darken-3 waves-effect" id="efbf-mailchimp">Add Me To The List!</button></form>',
