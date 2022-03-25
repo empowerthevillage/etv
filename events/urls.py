@@ -6,6 +6,7 @@ urlpatterns = [
     path('', event_home, name='home'),
     path('ticket-update-cart/', ticket_cart_update, name="ticket-update-cart"),
     path('ticket-donation-update-cart/', ticket_cart_donation_update, name="ticket-update-donation-cart"),
+    path('ticket-ad-update-cart/', ticket_cart_ad_update, name="ticket-update-ad-cart"),
     path('ticket/<ticket_id>/', ticket, name="ticket-detail"),
     path('<slug>/', event_detail, name='detail'),
     path('<slug>/buy-tickets/', event_ticket_checkout, name='ticket-checkout'),

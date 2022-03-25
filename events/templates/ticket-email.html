@@ -199,6 +199,65 @@
 	</tr>
 	</table>
 {% endfor %}
+{% for x in donations %}
+<table border="0" cellpadding="0" cellspacing="0" class="divider_block" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
+	<tr>
+	<td style="padding-top:10px;padding-right:5px;padding-bottom:15px;padding-left:5px;">
+	<div align="center">
+	<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="80%">
+	<tr>
+	<td class="divider_inner" style="width: 60%; font-size: 1px; line-height: 1px; border-top: 1px solid #DFDFDF;"><span> </span></td>
+	</tr>
+	</table>
+	</div>
+	</td>
+	</tr>
+</table>
+<p style="margin: 0; font-size: 14px; text-align: center;"><em><span style="font-size:16px;color:#383838;"><strong>Donation:</strong> ${{ x.amount }}</span></em></p>
+<table border="0" cellpadding="0" cellspacing="0" class="divider_block" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
+	<tr>
+	<td style="padding-top:10px;padding-right:5px;padding-bottom:15px;padding-left:5px;">
+	<div align="center">
+	<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="80%">
+	<tr>
+	<td class="divider_inner" style="width: 60%; font-size: 1px; line-height: 1px; border-top: 1px solid #DFDFDF;"><span> </span></td>
+	</tr>
+	</table>
+	</div>
+	</td>
+	</tr>
+</table>
+{% endfor %}
+{% for x in ads %}
+<table border="0" cellpadding="0" cellspacing="0" class="divider_block" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
+	<tr>
+	<td style="padding-top:10px;padding-right:5px;padding-bottom:15px;padding-left:5px;">
+	<div align="center">
+	<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="80%">
+	<tr>
+	<td class="divider_inner" style="width: 60%; font-size: 1px; line-height: 1px; border-top: 1px solid #DFDFDF;"><span> </span></td>
+	</tr>
+	</table>
+	</div>
+	</td>
+	</tr>
+</table>
+<p style="margin: 0; font-size: 14px; text-align: center;"><em><span style="font-size:16px;color:#383838;"><strong>Ad Type:</strong> {{ x }}</span></em></p>
+<p style="margin: 0; font-size: 14px; text-align: center;"><em><span style="font-size:16px;color:#383838;">{{ x.description|safe }}</span></em></p>
+<table border="0" cellpadding="0" cellspacing="0" class="divider_block" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
+	<tr>
+	<td style="padding-top:10px;padding-right:5px;padding-bottom:15px;padding-left:5px;">
+	<div align="center">
+	<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="80%">
+	<tr>
+	<td class="divider_inner" style="width: 60%; font-size: 1px; line-height: 1px; border-top: 1px solid #DFDFDF;"><span> </span></td>
+	</tr>
+	</table>
+	</div>
+	</td>
+	</tr>
+</table>
+{% endfor %}
 </div>
 </div>
 </td>

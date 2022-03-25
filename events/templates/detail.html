@@ -9,11 +9,11 @@
     <div id="overlay">
         
         <a class="valign-wrapper" href="/events/" style="margin-bottom: 30px"><i class="material-icons" style="font-size: 16px">arrow_back</i>&nbsp; All Events</a>
-        <h6 class="modal-title">ETV {{ event.title }}</h6>
+        <h6 class="modal-title scale-up-center">ETV {{ event.title }}</h6>
         {% if event.is_multiday %}
-        <h6 class="modal-date" style="width: 100%">{{ event.start_date|date:"F jS" }} & {{ event.end_date|date:"jS" }}, {{ event.end_date|date:"Y"}}</h6>
+        <h6 class="modal-date scale-up-center" style="width: 100%">{{ event.start_date|date:"F jS" }} & {{ event.end_date|date:"jS" }}, {{ event.end_date|date:"Y"}}</h6>
         {% else %}
-        <h6 class="modal-date" style="width: 100%">{{ event.start_date|date:"F jS Y" }}</h6>
+        <h6 class="modal-date scale-up-center" style="width: 100%">{{ event.start_date|date:"F jS Y" }}</h6>
         {% endif %}
         <div class="divider-dotted"></div>
         {{ event.content|safe }}
@@ -155,7 +155,7 @@
         font-size: 12px
     }
     #page {
-        background: url('{% static "img/vbp_collage.png" %}');
+        background: url('{% static "img/VBP collage.svg" %}');
     }
     #overlay {
         background: rgba(255, 255, 255, 0.938);

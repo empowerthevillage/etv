@@ -428,6 +428,19 @@ def ticket_nb(request):
                     last_name=last_name,
                     guest_list=guest_list)
                 ticket_list.append(new_ticket)
+        donations = ticketDonation.objects.filter(cart=cart_obj)
+        ad_list = []
+        ads = ticketAd.objects.filter(cart=cart_obj)
+        for x in ads:
+            new_ad = Ad.objects.create(
+                type=x.type,
+                event=event,
+                billing_profile=billing_profile, 
+                email=email, 
+                first_name=first_name,
+                last_name=last_name,
+            )
+            ad_list.append(new_ad)
         cart_obj.active = False
         cart_obj.save()
         confirmation_subject = 'ETV Ticket Purchase Confirmation'
@@ -435,6 +448,8 @@ def ticket_nb(request):
         confirmation_content = render_to_string('ticket-email.html',
         {
             'tickets': ticket_list,
+            'ads': ad_list,
+            'donations': donations,
             'event': event
         })
         confirmation_plain_text = 'View email in browser'      

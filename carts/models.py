@@ -5,7 +5,7 @@ from django.utils.translation import activate
 from events.models import Guest, TicketType
 from merchandise.models import *
 from django.db.models.signals import pre_save, post_save, m2m_changed
-from events.models import Event
+from events.models import *
 User = settings.AUTH_USER_MODEL
 
 class CartManager(models.Manager):
@@ -123,6 +123,7 @@ class TicketCart(models.Model):
         cart_id = self.id
         qs = list(ticketItem.objects.filter(cart=cart_id).all())
         donations = list(ticketDonation.objects.filter(cart=cart_id).all())
+        ads = list(ticketAd.objects.filter(cart=cart_id).all())
         items = qs
         total = 0
         for x in items:
@@ -133,6 +134,9 @@ class TicketCart(models.Model):
             total += line_total
         for x in donations:
             line_total = x.amount
+            total += line_total
+        for x in ads:
+            line_total = x.type.price
             total += line_total
         return total
 
@@ -165,7 +169,10 @@ class ticketDonation(models.Model):
     def subtotal(self):
         return str(self.amount)
     
-    @property
-    def get_guests(self):
-        return range(self.quantity)
+class ticketAd(models.Model):
+    cart        = models.ForeignKey(TicketCart, on_delete=models.CASCADE, blank=True, null=True)
+    type        = models.ForeignKey(AdType, on_delete=models.SET_NULL, null=True, blank=True)
+    
+    def subtotal(self):
+        return str(self.amount)
     

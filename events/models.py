@@ -5,7 +5,7 @@ from django.db.models.signals import pre_save, post_save
 from django.http import HttpResponse
 from django.urls import reverse
 from itertools import islice
-from etv.utils import unique_ticket_id_generator, unique_slug_generator
+from etv.utils import *
 from billing.models import BillingProfile
 from tinymce.models import HTMLField
 import qrcode
@@ -194,3 +194,42 @@ def ticket_pre_save_receiver(sender, instance, *args, **kwargs):
         canvas.close()
 
 pre_save.connect(ticket_pre_save_receiver, sender=SingleTicket)
+
+class AdType(models.Model):
+    title               = models.CharField(max_length=270, null=True, blank=True)
+    event               = models.ForeignKey(Event, null=True, blank=True, on_delete=models.SET_NULL)
+    price               = models.DecimalField(decimal_places=2, max_digits=10)
+    sale                = models.BooleanField(default=False)
+    sale_price          = models.DecimalField(decimal_places=2, max_digits=10, null=True, blank=True)
+    sale_description    = models.CharField(max_length=270, null=True, blank=True)
+    description         = HTMLField(null=True, blank=True)
+    
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        verbose_name = 'Ad Type'
+        verbose_name_plural = 'Ad Types'
+
+class Ad(models.Model):
+    ad              = models.ImageField(null=True, blank=True)
+    type            = models.ForeignKey(AdType, on_delete=models.SET_NULL, null=True, blank=True)
+    billing_profile = models.ForeignKey(BillingProfile, on_delete=models.SET_NULL, null=True, blank=True)
+    ad_id           = models.CharField(max_length=270, blank=True)
+    event           = models.ForeignKey(Event, null=True, blank=True, on_delete=models.SET_NULL)
+    email           = models.EmailField(blank=True, null=True)
+    first_name      = models.CharField(max_length=100, null=True, blank=True)
+    last_name       = models.CharField(max_length=100, null=True, blank=True)
+    
+    def __str__(self):
+        return self.ad_id
+
+    class Meta:
+        verbose_name = 'Ad'
+        verbose_name_plural = 'Ads'
+
+def ad_pre_save_receiver(sender, instance, *args, **kwargs):
+    if not instance.ad_id:
+        instance.ad_id = unique_ad_id_generator(instance)
+
+pre_save.connect(ad_pre_save_receiver, sender=Ad)

@@ -17,7 +17,9 @@ class TicketTypeAdmin(admin.ModelAdmin):
 
 admin_site.register(tag)
 admin_site.register(Event, EventAdmin)
-admin_site.register(SingleTicket)
+admin_site.register(SingleTicket, TicketAdmin)
 admin_site.register(TicketType, TicketTypeAdmin)
 admin_site.register(AddOn)
 admin_site.register(Option)
+admin_site.register(AdType)
+admin_site.register(Ad)

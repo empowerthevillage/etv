@@ -12,7 +12,7 @@ import braintree
 import shippo
 import json
 
-from carts.models import TicketCart, ticketItem, ticketDonation
+from carts.models import TicketCart, ticketItem, ticketDonation, ticketAd
 from .models import *
 from django.conf import settings
 
@@ -95,6 +95,8 @@ def event_ticket_checkout(request, slug):
     
     item_list = ticketItem.objects.filter(cart=cart_obj)
     donations = ticketDonation.objects.filter(cart=cart_obj)
+    ads = ticketAd.objects.filter(cart=cart_obj)
+    ad_types  = AdType.objects.filter(event=event)
     cart_items = list()
     for x in ticket_types:
         ticketType = x
@@ -105,6 +107,15 @@ def event_ticket_checkout(request, slug):
             "quantity_list": range(0,11)
         }
         cart_items.append(dictionary)
+    ad_items = list()
+    for x in ad_types:
+        adType = x
+        adItem = ticketAd.objects.filter(cart=cart_obj).filter(type=x).first()
+        dictionary = {
+            "type": adType,
+            "cartItem": adItem,
+        }
+        ad_items.append(dictionary)
 
     cart_sponsor_items = list()
     for x in sponsor_types:
@@ -142,7 +153,10 @@ def event_ticket_checkout(request, slug):
     context = {
         'title':'ETV | %s' %(event.title),
         'event': event,
+        'ads': ads,
         'ticket_types': ticket_types,
+        'ad_items': ad_items,
+        'ad_types': ad_types,
         'sponsor_types': sponsor_types,
         'item_list': item_list,
         'cart_items': cart_items,
@@ -167,6 +181,27 @@ def event_sponsor_checkout(request, slug):
     
     item_list = ticketItem.objects.filter(cart=cart_obj)
     donations = ticketDonation.objects.filter(cart=cart_obj)
+    ads = ticketAd.objects.filter(cart=cart_obj)
+    ad_types  = AdType.objects.filter(event=event)
+    cart_items = list()
+    for x in ticket_types:
+        ticketType = x
+        cartItem = ticketItem.objects.filter(cart=cart_obj).filter(ticket=x).first()
+        dictionary = {
+            "type": ticketType,
+            "cartItem": cartItem,
+            "quantity_list": range(0,11)
+        }
+        cart_items.append(dictionary)
+    ad_items = list()
+    for x in ad_types:
+        adType = x
+        adItem = ticketAd.objects.filter(cart=cart_obj).filter(type=x).first()
+        dictionary = {
+            "type": adType,
+            "cartItem": adItem,
+        }
+        ad_items.append(dictionary)
     cart_items = list()
     for x in ticket_types:
         ticketType = x
@@ -214,7 +249,10 @@ def event_sponsor_checkout(request, slug):
     context = {
         'title':'ETV | %s' %(event.title),
         'event': event,
+        'ads': ads,
         'ticket_types': ticket_types,
+        'ad_items': ad_items,
+        'ad_types': ad_types,
         'sponsor_types': sponsor_types,
         'item_list': item_list,
         'cart_items': cart_items,
@@ -230,6 +268,52 @@ def event_sponsor_checkout(request, slug):
         "states": STATE_CHOICES
     }
     return render(request, "sponsor-checkout.html", context)
+
+def ticket_cart_ad_update(request):
+    print(request.POST)
+    type                = request.POST.get('type')
+    event_title         = request.POST.get('event')
+    ad_id               = request.POST.get('adType')
+    ad_type             = AdType.objects.filter(pk=ad_id).first()
+    event               = Event.objects.filter(title=event_title).first()
+    cart_obj            = TicketCart.objects.new_or_get(request, event)
+    data                = {}
+    if type == 'add':
+        item_obj = ticketAd()
+        item_obj.cart = cart_obj
+        item_obj.type = ad_type
+        item_obj.save()
+
+        price = item_obj.type.price
+        event = item_obj.type.event
+        data = {
+            'price': '$%s' %(price),
+            'ad': '%s' %(item_obj.type.title),
+            'priceTarget': '.%s-AdPrice' %(item_obj.pk),
+            'quantityTarget': '.%s-AdQuantity' %(item_obj.pk),
+            'quantity': '1',
+            'total': '$%s' %(cart_obj.total),
+            'row': '.%s-AdRow' %(item_obj.pk),
+            'pk': item_obj.pk,
+            'removeContainer': '#%s-remove-container' %(ad_id),
+            'typeId': item_obj.type.pk
+        }
+        return JsonResponse(data)
+    elif type == 'remove':
+        item_id         = request.POST.get('tid')
+        type_id         = request.POST.get('typeId')
+        item_obj        = ticketAd(pk=item_id)
+        item_obj.delete()
+        data = {
+            'total': '$%s' %(cart_obj.total),
+            'row': '.%s-AdRow' %(item_id),
+            'removeContainer': '#%s-remove-container' %(type_id),
+            'pk': str(item_id),
+            'typeId': str(type_id)
+        }
+        print(data)
+        return JsonResponse(data)
+    return JsonResponse(data)
 
 def ticket_cart_donation_update(request):
     event_title         = request.POST.get('event')

@@ -20,6 +20,15 @@ def unique_subscription_id_generator(instance):
         return unique_slug_generator(instance)
     return braintree_id
 
+def unique_ad_id_generator(instance):
+    ad_id = random_string_generator(size=7)
+
+    Klass = instance.__class__
+    qs_exists = Klass.objects.filter(ad_id=ad_id).exists()
+    if qs_exists:
+        return unique_slug_generator(instance)
+    return ad_id
+
 def unique_order_key_generator(instance):
     """
     This is for a Django product with a key field

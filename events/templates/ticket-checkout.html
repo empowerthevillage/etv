@@ -10,14 +10,14 @@
     <div id="overlay" style="padding: 5% 2%">
       <div class="row center-align" style="border-bottom: dotted 1px rgb(233, 233, 233); padding-bottom: 2%; margin-bottom: 2%">
         <a class="valign-wrapper" href="{{ event.get_absolute_url }}"><i class="material-icons" style="font-size: 16px">arrow_back</i>&nbsp; Event Details</a>
-        <h6 class="modal-title">{{ event.title }}</h6>
+        <h6 class="modal-title scale-up-center">{{ event.title }}</h6>
         {% if event.subtitle is not None %}
-        <h6 class="modal-title" style="color: black">{{ event.subtitle }}</h6>
+        <h6 class="modal-title scale-up-center" style="color: black">{{ event.subtitle }}</h6>
         {% endif %}
         {% if event.is_multiday %}
-        <h6 class="modal-date" style="width: 100%">{{ event.start_date|date:"F jS" }} & {{ event.end_date|date:"jS" }}, {{ event.end_date|date:"Y"}}</h6>
+        <h6 class="modal-date scale-up-center" style="width: 100%">{{ event.start_date|date:"F jS" }} & {{ event.end_date|date:"jS" }}, {{ event.end_date|date:"Y"}}</h6>
         {% else %}
-        <h6 class="modal-date" style="width: 100%">{{ event.start_date|date:"F jS Y" }}</h6>
+        <h6 class="modal-date scale-up-center" style="width: 100%">{{ event.start_date|date:"F jS Y" }}</h6>
         {% endif %}
     </div>
     <div class="row" id="ticket-checkout-p1">
@@ -25,55 +25,75 @@
           <form id="ticket-form">
               <input type="hidden" eventTitle="{{ event.title }}" id="event-title">
           
-                    {% for x in cart_items %}
-                        <div class="row ticket-row">
-                            <div class="col s12 m9">
-                                <p class="ticket-title">{{ x.type.title }}</p>
-                                {% if x.type.on_sale %}
-                                <p class="ticket-price"><b style="text-decoration: line-through; font-weight:400">${{ x.type.price }}</b> <b class="sale">&nbsp${{ x.type.sale_price }}</b> - {{ x.type.sale_description }}</p>
-                                {% else %}
-                                <p class="ticket-price">${{ x.type.price }} {% if x.type.price_description is not none %}- {{ x.type.price_description }}{% endif %}</p>
-                                {% endif %}
-                                <p class="ticket-description">{{ x.type.description }}</p>
-                            </div>
-                            <div class="col s12 m3">
-                                <div class="input-field ticket-quantity-input" id="{{ x.type.pk }}-select">
-                                    <select class="qty-counter" tid="{{ x.type.pk }}" id="{{ x.type.pk }}-counter">
-                                        {% for number in x.quantity_list %}
-                                            {% if x.cartItem is not None %}
-                                                {% if number == x.cartItem.quantity %}
-                                                    <option value="{{ number }}" selected>{{ number }}</option>
-                                                    {% else %}
-                                                    <option value="{{ number }}">{{ number }}</option>
-                                                {% endif %}
-                                            {% else %}
-                                            <option value="{{ number }}">{{ number }}</option>
-                                            {% endif %}
-                                        {% endfor %}
-                                    
-                                    </select>
-                                    <label>Quantity</label>
-                                </div>
-                              </div>
-                          </div>
-                    {% endfor %}
-                    <div class="row ticket-row">
-                        <div class="col s12">
-                            <p class="ticket-title">{{ event.title }} Donation</p>
-                            <p class="ticket-description"></p>
-                            
-                        </div>
-                        <div class="col s5">
-                            <div class="input-field">
-                                <input type="text" id="custom-donation-1" placeholder="$">
-                                <label for="custom-donation-1">Enter Amount</label>
-                                
-                              </div>
-                            </div>
-                        <div class="col s6" id="donation-add">
-                          <div class="btn hidden grey darken-4" id="custom-donation-add">Add to Cart</div>
+              {% for x in cart_items %}
+              <div class="row ticket-row">
+                  <div class="col s12 m9">
+                      <p class="ticket-title">{{ x.type.title }}</p>
+                      {% if x.type.on_sale %}
+                      <p class="ticket-price"><b style="text-decoration: line-through; font-weight:400">${{ x.type.price|floatformat:"0" }}</b> <b class="sale">&nbsp${{ x.type.sale_price|floatformat:"0" }}</b> - {{ x.type.sale_description }}</p>
+                      {% else %}
+                      <p class="ticket-price">${{ x.type.price|floatformat:"0" }} {% if x.type.price_description is not none %}- {{ x.type.price_description }}{% endif %}</p>
+                      {% endif %}
+                      <p class="ticket-description">{{ x.type.description }}</p>
+                  </div>
+                  <div class="col s12 m3">
+                      <div class="input-field ticket-quantity-input" id="{{ x.type.pk }}-select">
+                          <select class="qty-counter" tid="{{ x.type.pk }}" id="{{ x.type.pk }}-counter">
+                              {% for number in x.quantity_list %}
+                                  {% if x.cartItem is not None %}
+                                      {% if number == x.cartItem.quantity %}
+                                          <option value="{{ number }}" selected>{{ number }}</option>
+                                          {% else %}
+                                          <option value="{{ number }}">{{ number }}</option>
+                                      {% endif %}
+                                  {% else %}
+                                  <option value="{{ number }}">{{ number }}</option>
+                                  {% endif %}
+                              {% endfor %}
+                          
+                          </select>
+                          <label>Quantity</label>
+                      </div>
+                    </div>
+                </div>
+              {% endfor %}
+              <div class="row ticket-row">
+                  <div class="col s12">
+                      <p class="ticket-title">{{ event.title }} Donation</p>
+                      <p class="ticket-description"></p>
+                      
+                  </div>
+                  <div class="col s5">
+                      <div class="input-field">
+                          <input type="text" id="custom-donation-1" placeholder="$">
+                          <label for="custom-donation-1">Enter Amount</label>
+                          
                         </div>
                       </div>
+                  <div class="col s6" id="donation-add">
+                    <div class="btn hidden grey darken-4" id="custom-donation-add">Add to Cart</div>
+                  </div>
+              </div>
+              {% for x in ad_items %}
+              <div class="row ticket-row valign-wrapper">
+                <div class="col s12 m8">
+                    <p class="ticket-title">{{ x.type }}</p>
+                    {% if x.type.on_sale %}
+                    <p class="ticket-price"><b style="text-decoration: line-through; font-weight:400">${{ x.type.price|floatformat:"0" }}</b> <b class="sale">&nbsp${{ x.type.sale_price|floatformat:"0" }}</b> - {{ x.type.sale_description }}</p>
+                    {% else %}
+                    <p class="ticket-price">${{ x.type.price|floatformat:"0" }} {% if x.type.price_description is not none %}- {{ x.type.price_description }}{% endif %}</p>
+                    {% endif %}
+                    <p class="ticket-description">{{ x.type.description|safe }}</p>
+                </div>
+                <div class="col s12 m4 right-align" id="{{ x.type.pk }}-remove-container">
+                    {% if x.cartItem is none %}
+                    <div class="btn add-to-cart grey darken-4" tid="{{ x.type.pk }}" id="{{ x.type.pk }}-add-ad" style="width:fit-content">Add to Cart</div>
+                    {% else %}
+                    <div class="btn cartAdRemove red darken-4" typeId="{{ x.type.pk }}" tid="{{ x.type.pk }}" style="width:fit-content">Remove From Cart</div>
+                    {% endif %}
+                </div>
+              </div>
+              {% endfor %}
           </form>
             <ul class="collapsible popout">
               <li class="active">
@@ -87,7 +107,11 @@
                             <div class="row ticket-row">
                                 <div class="col s12 m9">
                                     <p class="ticket-title">{{ x.type.title }}</p>
-                                    <p class="ticket-price">${{ x.type.price }}</p>
+                                    {% if x.type.on_sale %}
+                                    <p class="ticket-price"><b style="text-decoration: line-through; font-weight:400">${{ x.type.price|floatformat:"0" }}</b> <b class="sale">&nbsp${{ x.type.sale_price|floatformat:"0" }}</b> - {{ x.type.sale_description }}</p>
+                                    {% else %}
+                                    <p class="ticket-price">${{ x.type.price|floatformat:"0" }} {% if x.type.price_description is not none %}- {{ x.type.price_description }}{% endif %}</p>
+                                    {% endif %}
                                     <p class="ticket-description">{{ x.type.description }}</p>
                                 </div>
                                 <div class="col s12 m3">
@@ -148,11 +172,19 @@
                                 <td class="product-summary-quantity  center-align {{ x.pk }}-quantity">1</td>
                             </tr>
                             {% endfor %}
+                            {% for x in ads %}
+                            <tr class="product-row {{ x.pk }}-AdRow">
+                                <td class="product-summary">{{ x.type }}</td>
+                                <td class="product-summary-price {{ x.pk }}-AdPrice">${{ x.type.price }}</td>
+                                <td class="product-summary-quantity center-align {{ x.pk }}-quantity">1</td>
+                                <td id="{{ x.pk }}-AdRemove" ><span class="material-icons cartAdRemove" typeId="{{ x.type.pk }}" tid="{{ x.pk }}">remove_circle</span></td>
+                            </tr>
+                            {% endfor %}
                         </tbody>
                     </table>
                 </div>
                 <div class="valign-wrapper" style="padding-top: 10px;">
-                    <p style="margin-top:0" class="summary-total" id="total-container-1">Total - <div class="total-line">${{ cart.total|intcomma }}</div> <a  style="margin-bottom: 5px" href="" class="btn checkout" id="step1-continue" style="background-color: rgb(29, 154, 29) !important; font-size: 32px !important">Continue</a>
+                    <p style="margin-top:0" class="summary-total" id="total-container-1">Total - <div class="total-line">${{ cart.total|intcomma }}</div> <a style="margin-bottom: 5px" href="" class="btn checkout" id="step1-continue" style="background-color: rgb(29, 154, 29) !important; font-size: 32px !important">Continue</a>
                         <i class="secure"><i class="fas fa-lock"></i> Secure </i></p>
                 </div>
             </div>
@@ -211,10 +243,25 @@
                       </tr>
                       {% endif %}
                       {% endfor %}
+                      {% for x in donations %}
+                      <tr class="product-row {{ x.pk }}-row">
+                          <td class="product-summary">Custom Donation</td>
+                          <td class="product-summary-price {{ x.pk }}-price">${{ x.amount|intcomma }}</td>
+                          <td class="product-summary-quantity  center-align {{ x.pk }}-quantity">1</td>
+                      </tr>
+                      {% endfor %}
+                      {% for x in ads %}
+                      <tr class="product-row {{ x.pk }}-AdRow">
+                          <td class="product-summary">{{ x.type }}</td>
+                          <td class="product-summary-price {{ x.pk }}-AdPrice">${{ x.type.price }}</td>
+                          <td class="product-summary-quantity center-align {{ x.pk }}-quantity">1</td>
+                          <td id="{{ x.pk }}-AdRemove" ><span class="material-icons cartAdRemove" typeId="{{ x.type.pk }}" tid="{{ x.pk }}">remove_circle</span></td>
+                      </tr>
+                      {% endfor %}
                   </tbody>
               </table>
               <div class="valign-wrapper" style="padding-top: 10px;">
-                <p style="margin-top:0" class="summary-total" id="total-container-1">Total - <div class="total-line">${{ cart.total|intcomma }}</div> <a  style="margin-bottom: 5px" href="" class="btn checkout" id="step-2-billing" style="background-color: rgb(29, 154, 29) !important; font-size: 32px !important">Checkout</a>
+                <p style="margin-top:0" class="summary-total" id="total-container-1">Total - <div class="total-line">${{ cart.total|intcomma }}</div> <a  style="margin-bottom: 5px" href="" class="btn checkout" id="step-2-billing" style="background-color: rgb(29, 154, 29) !important; font-size: 32px !important">Continue</a>
                     <i class="secure"><i class="fas fa-lock"></i> Secure </i></p>
             </div>
             </div>
@@ -321,6 +368,21 @@
                       </tr>
                       {% endif %}
                       {% endfor %}
+                      {% for x in donations %}
+                      <tr class="product-row {{ x.pk }}-row">
+                          <td class="product-summary">Custom Donation</td>
+                          <td class="product-summary-price {{ x.pk }}-price">${{ x.amount|intcomma }}</td>
+                          <td class="product-summary-quantity  center-align {{ x.pk }}-quantity">1</td>
+                      </tr>
+                      {% endfor %}
+                      {% for x in ads %}
+                      <tr class="product-row {{ x.pk }}-AdRow">
+                          <td class="product-summary">{{ x.type }}</td>
+                          <td class="product-summary-price {{ x.pk }}-AdPrice">${{ x.type.price }}</td>
+                          <td class="product-summary-quantity center-align {{ x.pk }}-quantity">1</td>
+                          <td id="{{ x.pk }}-AdRemove" ><span class="material-icons cartAdRemove" typeId="{{ x.type.pk }}" tid="{{ x.pk }}">remove_circle</span></td>
+                      </tr>
+                      {% endfor %}
                   </tbody>
               </table>
                 
@@ -336,12 +398,20 @@
 </div>
 
 <style>
-    .cartRemove {
+    span.cartRemove {
         color: red;
         transition: all 0.2s ease-in-out;
         cursor: pointer
     }
-    .cartRemove:hover {
+    span.cartRemove:hover {
+        transform: rotate(180deg)
+    }
+    span.cartAdRemove {
+        color: red;
+        transition: all 0.2s ease-in-out;
+        cursor: pointer
+    }
+    span.cartAdRemove:hover {
         transform: rotate(180deg)
     }
   #donation-add {
@@ -455,6 +525,7 @@
         font-size: 22px
     }
     .ticket-price {
+        
         font-family: oskar;
         color: rgb(0, 0, 0);
         font-size: 18px;
@@ -475,7 +546,7 @@
         font-size: 12px
     }
     #page {
-        background: url('{% static "img/vbp_collage.png" %}');
+        background: url('{% static "img/VBP collage.svg" %}');
     }
     #overlay {
         background: rgba(255, 255, 255, 0.959);
@@ -584,7 +655,34 @@
           })
   })
     $('#custom-donation-1').maskMoney({prefix:'$ '})
-    
+    $(document).on('click', '.add-to-cart', function(){
+      var container = $(this).closest()
+      var adType = $(this).attr('tid')
+      var data = {
+        'type': 'add',
+        'adType': adType,
+        'event': $('#event-title').attr('eventTitle'),
+        csrfmiddlewaretoken: '{{ csrf_token }}'
+      }
+      
+                
+      $.ajax({
+            data: data,
+            url: '/events/ticket-ad-update-cart/',
+            method: 'POST',
+            success: function(data){
+                var price = data.price
+                var quantity = data.quantity
+                $('.summary-table-body').append('<tr class="product-row '+ data.pk +'-AdRow"><td class="product-summary">'+ data.ad +'</td><td class="product-summary-price '+ data.pk + '-Adprice">'+ data.price +'</td><td class="product-summary-quantity center-align '+ data.pk +'-quantity">'+ data.quantity +'</td><td id="'+ data.pk +'-removeAd" ><span class="material-icons cartAdRemove" typeId="'+ data.typeId +'" tid="'+ data.pk +'">remove_circle</span></td></tr>')
+                $(data.removeContainer).html('<div class="btn cartAdRemove red darken-4" typeId="'+ data.typeId +'" tid="'+ data.pk +'" style="width:fit-content">Remove From Cart</div>')
+                var total = data.total
+                $('.total-line').html(total)
+                $('#guest-form').load()
+                },
+                error: function(data){
+                }
+            })
+    })
     $('.qty-counter').on('change', function(){
         var qty = $(this).val()
         var tid = $(this).attr('tid')
@@ -692,6 +790,32 @@
                 $(data.select).formSelect();
                 var total = data.total;
                 $('.total-line').html(total)
+                $('#guest-form').load()
+                },
+                error: function(data){
+                }
+        })
+    })
+    $(document).on('click', '.cartAdRemove', function(){
+      var qty = '0'
+        var tid = $(this).attr('tid')
+        var typeId = $(this).attr('typeId')
+        var data = {
+            'type': 'remove',
+            'tid': tid,
+            'typeId': typeId,
+            'event': $('#event-title').attr('eventTitle'),
+            csrfmiddlewaretoken: '{{ csrf_token }}'
+        }
+        $.ajax({
+            data: data,
+            url: '/events/ticket-ad-update-cart/',
+            method: 'POST',
+            success: function(data){
+                $(data.row).remove();
+                var total = data.total;
+                $('.total-line').html(total)
+                $(data.removeContainer).html('<div class="btn add-to-cart grey darken-4" tid="'+ data.typeId +'" id="'+ data.typeId +'-add-ad" style="width:fit-content">Add to Cart</div>')
                 $('#guest-form').load()
                 },
                 error: function(data){
