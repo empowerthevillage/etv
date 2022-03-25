@@ -8,11 +8,11 @@
 {% block content %}
 <div id="page">
   <div class="row center-align" style="margin-top:0px">
-    <div class="col s12 m8 l8 offset-m2 login-card" style="background-color:#fdfdfde5;padding-top:30px; padding-bottom:40px">
+    <div class="col s12 l8 offset-l4 login-card z-depth-2" style="background-color:#fdfdfdee;padding-top:30px; padding-bottom:40px">
         <h6 id="login-title">Join The Village</h6>
         <p id="new-to-village">Already a member? <a href="{% url 'login' %}" >Click here to login!</p></a>
         
-      <form class="form center" method='POST' style="width: 80%; margin-left:10%">
+      <form class="form col s10 m8 xl6 offset-s1 offset-m2 offset-xl3" method='POST'>
         {% csrf_token %}
         <div class="input-field">
           {{ form.username }}
@@ -64,8 +64,8 @@
     display: none;
   }
   #page {
-    background-image: url("https://empowerthevillage.s3.amazonaws.com/static/img/login-collage.png");
-    background-size: 100%;
+    background-image: url("https://empowerthevillage.s3.amazonaws.com/static/img/login-collage.svg");
+    background-size: 50%;
     background-repeat: repeat;
   }
   .textfield {
