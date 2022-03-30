@@ -28,6 +28,7 @@ class Event(models.Model):
     content         = HTMLField(null=True, blank=True)
     slug            = models.SlugField()
     checkout_image  = models.ImageField(blank=True, null=True)
+    checkout_img_link = models.CharField(max_length=270, null=True, blank=True)
     date            = models.DateTimeField(blank=True, null=True)
     start_date      = models.DateField(blank=True, null=True)
     end_date        = models.DateField(blank=True, null=True)
