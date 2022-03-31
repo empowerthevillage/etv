@@ -31,7 +31,6 @@ from accounts.models import GuestEmail
 from accounts.signals import user_logged_in
 
 import datetime
-import plotly.express as px
 import pandas as pd
 from django.shortcuts import render, redirect
 import sweetify
