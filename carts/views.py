@@ -418,6 +418,7 @@ def ticket_nb(request):
         for x in tickets:
             batch_size = x.quantity
             ticket = x.ticket
+            price = ticket.price
             for i in range(batch_size):
                 new_ticket = SingleTicket.objects.create(
                     type=ticket,
@@ -426,7 +427,8 @@ def ticket_nb(request):
                     email=email, 
                     first_name=first_name,
                     last_name=last_name,
-                    guest_list=guest_list)
+                    guest_list=guest_list,
+                    purchase_price=price)
                 ticket_list.append(new_ticket)
         donations = ticketDonation.objects.filter(cart=cart_obj)
         ad_list = []

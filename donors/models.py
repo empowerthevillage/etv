@@ -92,6 +92,7 @@ class Donor(models.Model):
     @property
     def get_level(self):
         total = self.total
+        print(total)
         if total >= 25000:
             level = "Founder's Circle - Platinum"
         elif total >= 15000:
@@ -130,6 +131,11 @@ class Donor(models.Model):
         cards_qs = self.get_cards()
         cards_qs.update(active=False)
         return cards_qs.filter(active=True).count()
+
+def donor_total_post_save_receiver(sender, instance, *args, **kwargs):
+    instance.total = instance.get_total
+
+post_save.connect(donor_total_post_save_receiver, sender=Donor)
 
 class List(models.Model):
     donors      = models.ManyToManyField(Donor)

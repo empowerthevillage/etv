@@ -167,7 +167,8 @@ class SingleTicket(models.Model):
     last_name       = models.CharField(max_length=100, null=True, blank=True)
     created         = models.DateTimeField(auto_now_add=True, null=True, blank=True)
     updated         = models.DateTimeField(auto_now=True, null=True, blank=True)
-
+    purchase_price  = models.DecimalField(max_digits=30, decimal_places=2, null=True, blank=True)
+    
     def __str__(self):
         return self.ticket_id
 
