@@ -1741,11 +1741,11 @@ $('svg').resize(function(event){
   
   {% for vbp_book in covers_qs %}
   #cover-page[value~='US-{{ vbp_book.state }}']{
-      background-image: url('https://empowerthevillage.s3.amazonaws.com/media/{{ vbp_book.state }}-cover.png');
+      background-image: url('https://empowerthevillage.s3.amazonaws.com/media/VBP-covers/{{ vbp_book.state }}-updated.png');
         background-size: 100%
     }
     #cover-page-mobile[value~='US-{{ vbp_book.state }}']{
-      background-image: url('https://empowerthevillage.s3.amazonaws.com/media/{{ vbp_book.state }}-cover.png');
+      background-image: url('https://empowerthevillage.s3.amazonaws.com/media/VBP-covers/{{ vbp_book.state }}-updated.png');
         background-size: 100%
     }
   {% endfor %}
