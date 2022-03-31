@@ -57,6 +57,7 @@ class Donor(models.Model):
     last_name   = models.CharField(max_length=120, null=True, blank=True)
     phone       = PhoneField(blank=True, null=True)
     donor_level = models.CharField(choices=DONATION_LEVEL_CHOICES, max_length=270, null=True, blank=True)
+    total       = models.DecimalField(max_digits=50, decimal_places=2, null=True, blank=True)
     default_mailing_address = models.ForeignKey(Address, on_delete=models.SET_NULL, related_name='default_mailing_address', null=True, blank=True)
     mailing_addresses = models.ManyToManyField(Address, blank=True, related_name='mailing_address')
     cards       = models.ManyToManyField(Card, blank=True)
@@ -67,6 +68,9 @@ class Donor(models.Model):
 
     objects = DonorManager()
 
+    def get_full_name(self):
+        return "%s %s" %(self.first_name, self.last_name)
+
     def __str__(self):
         return str(self.id)
 
@@ -75,6 +79,39 @@ class Donor(models.Model):
 
     def get_payment_method_url(self):
         return reverse('billing-payment-method')
+    
+    @property
+    def get_total(self):
+        donation_list = []
+        for x in self.donations.all():
+            total = 0
+            donation_list.append(x.amount)
+        total = sum(donation_list)
+        return total
+    
+    @property
+    def get_level(self):
+        total = self.total
+        if total >= 25000:
+            level = "Founder's Circle - Platinum"
+        elif total >= 15000:
+            level = "Founder's Circle - Gold"
+        elif total >= 10000:
+            level = "Founder's Circle - Silver"
+        elif total >= 5000:
+            level = "Founder's Circle - Bronze"
+        elif total >= 1000:
+            level = "Village Ambassador"
+        elif total >= 500:
+            level = "Village Leader"
+        elif total >= 100:
+            level = "Village Supporter"
+        elif total >= 50:
+            level = "Village Patron"
+        elif total >= 25:
+            level = "Village Member"
+        
+        return level
 
     @property
     def has_card(self):

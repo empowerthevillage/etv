@@ -64,6 +64,7 @@ parsel==1.6.0
 Pillow==8.4.0
 pipenv==2021.11.23
 platformdirs==2.4.0
+plotly==5.6.0
 priority==1.3.0
 prompt-toolkit==3.0.23
 Protego==0.1.16
@@ -94,6 +95,7 @@ social-auth-core==4.1.0
 soupsieve==2.3.1
 sqlparse==0.4.2
 sweetify==2.2.0
+tenacity==8.0.1
 Twisted==21.7.0
 typing_extensions==4.0.1
 urllib3==1.25.11

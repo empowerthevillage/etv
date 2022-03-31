@@ -88,6 +88,7 @@ INSTALLED_APPS = [
     'carts',
     'content',
     'ckeditor',
+    'dashboard',
     'donations',
     'donors',
     'django_quill',

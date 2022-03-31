@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "6ee4887360ff31a6e3bc2a3fb9cb99a9fdb51d84051bc1e95113a3028ac25b3d"
+            "sha256": "dcd8f5d05686184cdd9c2483284883c1a3431e5652302db4dfa7cd722a1cc825"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -690,11 +690,11 @@
         },
         "pip": {
             "hashes": [
-                "sha256:c146f331f0805c77017c6bb9740cec4a49a0d4582d0c3cc8244b057f83eca359",
-                "sha256:f29d589df8c8ab99c060e68ad294c4a9ed896624f6368c5349d70aa581b333d0"
+                "sha256:b3a9de2c6ef801e9247d1527a4b16f92f2cc141cd1489f3fffaf6a9e96729764",
+                "sha256:c6aca0f2f081363f689f041d90dab2a07a9a07fb840284db2218117a52da800b"
             ],
             "markers": "python_version >= '3.7'",
-            "version": "==22.0.3"
+            "version": "==22.0.4"
         },
         "pipenv": {
             "hashes": [
@@ -711,6 +711,14 @@
             ],
             "index": "pypi",
             "version": "==2.4.0"
+        },
+        "plotly": {
+            "hashes": [
+                "sha256:20277d211ea0e00e2a86d31e9f865a1ab45a7b17576f3bb865992ecbf15db093",
+                "sha256:d86e44ebde38f4753dff982ab9b5e03cf872aab8fdf53a403e999ed378154331"
+            ],
+            "index": "pypi",
+            "version": "==5.6.0"
         },
         "priority": {
             "hashes": [
@@ -945,11 +953,11 @@
         },
         "setuptools": {
             "hashes": [
-                "sha256:2347b2b432c891a863acadca2da9ac101eae6169b1d3dfee2ec605ecd50dbfe5",
-                "sha256:e4f30b9f84e5ab3decf945113119649fec09c1fc3507c6ebffec75646c56e62b"
+                "sha256:8f4813dd6a4d6cc17bde85fb2e635fe19763f96efbb0ddf5575562e5ee0bc47a",
+                "sha256:c3d4e2ab578fbf83775755cd76dae73627915a22832cf4ea5de895978767833b"
             ],
             "markers": "python_version >= '3.7'",
-            "version": "==60.9.3"
+            "version": "==61.2.0"
         },
         "shippo": {
             "hashes": [
@@ -1057,6 +1065,14 @@
             ],
             "index": "pypi",
             "version": "==2.2.0"
+        },
+        "tenacity": {
+            "hashes": [
+                "sha256:43242a20e3e73291a28bcbcacfd6e000b02d3857a9a9fff56b297a27afdc932f",
+                "sha256:f78f4ea81b0fabc06728c11dc2a8c01277bfc5181b321a4770471902e3eb844a"
+            ],
+            "index": "pypi",
+            "version": "==8.0.1"
         },
         "twisted": {
             "hashes": [

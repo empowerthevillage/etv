@@ -146,6 +146,7 @@ urlpatterns = [
     path('black-friday-challenge/', include(("bfchallenge.urls", "bfchallenge"), namespace='bfchallenge')),
     path('billing/', include(("billing.urls", "billing"), namespace='billing')),
     path('cart/', include(("carts.urls", "carts"), namespace='carts')),
+    path('dashboard/', include(("dashboard.urls", "dashboard"), namespace='dashboard')),
     path('donation/', include(("donations.urls", "donations"), namespace='donation')),
     path('economic-prosperity/', economic_prosperity, name='prosperity'),
     path('events/', include(("events.urls", "events"), namespace='events')),

@@ -1,0 +1,181 @@
+{% extends 'base_nofooter.html' %}
+{% load humanize %}
+
+{% block content %}
+{% regroup last_5_tickets by get_full_name as ticket_family %}
+
+<div class="row">
+    <div class="col l3 hide-on-med-and-down admin-side-menu">
+        <div class="side-menu-overlay">
+            <section>
+                <ul>
+                    <li class="list-heading">Accounts</li>
+                    <li>Users</li>
+                    <li>Black Friday Challenge Players</li>
+                </ul>
+            </section>
+        </div>
+    </div>
+    <div class="col s12 l9">
+        <div class="admin-container">
+            <div class="row">
+                <div class="col s12">
+                    <div class="card">
+                        <div class="card-heading">
+                            <p class="card-title">Donations</p>
+                        </div>
+                        <div class="card-body row">
+                            <div class="col s12 l8 xl7">
+                                <div>
+                                    <canvas id="donationChart"></canvas>
+                                </div>
+                            </div>
+                            <div class="col s12 l4 xl5">
+                                <h7>Latest Donations</h7>
+                                <div class="divider"></div>
+                                <ul class="dashboard-list">
+                                    {% for x in last_5_donations %}
+                                    <li>
+                                        <h6><b>${{ x.amount}}</b> from {{ x.get_full_name }}</h6>
+                                        <p>{{ x.updated }}</p>
+                                    </li>
+                                    {% endfor %}
+                                </ul>
+                                <a class="view-more valign-wrapper" href="">View All <span class="material-icons">open_in_new</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-group">
+                    <div class="col s12 m7">
+                        <div class="card">
+                            <div class="card-heading">
+                                <p class="card-title">Orders</p>
+                            </div>
+                            <div class="card-body">
+                                <h7 class="valign-wrapper" style="justify-content: center">Tickets</h7>
+                                <div class="divider"></div>
+                                <ul class="dashboard-list">
+                                    {% for x in ticket_family %}
+                                    <li>
+                                        <h6><b>{{ x.grouper }}</b> - {{ x.list|length }} {% if x.list|length == 1 %}Ticket{% else %}Tickets{% endif %}</h6>
+                                        {% regroup x.list by event as event_list %}
+                                        {% for event in event_list %}
+                                        <h7>{{ event.grouper }}</h7>
+                                        <ul class="dashboard-list">
+                                            {% for ticket in event.list %}
+                                            <div class="ticket-section">
+                                                <li><b>Ticket ID:</b> {{ ticket }}</li>
+                                                <p>{{ ticket.type }}</p>
+                                            </div>
+                                            {% endfor %}
+                                        </ul>
+                                        {% endfor %}
+                                    </li>
+                                    {% endfor %}
+                                </ul>
+                                <div class="divider"></div>
+                                <a class="view-more valign-wrapper" href="" style="justify-content: center">View All <span class="material-icons">open_in_new</span></a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 m5">
+                        <div class="card">
+                            <div class="card-heading">
+                                <p class="card-title">Donors</p>
+                            </div>
+                            <div class="card-body">
+                                <h7 class="valign-wrapper" style="justify-content: center"><span class="material-icons" style="color: gold">emoji_events</span>&nbsp; Top Donors</h7>
+                                <div class="divider"></div>
+                                <ul class="dashboard-list center-align">
+                                {% for x in top_donors %}
+                                    <h6>{{ x.get_full_name }}</h6>
+                                    <h7 style="color: rgb(25, 171, 25); font-size: 16px">${{ x.total|intcomma }}</h7>
+                                    <li>{{ x.get_level }}</li>
+                                {% endfor %}
+                                </ul>
+                                <div class="divider"></div>
+                                <a class="view-more valign-wrapper" href="" style="justify-content: center">View All <span class="material-icons">open_in_new</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12 m4">
+                    <div class="card">
+                        <div class="card-heading">
+                            <p class="card-title">VBP</p>
+                        </div>
+                        <div class="card-body">
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m4">
+                    <div class="card">
+                        <div class="card-heading">
+                            <p class="card-title">VEN</p>
+                        </div>
+                        <div class="card-body">
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m4">
+                    <div class="card">
+                        <div class="card-heading">
+                            <p class="card-title">Merchandise</p>
+                        </div>
+                        <div class="card-body">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    
+    const labels = {{ dates|safe }};
+    const data = {
+      labels: labels,
+      datasets: [{
+        label: 'Donations',
+        backgroundColor: 'rgb(15, 184, 17)',
+        borderColor: 'rgb(15, 184, 17)',
+        data: {{ donation_data|safe }},
+      },{
+        label: 'Tickets',
+        backgroundColor: 'rgb(0, 0, 0)',
+        borderColor: 'rgb(0, 0, 0)',
+        data: {{ ticket_data|safe }}
+      }]
+    };
+    const donationChart = new Chart(
+        document.getElementById('donationChart'), {
+            type: 'line',
+            data: data,
+            options: {
+                scales: {
+                    x: {
+                        type: 'time',
+                        time: {
+                            unit: 'day',
+                            unitStepSize: 1,
+                            displayFormats: {
+                                'day': 'MMM DD'
+                            }
+                        },
+                        min: "{{ min|safe }}",
+                        max: "{{ now|safe }}",
+                    }
+                },
+            }
+        }
+    );
+  </script>
+   
+{% endblock %}

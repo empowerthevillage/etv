@@ -28,6 +28,7 @@ class Event(models.Model):
     content         = HTMLField(null=True, blank=True)
     slug            = models.SlugField()
     checkout_image  = models.ImageField(blank=True, null=True)
+    checkout_img_link = models.CharField(max_length=270, null=True, blank=True)
     date            = models.DateTimeField(blank=True, null=True)
     start_date      = models.DateField(blank=True, null=True)
     end_date        = models.DateField(blank=True, null=True)
@@ -164,7 +165,9 @@ class SingleTicket(models.Model):
     guest_list      = models.TextField(null=True, blank=True)
     first_name      = models.CharField(max_length=100, null=True, blank=True)
     last_name       = models.CharField(max_length=100, null=True, blank=True)
-    
+    created         = models.DateTimeField(auto_now_add=True, null=True, blank=True)
+    updated         = models.DateTimeField(auto_now=True, null=True, blank=True)
+
     def __str__(self):
         return self.ticket_id
 
@@ -177,13 +180,15 @@ class SingleTicket(models.Model):
 
     def get_qr_code_path(self):
             return 'https://d1z669787inm16.cloudfront.net/media/%s' %(self.qr_code)
-            
+
+    def get_full_name(self):
+        return "%s %s" %(self.first_name, self.last_name) 
+        
 def ticket_pre_save_receiver(sender, instance, *args, **kwargs):
     if not instance.ticket_id:
         instance.ticket_id = unique_ticket_id_generator(instance)
     if not instance.qr_code:
         url = "https://www.empowerthevillage.org/events/ticket/%s" %(instance.ticket_id)
-        print(url)
         code = qrcode.make(str(url))
         canvas = Image.new("RGB", (415,415), "white")
         draw = ImageDraw.Draw(canvas)
