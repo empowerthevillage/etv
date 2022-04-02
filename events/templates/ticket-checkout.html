@@ -743,8 +743,22 @@
     })
     $('#step-2-billing').on('click', function(event){
         event.preventDefault()
-        $('#ticket-checkout-p2').hide()
-        $('#ticket-checkout-p3').show()
+        if ($('#ticketholder_first_name').val()==''){
+          $('#ticketholder_first_name').focus()
+          $('#ticketholder_first_name').parent('.input-field').append('<p class="required-message">This field is required</p>')
+        }
+        else if ($('#ticketholder_last_name').val()==''){
+          $('#ticketholder_last_name').focus()
+          $('#ticketholder_last_name').parent('.input-field').append('<p class="required-message">This field is required</p>')
+        }
+        else if ($('#ticketholder_email').val()==''){
+          $('#ticketholder_email').focus()
+          $('#ticketholder_email').parent('.input-field').append('<p class="required-message">This field is required</p>')
+        }
+        else{
+          $('#ticket-checkout-p2').hide()
+          $('#ticket-checkout-p3').show()
+        }
     })
     $('#step3-back').on('click', function(event){
         event.preventDefault()

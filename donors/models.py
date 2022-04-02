@@ -7,6 +7,7 @@ from etv.utils import unique_subscription_id_generator
 from accounts.models import GuestEmail
 from addresses.models import Address
 from donations.models import donation, donation_event
+from events.models import CompleteDonation
 from billing.models import Card, BillingProfile
 from phone_field import PhoneField
 
@@ -62,6 +63,7 @@ class Donor(models.Model):
     mailing_addresses = models.ManyToManyField(Address, blank=True, related_name='mailing_address')
     cards       = models.ManyToManyField(Card, blank=True)
     donations   = models.ManyToManyField(donation, blank=True)
+    event_donations = models.ManyToManyField(CompleteDonation, blank=True)
     category    = models.CharField(max_length=270, null=True, blank=True)
     company     = models.CharField(max_length=270, null=True, blank=True)
     events      = models.ManyToManyField(donation_event, blank=True)

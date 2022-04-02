@@ -239,3 +239,18 @@ def ad_pre_save_receiver(sender, instance, *args, **kwargs):
         instance.ad_id = unique_ad_id_generator(instance)
 
 pre_save.connect(ad_pre_save_receiver, sender=Ad)
+
+class CompleteDonation(models.Model):
+    billing_profile = models.ForeignKey(BillingProfile, on_delete=models.SET_NULL, null=True, blank=True)
+    event           = models.ForeignKey(Event, null=True, blank=True, on_delete=models.SET_NULL)
+    email           = models.EmailField(blank=True, null=True)
+    first_name      = models.CharField(max_length=100, null=True, blank=True)
+    last_name       = models.CharField(max_length=100, null=True, blank=True)
+    amount          = models.DecimalField(max_digits=12, decimal_places=2, default=0.00)
+    braintree_id    = models.CharField(max_length=270, blank=True)
+    created         = models.DateTimeField(auto_now=True, blank=True, null=True)
+    updated         = models.DateTimeField(auto_now_add=True, blank=True, null=True)
+
+    class Meta:
+        verbose_name = 'Donation'
+        verbose_name_plural = 'Donations'

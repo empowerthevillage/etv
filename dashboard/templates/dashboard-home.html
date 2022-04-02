@@ -3,7 +3,9 @@
 
 {% block content %}
 {% regroup last_5_tickets by get_full_name as ticket_family %}
-
+{% for ticket in last_5_tickets %}
+{{ ticket.pk }}
+{% endfor %}
 <div class="row">
     <div class="col l3 hide-on-med-and-down admin-side-menu">
         <div class="side-menu-overlay">
@@ -36,7 +38,7 @@
                                 <ul class="dashboard-list">
                                     {% for x in last_5_donations %}
                                     <li>
-                                        <h6><b>${{ x.amount}}</b> from {{ x.get_full_name }}</h6>
+                                        <h6><b>${{ x.amount|intcomma }}</b> from {{ x.get_full_name }}</h6>
                                         <p>{{ x.updated }}</p>
                                     </li>
                                     {% endfor %}
@@ -171,6 +173,9 @@
                         },
                         min: "{{ min|safe }}",
                         max: "{{ now|safe }}",
+                    },
+                    y: {
+                        suggestedMax: 3000,
                     }
                 },
             }

@@ -13,6 +13,8 @@ from accounts.models import GuestEmail
 from addresses.forms import AddressForm, ShippingAddressForm, BillingAddressForm
 from addresses.models import Address
 from events.models import SingleTicket
+from events.models import CompleteDonation
+from donors.models import Donor
 from itertools import islice
 import braintree
 import shippo
@@ -431,6 +433,20 @@ def ticket_nb(request):
                     purchase_price=price)
                 ticket_list.append(new_ticket)
         donations = ticketDonation.objects.filter(cart=cart_obj)
+        for x in donations:
+            donor_obj, created = Donor.objects.new_or_get(request)
+            donation_obj = CompleteDonation()
+            donation_obj.email = email
+            donation_obj.event = event
+            donation_obj.billing_profile = billing_profile
+            donation_obj.first_name = first_name
+            donation_obj.last_name = last_name
+            donation_obj.amount = amount
+            donation_obj.save()
+            donor_obj.event_donations.add(donation_obj)
+            donor_obj.first_name = first_name
+            donor_obj.last_name = last_name
+            donor_obj.save()
         ad_list = []
         ads = ticketAd.objects.filter(cart=cart_obj)
         for x in ads:
@@ -461,7 +477,8 @@ def ticket_nb(request):
             'New %s Ticket Purchase' %(event),
             str('A ticket purchase has been successfully processed! Purchaser: '+ str(email)),
             'etvnotifications@gmail.com',
-            ['chandler@eliftcreations.com', 'admin@empowerthevillage.org', 'ayo@empowerthevillage.org'],
+            #['chandler@eliftcreations.com', 'admin@empowerthevillage.org', 'ayo@empowerthevillage.org'],
+            ['chandler@eliftcreations.com'],
             fail_silently=True
         )
     return redirect('events:home')
