@@ -477,8 +477,8 @@ def ticket_nb(request):
             'New %s Ticket Purchase' %(event),
             str('A ticket purchase has been successfully processed! Purchaser: '+ str(email)),
             'etvnotifications@gmail.com',
-            #['chandler@eliftcreations.com', 'admin@empowerthevillage.org', 'ayo@empowerthevillage.org'],
-            ['chandler@eliftcreations.com'],
+            ['chandler@eliftcreations.com', 'admin@empowerthevillage.org', 'ayo@empowerthevillage.org'],
+            #['chandler@eliftcreations.com'],
             fail_silently=True
         )
     return redirect('events:home')
