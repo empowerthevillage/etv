@@ -137,7 +137,7 @@
       "owner_name": "",
       "city": "Miami",
       "phone": "(786) 363-2917",
-      "owner_email": "mailto:contactus@hauteliving.com",
+      "owner_email": "contactus@hauteliving.com",
       "category": "books",
       "subcategory": ""
     }
@@ -228,7 +228,7 @@
       "owner_name": "",
       "city": "Sarasota",
       "phone": "(941) 205-7505",
-      "owner_email": "mailto:covers@arcanecovers.com",
+      "owner_email": "covers@arcanecovers.com",
       "category": "books",
       "subcategory": ""
     }
@@ -241,7 +241,7 @@
       "owner_name": "",
       "city": "Tallahassee",
       "phone": "(850) 893-9624",
-      "owner_email": "mailto:Info@talwoman.com",
+      "owner_email": "Info@talwoman.com",
       "category": "books",
       "subcategory": ""
     }
@@ -775,7 +775,7 @@
       "city": "Jacksonville",
       "phone": "",
       "owner_email": "",
-      "category": "Children's Services & Products",
+      "category": "child",
       "subcategory": ""
     }
 },
@@ -788,7 +788,7 @@
       "city": "Lakeland",
       "phone": "(863) 450-2995",
       "owner_email": "",
-      "category": "Children's Services & Products",
+      "category": "child",
       "subcategory": ""
     }
 },
@@ -801,7 +801,7 @@
       "city": "Lauderdale Lakes",
       "phone": "(954) 696-1748",
       "owner_email": "",
-      "category": "Children's Services & Products",
+      "category": "child",
       "subcategory": ""
     }
 },
@@ -814,7 +814,7 @@
       "city": "Miami",
       "phone": "",
       "owner_email": "",
-      "category": "Children's Services & Products",
+      "category": "child",
       "subcategory": ""
     }
 },
@@ -2386,7 +2386,7 @@
       "owner_name": "",
       "city": "Miami",
       "phone": "(844) 867-9017",
-      "owner_email": "mailto:support@aoitechsolutions.net",
+      "owner_email": "support@aoitechsolutions.net",
       "category": "electronics",
       "subcategory": ""
     }
@@ -2425,7 +2425,7 @@
       "owner_name": "",
       "city": "Miami",
       "phone": "(786) 633-2559",
-      "owner_email": "mailto:seoservicesplanet@gmail.com",
+      "owner_email": "seoservicesplanet@gmail.com",
       "category": "electronics",
       "subcategory": ""
     }
@@ -2451,7 +2451,7 @@
       "owner_name": "",
       "city": "Naples",
       "phone": "(239) 593-7330",
-      "owner_email": "mailto:info.senapleselectronics.com@gmail.com",
+      "owner_email": "info.senapleselectronics.com@gmail.com",
       "category": "electronics",
       "subcategory": ""
     }
@@ -2503,7 +2503,7 @@
       "owner_name": "",
       "city": "Palm Harbor",
       "phone": "(916) 768-3256",
-      "owner_email": "mailto:servicerequest@technificentConsulting.com",
+      "owner_email": "servicerequest@technificentConsulting.com",
       "category": "electronics",
       "subcategory": ""
     }
@@ -3153,7 +3153,7 @@
       "owner_name": "",
       "city": "Tallahassee",
       "phone": "(850) 888-3655",
-      "owner_email": "mailto:rob@electrolawn.co",
+      "owner_email": "rob@electrolawn.co",
       "category": "home",
       "subcategory": ""
     }
@@ -3166,7 +3166,7 @@
       "owner_name": "",
       "city": "Tallahassee",
       "phone": "(850) 405-2924",
-      "owner_email": "mailto:cutecandles2019@gmail.com",
+      "owner_email": "cutecandles2019@gmail.com",
       "category": "home",
       "subcategory": ""
     }
@@ -3309,7 +3309,7 @@
       "owner_name": "",
       "city": "Naples",
       "phone": "",
-      "owner_email": "mailto:Hello@theluxurytimepiece.com",
+      "owner_email": "Hello@theluxurytimepiece.com",
       "category": "jewelry",
       "subcategory": ""
     }
@@ -3400,7 +3400,7 @@
       "owner_name": "",
       "city": "Deerfield Beach",
       "phone": "(866) 793-2301",
-      "owner_email": "mailto:vivna0@outlook.com",
+      "owner_email": "vivna0@outlook.com",
       "category": "legal",
       "subcategory": ""
     }
@@ -3439,7 +3439,7 @@
       "owner_name": "",
       "city": "Fort Lauderdale",
       "phone": "954-947-6867",
-      "owner_email": "mailto:Mike@gelinbenefitsgroup.com",
+      "owner_email": "Mike@gelinbenefitsgroup.com",
       "category": "legal",
       "subcategory": ""
     }
@@ -3608,7 +3608,7 @@
       "owner_name": "",
       "city": "Miami",
       "phone": "(305) 371-7640",
-      "owner_email": "mailto:info@dadvocacy.com",
+      "owner_email": "info@dadvocacy.com",
       "category": "legal",
       "subcategory": ""
     }
@@ -3816,7 +3816,7 @@
       "owner_name": "",
       "city": "Orlando",
       "phone": "(407) 476-5479",
-      "owner_email": "mailto:info@ledger2ledger.com",
+      "owner_email": "info@ledger2ledger.com",
       "category": "legal",
       "subcategory": ""
     }
@@ -3829,7 +3829,7 @@
       "owner_name": "",
       "city": "Orlando",
       "phone": "(407) 901-1726",
-      "owner_email": "mailto:thecreditxpertsorlando@gmail.com",
+      "owner_email": "thecreditxpertsorlando@gmail.com",
       "category": "legal",
       "subcategory": ""
     }
@@ -3855,7 +3855,7 @@
       "owner_name": "",
       "city": "Palm Beach Gardens",
       "phone": "(561) 512-8850",
-      "owner_email": "mailto:jeffrey.begens@gmail.com",
+      "owner_email": "jeffrey.begens@gmail.com",
       "category": "legal",
       "subcategory": ""
     }
@@ -3985,7 +3985,7 @@
       "owner_name": "",
       "city": "Tallahassee",
       "phone": "(850) 513-3304",
-      "owner_email": "mailto:apryl.lynn@nm.com",
+      "owner_email": "apryl.lynn@nm.com",
       "category": "legal",
       "subcategory": ""
     }
@@ -4219,7 +4219,7 @@
       "owner_name": "",
       "city": "Jacksonville",
       "phone": "(844) 934-0590",
-      "owner_email": "mailto:popoff.marketing.seo@gmail.com",
+      "owner_email": "popoff.marketing.seo@gmail.com",
       "category": "marketing",
       "subcategory": ""
     }
@@ -4271,7 +4271,7 @@
       "owner_name": "",
       "city": "Tallahassee",
       "phone": "(850) 692-8851",
-      "owner_email": "mailto:info@bezgraphix.com",
+      "owner_email": "info@bezgraphix.com",
       "category": "marketing",
       "subcategory": ""
     }
@@ -4375,7 +4375,7 @@
       "owner_name": "",
       "city": "Tampa",
       "phone": "(813) 282-7073",
-      "owner_email": "mailto:encorebrandz1@gmail.com",
+      "owner_email": "encorebrandz1@gmail.com",
       "category": "Other",
       "subcategory": ""
     }
@@ -4388,7 +4388,7 @@
       "owner_name": "",
       "city": "Doral",
       "phone": "(305) 805-6797",
-      "owner_email": "mailto:acbuscom@outlook.com",
+      "owner_email": "acbuscom@outlook.com",
       "category": "packaging",
       "subcategory": ""
     }
@@ -4479,7 +4479,7 @@
       "owner_name": "",
       "city": "Miami",
       "phone": "(772) 932-9478",
-      "owner_email": "mailto:hello@22portraits.com",
+      "owner_email": "hello@22portraits.com",
       "category": "photography",
       "subcategory": ""
     }
@@ -4492,7 +4492,7 @@
       "owner_name": "",
       "city": "Orlando",
       "phone": "(561) 463-0380",
-      "owner_email": "mailto:ALEX@AQUASIMAGES.COM",
+      "owner_email": "ALEX@AQUASIMAGES.COM",
       "category": "photography",
       "subcategory": ""
     }
@@ -4674,7 +4674,7 @@
       "owner_name": "",
       "city": "Miami",
       "phone": "(850) 322-1649",
-      "owner_email": "mailto:Info@SoldBySRG.com",
+      "owner_email": "Info@SoldBySRG.com",
       "category": "realestate",
       "subcategory": ""
     }
