@@ -131,7 +131,6 @@
           </div>
           <div class="dropdown-container">
             <ul id="top-dropdown-sp" class="dropdown-content dd-base">
-              <li><a class="center-align valign-wrapper {% if request.path == efbf_url %}active{% endif %}" href="{{ pillars_url }}">Strategic Pillars</a></li>
                 <li><a class="center-align valign-wrapper {% if request.path == efbf_url %}active{% endif %}" href="{{ efbf_url }}">MAKE EVERY FRIDAY, BLACK FRIDAY!®</a></li>
                 <li><a class="center-align valign-wrapper {% if request.path == vbp_url %}active{% endif %}" href="{{ vbp_url }}" style="padding-left:10px">Village Black Pages®</a></li>
                 <li><a class="center-align valign-wrapper {% if request.path == voting_url %}active{% endif %}" data-target="nav-dropdown-pp" href="{{ ven_url }}">VILLAGE EMPOWERMENT NETWORK™</a></li>
@@ -145,6 +144,7 @@
         </nav>
         <div class="dropdown-container">
           <ul id="top-dropdown-pillars" class="dropdown-content dd-base collapsible">
+            <li><a class="center-align valign-wrapper {% if request.path == efbf_url %}active{% endif %}" href="{{ pillars_url }}">Overview</a></li>
               <li>
                 <a class="center-align valign-wrapper collapsible-header">Economic Prosperity & Employment</a>
                 <div class="collapsible-body">
