@@ -1,9 +1,9 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %}ETV | Village Black Pages™{% endblock %}
+{% block title %}ETV | Village Black Pages®{% endblock %}
 {% block canonical %}https://www.empowerthevillage.org/village-black-pages/{% endblock %}
-{% block seo_description %}Village Black Pages™ (VBP) is the critical resource Americans can rely on to locate Black-owned businesses to support when responding to our charge to Make Every Friday, Black Friday™!{% endblock %}
+{% block seo_description %}Village Black Pages® (VBP) is the critical resource Americans can rely on to locate Black-owned businesses to support when responding to our charge to Make Every Friday, Black Friday®!{% endblock %}
 
 
 {% block content %}
@@ -33,7 +33,7 @@
                         </div>
                         <div class="vbp-text col s12 m8 l9" style="padding: 2% 0; padding-bottom: 0">
         
-                            <p><b>Village Black Pages™</b> (VBP) is the critical resource Americans can rely on to locate Black-owned businesses to support when responding to our charge to <b>Make Every Friday, Black Friday™!</b> All Black-owned businesses are listed for <b style="color: rgb(15, 155, 15)">FREE</b> in the Village Black Pages™!
+                            <p><b>Village Black Pages®</b> (VBP) is the critical resource Americans can rely on to locate Black-owned businesses to support when responding to our charge to <b>Make Every Friday, Black Friday®!</b> All Black-owned businesses are listed for <b style="color: rgb(15, 155, 15)">FREE</b> in the Village Black Pages®!
                             <p>Our goal is to elevate the overall prosperity of the Black community by building wealth and creating jobs. </p>
                             <a href="{{ nomination_url }}" class="btn btn-nominate waves-effect">NOMINATE YOUR FAVORITE BLACK-OWNED BUSINESS TODAY!</a>
                         </div>
@@ -122,9 +122,11 @@
                         }
                         .swal-nominate {
                             font-size: 18px;
-                            margin:0;
-                            padding: 10px 5px;
-                            height: auto
+                            margin: 0;
+                            padding: 10px;
+                            height: auto;
+                            width: 100%;
+                            line-height: 28px;
                         }
                         .swal2-popup .select-wrapper {
                             display: none;
@@ -313,7 +315,7 @@
     </div>
     <div id="vbp-resources" class="col s12">
         <div class="vbp-text container-fluid" style="padding: 30px 5% 10px 5%">
-            <p><b>ETV's Village Black Pages™ </b>(VBP) is a critical resource Americans can rely on to locate Black-owned businesses to support when responding to our charge to Make Every Friday, Black Friday™! Our goal is to elevate the overall prosperity of the Black community by promoting commerce, increasing revenue and wealth, and creating jobs.</p>
+            <p><b>ETV's Village Black Pages® </b>(VBP) is a critical resource Americans can rely on to locate Black-owned businesses to support when responding to our charge to Make Every Friday, Black Friday®! Our goal is to elevate the overall prosperity of the Black community by promoting commerce, increasing revenue and wealth, and creating jobs.</p>
             <p><b>ETV is already promoting <b style="color:#13b852">~20,000 businesses across 20 different states for free</b> and the Village Black Pages has garnered 1000s of searches in less than 6 months since its launch in 2020!</b></p>
         </div>
         <ul>
@@ -325,7 +327,7 @@
                     <div class="carousel-item c2" id="carousel{{ vbp_book.state }}-2" name="US-{{ vbp_book.state }}" style="background-image:url({{ vbp_book.cover.url }}); background-size: 100%; cursor: pointer;"></div>
                 {% endfor %}
             </div>
-                <div class="divider" style="width:70%; margin-left:15%"></div>
+                
         <div class="row" id="cover-grid">
             <div class="vbp-text" style="padding: 10px 15%">
                 <p class="center-align map-helper-text" style="font-weight:500; color:#bf1e2d">Select a cover to explore the Village Black Pages!</p>
@@ -426,8 +428,8 @@
   content: '';
 	position: absolute;
 	z-index: -1;
-	-webkit-transition: all 0.3s;
-	-moz-transition: all 0.3s;
+, -webkit-transition: all 0.3s;
+, -moz-transition: all 0.3s;
 	transition: all 0.3s;
 }
  
@@ -534,11 +536,9 @@
                 }
             },
         markers: [
-            {latLng: [36.9450, -119.424], name: 'CA'},
-            {latLng: [31.2686, -99.9518], name: 'TX'},
-            {latLng: [28.0050, -81.4158], name: 'FL'},
-            {latLng: [32.8000, -83.2001], name: 'GA'},
-            {latLng: [35.7596, -80.0001], name: 'NC'},
+           {% for x in markers %}
+            {latLng: [{{ x.latitude}}, {{ x.longitude }}], name: "{{ x }}"},
+           {% endfor %}
         ],
         zoomOnScroll: false,
         regionLabelStyle: {
@@ -595,33 +595,10 @@
                 },
                 attribute: 'fill',
                 values: {
-                    'US-TX': 'soon',
-                    'US-FL': 'soon',
-                    'US-NY': 'published',
-                    'US-GA': 'soon',
-                    'US-CA': 'soon',
-                    'US-NC': 'soon',
-                    'US-IL': 'published',
-                    'US-MD': 'published',
-                    'US-VA': 'published',
-                    'US-PA': 'published',
-                    'US-OH': 'published',
-                    'US-LA': 'published',
-                    'US-MI': 'published',
-                    'US-NJ': 'published',
-                    'US-SC': 'published',
-                    'US-AL': 'published',
-                    'US-TN': 'published',
-                    'US-MS': 'published',
-                    'US-MO': 'published',
-                    'US-IN': 'published',
-                    'US-MA': 'published',
-                    'US-AR': 'published',
-                    'US-CT': 'published',
-                    'US-DC': 'published',
-                    'US-DE': 'published',
+                    {% for x,y in mapPubValues.items %}
+                    "{{ x }}":"{{ y }}",
+                    {% endfor %}
                 },
-                
             }],
         },
         onRegionClick: function(event, code) {

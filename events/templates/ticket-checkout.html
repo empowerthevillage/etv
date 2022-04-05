@@ -189,11 +189,15 @@
                 </div>
             </div>
             {% if event.checkout_img_link is not None %}
-<a href="{{ event.checkout_img_link }}"><img class="z-depth-1" src="{{ event.get_checkout_img_path }}" width=100% style="margin-top: 20px"></a>
-{% else %}
-<img class="z-depth-1" src="{{ event.get_checkout_img_path }}" width=100% style="margin-top: 20px">
+            <a href="{{ event.checkout_img_link }}"><img class="z-depth-1" src="{{ event.get_checkout_img_path }}" width=100% style="margin-top: 20px"></a>
+            {% else %}
+            <img class="z-depth-1" src="{{ event.get_checkout_img_path }}" width=100% style="margin-top: 20px">
+            {% endif %}
+            {% if event.checkout_video_html is not None %}
+<div style="margin-top: 20px">
+              {{ event.checkout_video_html|safe }}
+</div>            
 {% endif %}
-
         </div>
     </div>
     <div class="row" id="ticket-checkout-p2" style="display:none">
@@ -270,9 +274,14 @@
             </div>
             </div>
             {% if event.checkout_img_link is not None %}
-<a href="{{ event.checkout_img_link }}"><img class="z-depth-1" src="{{ event.get_checkout_img_path }}" width=100% style="margin-top: 20px"></a>
-{% else %}
-<img class="z-depth-1" src="{{ event.get_checkout_img_path }}" width=100% style="margin-top: 20px">
+            <a href="{{ event.checkout_img_link }}"><img class="z-depth-1" src="{{ event.get_checkout_img_path }}" width=100% style="margin-top: 20px"></a>
+            {% else %}
+            <img class="z-depth-1" src="{{ event.get_checkout_img_path }}" width=100% style="margin-top: 20px">
+            {% endif %}
+            {% if event.checkout_video_html is not None %}
+<div style="margin-top: 20px">
+              {{ event.checkout_video_html|safe }}
+</div>            
 {% endif %}
         </div>
     </div>
@@ -400,9 +409,14 @@
             </div>
             </div>
             {% if event.checkout_img_link is not None %}
-<a href="{{ event.checkout_img_link }}"><img class="z-depth-1" src="{{ event.get_checkout_img_path }}" width=100% style="margin-top: 20px"></a>
-{% else %}
-<img class="z-depth-1" src="{{ event.get_checkout_img_path }}" width=100% style="margin-top: 20px">
+            <a href="{{ event.checkout_img_link }}"><img class="z-depth-1" src="{{ event.get_checkout_img_path }}" width=100% style="margin-top: 20px"></a>
+            {% else %}
+            <img class="z-depth-1" src="{{ event.get_checkout_img_path }}" width=100% style="margin-top: 20px">
+            {% endif %}
+            {% if event.checkout_video_html is not None %}
+<div style="margin-top: 20px">
+              {{ event.checkout_video_html|safe }}
+</div>            
 {% endif %}
         </div>
     </div>

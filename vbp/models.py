@@ -157,6 +157,8 @@ class vbp(models.Model):
 
 class vbp_book(models.Model):
     state           = models.CharField(max_length=50, choices=STATE_CHOICES)
+    latitude        = models.CharField(max_length=200, blank=True, null=True)
+    longitude       = models.CharField(max_length=200, blank=True, null=True)
     cover           = models.ImageField(null=True, blank=True)
     published       = models.BooleanField(default=False)
     featured        = models.BooleanField(default=False)

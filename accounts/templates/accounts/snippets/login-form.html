@@ -15,7 +15,7 @@
           <button type="submit" class='btn login-btn' style="margin-top:24; padding:22px; line-height:0px; margin-bottom:15px">Login</button>
           <div class="center">
             <a class="btn google-btn" href="{% url 'social:begin' 'google-oauth2' %}?next={{ request.path }}" style="margin-bottom:15px;" id="google-btn">
-              <img src="{% static 'img/google-icon.png' %}" height=18px style="margin-bottom:-6px">&nbsp Continue with Google
+              <img src="{% static 'img/etv-google-icon.png' %}" height=18px style="margin-bottom:-6px">&nbsp Continue with Google
             </a>
             <a class="btn facebook-btn" href="{% url 'social:begin' 'facebook' %}?next={{ request.path }}" id="facebook-btn"><i class="fab fa-facebook" style="font-size:18; padding:0"></i>&nbsp Continue with Facebook</a>
             <a href='{% url "password_reset" %}' class='text-center' style="color:grey;"><p style="margin-bottom:80px; margin-top:35px">Forgot Password?</p></a>

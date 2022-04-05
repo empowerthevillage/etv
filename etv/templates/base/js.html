@@ -54,7 +54,7 @@
       $('.collapsible').collapsible();
       $('.parallax').parallax();
       $('select').formSelect();
-      $('.dropdown-trigger').dropdown({hover: true, constrainWidth: false, coverTrigger: false, container:'.dropdown-container'});
+      $('.dropdown-trigger').dropdown({hover: true, constrainWidth: false, coverTrigger: false, container:'.dropdown-container',});
       $('.sidenav').sidenav();
       $('.carousel').carousel({indicators: true, numVisible: 10,});
       $('.tooltipped').tooltip({'margin':'0', 'transitionMovement': '0',});
@@ -66,17 +66,11 @@
       $('.modal)').modal();
       $('.scrollspy').scrollSpy();
       $('.materialboxed').materialbox();
-      
     });
-    
-  </script>
-  <script>
     $(window).resize(function(event) {
       event.preventDefault();
     })
     $('.carousel-item').resize(function(event){
       event.preventDefault();
     })
-    
-    
   </script>

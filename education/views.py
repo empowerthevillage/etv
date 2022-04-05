@@ -7,7 +7,7 @@ import sweetify
 
 def education_home(request):
     context = {
-        'title': 'ETV | Education & Employment',
+        'title': 'ETV | Education',
     }
     return render(request, "education_home.html", context)
 

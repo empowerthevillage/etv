@@ -37,7 +37,7 @@ def strategic_pillars(request):
 
 def economic_prosperity(request):
     context = {
-        'title': 'ETV | Economic Prosperity',
+        'title': 'ETV | Economic Prosperity & Employment',
     }
     return render(request, "prosperity.html", context)
 

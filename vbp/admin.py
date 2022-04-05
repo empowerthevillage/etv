@@ -9,6 +9,7 @@ from django.core.exceptions import PermissionDenied
 import geocoder
 
 class VBPBook(admin.ModelAdmin):
+    ordering = ['state']
     list_display = ['state', 'published']
     list_filter = ['published', 'state']
     def make_active(self, request, queryset):
@@ -88,6 +89,7 @@ class VBPAdmin(admin.ModelAdmin):
     make_inactive.short_description = "Mark selected submissions as not approved"
 
 class VBPStateAdmin(admin.ModelAdmin):
+    list_per_page = 500
     list_display = ['business_name', 'approved', 'website', 'category', 'city', 'updated', 'nominator_name']
     list_filter = ['county', 'city','approved', 'online_only', 'category', 'subcategory', 'team', 'nominator_name']
     search_fields = ['business_name', 'city', 'category', 'subcategory', 'user', 'nominator_name']

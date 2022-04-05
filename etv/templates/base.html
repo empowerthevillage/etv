@@ -27,13 +27,13 @@
 {% url 'policy:voting' as voting_url %}
 {% url 'education:education-home' as education_url %}
 {% url 'education:education-phase-one' as education_initiatives_url %}
-{% url 'prosperity' as ep_url %}
+{% url 'prosperity:home' as ep_url %}
 {% url 'news' as news_url %}
 {% url 'shop' as shop_url %}
 {% url 'merchandise:list' as merchandise_url %}
 {% url 'events:home' as events_url %}
 {% url 'ven-home' as ven_url %}
-{% url 'education:village-at-work' as vaw_url %}
+{% url 'prosperity:village-at-work' as vaw_url %}
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 <!-- JQuery Mask -->
@@ -44,7 +44,7 @@
       $('.collapsible').collapsible();
       $('.parallax').parallax();
       $('select').formSelect();
-      $('.dropdown-trigger').dropdown({hover: true, constrainWidth: false, coverTrigger: false, container:'.dropdown-container'});
+      $('.dropdown-trigger').dropdown({hover: true, constrainWidth: false, coverTrigger: false, container:'.dropdown-container', closeOnClick: false});
       $('.sidenav').sidenav();
       $('.carousel').carousel({indicators: true, numVisible: 10,});
       $('.tooltipped').tooltip({'margin':'0', 'transitionMovement': '0',});
@@ -54,7 +54,6 @@
       $('.datepicker').datepicker();
       $('.ways-to-play-tabs').tabs();
     });
-    
   </script>
 <!doctype html>
 <html lang="en">
@@ -99,7 +98,7 @@
 
               </div>
        
-              <div class="right valign-wrapper" style="height:100%; position: absolute; right: 20px">
+              <div class="right valign-wrapper" style="height:100%; position: absolute; right: 10px">
                 <a class="main-nav-link ul-effect valign-wrapper {% if request.path == home_url %}active{% endif %}" href="{{ home_url }}">Home</a>
                     <div class="navbar-slash"> | </div>
                   <a class="main-nav-link ul-effect valign-wrapper {% if request.path == about_url %}active{% endif %}" href="{{ about_url }}">About</a>
@@ -107,41 +106,75 @@
                   
                   <a class="main-nav-link dropdown-trigger ul-effect valign-wrapper" data-target='top-dropdown-sp'>Programs</a>
                     <div class="navbar-slash"> | </div>
-                    <a class="main-nav-link valign-wrapper ul-effect" style="cursor: pointer" id="join-village-topnav">Join</a>
-                  <div class="navbar-slash"> | </div>
+                  <a class="main-nav-link dropdown-trigger ul-effect valign-wrapper" data-target='top-dropdown-pillars'>Pillars</a>
+                    <div class="navbar-slash"> | </div>
+                    
                   {% if request.user.is_authenticated %}
                   <a class="main-nav-link ul-effect valign-wrapper {% if request.path == events_url %}active{% endif %}" href="{{ events_url }}">Events</a>
                   <div class="navbar-slash"> | </div>
-                  <a href="{{ account_url }}" id="account-icon"><i class="material-icons" style="color: grey; font-size: 36px; padding-top:30px;padding-left:10px">account_circle</i></a>
+                  <a href="{{ account_url }}" id="account-icon"><i class="material-icons" style="color: grey; font-size: 36px; padding-top:30px;">account_circle</i></a>
                     <div class="navbar-slash"> | </div>
                   <a href="{{ logout_url }}" class="main-nav-link ul-effect valign-wrapper"> Logout</a>
-                    <div class="navbar-slash"> | </div>
+                   
                   {% else %}
                   <a class="main-nav-link ul-effect valign-wrapper {% if request.path == events_url %}active{% endif %}" href="{{ events_url }}">Events</a>
                   <div class="navbar-slash"> | </div>
+                  <a class="main-nav-link valign-wrapper ul-effect" style="cursor: pointer" id="join-village-topnav">Join</a>
+                  <div class="navbar-slash"> | </div>
+                  
                   <a class="main-nav-link valign-wrapper ul-effect {% if request.path == login_url %}active{% endif %}" href="{{ login_url }}">Login</a>
                   <div class="navbar-slash"> | </div>
-            
+                  <a class="main-nav-link ul-effect valign-wrapper {% if request.path == contact_url %}active{% endif %}" href="{{ contact_url }}">Contact</a>
                   {% endif %}
-                <a class="main-nav-link ul-effect valign-wrapper {% if request.path == contact_url %}active{% endif %}" href="{{ contact_url }}">Contact</a>
-                    
                 <a class="btn btn-large waves-effect waves-light donate-btn-navbar" href="{{ donate_url }}" id="donate-btn-navbar">DONATE</a>
               </div>
           </div>
           <div class="dropdown-container">
             <ul id="top-dropdown-sp" class="dropdown-content dd-base">
               <li><a class="center-align valign-wrapper {% if request.path == efbf_url %}active{% endif %}" href="{{ pillars_url }}">Strategic Pillars</a></li>
-                <li><a class="center-align valign-wrapper {% if request.path == efbf_url %}active{% endif %}" href="{{ efbf_url }}">MAKE EVERY FRIDAY, BLACK FRIDAY!™</a></li>
-                <li><a class="center-align valign-wrapper {% if request.path == vbp_url %}active{% endif %}" href="{{ vbp_url }}" style="padding-left:10px">VILLAGE BLACK PAGES™</a></li>
+                <li><a class="center-align valign-wrapper {% if request.path == efbf_url %}active{% endif %}" href="{{ efbf_url }}">MAKE EVERY FRIDAY, BLACK FRIDAY!®</a></li>
+                <li><a class="center-align valign-wrapper {% if request.path == vbp_url %}active{% endif %}" href="{{ vbp_url }}" style="padding-left:10px">Village Black Pages®</a></li>
                 <li><a class="center-align valign-wrapper {% if request.path == voting_url %}active{% endif %}" data-target="nav-dropdown-pp" href="{{ ven_url }}">VILLAGE EMPOWERMENT NETWORK™</a></li>
                 <li><a class="center-align valign-wrapper {% if request.path == voting_url %}active{% endif %}" data-target="nav-dropdown-pp" href="{{ vaw_url }}">VILLAGE@WORK™</a></li>
                 <li><a class="center-align valign-wrapper {% if request.path == bf_home_url %}active{% endif %}" data-target="nav-dropdown-bf" href="{{ bf_home_url }}">BLACK FRIDAY CHALLENGE™</a></li>
             </ul>
           </div>
+          
         </div>
         
         </nav>
-          
+        <div class="dropdown-container">
+          <ul id="top-dropdown-pillars" class="dropdown-content dd-base collapsible">
+              <li>
+                <a class="center-align valign-wrapper collapsible-header">Economic Prosperity & Employment</a>
+                <div class="collapsible-body">
+                <ul>
+                  <li><a href="{{ ep_url }}">Overview</a></li>
+                  <li><a href="{{ efbf_url }}">Make Every Friday, Black Friday!</a></li>
+                  <li><a href="{{ vbp_url }}">Village Black Pages™</a></li>
+                  <li><a href="{{ ven_url }}">Village Empowerment Network™</a></li>
+                  <li><a href="{{ vaw_url }}">Village@Work™</a></li>
+                  <li><a href="{{ bf_home_url }}">Black Friday Challenge</a></li>
+                </ul>
+              </div>
+              </li>
+              <li>
+                <a href="{{ health_url }}">Health & Wellness</a>
+              </li>
+              <li>
+                <a class="center-align valign-wrapper collapsible-header">Policy & Power</av>
+                <div class="collapsible-body">
+                  <ul>
+                    <li><a href="{{ policy_url }}">Overview</a></li>
+                    <li><a href="{{ voting_url }}">Operation: Ballot Box™</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a href="{{ education_url }}">Education</a>
+              </li>
+          </ul>
+        </div>
         <ul id="side-nav" class="sidenav" style="background-color:rgba(255, 255, 255, 0.899)">
           <li style="margin-bottom: 2px; background-color: rgb(230, 229, 228);"><img src="{% static 'img/footer-logo.png' %}" width="95%" style="margin-left:2.5%; padding-top:19px"></li>
           <li><a href="{{ home_url }}" class="waves-effect">Home</a></li>
@@ -150,6 +183,7 @@
           <li><a class="waves-effect" href="{{ events_url }}">Events</a></li>
           <li><a class="waves-effect" href="{{ merchandise_url }}">Shop</a></li>
           <li class="divider"></li>
+          <li><a href="{{ pillars_url }}">Strategic Pillars</a></li>
           <li class="">
             
             <ul class="collapsible collapsible-accordion" style="padding-left: 4.5%">
@@ -157,9 +191,8 @@
                 <a class="collapsible-header ">Signature Programs</a>
                 <div class="collapsible-body">
                   <ul>
-                    <li><a href="{{ pillars_url }}">Strategic Pillars</a></li>
-                    <li><a href="{{ efbf_url }}">Make Every Friday, Black Friday!™</a></li>
-                    <li><a href="{{ vbp_url }}">Village Black Pages™</a></li>
+                    <li><a href="{{ efbf_url }}">MAKE EVERY FRIDAY, BLACK FRIDAY!®</a></li>
+                    <li><a href="{{ vbp_url }}">Village Black Pages®</a></li>
                     <li><a href="{{ ven_url }}">Village Empowerment Network™</a></li>
                     <li><a href="{{ vaw_url }}">Village@Work™</a></li>
                     <li><a href="{{ bf_home_url }}">Black Friday Challenge™</a></li>
@@ -170,14 +203,16 @@
           </li>
           <li class="">
             
-            <ul class="collapsible collapsible-accordion" style="padding-left: 4.5%">
+            <ul class="collapsible" style="padding-left: 4.5%">
               <li>
-                <a class="collapsible-header ">Economic Prosperity</a>
+                <a class="collapsible-header ">Economic Prosperity & Employment</a>
                 <div class="collapsible-body">
                   <ul>
                     <li><a href="{{ ep_url }}">Overview</a></li>
                     <li><a href="{{ efbf_url }}">Make Every Friday, Black Friday!</a></li>
                     <li><a href="{{ vbp_url }}">Village Black Pages</a></li>
+                    <li><a href="{{ ven_url }}">Village Empowerment Network™</a></li>
+                    <li><a href="{{ vaw_url }}">Village@Work™</a></li>
                     <li><a href="{{ bf_home_url }}">Black Friday Challenge</a></li>
                   </ul>
                 </div>
@@ -185,7 +220,7 @@
             </ul>
           </li>
           <li class="">
-            <ul class="collapsible collapsible-accordion" style="padding-left: 4.5%">
+            <ul class="collapsible" style="padding-left: 4.5%">
               <li>
                 <a class="collapsible-header ">Policy & Power</a>
                 <div class="collapsible-body">
@@ -211,7 +246,7 @@
           <li class="">
             <ul class="" style="padding-left: 0%">
               <li>
-                <a href="{{ education_url }}">Education & Employment</a>
+                <a href="{{ education_url }}">Education</a>
                 
               </li>
             </ul>
@@ -237,27 +272,26 @@
           <div class="dropdown-container">
             <ul id="nav-dropdown-sp" class="dropdown-content dd-base">
               <li><a class="center-align valign-wrapper {% if request.path == efbf_url %}active{% endif %}" href="{{ pillars_url }}">Strategic Pillars</a></li>
-                <li><a class="center-align valign-wrapper {% if request.path == efbf_url %}active{% endif %}" href="{{ efbf_url }}">MAKE EVERY FRIDAY, BLACK FRIDAY!™</a></li>
-                <li><a class="center-align valign-wrapper {% if request.path == vbp_url %}active{% endif %}" href="{{ vbp_url }}" style="padding-left:10px">VILLAGE BLACK PAGES™</a></li>
+                <li><a class="center-align valign-wrapper {% if request.path == efbf_url %}active{% endif %}" href="{{ efbf_url }}">MAKE EVERY FRIDAY, BLACK FRIDAY!®</a></li>
+                <li><a class="center-align valign-wrapper {% if request.path == vbp_url %}active{% endif %}" href="{{ vbp_url }}" style="padding-left:10px">Village Black Pages®</a></li>
                 <li><a class="center-align valign-wrapper {% if request.path == bf_home_url %}active{% endif %}" data-target="nav-dropdown-bf" href="{{ bf_home_url }}">BLACK FRIDAY CHALLENGE™</a></li>
                 <li><a class="center-align valign-wrapper {% if request.path == voting_url %}active{% endif %}" data-target="nav-dropdown-pp" href="{{ voting_url }}">OPERATION: BALLOT BOX™</a></li>
             </ul>
           </div>
           <div class="dropdown-container">
             <ul id="nav-dropdown-bf" class="dropdown-content dd-base">
-              <li><a href="{{ ep_url }}" class="center-align valign-wrapper {% if request.path == ep_url %}active{% endif %}">Economic Prosperity</a>
+              <li><a href="{{ ep_url }}" class="center-align valign-wrapper {% if request.path == ep_url %}active{% endif %}">Economic Prosperity & Employment</a>
               </li>
-              <li><a href="{{ education_url }}" class="center-align valign-wrapper dropdown-trigger {% if request.path == education_url %}active{% endif %}">Education & Employment</a></li>
+              <li><a href="{{ education_url }}" class="center-align valign-wrapper dropdown-trigger {% if request.path == education_url %}active{% endif %}">Education</a></li>
               <li><a href="{{ health_url }}" class="center-align valign-wrapper dropdown-trigger {% if request.path == health_url %}active{% endif %}">Health & Wellness</a></li>
               <li><a href="{{ policy_url }}" class="center-align valign-wrapper dropdown-trigger {% if request.path == policy_url %}active{% endif %}">Policy & Power</a></li>
             </ul>
           </div>
-          
           <div class="dropdown-container">
             <ul id="nav-dropdown-ep" class="dropdown-content dd-base">
               <li><a href="{{ ep_url }}" class="center-align valign-wrapper {% if request.path == ep_url %}active{% endif %}" style="color: rgb(39, 160, 97);text-transform: uppercase;">Overview</a></li>
-              <li><a href="{{ efbf_url }}" class="center-align valign-wrapper {% if request.path == efbf_url %}active{% endif %}" style="color: rgb(39, 160, 97);text-transform: uppercase;">Make Every Friday, Black Friday!™</a></li>
-              <li><a href="{{ vbp_url }}" class="center-align valign-wrapper {% if request.path == vbp_url %}active{% endif %}" style="color: rgb(39, 160, 97);text-transform: uppercase;">Village Black Pages™</a></li>
+              <li><a href="{{ efbf_url }}" class="center-align valign-wrapper {% if request.path == efbf_url %}active{% endif %}" style="color: rgb(39, 160, 97);text-transform: uppercase;">MAKE EVERY FRIDAY, BLACK FRIDAY!®</a></li>
+              <li><a href="{{ vbp_url }}" class="center-align valign-wrapper {% if request.path == vbp_url %}active{% endif %}" style="color: rgb(39, 160, 97);text-transform: uppercase;">Village Black Pages®</a></li>
               <li ><a href="{{ bf_home_url }}" class="center-align valign-wrapper {% if request.path == bf_home_url %}active{% endif %}" style="color: rgb(39, 160, 97);text-transform: uppercase;">Black Friday Challenge™</a></li>
               <li><a style="color: black; text-transform: none; font-size: 14px;" href="{{ readyss_url }}" class="center-align {% if request.path == readyss_url %}active{% endif %}" >Ready, Set, Shop</a></li>
               <li><a style="color: black; text-transform: none; font-size: 14px;" href="{{ nomination_url }}" class="center-align valign-wrapper {% if request.path == nomination_url %}active{% endif %}">Nomination Challenge</a</li>
@@ -288,17 +322,16 @@
           <div class="dropdown-container">
             <ul id="top-dropdown-sp" class="dropdown-content dd-base">
               <li><a class="center-align valign-wrapper {% if request.path == efbf_url %}active{% endif %}" href="{{ pillars_url }}">Strategic Pillars</a></li>
-                <li><a class="center-align valign-wrapper {% if request.path == efbf_url %}active{% endif %}" href="{{ efbf_url }}">MAKE EVERY FRIDAY, BLACK FRIDAY!™</a></li>
-                <li><a class="center-align valign-wrapper {% if request.path == vbp_url %}active{% endif %}" href="{{ vbp_url }}" style="padding-left:10px">VILLAGE BLACK PAGES™</a></li>
+                <li><a class="center-align valign-wrapper {% if request.path == efbf_url %}active{% endif %}" href="{{ efbf_url }}">MAKE EVERY FRIDAY, BLACK FRIDAY!®</a></li>
+                <li><a class="center-align valign-wrapper {% if request.path == vbp_url %}active{% endif %}" href="{{ vbp_url }}" style="padding-left:10px">Village Black Pages®</a></li>
                 <li><a class="center-align valign-wrapper {% if request.path == bf_home_url %}active{% endif %}" data-target="nav-dropdown-bf" href="{{ bf_home_url }}">BLACK FRIDAY CHALLENGE™</a></li>
                 <li><a class="center-align valign-wrapper {% if request.path == voting_url %}active{% endif %}" data-target="nav-dropdown-pp" href="{{ voting_url }}">OPERATION: BALLOT BOX™</a></li>
             </ul>
           </div>
-        <div style="z-index: -1">
+        <div style="z-index: -1; margin-top: 120px">
         {% block content %}
         
         {% endblock %}
-        
         </div>
     </main>
     {% load sweetify %}
@@ -354,8 +387,8 @@
                   </div>
                   <div class="col s12 m5 l6">
                     <ul class="other-links">
-                      <li><a class="" href="{{ ep_url }}">Economic Prosperity</a></li>
-                      <li><a class="" href="{{ education_url }}">Education & Employment</a></li>
+                      <li><a class="" href="{{ ep_url }}">Economic Prosperity & Employment</a></li>
+                      <li><a class="" href="{{ education_url }}">Education</a></li>
                       <li><a class="" href="{{ health_url }}">Health & Wellness</a></li>
                       <li><a class="" href="{{ policy_url }}">Policy & Power</a></li>
                     </ul>
@@ -387,7 +420,7 @@
           </div>
         </div>
     </footer>
-    <div class="modal" id="privacy-policy-modal">
+      <div class="modal" id="privacy-policy-modal">
       <div class="modal-content">
         <h4 class="center-align">Privacy Policy</h4>
         <p class="center-align">Last Updated: Oct 1, 2020</p>
@@ -442,9 +475,16 @@
     <p style="margin:0; padding:0">(862) 777-3193</p>
     <p style="margin:0; padding:0">info@empowerthevillage.org</p>
       </div>
-      
-      </script>
+      </div>
       <script>
+        $('#top-dropdown-pillars .collapsible-header:contains("                  ")').remove()
+        $('#top-dropdown-pillars .collapsible-header:empty').remove()
+        $('.carousel').resize(function(e){
+          e.preventDefault();
+        })
+        $('#top-dropdown-pillars .collapsible-header').on('click', function(){
+          $(this).closest('.dropdown-content').css('height', 'fit-content')
+        });
         $(document).ready(function(){
           $('.modal').modal();
           $('label').on('click', function(){
@@ -452,7 +492,6 @@
             $(this).closest('.input-field').find('input').focus()
           });
         });
-        
         $('#join-village-topnav').click(function(){
             Swal.fire({
                 html: '<h3 class="join-tv-title">Join The Village!</h3><p>Enter your email address to join the ETV mailing list.</p><form method="POST" action="/mailchimp-signup/" id="mailchimp-nav-form">{% csrf_token %}<div class="input-field"><input required id="mailchimp-email-nav" name="email" type="email"><label for="mailchimp-email-nav">Email</label></div><button type="submit" class="btn light-green darken-3 waves-effect" id="efbf-mailchimp">Add Me To The List!</button></form>',

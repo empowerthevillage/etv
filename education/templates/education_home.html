@@ -1,15 +1,15 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %}ETV | Education & Employment{% endblock %}
+{% block title %}ETV | Education{% endblock %}
 {% block canonical %}https://www.empowerthevillage.org/education-and-employment/{% endblock %}
-{% block seo_description %}ETV Strategic Pillars: Education & Employment{% endblock %}
+{% block seo_description %}ETV Strategic Pillars: Education{% endblock %}
 
 {% block content %}
 <div class="parallax-container z-depth-3 box-shadow valign-wrapper">
     
-    <div class="container z-depth-4 center-align parallax-banner">
-        <img src='{% static "img/education_employment.png" %}' style="width:100%; padding: 4%">
+    <div class="container z-depth-4 center-align parallax-banner" style="margin-top: 0">
+        <img src='{% static "img/education_title_updated.png" %}' style="width:80%; padding: 6%">
     </div>
     <div class="parallax">
         <img src='{% static "img/ed_collage_big.png" %}'>
@@ -18,51 +18,29 @@
 </div>
 <div style="background: url('{% static 'img/ed_collage_big.png' %}'); background-size: 180%; height: 100%">
     <div class="row" style="height: 100%; background-color: rgba(255, 255, 255, 0.781); width:100%">
-        <ul class="tabs subnav-tabs tabs-fixed-width pillar-nav z-depth-2">
-            <li class="tab"  class="subnav-link"><a href="village-at-work" class="subnav-link">Village@Work™</a></li>
-            <li class="tab"  class="subnav-link"><a href="village-strivers" class="subnav-link">Village Strivers™</a></li>
-        </ul>
-        <style>
-            @media only screen and (min-width:663px){
-                .subnav-link {
-                font-size: 20px !important
-            }
-            }
-            .subnav-link {
-                font-size: 14px
-            }
-        </style>
         <div class="col s12 l10 offset-l1  pillar-body">
             <div class="row" style="width: 90%; margin-left: 5%">
                 <div class="row center-align">
-                    <h5 class="dyk"><p class="dyk" style="color: rgb(199, 24, 24); margin:0; padding:0; margin-top: -10px">State Of The Village : <a style="color:rgba(38, 38, 38, 0.947); font-family: oskar">Did You Know...?</a></p></h5>
+                    <p class="pillar-tagline">
+                        ETV’s Education pillar is designed to prepare The Village to succeed in the 21st century workforce. Our programs empower students and other community members to leverage academic enrichment, prepare for college success, and explore technical/vocational training opportunities.
+                    </p>
+                    <div class="divider" style="margin-bottom: 15px; margin-top: 15px;width: 50%; margin-left: 25%; border-bottom: dotted 3px rgb(222, 222, 222); background-color: transparent"></div>
+                    <p class="dyk" style="color: rgb(184, 23, 23); margin:0; padding:0; padding-top: 2%; padding-bottom: 20px; margin-top: -10px">State Of The Village: <a style="color:rgba(38, 38, 38, 0.947); font-family: oskar">Did You Know...?</a></p>
                     <div class="divider"></div>
-                    <div class="row" style="margin-bottom: 0; padding-top: 3%; padding-left: 1%; padding-right: 1%">
+                    <div class="row" style="margin-bottom: 0; padding-top: 3%; padding-left: 1%; padding-right: 1%;">
                         
-                        <div class="col s12 m3">
-                            <style></style>
+                        <div class="col s12 l10 offset-l1">
                             <div class="row dyk-row">
-                                <img class="col s3 m12 ed-ss" src="{% static 'img/education_ss.png'%}" style="width: 100%">
-                                <p class="col s9 m12 obesity-text"> ~23% of the Black adult population has a bachelor’s degree or higher (versus ~36% of White adults)</p>
+                                <p class="col s12 m8 offset-m1 state-text" style="align-self: center; margin-right: 20px" > ~23% of the Black adult population has a bachelor’s degree or higher (versus ~36% of White adults)</p>
+                                <img class="col s12 m3 ed-ss" src="{% static 'img/education_ss_2.png'%}">
                             </div>
                         </div>
-                        <div class="col s12 m3">
+                        <div class="col s12">
                             <div class="row dyk-row">
-                                <img class="col s3 m12 u-ss" src="{% static 'img/unemployment_ss.png'%}" style="width: 89%; margin-left: 5.5%">
-                                <p class="col s9 m12 covid-text">Unemployment rates are 2X higher for Black Americans compared to White Americans</p>
-                            </div>
-                        </div>
-                        
-                        <div class="col s12 m3">
-                            <div class="row dyk-row">
-                                <img class="col s3 m12 black-businesses" src="{% static 'img/95percent.png'%} " style="width: 90%; margin-left: 5%">
-                                <p class="col s9 m12 heart-text">95% of Black-owned businesses are nonemployer businesses. 101% average increase in annual revenue after hiring the 1st employee</p>
-                            </div>
-                        </div>
-                        <div class="col s12 m3">
-                            <div class="row dyk-row">
-                                <img class="col s3 m12 million-jobs" src="{% static 'img/million-jobs.png'%}">
-                                <p class="col s9 m12 million-jobs-text">~5% of Existing Black-owned businesses have created over 1 million jobs!</p>
+                                <img class="ed-gc" src="{% static 'img/grad-cap.png' %}">
+                                <p class="state-text">
+                                    A <a href="https://edtrust.org/wp-content/uploads/2014/09/Black-Degree-Attainment_FINAL.pdf">college degree,</a> whether an Associate or Bachelor’s degree, is more and more vital. The number of “good-paying jobs” that did not require some level of college education or technical training have continued to rapidly decrease.
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -121,15 +99,7 @@
                                             <i class="material-icons pillar-target">check</i> 
                                         </td>
                                         <td class="pillar-h5">
-                                            <a href="phase-one/"><b>Village@Work™ - </b></a>Workforce Development Program
-                                        </td>
-                                    </tr>
-                                    <tr class="pillar-tr">
-                                        <td class="pillar-target-td">
-                                            <i class="material-icons pillar-target">check</i> 
-                                        </td>
-                                        <td class="pillar-h5">
-                                            <a href="phase-one/"><b>Village Strivers™ - </b></a>Academic Enrichment, Mentorship and Job Creation
+                                            <a href="phase-one/"><b>Village Strivers™ - </b></a>Academic enrichment, college success, and vocational training
                                         </td>
                                     </tr>
                                 </table>
@@ -138,14 +108,7 @@
                         </li>
                     </ul> 
                 </div>
-                <div class="divider"></div>
-                <div class="row valign-wrapper" style="width: 95%; margin-left: 5%; padding-top: 20px">
-                    <img src="{% static 'img/grad-cap.png' %}" width=20%>
-                    <blockquote class="dyk-quote">
-                        A <a href="https://edtrust.org/wp-content/uploads/2014/09/Black-Degree-Attainment_FINAL.pdf">college degree,</a> whether an Associate or Bachelor’s degree, is more and more vital. The number of “good-paying jobs” that did not require some level of college education or technical training have continued to rapidly decrease.
-                    </blockquote>
-                </div>
-                <div class="divider"></div>
+   
             </div>
                 
             
@@ -184,7 +147,29 @@
 </style>
 
 <style>
-    .pillar-nav {
+    
+    @media only screen and (min-width: 0px) {
+        .state-text {
+            padding-top: 0;
+            padding-bottom: 0
+        }
+        .dyk-row {
+            display: block;
+        }
+        .ed-ss {
+            width: 50% !important; 
+            margin-left: 25% !important
+        }
+        .ed-gc {
+            width: 50% !important;
+            border-top: dotted 3px rgb(223, 223, 223);
+            padding-top: 20px;
+            margin-top: 10px
+        }
+        .ee-image img {
+            width: 60%
+        }
+        .pillar-nav {
         background-color: rgb(0, 0, 0);
     }
     .pillar-nav li a {
@@ -229,10 +214,6 @@
     .cs-title {
         color: black
     }
-    @media only screen and (min-width: 0px) {
-        .ee-image img {
-            width: 60%
-        }
         .program-text {
             text-align: center;
             width: 90%;
@@ -240,7 +221,7 @@
             font-size: 14px
         }
         .dyk {
-            font-size: 38px;
+            font-size: 34px;
             letter-spacing: 2px;
         }
         .dyk-quote {
@@ -324,6 +305,9 @@
             font-size: 20px;
             padding: 15px 10px;
         }
+        .dyk {
+            font-size: 38px
+        }
     }
     @media only screen and (min-width: 601px) {
         .ee-image img {
@@ -336,10 +320,10 @@
             font-size: 16px
         }
         .goals-li {
-            width: 95%;
+            width: 100%;
     }
     .solutions-li {
-        width: 95%;
+        width: 100%;
     }
         .dyk {
         font-size: 42px

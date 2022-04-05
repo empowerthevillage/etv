@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %}ETV | Economic Prosperity{% endblock %}
+{% block title %}ETV | Economic Prosperity & Employment{% endblock %}
 {% block canonical %}https://www.empowerthevillage.org/economic-prosperity/{% endblock %}
 {% block seo_description %}ETV Strategic Pillars: Economic Prosperity{% endblock %}
 
@@ -9,17 +9,17 @@
 <div class="parallax-container z-depth-3 box-shadow valign-wrapper">
     
     <div class="container z-depth-4 center-align parallax-banner">
-        <img src='{% static "img/prosperity.png" %}' style="width:95%; padding: 3% 2%">
+        <img src='{% static "img/economic_prosperity_updated.png" %}' style="width:95%; padding: 3% 2%">
     </div>
     <div class="parallax">
-        <img src='{% static "img/vbp-collage.svg" %}' style="">
+        <img src='{% static "img/vbp-collage.svg" %}'>
     </div>
 
 </div>
 <div class="row" style="background-color: rgba(255, 255, 255, 0.781);">
     <ul class="tabs tabs-fixed-width pillar-nav z-depth-2">
-        <li class="tab subnav-link"><a href="{{ efbf_url }}" class="subnav-link">Make Every Friday, Black Friday!™</a></li>
-        <li class="tab subnav-link"><a href="{{ vbp_url }}" class="subnav-link">Village Black Pages™</a></li>
+        <li class="tab subnav-link"><a href="{{ efbf_url }}" class="subnav-link">MAKE EVERY FRIDAY, BLACK FRIDAY!®</a></li>
+        <li class="tab subnav-link"><a href="{{ vbp_url }}" class="subnav-link">Village Black Pages®</a></li>
         <li class="tab subnav-link"><a href="{{ bf_home_url }}" class="subnav-link">Black Friday Challenge™</a></li>
         <li class="tab subnav-link"><a href="{{ ven_url }}" class="subnav-link">Village Empowerment Network™</a></li>
     </ul>
@@ -57,8 +57,12 @@
     <div class="pillar-body">
         <div class="row center-align">
             <div class="col s12">
-                <p class="dyk" style="color: rgb(162, 21, 21); margin:0; padding:0; padding-top: 10px; padding-bottom: 20px; margin-top: -10px">State Of The Village: <a style="color:rgba(38, 38, 38, 0.947); font-family: oskar">Did You Know...?</a></p>
-                <div class="divider" style="margin-bottom: 20px"></div>
+                <p class="pillar-tagline container">
+                    The Economic Prosperity & Employment pillar is the centerpiece to ETV’s portfolio of signature programs addressing the multifaceted challenges impacting the Black community. These initiatives have a national reach and work to unlock vast opportunities for The Village to realize its full potential and create generational wealth!
+                </p>
+                <div class="divider" style="margin-bottom: 15px; margin-top: 15px;width: 50%; margin-left: 25%; border-bottom: dotted 3px rgb(222, 222, 222); background-color: transparent"></div>
+                <p class="dyk" style="color: rgb(184, 23, 23); margin:0; padding:0; padding-top: 2%; padding-bottom: 20px; margin-top: -10px">State Of The Village: <a style="color:rgba(38, 38, 38, 0.947); font-family: oskar">Did You Know...?</a></p>
+                <div class="divider" style="margin-bottom: 30px; margin-top: 20px"></div>
                 <div class="row" style="margin-bottom: 0; padding-left: 5%; padding-right: 5%;">
                     
                     <div class="col s12 m3">
@@ -164,7 +168,7 @@
                                         <i class="material-icons pillar-target">check</i> 
                                     </td>
                                     <td class="pillar-h5">
-                                        <b><a href="{{ efbf_url }}">Make Every Friday, Black Friday!™ - </a></b>Movement to support Black-owned businesses weekly to increase revenue & community wealth
+                                        <b><a href="{{ efbf_url }}">Make Every Friday, Black Friday!® - </a></b>Movement to support Black-owned businesses weekly to increase revenue & community wealth
                                     </td>
                                 </tr>
                                 <tr class="pillar-tr">
@@ -172,15 +176,17 @@
                                         <i class="material-icons pillar-target">check</i> 
                                     </td>
                                     <td class="pillar-h5">
-                                        <b><a href="{{ vbp_url }}">Village Black Pages™ - </a></b>Business & community resource directories to support Black-owned businesses & locate critical information 
+                                        <b><a href="{{ vbp_url }}">Village Black Pages® - </a></b>Business & community resource directories to support Black-owned businesses & locate critical information 
                                     </td>
                                 </tr>
+                                
+                                
                                 <tr class="pillar-tr">
                                     <td class="pillar-target-td">
                                         <i class="material-icons pillar-target">check</i> 
                                     </td>
                                     <td class="pillar-h5">
-                                        <b><a href="{{ voting_url }}">Black Friday Challenge™ - </a></b>Fun, interactive, friendly competitions to routinely support Black-owned businesses
+                                        <b><a href="#VEN">Village Empowerment Network™ - </a></b>One-on-one counseling for entrepreneurs, families, and individuals & online, on-demand business & wealth trainings + live workshops
                                     </td>
                                 </tr>
                                 
@@ -189,7 +195,15 @@
                                         <i class="material-icons pillar-target">check</i> 
                                     </td>
                                     <td class="pillar-h5">
-                                        <b><a href="#VEN">Village Empowerment Network™ - </a></b>One-on-one counseling for entrepreneurs, families, and individuals & online, on-demand business & wealth trainings + live workshops
+                                        <b><a href="{{ vaw_url }}">Village@Work™ - </a></b>A workforce development and job creation program focused on preparing business owners to grow revenue, manage employees, create jobs and provide opportunities for the communities they serve
+                                    </td>
+                                </tr>
+                                <tr class="pillar-tr">
+                                    <td class="pillar-target-td">
+                                        <i class="material-icons pillar-target">check</i> 
+                                    </td>
+                                    <td class="pillar-h5">
+                                        <b><a href="{{ voting_url }}">Black Friday Challenge™ - </a></b>Fun, interactive, friendly competitions to routinely support Black-owned businesses
                                     </td>
                                 </tr>
                             </table>
@@ -292,7 +306,8 @@
     }
     .divider {
         margin: 0;
-        border-bottom: 1px solid rgb(207, 207, 207)
+        border-bottom: 1px solid rgb(227, 227, 227)
+    
     }
     
     p {
