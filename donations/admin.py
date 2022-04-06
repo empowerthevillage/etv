@@ -1,4 +1,5 @@
 from django.contrib import admin
+from dashboard.models import dashboardModel
 
 from django.contrib import admin
 from .models import donation_submission, donation, donation_event, tag
@@ -11,9 +12,9 @@ class DonationAdmin(admin.ModelAdmin):
     ordering = ['-updated']
     
 
-    
-        
 admin.site.register(donation_submission)
 admin_site.register(donation, DonationAdmin)
 admin_site.register(donation_event)
 admin_site.register(tag)
+
+dashboardModel.objects.dash_register(donation)

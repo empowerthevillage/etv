@@ -41,7 +41,7 @@ class BillingProfile(models.Model):
     objects = BillingProfileManager()
 
     def __str__(self):
-        return self.email
+        return str(self.email)
 
     def charge(self, billing_profile, order_obj, card=None):
         return Charge.objects.do(self, order_obj, card)

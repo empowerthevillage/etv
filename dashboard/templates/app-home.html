@@ -4,7 +4,6 @@
 {% block content %}
 
 {% if request.user.is_admin %}
-{% regroup last_5_tickets by get_full_name as ticket_family %}
 <script>
     $(document).ready(function(){
     $('.tooltipped').tooltip();
@@ -15,19 +14,17 @@
             <div class="side-menu-overlay">
                 <section>
                     <ul>
-                        {% regroup app_list by app_name as apps %}
-                        {% for x in apps %}
-                    
-                        <li class="list-heading">{{ x.grouper }}</li>
-                            {% for model in x.list %}
-                            <li>{{ model }}
-                                <div class="right">
-                                    <a href=""><i class="bi bi-plus-square add-model-obj tooltipped" data-position="bottom" data-tooltip="Add New {{ model }}"></i></a>
-                                    <a href="/dashboard/{{ x.grouper }}/"><i class="bi bi-window-plus view-model-objs tooltipped" data-position="top" data-tooltip="View All {{ model.model_name_plural }}"></i></a>
-                                </div>
-                            </li>
-                            
-                            {% endfor %}
+                        <li class="list-heading">{{ app.app_name }}</li>
+                        {% for x in model_names_plural %}
+                        <li>
+                            <a>
+                                {{ x }}
+                            </a>
+                            <div class="right">
+                                <i class="bi bi-plus-square add-model-obj tooltipped" data-position="bottom" data-tooltip="Add New"></i>
+                                <i class="bi bi-window-plus view-model-objs tooltipped" data-position="top" data-tooltip="Manage All"></i>
+                            </div>
+                        </li>
                         {% endfor %}
                     </ul>
                 </section>
@@ -36,28 +33,29 @@
         <div class="col s12 l9">
             <div class="admin-container">
                 <div class="row">
+                    <div class="col s12" style="margin-bottom: 10px">
+                        <a href="{{ dashboard_url }}" class="breadcrumb">Dashboard</a>
+                        <a class="breadcrumb active">{{ app.app_name }}</a>
+                      </div>
                     <div class="col s12">
                         <div class="card">
                             <div class="card-heading">
                                 <p class="card-title">Donations</p>
                             </div>
                             <div class="card-body row">
-                                <div class="col s12 l8 xl7">
-                                    <div>
-                                        <canvas id="donationChart"></canvas>
-                                    </div>
-                                </div>
-                                <div class="col s12 l4 xl5">
-                                    <h7>Latest Donations</h7>
-                                    <div class="divider"></div>
-                                    <ul class="dashboard-list">
-                                        {% for x in last_5_donations %}
-                                        <li>
-                                            <h6><b>${{ x.amount|intcomma }}</b> from {{ x.get_full_name }}</h6>
-                                            <p>{{ x.updated }}</p>
-                                        </li>
-                                        {% endfor %}
-                                    </ul>
+                                
+                                <div class="col s12">
+                                    <table class="dashboard-list">
+                                        <thead>
+                                            {% for x in models %}
+                                            <p>{{ x.list_fields_JSON }}</p>
+                                            {% for field,value in x.list_fields_JSON.items %}
+                                            <p>{{ value }}</p>
+                                            {% endfor %}
+                                            <tr></tr>
+                                            {% endfor %}
+                                        </thead>
+                                    </table>
                                     <a class="view-more valign-wrapper" href="">View All <span class="material-icons">open_in_new</span></a>
                                 </div>
                             </div>
@@ -154,49 +152,7 @@
             </div>
         </div>
     </div>
-    <script>
-        
-        const labels = {{ dates|safe }};
-        const data = {
-        labels: labels,
-        datasets: [{
-            label: 'Donations',
-            backgroundColor: 'rgb(15, 184, 17)',
-            borderColor: 'rgb(15, 184, 17)',
-            data: {{ donation_data|safe }},
-        },{
-            label: 'Tickets',
-            backgroundColor: 'rgb(0, 0, 0)',
-            borderColor: 'rgb(0, 0, 0)',
-            data: {{ ticket_data|safe }}
-        }]
-        };
-        const donationChart = new Chart(
-            document.getElementById('donationChart'), {
-                type: 'line',
-                data: data,
-                options: {
-                    scales: {
-                        x: {
-                            type: 'time',
-                            time: {
-                                unit: 'day',
-                                unitStepSize: 1,
-                                displayFormats: {
-                                    'day': 'MMM DD'
-                                }
-                            },
-                            min: "{{ min|safe }}",
-                            max: "{{ now|safe }}",
-                        },
-                        y: {
-                            suggestedMax: 3000,
-                        }
-                    },
-                }
-            }
-        );
-    </script>
+
 {% else %}
 <div style="display: flex; align-items: center; justify-content: center;padding-top: 10%">
     <h6>This page is restricted, please <a href="{{ login_url }}">login</a> to continue</h6>

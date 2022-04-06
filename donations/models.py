@@ -1,6 +1,8 @@
 from django.db import models
+from django.http import JsonResponse, HttpResponse
 from bfchallenge.models import everyfriday_transaction
 from billing.models import BillingProfile
+import json
 
 DONATION_LEVEL_CHOICES = (
     ('25', 'Village Member'),
@@ -109,6 +111,9 @@ class donation_submission(models.Model):
         verbose_name_plural = 'Donations'
 
 class DonationManager(models.Manager):
+    def filter_objs(self):
+        filtered_qs = self.filter(status='complete')
+        return filtered_qs
 
     def new(self, email):
         billing_profile_qs = BillingProfile.objects.get_or_create(
@@ -122,6 +127,14 @@ class DonationManager(models.Manager):
             return self.update(nonce=nonce)
         return None
 
+    def dashboard_get_fields(self):
+        list_fields = [{'field':'amount','type':'currency'}, {'field':'first_name','type':'plain'}, {'field':'last_name','type':'plain'},  {'field':'updated','type':'datetimeShort'}]
+        return json.dumps(list_fields)
+    
+    def dashboard_display_qty(self):
+        qty = 20
+        return qty
+
 class donation(models.Model):
     billing_profile = models.ForeignKey(BillingProfile, null=True, blank=True, on_delete=models.SET_NULL)
     first_name      = models.CharField(max_length=50, unique=False)
@@ -133,16 +146,21 @@ class donation(models.Model):
     payment_method  = models.CharField(max_length=270, blank=True)
     subscription_id = models.CharField(max_length=270, null=True, blank=True)
     created         = models.DateTimeField(auto_now=True, blank=True, null=True)
-    updated         = models.DateTimeField(auto_now_add=True, blank=True, null=True)
+    updated         = models.DateTimeField(auto_now_add=True, blank=True, null=True, verbose_name='Date/Time')
     event           = models.ForeignKey(donation_event, blank=True, null=True, on_delete=models.SET_NULL)
     tags            = models.ManyToManyField(tag, blank=True)
 
     objects = DonationManager()
 
+    
     def __str__(self):
         return str(self.id)
+
+    class Meta:
+        verbose_name = 'Donation'
+        verbose_name_plural = 'Donations'
+        ordering = ['-updated']
 
     @property
     def get_full_name(self):
         return '%s %s' %(self.first_name, self.last_name)
-

@@ -1,4 +1,45 @@
 <style>
+    .changelist-add {
+        font-size: 18px;
+        margin-right: 10px
+    }
+    .changelist-delete {
+        font-size: 18px;
+        color: rgb(222, 16, 16)
+    }
+    .dashboard-list td {
+        text-transform: capitalize;
+    }
+    .dashboard-list thead td {
+        font-family: oskar;
+        font-weight: 300;
+        font-size: 20px
+    }
+    .dashboard-list tbody td {
+        padding: 10px 5px;
+        font-size: 14px;
+        color: rgb(74, 74, 74)
+    }
+    .model-list-item {
+        text-transform: capitalize;
+    }
+    .breadcrumb {
+        color:rgb(42, 107, 249);
+        font-size: 14px;
+        text-transform: capitalize
+    }
+    .breadcrumb.active {
+        color:rgb(138, 170, 233) !important
+    }
+    .breadcrumb:last-child {
+        color:rgb(42, 107, 249);
+        font-size: 14px;
+    }
+    .breadcrumb:before {
+        color:rgb(42, 107, 249);
+        font-size: 20px;
+        line-height: 24px
+    }
     #navbar {
         position: relative
     }
@@ -12,6 +53,7 @@
     }
     .admin-side-menu .list-heading {
         font-family: oskar;
+        text-transform: capitalize;
         font-size: 22px
     }
     .admin-side-menu li {
@@ -40,7 +82,7 @@
         border-bottom: dotted 2px rgb(216, 216, 216);
     }
     .card-body {
-        padding: 3%
+        padding: 1% 3%
     }
     .card .divider {
         margin-top: 10px;

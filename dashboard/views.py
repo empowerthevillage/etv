@@ -1,8 +1,10 @@
+import django
 from django.contrib.auth import authenticate, login, get_user_model
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib import messages
 from django.conf import settings
+from django.db import connection
 from django.http import HttpResponse
 from django.views.generic.edit import FormMixin
 from django.urls import reverse
@@ -20,11 +22,14 @@ from carts.models import *
 from content.models import *
 from donations.models import *
 from donors.models import *
+from etv.utils import field_type_generator
 from events.models import *
 from merchandise.models import *
 from orders.models import *
 from vbp.models import *
 from ven.models import *
+
+from .models import *
 
 from etv.mixins import NextUrlMixin, RequestFormAttachMixin
 from accounts.models import GuestEmail
@@ -99,6 +104,8 @@ def DashboardHome(request):
     #Orders
     orders = Order.objects.all()
 
+    app_list = dashboardModel.objects.all()
+
     all_dates = []
     all_donation_dates = []
     all_donation_amounts = []
@@ -145,6 +152,7 @@ def DashboardHome(request):
         ticket_amounts.append(grouped_tickets[x])
 
     context = {
+        "app_list": app_list,
         "donation_data": grouped_donations,
         "ticket_data": grouped_tickets,
         "dates": all_dates,
@@ -162,3 +170,80 @@ def DashboardHome(request):
     }
 
     return render(request,'dashboard-home.html', context)
+
+def appHome(request, appname):
+    app = dashboardModel.objects.filter(app_name=str(appname)).first()
+    model_list = dashboardModel.objects.filter(app_name=str(appname))
+    model_objs = []
+    model_names = []
+    model_names_plural = []
+    for x in model_list:
+        item = x.get_model_item
+        print(item)
+        model_objs.append(item)
+        model_names.append(item._meta.verbose_name)
+        model_names_plural.append(item._meta.verbose_name_plural)
+
+    context = {
+        "app": app,
+        "models": model_list,
+        "model_objs": model_objs,
+        "model_names": model_names,
+        "model_names_plural": model_names_plural,
+    }
+    return render(request, 'app-home.html', context)
+
+def modelHome(request, appname, model):
+    model_obj = dashboardModel.objects.filter(model_name=str(model.capitalize())).first()
+    model = django.apps.apps.get_model(str(appname), str(model))
+    filtered_objs = model.objects.filter_objs()
+    objs = model.objects.all()
+    fields = json.loads(model_obj.list_fields_JSON)
+    field_list = []
+    field_name_list = ['pk']
+    field_pairs = []
+    for x in fields:
+        item = model._meta.get_field(str(x["field"]))
+        type = x["type"]
+        field_list.append(item)
+        field_name_list.append(item.name)
+        field_pairs.append({"field": item, "type": type, "verbose": item.verbose_name})
+    data = model.objects.filter_objs().values_list(*field_name_list)
+    
+    context = {
+        "dashboardModel": model_obj,
+        "model": model,
+        "objs": objs,
+        "objs_full": filtered_objs,
+        "fields": field_pairs,
+        "field_names": field_name_list,
+        "data": data,
+    }
+    return render(request, 'model-home.html', context)
+
+def objectChange(request, appname, model, pk):
+    model = django.apps.apps.get_model(str(appname), str(model))
+    obj = model.objects.filter(pk=pk).first()
+    fields = model._meta.get_fields()
+    fields_formatted = []
+    for x in fields:
+        field_type = field_type_generator(x)
+        try:
+            formfield = x.formfield()
+            widget_html = formfield.widget.render
+        except:
+            formfield = 'manytomany'
+            widget_html = ''
+        try:
+            value = x.value_from_object(obj)
+        except:
+            value = 'here'
+        fields_formatted.append({"field": x, "type": field_type, "value": value, "formfield": formfield, "widget_html": widget_html})
+        
+    context = {
+        "model": model,
+        "obj": obj,
+        "fields": fields,
+        "fields_formatted": fields_formatted
+    }
+    return render(request, 'obj-change.html', context)

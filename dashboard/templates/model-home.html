@@ -4,31 +4,15 @@
 {% block content %}
 
 {% if request.user.is_admin %}
-{% regroup last_5_tickets by get_full_name as ticket_family %}
-<script>
-    $(document).ready(function(){
-    $('.tooltipped').tooltip();
-  });
-</script>
     <div class="row">
         <div class="col l3 hide-on-med-and-down admin-side-menu">
             <div class="side-menu-overlay">
                 <section>
                     <ul>
-                        {% regroup app_list by app_name as apps %}
-                        {% for x in apps %}
-                    
-                        <li class="list-heading">{{ x.grouper }}</li>
-                            {% for model in x.list %}
-                            <li>{{ model }}
-                                <div class="right">
-                                    <a href=""><i class="bi bi-plus-square add-model-obj tooltipped" data-position="bottom" data-tooltip="Add New {{ model }}"></i></a>
-                                    <a href="/dashboard/{{ x.grouper }}/"><i class="bi bi-window-plus view-model-objs tooltipped" data-position="top" data-tooltip="View All {{ model.model_name_plural }}"></i></a>
-                                </div>
-                            </li>
-                            
-                            {% endfor %}
-                        {% endfor %}
+                        
+                        <li class="list-heading">Accounts</li>
+                        <li>Users</li>
+                        <li>Black Friday Challenge Players</li>
                     </ul>
                 </section>
             </div>
@@ -36,28 +20,73 @@
         <div class="col s12 l9">
             <div class="admin-container">
                 <div class="row">
+                    <div class="col s12" style="margin-bottom: 10px">
+                        <a href="{{ dashboard_url }}" class="breadcrumb">Dashboard</a>
+                        <a href="/dashboard/{{ app }}">{{ dashboardModel.app_name }}</a>
+                        <a class="breadcrumb active">{{ dashboardModel.model_name }}</a>
+                      </div>
                     <div class="col s12">
                         <div class="card">
                             <div class="card-heading">
-                                <p class="card-title">Donations</p>
+                                <p class="card-title">{{ dashboardModel.model_name_plural }}</p>
                             </div>
                             <div class="card-body row">
-                                <div class="col s12 l8 xl7">
-                                    <div>
-                                        <canvas id="donationChart"></canvas>
-                                    </div>
+                                <div class="col s12">
+                                    {{ data|length }} {{ dashboardModel.model_name_plural }}
                                 </div>
-                                <div class="col s12 l4 xl5">
-                                    <h7>Latest Donations</h7>
-                                    <div class="divider"></div>
-                                    <ul class="dashboard-list">
-                                        {% for x in last_5_donations %}
-                                        <li>
-                                            <h6><b>${{ x.amount|intcomma }}</b> from {{ x.get_full_name }}</h6>
-                                            <p>{{ x.updated }}</p>
-                                        </li>
-                                        {% endfor %}
-                                    </ul>
+                                <div class="col s12">
+                                    <table class="dashboard-list highlight">
+                                        <thead>
+                                            <tr>
+                                                <td>
+                                                    <p>
+                                                        <label>
+                                                          <input type="checkbox" id="select-all">
+                                                          <span></span>
+                                                        </label>
+                                                      </p>
+                                                </td>
+                                            {% for x in fields %}
+                                                <td>{{ x.verbose }}</td>
+                                            {% endfor %}
+                                            <td class="center-align">Actions</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            {% for x in data %}
+                                            <tr>
+                                                <td>
+                                                    <p>
+                                                        <label>
+                                                          <input type="checkbox" name="line-item">
+                                                          <span></span>
+                                                        </label>
+                                                      </p>
+                                                </td>
+                                                {% for field in x|slice:"1:" %}
+                                                <td>{{ field }}</td>
+                                                {% endfor %}
+                                                
+                                                <td class="center-align">
+                                                    {% for pk in x|slice:":1" %}
+                                                    <a href="edit/{{ pk }}"><i class="bi bi-pencil-square tooltipped changelist-add"></i></a>
+                                                    {% endfor %}
+                                                    
+                                                    <i class="bi bi-trash tooltipped changelist-delete"></i>
+                                                </td>
+                                            </tr>
+                                            {% endfor %}
+                                        </tbody>
+                                    </table>
+                                    <ul class="pagination center-align">
+                                        <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+                                        <li class="active"><a href="#!">1</a></li>
+                                        <li class="waves-effect"><a href="#!">2</a></li>
+                                        <li class="waves-effect"><a href="#!">3</a></li>
+                                        <li class="waves-effect"><a href="#!">4</a></li>
+                                        <li class="waves-effect"><a href="#!">5</a></li>
+                                        <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+                                      </ul>
                                     <a class="view-more valign-wrapper" href="">View All <span class="material-icons">open_in_new</span></a>
                                 </div>
                             </div>
@@ -155,47 +184,14 @@
         </div>
     </div>
     <script>
-        
-        const labels = {{ dates|safe }};
-        const data = {
-        labels: labels,
-        datasets: [{
-            label: 'Donations',
-            backgroundColor: 'rgb(15, 184, 17)',
-            borderColor: 'rgb(15, 184, 17)',
-            data: {{ donation_data|safe }},
-        },{
-            label: 'Tickets',
-            backgroundColor: 'rgb(0, 0, 0)',
-            borderColor: 'rgb(0, 0, 0)',
-            data: {{ ticket_data|safe }}
-        }]
-        };
-        const donationChart = new Chart(
-            document.getElementById('donationChart'), {
-                type: 'line',
-                data: data,
-                options: {
-                    scales: {
-                        x: {
-                            type: 'time',
-                            time: {
-                                unit: 'day',
-                                unitStepSize: 1,
-                                displayFormats: {
-                                    'day': 'MMM DD'
-                                }
-                            },
-                            min: "{{ min|safe }}",
-                            max: "{{ now|safe }}",
-                        },
-                        y: {
-                            suggestedMax: 3000,
-                        }
-                    },
-                }
+        $('#select-all').on('change', function(){
+            if($(this).prop('checked')){
+                $('input[name="line-item"]').prop('checked', true)
             }
-        );
+            else{
+                $('input[name="line-item"]').prop('checked', false) 
+            }
+        })
     </script>
 {% else %}
 <div style="display: flex; align-items: center; justify-content: center;padding-top: 10%">

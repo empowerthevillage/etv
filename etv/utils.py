@@ -95,3 +95,41 @@ def unique_slug_generator(instance, new_slug=None):
                 )
         return unique_slug_generator(instance, new_slug=new_slug)
     return slug
+
+def field_type_generator(instance):
+    try: 
+        instance.choices
+        field_type
+        return field_type
+    except:
+        instance.choices = None
+        if instance.choices is not None:
+            field_type = 'choice'
+        else:
+            print
+            text_input = ['CharField']
+            currency_input = ['DecimalField']
+            number_input = ['BigAutoField']
+            radio_input = ['BooleanField']
+            foreign_key_input = ['ForeignKey']
+            many_to_many_input = ['ManyToManyField']
+            datetime_input = ['DateTimeField']
+
+            type = instance.get_internal_type()
+            if type in text_input:
+                field_type = 'text'
+            elif type in currency_input:
+                field_type = 'currency'
+            elif type in number_input:
+                field_type = 'number'
+            elif type in radio_input:
+                field_type = 'radio'
+            elif type in foreign_key_input:
+                field_type = 'foreignkey'
+            elif type in many_to_many_input:
+                field_type = 'manytomany'
+            elif type in datetime_input:
+                field_type = 'datetime'
+            else:
+                field_type = 'text'
+            return field_type
