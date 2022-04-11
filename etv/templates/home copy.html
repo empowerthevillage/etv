@@ -2,8 +2,13 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block title %}{{ title }}{% endblock %}
+{% block canonical %}https://www.empowerthevillage.org/{% endblock %}
+{% block seo_description %}{{ seo_description }}{% endblock %}
+
+
 {% block content %}
-    <div class="pillar-intro" style="margin-bottom: 30px;">
+    <div class="pillar-intro" xstyle="margin-bottom: 30px;">
       <div class="row pillar-intro-row z-depth-2">
         <a href="{{ ep_url }}" class="pillar-intro-link">
           <div class="col s12 l3 pillar-intro-col fade-in" style="background-image: url('{% static 'img/prosperity.svg' %}')">

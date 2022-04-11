@@ -40,6 +40,7 @@ def venForm(request):
             from_email = 'etvnotifications@gmail.com'
             confirmation_content = render_to_string('new-submission.html',
             {
+                'business_nomination': True,
                 'name': obj.nominator_name,
                 'email': obj.nominator_email,
                 'business_name': obj.business_name,
