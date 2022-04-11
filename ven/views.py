@@ -1,4 +1,6 @@
+from django.core.mail import send_mail
 from django.shortcuts import render, redirect
+from django.template.loader import render_to_string
 from .forms import BusinessForm
 from .models import FamilyNomination, Nomination
 import sweetify
@@ -34,7 +36,36 @@ def venForm(request):
             obj.twitter = nomination_form.data['twitter']
             obj.save()
             sweetify.success(request, title='Thank you!', icon='success', text="Thank you for registering for the Village Empowerment Network!", button='OK', timer=6000)
-
+            confirmation_subject = 'New VEN Submission!'
+            from_email = 'etvnotifications@gmail.com'
+            confirmation_content = render_to_string('new-submission.html',
+            {
+                'name': obj.nominator_name,
+                'email': obj.nominator_email,
+                'business_name': obj.business_name,
+                'owner_name': obj.owner_name,
+                'website': obj.website,
+                'city': obj.city,
+                'state': obj.state,
+                'phone': obj.phone,
+                'category': obj.category,
+                'subcategory': obj.subcategory,
+                'instagram': obj.instagram,
+                'facebook': obj.facebook,
+                'twitter': obj.twitter,
+                'owned': obj.nominator_owner,
+                'years_in_bus': obj.years_in_business,
+                'employees': obj.employees,
+                'revenue': obj.revenue,
+                'structure': obj.structure,
+                'bus_priority1': obj.priority1,
+                'bus_priority2': obj.priority2,
+                'bus_priority3': obj.priority3,
+            })
+            confirmation_plain_text = 'View email in browser'      
+            
+            send_mail(confirmation_subject, confirmation_plain_text, from_email, ['chandler@eliftcreations.com'], html_message=confirmation_content)
+  
         elif request.POST.get('submission-type') == 'family':
             form = request.POST
             obj = FamilyNomination()
@@ -109,6 +140,7 @@ def venForm(request):
 
             sweetify.success(request, title='Thank you!', icon='success', text="Thank you for registering for the Village Empowerment Network!", button='OK', timer=6000)
         return redirect('/village-empowerment-network-nomination')
+        
     else:
         nomination_form = BusinessForm()
     return render(
@@ -169,3 +201,10 @@ def ven_home(request):
     }
     return render(request, 'ven-home.html', context)
     
+def ven_email(request):
+    context = {
+        'business_nomination': False,
+        'personal_nomination': True,
+
+    }
+    return render(request, 'new-submission.html', context)

@@ -131,9 +131,27 @@ class DonationManager(models.Manager):
         list_fields = [{'field':'amount','type':'currency'}, {'field':'first_name','type':'plain'}, {'field':'last_name','type':'plain'},  {'field':'updated','type':'datetimeShort'}]
         return json.dumps(list_fields)
     
+    def dashboard_get_view_fields(self):
+        primary_fields = {
+            'field':'amount','type':'currency', 
+            'field':'first_name','type':'plain', 
+            'field':'last_name','type':'plain',
+            'field':'updated','type':'datetimeShort',
+            'field':'braintree_id','type':'braintree_transaction',
+            'field':'frequency','type':'plain'
+        }
+        secondary_fields = {
+
+        }
+        return [json.dumps(primary_fields), json.dumps(secondary_fields)]
+        
     def dashboard_display_qty(self):
         qty = 20
         return qty
+        
+    def dashboard_category(self):
+        category = 'donations'
+        return category
 
 class donation(models.Model):
     billing_profile = models.ForeignKey(BillingProfile, null=True, blank=True, on_delete=models.SET_NULL)
@@ -154,7 +172,7 @@ class donation(models.Model):
 
     
     def __str__(self):
-        return str(self.id)
+        return '%s %s - $%s' %(self.first_name, self.last_name, self.amount)
 
     class Meta:
         verbose_name = 'Donation'

@@ -4,6 +4,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib import messages
 from django.conf import settings
+from django.core.paginator import Paginator
 from django.db import connection
 from django.http import HttpResponse
 from django.views.generic.edit import FormMixin
@@ -171,31 +172,18 @@ def DashboardHome(request):
 
     return render(request,'dashboard-home.html', context)
 
-def appHome(request, appname):
-    app = dashboardModel.objects.filter(app_name=str(appname)).first()
-    model_list = dashboardModel.objects.filter(app_name=str(appname))
-    model_objs = []
-    model_names = []
-    model_names_plural = []
-    for x in model_list:
-        item = x.get_model_item
-        print(item)
-        model_objs.append(item)
-        model_names.append(item._meta.verbose_name)
-        model_names_plural.append(item._meta.verbose_name_plural)
-
+def appHome(request, category):
+    model_list = dashboardModel.objects.filter(category=str(category))
+    
     context = {
-        "app": app,
+        "category": category,
         "models": model_list,
-        "model_objs": model_objs,
-        "model_names": model_names,
-        "model_names_plural": model_names_plural,
     }
     return render(request, 'app-home.html', context)
 
-def modelHome(request, appname, model):
-    model_obj = dashboardModel.objects.filter(model_name=str(model.capitalize())).first()
-    model = django.apps.apps.get_model(str(appname), str(model))
+def modelHome(request, category, model):
+    model_obj = dashboardModel.objects.filter(model_name=str(model)).first()
+    model = django.apps.apps.get_model(str(model_obj.app_name), str(model))
     filtered_objs = model.objects.filter_objs()
     objs = model.objects.all()
     fields = json.loads(model_obj.list_fields_JSON)
@@ -209,7 +197,8 @@ def modelHome(request, appname, model):
         field_name_list.append(item.name)
         field_pairs.append({"field": item, "type": type, "verbose": item.verbose_name})
     data = model.objects.filter_objs().values_list(*field_name_list)
-    
+    p = Paginator(data, model_obj.display_qty)
+
     context = {
         "dashboardModel": model_obj,
         "model": model,
@@ -218,11 +207,13 @@ def modelHome(request, appname, model):
         "fields": field_pairs,
         "field_names": field_name_list,
         "data": data,
+        "p": p
     }
     return render(request, 'model-home.html', context)
 
-def objectChange(request, appname, model, pk):
-    model = django.apps.apps.get_model(str(appname), str(model))
+def objectChange(request, category, model, pk):
+    model_obj = dashboardModel.objects.filter(model_name=str(model)).first()
+    model = django.apps.apps.get_model(str(model_obj.app_name), str(model))
     obj = model.objects.filter(pk=pk).first()
     fields = model._meta.get_fields()
     fields_formatted = []
@@ -247,3 +238,23 @@ def objectChange(request, appname, model, pk):
         "fields_formatted": fields_formatted
     }
     return render(request, 'obj-change.html', context)
+
+def objectView(request, category, model, pk):
+    model_obj = dashboardModel.objects.filter(model_name=str(model)).first()
+    model = django.apps.apps.get_model(str(model_obj.app_name), str(model))
+    fields = json.loads(model_obj.view_fields)
+    print(fields)
+    field_list = []
+    field_name_list = []
+    field_pairs = []
+    for x in fields:
+        item = model._meta.get_field(str(x["field"]))
+        type = x["type"]
+        field_list.append(item)
+        field_name_list.append(item.name)
+        field_pairs.append({"field": item, "type": type, "verbose": item.verbose_name})
+    
+    context = {
+        "model": model,
+    }
+    return render(request, 'obj-view.html', context)

@@ -10,6 +10,7 @@ from donations.models import donation, donation_event
 from events.models import CompleteDonation
 from billing.models import Card, BillingProfile
 from phone_field import PhoneField
+import json
 
 import braintree
 
@@ -46,6 +47,39 @@ class DonorManager(models.Manager):
             pass
         return obj, created
 
+    def dashboard_get_fields(self):
+        list_fields = [{'field':'total','type':'currency'}, {'field':'first_name','type':'plain'}, {'field':'last_name','type':'plain'},{'field':'phone','type':'phone'},{'field':'email','type':'email'},{'field':'donor_level','type':'plain'}]
+        return json.dumps(list_fields)
+    
+    def dashboard_get_view_fields(self):
+        primary_fields = {
+                'field':'first_name','type':'plain',
+                'field':'last_name','type':'plain',
+                'field':'company','type':'plain',
+                'field':'total','type':'currency',
+                'field':'phone','type':'phone',
+                'field':'email','type':'email',
+                'field':'donor_level','type':'plain',
+                'field':'addresses','type':'manytomany'
+            }
+        secondary_fields = {
+                'field':'donations','type':'manytomany',
+            }
+        view_fields = json.dumps(primary_fields)
+        return (view_fields)
+
+    def dashboard_display_qty(self):
+        qty = 20
+        return qty
+        
+    def dashboard_category(self):
+        category = 'donations'
+        return category
+    
+    def filter_objs(self):
+        filtered_qs = Donor.objects.exclude(total=0)
+        return filtered_qs
+
 class Donor(models.Model):
     user        = models.OneToOneField(User, on_delete=models.CASCADE, null=True, blank=True)
     customer_id = models.CharField(max_length=270, null=True, blank=True)
@@ -57,7 +91,7 @@ class Donor(models.Model):
     first_name  = models.CharField(max_length=120, null=True, blank=True)
     last_name   = models.CharField(max_length=120, null=True, blank=True)
     phone       = PhoneField(blank=True, null=True)
-    donor_level = models.CharField(choices=DONATION_LEVEL_CHOICES, max_length=270, null=True, blank=True)
+    donor_level = models.CharField(max_length=270, null=True, blank=True)
     total       = models.DecimalField(max_digits=50, decimal_places=2, null=True, blank=True)
     default_mailing_address = models.ForeignKey(Address, on_delete=models.SET_NULL, related_name='default_mailing_address', null=True, blank=True)
     mailing_addresses = models.ManyToManyField(Address, blank=True, related_name='mailing_address')
@@ -82,6 +116,11 @@ class Donor(models.Model):
     def get_payment_method_url(self):
         return reverse('billing-payment-method')
     
+    class Meta:
+        verbose_name = 'Donor'
+        verbose_name_plural = 'Donors'
+        ordering = ['-total', 'last_name']
+
     @property
     def get_total(self):
         donation_list = []
@@ -94,7 +133,6 @@ class Donor(models.Model):
     @property
     def get_level(self):
         total = self.total
-        print(total)
         if total >= 25000:
             level = "Founder's Circle - Platinum"
         elif total >= 15000:
@@ -113,7 +151,8 @@ class Donor(models.Model):
             level = "Village Patron"
         elif total >= 25:
             level = "Village Member"
-        
+        else:
+            level = "Past Donor - Data Unavailable"
         return level
 
     @property
@@ -134,10 +173,14 @@ class Donor(models.Model):
         cards_qs.update(active=False)
         return cards_qs.filter(active=True).count()
 
-def donor_total_post_save_receiver(sender, instance, *args, **kwargs):
+def donor_total_pre_save_receiver(sender, instance, *args, **kwargs):
     instance.total = instance.get_total
 
-post_save.connect(donor_total_post_save_receiver, sender=Donor)
+def donor_level_pre_save_receiver(sender, instance, *args, **kwargs):
+    instance.donor_level = instance.get_level
+
+pre_save.connect(donor_total_pre_save_receiver, sender=Donor)
+pre_save.connect(donor_level_pre_save_receiver, sender=Donor)
 
 class List(models.Model):
     donors      = models.ManyToManyField(Donor)

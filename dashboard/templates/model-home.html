@@ -4,8 +4,13 @@
 {% block content %}
 
 {% if request.user.is_admin %}
+<script>
+    $(document).ready(function(){
+    $('.tooltipped').tooltip();
+  });
+</script>
     <div class="row">
-        <div class="col l3 hide-on-med-and-down admin-side-menu">
+        <div class="col l2 hide-on-med-and-down admin-side-menu">
             <div class="side-menu-overlay">
                 <section>
                     <ul>
@@ -17,13 +22,13 @@
                 </section>
             </div>
         </div>
-        <div class="col s12 l9">
+        <div class="col s12 l10">
             <div class="admin-container">
                 <div class="row">
                     <div class="col s12" style="margin-bottom: 10px">
                         <a href="{{ dashboard_url }}" class="breadcrumb">Dashboard</a>
-                        <a href="/dashboard/{{ app }}">{{ dashboardModel.app_name }}</a>
-                        <a class="breadcrumb active">{{ dashboardModel.model_name }}</a>
+                        <a href="/dashboard/{{ dashboardModel.category }}" class="breadcrumb">{{ dashboardModel.category }}</a>
+                        <a class="breadcrumb active">{{ dashboardModel.model_name }} List</a>
                       </div>
                     <div class="col s12">
                         <div class="card">
@@ -31,9 +36,11 @@
                                 <p class="card-title">{{ dashboardModel.model_name_plural }}</p>
                             </div>
                             <div class="card-body row">
-                                <div class="col s12">
-                                    {{ data|length }} {{ dashboardModel.model_name_plural }}
+                                
+                                <div class="col s12 item-counter" page-no="1">
+                                    Displaying 1-{{ p.per_page }} of {{ data|length }} {{ dashboardModel.model_name_plural }}
                                 </div>
+                                <div class="col s12" id="selected-line"></div>
                                 <div class="col s12">
                                     <table class="dashboard-list highlight">
                                         <thead>
@@ -47,135 +54,91 @@
                                                       </p>
                                                 </td>
                                             {% for x in fields %}
-                                                <td>{{ x.verbose }}</td>
+                                                <td class="field-header" data-fieldtype="{{ x.type }}">{{ x.verbose }}</td>
                                             {% endfor %}
                                             <td class="center-align">Actions</td>
                                             </tr>
                                         </thead>
-                                        <tbody>
-                                            {% for x in data %}
-                                            <tr>
-                                                <td>
-                                                    <p>
-                                                        <label>
-                                                          <input type="checkbox" name="line-item">
-                                                          <span></span>
-                                                        </label>
-                                                      </p>
-                                                </td>
-                                                {% for field in x|slice:"1:" %}
-                                                <td>{{ field }}</td>
-                                                {% endfor %}
-                                                
-                                                <td class="center-align">
-                                                    {% for pk in x|slice:":1" %}
-                                                    <a href="edit/{{ pk }}"><i class="bi bi-pencil-square tooltipped changelist-add"></i></a>
+                                        {% for page in p %}
+                                            {% if page.number == 1 %}
+                                            <tbody class="table-page" page-no="{{ page.number }}">
+                                                {% for x in page.object_list %}
+                                                <tr class="data-table-row">
+                                                    <td>
+                                                        <p>
+                                                            <label>
+                                                            <input type="checkbox" name="line-item">
+                                                            <span></span>
+                                                            </label>
+                                                        </p>
+                                                    </td>
+                                                    {% for field in x|slice:"1:" %}
+                                                        {% if field is not None %}
+                                                            <td class="data-cell">{{ field }}</td>
+                                                        {% else %}
+                                                            <td></td>
+                                                        {% endif %}
                                                     {% endfor %}
                                                     
-                                                    <i class="bi bi-trash tooltipped changelist-delete"></i>
-                                                </td>
-                                            </tr>
-                                            {% endfor %}
-                                        </tbody>
+                                                    <td class="center-align">
+                                                        {% for pk in x|slice:":1" %}
+                                                        <a href="view/{{ pk }}"><i class="bi bi-eye tooltipped changelist-view" data-position="bottom" data-tooltip="View"></i></a>
+                                                        <a href="edit/{{ pk }}"><i class="bi bi-pencil-square tooltipped changelist-add" data-position="top" data-tooltip="Edit"></i></a>
+                                                        <i class="bi bi-trash tooltipped changelist-delete" pk="{{ pk }}" data-position="bottom" data-tooltip="Delete"></i>
+                                                        {% endfor %}
+                                                        
+                                                        
+                                                    </td>
+                                                </tr>
+                                                {% endfor %}
+                                            </tbody>
+                                            {% else %}
+                                            <tbody class="table-page hidden" page-no="{{ page.number }}">
+                                                {% for x in page.object_list %}
+                                                <tr class="data-table-row">
+                                                    <td>
+                                                        <p>
+                                                            <label>
+                                                            <input type="checkbox" name="line-item">
+                                                            <span></span>
+                                                            </label>
+                                                        </p>
+                                                    </td>
+                                                    {% for field in x|slice:"1:" %}
+                                                        {% if field is not None %}
+                                                            <td class="data-cell">{{ field }}</td>
+                                                        {% else %}
+                                                            <td></td>
+                                                        {% endif %}
+                                                    {% endfor %}
+                                                    
+                                                    <td class="center-align">
+                                                        {% for pk in x|slice:":1" %}
+                                                        <a href="edit/{{ pk }}"><i class="bi bi-pencil-square tooltipped changelist-add"></i></a>
+                                                        {% endfor %}
+                                                        
+                                                        <i class="bi bi-trash tooltipped changelist-delete"></i>
+                                                    </td>
+                                                </tr>
+                                                {% endfor %}
+                                            </tbody>
+                                            {% endif %}
+                                        {% endfor %}
                                     </table>
                                     <ul class="pagination center-align">
-                                        <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
-                                        <li class="active"><a href="#!">1</a></li>
-                                        <li class="waves-effect"><a href="#!">2</a></li>
-                                        <li class="waves-effect"><a href="#!">3</a></li>
-                                        <li class="waves-effect"><a href="#!">4</a></li>
-                                        <li class="waves-effect"><a href="#!">5</a></li>
-                                        <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
-                                      </ul>
-                                    <a class="view-more valign-wrapper" href="">View All <span class="material-icons">open_in_new</span></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-group">
-                        <div class="col s12 m7">
-                            <div class="card">
-                                <div class="card-heading">
-                                    <p class="card-title">Orders</p>
-                                </div>
-                                <div class="card-body">
-                                    <h7 class="valign-wrapper" style="justify-content: center">Tickets</h7>
-                                    <div class="divider"></div>
-                                    <ul class="dashboard-list">
-                                        {% for x in ticket_family %}
-                                        <li>
-                                            <h6><b>{{ x.grouper }}</b> - {{ x.list|length }} {% if x.list|length == 1 %}Ticket{% else %}Tickets{% endif %}</h6>
-                                            {% regroup x.list by event as event_list %}
-                                            {% for event in event_list %}
-                                            <h7>{{ event.grouper }}</h7>
-                                            <ul class="dashboard-list">
-                                                {% for ticket in event.list %}
-                                                <div class="ticket-section">
-                                                    <li><b>Ticket ID:</b> {{ ticket }}</li>
-                                                    <p>{{ ticket.type }}</p>
-                                                </div>
-                                                {% endfor %}
-                                            </ul>
-                                            {% endfor %}
-                                        </li>
+                                        <li class="disabled"><a><i class="material-icons">chevron_left</i></a></li>
+                                        {% for page in p %}
+                                            {% if page.number == 1 %}
+                                            <li class="active waves-effect page-selector" page-no="1"><a>1</a></li>
+                                            {% else %}
+                                            <li class="waves-effect page-selector" page-no="{{ page.number }}"><a>{{ page.number }}</a></li>
+                                            {% endif %}
                                         {% endfor %}
-                                    </ul>
-                                    <div class="divider"></div>
-                                    <a class="view-more valign-wrapper" href="" style="justify-content: center">View All <span class="material-icons">open_in_new</span></a>
+                                        
+                                        <li class="waves-effect"><a><i class="material-icons">chevron_right</i></a></li>
+                                      </ul>
                                     
                                 </div>
-                            </div>
-                        </div>
-                        <div class="col s12 m5">
-                            <div class="card">
-                                <div class="card-heading">
-                                    <p class="card-title">Donors</p>
-                                </div>
-                                <div class="card-body">
-                                    <h7 class="valign-wrapper" style="justify-content: center"><span class="material-icons" style="color: gold">emoji_events</span>&nbsp; Top Donors</h7>
-                                    <div class="divider"></div>
-                                    <ul class="dashboard-list center-align">
-                                    {% for x in top_donors %}
-                                        <h6>{{ x.get_full_name }}</h6>
-                                        <h7 style="color: rgb(25, 171, 25); font-size: 16px">${{ x.total|intcomma }}</h7>
-                                        <li>{{ x.get_level }}</li>
-                                    {% endfor %}
-                                    </ul>
-                                    <div class="divider"></div>
-                                    <a class="view-more valign-wrapper" href="" style="justify-content: center">View All <span class="material-icons">open_in_new</span></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col s12 m4">
-                        <div class="card">
-                            <div class="card-heading">
-                                <p class="card-title">VBP</p>
-                            </div>
-                            <div class="card-body">
-                                
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col s12 m4">
-                        <div class="card">
-                            <div class="card-heading">
-                                <p class="card-title">VEN</p>
-                            </div>
-                            <div class="card-body">
-                                
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col s12 m4">
-                        <div class="card">
-                            <div class="card-heading">
-                                <p class="card-title">Merchandise</p>
-                            </div>
-                            <div class="card-body">
-                                
                             </div>
                         </div>
                     </div>
@@ -184,14 +147,49 @@
         </div>
     </div>
     <script>
+        function addCommas(x) {
+            var parts = x.toString().split(".");
+            parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+            return parts.join(".");
+        }
+    </script>
+    <script>
         $('#select-all').on('change', function(){
             if($(this).prop('checked')){
-                $('input[name="line-item"]').prop('checked', true)
+                var items = $('input[name="line-item"]').prop('checked', true)
+                $('#selected-line').text(items.length+' items selected')
             }
             else{
-                $('input[name="line-item"]').prop('checked', false) 
+                $('input[name="line-item"]').prop('checked', false)
+                $('#selected-line').text('0 items selected')
             }
-        })
+        });
+        $('input[name="line-item"]').on('change', function(){
+            var items = $('input[name="line-item"]:checkbox:checked')
+            $('#selected-line').text(items.length+' items selected')
+            
+        });
+        $('.field-header').each(function(index){
+            var type = $(this).attr('data-fieldtype')
+            var tableIndex = index+2
+            if(type == 'currency'){
+                var item = $('.data-cell:nth-of-type('+tableIndex+')')
+                $(item).each(function(){
+                    var amount = $(this).text()
+                    $(this).text('$'+addCommas(amount))
+                })
+            }else if(type == 'email'){
+                $('.data-cell:nth-of-type('+tableIndex+')').css('text-transform', 'lowercase')
+            }
+        });
+        $('.page-selector').on('click', function(){
+            var page = $(this).attr('page-no')
+            $(this).addClass('active')
+            $('.page-selector[page-no!="'+page+'"]').removeClass('active')
+            $('.table-page[page-no="'+page+'"]').removeClass('hidden')
+            $('.table-page[page-no!="'+page+'"]').addClass('hidden')
+        });
+        
     </script>
 {% else %}
 <div style="display: flex; align-items: center; justify-content: center;padding-top: 10%">

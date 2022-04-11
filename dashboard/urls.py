@@ -5,7 +5,8 @@ from .views import *
 urlpatterns = [
     path('', DashboardHome, name="home"),
     path('donor-update/', updateDonors),
-    path('<appname>/', appHome, name="app"),
-    path('<appname>/<model>-list/', modelHome, name="model"),
-    path('<appname>/<model>-list/edit/<pk>', objectChange, name="change"),
+    path('<category>/', appHome, name="category"),
+    path('<category>/<model>-list/', modelHome, name="model"),
+    path('<category>/<model>-list/edit/<pk>', objectChange, name="change"),
+    path('<category>/<model>-list/view/<pk>', objectView, name="change"),
 ]

@@ -1,6 +1,5 @@
 from django.contrib import admin
-
-from django.contrib import admin
+from dashboard.models import dashboardModel
 
 from .models import Donor, List
 from donations.models import donation
@@ -25,3 +24,5 @@ class DonorAdmin(admin.ModelAdmin):
 admin.site.register(Donor, DonorAdmin)
 admin_site.register(Donor, DonorAdmin)
 admin_site.register(List)
+
+dashboardModel.objects.dash_register(Donor)

@@ -1,3 +1,4 @@
+from http.client import HTTPResponse
 from django.shortcuts import render
 from .models import donation_submission
 from django.http.response import HttpResponse, JsonResponse
@@ -23,6 +24,12 @@ mailchimp.set_config({
 User = settings.AUTH_USER_MODEL
 gateway = settings.GATEWAY
 
+def update_donors(request):
+    donors = Donor.objects.all()
+    for x in donors:
+        x.save()
+    return HTTPResponse('success')
+    
 def send_test_email(request):
     send_mail(
         'Test!',

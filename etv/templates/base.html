@@ -32,7 +32,7 @@
 {% url 'shop' as shop_url %}
 {% url 'merchandise:list' as merchandise_url %}
 {% url 'events:home' as events_url %}
-{% url 'ven-home' as ven_url %}
+{% url 'ven:home' as ven_url %}
 {% url 'prosperity:village-at-work' as vaw_url %}
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
@@ -112,6 +112,10 @@
                   {% if request.user.is_authenticated %}
                   <a class="main-nav-link ul-effect valign-wrapper {% if request.path == events_url %}active{% endif %}" href="{{ events_url }}">Events</a>
                   <div class="navbar-slash"> | </div>
+                  {% if request.user.is_admin %}
+                  <a class="main-nav-link ul-effect valign-wrapper {% if request.path == events_url %}active{% endif %}" href="/dashboard/">Dashboard</a>
+                    <div class="navbar-slash"> | </div>
+                  {% endif %}
                   <a href="{{ account_url }}" id="account-icon"><i class="material-icons" style="color: grey; font-size: 36px; padding-top:30px;">account_circle</i></a>
                     <div class="navbar-slash"> | </div>
                   <a href="{{ logout_url }}" class="main-nav-link ul-effect valign-wrapper"> Logout</a>

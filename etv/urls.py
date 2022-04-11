@@ -168,9 +168,8 @@ urlpatterns = [
     path('policy-and-power/', include(("policy.urls", "policy"), namespace='policy')),
     path('education/', include(("education.urls", "education"), namespace='education')),
     path('ed2CSwbdsV', ven_home, name='ven-home-test'),
-    path('village-empowerment-network/', ven_home, name='ven-home'),
+    path('village-empowerment-network/', include(("ven.urls", "ven"), namespace='ven')),
     path('village-empowerment-network-nomination/', venForm, name='ven-nomination'),
-    path('village-empowerment-network-individual-nomination/', venFamilyForm, name='ven-family-nomination'),
     path('tinymce/', include('tinymce.urls')),
 ]
 
