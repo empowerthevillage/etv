@@ -1,4 +1,5 @@
 from django.contrib import admin
+from dashboard.models import dashboardModel
 
 from .models import *
 from accounts.admin import admin_site
@@ -24,3 +25,4 @@ admin_site.register(Option)
 admin_site.register(AdType)
 admin_site.register(Ad)
 admin_site.register(CompleteDonation)
+dashboardModel.objects.dash_register(Event)

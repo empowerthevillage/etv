@@ -9,6 +9,7 @@ from etv.utils import *
 from billing.models import BillingProfile
 from tinymce.models import HTMLField
 import qrcode
+import json
 from PIL import Image, ImageDraw
 import qrcode.image.svg
 from io import BytesIO
@@ -21,6 +22,40 @@ class tag(models.Model):
     tag             = models.CharField(max_length=270, blank=True, null=True)
     def __str__(self):
         return str(self.tag)
+
+class EventManager(models.Manager):
+    def filter_objs(self):
+        filtered_qs = self
+        return filtered_qs
+        
+    def dashboard_get_fields(self):
+        list_fields = [{'field':'title','type':'plain'},{'field':'date','type':'datetime'},]
+        return json.dumps(list_fields)
+    
+    def dashboard_get_view_fields(self):
+        fields = [
+            {'field':'title','type':'plain'},
+            {'field':'subtitle','type':'plain'},
+            {'field':'thumbnail','type':'img'},  
+            {'field':'content','type':'richtext'},
+            {'field':'checkout_image','type':'img'},
+            {'field':'checkout_img_link','type':'url'},
+            {'field':'checkout_video_html','type':'url'},
+            {'field':'date','type':'datetime'},
+            {'field':'start_date','type':'date'},
+            {'field':'end_date','type':'date'},
+            {'field':'start_time','type':'time'},
+            {'field':'end_time','type':'time'},
+        ]
+        return json.dumps(fields)
+    
+    def dashboard_display_qty(self):
+        qty = 10
+        return qty
+        
+    def dashboard_category(self):
+        category = 'Events'
+        return category
 
 class Event(models.Model):
     title           = models.CharField(max_length=270)
@@ -39,11 +74,18 @@ class Event(models.Model):
     thumbnail       = models.FileField(null=True, blank=True)
     price_description = models.CharField(max_length=270, null=True, blank=True)
 
+    objects         = EventManager()
+
     def get_absolute_url(self):
         return reverse("events:detail", kwargs={"slug":self.slug})
     
     def __str__(self):
         return str(self.title)
+
+    class Meta:
+        verbose_name = 'Event'
+        verbose_name_plural = 'Events'
+        ordering = ['title']
 
     @property
     def is_multiday(self):

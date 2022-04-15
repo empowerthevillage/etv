@@ -10,6 +10,7 @@ import sweetify
 import requests
 import json
 
+recaptcha_secret = settings.RECAPTCHA
 mailchimp = Client()
 mailchimp.set_config({
     "api_key": settings.MAILCHIMP_API_KEY,
@@ -31,7 +32,7 @@ def contact(request):
     if request.method == 'POST':
       contact = ContactForm(request.POST)
       grecaptcha = request.POST.get('g-recaptcha-response')
-      params = {'secret': '6LcHVW0fAAAAAB3Ylmxg3s-HzVcxX9Wdc2iD2d7N', 'response': grecaptcha}
+      params = {'secret': str(recaptcha_secret), 'response': grecaptcha}
       if grecaptcha != '':
           r = requests.post('https://www.google.com/recaptcha/api/siteverify', data = params)
           response = json.loads(r.content)
