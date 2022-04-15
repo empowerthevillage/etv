@@ -41,7 +41,17 @@ GATEWAY = braintree.BraintreeGateway(
         private_key = braintree_private,
     )
 )
-
+braintree_merchant_id_production = env('ID_PRODUCTION')
+braintree_public_production = env('PKEY_PRODUCTION')
+braintree_private_production = env('PRKEY_PRODUCTION')
+GATEWAY_PUBLIC = braintree.BraintreeGateway(
+    braintree.Configuration(
+        braintree.Environment.Production,
+        merchant_id = braintree_merchant_id_production,
+        public_key = braintree_public_production,
+        private_key = braintree_private_production,
+    )
+)
 SECRET_KEY = env('SECRET_KEY')
 
 SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = env('SOCIAL_AUTH_GOOGLE_OAUTH2_KEY')
