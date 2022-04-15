@@ -6,7 +6,7 @@
 {% block content %}
 <div id='page'>
     <div class="row center-align" style="margin-top:0px;">
-        <div class="col s12 m10 l8 offset-m1 offset-l2 login-card z-depth-2" style="background-color:#fdfdfdf1;padding-top:40px; padding-bottom:40px; padding-left: 30px; padding-right: 30px">
+        <div class="col s12 m10 offset-m1 login-card z-depth-2" style="background-color:#fdfdfdf5;padding-top:40px; padding-bottom:40px; padding-left: 30px; padding-right: 30px">
           <h6 id="vbp-nomination-form-title" style="font-size:48px">Get In Touch!</h6>
           <div class="contact" style="padding-bottom:30px">
             <p>Empower The Village, Inc.</p>
@@ -15,11 +15,23 @@
             <p>(862) 777-3193</p>
             <p><a href="mailto:info@empowerthevillage.org">info@empowerthevillage.org</a></p>
         </div>
-          <form method="POST" style="padding-left:5%; padding-right:5%;" id="nomination-form">
+          <form class="col s10 l8 xl6 offset-s1 offset-l2 offset-xl3" method="POST" id="nomination-form">
               {% csrf_token %}
-        
-              {{ contact_form }}
-          
+              <div class="input-field col s12 l6">
+                <input type="text" name="name" required>
+                <label>Name<b class="required">*</b></label>
+              </div>
+              <div class="input-field col s12 l6">
+                <input type="email" name="email" required>
+                <label>Email<b class="required">*</b></label>
+              </div>
+              <div class="input-field col s12">
+                <textarea class="materialize-textarea" name="message" required></textarea>
+                <label>Message<b class="required">*</b></label>
+              </div>
+              <div class="col s12" style="display: flex; justify-content: center; margin-top: 20px">
+                  <div class="g-recaptcha" data-sitekey="6LcHVW0fAAAAAER-1bme8PxOVWa0tgj6kso3VOlR"></div>
+              </div>
               <button class="btn btn-large submit-btn nomination-submit" type="submit">
                   SUBMIT
               </button>
@@ -94,7 +106,7 @@
     }
     #page {
       background-image: url("https://empowerthevillage.s3.amazonaws.com/static/img/VBP+collage.svg");
-      background-size: 70%;
+      background-size: 90%;
       background-repeat: repeat;
     }
     .submit-btn {

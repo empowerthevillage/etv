@@ -1,4 +1,95 @@
 <style>
+    .admin-save {
+        background:rgb(10, 184, 4);
+        font-size: 16px;
+        letter-spacing: 1px;
+    }
+    .admin-save:hover {
+        background:rgb(15, 151, 11)
+    }
+    .admin-delete {
+        background:rgb(173, 29, 29);
+        font-size: 16px;
+        letter-spacing: 1px;
+    }
+    .admin-delete:hover {
+        background:rgb(125, 18, 18)
+    }
+    .change-form div label {
+        text-transform: uppercase
+    }
+    .vbp-select .select-wrapper input.select-dropdown {
+        color: rgb(172, 172, 172);
+        height: 2.7rem
+    }
+    .vbp-select .dropdown-content li>span {
+        padding: 3px 20px
+    }
+    .vbp-select .select-wrapper+label {
+        top: -30px
+    }
+    table {
+        width: 100%;
+        display: block;
+        overflow-x: scroll
+    }
+    td {
+        max-width: 300px;
+        overflow-x: scroll;
+    }
+    .mtm-table {
+        width: 80%;
+        margin-left: 10%;
+    }
+    .card-action-row {
+        display: flex;
+        align-items: center;
+        justify-content: end;
+    }
+    .admin-bar-action {
+        width: fit-content;
+        font-size: 16px;
+        letter-spacing: 1px;
+        margin-top: 5px;
+        margin-right: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .admin-bar-action i {
+        margin-right: 5px
+    }
+    .admin-bar-edit {
+        background: rgb(6, 170, 188);
+    }
+    .admin-bar-edit:hover {
+        background: rgb(103, 159, 166);
+    }
+    .admin-bar-add {
+        background: rgb(14, 170, 6);
+    }
+    .admin-bar-add:hover {
+        background: rgb(16, 108, 11);
+    }
+    .admin-bar-delete {
+        background: rgb(193, 54, 54);
+    }
+    .admin-bar-delete:hover {
+        background: rgb(138, 57, 57);
+    }
+    .view-body {
+        padding: 3% 3% 2% 3%;
+        column-count:1;
+    }
+    .view-body label{
+        text-transform: capitalize;
+    }
+    .view-body p b{
+        text-transform: capitalize;
+    }
+    .view-body p {
+        margin-top: 0
+    }
     .breadcrumb {
         text-transform: capitalize;
     }
@@ -120,6 +211,9 @@
     .admin-container {
         padding: 3%;
     }
+    .admin-container .card {
+        padding: 1% 1% 0.25% 1%
+    }
     .dashboard-list h6 {
         font-family: oskar;
         color: black
@@ -147,5 +241,17 @@
     .ticket-section {
         padding: 8px 5%;
         border-top: solid 1px rgb(245, 245, 245)
+    }
+    @media only screen and (min-width: 601px){
+        .view-body {
+            column-count:2;
+            column-gap: 30px;
+        }
+    }
+    @media only screen and (min-width: 1201px){
+        table {
+            display: table;
+            overflow-x: scroll
+        }
     }
 </style>

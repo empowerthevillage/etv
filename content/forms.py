@@ -12,8 +12,8 @@ User = get_user_model()
 from accounts.signals import user_logged_in
 
 class ContactForm(forms.Form):
-    name = forms.CharField(label='Name', widget=forms.TextInput(attrs={'class':'textfield'}), label_suffix='')
-    email = forms.EmailField(label='Email', widget=forms.EmailInput(attrs={'class':'textfield'}), label_suffix='')
+    name = forms.CharField(label='Name', widget=forms.TextInput(attrs={}), label_suffix='')
+    email = forms.EmailField(label='Email', widget=forms.EmailInput(attrs={}), label_suffix='')
     message = forms.CharField(label='Your Message', widget=forms.Textarea(attrs={'class':'materialize-textarea'}), label_suffix='')
     
     def save(self):

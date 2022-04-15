@@ -1,129 +1,163 @@
 {% extends 'base_nofooter.html' %}
 {% load humanize %}
+{% load static %}
 
 {% block content %}
 
 {% if request.user.is_admin %}
-    <div class="row">
+    <div class="row" style="min-height: 1000px">
         <div class="col l3 hide-on-med-and-down admin-side-menu">
             <div class="side-menu-overlay">
                 <section>
                     <ul>
-                        <li class="list-heading">Accounts</li>
-                        <li>Users</li>
-                        <li>Black Friday Challenge Players</li>
+                    {% regroup app_list by category as apps %}
+                        {% for x in apps %}
+                            {% if x.grouper == 'Village Black Pages' %}
+                            <li class="list-heading">Village Black Pages</li>
+                            <li>Books
+                                <div class="right">
+                                    <a href=""><i class="bi bi-plus-square add-model-obj tooltipped" data-position="bottom" data-tooltip="Add New {{ model }}"></i></a>
+                                    <a href="/dashboard/Village%20Black%20Pages/vbp_book-list/"><i class="bi bi-window-plus view-model-objs tooltipped" data-position="top" data-tooltip="View All {{ model.model_name_plural }}"></i></a>
+                                </div>
+                            </li>
+                            <div class="input-field vbp-select" style="margin-top: 30px;width: 70%">
+                                <select id="vbp-selector">
+                                  <option value="" disabled selected>Choose A State</option>
+                                    {% for model in x.list %}
+                                        {% if model.grouping == 'vbp_state' %}
+                                            <option value="{{ model }}">{{ model.model_name_plural }}</option>
+                                        {% endif %}
+                                    {% endfor %}
+                                </select>
+                                <label style="color: black">VBP Individual Listings</label>
+                              </div>
+                            <li</li>
+                            {% else %}
+                            <li class="list-heading">{{ x.grouper }}</li>
+                                {% for model in x.list %}
+                                <li>{{ model.model_name_plural }}
+                                    <div class="right">
+                                        <a href=""><i class="bi bi-plus-square add-model-obj tooltipped" data-position="bottom" data-tooltip="Add New {{ model }}"></i></a>
+                                        <a href="/dashboard/{{ model.category }}/{{ model }}-list/"><i class="bi bi-window-plus view-model-objs tooltipped" data-position="top" data-tooltip="View All {{ model.model_name_plural }}"></i></a>
+                                    </div>
+                                </li>
+                                {% endfor %}
+                            {% endif %}
+                        {% endfor %}
                     </ul>
                 </section>
             </div>
         </div>
         <div class="col s12 l9">
             <div class="admin-container">
-                <div class="row">
+                <div class="row" style="margin-bottom:0">
                     <div class="col s12" style="margin-bottom: 10px">
                         <a href="{{ dashboard_url }}" class="breadcrumb">Dashboard</a>
-                        <a href="/dashboard/{{ model.category }}" class="breadcrumb">{{ dash_model.category }}</a>
+                        <a href="{{ dashboard_url }}" class="breadcrumb">{{ dashboardModel.category }}</a>
+                        <a href="/dashboard/{{ dashboardModel.category }}/{{ dashboardModel.model_name }}-list/" class="breadcrumb">{{ dashboardModel.model_name_verbose }} List</a>
                         <a class="breadcrumb active">{{ obj }}</a>
-                      </div>
+                    </div>
                     <div class="col s12">
                         <div class="card">
                             <div class="card-heading">
-                                <p class="card-title">{{ model.model_name_plural }}</p>
+                                <p class="card-title">{{ obj }}</p>
                             </div>
-                            {% for x in model.view_fields %}
-                                <p>{{ x }} - {{ x.field.name }}</p>
-                            {% endfor %}
+                            
+                            <div class="view-body center-align">
+                                {% for x in pairs %}
+                                    {% if x.type == 'email' %}
+                                    <p><b>{{ x.verbose }}</b>: <a href="mailto:{{x.value}}">{{ x.value }}</a></p>
+                                    {% elif x.type == 'currency' %}
+                                    <p><b>{{ x.verbose }}</b>: ${{ x.value|intcomma }}</p>
+                                    {% elif x.type == 'img' %}
+                                        {% if x.value is not None %}
+                                        <p><b>{{ x.verbose }}</b>: </p>
+                                        <img class="z-depth-1" width="50%" style="margin-bottom: 20px" src="https://empowerthevillage.s3.amazonaws.com/media/{{ x.value }}">
+                                        {% else %}
+                                        <p><b>{{ x.verbose }}</b>: Not Assigned</p>
+                                        {% endif %}
+                                    {% elif x.type == 'boolean' %}
+                                    <p><b>{{ x.verbose }}</b>: {% if x.value == True %}<i class="bi bi-check-circle" style="color: green"></i> Yes{% else %}<i class="bi bi-x-circle" style="color: red"></i> No{% endif %}</p>
+                                    {% elif x.type == 'url' %}
+                                    <p><b>{{ x.verbose }}</b>: <a href="{{ x.value }}" target="_blank">{{ x.value }}</a></p>
+                                    {% elif x.type == 'braintree_transaction' %}
+                                    <p><b>Braintree ID</b>: <a target="_blank" href="https://www.braintreegateway.com/merchants/tb3vd7jd2hynhxcn/transactions/{{ x.value }}">{{ x.value }}</a></p>
+                                    {% elif x.type == 'card-detail' %}
+                                    <p><b>Payment Method</b>: <img src="{{ x.card_logo_url }}" width="30px" style="margin-bottom: -5px"> {{ x.value }}</a></p>
+                                    {% elif x.type == 'instagram' %}
+                                    <p><b style="color: #C13584"><i class="bi bi-instagram"></i> Instagram</b>: {{ x.value }}</p>
+                                    {% elif x.type == 'facebook' %}
+                                    <p><b style="color: #3b5998"><i class="bi bi-facebook"></i> Facebook</b>: {{ x.value }}</p>
+                                    {% elif x.type == 'twitter' %}
+                                    <p><b style="color: #00acee"><i class="bi bi-twitter"></i> Twitter</b>: {{ x.value }}</p>
+                                    {% elif x.type == 'alt1' %}
+                                        {% if x.value is not None %}
+                                            <p><b>{{ x.verbose }}</b>: {{ x.value }}</p>
+                                        {% endif %}
+                                    {% elif x.type == 'alt2' %}
+                                        {% if x.value is not None %}
+                                            <p><b>{{ x.verbose }}</b>: {{ x.value }}</p>
+                                        {% endif %}
+                                    {% elif x.type == 'manytomany' %}
+                                    {% else %}
+                                    <p style="text-transform: capitalize"><b>{{ x.verbose }}</b>: {{ x.value }}</p>
+                                    {% endif %}
+                                {% endfor %}
+                            </div>
+                            <div class="row">
+                                <div class="col s12 card-action-row">
+                                        <a href="/dashboard/{{ dashboardModel.category }}/{{ dashboardModel.model_name }}-list/edit/{{ obj.pk }}" class="btn admin-bar-action admin-bar-edit"><i class="bi bi-pencil-square"></i> Edit</a>
+                                  
+                                        <div class="btn admin-bar-action admin-bar-delete"><i class="bi bi-trash3-fill"></i> Delete</div>
+
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-group">
-                        <div class="col s12 m7">
-                            <div class="card">
-                                <div class="card-heading">
-                                    <p class="card-title">Orders</p>
-                                </div>
-                                <div class="card-body">
-                                    <h7 class="valign-wrapper" style="justify-content: center">Tickets</h7>
-                                    <div class="divider"></div>
-                                    <ul class="dashboard-list">
-                                        {% for x in ticket_family %}
-                                        <li>
-                                            <h6><b>{{ x.grouper }}</b> - {{ x.list|length }} {% if x.list|length == 1 %}Ticket{% else %}Tickets{% endif %}</h6>
-                                            {% regroup x.list by event as event_list %}
-                                            {% for event in event_list %}
-                                            <h7>{{ event.grouper }}</h7>
-                                            <ul class="dashboard-list">
-                                                {% for ticket in event.list %}
-                                                <div class="ticket-section">
-                                                    <li><b>Ticket ID:</b> {{ ticket }}</li>
-                                                    <p>{{ ticket.type }}</p>
-                                                </div>
+                    {% for x in pairs %}
+                        {% if x.type == "manytomany" %}
+                            <div class="col s12">
+                                <div class="card" style="padding-bottom: 3%">
+                                    <div class="card-heading">
+                                        <p class="card-title">{{ x.verbose }}</p>
+                                    </div>
+                                    <div class="view-body-mtm center-align">
+                                        <table class="highlight mtm-table centered">
+                                            <tbody>
+                                                {% if x.field.name == 'donations' %}
+                                                {% regroup x.value by status as donationlist %}
+                                                    {% for group in donationlist %}
+                                                        <tr>
+                                                            <td><b style="text-transform: capitalize; color: rgb(175, 175, 175)">{{ group.grouper }}</b></td>
+                                                        </tr>
+                                                        {% for item in group.list %}
+                                                        <tr>
+                                                        <td><b>{{ item.updated }}</b>: ${{ item.amount }} <a href="/dashboard/donations/donation-list/view/{{ item.pk }}"><i class="bi bi-box-arrow-up-right"></i></a></td>
+                                                        </tr>
+                                                        {% endfor %}
+                                                    {% endfor %}
+                                                {% endif %}
+                                                {% for item in x.value %}
+                                                <tr>
+                                                    {% if x.field.name != 'donations' %}
+                                                   
+                                                    <td>{{ item }}</td>
+                                                    {% endif %}
+                                                </tr>
                                                 {% endfor %}
-                                            </ul>
-                                            {% endfor %}
-                                        </li>
-                                        {% endfor %}
-                                    </ul>
-                                    <div class="divider"></div>
-                                    <a class="view-more valign-wrapper" href="" style="justify-content: center">View All <span class="material-icons">open_in_new</span></a>
+                                            </tbody>
+                                        </table>
                                     
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col s12 m5">
-                            <div class="card">
-                                <div class="card-heading">
-                                    <p class="card-title">Donors</p>
-                                </div>
-                                <div class="card-body">
-                                    <h7 class="valign-wrapper" style="justify-content: center"><span class="material-icons" style="color: gold">emoji_events</span>&nbsp; Top Donors</h7>
-                                    <div class="divider"></div>
-                                    <ul class="dashboard-list center-align">
-                                    {% for x in top_donors %}
-                                        <h6>{{ x.get_full_name }}</h6>
-                                        <h7 style="color: rgb(25, 171, 25); font-size: 16px">${{ x.total|intcomma }}</h7>
-                                        <li>{{ x.get_level }}</li>
-                                    {% endfor %}
-                                    </ul>
-                                    <div class="divider"></div>
-                                    <a class="view-more valign-wrapper" href="" style="justify-content: center">View All <span class="material-icons">open_in_new</span></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col s12 m4">
-                        <div class="card">
-                            <div class="card-heading">
-                                <p class="card-title">VBP</p>
-                            </div>
-                            <div class="card-body">
-                                
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col s12 m4">
-                        <div class="card">
-                            <div class="card-heading">
-                                <p class="card-title">VEN</p>
-                            </div>
-                            <div class="card-body">
-                                
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col s12 m4">
-                        <div class="card">
-                            <div class="card-heading">
-                                <p class="card-title">Merchandise</p>
-                            </div>
-                            <div class="card-body">
-                                
-                            </div>
-                        </div>
-                    </div>
+                        {% endif %}
+                    {% endfor %}
                 </div>
             </div>
+            
         </div>
+        
     </div>
     <script>
         $('#select-all').on('change', function(){
@@ -135,6 +169,13 @@
             }
         });
         
+    </script>
+    <script>
+        $('#vbp-selector').on('change',function(){
+            var selected = $(this).find(':selected')
+            var url = '/dashboard/Village%20Black%20Pages/'+selected.val()+'-list/'
+            window.location.replace(url)
+        })
     </script>
 {% else %}
 <div style="display: flex; align-items: center; justify-content: center;padding-top: 10%">

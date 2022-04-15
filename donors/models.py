@@ -52,21 +52,18 @@ class DonorManager(models.Manager):
         return json.dumps(list_fields)
     
     def dashboard_get_view_fields(self):
-        primary_fields = {
-                'field':'first_name','type':'plain',
-                'field':'last_name','type':'plain',
-                'field':'company','type':'plain',
-                'field':'total','type':'currency',
-                'field':'phone','type':'phone',
-                'field':'email','type':'email',
-                'field':'donor_level','type':'plain',
-                'field':'addresses','type':'manytomany'
-            }
-        secondary_fields = {
-                'field':'donations','type':'manytomany',
-            }
-        view_fields = json.dumps(primary_fields)
-        return (view_fields)
+        fields = [
+            {'field':'email','type':'email'},
+            {'field':'phone','type':'phone'},
+            {'field':'total','type':'currency'},
+            {'field':'donor_level','type':'plain'},
+            {'field':'company','type':'plain'},
+            
+            
+            {'field':'mailing_addresses','type':'manytomany'},
+            {'field':'donations','type':'manytomany'},
+        ]
+        return json.dumps(fields)
 
     def dashboard_display_qty(self):
         qty = 20
@@ -108,7 +105,7 @@ class Donor(models.Model):
         return "%s %s" %(self.first_name, self.last_name)
 
     def __str__(self):
-        return str(self.id)
+        return self.get_full_name()
 
     def get_cards(self):
         return self.card_set.all()

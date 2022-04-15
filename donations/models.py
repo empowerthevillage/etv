@@ -111,10 +111,6 @@ class donation_submission(models.Model):
         verbose_name_plural = 'Donations'
 
 class DonationManager(models.Manager):
-    def filter_objs(self):
-        filtered_qs = self.filter(status='complete')
-        return filtered_qs
-
     def new(self, email):
         billing_profile_qs = BillingProfile.objects.get_or_create(
             email=email
@@ -127,24 +123,26 @@ class DonationManager(models.Manager):
             return self.update(nonce=nonce)
         return None
 
+    def filter_objs(self):
+        filtered_qs = self.filter(status='complete')
+        return filtered_qs
+        
     def dashboard_get_fields(self):
         list_fields = [{'field':'amount','type':'currency'}, {'field':'first_name','type':'plain'}, {'field':'last_name','type':'plain'},  {'field':'updated','type':'datetimeShort'}]
         return json.dumps(list_fields)
     
     def dashboard_get_view_fields(self):
-        primary_fields = {
-            'field':'amount','type':'currency', 
-            'field':'first_name','type':'plain', 
-            'field':'last_name','type':'plain',
-            'field':'updated','type':'datetimeShort',
-            'field':'braintree_id','type':'braintree_transaction',
-            'field':'frequency','type':'plain'
-        }
-        secondary_fields = {
-
-        }
-        return [json.dumps(primary_fields), json.dumps(secondary_fields)]
-        
+        fields = [
+            {'field':'amount','type':'currency'}, 
+            {'field':'first_name','type':'plain'}, 
+            {'field':'last_name','type':'plain'},
+            {'field':'status','type':'plain'},
+            {'field':'updated','type':'datetimeShort'},
+            {'field':'braintree_id','type':'braintree_transaction'},
+            {'field':'frequency','type':'plain'}
+        ]
+        return json.dumps(fields)
+    
     def dashboard_display_qty(self):
         qty = 20
         return qty

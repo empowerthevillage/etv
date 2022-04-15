@@ -11,6 +11,7 @@ from phone_field import PhoneField
 
 import geocoder
 import django_filters
+import json
 
 User = settings.AUTH_USER_MODEL
 
@@ -118,6 +119,48 @@ class vbpManager(models.Manager):
     def get_queryset(self):
         return super().get_queryset().filter(approved=True)
 
+class vbpStateManager(models.Manager):
+    def filter_objs(self):
+        filtered_qs = self
+        return filtered_qs
+        
+    def dashboard_get_fields(self):
+        list_fields = [{'field':'business_name','type':'plain'},{'field':'city','type':'plain'},{'field':'category','type':'plain'},{'field':'subcategory','type':'plain'},{'field':'approved','type':'plain'},]
+        return json.dumps(list_fields)
+    
+    def dashboard_get_view_fields(self):
+        fields = [
+            {'field':'business_name','type':'plain'},
+            {'field':'category','type':'plain'}, 
+            {'field':'subcategory','type':'plain'},
+            {'field':'website','type':'url'},
+            {'field':'phone','type':'plain'}, 
+            {'field':'city','type':'plain'},
+            {'field':'county','type':'plain'},
+
+            {'field':'owner_name','type':'plain'},
+            {'field':'owner_email','type':'email'},
+
+            {'field':'instagram','type':'instagram'},
+            {'field':'facebook','type':'facebook'},
+            {'field':'twitter','type':'twitter'},
+
+            {'field':'approved','type':'boolean'},
+        ]
+        return json.dumps(fields)
+    
+    def dashboard_display_qty(self):
+        qty = 100
+        return qty
+        
+    def dashboard_category(self):
+        category = 'Village Black Pages'
+        return category
+    
+    def get_grouping(self):
+        grouping = "vbp_state"
+        return grouping
+
 class vbp(models.Model):
     directory_source  = models.CharField(max_length=200, null=True, blank=True)
     business_name    = models.CharField(max_length=200)
@@ -142,6 +185,7 @@ class vbp(models.Model):
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
     user             = models.ForeignKey(User, models.SET_NULL, null=True, blank=True)
     team             = models.ForeignKey(Team, models.SET_NULL, null=True, blank=True)
+    objects         = vbpStateManager()
 
     unapproved_objects = vbpManager()
 
@@ -152,8 +196,36 @@ class vbp(models.Model):
          return self.approved
 
     class Meta:
+        ordering = ['category', 'city', 'business_name']
         verbose_name = 'VBP Listing'
         verbose_name_plural = 'VBP Listings'
+
+class vbpBookManager(models.Manager):
+    def filter_objs(self):
+        filtered_qs = self
+        return filtered_qs
+        
+    def dashboard_get_fields(self):
+        list_fields = [{'field':'state','type':'plain'},{'field':'published','type':'boolean'},]
+        return json.dumps(list_fields)
+    
+    def dashboard_get_view_fields(self):
+        fields = [
+            {'field':'state','type':'plain'},
+            {'field':'cover','type':'img'}, 
+            {'field':'published','type':'boolean'},
+            {'field':'latitude','type':'coordinate'},
+            {'field':'longitude','type':'coordinate'},
+        ]
+        return json.dumps(fields)
+    
+    def dashboard_display_qty(self):
+        qty = 52
+        return qty
+        
+    def dashboard_category(self):
+        category = 'Village Black Pages'
+        return category
 
 class vbp_book(models.Model):
     state           = models.CharField(max_length=50, choices=STATE_CHOICES)
@@ -162,6 +234,8 @@ class vbp_book(models.Model):
     cover           = models.ImageField(null=True, blank=True)
     published       = models.BooleanField(default=False)
     featured        = models.BooleanField(default=False)
+    
+    objects         = vbpBookManager()
     
     def __str__(self):
         return str(self.state)
@@ -173,6 +247,7 @@ class vbp_book(models.Model):
     class Meta:
         verbose_name = 'VBP Book'
         verbose_name_plural = 'Books'
+        ordering = ['-published', 'state']
 
 class vbp_al(models.Model):
     directory_source  = models.CharField(max_length=200, null=True, blank=True)
@@ -198,6 +273,7 @@ class vbp_al(models.Model):
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
     user             = models.ForeignKey(User, models.SET_NULL, null=True, blank=True)
     team             = models.ForeignKey(Team, models.SET_NULL, null=True, blank=True)
+    objects         = vbpStateManager()
 
     def __str__(self):
         return str(self.business_name)
@@ -206,6 +282,7 @@ class vbp_al(models.Model):
          return self.approved
 
     class Meta:
+        ordering = ['category', 'city', 'business_name']
         verbose_name = 'Alabama Listing'
         verbose_name_plural = 'Alabama Listings'
 
@@ -233,6 +310,7 @@ class vbp_ak(models.Model):
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
     user             = models.ForeignKey(User, models.SET_NULL, null=True, blank=True)
     team             = models.ForeignKey(Team, models.SET_NULL, null=True, blank=True)
+    objects         = vbpStateManager()
 
     def __str__(self):
         return str(self.business_name)
@@ -241,6 +319,7 @@ class vbp_ak(models.Model):
          return self.approved
 
     class Meta:
+        ordering = ['category', 'city', 'business_name']
         verbose_name = 'Alaska Listing'
         verbose_name_plural = 'Alaska Listings'
 
@@ -268,6 +347,7 @@ class vbp_az(models.Model):
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
     user             = models.ForeignKey(User, models.SET_NULL, null=True, blank=True)
     team             = models.ForeignKey(Team, models.SET_NULL, null=True, blank=True)
+    objects         = vbpStateManager()
 
     def __str__(self):
         return str(self.business_name)
@@ -276,6 +356,7 @@ class vbp_az(models.Model):
          return self.approved
 
     class Meta:
+        ordering = ['category', 'city', 'business_name']
         verbose_name = 'Arizona Listing'
         verbose_name_plural = 'Arizona Listings'
 
@@ -303,6 +384,7 @@ class vbp_ar(models.Model):
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
     user             = models.ForeignKey(User, models.SET_NULL, null=True, blank=True)
     team             = models.ForeignKey(Team, models.SET_NULL, null=True, blank=True)
+    objects         = vbpStateManager()
 
     def __str__(self):
         return str(self.business_name)
@@ -311,6 +393,7 @@ class vbp_ar(models.Model):
          return self.approved
 
     class Meta:
+        ordering = ['category', 'city', 'business_name']
         verbose_name = 'Arkansas Listing'
         verbose_name_plural = 'Arkansas Listings'
 
@@ -338,6 +421,7 @@ class vbp_ca(models.Model):
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
     user             = models.ForeignKey(User, models.SET_NULL, null=True, blank=True)
     team             = models.ForeignKey(Team, models.SET_NULL, null=True, blank=True)
+    objects         = vbpStateManager()
 
     def __str__(self):
         return str(self.business_name)
@@ -346,6 +430,7 @@ class vbp_ca(models.Model):
          return self.approved
 
     class Meta:
+        ordering = ['category', 'city', 'business_name']
         verbose_name = 'California Listing'
         verbose_name_plural = 'California Listings'
 
@@ -373,6 +458,7 @@ class vbp_co(models.Model):
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
     user             = models.ForeignKey(User, models.SET_NULL, null=True, blank=True)
     team             = models.ForeignKey(Team, models.SET_NULL, null=True, blank=True)
+    objects         = vbpStateManager()
 
     def __str__(self):
         return str(self.business_name)
@@ -381,6 +467,7 @@ class vbp_co(models.Model):
          return self.approved
 
     class Meta:
+        ordering = ['category', 'city', 'business_name']
         verbose_name = 'Colorado Listing'
         verbose_name_plural = 'Colorado Listings'
 
@@ -408,6 +495,7 @@ class vbp_ct(models.Model):
     updated          = models.DateTimeField(auto_now=True, null=True, blank=True)
     user             = models.ForeignKey(User, models.SET_NULL, null=True, blank=True)
     team             = models.ForeignKey(Team, models.SET_NULL, null=True, blank=True)
+    objects         = vbpStateManager()
 
     def __str__(self):
         return str(self.business_name)
@@ -416,6 +504,7 @@ class vbp_ct(models.Model):
          return self.approved
 
     class Meta:
+        ordering = ['category', 'city', 'business_name']
         verbose_name = 'Connecticut Listing'
         verbose_name_plural = 'Connecticut Listings'
 
@@ -443,6 +532,7 @@ class vbp_de(models.Model):
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
     user             = models.ForeignKey(User, models.SET_NULL, null=True, blank=True)
     team             = models.ForeignKey(Team, models.SET_NULL, null=True, blank=True)
+    objects         = vbpStateManager()
 
     def __str__(self):
         return str(self.business_name)
@@ -451,6 +541,7 @@ class vbp_de(models.Model):
          return self.approved
 
     class Meta:
+        ordering = ['category', 'city', 'business_name']
         verbose_name = 'Delaware Listing'
         verbose_name_plural = 'Delaware Listings'
 
@@ -478,6 +569,7 @@ class vbp_dc(models.Model):
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
     user             = models.ForeignKey(User, models.SET_NULL, null=True, blank=True)
     team             = models.ForeignKey(Team, models.SET_NULL, null=True, blank=True)
+    objects         = vbpStateManager()
 
     def __str__(self):
         return str(self.business_name)
@@ -486,6 +578,7 @@ class vbp_dc(models.Model):
          return self.approved
 
     class Meta:
+        ordering = ['category', 'city', 'business_name']
         verbose_name = 'DC Listing'
         verbose_name_plural = 'DC Listings'
 
@@ -513,6 +606,7 @@ class vbp_fl(models.Model):
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
     user             = models.ForeignKey(User, models.SET_NULL, null=True, blank=True)
     team             = models.ForeignKey(Team, models.SET_NULL, null=True, blank=True)
+    objects         = vbpStateManager()
 
     def __str__(self):
         return str(self.business_name)
@@ -521,6 +615,7 @@ class vbp_fl(models.Model):
          return self.approved
 
     class Meta:
+        ordering = ['category', 'city', 'business_name']
         verbose_name = 'Florida Listing'
         verbose_name_plural = 'Florida Listings'
 
@@ -548,6 +643,7 @@ class vbp_ga(models.Model):
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
     user             = models.ForeignKey(User, models.SET_NULL, null=True, blank=True)
     team             = models.ForeignKey(Team, models.SET_NULL, null=True, blank=True)
+    objects         = vbpStateManager()
 
     def __str__(self):
         return str(self.business_name)
@@ -556,6 +652,7 @@ class vbp_ga(models.Model):
          return self.approved
 
     class Meta:
+        ordering = ['category', 'city', 'business_name']
         verbose_name = 'Georgia Listing'
         verbose_name_plural = 'Georgia Listings'
 
@@ -583,6 +680,7 @@ class vbp_hi(models.Model):
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
     user             = models.ForeignKey(User, models.SET_NULL, null=True, blank=True)
     team             = models.ForeignKey(Team, models.SET_NULL, null=True, blank=True)
+    objects         = vbpStateManager()
 
     def __str__(self):
         return str(self.business_name)
@@ -591,6 +689,7 @@ class vbp_hi(models.Model):
          return self.approved
 
     class Meta:
+        ordering = ['category', 'city', 'business_name']
         verbose_name = 'Hawaii Listing'
         verbose_name_plural = 'Hawaii Listings'
 
@@ -618,6 +717,7 @@ class vbp_id(models.Model):
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
     user             = models.ForeignKey(User, models.SET_NULL, null=True, blank=True)
     team             = models.ForeignKey(Team, models.SET_NULL, null=True, blank=True)
+    objects         = vbpStateManager()
 
     def __str__(self):
         return str(self.business_name)
@@ -626,6 +726,7 @@ class vbp_id(models.Model):
          return self.approved
 
     class Meta:
+        ordering = ['category', 'city', 'business_name']
         verbose_name = 'Idaho Listing'
         verbose_name_plural = 'Idaho Listings'
 
@@ -653,6 +754,7 @@ class vbp_il(models.Model):
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
     user             = models.ForeignKey(User, models.SET_NULL, null=True, blank=True)
     team             = models.ForeignKey(Team, models.SET_NULL, null=True, blank=True)
+    objects         = vbpStateManager()
 
     def __str__(self):
         return str(self.business_name)
@@ -661,6 +763,7 @@ class vbp_il(models.Model):
          return self.approved
 
     class Meta:
+        ordering = ['category', 'city', 'business_name']
         verbose_name = 'Illinois Listing'
         verbose_name_plural = 'Illinois Listings'
 
@@ -688,6 +791,7 @@ class vbp_in(models.Model):
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
     user             = models.ForeignKey(User, models.SET_NULL, null=True, blank=True)
     team             = models.ForeignKey(Team, models.SET_NULL, null=True, blank=True)
+    objects         = vbpStateManager()
 
     def __str__(self):
         return str(self.business_name)
@@ -696,6 +800,7 @@ class vbp_in(models.Model):
          return self.approved
 
     class Meta:
+        ordering = ['category', 'city', 'business_name']
         verbose_name = 'Indiana Listing'
         verbose_name_plural = 'Indiana Listings'
 
@@ -723,6 +828,7 @@ class vbp_ia(models.Model):
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
     user             = models.ForeignKey(User, models.SET_NULL, null=True, blank=True)
     team             = models.ForeignKey(Team, models.SET_NULL, null=True, blank=True)
+    objects         = vbpStateManager()
 
     def __str__(self):
         return str(self.business_name)
@@ -731,6 +837,7 @@ class vbp_ia(models.Model):
          return self.approved
 
     class Meta:
+        ordering = ['category', 'city', 'business_name']
         verbose_name = 'Iowa Listing'
         verbose_name_plural = 'Iowa Listings'
 
@@ -758,6 +865,7 @@ class vbp_ks(models.Model):
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
     user             = models.ForeignKey(User, models.SET_NULL, null=True, blank=True)
     team             = models.ForeignKey(Team, models.SET_NULL, null=True, blank=True)
+    objects         = vbpStateManager()
 
     def __str__(self):
         return str(self.business_name)
@@ -766,6 +874,7 @@ class vbp_ks(models.Model):
          return self.approved
 
     class Meta:
+        ordering = ['category', 'city', 'business_name']
         verbose_name = 'Kansas Listing'
         verbose_name_plural = 'Kansas Listings'
 
@@ -793,6 +902,7 @@ class vbp_ky(models.Model):
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
     user             = models.ForeignKey(User, models.SET_NULL, null=True, blank=True)
     team             = models.ForeignKey(Team, models.SET_NULL, null=True, blank=True)
+    objects         = vbpStateManager()
 
     def __str__(self):
         return str(self.business_name)
@@ -801,6 +911,7 @@ class vbp_ky(models.Model):
          return self.approved
 
     class Meta:
+        ordering = ['category', 'city', 'business_name']
         verbose_name = 'Kentucky Listing'
         verbose_name_plural = 'Kentucky Listings'
 
@@ -829,6 +940,7 @@ class vbp_la(models.Model):
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
     user             = models.ForeignKey(User, models.SET_NULL, null=True, blank=True)
     team             = models.ForeignKey(Team, models.SET_NULL, null=True, blank=True)
+    objects         = vbpStateManager()
 
     def __str__(self):
         return str(self.business_name)
@@ -837,6 +949,7 @@ class vbp_la(models.Model):
          return self.approved
 
     class Meta:
+        ordering = ['category', 'city', 'business_name']
         verbose_name = 'Louisiana Listing'
         verbose_name_plural = 'Louisiana Listings'
 
@@ -864,6 +977,7 @@ class vbp_me(models.Model):
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
     user             = models.ForeignKey(User, models.SET_NULL, null=True, blank=True)
     team             = models.ForeignKey(Team, models.SET_NULL, null=True, blank=True)
+    objects         = vbpStateManager()
 
     def __str__(self):
         return str(self.business_name)
@@ -872,6 +986,7 @@ class vbp_me(models.Model):
          return self.approved
 
     class Meta:
+        ordering = ['category', 'city', 'business_name']
         verbose_name = 'Maine Listing'
         verbose_name_plural = 'Maine Listings'
 
@@ -899,6 +1014,7 @@ class vbp_md(models.Model):
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
     user             = models.ForeignKey(User, models.SET_NULL, null=True, blank=True)
     team             = models.ForeignKey(Team, models.SET_NULL, null=True, blank=True)
+    objects         = vbpStateManager()
 
     def __str__(self):
         return str(self.business_name)
@@ -907,6 +1023,7 @@ class vbp_md(models.Model):
          return self.approved
 
     class Meta:
+        ordering = ['category', 'city', 'business_name']
         verbose_name = 'Maryland Listing'
         verbose_name_plural = 'Maryland Listings'
 
@@ -934,6 +1051,7 @@ class vbp_ma(models.Model):
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
     user             = models.ForeignKey(User, models.SET_NULL, null=True, blank=True)
     team             = models.ForeignKey(Team, models.SET_NULL, null=True, blank=True)
+    objects         = vbpStateManager()
 
     def __str__(self):
         return str(self.business_name)
@@ -942,6 +1060,7 @@ class vbp_ma(models.Model):
          return self.approved
 
     class Meta:
+        ordering = ['category', 'city', 'business_name']
         verbose_name = 'Massachusetts Listing'
         verbose_name_plural = 'Massachusetts Listings'
 
@@ -969,6 +1088,7 @@ class vbp_mi(models.Model):
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
     user             = models.ForeignKey(User, models.SET_NULL, null=True, blank=True)
     team             = models.ForeignKey(Team, models.SET_NULL, null=True, blank=True)
+    objects         = vbpStateManager()
 
     def __str__(self):
         return str(self.business_name)
@@ -977,6 +1097,7 @@ class vbp_mi(models.Model):
          return self.approved
 
     class Meta:
+        ordering = ['category', 'city', 'business_name']
         verbose_name = 'Michigan Listing'
         verbose_name_plural = 'Michigan Listings'
 
@@ -1004,6 +1125,7 @@ class vbp_mn(models.Model):
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
     user             = models.ForeignKey(User, models.SET_NULL, null=True, blank=True)
     team             = models.ForeignKey(Team, models.SET_NULL, null=True, blank=True)
+    objects         = vbpStateManager()
 
     def __str__(self):
         return str(self.business_name)
@@ -1012,6 +1134,7 @@ class vbp_mn(models.Model):
          return self.approved
 
     class Meta:
+        ordering = ['category', 'city', 'business_name']
         verbose_name = 'Minnesota Listing'
         verbose_name_plural = 'Minnesota Listings'
 
@@ -1039,6 +1162,7 @@ class vbp_ms(models.Model):
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
     user             = models.ForeignKey(User, models.SET_NULL, null=True, blank=True)
     team             = models.ForeignKey(Team, models.SET_NULL, null=True, blank=True)
+    objects         = vbpStateManager()
 
     def __str__(self):
         return str(self.business_name)
@@ -1047,6 +1171,7 @@ class vbp_ms(models.Model):
          return self.approved
 
     class Meta:
+        ordering = ['category', 'city', 'business_name']
         verbose_name = 'Mississippi Listing'
         verbose_name_plural = 'Mississippi Listings'
 
@@ -1074,6 +1199,7 @@ class vbp_mo(models.Model):
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
     user             = models.ForeignKey(User, models.SET_NULL, null=True, blank=True)
     team             = models.ForeignKey(Team, models.SET_NULL, null=True, blank=True)
+    objects         = vbpStateManager()
 
     def __str__(self):
         return str(self.business_name)
@@ -1082,6 +1208,7 @@ class vbp_mo(models.Model):
          return self.approved
 
     class Meta:
+        ordering = ['category', 'city', 'business_name']
         verbose_name = 'Missouri Listing'
         verbose_name_plural = 'Missouri Listings'
 
@@ -1109,6 +1236,7 @@ class vbp_mt(models.Model):
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
     user             = models.ForeignKey(User, models.SET_NULL, null=True, blank=True)
     team             = models.ForeignKey(Team, models.SET_NULL, null=True, blank=True)
+    objects         = vbpStateManager()
 
     def __str__(self):
         return str(self.business_name)
@@ -1117,6 +1245,7 @@ class vbp_mt(models.Model):
          return self.approved
 
     class Meta:
+        ordering = ['category', 'city', 'business_name']
         verbose_name = 'Montana Listing'
         verbose_name_plural = 'Montana Listings'
 
@@ -1144,6 +1273,7 @@ class vbp_ne(models.Model):
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
     user             = models.ForeignKey(User, models.SET_NULL, null=True, blank=True)
     team             = models.ForeignKey(Team, models.SET_NULL, null=True, blank=True)
+    objects         = vbpStateManager()
 
     def __str__(self):
         return str(self.business_name)
@@ -1152,6 +1282,7 @@ class vbp_ne(models.Model):
          return self.approved
 
     class Meta:
+        ordering = ['category', 'city', 'business_name']
         verbose_name = 'Nebraska Listing'
         verbose_name_plural = 'Nebraska Listings'
 
@@ -1179,6 +1310,7 @@ class vbp_nv(models.Model):
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
     user             = models.ForeignKey(User, models.SET_NULL, null=True, blank=True)
     team             = models.ForeignKey(Team, models.SET_NULL, null=True, blank=True)
+    objects         = vbpStateManager()
 
     def __str__(self):
         return str(self.business_name)
@@ -1187,6 +1319,7 @@ class vbp_nv(models.Model):
          return self.approved
 
     class Meta:
+        ordering = ['category', 'city', 'business_name']
         verbose_name = 'Nevada Listing'
         verbose_name_plural = 'Nevada Listings'
 
@@ -1214,6 +1347,7 @@ class vbp_nh(models.Model):
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
     user             = models.ForeignKey(User, models.SET_NULL, null=True, blank=True)
     team             = models.ForeignKey(Team, models.SET_NULL, null=True, blank=True)
+    objects         = vbpStateManager()
 
     def __str__(self):
         return str(self.business_name)
@@ -1222,6 +1356,7 @@ class vbp_nh(models.Model):
          return self.approved
 
     class Meta:
+        ordering = ['category', 'city', 'business_name']
         verbose_name = 'New Hampshire Listing'
         verbose_name_plural = 'New Hampshire Listings'
 
@@ -1249,6 +1384,7 @@ class vbp_nj(models.Model):
     updated          = models.DateTimeField(auto_now=True, null=True, blank=True)
     user             = models.ForeignKey(User, models.SET_NULL, null=True, blank=True)
     team             = models.ForeignKey(Team, models.SET_NULL, null=True, blank=True)
+    objects         = vbpStateManager()
 
     def __str__(self):
         return str(self.business_name)
@@ -1257,6 +1393,7 @@ class vbp_nj(models.Model):
          return self.approved
 
     class Meta:
+        ordering = ['category', 'city', 'business_name']
         verbose_name = 'New Jersey Listing'
         verbose_name_plural = 'New Jersey Listings'
 
@@ -1284,6 +1421,7 @@ class vbp_nm(models.Model):
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
     user             = models.ForeignKey(User, models.SET_NULL, null=True, blank=True)
     team             = models.ForeignKey(Team, models.SET_NULL, null=True, blank=True)
+    objects         = vbpStateManager()
 
     def __str__(self):
         return str(self.business_name)
@@ -1292,6 +1430,7 @@ class vbp_nm(models.Model):
          return self.approved
 
     class Meta:
+        ordering = ['category', 'city', 'business_name']
         verbose_name = 'New Mexico Listing'
         verbose_name_plural = 'New Mexico Listings'
 
@@ -1319,6 +1458,7 @@ class vbp_ny(models.Model):
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
     user             = models.ForeignKey(User, models.SET_NULL, null=True, blank=True)
     team             = models.ForeignKey(Team, models.SET_NULL, null=True, blank=True)
+    objects         = vbpStateManager()
 
     def __str__(self):
         return str(self.business_name)
@@ -1327,6 +1467,7 @@ class vbp_ny(models.Model):
          return self.approved
 
     class Meta:
+        ordering = ['category', 'city', 'business_name']
         verbose_name = 'New York Listing'
         verbose_name_plural = 'New York Listings'
 
@@ -1355,6 +1496,7 @@ class vbp_nc(models.Model):
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
     user             = models.ForeignKey(User, models.SET_NULL, null=True, blank=True)
     team             = models.ForeignKey(Team, models.SET_NULL, null=True, blank=True)
+    objects         = vbpStateManager()
 
     def __str__(self):
         return str(self.business_name)
@@ -1363,6 +1505,7 @@ class vbp_nc(models.Model):
          return self.approved
 
     class Meta:
+        ordering = ['category', 'city', 'business_name']
         verbose_name = 'North Carolina Listing'
         verbose_name_plural = 'North Carolina Listings'
 
@@ -1390,6 +1533,7 @@ class vbp_nd(models.Model):
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
     user             = models.ForeignKey(User, models.SET_NULL, null=True, blank=True)
     team             = models.ForeignKey(Team, models.SET_NULL, null=True, blank=True)
+    objects         = vbpStateManager()
 
     def __str__(self):
         return str(self.business_name)
@@ -1398,6 +1542,7 @@ class vbp_nd(models.Model):
          return self.approved
 
     class Meta:
+        ordering = ['category', 'city', 'business_name']
         verbose_name = 'North Dakota Listing'
         verbose_name_plural = 'North Dakota Listings'
 
@@ -1425,6 +1570,7 @@ class vbp_oh(models.Model):
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
     user             = models.ForeignKey(User, models.SET_NULL, null=True, blank=True)
     team             = models.ForeignKey(Team, models.SET_NULL, null=True, blank=True)
+    objects         = vbpStateManager()
 
     def __str__(self):
         return str(self.business_name)
@@ -1433,6 +1579,7 @@ class vbp_oh(models.Model):
          return self.approved
 
     class Meta:
+        ordering = ['category', 'city', 'business_name']
         verbose_name = 'Ohio Listing'
         verbose_name_plural = 'Ohio Listings'
 
@@ -1460,6 +1607,7 @@ class vbp_ok(models.Model):
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
     user             = models.ForeignKey(User, models.SET_NULL, null=True, blank=True)
     team             = models.ForeignKey(Team, models.SET_NULL, null=True, blank=True)
+    objects         = vbpStateManager()
 
     def __str__(self):
         return str(self.business_name)
@@ -1468,6 +1616,7 @@ class vbp_ok(models.Model):
          return self.approved
 
     class Meta:
+        ordering = ['category', 'city', 'business_name']
         verbose_name = 'Oklahoma Listing'
         verbose_name_plural = 'Oklahoma Listings'
 
@@ -1495,6 +1644,7 @@ class vbp_or(models.Model):
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
     user             = models.ForeignKey(User, models.SET_NULL, null=True, blank=True)
     team             = models.ForeignKey(Team, models.SET_NULL, null=True, blank=True)
+    objects         = vbpStateManager()
 
     def __str__(self):
         return str(self.business_name)
@@ -1503,6 +1653,7 @@ class vbp_or(models.Model):
          return self.approved
 
     class Meta:
+        ordering = ['category', 'city', 'business_name']
         verbose_name = 'Oregon Listing'
         verbose_name_plural = 'Oregon Listings'
 
@@ -1530,6 +1681,7 @@ class vbp_pa(models.Model):
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
     user             = models.ForeignKey(User, models.SET_NULL, null=True, blank=True)
     team             = models.ForeignKey(Team, models.SET_NULL, null=True, blank=True)
+    objects         = vbpStateManager()
 
     def __str__(self):
         return str(self.business_name)
@@ -1538,6 +1690,7 @@ class vbp_pa(models.Model):
          return self.approved
 
     class Meta:
+        ordering = ['category', 'city', 'business_name']
         verbose_name = 'Pennsylvania Listing'
         verbose_name_plural = 'Pennsylvania Listings'
 
@@ -1565,6 +1718,7 @@ class vbp_ri(models.Model):
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
     user             = models.ForeignKey(User, models.SET_NULL, null=True, blank=True)
     team             = models.ForeignKey(Team, models.SET_NULL, null=True, blank=True)
+    objects         = vbpStateManager()
 
     def __str__(self):
         return str(self.business_name)
@@ -1573,6 +1727,7 @@ class vbp_ri(models.Model):
          return self.approved
 
     class Meta:
+        ordering = ['category', 'city', 'business_name']
         verbose_name = 'Rhode Island Listing'
         verbose_name_plural = 'Rhode Island Listings'
 
@@ -1602,6 +1757,7 @@ class vbp_sc(models.Model):
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
     user             = models.ForeignKey(User, models.SET_NULL, null=True, blank=True)
     team             = models.ForeignKey(Team, models.SET_NULL, null=True, blank=True)
+    objects         = vbpStateManager()
 
     def __str__(self):
         return str(self.business_name)
@@ -1610,6 +1766,7 @@ class vbp_sc(models.Model):
          return self.approved
 
     class Meta:
+        ordering = ['category', 'city', 'business_name']
         verbose_name = 'South Carolina Listing'
         verbose_name_plural = 'South Carolina Listings'
 
@@ -1637,6 +1794,7 @@ class vbp_sd(models.Model):
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
     user             = models.ForeignKey(User, models.SET_NULL, null=True, blank=True)
     team             = models.ForeignKey(Team, models.SET_NULL, null=True, blank=True)
+    objects         = vbpStateManager()
 
     def __str__(self):
         return str(self.business_name)
@@ -1645,6 +1803,7 @@ class vbp_sd(models.Model):
          return self.approved
 
     class Meta:
+        ordering = ['category', 'city', 'business_name']
         verbose_name = 'South Dakota Listing'
         verbose_name_plural = 'South Dakota Listings'
 
@@ -1672,6 +1831,7 @@ class vbp_tn(models.Model):
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
     user             = models.ForeignKey(User, models.SET_NULL, null=True, blank=True)
     team             = models.ForeignKey(Team, models.SET_NULL, null=True, blank=True)
+    objects         = vbpStateManager()
 
     def __str__(self):
         return str(self.business_name)
@@ -1680,6 +1840,7 @@ class vbp_tn(models.Model):
          return self.approved
 
     class Meta:
+        ordering = ['category', 'city', 'business_name']
         verbose_name = 'Tennessee Listing'
         verbose_name_plural = 'Tennessee Listings'
 
@@ -1707,6 +1868,7 @@ class vbp_tx(models.Model):
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
     user             = models.ForeignKey(User, models.SET_NULL, null=True, blank=True)
     team             = models.ForeignKey(Team, models.SET_NULL, null=True, blank=True)
+    objects         = vbpStateManager()
 
     def __str__(self):
         return str(self.business_name)
@@ -1715,6 +1877,7 @@ class vbp_tx(models.Model):
          return self.approved
 
     class Meta:
+        ordering = ['category', 'city', 'business_name']
         verbose_name = 'Texas Listing'
         verbose_name_plural = 'Texas Listings'
 
@@ -1742,6 +1905,7 @@ class vbp_ut(models.Model):
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
     user             = models.ForeignKey(User, models.SET_NULL, null=True, blank=True)
     team             = models.ForeignKey(Team, models.SET_NULL, null=True, blank=True)
+    objects         = vbpStateManager()
 
     def __str__(self):
         return str(self.business_name)
@@ -1750,6 +1914,7 @@ class vbp_ut(models.Model):
          return self.approved
 
     class Meta:
+        ordering = ['category', 'city', 'business_name']
         verbose_name = 'Utah Listing'
         verbose_name_plural = 'Utah Listings'
 
@@ -1777,6 +1942,7 @@ class vbp_vt(models.Model):
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
     user             = models.ForeignKey(User, models.SET_NULL, null=True, blank=True)
     team             = models.ForeignKey(Team, models.SET_NULL, null=True, blank=True)
+    objects         = vbpStateManager()
 
     def __str__(self):
         return str(self.business_name)
@@ -1785,6 +1951,7 @@ class vbp_vt(models.Model):
          return self.approved
 
     class Meta:
+        ordering = ['category', 'city', 'business_name']
         verbose_name = 'Vermont Listing'
         verbose_name_plural = 'Vermont Listings'
 
@@ -1812,6 +1979,7 @@ class vbp_va(models.Model):
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
     user             = models.ForeignKey(User, models.SET_NULL, null=True, blank=True)
     team             = models.ForeignKey(Team, models.SET_NULL, null=True, blank=True)
+    objects         = vbpStateManager()
 
     def __str__(self):
         return str(self.business_name)
@@ -1820,6 +1988,7 @@ class vbp_va(models.Model):
          return self.approved
 
     class Meta:
+        ordering = ['category', 'city', 'business_name']
         verbose_name = 'Virginia Listing'
         verbose_name_plural = 'Virginia Listings'
 
@@ -1847,6 +2016,7 @@ class vbp_wa(models.Model):
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
     user             = models.ForeignKey(User, models.SET_NULL, null=True, blank=True)
     team             = models.ForeignKey(Team, models.SET_NULL, null=True, blank=True)
+    objects         = vbpStateManager()
     
     def __str__(self):
         return str(self.business_name)
@@ -1855,6 +2025,7 @@ class vbp_wa(models.Model):
          return self.approved
 
     class Meta:
+        ordering = ['category', 'city', 'business_name']
         verbose_name = 'Washington Listing'
         verbose_name_plural = 'Washington Listings'
 
@@ -1882,6 +2053,7 @@ class vbp_wv(models.Model):
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
     user             = models.ForeignKey(User, models.SET_NULL, null=True, blank=True)
     team             = models.ForeignKey(Team, models.SET_NULL, null=True, blank=True)
+    objects         = vbpStateManager()
 
     def __str__(self):
         return str(self.business_name)
@@ -1890,6 +2062,7 @@ class vbp_wv(models.Model):
          return self.approved
 
     class Meta:
+        ordering = ['category', 'city', 'business_name']
         verbose_name = 'West Virginia Listing'
         verbose_name_plural = 'West Virginia Listings'
 
@@ -1917,6 +2090,7 @@ class vbp_wi(models.Model):
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
     user             = models.ForeignKey(User, models.SET_NULL, null=True, blank=True)
     team             = models.ForeignKey(Team, models.SET_NULL, null=True, blank=True)
+    objects         = vbpStateManager()
 
     def __str__(self):
         return str(self.business_name)
@@ -1925,6 +2099,7 @@ class vbp_wi(models.Model):
          return self.approved
 
     class Meta:
+        ordering = ['category', 'city', 'business_name']
         verbose_name = 'Wisconsin Listing'
         verbose_name_plural = 'Wisconsin Listings'
 
@@ -1952,6 +2127,7 @@ class vbp_wy(models.Model):
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
     user             = models.ForeignKey(User, models.SET_NULL, null=True, blank=True)
     team             = models.ForeignKey(Team, models.SET_NULL, null=True, blank=True)
+    objects         = vbpStateManager()
     
     def __str__(self):
         return str(self.business_name)
@@ -1960,6 +2136,7 @@ class vbp_wy(models.Model):
          return self.approved
 
     class Meta:
+        ordering = ['category', 'city', 'business_name']
         verbose_name = 'Wyoming Listing'
         verbose_name_plural = 'Wyoming Listings'
 

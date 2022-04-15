@@ -52,6 +52,16 @@ def unique_ticket_id_generator(instance):
         return unique_slug_generator(instance)
     return ticket_id
 
+def unique_ven_id_generator(instance):
+    size = random.randint(8, 10)
+    ven_id = random_string_generator(size=size)
+
+    Klass = instance.__class__
+    qs_exists = Klass.objects.filter(ven_id=ven_id).exists()
+    if qs_exists:
+        return unique_slug_generator(instance)
+    return ven_id
+
 def unique_order_id_generator(instance):
     """
     This is for a Django product with an order_id field
@@ -97,39 +107,35 @@ def unique_slug_generator(instance, new_slug=None):
     return slug
 
 def field_type_generator(instance):
-    try: 
-        instance.choices
-        field_type
-        return field_type
-    except:
-        instance.choices = None
+    text_input = ['CharField']
+    currency_input = ['DecimalField']
+    number_input = ['BigAutoField']
+    radio_input = ['BooleanField']
+    foreign_key_input = ['ForeignKey']
+    many_to_many_input = ['ManyToManyField']
+    datetime_input = ['DateTimeField']
+
+    type = instance.get_internal_type()
+    if type in many_to_many_input:
+        field_type = 'manytomany'
+    if type in text_input:
+        field_type = 'text'
+    elif type in currency_input:
+        field_type = 'currency'
+    elif type in number_input:
+        field_type = 'number'
+    elif type in radio_input:
+        field_type = 'radio'
+    elif type in foreign_key_input:
+        field_type = 'foreignkey'
+    
+    elif type in datetime_input:
+        field_type = 'datetime'
+    else:
+        field_type = 'text'
+    try:
         if instance.choices is not None:
             field_type = 'choice'
-        else:
-            print
-            text_input = ['CharField']
-            currency_input = ['DecimalField']
-            number_input = ['BigAutoField']
-            radio_input = ['BooleanField']
-            foreign_key_input = ['ForeignKey']
-            many_to_many_input = ['ManyToManyField']
-            datetime_input = ['DateTimeField']
-
-            type = instance.get_internal_type()
-            if type in text_input:
-                field_type = 'text'
-            elif type in currency_input:
-                field_type = 'currency'
-            elif type in number_input:
-                field_type = 'number'
-            elif type in radio_input:
-                field_type = 'radio'
-            elif type in foreign_key_input:
-                field_type = 'foreignkey'
-            elif type in many_to_many_input:
-                field_type = 'manytomany'
-            elif type in datetime_input:
-                field_type = 'datetime'
-            else:
-                field_type = 'text'
-            return field_type
+    except: 
+        pass
+    return field_type

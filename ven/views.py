@@ -209,3 +209,21 @@ def ven_email(request):
 
     }
     return render(request, 'new-submission.html', context)
+
+def ven_schedule(request, venID):
+    id = venID
+    family_applicant = None
+    business_applicant = None
+    try:
+        business_applicant = Nomination.objects.filter(ven_id=id).first()
+    except:
+        pass
+    try:
+        family_applicant = FamilyNomination.objects.filter(ven_id=id).first()
+    except:
+        pass
+    context = {
+        'business': business_applicant,
+        'family': family_applicant
+    }
+    return render(request, 'ven-schedule.html', context)

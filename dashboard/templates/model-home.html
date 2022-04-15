@@ -9,26 +9,56 @@
     $('.tooltipped').tooltip();
   });
 </script>
-    <div class="row">
-        <div class="col l2 hide-on-med-and-down admin-side-menu">
+    <div class="row" style="min-height: 1000px">
+        <div class="col l3 hide-on-med-and-down admin-side-menu">
             <div class="side-menu-overlay">
                 <section>
                     <ul>
-                        
-                        <li class="list-heading">Accounts</li>
-                        <li>Users</li>
-                        <li>Black Friday Challenge Players</li>
+                    {% regroup app_list by category as apps %}
+                        {% for x in apps %}
+                            {% if x.grouper == 'Village Black Pages' %}
+                            <li class="list-heading">Village Black Pages</li>
+                            <li>Books
+                                <div class="right">
+                                    <a href=""><i class="bi bi-plus-square add-model-obj tooltipped" data-position="bottom" data-tooltip="Add New {{ model }}"></i></a>
+                                    <a href="/dashboard/Village%20Black%20Pages/vbp_book-list/"><i class="bi bi-window-plus view-model-objs tooltipped" data-position="top" data-tooltip="View All {{ model.model_name_plural }}"></i></a>
+                                </div>
+                            </li>
+                            <div class="input-field vbp-select" style="margin-top: 30px;width: 70%">
+                                <select id="vbp-selector">
+                                  <option value="" disabled selected>Choose A State</option>
+                                    {% for model in x.list %}
+                                        {% if model.grouping == 'vbp_state' %}
+                                            <option value="{{ model }}">{{ model.model_name_plural }}</option>
+                                        {% endif %}
+                                    {% endfor %}
+                                </select>
+                                <label style="color: black">VBP Individual Listings</label>
+                              </div>
+                            <li</li>
+                            {% else %}
+                            <li class="list-heading">{{ x.grouper }}</li>
+                                {% for model in x.list %}
+                                <li>{{ model.model_name_plural }}
+                                    <div class="right">
+                                        <a href=""><i class="bi bi-plus-square add-model-obj tooltipped" data-position="bottom" data-tooltip="Add New {{ model }}"></i></a>
+                                        <a href="/dashboard/{{ model.category }}/{{ model }}-list/"><i class="bi bi-window-plus view-model-objs tooltipped" data-position="top" data-tooltip="View All {{ model.model_name_plural }}"></i></a>
+                                    </div>
+                                </li>
+                                {% endfor %}
+                            {% endif %}
+                        {% endfor %}
                     </ul>
                 </section>
             </div>
         </div>
-        <div class="col s12 l10">
+        <div class="col s12 l9">
             <div class="admin-container">
                 <div class="row">
                     <div class="col s12" style="margin-bottom: 10px">
                         <a href="{{ dashboard_url }}" class="breadcrumb">Dashboard</a>
-                        <a href="/dashboard/{{ dashboardModel.category }}" class="breadcrumb">{{ dashboardModel.category }}</a>
-                        <a class="breadcrumb active">{{ dashboardModel.model_name }} List</a>
+                        <a href="{{ dashboard_url }}" class="breadcrumb">{{ dashboardModel.category }}</a>
+                        <a class="breadcrumb active">{{ dashboardModel.model_name_verbose }} List</a>
                       </div>
                     <div class="col s12">
                         <div class="card">
@@ -80,14 +110,12 @@
                                                         {% endif %}
                                                     {% endfor %}
                                                     
-                                                    <td class="center-align">
+                                                    <td class="center-align test" style="min-width: 110px">
                                                         {% for pk in x|slice:":1" %}
                                                         <a href="view/{{ pk }}"><i class="bi bi-eye tooltipped changelist-view" data-position="bottom" data-tooltip="View"></i></a>
                                                         <a href="edit/{{ pk }}"><i class="bi bi-pencil-square tooltipped changelist-add" data-position="top" data-tooltip="Edit"></i></a>
                                                         <i class="bi bi-trash tooltipped changelist-delete" pk="{{ pk }}" data-position="bottom" data-tooltip="Delete"></i>
                                                         {% endfor %}
-                                                        
-                                                        
                                                     </td>
                                                 </tr>
                                                 {% endfor %}
@@ -114,10 +142,10 @@
                                                     
                                                     <td class="center-align">
                                                         {% for pk in x|slice:":1" %}
-                                                        <a href="edit/{{ pk }}"><i class="bi bi-pencil-square tooltipped changelist-add"></i></a>
+                                                        <a href="view/{{ pk }}"><i class="bi bi-eye tooltipped changelist-view" data-position="bottom" data-tooltip="View"></i></a>
+                                                        <a href="edit/{{ pk }}"><i class="bi bi-pencil-square tooltipped changelist-add" data-position="top" data-tooltip="Edit"></i></a>
+                                                        <i class="bi bi-trash tooltipped changelist-delete" pk="{{ pk }}" data-position="bottom" data-tooltip="Delete"></i>
                                                         {% endfor %}
-                                                        
-                                                        <i class="bi bi-trash tooltipped changelist-delete"></i>
                                                     </td>
                                                 </tr>
                                                 {% endfor %}
@@ -190,6 +218,13 @@
             $('.table-page[page-no!="'+page+'"]').addClass('hidden')
         });
         
+    </script>
+    <script>
+        $('#vbp-selector').on('change',function(){
+            var selected = $(this).find(':selected')
+            var url = '/dashboard/Village%20Black%20Pages/'+selected.val()+'-list/'
+            window.location.replace(url)
+        })
     </script>
 {% else %}
 <div style="display: flex; align-items: center; justify-content: center;padding-top: 10%">

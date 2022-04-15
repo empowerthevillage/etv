@@ -7,6 +7,8 @@ from django.conf import settings
 from content.models import contact_submission
 from django.http import HttpResponse
 import sweetify
+import requests
+import json
 
 mailchimp = Client()
 mailchimp.set_config({
@@ -28,15 +30,25 @@ def contact(request):
     contact_form = ContactForm()
     if request.method == 'POST':
       contact = ContactForm(request.POST)
-      obj = contact_submission()
-      obj.name = contact.data['name']
-      obj.email = contact.data['email']
-      obj.message = contact.data['message']
-      if request.user.is_authenticated:
-        user = request.user
-        obj.user = user
-      obj.save()
-      sweetify.success(request, title='Thank you!', icon='success', text="We'll be in touch!", button='OK', timer=4000)
+      grecaptcha = request.POST.get('g-recaptcha-response')
+      params = {'secret': '6LcHVW0fAAAAAB3Ylmxg3s-HzVcxX9Wdc2iD2d7N', 'response': grecaptcha}
+      if grecaptcha != '':
+          r = requests.post('https://www.google.com/recaptcha/api/siteverify', data = params)
+          response = json.loads(r.content)
+          if response['success'] == False:
+              sweetify.toast(request, "Invalid RECAPTCHA, please try again!", icon="error", timer=5000)
+          elif response['success'] == True:
+              obj = contact_submission()
+              obj.name = contact.data['name']
+              obj.email = contact.data['email']
+              obj.message = contact.data['message']
+              if request.user.is_authenticated:
+                user = request.user
+                obj.user = user
+              obj.save()
+              sweetify.success(request, title='Thank you!', icon='success', text="We'll be in touch!", button='OK', timer=4000)
+      else:
+            sweetify.toast(request, "We want to make sure you're a human! Please complete the RECAPTCHA", icon="error", timer=3000)        
     context = {
       'contact_form': contact_form 
     }

@@ -9,9 +9,40 @@
             <div class="side-menu-overlay">
                 <section>
                     <ul>
-                        <li class="list-heading">Accounts</li>
-                        <li>Users</li>
-                        <li>Black Friday Challenge Players</li>
+                    {% regroup app_list by category as apps %}
+                        {% for x in apps %}
+                            {% if x.grouper == 'Village Black Pages' %}
+                            <li class="list-heading">Village Black Pages</li>
+                            <li>Books
+                                <div class="right">
+                                    <a href=""><i class="bi bi-plus-square add-model-obj tooltipped" data-position="bottom" data-tooltip="Add New {{ model }}"></i></a>
+                                    <a href="/dashboard/Village%20Black%20Pages/vbp_book-list/"><i class="bi bi-window-plus view-model-objs tooltipped" data-position="top" data-tooltip="View All {{ model.model_name_plural }}"></i></a>
+                                </div>
+                            </li>
+                            <div class="input-field vbp-select" style="margin-top: 30px;width: 70%">
+                                <select id="vbp-selector">
+                                  <option value="" disabled selected>Choose A State</option>
+                                    {% for model in x.list %}
+                                        {% if model.grouping == 'vbp_state' %}
+                                            <option value="{{ model }}">{{ model.model_name_plural }}</option>
+                                        {% endif %}
+                                    {% endfor %}
+                                </select>
+                                <label style="color: black">VBP Individual Listings</label>
+                              </div>
+                            <li</li>
+                            {% else %}
+                            <li class="list-heading">{{ x.grouper }}</li>
+                                {% for model in x.list %}
+                                <li>{{ model.model_name_plural }}
+                                    <div class="right">
+                                        <a href=""><i class="bi bi-plus-square add-model-obj tooltipped" data-position="bottom" data-tooltip="Add New {{ model }}"></i></a>
+                                        <a href="/dashboard/{{ model.category }}/{{ model }}-list/"><i class="bi bi-window-plus view-model-objs tooltipped" data-position="top" data-tooltip="View All {{ model.model_name_plural }}"></i></a>
+                                    </div>
+                                </li>
+                                {% endfor %}
+                            {% endif %}
+                        {% endfor %}
                     </ul>
                 </section>
             </div>
@@ -21,21 +52,26 @@
                 <div class="row">
                     <div class="col s12" style="margin-bottom: 10px">
                         <a href="{{ dashboard_url }}" class="breadcrumb">Dashboard</a>
-                        <a href="/dashboard/{{ app }}">{{ dashboardModel.app_name }}</a>
-                        <a class="breadcrumb active">{{ pk }}</a>
+                        <a href="{{ dashboard_url }}" class="breadcrumb">{{ dashboardModel.category }}</a>
+                        <a href="/dashboard/{{ dashboardModel.category }}/{{ dashboardModel.model_name }}-list/" class="breadcrumb">{{ dashboardModel.model_name_verbose }} List</a>
+                        <a href="/dashboard/{{ dashboardModel.category }}/{{ dashboardModel.model_name }}-list/view/{{ obj.pk }}" class="breadcrumb">{{ obj }}</a>
+                        <a class="breadcrumb active">Edit</a>
                       </div>
                     <div class="col s12">
                         <div class="card">
-                            <div class="card-heading">
-                                <p class="card-title">{{ dashboardModel.model_name_plural }}</p>
+                            <div class="card-heading" style="margin-bottom: 20px">
+                                <p class="card-title" style="color: rgb(20, 155, 20); border-bottom: none">EDIT</p>
+                                <p class="card-title">{{ obj }}</p>
                             </div>
-                            {% for x in fields_formatted %}
-                                <p>{{ x.type }} - {{ x.field.name }}</p>
-                            {% endfor %}
+                            <div class="col s12 right-align">
+                                <div class="btn admin-save">SAVE</div>
+                                <div class="btn admin-delete">DELETE</div>
+                            </div>
                             <div class="card-body row">
-                                <div class="col s12">
-                                    
+                                <div class="col s12 row change-form">
                                     {% for x in fields_formatted %}
+                                        {% if x.field.name == 'id' %}
+                                        {% else %}
                                         {% if x.type == 'foreignkey' %}
                                         <div class="input-field col s6">
                                             <select>
@@ -46,6 +82,7 @@
                                             </select>
                                             <label>{{ x.formfield.label }}</label>
                                         </div>
+                                        
                                         {% elif x.type == 'currency' %}
                                         <div class="input-field col s6">
                                             <input class="money" value="{{ x.value }}" type="text">
@@ -56,107 +93,73 @@
                                             <input value="{{ x.value }}" type="number">
                                             <label>{{ x.formfield.label }}</label>
                                         </div>
+                                        {% elif x.formfield == 'manytomany' %}
+                                        {% elif x.type == 'choice' %}
+                                        <div class="input-field col s6">
+                                            <select>
+                                                {% if x.value is not None %}
+                                                {% for choice, verbose in x.choices %}
+                                                    {% if x.value == choice %}
+                                                        <option value="{{ choice }}" selected>{{ verbose }}</option>
+                                                    {% endif %}
+                                                {% endfor %}
+                                                {% for choice,verbose in x.choices %}
+                                                    {% if x.value != choice %}
+                                                    <option value="{{ choice }}">{{ verbose }}</option>
+                                                    {% endif %}
+                                                {% endfor %}
+                                                {% else %}
+                                                    <option value="" disabled selected>Select A Value</option>
+                                                    {% for choice,verbose in x.choices %}
+                                                        {% if x.value != choice %}
+                                                        <option value="{{ choice }}">{{ verbose }}</option>
+                                                        {% endif %}
+                                                    {% endfor %}
+                                                {% endif %}
+                                            </select>
+                                            <label>{{ x.formfield.label }}</label>
+                                        </div>
                                         {% elif x.type == 'text' %}
+                                        {% if x.formfield.label == 'Counselor' %}
+                                        <div class="input-field col s6">
+                                            <select>
+                                                {% if x.value is not None %}
+                                                <option value="{{ x.value }}" selected>{{ x.value }}</option>
+                                                    {% if x.value != 'Andrew Frazier' %}
+                                                    <option value="Andrew Frazier">Andrew Frazier</option>
+                                                    {% endif %}
+                                                    {% if x.value != 'Michelle Harlan' %}
+                                                    <option value="Michelle Harlan">Michelle Harlan</option>
+                                                    {% endif %}
+                                                {% else %}
+                                                    <option value="Unassigned" selected>Unassigned</option>
+                                                    <option value="Andrew Frazier">Andrew Frazier</option>
+                                                    <option value="Michelle Harlan">Michelle Harlan</option>
+                                                {% endif %}
+                                            </select>
+                                            <label>Counselor</label>
+                                        </div>
+                                        {% else %}
                                         <div class="input-field col s6">
                                             <input value="{{ x.value }}" type="text">
                                             <label>{{ x.formfield.label }}</label>
                                         </div>
+                                        {% endif %}
                                         {% elif x.type == 'datetime' %}
                                         <div class="input-field col s6">
                                             <input class="datepicker" value="{{ x.value }}" type="text">
                                             <label>{{ x.formfield.label }}</label>
                                         </div>
                                         {% endif %}
+                                        {% endif %}
                                     {% endfor %}
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-group">
-                        <div class="col s12 m7">
-                            <div class="card">
-                                <div class="card-heading">
-                                    <p class="card-title">Orders</p>
-                                </div>
-                                <div class="card-body">
-                                    <h7 class="valign-wrapper" style="justify-content: center">Tickets</h7>
-                                    <div class="divider"></div>
-                                    <ul class="dashboard-list">
-                                        {% for x in ticket_family %}
-                                        <li>
-                                            <h6><b>{{ x.grouper }}</b> - {{ x.list|length }} {% if x.list|length == 1 %}Ticket{% else %}Tickets{% endif %}</h6>
-                                            {% regroup x.list by event as event_list %}
-                                            {% for event in event_list %}
-                                            <h7>{{ event.grouper }}</h7>
-                                            <ul class="dashboard-list">
-                                                {% for ticket in event.list %}
-                                                <div class="ticket-section">
-                                                    <li><b>Ticket ID:</b> {{ ticket }}</li>
-                                                    <p>{{ ticket.type }}</p>
-                                                </div>
-                                                {% endfor %}
-                                            </ul>
-                                            {% endfor %}
-                                        </li>
-                                        {% endfor %}
-                                    </ul>
-                                    <div class="divider"></div>
-                                    <a class="view-more valign-wrapper" href="" style="justify-content: center">View All <span class="material-icons">open_in_new</span></a>
-                                    
+                                <div class="col s12 center-align">
+                                    <div class="btn admin-save">SAVE</div>
+                                    <div class="btn admin-delete">DELETE</div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col s12 m5">
-                            <div class="card">
-                                <div class="card-heading">
-                                    <p class="card-title">Donors</p>
-                                </div>
-                                <div class="card-body">
-                                    <h7 class="valign-wrapper" style="justify-content: center"><span class="material-icons" style="color: gold">emoji_events</span>&nbsp; Top Donors</h7>
-                                    <div class="divider"></div>
-                                    <ul class="dashboard-list center-align">
-                                    {% for x in top_donors %}
-                                        <h6>{{ x.get_full_name }}</h6>
-                                        <h7 style="color: rgb(25, 171, 25); font-size: 16px">${{ x.total|intcomma }}</h7>
-                                        <li>{{ x.get_level }}</li>
-                                    {% endfor %}
-                                    </ul>
-                                    <div class="divider"></div>
-                                    <a class="view-more valign-wrapper" href="" style="justify-content: center">View All <span class="material-icons">open_in_new</span></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col s12 m4">
-                        <div class="card">
-                            <div class="card-heading">
-                                <p class="card-title">VBP</p>
-                            </div>
-                            <div class="card-body">
-                                
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col s12 m4">
-                        <div class="card">
-                            <div class="card-heading">
-                                <p class="card-title">VEN</p>
-                            </div>
-                            <div class="card-body">
-                                
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col s12 m4">
-                        <div class="card">
-                            <div class="card-heading">
-                                <p class="card-title">Merchandise</p>
-                            </div>
-                            <div class="card-body">
-                                
-                            </div>
+                            
                         </div>
                     </div>
                 </div>
@@ -173,6 +176,13 @@
             }
         });
         
+    </script>
+    <script>
+        $('#vbp-selector').on('change',function(){
+            var selected = $(this).find(':selected')
+            var url = '/dashboard/Village%20Black%20Pages/'+selected.val()+'-list/'
+            window.location.replace(url)
+        })
     </script>
 {% else %}
 <div style="display: flex; align-items: center; justify-content: center;padding-top: 10%">

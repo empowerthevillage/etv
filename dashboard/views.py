@@ -11,6 +11,7 @@ from django.views.generic.edit import FormMixin
 from django.urls import reverse
 from django.utils.http import is_safe_url
 from django.utils.safestring import mark_safe
+from django.core.exceptions import PermissionDenied
 
 from datetime import datetime, timedelta
 
@@ -40,9 +41,10 @@ import datetime
 import pandas as pd
 from django.shortcuts import render, redirect
 import sweetify
+import csv
 
 User = get_user_model()
-gateway = settings.GATEWAY
+gateway = settings.GATEWAY_PUBLIC
 
 def updateDonors(request):
     donors = Donor.objects.all()
@@ -105,7 +107,7 @@ def DashboardHome(request):
     #Orders
     orders = Order.objects.all()
 
-    app_list = dashboardModel.objects.all()
+    app_list = dashboardModel.objects.all().order_by('category', 'model_name')
 
     all_dates = []
     all_donation_dates = []
@@ -173,15 +175,17 @@ def DashboardHome(request):
     return render(request,'dashboard-home.html', context)
 
 def appHome(request, category):
+    app_list = dashboardModel.objects.all().order_by('category', 'model_name')
     model_list = dashboardModel.objects.filter(category=str(category))
-    
     context = {
         "category": category,
         "models": model_list,
+        "app_list": app_list,
     }
     return render(request, 'app-home.html', context)
 
 def modelHome(request, category, model):
+    app_list = dashboardModel.objects.all().order_by('category', 'model_name')
     model_obj = dashboardModel.objects.filter(model_name=str(model)).first()
     model = django.apps.apps.get_model(str(model_obj.app_name), str(model))
     filtered_objs = model.objects.filter_objs()
@@ -207,11 +211,13 @@ def modelHome(request, category, model):
         "fields": field_pairs,
         "field_names": field_name_list,
         "data": data,
-        "p": p
+        "p": p,
+        "app_list": app_list,
     }
     return render(request, 'model-home.html', context)
 
 def objectChange(request, category, model, pk):
+    app_list = dashboardModel.objects.all().order_by('category', 'model_name')
     model_obj = dashboardModel.objects.filter(model_name=str(model)).first()
     model = django.apps.apps.get_model(str(model_obj.app_name), str(model))
     obj = model.objects.filter(pk=pk).first()
@@ -219,6 +225,10 @@ def objectChange(request, category, model, pk):
     fields_formatted = []
     for x in fields:
         field_type = field_type_generator(x)
+        if field_type == 'choice':
+            choices = x.choices
+        else:
+            choices = ''
         try:
             formfield = x.formfield()
             widget_html = formfield.widget.render
@@ -229,32 +239,68 @@ def objectChange(request, category, model, pk):
             value = x.value_from_object(obj)
         except:
             value = 'here'
-        fields_formatted.append({"field": x, "type": field_type, "value": value, "formfield": formfield, "widget_html": widget_html})
+        fields_formatted.append({"field": x, "type": field_type, "value": value, "formfield": formfield, "widget_html": widget_html, "choices": choices,})
         
     context = {
         "model": model,
+        "dashboardModel": model_obj,
         "obj": obj,
         "fields": fields,
-        "fields_formatted": fields_formatted
+        "fields_formatted": fields_formatted,
+        "app_list": app_list,
     }
     return render(request, 'obj-change.html', context)
 
 def objectView(request, category, model, pk):
+    app_list = dashboardModel.objects.all().order_by('category', 'model_name')
     model_obj = dashboardModel.objects.filter(model_name=str(model)).first()
     model = django.apps.apps.get_model(str(model_obj.app_name), str(model))
+    obj = model.objects.filter(pk=pk).first()
     fields = json.loads(model_obj.view_fields)
-    print(fields)
-    field_list = []
-    field_name_list = []
     field_pairs = []
     for x in fields:
         item = model._meta.get_field(str(x["field"]))
         type = x["type"]
-        field_list.append(item)
-        field_name_list.append(item.name)
-        field_pairs.append({"field": item, "type": type, "verbose": item.verbose_name})
-    
+        
+        try:
+            value = item.value_from_object(obj)
+        except:
+            value = 'No Value'
+        field_pairs.append({"field": item, "type": type, "verbose": item.verbose_name, "value": value})
+        if type == 'braintree_transaction':
+            try:
+                transaction = gateway.transaction.find(str(value))
+                if transaction.payment_instrument_type == 'credit_card':
+                    field_pairs.append({"field": "Payment Method", "type": 'card-detail', "verbose": "Payment Method", "card_logo_url": transaction.credit_card_details.image_url, "value": "%s ending in %s" %(transaction.credit_card_details.card_type, transaction.credit_card_details.last_4)})
+                elif transaction.payment_instrument_type == 'paypal_account':
+                    field_pairs.append({"field": "Payment Method", "type": 'plain', "verbose": "Payment Method", "value": "PayPal"})
+                else:
+                    field_pairs.append({"field": "Payment Method", "type": 'plain', "verbose": "Payment Method", "value": "%s" %(transaction.payment_instrument_type)})
+            except:
+                pass
     context = {
         "model": model,
+        "dashboardModel": model_obj,
+        "pairs": field_pairs,
+        "obj": obj,
+        "app_list": app_list,
     }
     return render(request, 'obj-view.html', context)
+
+def download_csv(request, queryset):
+        if not request.user.is_staff:
+            raise PermissionDenied
+        opts = queryset.model._meta
+        model = queryset.model
+        response = HttpResponse(mimetype='text/csv')
+        # force download.
+        response['Content-Disposition'] = 'attachment;filename=export.csv'
+        # the csv writer
+        writer = csv.writer(response)
+        field_names = [field.name for field in opts.fields]
+        # Write a first row with header information
+        writer.writerow(field_names)
+        # Write data rows
+        for obj in queryset:
+            writer.writerow([getattr(obj, field) for field in field_names])
+        return response
