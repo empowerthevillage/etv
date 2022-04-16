@@ -34,7 +34,7 @@ def send_test_email(request):
     send_mail(
         'Test!',
         'A successful test email has been sent',
-        'etvnotifications@gmail.com',
+        'admin@empowerthevillage.org',
         ['chandler@eliftcreations.com'],
         fail_silently=False
     )

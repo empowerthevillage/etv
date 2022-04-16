@@ -1,5 +1,7 @@
 from django.db import models
 from django.conf import settings
+from tinymce.models import HTMLField
+
 import random
 import os
 import json
@@ -47,3 +49,9 @@ class contact_submission(models.Model):
         verbose_name = 'Contact Us Request'
         verbose_name_plural = 'Contact Us Requests'
 
+class news_content(models.Model):
+    content          = HTMLField()
+
+    class Meta:
+        verbose_name = 'News Page Content'
+        verbose_name_plural = 'News Page Content'

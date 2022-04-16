@@ -66,7 +66,7 @@
                                 <p class="card-title">{{ dashboardModel.model_name_plural }}</p>
                             </div>
                             <div class="card-body row">
-                                
+                                {{ field_pairs }}
                                 <div class="col s12 item-counter" page-no="1">
                                     Displaying 1-{{ p.per_page }} of {{ data|length }} {{ dashboardModel.model_name_plural }}
                                 </div>

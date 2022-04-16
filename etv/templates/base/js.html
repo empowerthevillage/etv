@@ -24,8 +24,9 @@
 <script src="{% static 'js/zoom.js' %}"></script>
 
 <!-- Marquee -->
-<script src="{% static 'js/marquee.js' %}"></script>
-
+<script src="{% static 'js/jquery.marquee.min.js' %}"></script>
+<script src="{% static 'js/jquery.pause.js' %}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
 <!-- Lightbox -->
 <script src="{% static 'js/lightbox.js' %}"></script>
 
@@ -53,7 +54,6 @@
 <script src="https://js.braintreegateway.com/web/3.82.0/js/client.min.js"></script>
 <script>
   $(document).ready(function(){
-      $('.simple-marquee-container').SimpleMarquee({velocity: 0.05});
       $('.collapsible').collapsible();
       $('.parallax').parallax();
       $('select').formSelect();

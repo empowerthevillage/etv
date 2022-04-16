@@ -1,3 +1,4 @@
+from tokenize import Single
 from django.contrib import admin
 from dashboard.models import dashboardModel
 
@@ -26,3 +27,5 @@ admin_site.register(AdType)
 admin_site.register(Ad)
 admin_site.register(CompleteDonation)
 dashboardModel.objects.dash_register(Event)
+dashboardModel.objects.dash_register(TicketType)
+dashboardModel.objects.dash_register(SingleTicket)

@@ -29,7 +29,7 @@ class EventManager(models.Manager):
         return filtered_qs
         
     def dashboard_get_fields(self):
-        list_fields = [{'field':'title','type':'plain'},{'field':'date','type':'datetime'},]
+        list_fields = [{'field':'title','type':'plain'},{'field':'start_date','type':'datetime'},{"field":'start_time','type':'datetime'}]
         return json.dumps(list_fields)
     
     def dashboard_get_view_fields(self):
@@ -40,7 +40,7 @@ class EventManager(models.Manager):
             {'field':'content','type':'richtext'},
             {'field':'checkout_image','type':'img'},
             {'field':'checkout_img_link','type':'url'},
-            {'field':'checkout_video_html','type':'url'},
+            {'field':'checkout_video_html','type':'html'},
             {'field':'date','type':'datetime'},
             {'field':'start_date','type':'date'},
             {'field':'end_date','type':'date'},
@@ -64,7 +64,6 @@ class Event(models.Model):
     slug            = models.SlugField()
     checkout_image  = models.ImageField(blank=True, null=True)
     checkout_img_link = models.CharField(max_length=270, null=True, blank=True)
-    checkout_video_html = HTMLField(null=True, blank=True)
     date            = models.DateTimeField(blank=True, null=True)
     start_date      = models.DateField(blank=True, null=True)
     end_date        = models.DateField(blank=True, null=True)
@@ -73,6 +72,7 @@ class Event(models.Model):
     tags            = models.ManyToManyField(tag, blank=True)
     thumbnail       = models.FileField(null=True, blank=True)
     price_description = models.CharField(max_length=270, null=True, blank=True)
+    checkout_video_html = HTMLField(null=True, blank=True)
 
     objects         = EventManager()
 
@@ -127,6 +127,37 @@ class Guest(models.Model):
     def __str__(self):
         return '%s %s' %(self.first_name, self.last_name)
 
+class TicketTypeManager(models.Manager):
+    def filter_objs(self):
+        filtered_qs = self
+        return filtered_qs
+        
+    def dashboard_get_fields(self):
+        list_fields = [{'field':'event','type':'plain'},{'field':'title','type':'plain'},{'field':'price','type':'currency'},{"field":'sale','type':'boolean'}]
+        return json.dumps(list_fields)
+    
+    def dashboard_get_view_fields(self):
+        fields = [
+            {'field':'event','type':'plain'},
+            {'field':'title','type':'plain'},
+            {'field':'description','type':'plain'},
+            {'field':'price','type':'currency'},
+            {'field':'sale','type':'boolean'},
+            {'field':'sale_price','type':'currency'},
+            {'field':'sale_description','type':'plain'},
+            {'field':'sponsorship','type':'boolean'},
+            {'field':'quantity','type':'plain'},
+        ]
+        return json.dumps(fields)
+    
+    def dashboard_display_qty(self):
+        qty = 40
+        return qty
+        
+    def dashboard_category(self):
+        category = 'Events'
+        return category
+
 class TicketType(models.Model):
     title           = models.CharField(max_length=270, null=True, blank=True)
     sponsorship     = models.BooleanField(default=False)
@@ -139,8 +170,10 @@ class TicketType(models.Model):
     description     = models.TextField(null=True, blank=True)
     price_description = models.CharField(max_length=270, null=True, blank=True)
 
+    objects         = TicketTypeManager()
+
     def __str__(self):
-        return self.title
+        return str(self.title)
 
     @property
     def on_sale(self):
@@ -170,6 +203,7 @@ class TicketManagerQuerySet(models.query.QuerySet):
         return self.exclude(status='created')
 
 class TicketManager(models.Manager):
+    
     def get_queryset(self):
         return TicketManagerQuerySet(self.model, using=self._db)
 
@@ -193,6 +227,36 @@ class TicketManager(models.Manager):
                 cart=cart_obj)
             created = True
         return obj, created
+    def filter_objs(self):
+        filtered_qs = self
+        return filtered_qs
+        
+    def dashboard_get_fields(self):
+        list_fields = [{'field':'event','type':'plain'},{'field':'type','type':'plain'},{'field':'purchase_price','type':'currency'},{"field":'first_name','type':'plain'},{"field":'last_name','type':'plain'}]
+        return json.dumps(list_fields)
+    
+    def dashboard_get_view_fields(self):
+        fields = [
+            {'field':'event','type':'plain'},
+            {'field':'type','type':'plain'},
+            {'field':'ticket_id','type':'plain'},
+            {'field':'purchase_price','type':'currency'},
+            {'field':'first_name','type':'plain'},
+            {'field':'last_name','type':'plain'},
+            {'field':'email','type':'email'},
+            {'field':'guest_list','type':'plain'},
+            {'field':'qr_code','type':'img'},
+            {'field':'created','type':'datetime'},
+        ]
+        return json.dumps(fields)
+    
+    def dashboard_display_qty(self):
+        qty = 30
+        return qty
+        
+    def dashboard_category(self):
+        category = 'Events'
+        return category
 
 class SingleTicket(models.Model):
     title           = models.CharField(max_length=270, null=True, blank=True)
@@ -212,6 +276,7 @@ class SingleTicket(models.Model):
     updated         = models.DateTimeField(auto_now=True, null=True, blank=True)
     purchase_price  = models.DecimalField(max_digits=30, decimal_places=2, null=True, blank=True)
     
+    objects         = TicketManager()
     def __str__(self):
         return self.ticket_id
 

@@ -150,7 +150,7 @@ urlpatterns = [
     path('donation/', include(("donations.urls", "donations"), namespace='donation')),
     path('economic-prosperity-and-employment/', include(("prosperity.urls", "prosperity"), namespace='prosperity')),
     path('events/', include(("events.urls", "events"), namespace='events')),
-    path('news-and-events/', news, name='news'),
+    path('news/', news, name='news'),
     path('shop/', shop, name='shop'),
     path('login/', LoginView.as_view(), name='login'),
     path('logout/', LogoutView.as_view(next_page=settings.LOUGOUT_REDIRECT_URL), name='logout'),

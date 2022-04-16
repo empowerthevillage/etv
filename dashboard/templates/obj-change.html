@@ -71,8 +71,8 @@
                                 <div class="col s12 row change-form">
                                     {% for x in fields_formatted %}
                                         {% if x.field.name == 'id' %}
-                                        {% else %}
-                                        {% if x.type == 'foreignkey' %}
+                                        {% elif x.formfield == 'manytomany' %}
+                                        {% elif x.type == 'foreignkey' %}
                                         <div class="input-field col s6">
                                             <select>
                                                 <option value="{{ x.value }}">{{ x.value }}</option>
@@ -88,12 +88,33 @@
                                             <input class="money" value="{{ x.value }}" type="text">
                                             <label>{{ x.formfield.label }}</label>
                                         </div>
+                                        {% elif x.type == 'file' %}
+                                        <div class="col s6">
+                                            <label>{{ x.formfield.label }}</label>
+                                            {% if x.value is not None %}
+                                            {% if x.value != '' %}
+                                            <p>Current file: <a href="https://empowerthevillage.s3.amazonaws.com/media/{{ x.value }}">{{ x.value }}</a></p>
+                                            {% endif %}
+                                            {% endif %}
+                                            <div class="file-field input-field">
+                                                
+                                                <div class="btn">
+                                                  <span><i class="bi bi-paperclip"></i></span>
+                                                  <input type="file">
+                                                </div>
+                                                <div class="file-path-wrapper">
+                                                  <input class="file-path validate" type="text" placeholder="Upload File">
+                                                </div>
+                                              </div>
+                                        </div>
+                                        {% elif x.formfield.label == 'Content' %}
+                                        {% elif x.formfield.label == 'Checkout video html' %}
                                         {% elif x.type == 'number' %}
                                         <div class="input-field col s6">
                                             <input value="{{ x.value }}" type="number">
                                             <label>{{ x.formfield.label }}</label>
                                         </div>
-                                        {% elif x.formfield == 'manytomany' %}
+                                        
                                         {% elif x.type == 'choice' %}
                                         <div class="input-field col s6">
                                             <select>
@@ -151,9 +172,29 @@
                                             <label>{{ x.formfield.label }}</label>
                                         </div>
                                         {% endif %}
-                                        {% endif %}
                                     {% endfor %}
                                 </div>
+                                    {% for x in fields_formatted %}
+                                        {% if x.formfield.label == 'Content' %}
+                                        <div class="col s12"  style="margin-bottom: 20px">
+                                        <label>Page Content</label>
+                                        <textarea class="tinymce-textarea">
+                                            {{ x.value }}
+                                        </textarea>
+                                        </div>
+                                        {% elif x.formfield.label == 'Checkout video html' %}
+                                        <div class="col s12">
+                                            <label>Checkout Video YouTube HTML</label>
+                                            <p class="help-text" style="margin: 0; padding: 10px 0px"><b>Instructions:</b> View video on YouTube, click "share," then "embed." Copy the code that appears, and paste code here.</p>
+                                            <textarea class="tinymce-textarea">
+                                                {% if x.value is not None %}
+                                                {{ x.value }}
+                                                {% endif %}
+                                            </textarea>
+                                        </div>
+                                        {% endif %}
+                                    {% endfor %}
+                                    
                                 <div class="col s12 center-align">
                                     <div class="btn admin-save">SAVE</div>
                                     <div class="btn admin-delete">DELETE</div>
@@ -162,6 +203,7 @@
                             
                         </div>
                     </div>
+                    
                 </div>
             </div>
         </div>
@@ -182,7 +224,7 @@
             var selected = $(this).find(':selected')
             var url = '/dashboard/Village%20Black%20Pages/'+selected.val()+'-list/'
             window.location.replace(url)
-        })
+        });
     </script>
 {% else %}
 <div style="display: flex; align-items: center; justify-content: center;padding-top: 10%">

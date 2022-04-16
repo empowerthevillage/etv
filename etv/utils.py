@@ -114,8 +114,10 @@ def field_type_generator(instance):
     foreign_key_input = ['ForeignKey']
     many_to_many_input = ['ManyToManyField']
     datetime_input = ['DateTimeField']
+    file_input = ['FileField']
 
     type = instance.get_internal_type()
+    print(type)
     if type in many_to_many_input:
         field_type = 'manytomany'
     if type in text_input:
@@ -128,7 +130,8 @@ def field_type_generator(instance):
         field_type = 'radio'
     elif type in foreign_key_input:
         field_type = 'foreignkey'
-    
+    elif type in file_input:
+        field_type = 'file'
     elif type in datetime_input:
         field_type = 'datetime'
     else:

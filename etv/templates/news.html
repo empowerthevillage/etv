@@ -1,48 +1,367 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block title %}ETV | News{% endblock %}
+{% block canonical %}https://www.empowerthevillage.org/news/{% endblock %}
+{% block seo_description %}Keep up with Empower The Village by following our latest newsworthy events!{% endblock %}
+
+
 {% block content %}
-<div class="center-align" style="background: url('{% static 'img/pillar_collage.png' %}');">
-    <div style="padding-top: 40px; padding-bottom: 20px; background-color: rgba(252, 252, 252, 0.276);">
-        <div class="row" style="background-color: rgba(255, 255, 255, 0.982); width: 80%">
-            <div class="col s10 offset-s1" style="margin-top: 80px;">
+<div class="center-align news-body" style="background: url('{% static 'img/pillar_collage.png' %}');">
+    <div class="row" style="background-color: rgba(252, 252, 252, 0.662); margin-bottom: 0">
+        <div class="col s12 xl10 offset-xl1 z-depth-3" style="background-color: rgba(255, 255, 255, 0.951);">
+                <h4>ETV News</h4>
+                <div class="divider-dotted"></div>
                 <div class="row center-align">
-                    <div class="col s12">
+                    <div class="col s12 l10 xl8 offset-l1 offset-xl2 power-hour">
                         <h5>Take a Listen to the Empowerment Hour with Special Guest Ayo Sanderson Wilson <br>(ETV Founder, President, & CEO)!</h5>
-                        <audio controls  id="aacnj-interview" style="margin-bottom: 10px; width: 70%;">
+                        <audio controls  id="aacnj-interview" style="margin-bottom: 10px; width: 80%;">
                             <source src="https://empowerthevillage.s3.amazonaws.com/static/img/ETV_Radio_Interview_FirstHalf.mp3" type="audio/mpeg">
                         </audio>
-                        <img src="https://images.squarespace-cdn.com/content/v1/5f539c4c68bd6f19d4743e52/1630378962470-0T20U8B2GC7J52FGX1P0/RadioInterview+Ayo.png?format=1500w" width=50%>
+                        <img class="z-depth-2" src="https://images.squarespace-cdn.com/content/v1/5f539c4c68bd6f19d4743e52/1630378962470-0T20U8B2GC7J52FGX1P0/RadioInterview+Ayo.png?format=1500w">
                     </div>
                 </div>
                 <div class="divider"></div>
-                <div class="row center-align">
-                    <h5 style="text-transform: uppercase; font-weight: 500">ETV’s 2020 - 2021 Special Report</h5>
-                    <div style="position:relative;padding-top:max(60%,326px);height:0;width:100%"><iframe sandbox="allow-top-navigation allow-top-navigation-by-user-activation allow-downloads allow-scripts allow-same-origin allow-popups allow-modals allow-popups-to-escape-sandbox" allowfullscreen="true" style="position:absolute;border:none;width:100%;height:100%;left:0;right:0;top:0;bottom:0;" src="https://e.issuu.com/embed.html?d=etv_special_report_2020-2021_v2&hideIssuuLogo=true&u=empowerthevillage"></iframe></div>
+                <div class="center-align col s12 l10 offset-l1 report-2020">
+                    <h5>ETV’s 2020 - 2021 Special Report</h5>
+                    <a target="_blank" href="https://issuu.com/empowerthevillage/docs/etv_special_report_2020-2021_v2"><img class="z-depth-2" src="{% static 'img/report2020-21.png' %}"></a>
                 </div>
+
                 <div class="divider"></div>
                 
                 <div class="row center-align">
                     <div class="col s12">
                         <h5>How Did You Celebrate Juneteenth?</h5>
-                        <iframe width="100%" height="415" src="https://www.youtube.com/embed/-JaP0OkWUoQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="margin-bottom: 20px"></iframe>
-                        <a class="btn green" href="https://www.tapinto.net/towns/denville/categories/press-releases/articles/empower-the-village-inc-and-montclair-art-museum-celebrate-juneteenth-with-two-day-exhibit-showcasing-black-art-excellence-entrepreneurship-9e98e745-9162-4e0a-a2f4-5d13da29cadc">Read The Entire Press Release</a>
+                    </div>
+                    <div class="col s12 m10 l8 xl6 offset-m1 offset-l2 offset-xl3">
+                        <div class="pr-text">
+                            <div class="row">
+                                <div class="col s12 left-align">
+                                    <img src="{% static 'img/logo.jpeg' %}">
+                                    
+                                </div>
+                                <div class="col s12">
+                                    <div class="left left-align">
+                                        <p><b>For Immediate Release</b></p>
+                                        <p>June 24, 2021</p>
+                                    </div>
+                                    <div class="right right-align">
+                                        <p><b>Contact</b>: Cheryl R. Easly, Executive Director</p>
+                                        <p>info@empowerthevillage.org</p>
+                                    </div>
+                                </div>
+                                <div class="col s12">
+                                    <p class="left-align"><b>(Morristown, NJ)</b> The first national Juneteenth holiday was punctuated by balmy temperatures and an even
+                                    hotter celebration of Black excellence in the arts, as Empower The Village Inc, a Morristown-based 501(c)3
+                                    nonprofit organization, hosted For The Love of Art: A Juneteenth Celebration of Justice & Joy, on the beautiful
+                                    campus of Montclair Art Museum (MAM) last weekend.</p>
+                                    <a target="_blank" style="margin-top: 20px" href="https://static1.squarespace.com/static/5f539c4c68bd6f19d4743e52/t/60d7288e00e0f751136f5bd5/1624713358874/ETV-JuneteenthArtShowPressReleaseFINAL6-25-21.pdf" class="btn light-green darken-2">Read the Full Press Release</a>
+                                </div>
+                            </div>
+                        </div>
+                        <iframe class="juneteenth-yt z-depth-2" src="https://www.youtube.com/embed/-JaP0OkWUoQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="margin-bottom: 20px"></iframe>
                     </div>
                 </div>
-                <div class="divider" style="margin-bottom: 20px"></div>
-                <div class="row">
-                    <iframe width="100%" height="415" src="https://www.youtube.com/embed/kxH_YQ50pAs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                <div class="divider"></div>
+                
+                <div class="row center-align">
+                    <div class="col s12 l8 offset-l2">
+                        <h5>Empower The Village’s Operation: Stop The Spread Vaccine Event Comes to Morristown, NJ</h5>
+                    </div>
+                    <div class="col s12 m10 l8 xl6 offset-m1 offset-l2 offset-xl3">
+                        <div class="pr-text">
+                            <div class="row">
+                                <div class="col s12 left-align">
+                                    <img src="{% static 'img/logo.jpeg' %}">
+                                    
+                                </div>
+                                <div class="col s12">
+                                    <div class="left left-align">
+                                        <p><b>For Immediate Release</b></p>
+                                        <p>April 3, 2021</p>
+                                    </div>
+                                    <div class="right right-align">
+                                        <p><b>Contact</b>: Cheryl R. Easly, Executive Director</p>
+                                        <p>info@empowerthevillage.org</p>
+                                    </div>
+                                </div>
+                                <div class="col s12">
+                                    <p class="left-align"><b>Empower The Village, Inc. (ETV)</b> partnered with Zufall Health to offer 100+ doses of the Covid-19 vaccine on
+                                        Friday, April 2, 2021 at Church of God in Christ for All Saints in Morristown. After successfully offering free
+                                        Covid-19 testing to the community in 2020 when it was much less accessible in certain communities, ETV
+                                        was thrilled to be bringing The Village back together to help ‘Stop the Spread’ of Covid-19, which has
+                                        disproportionately impacted the Black and other underserved communities.</p>
+                                    <a target="_blank" style="margin-top: 20px" href="https://static1.squarespace.com/static/5f539c4c68bd6f19d4743e52/t/60784fec684d7f2b42043c23/1618497516761/ETV-COVIDVaccineEvent+-+Press+Release+ver+4.15.21.pdf" class="btn light-green darken-2">Read the Full Press Release</a>
+                                </div>
+                            </div>
+                        </div>
+                        <iframe class="juneteenth-yt z-depth-3" src="https://www.youtube.com/embed/yYewqf6GRVs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
                 </div>
-            </div>
+
+                <div class="divider"></div>
+                
+                <div class="row center-align">
+                    <div class="col s12 l8 offset-l2">
+                        <h5>Ayo Sanderson Wilson, Founder of Empower The Village, Congresswoman Mikie Sherrill and Black Community Leaders in NJ-11 Discuss Covid-19 Impact and Needs</h5>
+                    </div>
+                    <div class="col s12 m10 l8 xl6 offset-m1 offset-l2 offset-xl3">
+                        <div class="pr-text">
+                            <div class="row">
+                                <div class="col s12 left-align">
+                                    <img src="{% static 'img/logo.jpeg' %}">
+                                    
+                                </div>
+                                <div class="col s12">
+                                    <div class="left left-align">
+                                        <p><b>For Immediate Release</b></p>
+                                        <p>February 24, 2021</p>
+                                    </div>
+                                    <div class="right right-align">
+                                        <p><b>Contact</b>: Cheryl R. Easly, Executive Director</p>
+                                        <p>info@empowerthevillage.org</p>
+                                    </div>
+                                </div>
+                                <div class="col s12">
+                                    <p class="left-align">In a roundtable discussion with NJ-11 Congresswoman Mikie Sherrill, Empower The Village, Inc. Founder
+                                        Ayo Sanderson Wilson was among 11 Black community leaders who met virtually with Congresswoman
+                                        Sherrill to discuss the impact of the COVID-19 pandemic on the Black community. During the early part of
+                                        the roundtable discussion, many of the New Jersey community leaders reiterated the history of
+                                        documented mistreatment of the Black community by the healthcare system in America, which has been
+                                        a source of seemingly justified skepticism about the safety associated with the Covid-19 vaccine.</p>
+                                    <a target="_blank" style="margin-top: 20px" href="https://static1.squarespace.com/static/5f539c4c68bd6f19d4743e52/t/60371d3945f2b47be0989dfa/1614224697469/ETVCOVIDSherrill+PressRelease.pdf" class="btn light-green darken-2">Read the Full Press Release</a>
+                                </div>
+                            </div>
+                        </div>
+                        <iframe class="juneteenth-yt z-depth-3" src="https://www.youtube.com/embed/vFH3GW33M4s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <div class="divider"></div>
+
+                <div class="center-align col s12 l10 offset-l1 report-2020">
+                    <h5>Hot Off The Press: The Power Post June Edition</h5>
+                    <a target="_blank" href="https://issuu.com/empowerthevillage/docs/the_power_post_june_2021_issue"><img class="z-depth-2" src="{% static 'img/power-post-june21.png' %}"></a>
+                </div>
+
+                <div class="divider"></div>
+
+                <div class="center-align col s12 l10 offset-l1 report-2020">
+                    <h5>Hot Off The Press: The Power Post</h5>
+
+                    <h6>The inaugural issue of ETV’s monthly newsletter!</h6>
+                    <a target="_blank" href="https://issuu.com/empowerthevillage/docs/the_power_post_may_2021_inaugural_issue"><img class="z-depth-2" src="{% static 'img/power-post-may21.png' %}"></a>
+                </div>
         </div>
 </div>
 </div>
 <style>
-    h5 {
-        line-height: 32px;
-        font-weight: 600;
-        padding-top: 10px;
-        padding-bottom: 10px
+    @media only screen and (min-width: 0px){
+        h4 {
+            font-family: oskar-inline;
+            font-size: 48px;
+            color:rgb(43, 162, 43)
+        }
+        .divider-dotted {
+            border-bottom: dotted 2px rgb(201, 201, 201);
+            width: 60%;
+            margin-left: 20%
+        }
+        .divider {
+            width: 80%;
+            margin-left: 10%
+        }
+        h5 {
+            line-height: 22px;
+            padding-bottom: 10px;
+            margin-bottom: 0;
+            padding-top: 20px;
+            font-family: oskar;
+            font-weight: 400;
+            letter-spacing: 0.5;
+            font-size: 20px
+        }
+        h6 {
+            line-height: 22px;
+            padding-bottom: 10px;
+            margin-bottom: 0;
+            font-family: oskar;
+            font-weight: 200;
+            letter-spacing: 0.5;
+            font-size: 18px
+        }
+        .news-body img {
+            width: 80%;
+            margin-top: 10px;
+            margin-bottom: 20px
+        }
+        .juneteenth-collage {
+            width: 100% !important
+        }
+        .pr-text img {
+            width: 40%
+        }
+        .juneteenth-yt {
+            width: 100%;
+            height: 250px
+        }
+        .pr-text p {
+            font-size: 10px;
+            letter-spacing: 0.2;
+            padding: 0;
+            margin: 0;
+            line-height: 18px
+        }
+        .pr-text .col {
+            margin-top: 20px
+        }
+    }
+    @media only screen and (min-width: 601px){
+        h4 {
+            font-family: oskar-inline;
+            font-size: 52px;
+            color:rgb(43, 162, 43)
+        }
+        h5 {
+            line-height: 36px;
+            padding-top: 20px;
+            padding-bottom: 10px;
+            margin-bottom: 0;
+            font-family: oskar;
+            font-weight: 400;
+            letter-spacing: 0.5;
+            font-size: 28px
+        }
+        h6 {
+            line-height: 28px;
+            padding-bottom: 10px;
+            margin-bottom: 0;
+            font-family: oskar;
+            font-weight: 200;
+            letter-spacing: 0.5;
+            font-size: 24px
+        }
+        .news-body img {
+            width: 70%;
+            margin-top: 10px;
+            margin-bottom: 20px
+        }
+        .pr-text img {
+            width: 40%
+        }
+        .juneteenth-yt {
+            width: 100%;
+            height: 250px
+        }
+        .pr-text p {
+            font-size: 10px;
+            letter-spacing: 0.2;
+            padding: 0;
+            margin: 0;
+            line-height: 18px
+        }
+        .pr-text .col {
+            margin-top: 20px
+        }
+    }
+    @media only screen and (min-width: 993px){
+        h4 {
+            padding-top: 20px;
+            padding-bottom: 10px;
+            font-size: 56px
+        }
+        h5 {
+            font-size: 32px
+        }
+        h6 {
+            line-height: 34px;
+            padding-bottom: 10px;
+            margin-bottom: 0;
+            font-family: oskar;
+            font-weight: 200;
+            letter-spacing: 0.5;
+            font-size: 28px
+        }
+        .news-body img {
+            width: 60%;
+            margin-top: 10px;
+            margin-bottom: 20px
+        }
+        .pr-text img {
+            width: 40%
+        }
+        .juneteenth-yt {
+            width: 100%;
+            height: 250px
+        }
+        .pr-text p {
+            font-size: 10px;
+            letter-spacing: 0.2;
+            padding: 0;
+            margin: 0;
+            line-height: 18px
+        }
+        .pr-text .col {
+            margin-top: 20px
+        }
+    }
+    @media only screen and (min-width: 1201px){
+        h5 {
+            font-size: 32px
+        }
+        
+        .news-body img {
+            width: 50%;
+            margin-top: 10px;
+            margin-bottom: 20px
+        }
+        .pr-text img {
+            width: 20%
+        }
+        .juneteenth-yt {
+            width: 100%;
+            height: 370px
+        }
+        .pr-text p {
+            font-size: 14px;
+            letter-spacing: 0.2;
+            padding: 0;
+            margin: 0;
+            line-height: 22px
+        }
+        .pr-text .btn {
+            font-size: 18px
+        }
+        .pr-text .col {
+            margin-top: 20px
+        }
+    }
+    @media only screen and (min-width: 1400px){
+        h5 {
+            font-size: 42px;
+            line-height: 50px;
+            margin-bottom: 20px
+        }
+        .news-body img {
+        }
+        .pr-text img {
+            width: 30%
+        }
+        .juneteenth-yt {
+            width: 100%;
+            height: 400px
+        }
+        .pr-text p {
+            font-size: 16px;
+            letter-spacing: 0.5;
+            padding: 0;
+            margin: 0;
+            line-height: 28px
+        }
+        .pr-text .col {
+            margin-top: 20px
+        }
     }
 </style>
 {% endblock %}

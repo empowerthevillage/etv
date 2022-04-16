@@ -1,8 +1,6 @@
 {% load static %}
 {% load mailchimp_tags %}
-{% include 'base/css.html' %}
-{% include 'base/admin-css.html' %}
-{% include 'base/js.html' %}
+
 {% url 'about' as about_url %}
 {% url 'account:home' as account_url %}
 {% url 'donations:donate' as donate_url %}
@@ -37,30 +35,9 @@
 {% url 'prosperity:village-at-work' as vaw_url %}
 {% url 'dashboard:home' as dashboard_url %}
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-<!-- JQuery Mask -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js" integrity="sha512-pHVGpX7F/27yZ0ISY+VVjyULApbDlD0/X0rgGbTqCE7WFW5MezNTWG/dnhtbBuICzsd0WQPgpE4REBLv+UqChw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script>
-  $(document).ready(function(){
-      $('.simple-marquee-container').SimpleMarquee({velocity: 0.05});
-      $('.collapsible').collapsible();
-      $('.parallax').parallax();
-      $('select').formSelect();
-      $('.dropdown-trigger').dropdown({hover: true, constrainWidth: false, coverTrigger: false, container:'.dropdown-container'});
-      $('.sidenav').sidenav();
-      $('.carousel').carousel({indicators: true, numVisible: 10,});
-      $('.tooltipped').tooltip({'margin':'0', 'transitionMovement': '0',});
-      $('.phone_us').mask('(000) 000-0000');
-      $('.money').mask('000,000.00', {reverse: true});
-      $('#other-donation').mask('000,000', {reverse: true});
-      $('.datepicker').datepicker();
-      $('.ways-to-play-tabs').tabs();
-      $('.tooltipped').tooltip();
-      
-    });
-    
-  </script>
-<!doctype html>
+
+<!DOCTYPE HTML>
+
 <html lang="en">
 
     <head>
@@ -69,8 +46,39 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="shortcut icon" type="image/png" href="{% static 'img/favicon.png' %}" />
         <title>{% block title %}{% endblock %}</title>
+        <script src="https://cdn.tiny.cloud/1/yekqlvtwn9ghn08g3c78rq0yxq1sjyosqlnm358l7bo97jud/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+        <script>
+          tinymce.init({
+            selector: '.tinymce-textarea'
+          });
+        </script>
+        {% include 'base/css.html' %}
+        {% include 'base/admin-css.html' %}
+        {% include 'base/js.html' %}
     </head>
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <!-- JQuery Mask -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js" integrity="sha512-pHVGpX7F/27yZ0ISY+VVjyULApbDlD0/X0rgGbTqCE7WFW5MezNTWG/dnhtbBuICzsd0WQPgpE4REBLv+UqChw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script>
+          $(document).ready(function(){
+              $('.simple-marquee-container').SimpleMarquee({velocity: 0.05});
+              $('.collapsible').collapsible();
+              $('.parallax').parallax();
+              $('select').formSelect();
+              $('.dropdown-trigger').dropdown({hover: true, constrainWidth: false, coverTrigger: false, container:'.dropdown-container'});
+              $('.sidenav').sidenav();
+              $('.carousel').carousel({indicators: true, numVisible: 10,});
+              $('.tooltipped').tooltip({'margin':'0', 'transitionMovement': '0',});
+              $('.phone_us').mask('(000) 000-0000');
+              $('.money').mask('000,000.00', {reverse: true});
+              $('#other-donation').mask('000,000', {reverse: true});
+              $('.datepicker').datepicker();
+              $('.ways-to-play-tabs').tabs();
+              $('.tooltipped').tooltip();
+              
+            });
+            
+          </script>
     <body>
       <script>
          $(document).ready(function(){

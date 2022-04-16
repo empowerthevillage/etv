@@ -43,7 +43,7 @@ def economic_prosperity(request):
 
 def news(request):
     context = {
-    'title':'ETV | News & Events'
+    'title':'ETV | News'
     }
     return render(request, "news.html", context)
 

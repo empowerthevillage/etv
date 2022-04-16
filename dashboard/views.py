@@ -194,13 +194,28 @@ def modelHome(request, category, model):
     field_list = []
     field_name_list = ['pk']
     field_pairs = []
+    data_list = []
     for x in fields:
         item = model._meta.get_field(str(x["field"]))
         type = x["type"]
         field_list.append(item)
         field_name_list.append(item.name)
         field_pairs.append({"field": item, "type": type, "verbose": item.verbose_name})
-    data = model.objects.filter_objs().values_list(*field_name_list)
+    data = model.objects.filter_objs().values_list(*field_name_list, named=True)
+    for x in data:
+        row = []
+        try:
+            event = Event.objects.get(pk=x.event)
+            row.append({'event':event})
+        except:
+            pass
+        try:
+            tickettype = TicketType.objects.get(pk=x.type)
+            row.append({'tickettype':tickettype})
+        except:
+            pass
+        print(row)
+
     p = Paginator(data, model_obj.display_qty)
 
     context = {

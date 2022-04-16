@@ -210,6 +210,12 @@ def ven_email(request):
     }
     return render(request, 'new-submission.html', context)
 
+def ven_welcome_email(request):
+    context = {
+        'name': 'Chandler Prevatt',
+    }
+    return render(request, 'welcome-email.html', context)
+
 def ven_schedule(request, venID):
     id = venID
     family_applicant = None

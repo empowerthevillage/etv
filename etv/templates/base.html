@@ -40,7 +40,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js" integrity="sha512-pHVGpX7F/27yZ0ISY+VVjyULApbDlD0/X0rgGbTqCE7WFW5MezNTWG/dnhtbBuICzsd0WQPgpE4REBLv+UqChw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script>
   $(document).ready(function(){
-      $('.simple-marquee-container').SimpleMarquee({velocity: 0.05});
       $('.collapsible').collapsible();
       $('.parallax').parallax();
       $('select').formSelect();
@@ -112,16 +111,18 @@
                   {% if request.user.is_authenticated %}
                   <a class="main-nav-link ul-effect valign-wrapper {% if request.path == events_url %}active{% endif %}" href="{{ events_url }}">Events</a>
                   <div class="navbar-slash"> | </div>
+                  <a class="main-nav-link ul-effect valign-wrapper {% if request.path == events_url %}active{% endif %}" href="{{ news_url }}">News</a>
+                  <div class="navbar-slash"> | </div>
                   {% if request.user.is_admin %}
                   <a class="main-nav-link ul-effect valign-wrapper {% if request.path == events_url %}active{% endif %}" href="/dashboard/">Dashboard</a>
                     <div class="navbar-slash"> | </div>
                   {% endif %}
-                  <a href="{{ account_url }}" id="account-icon"><i class="material-icons" style="color: grey; font-size: 36px; padding-top:30px;">account_circle</i></a>
-                    <div class="navbar-slash"> | </div>
                   <a href="{{ logout_url }}" class="main-nav-link ul-effect valign-wrapper"> Logout</a>
                    
                   {% else %}
                   <a class="main-nav-link ul-effect valign-wrapper {% if request.path == events_url %}active{% endif %}" href="{{ events_url }}">Events</a>
+                  <div class="navbar-slash"> | </div>
+                  <a class="main-nav-link ul-effect valign-wrapper {% if request.path == events_url %}active{% endif %}" href="{{ news_url }}">News</a>
                   <div class="navbar-slash"> | </div>
                   <a class="main-nav-link valign-wrapper ul-effect" style="cursor: pointer" id="join-village-topnav">Join</a>
                   <div class="navbar-slash"> | </div>
@@ -332,7 +333,7 @@
                 <li><a class="center-align valign-wrapper {% if request.path == voting_url %}active{% endif %}" data-target="nav-dropdown-pp" href="{{ voting_url }}">OPERATION: BALLOT BOX™</a></li>
             </ul>
           </div>
-        <div style="z-index: -1; margin-top: 120px">
+        <div style="z-index: -1; margin-top: 120px" id="body-container">
         {% block content %}
         
         {% endblock %}
@@ -371,26 +372,27 @@
                   </form>
                 </div>
               </div>
-              <div class="col s12 l4">
+              <div class="col s12 l5">
                 <div class="center-align row">
                   <p style="font-size: 16px; margin: 0">Powered By</p>
                   <img width=250px src="{% static 'img/febg.png' %}">
                 </div>
                 <div class="row">
-                  <div class="col s12 m5 offset-m1">
+                  <div class="col s12 m3 offset-m3">
                 
                     <ul class="other-links">
                       <li><a class="" href="{{ home_url }}">Home</a></li>
                       <li><a class="" href="{{ about_url }}">About</a></li>
                       <li><a class="" href="{{ contact_url }}">Contact</a></li>
-                      
                       <li><a class="" href="{{ merchandise_url }}">Shop</a></li>
-                      <li><a class="" href="{{ events_url }}">News & Events</a></li>
+                      <li><a class="" href="{{ events_url }}">Events</a></li>
+                      
                     </ul>
                     
                   </div>
-                  <div class="col s12 m5 l6">
+                  <div class="col s12 m6">
                     <ul class="other-links">
+                      <li><a class="" href="{{ news_url }}">News</a></li>
                       <li><a class="" href="{{ ep_url }}">Economic Prosperity & Employment</a></li>
                       <li><a class="" href="{{ education_url }}">Education</a></li>
                       <li><a class="" href="{{ health_url }}">Health & Wellness</a></li>
@@ -413,8 +415,8 @@
         </div>
         <div class="footer-copyright" style="height:100px; background-color: rgb(0, 0, 0);">
           <div class="container center-align">
-          <p class="copyright-text row">©{% now "Y" %} Copyright Empower The Village, Inc.</p>
-          <div class="row footer-icon-row">
+          <p class="copyright-text row" style="padding-top: 30px">©{% now "Y" %} Copyright Empower The Village, Inc.</p>
+          <div class="row footer-icon-row" style="padding-top: 10px">
               <a href="https://www.facebook.com/Empower-The-Village-Nonprofit-Organization-105185814766521/" class="facebook"><i class="fab fa-facebook"></i></a>
               <a href="https://twitter.com/empower_etv" class="twitter"><i class="fab fa-twitter"></i></a>
               <a href="https://www.instagram.com/empower_etv/" class="instagram"><i class="fab fa-instagram"></i></a>
