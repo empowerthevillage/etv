@@ -115,13 +115,15 @@ def field_type_generator(instance):
     many_to_many_input = ['ManyToManyField']
     datetime_input = ['DateTimeField']
     file_input = ['FileField']
-
+    text_area = ['TextField']
     type = instance.get_internal_type()
-    print(type)
+    #print(type)
     if type in many_to_many_input:
         field_type = 'manytomany'
-    if type in text_input:
+    elif type in text_input:
         field_type = 'text'
+    elif type in text_area:
+        field_type = 'textarea'
     elif type in currency_input:
         field_type = 'currency'
     elif type in number_input:

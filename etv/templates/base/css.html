@@ -701,38 +701,18 @@
     filter: brightness(0.7)
   }
   /* Base */
-  .donate-btn-navbar {
-    border: solid 1px rgb(203, 202, 202);
-    cursor: pointer;
-    padding: 25px 40px;
-    display: inline-block;
-    margin: 12.3px 10px;
-    margin-right: 0;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-weight: 300;
-    outline: none;
-    position: relative;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    transition: all 0.3s;
-    overflow: hidden;
-    border-radius:0;
-    transform:scale(1,0.9);
-    
-  }
   .nav-tab {
-                  font-size: 16px !important; 
-                  font-weight: 500
-                }
+    font-size: 16px !important; 
+    font-weight: 500
+  }
   #navbar .donate-btn-navbar {
     text-align: center;
     height:65px;
-    line-height:12px;
+    line-height:18px;
     width:130px;
     background-color:#08c10e;
     font-size:22px;
-    padding-left: 15.5;
+    padding-left: 15.5px;
   }
   .donate-btn-navbar:after {
     content: '';
@@ -1531,7 +1511,10 @@
   }
 }
 @media only screen and (min-width:601px){
-  
+  #navbar .donate-btn-navbar {
+    line-height: 65px;
+    letter-spacing: 2px
+  }
   #ven-quantity .select-dropdown.dropdown-trigger {
     text-align: center;
     padding-left: 0
@@ -2202,7 +2185,7 @@
         padding: 10px 5px !important;
         font-size: 14px !important;
         height: 35px !important;
-        padding-top: 10px
+        padding-top: 10px;
 }
 }
 @media only screen and (max-width: 680px) {

@@ -126,7 +126,7 @@ class vbpStateManager(models.Manager):
         
     def dashboard_get_fields(self):
         list_fields = [{'field':'business_name','type':'plain'},{'field':'city','type':'plain'},{'field':'category','type':'plain'},{'field':'subcategory','type':'plain'},{'field':'approved','type':'plain'},]
-        return json.dumps(list_fields)
+        return list_fields
     
     def dashboard_get_view_fields(self):
         fields = [
@@ -140,14 +140,16 @@ class vbpStateManager(models.Manager):
 
             {'field':'owner_name','type':'plain'},
             {'field':'owner_email','type':'email'},
-
+            {'field':'nominator_name','type':'plain'},
+            {'field':'nominator_email','type':'email'},
+            
             {'field':'instagram','type':'instagram'},
             {'field':'facebook','type':'facebook'},
             {'field':'twitter','type':'twitter'},
 
             {'field':'approved','type':'boolean'},
         ]
-        return json.dumps(fields)
+        return fields
     
     def dashboard_display_qty(self):
         qty = 100
@@ -207,7 +209,7 @@ class vbpBookManager(models.Manager):
         
     def dashboard_get_fields(self):
         list_fields = [{'field':'state','type':'plain'},{'field':'published','type':'boolean'},]
-        return json.dumps(list_fields)
+        return list_fields
     
     def dashboard_get_view_fields(self):
         fields = [
@@ -217,7 +219,7 @@ class vbpBookManager(models.Manager):
             {'field':'latitude','type':'coordinate'},
             {'field':'longitude','type':'coordinate'},
         ]
-        return json.dumps(fields)
+        return fields
     
     def dashboard_display_qty(self):
         qty = 52

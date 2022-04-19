@@ -4,9 +4,13 @@ from .views import *
 
 urlpatterns = [
     path('', DashboardHome, name="home"),
+    path('delete/', delete_obj, name="delete"),
+    path('save/', save_obj, name="save"),
     path('donor-update/', updateDonors),
     path('<category>/', appHome, name="category"),
     path('<category>/<model>-list/', modelHome, name="model"),
     path('<category>/<model>-list/edit/<pk>', objectChange, name="change"),
     path('<category>/<model>-list/view/<pk>', objectView, name="change"),
+    
+    
 ]

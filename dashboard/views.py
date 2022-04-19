@@ -1,3 +1,4 @@
+import re
 import django
 from django.contrib.auth import authenticate, login, get_user_model
 from django.contrib.auth.decorators import login_required
@@ -6,6 +7,7 @@ from django.contrib import messages
 from django.conf import settings
 from django.core.paginator import Paginator
 from django.db import connection
+from django.forms import ModelForm
 from django.http import HttpResponse
 from django.views.generic.edit import FormMixin
 from django.urls import reverse
@@ -32,6 +34,7 @@ from vbp.models import *
 from ven.models import *
 
 from .models import *
+from .forms import *
 
 from etv.mixins import NextUrlMixin, RequestFormAttachMixin
 from accounts.models import GuestEmail
@@ -190,52 +193,68 @@ def modelHome(request, category, model):
     model = django.apps.apps.get_model(str(model_obj.app_name), str(model))
     filtered_objs = model.objects.filter_objs()
     objs = model.objects.all()
-    fields = json.loads(model_obj.list_fields_JSON)
+    fields = model.objects.dashboard_get_fields()
     field_list = []
     field_name_list = ['pk']
     field_pairs = []
     data_list = []
+
+    ticket_type_list = {}
+    event_list ={}
+    ticket_pks = TicketType.objects.all()
+    for x in ticket_pks:
+        ticket_type_list.update({str(x.pk):str(x.title)})
+    event_pks = Event.objects.all()
+    for x in event_pks:
+        event_list.update({str(x.pk):str(x.title)})
+
     for x in fields:
         item = model._meta.get_field(str(x["field"]))
         type = x["type"]
         field_list.append(item)
         field_name_list.append(item.name)
         field_pairs.append({"field": item, "type": type, "verbose": item.verbose_name})
+    
     data = model.objects.filter_objs().values_list(*field_name_list, named=True)
-    for x in data:
-        row = []
-        try:
-            event = Event.objects.get(pk=x.event)
-            row.append({'event':event})
-        except:
-            pass
-        try:
-            tickettype = TicketType.objects.get(pk=x.type)
-            row.append({'tickettype':tickettype})
-        except:
-            pass
-        print(row)
-
-    p = Paginator(data, model_obj.display_qty)
+    p = Paginator(data, model.objects.dashboard_display_qty())
 
     context = {
         "dashboardModel": model_obj,
         "model": model,
         "objs": objs,
-        "objs_full": filtered_objs,
         "fields": field_pairs,
         "field_names": field_name_list,
         "data": data,
         "p": p,
         "app_list": app_list,
+        "ticketTypes": json.dumps(ticket_type_list),
+        "eventTypes": json.dumps(event_list),
     }
     return render(request, 'model-home.html', context)
 
 def objectChange(request, category, model, pk):
+
     app_list = dashboardModel.objects.all().order_by('category', 'model_name')
     model_obj = dashboardModel.objects.filter(model_name=str(model)).first()
     model = django.apps.apps.get_model(str(model_obj.app_name), str(model))
     obj = model.objects.filter(pk=pk).first()
+    form = None
+    form_pairs = [
+        {'model':'contact_submission','form':ContactForm(instance=obj)},
+        {'model':'donation','form':DonationForm(instance=obj)},
+        {'model':'Donor','form':DonorForm(instance=obj)},
+        {'model':'Event','form':EventForm(instance=obj)},
+        {'model':'SingleTicket','form':TicketForm(instance=obj)},
+        {'model':'TicketType','form':TicketTypeForm(instance=obj)},
+        {'model':'Nomination','form':VenBusinessForm(instance=obj)},
+        {'model':'FamilyNomination','form':VenFamilyForm(instance=obj)},
+        {'model':'vbp_book','form':VBPBookForm(instance=obj)},
+    ]
+    
+    for x in form_pairs:
+        if model_obj.model_name == x['model']:
+            form = x['form']
+    
     fields = model._meta.get_fields()
     fields_formatted = []
     for x in fields:
@@ -263,6 +282,7 @@ def objectChange(request, category, model, pk):
         "fields": fields,
         "fields_formatted": fields_formatted,
         "app_list": app_list,
+        "form": form
     }
     return render(request, 'obj-change.html', context)
 
@@ -271,9 +291,11 @@ def objectView(request, category, model, pk):
     model_obj = dashboardModel.objects.filter(model_name=str(model)).first()
     model = django.apps.apps.get_model(str(model_obj.app_name), str(model))
     obj = model.objects.filter(pk=pk).first()
-    fields = json.loads(model_obj.view_fields)
+    fields = model.objects.dashboard_get_view_fields()
     field_pairs = []
+    print(fields)
     for x in fields:
+        print(x)
         item = model._meta.get_field(str(x["field"]))
         type = x["type"]
         
@@ -302,20 +324,59 @@ def objectView(request, category, model, pk):
     }
     return render(request, 'obj-view.html', context)
 
-def download_csv(request, queryset):
+def download_csv(request):
         if not request.user.is_staff:
             raise PermissionDenied
-        opts = queryset.model._meta
-        model = queryset.model
-        response = HttpResponse(mimetype='text/csv')
+        data = request.POST
+        model = data.model
+        print(model)
+        #opts = data.model
+        #opts = queryset.model._meta
+        #model = queryset.model
+        #response = HttpResponse(mimetype='text/csv')
         # force download.
-        response['Content-Disposition'] = 'attachment;filename=export.csv'
+        #response['Content-Disposition'] = 'attachment;filename=export.csv'
         # the csv writer
-        writer = csv.writer(response)
-        field_names = [field.name for field in opts.fields]
+        #writer = csv.writer(response)
+        #field_names = [field.name for field in opts.fields]
         # Write a first row with header information
-        writer.writerow(field_names)
+        #writer.writerow(field_names)
         # Write data rows
-        for obj in queryset:
-            writer.writerow([getattr(obj, field) for field in field_names])
-        return response
+        #for obj in queryset:
+        #    writer.writerow([getattr(obj, field) for field in field_names])
+        #return response
+
+def delete_obj(request):
+    if request.user.is_admin:
+        dashmodel = request.POST.get('dashmodel')
+        pk = request.POST.get('pk')
+        model_obj = dashboardModel.objects.filter(model_name=dashmodel).first()
+        model = django.apps.apps.get_model(str(model_obj.app_name), str(model_obj.model_name))
+ 
+        obj = model.objects.get(pk=pk)
+        obj.delete()
+        data = {
+            'status': 'success'
+        }
+        return JsonResponse(data)
+
+def save_obj(request):
+    if request.user.is_admin:
+        dashmodel = request.POST.get('dashModel')
+        pk = request.POST.get('pk')
+        model_obj = dashboardModel.objects.filter(model_name=dashmodel).first()
+        model = django.apps.apps.get_model(str(model_obj.app_name), str(model_obj.model_name))
+        obj = model.objects.get(pk=pk)
+        keys = request.POST.keys()
+        values = request.POST.values()
+        data_list = zip(keys, values)
+        for x,y in data_list:
+            try:
+                field = model._meta.get_field(str(x))
+                print(field)
+            except:
+                print('wah not found')
+        data = {
+            'status': 'success'
+        }
+        return JsonResponse(data)

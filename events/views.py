@@ -270,7 +270,6 @@ def event_sponsor_checkout(request, slug):
     return render(request, "sponsor-checkout.html", context)
 
 def ticket_cart_ad_update(request):
-    print(request.POST)
     type                = request.POST.get('type')
     event_title         = request.POST.get('event')
     ad_id               = request.POST.get('adType')
@@ -339,7 +338,23 @@ def ticket_cart_donation_update(request):
         'pk': item_obj.pk,
     }
     return JsonResponse(data)
+    
+def ticket_cart_donation_remove(request):
+    event_title         = request.POST.get('event')
+    event               = Event.objects.filter(title=event_title).first()
+    cart_obj            = TicketCart.objects.new_or_get(request, event)
+    pk                  = request.POST.get('pk')
+    
+    item_obj = ticketDonation.objects.get(pk=pk)
+    item_obj.delete()
 
+    data = {
+        'total': '$%s' %(cart_obj.total),
+        'row': '.%s-row' %(pk),
+        'removeContainer': '#%s-remove-container' %(pk),
+        'pk': str(pk)
+    }
+    return JsonResponse(data)
 def ticket_cart_update(request):
     event_title         = request.POST.get('event')
     event               = Event.objects.filter(title=event_title).first()

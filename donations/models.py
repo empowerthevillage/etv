@@ -129,7 +129,7 @@ class DonationManager(models.Manager):
         
     def dashboard_get_fields(self):
         list_fields = [{'field':'amount','type':'currency'}, {'field':'first_name','type':'plain'}, {'field':'last_name','type':'plain'},  {'field':'updated','type':'datetimeShort'}]
-        return json.dumps(list_fields)
+        return list_fields
     
     def dashboard_get_view_fields(self):
         fields = [
@@ -141,7 +141,7 @@ class DonationManager(models.Manager):
             {'field':'braintree_id','type':'braintree_transaction'},
             {'field':'frequency','type':'plain'}
         ]
-        return json.dumps(fields)
+        return fields
     
     def dashboard_display_qty(self):
         qty = 20

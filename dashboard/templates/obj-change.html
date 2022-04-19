@@ -6,54 +6,14 @@
 {% if request.user.is_admin %}
     <div class="row">
         <div class="col l3 hide-on-med-and-down admin-side-menu">
-            <div class="side-menu-overlay">
-                <section>
-                    <ul>
-                    {% regroup app_list by category as apps %}
-                        {% for x in apps %}
-                            {% if x.grouper == 'Village Black Pages' %}
-                            <li class="list-heading">Village Black Pages</li>
-                            <li>Books
-                                <div class="right">
-                                    <a href=""><i class="bi bi-plus-square add-model-obj tooltipped" data-position="bottom" data-tooltip="Add New {{ model }}"></i></a>
-                                    <a href="/dashboard/Village%20Black%20Pages/vbp_book-list/"><i class="bi bi-window-plus view-model-objs tooltipped" data-position="top" data-tooltip="View All {{ model.model_name_plural }}"></i></a>
-                                </div>
-                            </li>
-                            <div class="input-field vbp-select" style="margin-top: 30px;width: 70%">
-                                <select id="vbp-selector">
-                                  <option value="" disabled selected>Choose A State</option>
-                                    {% for model in x.list %}
-                                        {% if model.grouping == 'vbp_state' %}
-                                            <option value="{{ model }}">{{ model.model_name_plural }}</option>
-                                        {% endif %}
-                                    {% endfor %}
-                                </select>
-                                <label style="color: black">VBP Individual Listings</label>
-                              </div>
-                            <li</li>
-                            {% else %}
-                            <li class="list-heading">{{ x.grouper }}</li>
-                                {% for model in x.list %}
-                                <li>{{ model.model_name_plural }}
-                                    <div class="right">
-                                        <a href=""><i class="bi bi-plus-square add-model-obj tooltipped" data-position="bottom" data-tooltip="Add New {{ model }}"></i></a>
-                                        <a href="/dashboard/{{ model.category }}/{{ model }}-list/"><i class="bi bi-window-plus view-model-objs tooltipped" data-position="top" data-tooltip="View All {{ model.model_name_plural }}"></i></a>
-                                    </div>
-                                </li>
-                                {% endfor %}
-                            {% endif %}
-                        {% endfor %}
-                    </ul>
-                </section>
-            </div>
+            {% include 'side-menu.html' %}
         </div>
         <div class="col s12 l9">
             <div class="admin-container">
                 <div class="row">
                     <div class="col s12" style="margin-bottom: 10px">
                         <a href="{{ dashboard_url }}" class="breadcrumb">Dashboard</a>
-                        <a href="{{ dashboard_url }}" class="breadcrumb">{{ dashboardModel.category }}</a>
-                        <a href="/dashboard/{{ dashboardModel.category }}/{{ dashboardModel.model_name }}-list/" class="breadcrumb">{{ dashboardModel.model_name_verbose }} List</a>
+                        <a href="/dashboard/{{ dashboardModel.category }}/{{ dashboardModel.model_name }}-list/" class="breadcrumb">{{ dashboardModel.get_model_name }} List</a>
                         <a href="/dashboard/{{ dashboardModel.category }}/{{ dashboardModel.model_name }}-list/view/{{ obj.pk }}" class="breadcrumb">{{ obj }}</a>
                         <a class="breadcrumb active">Edit</a>
                       </div>
@@ -68,137 +28,158 @@
                                 <div class="btn admin-delete">DELETE</div>
                             </div>
                             <div class="card-body row">
-                                <div class="col s12 row change-form">
-                                    {% for x in fields_formatted %}
-                                        {% if x.field.name == 'id' %}
-                                        {% elif x.formfield == 'manytomany' %}
-                                        {% elif x.type == 'foreignkey' %}
-                                        <div class="input-field col s6">
-                                            <select>
-                                                <option value="{{ x.value }}">{{ x.value }}</option>
-                                                {% for widget,choice in x.formfield.widget.choices %}
-                                                    <option value="{{ choice }}">{{ choice }}</option>
-                                                {% endfor %}
-                                            </select>
-                                            <label>{{ x.formfield.label }}</label>
-                                        </div>
-                                        
-                                        {% elif x.type == 'currency' %}
-                                        <div class="input-field col s6">
-                                            <input class="money" value="{{ x.value }}" type="text">
-                                            <label>{{ x.formfield.label }}</label>
-                                        </div>
-                                        {% elif x.type == 'file' %}
-                                        <div class="col s6">
-                                            <label>{{ x.formfield.label }}</label>
-                                            {% if x.value is not None %}
-                                            {% if x.value != '' %}
-                                            <p>Current file: <a href="https://empowerthevillage.s3.amazonaws.com/media/{{ x.value }}">{{ x.value }}</a></p>
-                                            {% endif %}
-                                            {% endif %}
-                                            <div class="file-field input-field">
-                                                
-                                                <div class="btn">
-                                                  <span><i class="bi bi-paperclip"></i></span>
-                                                  <input type="file">
-                                                </div>
-                                                <div class="file-path-wrapper">
-                                                  <input class="file-path validate" type="text" placeholder="Upload File">
-                                                </div>
-                                              </div>
-                                        </div>
-                                        {% elif x.formfield.label == 'Content' %}
-                                        {% elif x.formfield.label == 'Checkout video html' %}
-                                        {% elif x.type == 'number' %}
-                                        <div class="input-field col s6">
-                                            <input value="{{ x.value }}" type="number">
-                                            <label>{{ x.formfield.label }}</label>
-                                        </div>
-                                        
-                                        {% elif x.type == 'choice' %}
-                                        <div class="input-field col s6">
-                                            <select>
+                                <form id="changeForm">
+                                    {% csrf_token %}
+                                    {% for field in form %}
+                                    <div class="col s6 input-field">
+                                        {{ field }}
+                                        <label>{{ field.label }}</label>
+                                    </div>
+                                    {% endfor %}
+                                </form>
+                                <!--<form id="changeForm">
+                                    
+                                    <input type="hidden" name="dashModel" value="{{ dashboardModel.model_name }}">
+                                    <input type="hidden" name="pk" value="{{ obj.pk }}">
+                                    <div class="col s12 row change-form">
+                                        {{ form }}
+                                        {% for x in fields_formatted %}
+                                            {% if x.field.name == 'id' %}
+                                            {% elif x.formfield == 'manytomany' %}
+                                            {% elif x.type == 'foreignkey' %}
+                                            <div class="input-field col s6">
+                                                <select name="{{ x.formfield.name }}">
+                                                    <option value="{{ x.value }}">{{ x.value }}</option>
+                                                    {% for widget,choice in x.formfield.widget.choices %}
+                                                        <option value="{{ choice }}">{{ choice }}</option>
+                                                    {% endfor %}
+                                                </select>
+                                                <label>{{ x.formfield.label }}</label>
+                                            </div>
+                                            {% elif x.type == 'textarea' %}
+                                            <div class="input-field col s6">
+                                                <textarea class="materialize-textarea" name="{{ x.formfield.name }}" style="font-family: poppins;
+                                                letter-spacing: 1px;
+                                                font-weight: 300;">{{ x.value }}</textarea>
+                                                <label>{{ x.formfield.label }}</label>
+                                            </div>
+                                            {% elif x.type == 'currency' %}
+                                            <div class="input-field col s6">
+                                                <input class="money" name="{{ x.formfield.name }}" value="{{ x.value }}" type="text">
+                                                <label>{{ x.formfield.label }}</label>
+                                            </div>
+                                            {% elif x.type == 'file' %}
+                                            <div class="col s6">
+                                                <label>{{ x.formfield.label }}</label>
                                                 {% if x.value is not None %}
-                                                {% for choice, verbose in x.choices %}
-                                                    {% if x.value == choice %}
-                                                        <option value="{{ choice }}" selected>{{ verbose }}</option>
-                                                    {% endif %}
-                                                {% endfor %}
-                                                {% for choice,verbose in x.choices %}
-                                                    {% if x.value != choice %}
-                                                    <option value="{{ choice }}">{{ verbose }}</option>
-                                                    {% endif %}
-                                                {% endfor %}
-                                                {% else %}
-                                                    <option value="" disabled selected>Select A Value</option>
+                                                {% if x.value != '' %}
+                                                <p>Current file: <a href="https://empowerthevillage.s3.amazonaws.com/media/{{ x.value }}">{{ x.value }}</a></p>
+                                                {% endif %}
+                                                {% endif %}
+                                                <div class="file-field input-field" name="{{ x.formfield.name }}">
+                                                    
+                                                    <div class="btn">
+                                                    <span><i class="bi bi-paperclip"></i></span>
+                                                    <input type="file">
+                                                    </div>
+                                                    <div class="file-path-wrapper">
+                                                    <input class="file-path validate" type="text" placeholder="Upload File">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            {% elif x.formfield.label == 'Content' %}
+                                            {% elif x.formfield.label == 'Checkout video html' %}
+                                            {% elif x.type == 'number' %}
+                                            <div class="input-field col s6">
+                                                <input value="{{ x.value }}" type="number" name="{{ x.formfield.name }}">
+                                                <label>{{ x.formfield.label }}</label>
+                                            </div>
+                                            
+                                            {% elif x.type == 'choice' %}
+                                            <div class="input-field col s6">
+                                                <select name="{{ x.formfield.name }}">
+                                                    {% if x.value is not None %}
+                                                    {% for choice, verbose in x.choices %}
+                                                        {% if x.value == choice %}
+                                                            <option value="{{ choice }}" selected>{{ verbose }}</option>
+                                                        {% endif %}
+                                                    {% endfor %}
                                                     {% for choice,verbose in x.choices %}
                                                         {% if x.value != choice %}
                                                         <option value="{{ choice }}">{{ verbose }}</option>
                                                         {% endif %}
                                                     {% endfor %}
-                                                {% endif %}
-                                            </select>
-                                            <label>{{ x.formfield.label }}</label>
-                                        </div>
-                                        {% elif x.type == 'text' %}
-                                        {% if x.formfield.label == 'Counselor' %}
-                                        <div class="input-field col s6">
-                                            <select>
-                                                {% if x.value is not None %}
-                                                <option value="{{ x.value }}" selected>{{ x.value }}</option>
-                                                    {% if x.value != 'Andrew Frazier' %}
-                                                    <option value="Andrew Frazier">Andrew Frazier</option>
+                                                    {% else %}
+                                                        <option value="" disabled selected>Select A Value</option>
+                                                        {% for choice,verbose in x.choices %}
+                                                            {% if x.value != choice %}
+                                                            <option value="{{ choice }}">{{ verbose }}</option>
+                                                            {% endif %}
+                                                        {% endfor %}
                                                     {% endif %}
-                                                    {% if x.value != 'Michelle Harlan' %}
-                                                    <option value="Michelle Harlan">Michelle Harlan</option>
+                                                </select>
+                                                <label>{{ x.formfield.label }}</label>
+                                            </div>
+                                            {% elif x.type == 'text' %}
+                                            {% if x.formfield.label == 'Counselor' %}
+                                            <div class="input-field col s6">
+                                                <select name="{{ x.formfield.name }}">
+                                                    {% if x.value is not None %}
+                                                    <option value="{{ x.value }}" selected>{{ x.value }}</option>
+                                                        {% if x.value != 'Andrew Frazier' %}
+                                                        <option value="Andrew Frazier">Andrew Frazier</option>
+                                                        {% endif %}
+                                                        {% if x.value != 'Michelle Harlan' %}
+                                                        <option value="Michelle Harlan">Michelle Harlan</option>
+                                                        {% endif %}
+                                                    {% else %}
+                                                        <option value="Unassigned" selected>Unassigned</option>
+                                                        <option value="Andrew Frazier">Andrew Frazier</option>
+                                                        <option value="Michelle Harlan">Michelle Harlan</option>
                                                     {% endif %}
-                                                {% else %}
-                                                    <option value="Unassigned" selected>Unassigned</option>
-                                                    <option value="Andrew Frazier">Andrew Frazier</option>
-                                                    <option value="Michelle Harlan">Michelle Harlan</option>
-                                                {% endif %}
-                                            </select>
-                                            <label>Counselor</label>
-                                        </div>
-                                        {% else %}
-                                        <div class="input-field col s6">
-                                            <input value="{{ x.value }}" type="text">
-                                            <label>{{ x.formfield.label }}</label>
-                                        </div>
-                                        {% endif %}
-                                        {% elif x.type == 'datetime' %}
-                                        <div class="input-field col s6">
-                                            <input class="datepicker" value="{{ x.value }}" type="text">
-                                            <label>{{ x.formfield.label }}</label>
-                                        </div>
-                                        {% endif %}
-                                    {% endfor %}
-                                </div>
-                                    {% for x in fields_formatted %}
-                                        {% if x.formfield.label == 'Content' %}
-                                        <div class="col s12"  style="margin-bottom: 20px">
-                                        <label>Page Content</label>
-                                        <textarea class="tinymce-textarea">
-                                            {{ x.value }}
-                                        </textarea>
-                                        </div>
-                                        {% elif x.formfield.label == 'Checkout video html' %}
-                                        <div class="col s12">
-                                            <label>Checkout Video YouTube HTML</label>
-                                            <p class="help-text" style="margin: 0; padding: 10px 0px"><b>Instructions:</b> View video on YouTube, click "share," then "embed." Copy the code that appears, and paste code here.</p>
-                                            <textarea class="tinymce-textarea">
-                                                {% if x.value is not None %}
+                                                </select>
+                                                <label>Counselor</label>
+                                            </div>
+                                            {% else %}
+                                            <div class="input-field col s6">
+                                                <input value="{{ x.value }}" name="{{ x.formfield.name }}" type="text">
+                                                <label>{{ x.formfield.label }}</label>
+                                            </div>
+                                            {% endif %}
+                                            {% elif x.type == 'datetime' %}
+                                            <div class="input-field col s6">
+                                                <input class="datepicker" name="{{ x.formfield.name }}" value="{{ x.value }}" type="text">
+                                                <label>{{ x.formfield.label }}</label>
+                                            </div>
+                                            {% endif %}
+                                        {% endfor %}
+                                    </div>
+                                        {% for x in fields_formatted %}
+                                            {% if x.formfield.label == 'Content' %}
+                                            <div class="col s12"  style="margin-bottom: 20px">
+                                            <label>Page Content</label>
+                                            <textarea class="tinymce-textarea" name="{{ x.formfield.name }}">
                                                 {{ x.value }}
-                                                {% endif %}
                                             </textarea>
-                                        </div>
-                                        {% endif %}
-                                    {% endfor %}
+                                            </div>
+                                            {% elif x.formfield.label == 'Checkout video html' %}
+                                            <div class="col s12">
+                                                <label>Checkout Video YouTube HTML</label>
+                                                <p class="help-text" style="margin: 0; padding: 10px 0px"><b>Instructions:</b> View video on YouTube, click "share," then "embed." Copy the code that appears, and paste code here.</p>
+                                                <textarea class="tinymce-textarea" name="{{ x.formfield.name }}">
+                                                    {% if x.value is not None %}
+                                                    {{ x.value }}
+                                                    {% endif %}
+                                                </textarea>
+                                            </div>
+                                            {% endif %}
+                                        {% endfor %}
                                     
-                                <div class="col s12 center-align">
-                                    <div class="btn admin-save">SAVE</div>
-                                    <div class="btn admin-delete">DELETE</div>
-                                </div>
+                                    <div class="col s12 center-align">
+                                        <div class="btn admin-save">SAVE</div>
+                                        <div class="btn admin-delete">DELETE</div>
+                                    </div>
+                                </form>-->
                             </div>
                             
                         </div>
@@ -208,6 +189,53 @@
             </div>
         </div>
     </div>
+    <script>
+        $('.admin-save').on('click', function(){
+            var formData = $('#changeForm').serialize()
+            var data = {
+                'form': formData,
+                csrfmiddlewaretoken: '{{ csrf_token }}'
+            }
+            $.ajax({
+                data: formData,
+                dataType: 'json',
+                url: '/dashboard/save/',
+                method: "POST",
+                success:function(){
+                    alert('sucess!')
+                },
+            })
+        });
+        $('.admin-delete').on('click', function(){
+            Swal.fire({
+                icon: 'warning',
+                title: "Are you sure?",
+                text: "This action will permanantly delete this object",
+                showDenyButton: false,
+                showCancelButton: true,
+                confirmButtonText: 'Delete',
+                }).then((result) => {
+                /* Read more about isConfirmed, isDenied below */
+                if (result.isConfirmed) {
+                    var pk = '{{ obj.pk }}'
+                    var dashmodel = '{{ dashboardModel }}'
+                    var data = {
+                        'pk': pk,
+                        'dashmodel': dashmodel,
+                        csrfmiddlewaretoken: '{{ csrf_token }}'
+                    }
+                    $.ajax({
+                        data: data,
+                        url: '/dashboard/delete/',
+                        method: "POST",
+                        success:function(){
+                            window.location.replace('/dashboard/{{ dashboardModel.category }}/{{ dashboardModel.model_name }}-list/')
+                        },
+                    })
+                }
+            })
+        })
+    </script>
     <script>
         $('#select-all').on('change', function(){
             if($(this).prop('checked')){

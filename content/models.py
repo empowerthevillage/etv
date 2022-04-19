@@ -14,17 +14,17 @@ class contactManager(models.Manager):
         return filtered_qs
         
     def dashboard_get_fields(self):
-        list_fields = [{'field':'name','type':'plain'},{'field':'email','type':'message'},]
-        return json.dumps(list_fields)
+        list_fields = [{'field':'name','type':'plain'},{'field':'email','type':'email'},{'field':'received','type':'datetime'}]
+        return list_fields
     
     def dashboard_get_view_fields(self):
         fields = [
-            {'field':'user','type':'plain'},
+            {'field':'received','type':'datetime'},
             {'field':'name','type':'plain'}, 
             {'field':'email','type':'email'},
             {'field':'message','type':'plain'},
         ]
-        return json.dumps(fields)
+        return fields
     
     def dashboard_display_qty(self):
         qty = 30
@@ -43,7 +43,7 @@ class contact_submission(models.Model):
     
     objects          = contactManager()
     def __str__(self):
-        return str(self.id)
+        return 'Inquiry from %s' %(self.name)
     
     class Meta:
         verbose_name = 'Contact Us Request'

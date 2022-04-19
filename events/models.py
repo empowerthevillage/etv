@@ -30,7 +30,7 @@ class EventManager(models.Manager):
         
     def dashboard_get_fields(self):
         list_fields = [{'field':'title','type':'plain'},{'field':'start_date','type':'datetime'},{"field":'start_time','type':'datetime'}]
-        return json.dumps(list_fields)
+        return list_fields
     
     def dashboard_get_view_fields(self):
         fields = [
@@ -133,8 +133,8 @@ class TicketTypeManager(models.Manager):
         return filtered_qs
         
     def dashboard_get_fields(self):
-        list_fields = [{'field':'event','type':'plain'},{'field':'title','type':'plain'},{'field':'price','type':'currency'},{"field":'sale','type':'boolean'}]
-        return json.dumps(list_fields)
+        list_fields = [{'field':'event','type':'plain'},{'field':'title','type':'plain'},{'field':'price','type':'currency'}]
+        return list_fields
     
     def dashboard_get_view_fields(self):
         fields = [
@@ -148,7 +148,7 @@ class TicketTypeManager(models.Manager):
             {'field':'sponsorship','type':'boolean'},
             {'field':'quantity','type':'plain'},
         ]
-        return json.dumps(fields)
+        return fields
     
     def dashboard_display_qty(self):
         qty = 40
@@ -193,6 +193,7 @@ class TicketType(models.Model):
     class Meta:
         verbose_name = 'Ticket Type'
         verbose_name_plural = 'Ticket Types'
+        ordering = ['event', 'price']
 
 class TicketManagerQuerySet(models.query.QuerySet):
     def by_request(self, request):
@@ -233,12 +234,12 @@ class TicketManager(models.Manager):
         
     def dashboard_get_fields(self):
         list_fields = [{'field':'event','type':'plain'},{'field':'type','type':'plain'},{'field':'purchase_price','type':'currency'},{"field":'first_name','type':'plain'},{"field":'last_name','type':'plain'}]
-        return json.dumps(list_fields)
+        return list_fields
     
     def dashboard_get_view_fields(self):
         fields = [
-            {'field':'event','type':'plain'},
-            {'field':'type','type':'plain'},
+            {'field':'event','type':'foreignkey'},
+            {'field':'type','type':'foreignkey'},
             {'field':'ticket_id','type':'plain'},
             {'field':'purchase_price','type':'currency'},
             {'field':'first_name','type':'plain'},
@@ -248,7 +249,7 @@ class TicketManager(models.Manager):
             {'field':'qr_code','type':'img'},
             {'field':'created','type':'datetime'},
         ]
-        return json.dumps(fields)
+        return fields
     
     def dashboard_display_qty(self):
         qty = 30
@@ -283,6 +284,7 @@ class SingleTicket(models.Model):
     class Meta:
         verbose_name = 'Ticket'
         verbose_name_plural = 'Tickets'
+        ordering = ['-created']
 
     def get_absolute_url(self):
         return reverse("events:ticket-detail", kwargs={"ticket_id":self.ticket_id} )

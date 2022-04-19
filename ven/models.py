@@ -104,7 +104,7 @@ class NominationManager(models.Manager):
         
     def dashboard_get_fields(self):
         list_fields = [{'field':'business_name','type':'plain'},{'field':'owner_name','type':'plain'},{'field':'city','type':'plain'},{'field':'state','type':'plain'},{'field':'counselor','type':'plain'},]
-        return json.dumps(list_fields)
+        return list_fields
     
     def dashboard_get_view_fields(self):
         fields = [{'field':'business_name','type':'plain'},
@@ -132,7 +132,7 @@ class NominationManager(models.Manager):
         {'field':'priority3','type':'alt1'},
         {'field':'other3','type':'alt2'},
         {'field':'updated','type':'datetime'},]
-        return json.dumps(fields)
+        return fields
         
     def dashboard_display_qty(self):
         qty = 20
@@ -189,7 +189,7 @@ class FamilyNominationManager(models.Manager):
         
     def dashboard_get_fields(self):
         list_fields = [{'field':'ven_id','type':'plain'},{'field':'name','type':'plain'},{'field':'city','type':'plain'},{'field':'state','type':'plain'},{'field':'counselor','type':'plain'},]
-        return json.dumps(list_fields)
+        return list_fields
     
     def dashboard_get_view_fields(self):
         fields = [{'field':'name','type':'plain'},
@@ -209,7 +209,7 @@ class FamilyNominationManager(models.Manager):
         {'field':'priority3','type':'alt1'},
         {'field':'other3','type':'alt2'},
         {'field':'updated','type':'datetime'},]
-        return json.dumps(fields)
+        return fields
         
     def dashboard_display_qty(self):
         qty = 20

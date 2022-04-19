@@ -168,6 +168,7 @@
                                 <td class="product-summary">Custom Donation</td>
                                 <td class="product-summary-price {{ x.pk }}-price">${{ x.amount|intcomma }}</td>
                                 <td class="product-summary-quantity  center-align {{ x.pk }}-quantity">1</td>
+                                <td id="{{ x.pk }}-DonationRemove" ><span class="material-icons cartDonationRemove" pk="{{ x.pk }}">remove_circle</span></td>
                             </tr>
                             {% endfor %}
                             {% for x in ads %}
@@ -254,6 +255,7 @@
                           <td class="product-summary">Custom Donation</td>
                           <td class="product-summary-price {{ x.pk }}-price">${{ x.amount|intcomma }}</td>
                           <td class="product-summary-quantity  center-align {{ x.pk }}-quantity">1</td>
+                          <td id="{{ x.pk }}-DonationRemove" ><span class="material-icons cartDonationRemove" pk="{{ x.pk }}">remove_circle</span></td>
                       </tr>
                       {% endfor %}
                       {% for x in ads %}
@@ -388,6 +390,7 @@
                           <td class="product-summary">Custom Donation</td>
                           <td class="product-summary-price {{ x.pk }}-price">${{ x.amount|intcomma }}</td>
                           <td class="product-summary-quantity  center-align {{ x.pk }}-quantity">1</td>
+                          <td id="{{ x.pk }}-DonationRemove" ><span class="material-icons cartDonationRemove" pk="{{ x.pk }}">remove_circle</span></td>
                       </tr>
                       {% endfor %}
                       {% for x in ads %}
@@ -435,6 +438,14 @@
       transition: all 0.2s ease-in-out;
       cursor: pointer
   }
+  span.cartDonationRemove {
+        color: red;
+        transition: all 0.2s ease-in-out;
+        cursor: pointer
+    }
+    span.cartDonationRemove:hover {
+        transform: rotate(180deg)
+    }
   span.cartAdRemove:hover {
       transform: rotate(180deg)
   }
@@ -668,11 +679,34 @@
                 var price = data.price
                 var quantity = data.quantity
               
-                $('.summary-table-body').append('<tr class="product-row '+ data.pk +'-row"><td class="product-summary"> Custom Donation </td><td class="product-summary-price '+ data.pk + '-price">'+ data.price +'</td><td class="product-summary-quantity center-align '+ data.pk +'-quantity"> 1</td></tr>')
+                $('.summary-table-body').append('<tr class="product-row '+ data.pk +'-row"><td class="product-summary"> Custom Donation </td><td class="product-summary-price '+ data.pk + '-price">'+ data.price +'</td><td class="product-summary-quantity center-align '+ data.pk +'-quantity"> 1</td><td id="'+ data.pk +'-DonationRemove"><span class="material-icons cartDonationRemove" pk="'+ data.pk +'">remove_circle</span></td></tr>')
      
                 var total = data.total
                 $('.total-line').html(total)
                 $('#guest-form').load()
+                },
+                error: function(data){
+                }
+          })
+  })
+  $(document).on('click', '.cartDonationRemove', function(){
+    var data = {
+      'pk': $(this).attr('pk'),
+      'event': $('#event-title').attr('eventTitle'),
+      csrfmiddlewaretoken: '{{ csrf_token }}'
+    }
+    $.ajax({
+            data: data,
+            url: '/events/ticket-donation-remove/',
+            method: 'POST',
+            success: function(data){
+                var price = data.price
+                var quantity = data.quantity
+                var row = data.row
+                $(row).remove()
+     
+                var total = data.total
+                $('.total-line').html(total)
                 },
                 error: function(data){
                 }

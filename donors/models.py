@@ -49,7 +49,7 @@ class DonorManager(models.Manager):
 
     def dashboard_get_fields(self):
         list_fields = [{'field':'total','type':'currency'}, {'field':'first_name','type':'plain'}, {'field':'last_name','type':'plain'},{'field':'phone','type':'phone'},{'field':'email','type':'email'},{'field':'donor_level','type':'plain'}]
-        return json.dumps(list_fields)
+        return list_fields
     
     def dashboard_get_view_fields(self):
         fields = [
@@ -63,7 +63,7 @@ class DonorManager(models.Manager):
             {'field':'mailing_addresses','type':'manytomany'},
             {'field':'donations','type':'manytomany'},
         ]
-        return json.dumps(fields)
+        return fields
 
     def dashboard_display_qty(self):
         qty = 20
