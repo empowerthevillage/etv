@@ -276,7 +276,8 @@ class SingleTicket(models.Model):
     created         = models.DateTimeField(auto_now_add=True, null=True, blank=True)
     updated         = models.DateTimeField(auto_now=True, null=True, blank=True)
     purchase_price  = models.DecimalField(max_digits=30, decimal_places=2, null=True, blank=True)
-    
+    braintree_id    = models.CharField(max_length=270, blank=True, null=True)
+
     objects         = TicketManager()
     def __str__(self):
         return self.ticket_id
@@ -311,6 +312,7 @@ def ticket_pre_save_receiver(sender, instance, *args, **kwargs):
 
 pre_save.connect(ticket_pre_save_receiver, sender=SingleTicket)
 
+
 class AdType(models.Model):
     title               = models.CharField(max_length=270, null=True, blank=True)
     event               = models.ForeignKey(Event, null=True, blank=True, on_delete=models.SET_NULL)
@@ -327,6 +329,36 @@ class AdType(models.Model):
         verbose_name = 'Ad Type'
         verbose_name_plural = 'Ad Types'
 
+class AdManager(models.Manager):
+
+    def filter_objs(self):
+        filtered_qs = self
+        return filtered_qs
+        
+    def dashboard_get_fields(self):
+        list_fields = [{'field':'type','type':'plain'},{'field':'event','type':'plain'},{'field':'email','type':'email'},{"field":'first_name','type':'plain'},{"field":'last_name','type':'plain'}]
+        return list_fields
+    
+    def dashboard_get_view_fields(self):
+        fields = [
+            {'field':'ad','type':'image'},
+            {'field':'ad_id','type':'plain'},
+            {'field':'type','type':'foreignkey'},
+            {'field':'event','type':'foreignkey'},
+            {'field':'email','type':'email'},
+            {"field":'first_name','type':'plain'},
+            {"field":'last_name','type':'plain'}
+            ]
+        return fields
+    
+    def dashboard_display_qty(self):
+        qty = 15
+        return qty
+        
+    def dashboard_category(self):
+        category = 'Events'
+        return category
+
 class Ad(models.Model):
     ad              = models.ImageField(null=True, blank=True)
     type            = models.ForeignKey(AdType, on_delete=models.SET_NULL, null=True, blank=True)
@@ -337,6 +369,8 @@ class Ad(models.Model):
     first_name      = models.CharField(max_length=100, null=True, blank=True)
     last_name       = models.CharField(max_length=100, null=True, blank=True)
     
+    objects         = AdManager()
+
     def __str__(self):
         return self.ad_id
 
@@ -350,6 +384,42 @@ def ad_pre_save_receiver(sender, instance, *args, **kwargs):
 
 pre_save.connect(ad_pre_save_receiver, sender=Ad)
 
+class EventDonationManager(models.Manager):
+
+    def filter_objs(self):
+        filtered_qs = self
+        return filtered_qs
+        
+    def dashboard_get_fields(self):
+        list_fields = [
+            {'field':'event','type':'plain'},
+            {'field':'amount','type':'currency'},
+            {'field':'first_name','type':'plain'},
+            {'field':'last_name','type':'plain'},
+            {'field':'email','type':'email'},
+            ]
+        return list_fields
+    
+    def dashboard_get_view_fields(self):
+        fields = [
+            {'field':'event','type':'foreignkey'},
+            {'field':'amount','type':'currency'},
+            {'field':'first_name','type':'plain'},
+            {'field':'last_name','type':'plain'},
+            {'field':'email','type':'email'},
+            {'field':'braintree_id','type':'braintree_transaction'},
+            {'field':'created','type':'datetime'},
+            ]
+        return fields
+    
+    def dashboard_display_qty(self):
+        qty = 20
+        return qty
+        
+    def dashboard_category(self):
+        category = 'Events'
+        return category
+
 class CompleteDonation(models.Model):
     billing_profile = models.ForeignKey(BillingProfile, on_delete=models.SET_NULL, null=True, blank=True)
     event           = models.ForeignKey(Event, null=True, blank=True, on_delete=models.SET_NULL)
@@ -360,6 +430,8 @@ class CompleteDonation(models.Model):
     braintree_id    = models.CharField(max_length=270, blank=True)
     created         = models.DateTimeField(auto_now=True, blank=True, null=True)
     updated         = models.DateTimeField(auto_now_add=True, blank=True, null=True)
+
+    objects         = EventDonationManager()
 
     class Meta:
         verbose_name = 'Donation'

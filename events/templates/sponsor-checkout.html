@@ -1388,6 +1388,11 @@
       }
       $('.place-order-btn').on('click', function(event){
         event.preventDefault();
+        Swal.fire({
+          title: 'Order Processing',
+          text: "Please wait while we complete your order, do not refresh your browser or use the back button",
+          showConfirmButton: false,
+        })
         hostedFieldsInstance.tokenize(function (tokenizeErr, payload) {
           if (tokenizeErr) {
             console.error(tokenizeErr);

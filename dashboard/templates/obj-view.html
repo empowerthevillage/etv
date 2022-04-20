@@ -69,6 +69,12 @@
                                         {% if x.value is not None %}
                                             <p><b>{{ x.verbose }}</b>: {{ x.value }}</p>
                                         {% endif %}
+                                    {% elif x.type == 'foreignkey' %}
+                                        {% if x.verbose == 'event' %}
+                                        <p style="text-transform: capitalize"><b>Event</b>: {{ obj.event }}</p>
+                                        {% elif x.verbose == 'type' %}
+                                        <p style="text-transform: capitalize"><b>Type</b>: {{ obj.type }}</p>
+                                        {% endif %}
                                     {% elif x.type == 'manytomany' %}
                                     {% else %}
                                     <p style="text-transform: capitalize"><b>{{ x.verbose }}</b>: {{ x.value }}</p>

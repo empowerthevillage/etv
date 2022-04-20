@@ -157,6 +157,16 @@
         })
     </script>
     {% endif %}
+    {% if dashboardModel.model_name == 'CompleteDonation' %}
+    <script>
+        var events = JSON.parse('{{ eventTypes|safe }}')
+        $('.data-table-row').each(function(){
+            var event = $(this).find('.data-cell:nth-child(2)')
+            event_pk = parseInt(event.text())
+            event.text(events[event_pk])
+        })
+    </script>
+    {% endif %}
     {% if dashboardModel.model_name == 'SingleTicket' %}
     <script>
         var tickets = JSON.parse('{{ ticketTypes|safe }}')

@@ -122,8 +122,10 @@ class Donor(models.Model):
     def get_total(self):
         donation_list = []
         for x in self.donations.all():
-            total = 0
             donation_list.append(x.amount)
+        for x in self.event_donations.all():
+            donation_list.append(x.amount)
+            
         total = sum(donation_list)
         return total
     

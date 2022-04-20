@@ -434,7 +434,13 @@ def ticket_nb(request):
                 ticket_list.append(new_ticket)
         donations = ticketDonation.objects.filter(cart=cart_obj)
         for x in donations:
-            donor_obj, created = Donor.objects.new_or_get(request)
+            donor_obj = Donor.objects.filter(first_name=first_name, last_name=last_name).first()
+            if donor_obj is None:
+                donor_obj = Donor.create(
+                    first_name=first_name,
+                    last_name=last_name,
+                    email=email,
+                )
             donation_obj = CompleteDonation()
             donation_obj.email = email
             donation_obj.event = event
@@ -442,10 +448,9 @@ def ticket_nb(request):
             donation_obj.first_name = first_name
             donation_obj.last_name = last_name
             donation_obj.amount = amount
+            donation_obj.braintree_id = result.transaction.id
             donation_obj.save()
             donor_obj.event_donations.add(donation_obj)
-            donor_obj.first_name = first_name
-            donor_obj.last_name = last_name
             donor_obj.save()
         ad_list = []
         ads = ticketAd.objects.filter(cart=cart_obj)
@@ -473,12 +478,21 @@ def ticket_nb(request):
         confirmation_plain_text = 'View email in browser'      
         
         send_mail(confirmation_subject, confirmation_plain_text, from_email, [str(email)], html_message=confirmation_content)
+        detail_content = render_to_string('ticket-admin-email.html',
+        {
+            'purchaser': '%s %s' %(first_name, last_name),
+            'tickets': ticket_list,
+            'ads': ad_list,
+            'donations': donations,
+            'event': event
+        })
         send_mail(
             'New %s Ticket Purchase' %(event),
             str('A ticket purchase has been successfully processed! Purchaser: '+ str(email)),
             'etvnotifications@gmail.com',
             ['chandler@eliftcreations.com', 'admin@empowerthevillage.org', 'ayo@empowerthevillage.org'],
             #['chandler@eliftcreations.com'],
+            html_message=detail_content,
             fail_silently=True
         )
     return redirect('events:home')

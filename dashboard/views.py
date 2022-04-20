@@ -58,6 +58,7 @@ def updateDonors(request):
     return HttpResponse('success')
 
 def DashboardHome(request):
+    bonnie = Donor.objects.get(first_name='Bonnie')
     #Accounts
     users = MyUser.objects.all()
     teams = Team.objects.all()
@@ -158,6 +159,7 @@ def DashboardHome(request):
         ticket_amounts.append(grouped_tickets[x])
 
     context = {
+        'bonnie': bonnie,
         "app_list": app_list,
         "donation_data": grouped_donations,
         "ticket_data": grouped_tickets,
@@ -293,12 +295,9 @@ def objectView(request, category, model, pk):
     obj = model.objects.filter(pk=pk).first()
     fields = model.objects.dashboard_get_view_fields()
     field_pairs = []
-    print(fields)
     for x in fields:
-        print(x)
         item = model._meta.get_field(str(x["field"]))
         type = x["type"]
-        
         try:
             value = item.value_from_object(obj)
         except:
