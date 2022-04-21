@@ -486,11 +486,15 @@ def ticket_nb(request):
             'donations': donations,
             'event': event
         })
+        if event.title == 'Power Swing Classic Fundraiser':
+            recipients = ['chandler@eliftcreations.com', 'admin@empowerthevillage.org', 'ayo@empowerthevillage.org', 'powerswing@empowerthevillage.org']
+        else:
+            recipients = ['chandler@eliftcreations.com', 'admin@empowerthevillage.org', 'ayo@empowerthevillage.org']
         send_mail(
             'New %s Ticket Purchase' %(event),
             str('A ticket purchase has been successfully processed! Purchaser: '+ str(email)),
             'etvnotifications@gmail.com',
-            ['chandler@eliftcreations.com', 'admin@empowerthevillage.org', 'ayo@empowerthevillage.org'],
+            recipients,
             #['chandler@eliftcreations.com'],
             html_message=detail_content,
             fail_silently=True

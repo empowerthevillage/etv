@@ -678,6 +678,11 @@
             url: '/events/ticket-donation-update-cart/',
             method: 'POST',
             success: function(data){
+              Swal.fire({
+                  icon: 'success',
+                  title: 'Success!',
+                  text: 'Cart Updated Successfully',
+                })
                 var price = data.price
                 var quantity = data.quantity
               
@@ -730,6 +735,11 @@
             url: '/events/ticket-ad-update-cart/',
             method: 'POST',
             success: function(data){
+                Swal.fire({
+                  icon: 'success',
+                  title: 'Success!',
+                  text: 'Cart Updated Successfully',
+                })
                 var price = data.price
                 var quantity = data.quantity
                 $('.summary-table-body').append('<tr class="product-row '+ data.pk +'-AdRow"><td class="product-summary">'+ data.ad +'</td><td class="product-summary-price '+ data.pk + '-Adprice">'+ data.price +'</td><td class="product-summary-quantity center-align '+ data.pk +'-quantity">'+ data.quantity +'</td><td id="'+ data.pk +'-removeAd" ><span class="material-icons cartAdRemove" typeId="'+ data.typeId +'" tid="'+ data.pk +'">remove_circle</span></td></tr>')
@@ -756,6 +766,11 @@
             url: '/events/ticket-update-cart/',
             method: 'POST',
             success: function(data){
+              Swal.fire({
+                  icon: 'success',
+                  title: 'Success!',
+                  text: 'Cart Updated Successfully',
+                })
                 var price = data.price
                 var quantity = data.quantity
                 if (data.previousQuantity > 0) {
