@@ -14,6 +14,8 @@ from django.urls import reverse
 from django.utils.http import is_safe_url
 from django.utils.safestring import mark_safe
 from django.core.exceptions import PermissionDenied
+from django.core.mail import send_mail
+from django.template.loader import render_to_string
 
 from datetime import datetime, timedelta
 
@@ -361,21 +363,58 @@ def delete_obj(request):
 
 def save_obj(request):
     if request.user.is_admin:
-        dashmodel = request.POST.get('dashModel')
+        model = request.POST.get('model')
         pk = request.POST.get('pk')
-        model_obj = dashboardModel.objects.filter(model_name=dashmodel).first()
-        model = django.apps.apps.get_model(str(model_obj.app_name), str(model_obj.model_name))
-        obj = model.objects.get(pk=pk)
-        keys = request.POST.keys()
-        values = request.POST.values()
-        data_list = zip(keys, values)
-        for x,y in data_list:
-            try:
-                field = model._meta.get_field(str(x))
-                print(field)
-            except:
-                print('wah not found')
-        data = {
-            'status': 'success'
-        }
-        return JsonResponse(data)
+        if model == 'contact_submission':
+            instance = contact_submission.objects.get(pk=pk)
+            form = ContactForm(request.POST, instance=instance)
+            redirect_url = '/dashboard/Contact%sUs/contact_submission-list/view/%s' %('%20', pk)
+        elif model == 'donation':
+            instance = donation.objects.get(pk=pk)
+            form = DonationForm(request.POST, instance=instance)
+            redirect_url = '/dashboard/donations/donation-list/view/%s' %(pk)
+        elif model == 'Donor':
+            instance = Donor.objects.get(pk=pk)
+            form = DonorForm(request.POST, instance=instance)
+            redirect_url = '/dashboard/donations/Donor-list/view/%s' %(pk)
+        elif model == 'Event':
+            instance = Event.objects.get(pk=pk)
+            form = EventForm(request.POST, instance=instance)
+            redirect_url = '/dashboard/Events/Event-list/view/%s' %(pk)
+        elif model == 'SingleTicket':
+            instance = SingleTicket.objects.get(pk=pk)
+            form = TicketForm(request.POST, instance=instance)
+            redirect_url = '/dashboard/Events/SingleTicket-list/view/%s' %(pk)
+        elif model == 'TicketType':
+            instance = TicketType.objects.get(pk=pk)
+            form = TicketTypeForm(request.POST, instance=instance)
+            redirect_url = '/dashboard/Events/TicketType-list/view/%s' %(pk)
+        elif model == 'Nomination':
+            instance = Nomination.objects.get(pk=pk)
+            prev_counselor = instance.counselor
+            form = VenBusinessForm(request.POST, instance=instance)
+            redirect_url = '/dashboard/Village%sEmpowerment%sNetwork/Nomination-list/view/%s' %('%20','%20', pk)
+        elif model == 'FamilyNomination':
+            instance = FamilyNomination.objects.get(pk=pk)
+            form = VenFamilyForm(request.POST, instance=instance)
+            redirect_url = '/dashboard/Village%sEmpowerment%sNetwork/FamilyNomination-list/view/%s' %('%20','%20', pk)
+        elif model == 'vbp_book':
+            instance = vbp_book.objects.get(pk=pk)
+            form = VBPBookForm(request.POST, instance=instance)
+            redirect_url = '/dashboard/Village%sBlack%sPages/vbp_book-list/view/%s' %('%20','%20',pk)
+        form.save()
+        if model == 'Nomination':
+            if prev_counselor != instance.counselor:
+                subject = "Congratulations! You've Matched With A Village Empowerment Network Counselor!"
+                from_email = 'etvnotifications@gmail.com'
+                content = render_to_string('counselor-assignment.html',
+                {
+                    'counselor':instance.counselor,
+                    'counsel_link':'https://empowerthevillage.org/village-empowerment-network/schedule/%s' %(instance.ven_id)
+                })
+                plain_text = 'View email in browser'
+                send_mail(subject, plain_text, from_email, [str(instance.nominator_email)], html_message=content)
+            else:
+                print('no new counselor')
+        sweetify.success(request, 'Update Successful!')
+        return redirect(redirect_url)

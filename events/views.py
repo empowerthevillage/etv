@@ -71,6 +71,11 @@ STATE_CHOICES = (
     ('WI', 'Wisconsin'),
     ('WY', 'Wyoming'),
 )
+def email_view(request):
+    context = {
+
+    }
+    return render(request, 'ticket-email.html', context)
 def event_home(request):
     events = Event.objects.all()
     context = {

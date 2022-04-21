@@ -28,8 +28,10 @@
                                 <div class="btn admin-delete">DELETE</div>
                             </div>
                             <div class="card-body row">
-                                <form id="changeForm">
+                                <form id="changeForm" method="POST" action="/dashboard/save/">
                                     {% csrf_token %}
+                                    <input type="hidden" name="model" value="{{ dashboardModel }}">
+                                    <input type="hidden" name="pk" value="{{ obj.pk }}">
                                     {% for field in form %}
                                     <div class="col s6 input-field">
                                         {{ field }}
@@ -191,20 +193,7 @@
     </div>
     <script>
         $('.admin-save').on('click', function(){
-            var formData = $('#changeForm').serialize()
-            var data = {
-                'form': formData,
-                csrfmiddlewaretoken: '{{ csrf_token }}'
-            }
-            $.ajax({
-                data: formData,
-                dataType: 'json',
-                url: '/dashboard/save/',
-                method: "POST",
-                success:function(){
-                    alert('sucess!')
-                },
-            })
+            var form = $('#changeForm').submit()
         });
         $('.admin-delete').on('click', function(){
             Swal.fire({

@@ -36,11 +36,17 @@ def venForm(request):
             obj.twitter = nomination_form.data['twitter']
             obj.save()
             sweetify.success(request, title='Thank you!', icon='success', text="Thank you for registering for the Village Empowerment Network!", button='OK', timer=6000)
+            welcome_subject = "Welcome to ETV's Village Empowerment Network!"
+            welcome_from_email = 'etvnotifications@gmail.com'
+            welcome_content = render_to_string('welcome-email.html',{'name':obj.nominator_name})
+            welcome_plain_text = 'View email in browser'
+            send_mail(welcome_subject, welcome_plain_text, welcome_from_email, [str(obj.nominator_email)], html_message=welcome_content)
             confirmation_subject = 'New VEN Submission!'
             from_email = 'etvnotifications@gmail.com'
             confirmation_content = render_to_string('new-submission.html',
             {
                 'business_nomination': True,
+                'pk': obj.pk,
                 'name': obj.nominator_name,
                 'email': obj.nominator_email,
                 'business_name': obj.business_name,
@@ -64,8 +70,7 @@ def venForm(request):
                 'bus_priority3': obj.priority3,
             })
             confirmation_plain_text = 'View email in browser'      
-            
-            send_mail(confirmation_subject, confirmation_plain_text, from_email, ['chandler@eliftcreations.com'], html_message=confirmation_content)
+            send_mail(confirmation_subject, confirmation_plain_text, from_email, ['chandler@eliftcreations.com', 'ayo@empowerthevillage.org', 'admin@empowerthevillage.org'], html_message=confirmation_content)
   
         elif request.POST.get('submission-type') == 'family':
             form = request.POST
@@ -87,6 +92,32 @@ def venForm(request):
             obj.other3 = form.get('other3-custom')
             obj.save()
             sweetify.success(request, title='Thank you!', icon='success', text="Thank you for registering for the Village Empowerment Network!", button='OK', timer=6000)
+            welcome_subject = "Welcome to ETV's Village Empowerment Network!"
+            welcome_from_email = 'etvnotifications@gmail.com'
+            welcome_content = render_to_string('welcome-email.html',{'name':obj.name})
+            welcome_plain_text = 'View email in browser'
+            send_mail(welcome_subject, welcome_plain_text, welcome_from_email, [str(obj.email)], html_message=welcome_content)
+            confirmation_subject = 'New VEN Submission!'
+            from_email = 'etvnotifications@gmail.com'
+            confirmation_content = render_to_string('new-submission.html',
+            {
+                'personal_nomination': True,
+                'pk': obj.pk,
+                'name': obj.name,
+                'email': obj.email,
+                'city': obj.city,
+                'state': obj.state,
+                'phone': obj.phone,
+                'employment_status': obj.employment_status,
+                'age': obj.age_range,
+                'household_size': obj.household_size,
+                'income': obj.income,
+                'fam_priority1': obj.priority1,
+                'fam_priority2': obj.priority2,
+                'fam_priority3': obj.priority3,
+            })
+            confirmation_plain_text = 'View email in browser'      
+            send_mail(confirmation_subject, confirmation_plain_text, from_email, ['chandler@eliftcreations.com', 'ayo@empowerthevillage.org', 'admin@empowerthevillage.org'], html_message=confirmation_content)
         
         elif request.POST.get('submission-type') == 'both':
             form = request.POST
@@ -135,11 +166,59 @@ def venForm(request):
             individual_obj.priority3 = form.get('priority3-family')
             individual_obj.other3 = form.get('other3-custom-family')
 
-
             individual_obj.save()
             business_obj.save()
 
             sweetify.success(request, title='Thank you!', icon='success', text="Thank you for registering for the Village Empowerment Network!", button='OK', timer=6000)
+            welcome_subject = "Welcome to ETV's Village Empowerment Network!"
+            welcome_from_email = 'etvnotifications@gmail.com'
+            welcome_content = render_to_string('welcome-email.html',{'name':business_obj.nominator_name})
+            welcome_plain_text = 'View email in browser'
+            send_mail(welcome_subject, welcome_plain_text, welcome_from_email, [str(business_obj.nominator_email)], html_message=welcome_content)
+            confirmation_subject = 'New VEN Submission!'
+            from_email = 'etvnotifications@gmail.com'
+            confirmation_content = render_to_string('new-submission.html',
+            {
+                'business_nomination': True,
+                'pk': business_obj.pk,
+                'name': business_obj.nominator_name,
+                'email': business_obj.nominator_email,
+                'business_name': business_obj.business_name,
+                'owner_name': business_obj.owner_name,
+                'website': business_obj.website,
+                'city': business_obj.city,
+                'state': business_obj.state,
+                'phone': business_obj.phone,
+                'category': business_obj.category,
+                'subcategory': business_obj.subcategory,
+                'instagram': business_obj.instagram,
+                'facebook': business_obj.facebook,
+                'twitter': business_obj.twitter,
+                'owned': business_obj.nominator_owner,
+                'years_in_bus': business_obj.years_in_business,
+                'employees': business_obj.employees,
+                'revenue': business_obj.revenue,
+                'structure': business_obj.structure,
+                'bus_priority1': business_obj.priority1,
+                'bus_priority2': business_obj.priority2,
+                'bus_priority3': business_obj.priority3,
+
+                'personal_nomination': True,
+                'name': individual_obj.name,
+                'email': individual_obj.email,
+                'city': individual_obj.city,
+                'state': individual_obj.state,
+                'phone': individual_obj.phone,
+                'employment_status': individual_obj.employment_status,
+                'age': individual_obj.age_range,
+                'household_size': individual_obj.household_size,
+                'income': individual_obj.income,
+                'fam_priority1': individual_obj.priority1,
+                'fam_priority2': individual_obj.priority2,
+                'fam_priority3': individual_obj.priority3,
+            })
+            confirmation_plain_text = 'View email in browser'      
+            send_mail(confirmation_subject, confirmation_plain_text, from_email, ['chandler@eliftcreations.com', 'ayo@empowerthevillage.org', 'admin@empowerthevillage.org'], html_message=confirmation_content)
         return redirect('/village-empowerment-network-nomination')
         
     else:
