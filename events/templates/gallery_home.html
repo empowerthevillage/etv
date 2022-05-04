@@ -1,0 +1,453 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div id="page">
+    <div class="event-container">
+        <div class="row">
+            <div class="cart right">
+                <div class="valign-wrapper">
+                    <div id="cart-counter">
+                        <span class="badge" data-badge-caption="">{{ cart.items.all|length }}</span>
+                    </div>
+                    <a href="/events/loa-presale-cart/">
+                        <i class="bi bi-cart4"></i>
+                        My Cart
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="center-align event-page-title">For The Love of Art <br>Juneteenth Celebration</div>
+        <div class="center-align event-page-title" style="color:#01a650">Art Show Presale</div>
+        <div class="divider" style="margin-bottom: 3%; margin-top: 3%; width: 90%; margin-left: 5%"></div>
+        <div class="carousel" id="carousel-sm">
+            {% for x in items %}
+                {% if x.get_availability == True %}
+                <div class="carousel-item" id="item-{{ x.pk }}" item-title="{{ x.title }}" item-artist="{{ x.artist }}" item-price="{{ x.price }}" item-description="{{ x.description }}" status="sold" style="overflow:hidden">
+                    <div class="sold-out z-index-2">Sold</div><img style="filter: brightness(0.4)" src="{{ x.image.url }}">
+                </div>
+                {% else %}
+                    {% if x in cart.items.all %}
+                    <div class="carousel-item" inCart='true' id="item-{{ x.pk }}" item-id="{{ x.pk }}" item-title="{{ x.title }}" item-artist="{{ x.artist }}" item-price="{{ x.price }}" status="available" item-description="{{ x.description }}">
+                    {% else %}
+                    <div class="carousel-item" inCart='false' id="item-{{ x.pk }}" item-id="{{ x.pk }}" item-title="{{ x.title }}" item-artist="{{ x.artist }}" item-price="{{ x.price }}" status="available" item-description="{{ x.description }}">
+                    {% endif %}   
+                        <img class="materialboxed" src="{{ x.image.url }}">
+                    </div>
+                {% endif %}
+            {% endfor %}
+            
+            
+        </div>
+        <div class="gallery-item-details center">
+            <p id="item-title"></p>
+            <div class="divider-dotted"></div>
+            <p id="item-artist"><b>Artist: </b></p>
+            <p id="item-price"></p>
+            <p id="item-description"><b>Medium:</b></p>
+            <div id="sold-btn" class="btn disabled">Sold</div>
+            <div id="add-to-cart" class="btn add-to-cart" itemID=""><i class="bi bi-cart-plus"></i> Add To Cart</div>
+            <div id="remove-from-cart" class="btn red darken-2 remove-from-cart" itemID=""><i class="bi bi-cart-x"></i> Remove from Cart</div>
+            <a href="/events/loa-presale-cart/"><p>View Cart <i class="bi bi-arrow-right-circle"></i></p></a>
+        </div>
+    </div>
+</div>
+
+<style>
+    #cart-counter span {
+        width: fit-content;
+        background: rgb(52, 52, 52);
+        color: white;
+        padding: 5px 10px;
+        height: 30px;
+        min-width:0;
+        margin-right: 10px;
+        border-radius:10px;
+        font-size: 14px
+    }
+    .cart{
+        font-size: 18px
+    }
+    .sold-out {
+        top: 1em;
+        left: -4em;
+        color: #fff;
+        display: block;
+        position:absolute;
+        text-align: center;
+        text-decoration: none;
+        letter-spacing: 1px;
+        background-color: #A00;
+        padding: 0.5em 5em 0.4em 5em;
+        text-shadow: 0 0 0.75em #444;
+        box-shadow: 0 0 0.5em rgba(0,0,0,0.5);
+        font: bold 16px/1.2em Arial, Sans-Serif;
+        -webkit-text-shadow: 0 0 0.75em #444;
+        -webkit-box-shadow: 0 0 0.5em rgba(0,0,0,0.5);
+        -webkit-transform: rotate(-45deg) scale(0.75,1);
+        z-index:10;
+    }
+    .sold-out::before {
+        content: '';
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        position: absolute;
+        margin: -0.3em -5em;
+        transform: scale(0.7);
+        -webkit-transform: scale(0.7);
+        border: 3px rgba(255,255,255,0.7) dotted;
+    }
+    .add-to-cart {
+        font-size: 16px;
+        letter-spacing: 1px;
+        margin-top: 10px
+    }
+    .divider-dotted {
+        border-top: 2px dotted rgb(194, 194, 194);
+        width: 60%;
+        margin-top: 10px;
+        margin-left: 20%
+    }
+    .gallery-item-details {
+        width: 100%;
+        margin-top: -120px
+    }
+    #item-title {
+        font-family: oskar;
+        font-size: 32px;
+        margin: 10px 0px 0px 0px;
+        background: rgb(226, 10, 32);
+        background: linear-gradient(135deg, rgb(226, 10, 32) 0%, rgba(1,166,80,1) 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        line-height: 40px;
+        cursor: default
+    }
+    #item-artist {
+        font-family: oskar;
+        font-size: 22px;
+        margin: 15px 0px 10px 0px;
+        cursor: default
+    }
+    #item-price {
+        color: #0c7b00;
+        font-size: 24px;
+        font-family: oskar;
+        margin: 10px 0px;
+        cursor: default
+    }
+    #item-description {
+        color: #5f5f5f;
+        font-size: 16px;
+        margin: 10px 0px;
+        font-style:italic;
+        cursor: default
+    }
+    .carousel .indicators .indicator-item {
+        margin: 10px 4px !important
+    }
+    .carousel {
+        width: 100%;
+        height: 600px !important;
+        margin-top: -150px
+    }
+    .carousel-item {
+        display: flex;
+        justify-content: center;
+        
+    }
+    .carousel-item img {
+        width:fit-content;
+        height:100%;
+    }
+    #page {
+        background: url("{% static 'img/vbp-collage.svg' %}");
+        background-size: 100%;
+        height: 840px
+    }
+    .event-page-title {
+        font-family: oskar-inline;
+        font-size: 28px;
+        line-height: 32px;
+        margin-bottom: 10px
+    }
+    .carousel {
+        height: 600px;
+        overflow: visible;
+    }
+    .event-text {
+        padding: 3% !important;
+        text-align: center;
+    }
+    .event-container {
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.957);
+        padding: 5%;
+        height: 100%
+    }
+    .event-title {
+        font-family: oskar-inline;
+        font-size: 21px;
+        color: #01a650;
+        transition: color 0.2s ease-in-out
+    }
+    .event-title:hover {
+        color: #068845
+    }
+    .event-date {
+        font-family: oskar;
+        font-size: 16px;
+        font-weight: 400
+    }
+    .event-location {
+        font-family: oskar;
+        margin-top: 5px;
+        margin-bottom: 0;
+        font-size: 18px
+    }
+    .event-description {
+        font-size: 12px;
+        font-weight: 200
+    }
+    .learn-more-btn {
+        margin-top: 10px
+    }
+    @media only screen and (min-width: 601px) {
+        .gallery-item-details {
+            width: 100%;
+        }
+        .add-to-cart {
+            font-size: 18px;
+            margin-bottom: 30px
+        }
+        #item-title {
+            font-size: 40px;
+            margin: 20px 0px 0px 0px;
+            line-height: 40px;
+        }
+        #item-artist {
+            font-family: oskar;
+            font-size: 28px;
+            margin: 15px 0px 10px 0px;
+        }
+        #item-price {
+            color: #0c7b00;
+            font-size: 30px;
+            font-family: oskar;
+            margin: 10px 0px;
+        }
+        #item-description {
+            color: #5f5f5f;
+            font-size: 18px;
+            margin: 10px 0px;
+            font-style:italic;
+        }
+        #page {
+            height: 900px
+        }
+        .event-container {
+            padding: 2% 3%
+        }
+        .event-page-title {
+            font-family: oskar-inline;
+            font-size: 42px;
+            margin-bottom: 1%;
+            margin-top: 10px;
+            line-height: 48px
+        }
+        .event-title {
+            font-size: 28px;
+        }
+        .event-date {
+            font-size: 20px;
+        }
+        .event-location {
+            font-family: oskar;
+            margin-top: 3px;
+            margin-bottom: 0;
+            font-size: 20px
+        }
+        .event-description {
+            font-size: 14px;
+            
+        }
+    }
+    @media only screen and (min-width: 993px) {
+        .divider-dotted {
+        border-top: 2px dotted rgb(194, 194, 194);
+        width: 30%;
+        margin-top: 20px;
+        margin-left: 35%
+    }
+        .gallery-item-details {
+            bottom: -200px
+        }
+        .carousel {
+            height: 700px !important;
+            overflow: visible;
+        }
+        #page {
+            height: 1050px
+        }
+        .event-text {
+            text-align: left;
+            padding: 2% !important
+        }
+        .event-title {
+            font-size: 26px;
+        }
+        .event-date {
+            font-size: 18px;
+        }
+        .event-location {
+            font-family: oskar;
+            margin-top: 3px;
+            margin-bottom: 0;
+            font-size: 20px
+        }
+        .event-description {
+            font-size: 14px;
+            
+        }
+    }
+    @media only screen and (min-width: 1226px) {
+        #page {
+            height: 1100px
+        }
+        .event-container {
+            padding: 3%
+        }
+        .event-page-title {
+            font-size: 49px;
+        }
+        .event-title {
+            font-size: 30px;
+        }
+        .event-date {
+            font-size: 22px;
+        }
+        .event-location {
+            font-family: oskar;
+            margin-top: 3px;
+            margin-bottom: 0;
+            font-size: 24px
+        }
+        .event-description {
+            font-size: 14px;
+            
+        }
+    }
+    @media only screen and (min-width: 1400px) {
+        #page {
+            height: 1200px
+        }
+        .event-page-title {
+            font-size: 56px;
+        }
+        .event-title {
+            font-size: 40px;
+        }
+        .event-date {
+            font-size: 24px;
+        }
+        .event-location {
+            font-family: oskar;
+            margin-top: 3px;
+            margin-bottom: 0;
+            font-size: 26px
+        }
+        .event-description {
+            font-size: 16px;
+            
+        }
+    }
+    .carousel .indicators .indicator-item {
+        background-color: rgba(158, 158, 158, 0.5);
+    }
+    .carousel .indicators .indicator-item.active {
+        background-color: rgba(22, 186, 7, 0.5);
+    }
+</style>
+<script>
+    $(document).ready(function(){
+        $('.materialboxed').materialbox({
+            onCloseStart: function(){
+            $('.gallery-item-details').show()
+        },
+        onOpenStart: function(){
+            $('.gallery-item-details').hide()
+        }});
+        $('.carousel').carousel(
+            {indicators: false, 
+            numVisible: 20, 
+            onCycleTo: function(){
+                var artist = $('.carousel-item.active').attr('item-artist')
+                var title = $('.carousel-item.active').attr('item-title')
+                var price = $('.carousel-item.active').attr('item-price')
+                var priceFormatted = Intl.NumberFormat('en-US', {style: 'currency', currency: 'USD'}).format(price);
+                var description = $('.carousel-item.active').attr('item-description')
+                var availability = $('.carousel-item.active').attr('status')
+                var id = $('.carousel-item.active').attr('item-id')
+                var inCart = $('.carousel-item.active').attr('inCart')
+                $('#item-title').text(title)
+                $('#item-artist').html('<b>Artist</b>: '+artist)
+                $('#item-price').text(priceFormatted)
+                $('#item-description').text(description)
+                $('#add-to-cart').attr('itemID', id)
+                $('#remove-from-cart').attr('itemID', id)
+                if(availability=='sold'){
+                    $('#sold-btn').show()
+                    $('#add-to-cart').hide()
+                    $('#remove-from-cart').hide()
+                }else if(inCart=='true'){
+                    $('#sold-btn').hide()
+                    $('#add-to-cart').hide()
+                    $('#remove-from-cart').show()
+                }else{
+                    $('#sold-btn').hide()
+                    $('#add-to-cart').show()
+                    $('#remove-from-cart').hide()
+                }
+            }
+        });
+        $(document).on('click', '.add-to-cart', function(){
+            data = {
+                csrfmiddlewaretoken: '{{ csrf_token }}',
+                'item' : $(this).attr('itemID'),
+            }
+            $.ajax({
+                data: data,
+                url: '/cart/gallery-update',
+                method: "POST",
+                success:function(data){
+                    $('#cart-counter span').text(data.count)
+                    $('#item-'+data.pk).attr('inCart', 'true')
+                    $('.add-to-cart').hide()
+                    $('#remove-from-cart').show()
+                },
+            })
+        });
+        $(document).on('click', '.remove-from-cart', function(){
+            data = {
+                csrfmiddlewaretoken: '{{ csrf_token }}',
+                'item' : $(this).attr('itemID'),
+            }
+            $.ajax({
+                data: data,
+                url: '/cart/gallery-remove',
+                method: "POST",
+                success:function(data){
+                    $('#cart-counter span').text(data.count)
+                    $('#item-'+data.pk).attr('inCart', 'false')
+                    $('.add-to-cart').show()
+                    $('#remove-from-cart').hide()
+                },
+            })
+        });
+    });
+    
+</script>
+{% endblock %}

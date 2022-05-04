@@ -176,10 +176,6 @@
 <p style="margin: 0; font-size: 14px; text-align: center; mso-line-height-alt: 18px;"> </p>
 <p style="margin: 0; font-size: 14px; text-align: center; mso-line-height-alt: 24px;"><span style="color:#29b317;font-size:16px;"><strong>ORDER DETAILS:</strong></span></p>
 <p style="margin: 0; font-size: 14px; text-align: center; mso-line-height-alt: 18px;"> </p>
-<p style="margin: 0; font-size: 14px; text-align: center;"><em><span style="color:#383838;font-size:16px;"><strong>Event:</strong> {{ event.title }}</span></em></p>
-<p style="margin: 0; font-size: 14px; text-align: center;"><em><span style="color:#383838;font-size:16px;"><strong>Date:</strong> {{ event.start_date }}</span></em></p>
-<p style="margin: 0; font-size: 14px; text-align: center;"><em><span style="color:#2752fc;font-size:16px;"><i><a href="https://www.empowerthevillage.org{{ event.get_absolute_url }}"><u>Event Details</u></a></i></span></em></p>
-<p style="margin: 0; font-size: 14px; text-align: center; mso-line-height-alt: 18px;"> </p>
 {% for x in tickets %}
 <p style="margin: 0; font-size: 14px; text-align: center;"><em><span style="font-size:16px;color:#383838;"><strong>Ticket ID:</strong> {{ x }}</span></em></p>
 <p style="margin: 0; font-size: 14px; text-align: center;"><em><span style="font-size:16px;color:#383838;"><strong>Ticket Price:</strong> ${{ x.type.get_price }}</span></em></p>

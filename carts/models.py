@@ -2,10 +2,10 @@ from decimal import Decimal
 from django.db import models
 from django.conf import settings
 from django.utils.translation import activate
-from events.models import Guest, TicketType
+from events.models import GalleryItem, Guest, TicketType
 from merchandise.models import *
 from django.db.models.signals import pre_save, post_save, m2m_changed
-from events.models import *
+from events.models import Event, TicketType, AdType
 User = settings.AUTH_USER_MODEL
 
 class CartManager(models.Manager):
@@ -176,3 +176,48 @@ class ticketAd(models.Model):
     def subtotal(self):
         return str(self.amount)
     
+class GalleryCartManager(models.Manager):
+    def new_or_get(self, request):
+        cart_id = request.session.get("gallery_cart_id", None)
+        qs = self.get_queryset().filter(id=cart_id)
+        if qs.count() == 1:
+            new_obj = False
+            cart_obj = qs.first()
+        else:
+            cart_obj = GalleryCart.objects.create()
+            new_obj = True
+            request.session['gallery_cart_id'] = cart_obj.id
+        return cart_obj, new_obj
+
+    def new(self, user):
+        user_obj = None
+        if user is not None:
+            if user.is_authenticated:
+                user_obj = user
+        return self.model.objects.create(user=user_obj)
+
+    def add_nonce(self, nonce):
+        if nonce:
+            return self.update(nonce=nonce)
+        return None
+        
+class GalleryCart(models.Model):
+    updated         = models.DateTimeField(auto_now=True)
+    timestamp       = models.DateTimeField(auto_now_add=True)
+    nonce           = models.CharField(null=True, blank=True, max_length=120)
+    active          = models.BooleanField(default=True, null=True, blank=True)
+    items           = models.ManyToManyField(GalleryItem, blank=True)
+
+    objects         = GalleryCartManager()
+
+    def __str__(self):
+        return  str(self.id)
+    
+    @property
+    def total(self):
+        prices = []
+        for x in self.items.all():
+            prices.append(x.price)
+        total = sum(prices)
+        print(total)
+        return total

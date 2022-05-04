@@ -4,6 +4,8 @@ from .views import *
 
 urlpatterns = [
     path('', event_home, name='home'),
+    path('art-presale/', gallery_home, name="gallery-home"),
+    path('loa-presale-cart/', gallery_cart_home, name="presale-cart-home"),
     path('email-view/', email_view, name="email-view"),
     path('ticket-update-cart/', ticket_cart_update, name="ticket-update-cart"),
     path('ticket-donation-update-cart/', ticket_cart_donation_update, name="ticket-update-donation-cart"),
@@ -13,4 +15,5 @@ urlpatterns = [
     path('<slug>/', event_detail, name='detail'),
     path('<slug>/buy-tickets/', event_ticket_checkout, name='ticket-checkout'),
     path('<slug>/sponsor/', event_sponsor_checkout, name='sponsor-checkout'),
+    
     ]

@@ -1,0 +1,1512 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load humanize %}
+
+{% block content %}
+<div id="page">
+    <div id="overlay" style="padding: 5% 2%">
+      <div class="row center-align" style="border-bottom: dotted 1px rgb(233, 233, 233); padding-bottom: 2%; margin-bottom: 2%">
+        <a class="valign-wrapper" href="/events/art-presale"><i class="material-icons" style="font-size: 16px">arrow_back</i>&nbsp; Back to Pre-Sale</a>
+        <h6 class="modal-title scale-up-center">For the Love of Art Juneteenth Celebration Pre-Sale</h6>
+    
+        <a href="/events/love-of-art-fundraiser" target="_blank"><h6 class="modal-date scale-up-center" style="width: 100%">Event Details</h6></a>
+    </div>
+    <div class="row" id="ticket-checkout-p1">
+        <div class="col s12 m7 card" style="padding: 1% 5%; margin-top: 0">
+        <h7 class="modal-summary-title">Shopping Cart</h7>
+        <div class="divider" style="margin-top: 10px; margin-bottom: 10px"></div>
+          <form id="ticket-form">
+              {% for x in cart.items.all %}
+                <div class="row z-depth-3" style="padding: 1%">
+                    <div class="col s4 l2">
+                        <img src="{{ x.image.url }}" class="z-depth-1" width=100%>
+                    </div>
+                    <div class="col s8 l10">
+                        <p class="ticket-title">{{ x.title }}</p>
+                        <div class="divider-dotted">
+                            <p class="ticket-price">${{ x.price|intcomma }}</p>
+                        </div>
+                        <p class="ticket-description"><b>Artist</b>: {{ x.artist }}</p>
+                        <p class="ticket-description"><i>{{ x.description }}</i></p>
+                    </div>
+                </div>
+              {% endfor %}
+          </form>
+        </div>
+        <div class="col s12 m5 summary-card-container" id="ticket-summary-container">
+            <div class="z-depth-1 summary-card" id="ticket-summary">
+                <div id="ticket-summary-card1">
+                    <p class="modal-summary-title" style="margin-bottom: 0;">Summary</p>
+                    <table class="summary-table" id="summary-table-1">
+                       
+                        <thead id="summary-thead">
+                            <tr id="total-tr">
+                                <td>Artwork</td>
+                                <td>Price</td>
+                                <td class="center-align"></td>
+                            </tr>
+                        </thead>
+                        <tbody class="tbody summary-table-body" id="summary-tb1">
+                            {% for x in  cart.items.all %}
+                            <tr class="product-row {{ x.pk }}-row">
+                                <td class="product-summary">
+                                    <b>{{ x.title }}</b>
+                                    <p><i>By {{ x.artist }}</i></p>
+                                </td>
+                                <td class="product-summary-price {{ x.pk }}-price">${{ x.price|intcomma }}</td>
+                                <td id="{{ x.pk }}-remove" ><span class="material-icons cartRemove" tid="{{ x.pk }}">remove_circle</span></td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+                <div class="" style="padding-top: 10px;">
+                    <div class="total-line"><b>Total</b> - ${{ cart.total|intcomma }}</div>
+                    <p class="required" style="margin-top: 5px; padding-top: 0">*ALL SALES FINAL*</p>
+                    <p>
+                    <a style="margin-bottom: 5px" href="" class="btn checkout" id="step1-continue" style="background-color: rgb(29, 154, 29) !important; font-size: 32px !important">Continue</a>
+                    <i class="secure"><i class="fas fa-lock"></i> Secure </i></p>
+                </div>
+            </div>
+            <div class="card center-align" style="padding: 3%">
+                <h7 class="modal-summary-title">Important Order Info</h7>
+                <p class="required">ALL SALES FINAL</p>
+                <p>Artwork must be picked up in person during <a href="/events/love-of-art-fundraiser" target="_blank">ETV's For the Love of Art Juneteenth Celebration</a>. All items will be on display for the duration of the event on Saturday, June 18th, 2022. Event attendance is encouraged but not requried for pre-sale art purchases. Artwork must be picked up at the end of the event on Saturday, June 18th, 2022, or on Sunday, June 19th from 12pm-5pm.</p>
+                <p><b>Pickup Location</b></p>
+                <p><a href="https://goo.gl/maps/d4Sp5L5MyJiXtmSv9" target="_blank">Montclair Art Museum</a></p>
+                <p><b>Saturday, 6/18/22, </b>5-9 PM</p>
+                <p><b>Sunday, 6/19/22, </b>12-5 PM</p>
+                <p><a href="/events/love-of-art-fundraiser" target="_blank">Full Event Details</a></p>
+            </div>
+        </div>
+    </div>
+    <div class="row" id="ticket-checkout-p2" style="display:none">
+        <div class="col s12 m7 scrollspy">
+            <a class="valign-wrapper" href="" id="step2-back"><i class="material-icons" style="font-size: 16px">arrow_back</i> &nbsp;Back To Cart Home</a>
+            
+            <div>
+                    <h6 class="modal-summary-title">Terms of Sale</h6>
+                    <p class="ticket-description">Thank you for supporting The Village! Please read and agree to the terms of sale before proceeding to checkout</p>
+                    <div class="divider" style="margin-bottom: 20px"></div>
+                    <div class="card center-align" style="padding: 3%">
+                        <h7 class="modal-summary-title">Important Order Info</h7>
+                        <p class="required">ALL SALES FINAL</p>
+                        <p>Artwork must be picked up in person during <a href="/events/love-of-art-fundraiser" target="_blank">ETV's For the Love of Art Juneteenth Celebration</a>. All items will be on display for the duration of the event on Saturday, June 18th, 2022. Event attendance is encouraged but not requried for pre-sale art purchases. Artwork must be picked up at the end of the event on Saturday, June 18th, 2022, or on Sunday, June 19th from 12pm-5pm.</p>
+                        <p><b>Pickup Location</b></p>
+                        <p><a href="https://goo.gl/maps/d4Sp5L5MyJiXtmSv9" target="_blank">Montclair Art Museum</a></p>
+                        <p><b>Saturday, 6/18/22, </b>5-9 PM</p>
+                        <p><b>Sunday, 6/19/22, </b>12-5 PM</p>
+                        <p><a href="/events/love-of-art-fundraiser" target="_blank">Full Event Details</a></p>
+                    </div>
+                    <form id="guest-form">
+                      <div class="input-field col s6">
+                        <input id="ticketholder_first_name" name="first-name" type="text" required>
+                        <label for="ticketholder_first_name">Your First Name<b class="required">*</b></label>
+                      </div>
+                      <div class="input-field col s6">
+                        <input id="ticketholder_last_name" name="last-name" type="text" required>
+                        <label for="ticketholder_last_name">Your Last Name<b class="required">*</b></label>
+                      </div>
+                      <div class="input-field col s12">
+                        <input id="ticketholder_email" name="email" type="email" required>
+                        <label for="ticketholder_email">Your Email<b class="required">*</b></label>
+                      </div>
+                      <p class="center-align">
+                        <label>
+                          <input class="with-gap" name="agreement" type="radio" required />
+                          <span>I understand the terms of sale outlined above<b class="required">*</b></span>
+                        </label>
+                      </p>
+                    </form>
+
+                  </div>
+        </div>
+            <div class="col s12 m5 summary-card-container" id="ticket-summary-container">
+                <div class="z-depth-1 summary-card" id="ticket-summary">
+                    <div id="ticket-summary-card2">
+                        <p class="modal-summary-title" style="margin-bottom: 0;">Summary</p>
+                        <table class="summary-table" id="summary-table-2">
+                           
+                            <thead id="summary-thead">
+                                <tr id="total-tr">
+                                    <td>Artwork</td>
+                                    <td>Price</td>
+                                    <td class="center-align"></td>
+                                </tr>
+                            </thead>
+                            <tbody class="tbody summary-table-body" id="summary-tb1">
+                                {% for x in  cart.items.all %}
+                                <tr class="product-row {{ x.pk }}-row">
+                                    <td class="product-summary">
+                                        <b>{{ x.title }}</b>
+                                        <p><i>By {{ x.artist }}</i></p>
+                                    </td>
+                                    <td class="product-summary-price {{ x.pk }}-price">${{ x.price|intcomma }}</td>
+                                    <td id="{{ x.pk }}-remove" ><span class="material-icons cartRemove" tid="{{ x.pk }}">remove_circle</span></td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="" style="padding-top: 10px;">
+                        <div class="total-line"><b>Total</b> - ${{ cart.total|intcomma }}</div>
+                        <p class="required" style="margin-top: 5px; padding-top: 0">*ALL SALES FINAL*</p>
+                        <p>
+                        <a style="margin-bottom: 5px" href="" class="btn checkout" id="step-2-billing" style="background-color: rgb(29, 154, 29) !important; font-size: 32px !important">Continue</a>
+                        <i class="secure"><i class="fas fa-lock"></i> Secure </i></p>
+                    </div>
+                </div>
+                
+            </div>
+    </div>
+    <div class="row" id="ticket-checkout-p3" style="display:none">
+        <div class="left col s12 l6 checkout-container section scrollspy">
+            <a href="" class="valign-wrapper" id="step3-back"><i class="material-icons" style="font-size: 16px">arrow_back</i>&nbspBack To Terms</a>
+                <div class="center-align">
+                    <h5 class="section-title " style="padding-right: 15px">Payment Method</h5>
+                    <i class="fas fa-lock center-align"></i> Secure </i>
+                </div>
+                <form id="braintree-card-form">
+                <input type="hidden" id="device-data-input">
+                <input type="hidden" id="nonce-input">
+                <fieldset class="checkout-fieldset z-depth-1" style="padding: 5% 10%">
+
+                    <div class="row">
+                    
+                    <div class="col s12">
+                        <label for="card-number">Card Number</label>
+                        <div id="card-number" class="valign-wrapper"><i class="fas fa-credit-card input-icon"></i></div>
+                    </div>
+                    </div>
+                    <div class="row">
+                    <div class="col s12 m4">
+                        <label for="card-date">Expiration</label>
+                        <div id="card-date" class="valign-wrapper"><i class="fas fa-calendar-day input-icon"></i></div>
+                    </div>
+                    <div class="col s6 m4">
+                        <label for="card-cvv">CVV</label>
+                        <div id="card-cvv" class="valign-wrapper"><i class="fas fa-lock input-icon"></i></div>
+                    </div>
+                    <div class="col s6 m4">
+                        <label for="card-zip">ZIP</label>
+                        <div id="card-zip" class="valign-wrapper"><i class="fas fa-globe-americas input-icon"></i></div>
+                    </div>
+                    </div>
+                </fieldset>
+                </form>
+                <form id="billing-form">
+                <input type="hidden" id="billing-saved-or-new">
+                    <fieldset class=checkout-fieldset  style="margin-top: 0">
+                    
+                    <div class="express-checkout center-align row z-depth-1">
+                        
+                        <div class="col s12">
+                        <h6>Express Checkout</h6>
+                        <div class="col s6 m6 l4" style="padding-left:0; padding-right: 0">
+                            <button class="btn waves-effect google-button valign-wrapper z-depth-0" id="google-pay-button" style="border: solid 1px rgb(211, 211, 211)">
+                            <img src="{% static 'img/googlepay-full.svg' %}" style="width: 60px; margin-left: 3px">
+                            </button>
+                        </div>
+                        <div class="col s6 m6 l4" style="padding-left:0; padding-right: 0">
+                            <div id="paypal-button" style="margin:5px; letter-spacing: 1.5px"></div>
+                        </div>
+                        <div class="col s6 m6 offset-m3 l4" style="padding-left:0; padding-right: 0">
+                            <button class="valign-wrapper btn waves-effect venmo-button z-depth-0" id="venmo-button" style="display:none;">
+                            <img src="{% static 'img/venmo-white.svg' %}" style="width: 80px; margin-left: 2px">
+                            </button>
+                        </div>
+                        </div>
+                    </div>
+   
+                    <input type="hidden" value="{{ event.pk }}" id="event-hidden-input-sponsor">
+                        <div class="col s12 m10 offset-m1 xl6 offset-xl3" style="padding-left:0; padding-right: 0">
+                        
+                        <div class="center-align">
+                            <p style="margin-top:0" class="summary-total">Total - <b class="total-line">${{ cart.total|intcomma }}</b></p>
+                            <button class="btn disabled waves-effect z-depth-1 place-order-btn" style="margin-bottom: 20px; background-color: rgb(29, 154, 29) !important;">
+                                Complete Order
+                            </button>
+                            <br>
+                            <a href="https://www.braintreegateway.com/merchants/tb3vd7jd2hynhxcn/verified" target="_blank">
+                            <img src="https://s3.amazonaws.com/braintree-badges/braintree-badge-dark.png" width="164px" height ="44px" border="0"/>
+                            </a>
+                        </div>
+                        </div>
+                        
+                    
+                    </fieldset>
+                </form> 
+           
+          </div>
+        <div class="col s12 l6">
+            <div class="z-depth-1 summary-card" id="ticket-summary">
+                <div id="ticket-summary-card1">
+                    <p class="modal-summary-title" style="margin-bottom: 0;">Summary</p>
+                    <table class="summary-table" id="summary-table-1">
+                       
+                        <thead id="summary-thead">
+                            <tr id="total-tr">
+                                <td>Artwork</td>
+                                <td>Price</td>
+                            </tr>
+                        </thead>
+                        <tbody class="tbody summary-table-body" id="summary-tb1">
+                            {% for x in  cart.items.all %}
+                            <tr class="product-row {{ x.pk }}-row">
+                                <td class="product-summary">
+                                    <b>{{ x.title }}</b>
+                                    <p><i>By {{ x.artist }}</i></p>
+                                </td>
+                                <td class="product-summary-price {{ x.pk }}-price">${{ x.price|intcomma }}</td>
+                                
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+                <div class="" style="padding-top: 10px;">
+                    <div class="total-line"><b>Total</b> - ${{ cart.total|intcomma }}</div>
+                    <p class="required" style="margin-top: 5px; padding-top: 0">*ALL SALES FINAL*</p>
+                    <p>
+                    <a style="margin-bottom: 5px" href="" class="disabled btn checkout" id="step3-continue" style="background-color: rgb(29, 154, 29) !important; font-size: 32px !important">Complete Order</a>
+                    <i class="secure"><i class="fas fa-lock"></i> Secure </i></p>
+                </div>
+            </div>
+                <div class="card center-align" style="padding: 3%">
+                    <h7 class="modal-summary-title">Important Order Info</h7>
+                    <p class="required">ALL SALES FINAL</p>
+                    <p>Artwork must be picked up in person during <a href="/events/love-of-art-fundraiser" target="_blank">ETV's For the Love of Art Juneteenth Celebration</a>. All items will be on display for the duration of the event on Saturday, June 18th, 2022. Event attendance is encouraged but not requried for pre-sale art purchases. Artwork must be picked up at the end of the event on Saturday, June 18th, 2022, or on Sunday, June 19th from 12pm-5pm.</p>
+                    <p><b>Pickup Location</b></p>
+                    <p><a href="https://goo.gl/maps/d4Sp5L5MyJiXtmSv9" target="_blank">Montclair Art Museum</a></p>
+                    <p><b>Saturday, 6/18/22, </b>5-9 PM</p>
+                    <p><b>Sunday, 6/19/22, </b>12-5 PM</p>
+                    <p><a href="/events/love-of-art-fundraiser" target="_blank">Full Event Details</a></p>
+                </div>
+                
+        </div>
+    </div>
+    </div>
+</div>
+
+<style>
+    span.cartRemove {
+        color: red;
+        transition: all 0.2s ease-in-out;
+        cursor: pointer
+    }
+    span.cartDonationRemove {
+        color: red;
+        transition: all 0.2s ease-in-out;
+        cursor: pointer
+    }
+    span.cartRemove:hover {
+        transform: rotate(180deg)
+    }
+    span.cartDonationRemove:hover {
+        transform: rotate(180deg)
+    }
+    span.cartAdRemove {
+        color: red;
+        transition: all 0.2s ease-in-out;
+        cursor: pointer
+    }
+    span.cartAdRemove:hover {
+        transform: rotate(180deg)
+    }
+  #donation-add {
+    height: 79px;
+    padding-bottom: 0 !important;
+    display: flex;
+    align-items: center;
+    margin-left: 20px
+  }
+    .summary-card {
+      background: white;
+      padding: 2% !important
+    }
+    .secure {
+        font-size: 14px;
+        color: grey;
+        margin-left: 20px
+    }
+    .sale {
+        color:#bf1e2d
+    }
+    .btn.checkout {
+        font-size: 20px !important;
+        background-color:#01a650;
+        transition: all 0.3s ease-in-out;
+        margin-left: 3%
+    }
+    .btn.checkout:hover {
+        background-color:#219157;
+    }
+    .btn-ticket {
+        font-size: 12px;
+        line-height: 40px;
+        height: 40px
+    }
+    .guest-input {
+        margin-top: 10px;
+        margin-bottom: 0
+    }
+    .guest-input input {
+        height: 2.2rem !important
+    }
+    .modal-content {
+        padding: 1% !important
+    }
+    .modal-container {
+        padding: 1% 4% !important;
+    }
+    .summary-total-title {
+        font-family: oskar, sans-serif;
+        font-size: 22px
+    }
+    .summary-total {
+        font-family: oskar, sans-serif;
+        font-size: 20px;
+        margin-bottom: 0
+    }
+    .total-line {
+        font-family: oskar, sans-serif;
+        font-size: 20px;
+        margin-bottom: 0;
+        margin-left: 3px;
+        font-weight: 400
+    }
+    .summary-table thead td {
+        font-size: 20px;
+        font-weight: 300
+    }
+    .summary-table td {
+        font-family: oskar, sans-serif;
+        font-weight: 200;
+    }
+    .modal {
+        max-height: 95% !important
+    }
+    #ticketModal {
+        width: 95% !important;
+        top: 5% !important
+    }
+    #sponsorModal {
+        width: 95% !important;
+        top: 5% !important
+    }
+    #ticket-form {
+        margin-top: 4%;
+    }
+    .ticket-row {
+        border-bottom: solid 1px rgb(221, 221, 221);
+        padding-top: 10px;
+        padding-bottom: 10px
+    }
+    .ticket-row p {
+        margin: 2px;
+    }
+    .ticket-row {
+        margin-bottom: 0
+    }
+    .ticket-quantity-input {
+        width: 30%;
+        margin-top: 30px
+    }
+    .modal-summary-title {
+        font-family: oskar;
+        font-size: 28px;
+        margin-top: 10px
+    }
+    .ticket-title {
+        font-family: oskar;
+        margin-top: 10px;
+        margin-bottom: 5px;
+        color:#01a650;
+        font-size: 22px
+    }
+    .ticket-price {
+        
+        font-family: oskar;
+        color: rgb(0, 0, 0);
+        font-size: 18px;
+        margin-top: 10px
+    }
+    #ticket-form svg {
+        stroke: none !important
+    }
+    .modal-title {
+        font-family: oskar-inline, sans-serif;
+        font-size: 28px;
+        color:#bf1e2d;
+    }
+    .modal-date {
+        font-family: oskar-inline, sans-serif;
+        font-size: 16px
+    }
+    .ticket-description{
+        font-size: 14px;
+        margin-top: 5px;
+        margin-bottom: 5px
+    }
+    #page {
+        background: url('{% static "img/VBP collage.svg" %}');
+    }
+    #overlay {
+        background: rgba(255, 255, 255, 0.959);
+        width: 100%;
+    }
+    .text {
+        font-family: oskar;
+        font-size: 20px
+    }
+    .tickets-email-link {
+        font-family: oskar;
+        font-size: 18px
+    }
+    iframe {
+        height: 200px
+    }
+    @media only screen and (min-width: 450px){
+        .btn-ticket {
+            font-size: 16px;
+            line-height: 40px;
+            height: 40px
+        }
+    }
+    @media only screen and (min-width: 601px){
+      .modal-date {
+        font-family: oskar-inline, sans-serif;
+        font-size: 24px
+    }
+        .btn-ticket {
+            font-size: 20px;
+            line-height: 50px;
+            height: 50px
+        }
+        .ticket-row td {
+            padding: 2% 0% !important
+        }
+        .ticket-quantity-input {
+            width: 80%;
+            margin-left: 10%
+        }
+        .text {
+            font-size: 28px
+        }
+        .tickets-email-link {
+            font-size: 24px
+        }
+        iframe {
+            height:400px
+        }
+        .summary-card {
+            padding: 2% 5% !important
+        }
+    }
+    @media only screen and (min-width: 992px){
+      .modal-title {  
+        font-size: 36px;
+    }
+        .btn-ticket {
+            font-size: 28px;
+            line-height: 60px;
+            height: 60px
+        }
+        .ticket-quantity-input {
+            width: 70%;
+            margin-left: 15%
+        }
+        #ticketModal {
+        width: 90% !important
+    }
+    #sponsorModal {
+        width: 90% !important
+    }
+    }
+</style>
+<script>
+  var $input = $('#custom-donation-1');
+  $input.on('keyup', function () {
+    $('#custom-donation-add').removeClass('hidden')
+  });
+  $('#donation-add').on('click', function(){
+    var data = {
+      'amount': $("#custom-donation-1").val(),
+      'event': $('#event-title').attr('eventTitle'),
+      csrfmiddlewaretoken: '{{ csrf_token }}'
+    }
+    $.ajax({
+            data: data,
+            url: '/events/ticket-donation-update-cart/',
+            method: 'POST',
+            success: function(data){
+              Swal.fire({
+                  icon: 'success',
+                  title: 'Success!',
+                  text: 'Cart Updated Successfully',
+                })
+                var price = data.price
+                var quantity = data.quantity
+              
+                $('.summary-table-body').append('<tr class="product-row '+ data.pk +'-row"><td class="product-summary"> Custom Donation </td><td class="product-summary-price '+ data.pk + '-price">'+ data.price +'</td><td class="product-summary-quantity center-align '+ data.pk +'-quantity"> 1</td><td id="'+ data.pk +'-DonationRemove"><span class="material-icons cartDonationRemove" pk="'+ data.pk +'">remove_circle</span></td></tr>')
+     
+                var total = data.total
+                $('.total-line').html(total)
+                $('#guest-form').load()
+                },
+                error: function(data){
+                }
+          })
+  })
+  $(document).on('click', '.cartDonationRemove', function(){
+    var data = {
+      'pk': $(this).attr('pk'),
+      'event': $('#event-title').attr('eventTitle'),
+      csrfmiddlewaretoken: '{{ csrf_token }}'
+    }
+    $.ajax({
+            data: data,
+            url: '/events/ticket-donation-remove/',
+            method: 'POST',
+            success: function(data){
+                var price = data.price
+                var quantity = data.quantity
+                var row = data.row
+                $(row).remove()
+     
+                var total = data.total
+                $('.total-line').html(total)
+                },
+                error: function(data){
+                }
+          })
+  })
+    $('#custom-donation-1').maskMoney({prefix:'$ '})
+    $(document).on('click', '.add-to-cart', function(){
+      var container = $(this).closest()
+      var adType = $(this).attr('tid')
+      var data = {
+        'type': 'add',
+        'adType': adType,
+        'event': $('#event-title').attr('eventTitle'),
+        csrfmiddlewaretoken: '{{ csrf_token }}'
+      }
+          
+      $.ajax({
+            data: data,
+            url: '/events/ticket-ad-update-cart/',
+            method: 'POST',
+            success: function(data){
+                Swal.fire({
+                  icon: 'success',
+                  title: 'Success!',
+                  text: 'Cart Updated Successfully',
+                })
+                var price = data.price
+                var quantity = data.quantity
+                $('.summary-table-body').append('<tr class="product-row '+ data.pk +'-AdRow"><td class="product-summary">'+ data.ad +'</td><td class="product-summary-price '+ data.pk + '-Adprice">'+ data.price +'</td><td class="product-summary-quantity center-align '+ data.pk +'-quantity">'+ data.quantity +'</td><td id="'+ data.pk +'-removeAd" ><span class="material-icons cartAdRemove" typeId="'+ data.typeId +'" tid="'+ data.pk +'">remove_circle</span></td></tr>')
+                $(data.removeContainer).html('<div class="btn cartAdRemove red darken-4" typeId="'+ data.typeId +'" tid="'+ data.pk +'" style="width:fit-content">Remove From Cart</div>')
+                var total = data.total
+                $('.total-line').html(total)
+                $('#guest-form').load()
+                },
+                error: function(data){
+                }
+            })
+    })
+    $('.qty-counter').on('change', function(){
+        var qty = $(this).val()
+        var tid = $(this).attr('tid')
+        var data = {
+            'quantity': qty,
+            'tid': tid,
+            'event': $('#event-title').attr('eventTitle'),
+            csrfmiddlewaretoken: '{{ csrf_token }}'
+        }
+        $.ajax({
+            data: data,
+            url: '/events/ticket-update-cart/',
+            method: 'POST',
+            success: function(data){
+              Swal.fire({
+                  icon: 'success',
+                  title: 'Success!',
+                  text: 'Cart Updated Successfully',
+                })
+                var price = data.price
+                var quantity = data.quantity
+                if (data.previousQuantity > 0) {
+                  if (quantity > 0){
+                    $(data.priceTarget).html(price)
+                    $(data.quantityTarget).html(quantity)
+                  } else {
+                      $(data.row).remove()
+                  }
+                }
+                else if (data.previousQuantity == 0) {
+                    $('.summary-table-body').append('<tr class="product-row '+ data.pk +'-row"><td class="product-summary">'+ data.ticket +'</td><td class="product-summary-price '+ data.pk + '-price">'+ data.price +'</td><td class="product-summary-quantity center-align '+ data.pk +'-quantity">'+ data.quantity +'</td><td id="'+ data.pk +'-remove" ><span class="material-icons cartRemove" tid="'+ data.typePk +'">remove_circle</span></td></tr>')
+                }
+                var total = data.total
+                $('.total-line').html(total)
+                $('#guest-form').load()
+                },
+                error: function(data){
+                }
+            })
+        })
+    $('#step1-continue').on('click', function(event){
+        event.preventDefault()
+        $('#ticket-checkout-p1').hide()
+        $('#ticket-checkout-p2').show()
+    })
+    $('#step2-back').on('click', function(event){
+        event.preventDefault()
+        $('#ticket-checkout-p2').hide();
+        $('#ticket-checkout-p1').show();
+        
+    })
+    $('#step-2-billing').on('click', function(event){
+        event.preventDefault()
+        if ($('#ticketholder_first_name').val()==''){
+          $('#ticketholder_first_name').focus()
+          $('#ticketholder_first_name').parent('.input-field').append('<p class="required-message">This field is required</p>')
+          Swal.fire('Please complete all required fields')
+
+        }
+        else if ($('#ticketholder_last_name').val()==''){
+          $('#ticketholder_last_name').focus()
+          $('#ticketholder_last_name').parent('.input-field').append('<p class="required-message">This field is required</p>')
+          Swal.fire('Please complete all required fields')
+        }
+        else if ($('#ticketholder_email').val()==''){
+          $('#ticketholder_email').focus()
+          $('#ticketholder_email').parent('.input-field').append('<p class="required-message">This field is required</p>')
+          Swal.fire('Please complete all required fields')
+        }
+        else{
+          $('#ticket-checkout-p2').hide()
+          $('#ticket-checkout-p3').show()
+        }
+    })
+    $('#step3-back').on('click', function(event){
+        event.preventDefault()
+        $('#ticket-checkout-p3').hide();
+        $('#ticket-checkout-p2').show();
+        
+    })
+    $('#sponsor-step3-back').on('click', function(event){
+        event.preventDefault()
+        $('#sponsor-checkout-p3').hide();
+        $('#sponsor-checkout-p2').show();
+        
+    })
+    $('#sponsor-step1-continue').on('click', function(event){
+        event.preventDefault()
+        $('#sponsor-checkout-p1').hide()
+        $('#sponsor-checkout-p2').show()
+    })
+    $('#sponsor-step2-back').on('click', function(event){
+        event.preventDefault()
+        $('#sponsor-checkout-p2').hide();
+        $('#sponsor-checkout-p1').show();
+        
+    })
+    $('#sponsor-step-2-billing').on('click', function(event){
+        event.preventDefault()
+        $('#sponsor-checkout-p2').hide()
+        $('#sponsor-checkout-p3').show()
+    })
+    $('#sponsor-step3-back').on('click', function(event){
+        event.preventDefault()
+        $('#sponsor-checkout-p3').hide();
+        $('#sponsor-checkout-p2').show();
+        
+    })
+    $(document).on('click', '.cartRemove', function(){
+        var qty = '0'
+        var tid = $(this).attr('tid')
+        var data = {
+            'quantity': qty,
+            'tid': tid,
+            'event': $('#event-title').attr('eventTitle'),
+            csrfmiddlewaretoken: '{{ csrf_token }}'
+        }
+        $.ajax({
+            data: data,
+            url: '/events/ticket-update-cart/',
+            method: 'POST',
+            success: function(data){
+                var price = data.price
+                var quantity = data.quantity
+                $(data.row).remove();
+                $(data.select).val('0');
+                $(data.select).formSelect('destroy');
+                $(data.select).formSelect();
+                var total = data.total;
+                $('.total-line').html(total)
+                $('#guest-form').load()
+                },
+                error: function(data){
+                }
+        })
+    })
+    $(document).on('click', '.cartAdRemove', function(){
+      var qty = '0'
+        var tid = $(this).attr('tid')
+        var typeId = $(this).attr('typeId')
+        var data = {
+            'type': 'remove',
+            'tid': tid,
+            'typeId': typeId,
+            'event': $('#event-title').attr('eventTitle'),
+            csrfmiddlewaretoken: '{{ csrf_token }}'
+        }
+        $.ajax({
+            data: data,
+            url: '/events/ticket-ad-update-cart/',
+            method: 'POST',
+            success: function(data){
+                $(data.row).remove();
+                var total = data.total;
+                $('.total-line').html(total)
+                $(data.removeContainer).html('<div class="btn add-to-cart grey darken-4" tid="'+ data.typeId +'" id="'+ data.typeId +'-add-ad" style="width:fit-content">Add to Cart</div>')
+                $('#guest-form').load()
+                },
+                error: function(data){
+                }
+        })
+    })
+  </script>
+  <style>
+    .hidden {
+      display: none
+    }
+    .p-subtitle {
+      font-family: oskar;
+      font-size: 20px;
+      color: rgb(109, 108, 108);
+      font-weight: 300;
+    }
+    .item-category {
+      font-family: oskar;
+      font-size: 24px;
+      font-weight: 200;
+    }
+    #add-new {
+      background: rgb(41, 41, 41)
+    }
+    #add-new-billing {
+      background: rgb(41, 41, 41);
+    }
+    .express-checkout {
+      border: 1px solid rgb(218, 218, 218);
+      border-radius: 15px;
+      padding-top: 10px;
+      padding-bottom: 15px;
+      margin-top: 0px
+    }
+    .express-checkout h6 {
+      margin-top: 0;
+      font-family: oskar;
+      font-size: 20px
+    }
+    .input-icon {
+      font-size: 18px;
+      color: rgb(160, 160, 160);
+      margin-right: 10px
+    }
+    .checkout-fieldset {
+      border: none;
+      border-radius: 15px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+  
+    }
+    .checkout-fieldset p {
+      margin-bottom: 0;
+      margin-top: 0px;
+    }
+    .p-title {
+      font-family: oskar;
+      font-size: 18px;
+    }
+    .checkout-fieldset h5 {
+      font-family: oskar;
+      color: rgb(30, 167, 30)
+    }
+    .secure-checkout {
+      font-size: 14px;
+      font-weight: 300;
+      color: rgb(99, 99, 99);
+    }
+    .secure-checkout span {
+      font-size: 16px
+    }
+    label {
+      color: rgb(43, 43, 43) !important
+    }
+    .fieldset-title {
+      font-family: oskar;
+      font-size: 20px;
+      color: rgb(186, 37, 37);
+      text-decoration: underline;
+    }
+      .hidden {
+          display: none;
+      }
+      .p-item {
+        font-size: 14px;
+        font-weight: 300
+      }
+      .required {
+          color: red
+      }
+      .label-title {
+          font-size: 16px
+      }
+      .donate-buttons {
+          padding-bottom: 60px
+      }
+      .donate-buttons a {
+          width: 100%;
+          margin:5px;
+          font-size: 16px;
+          letter-spacing: 1.5px;
+          font-weight:400;
+          height: 50px;
+          padding-top:4px;
+          border-radius: 40px;
+      }
+      .donate-buttons a i {
+          font-size: 24px;
+      }
+      .donation-title {
+          font-family: oskar-inline;
+          font-size: 52px;
+      }
+      .content-row {
+      }
+      .section-title {
+        font-family: oskar-inline;
+        color: rgb(24, 160, 24);
+        font-size: 36px;
+        text-align: center
+      }
+      .address-label {
+        font-size: 14px
+      }
+      label span {
+        margin-bottom: -5px
+      }
+      @media only screen and (min-width:0px){
+          .donate-text-small {
+            display: block;
+          }
+          .donate-text-large {
+            display: none;
+          }
+          .donation-title {
+              font-family: oskar-inline;
+              font-size: 32px;
+          }
+          .donation-subtitle {
+              font-size: 16px;
+              font-weight: 300;
+              line-height: 20px
+          }
+          .venmo-button {
+            width: 95%;
+            margin-left: 0;
+          }
+          .creditcard-button {
+            width: 95%;
+            font-size: 18px;
+          }
+          .google-button {
+            width: 95%;
+          }
+          .paypal-button {
+            width: 95%;
+          }
+          #paypal-button {
+            width: 95%;
+          }
+          .applepay-button {
+            width: 95%;
+          }
+          .paypal-button-row {
+            height: 50px !important
+          }
+      }
+  
+      @media only screen and (min-width:601px){
+        .checkout-fieldset h5 {
+          font-size: 28px;
+        }
+        .donate-text-small {
+            display: none;
+          }
+          .donate-text-large {
+            display: block;
+            letter-spacing: 2px;
+          }
+          .donation-title {
+              font-family: oskar-inline;
+              font-size: 42px;
+          }
+          .summary-container {
+            position: fixed;
+            right: 0 !important;
+          }
+          .venmo-button {
+          }
+          .fieldset-title {
+            font-family: oskar;
+            font-size: 24px
+          }
+          .p-title {
+            font-family: oskar;
+            font-size: 20px;
+          }
+          .p-item {
+        font-size: 18px
+      }
+      }
+      @media only screen and (min-width:993px){
+        .checkout-fieldset h5 {
+          font-size: 36px;
+        }
+          .donation-title {
+              font-family: oskar-inline;
+              font-size: 48px;
+          }
+          .donation-subtitle {
+              font-size: 20px;
+              font-weight: 300;
+              line-height: 24px;
+          }
+          .venmo-button {
+            font-size: 16px;
+          }
+          .creditcard-button {
+            font-size: 20px;
+          }
+          .google-button {
+            font-size: 16px;
+          }
+          .paypal-button {
+            font-size: 16px;
+          }
+          .applepay-button {
+            font-size: 16px;
+          }
+          .fieldset-title {
+            font-family: oskar;
+            font-size: 26px
+          }
+          .checkout-fieldset p {
+            margin-bottom: 15px !important
+          }
+          .p-title {
+            font-family: oskar;
+            font-size: 26px;
+          }
+          .checkout-container{
+          }
+          .section-title {
+            font-size: 48px;
+          }
+      }
+      @media only screen and (min-width:1226px){
+       
+      }
+      @media only screen and (min-width:1400px){
+          .donation-title {
+              font-family: oskar-inline;
+              font-size: 56px;
+          }
+          .donation-subtitle {
+              font-size: 20px;
+              font-weight: 300;
+              line-height: 24px
+          }
+          .fieldset-title {
+            font-family: oskar;
+            font-size: 28px
+          }
+      }
+      .cc-button {
+          background-color: rgb(55, 54, 54)
+      }
+      .cc-button:hover {
+          background-color:rgb(101, 101, 101)
+      }
+      .pp-button {
+          background-color: #3b7bbf
+      }
+      .pp-button:hover {
+          background-color:#6799ce
+      }
+      .venmo-button {
+          background-color: #3d95ce;
+          color:white;
+          margin:5px;
+          letter-spacing: 1.5px;
+          font-weight:500;
+          height: 50px;
+          line-height: 45px;
+          border-radius: 40px;
+      }
+      .venmo-button:hover {
+          background-color:#739296
+      }
+      .creditcard-button {
+        background-color: #0f9a22;
+        color:rgb(255, 255, 255);
+          margin:5px;
+          letter-spacing: 1.5px;
+          font-weight:500;
+          height: 50px;
+          line-height: 40px;
+          border-radius: 40px;
+      }
+      .creditcard-button:hover {
+          background-color:#5e6a4b
+      }
+      .google-button {
+        background-color: #fcfcfc;
+        color:rgb(50, 50, 50);
+          margin:5px;
+          letter-spacing: 1.5px;
+          font-weight:500;
+          height: 50px;
+          line-height: 45px;
+          border-radius: 40px;
+      }
+      .google-button:hover {
+          background-color:#ded8d8
+      }
+      .paypal-button {
+        background-color: #ffffff;
+        color:rgb(50, 50, 50);
+          margin:5px;
+          letter-spacing: 1.5px;
+          font-weight:500;
+          height: 50px;
+          line-height: 45px;
+          border-radius: 40px !important;
+      }
+      .paypal-button:hover {
+          background-color:#d3d1da
+      }
+      .paypal-button-container{
+        font-family: poppins !important;
+        font-weight: 500;
+        text-transform: uppercase !important;
+      }
+      .applepay-button {
+        background-color: #181818;
+        color:rgb(50, 50, 50);
+          margin:5px;
+          letter-spacing: 1.5px;
+          font-weight:500;
+          height: 50px;
+          line-height: 45px;
+          border-radius: 40px;
+      }
+      .applepay-button:hover {
+          background-color:#5e5e5e
+      }
+      .paypal-button.paypal-button-color-white, .paypal-button-row.paypal-button-color-white .menu-button {
+        border: none !important;
+      }
+      body {
+    background-color: #fff;
+  }
+  
+  .toast {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 9999;
+  }
+  
+  .bootstrap-basic {
+    background: white;
+  }
+  
+  #or {
+    position: relative;
+    line-height: 50px;
+    text-align: center;
+    font-weight: 500;
+  }
+  
+  #or::before,
+  #or::after {
+    position: absolute;
+    width: 30%;
+    height: 1px;
+    
+    top: 25px;
+    
+    background-color: rgb(193, 193, 193);
+    
+    content: '';
+  }
+  
+  #or::before {
+    left: 15%;
+  }
+  
+  #or::after {
+    right: 15%;
+  }
+  .btn:focus {
+    background-color:rgb(160, 160, 160) !important;
+  }
+  #card-number {
+    height: 3rem;
+    border-bottom: 1px solid #9e9e9e;
+  }
+  #card-date {
+    height: 3rem;
+    border-bottom: 1px solid #9e9e9e;
+  }
+  #card-cvv {
+    height: 3rem;
+    border-bottom: 1px solid #9e9e9e;
+  }
+  #card-zip {
+    height: 3rem ;
+    border-bottom: 1px solid #9e9e9e;
+  }
+  ::placeholder {
+    color: rgb(186, 186, 186) !important
+  }
+  </style>
+  <script>
+    $('#add-new').on('click', function(){
+      $('#new-address-form').toggle();
+      $('[name="shipping-address-group"]').prop('checked', false)
+    });
+    $('#add-new').hide()
+    $('[name="shipping-address-group"]').on('change', function(){
+        $('#add-new').show();
+        $('#saved-or-new').attr('value', 'saved');
+        $('#saved-id').attr('value', 'saved');
+        $('#new-address-form').hide();
+        $('#new-address-form input').val('');
+        
+    });
+    $('#new-address-form input').on('keyup', function(){
+      $('#saved-or-new').attr('value', 'new');
+    })
+    $('#add-new-billing').on('click', function(){
+      $('#new-billing-address-form').toggle();
+      $('[name="billing-address-group"]').prop('checked', false)
+    });
+    $('#add-new-billing').hide()
+    $('[name="billing-address-group"]').on('change', function(){
+        $('#add-new-billing').show();
+        $('#billing-saved-or-new').attr('value', 'saved');
+        $('#saved-billing-id').attr('value', 'saved');
+        $('#new-billing-address-form').hide();
+        $('#new-billing-address-form input').val('');
+        
+    });
+    $('#new-billing-address-form input').on('keyup', function(){
+      $('#billing-saved-or-new').attr('value', 'new');
+    })
+  </script>
+  <script src="https://js.braintreegateway.com/web/3.82.0/js/client.min.js"></script>
+  <script src="https://js.braintreegateway.com/web/3.82.0/js/venmo.min.js"></script>
+  <script src="https://js.braintreegateway.com/web/3.82.0/js/data-collector.min.js"></script>
+  <script src="https://pay.google.com/gp/p/js/pay.js"></script>
+  <script src="https://js.braintreegateway.com/web/3.82.0/js/google-payment.min.js"></script>
+  <script src="https://js.braintreegateway.com/web/3.82.0/js/paypal-checkout.min.js"></script>
+  <script src="https://js.braintreegateway.com/web/3.82.0/js/hosted-fields.min.js"></script>
+  <script>
+  var venmoButton = document.getElementById('venmo-button')
+  
+  braintree.client.create({
+      authorization: 'production_pgz5pm7q_tb3vd7jd2hynhxcn'
+    }, function (clientErr, clientInstance) {
+    if (clientErr) {
+      console.error('Error creating client:', clientErr);
+      return;
+    }
+    braintree.hostedFields.create({
+      client: clientInstance,
+      styles: {
+        'input': {
+          'font-size': '16px',
+          'color': 'black',
+          'border-bottom': '1px solid #9e9e9e',
+          'border-radius': '0',
+          'outline': 'none',
+          'height': '3rem',
+        }
+      },
+      fields: {
+        number: {
+          container: '#card-number',
+        },
+        cvv: {
+          container: '#card-cvv',
+          masked: true
+        },
+        expirationDate: {
+          container: '#card-date',
+        },
+        postalCode: {
+          container: '#card-zip',
+        }
+      }
+    }, function(hostedFieldsErr, hostedFieldsInstance){
+      if (hostedFieldsErr){
+        alert(hostedFieldsErr);
+        return;
+      }
+      $('.place-order-btn').on('click', function(event){
+        event.preventDefault();
+        Swal.fire({
+          title: 'Order Processing',
+          text: "Please wait while we complete your order, do not refresh your browser or use the back button",
+          showConfirmButton: false,
+        })
+        hostedFieldsInstance.tokenize(function (tokenizeErr, payload) {
+          if (tokenizeErr) {
+            console.error(tokenizeErr);
+            return;
+          }
+          var billing_type= $('#billing-saved-or-new').val();
+          $('#nonce-input').attr('value', payload.nonce);
+          ticketNB();
+          
+        });
+      });
+    
+    braintree.dataCollector.create({
+      client: clientInstance,
+      paypal: true
+    }, function (dataCollectorErr, dataCollectorInstance) {
+      if (dataCollectorErr) {
+        return;
+      }
+      var deviceData = dataCollectorInstance.deviceData
+      $('#device-data-input').attr('value', deviceData)
+    });
+  
+    braintree.venmo.create({
+      client: clientInstance,
+      allowDesktop: true,
+      paymentMethodUsage: 'multi_use',
+      allowNewBrowserTab: false, 
+    }, function (venmoErr, venmoInstance) {
+      if (venmoErr) {
+        console.error('Error creating Venmo:', venmoErr);
+        return;
+      }
+  
+      if (!venmoInstance.isBrowserSupported()) {
+        console.log('Browser does not support Venmo');
+        return;
+      }
+  
+      displayVenmoButton(venmoInstance);
+      if (venmoInstance.hasTokenizationResult()) {
+        venmoInstance.tokenize(function (tokenizeErr, payload) {
+          if (err) {
+            handleVenmoError(tokenizeErr);
+          } else {
+            handleVenmoSuccess(payload);
+          }
+        });
+        return;
+      }
+    });
+    
+    var paymentsClient = new google.payments.api.PaymentsClient({
+      environment: 'PRODUCTION'
+    });
+    var googleButton = document.querySelector('#google-pay-button');
+    braintree.googlePayment.create({
+      client: clientInstance,
+      googlePayVersion: 2,
+      
+    }, function (err, googlePaymentInstance) {
+      paymentsClient.isReadyToPay({
+        // see https://developers.google.com/pay/api/web/reference/object#IsReadyToPayRequest for all options
+        apiVersion: 2,
+        apiVersionMinor: 0,
+        allowedPaymentMethods: googlePaymentInstance.createPaymentDataRequest().allowedPaymentMethods,
+        existingPaymentMethodRequired: true
+      }).then(function (isReadyToPay) {
+        if (isReadyToPay.result) {
+          googleButton.addEventListener('click', function(event){
+            event.preventDefault();
+            var totalPrice = String($('#final-total').attr('value'))
+            var paymentDataRequest = googlePaymentInstance.createPaymentDataRequest({
+              transactionInfo: {
+                currencyCode: 'USD',
+                totalPriceStatus: 'FINAL',
+                totalPrice: totalPrice,
+              }
+            });
+            var cardPaymentMethod = paymentDataRequest.allowedPaymentMethods[0];
+            cardPaymentMethod.parameters.billingAddressRequired = false;
+            paymentsClient.loadPaymentData(paymentDataRequest).then(function(paymentData){
+              googlePaymentInstance.parseResponse(paymentData, function(err, result){
+                if (err) {
+                  Swal.fire(
+                    'An error occured',
+                    'Please try again',
+                    'error'
+                  )
+                }
+                $('#nonce-input').attr('value', result.nonce);
+                ticketNB();
+              })
+            }).catch(function(err){
+              Swal.fire(
+                    'An error occured',
+                    'Please try again',
+                    'error'
+                  )
+                  console.log(err)
+            });
+          });
+        }
+      });
+    });
+    braintree.paypalCheckout.create({
+      client: clientInstance
+    }, function(paypalCheckoutErr, paypalCheckoutInstance){
+      if (paypalCheckoutErr){
+        console.error('Paypal Error:',paypalCheckoutErr);
+        return;
+      }
+      paypalCheckoutInstance.loadPayPalSDK({
+        vault: true
+      },function(){
+        paypal.Buttons({
+          fundingSource: paypal.FUNDING.PAYPAL,
+          style: {
+            color: 'gold',
+            shape: 'pill',
+            height: 50,
+            width: 'responsive'
+          },
+          createBillingAgreement: function(){
+            return paypalCheckoutInstance.createPayment({
+              flow: 'vault',
+            });
+          },
+          onApprove: function(data, actions) {
+            return paypalCheckoutInstance.tokenizePayment(data, function(err, payload){
+              $('#nonce-input').attr('value', payload.nonce);
+              if (shipping_type === 'saved'){
+                ticketNB()
+              }else{
+                ticketNB()
+              }
+              
+            });
+          },
+          onCancel: function (data) {
+            console.log('PayPal payment canceled', JSON.stringify(data, 0, 2));
+          },
+  
+          onError: function (err) {
+            console.error('PayPal error', err);
+          },
+        }).render('#paypal-button').then(function(){
+          
+        });
+      });
+    });
+  
+  });
+  
+  function displayVenmoButton(venmoInstance) {
+    venmoButton.style.display = 'block';
+  
+    venmoButton.addEventListener('click', function () {
+      venmoButton.disabled = true;
+  
+      venmoInstance.tokenize(function (tokenizeErr, payload) {
+        venmoButton.removeAttribute('disabled');
+  
+        if (tokenizeErr) {
+          handleVenmoError(tokenizeErr);
+        } else {
+          handleVenmoSuccess(payload);
+        }
+      });
+    });
+  }
+  
+  function handleVenmoError(err) {
+    if (err.code === 'VENMO_CANCELED') {
+      console.log('App is not available or user aborted payment flow');
+    } else if (err.code === 'VENMO_APP_CANCELED') {
+      console.log('User canceled payment flow');
+    } else {
+      Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Something went wrong! Please try again',
+          })
+    }
+  }
+  
+  function handleVenmoSuccess(payload) {
+    $('#nonce-input').attr('value', payload.nonce);
+    ticketNB();
+  }
+  function ticketNB(){
+      var guestList = $('#ticket-guest-list').val()
+      var first_name = $('#ticketholder_first_name').val()
+      var last_name = $('#ticketholder_last_name').val()
+      var email = $('#ticketholder_email').val()
+      var nonce = $('#nonce-input').val()
+      var deviceData = $('device-data-input').val()
+      var csrf_token = $('[name="csrfmiddlewaretoken"]').val()
+      var event = $('#event-hidden-input-sponsor').val()
+      data = {
+        csrfmiddlewaretoken: csrf_token,
+        'guestList': guestList,
+        'nonce': nonce,
+        'deviceData': deviceData,
+        'email': email,
+        'first_name': first_name,
+        'last_name': last_name,
+        'event': event
+      }
+      $.ajax({
+        url: '/cart/ticket-nb',
+        method: 'POST',
+        data: data,
+        success: function(data){
+          Swal.fire({
+            icon: 'success',
+            title: 'Thank You!',
+            text: 'You will receive an email with your tickets shortly!',
+            timer: 3000,
+          });
+          var delay = 3000
+          setTimeout(function(){ window.location.replace('/events/') }, delay);
+        },
+        error: function(data){
+          Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Something went wrong! Please try again',
+          })
+        } 
+      })
+  }
+})
+  </script>
+{% endblock %}

@@ -17,4 +17,6 @@ urlpatterns = [
     path('update-cart', ajaxUpdateItems, name="ajax-update"),
     path('remove-items',ajaxRemoveItems, name='ajax-remove'),
     path('ticket-nb', ticket_nb, name='ticket-nb'),
+    path('gallery-update', gallery_cart_update, name='gallery-update'),
+    path('gallery-remove', gallery_cart_remove, name='gallery-remove'),
 ]

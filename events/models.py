@@ -436,3 +436,27 @@ class CompleteDonation(models.Model):
     class Meta:
         verbose_name = 'Donation'
         verbose_name_plural = 'Donations'
+
+class Artist(models.Model):
+    name            = models.CharField(max_length=270)
+
+    def __str__(self):
+        return str(self.name)
+
+class GalleryItem(models.Model):
+    
+    title           = models.CharField(max_length=270)
+    artist          = models.ForeignKey(Artist, on_delete=models.SET_NULL, null=True)
+    image           = models.ImageField(blank=True)
+    description     = models.TextField(blank=True)
+    price           = models.DecimalField(max_digits=20, decimal_places=2, default=0.00)
+    width           = models.CharField(max_length=20, blank=True)
+    height          = models.CharField(max_length=20, blank=True)
+    sold            = models.BooleanField(default=False)
+    
+    def __str__(self):
+        return str(self.title)
+
+    @property
+    def get_availability(self):
+        return self.sold

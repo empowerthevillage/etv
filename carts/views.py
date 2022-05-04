@@ -500,3 +500,35 @@ def ticket_nb(request):
             fail_silently=True
         )
     return redirect('events:home')
+
+def gallery_cart_update(request):
+    itemID = request.POST.get('item')
+    item = GalleryItem.objects.get(pk=itemID)
+    cart_obj,created = GalleryCart.objects.new_or_get(request)
+    if item in cart_obj.items.all():
+        status = 'inCart'
+    else:
+        cart_obj.items.add(item)
+        status = 'success'
+    response = {
+        'status': status,
+        'count': len(cart_obj.items.all()),
+        'pk': item.pk
+    }
+    return JsonResponse(response)
+
+def gallery_cart_remove(request):
+    itemID = request.POST.get('item')
+    item = GalleryItem.objects.get(pk=itemID)
+    cart_obj,created = GalleryCart.objects.new_or_get(request)
+    if item in cart_obj.items.all():
+        cart_obj.items.remove(item)
+        status = 'success'
+    else:
+        status = 'error'
+    response = {
+        'status': status,
+        'count': len(cart_obj.items.all()),
+        'pk': item.pk
+    }
+    return JsonResponse(response)

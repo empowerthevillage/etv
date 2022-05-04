@@ -12,7 +12,7 @@ import braintree
 import shippo
 import json
 
-from carts.models import TicketCart, ticketItem, ticketDonation, ticketAd
+from carts.models import GalleryCart, TicketCart, ticketItem, ticketDonation, ticketAd
 from .models import *
 from django.conf import settings
 
@@ -73,7 +73,8 @@ STATE_CHOICES = (
 )
 def email_view(request):
     context = {
-
+        'tickets':SingleTicket.objects.filter(last_name='Colon', first_name="Jessica"),
+        'event': Event.objects.filter(title='For the Love of Art Juneteenth Celebration'),
     }
     return render(request, 'ticket-email.html', context)
 def event_home(request):
@@ -995,3 +996,19 @@ def art_sponsor_checkout(request):
         "billing_addresses":billing_addresses,
     }
     return render(request, "art-sponsor-checkout.html", context)
+
+def gallery_home(request):
+    cart_obj, created = GalleryCart.objects.new_or_get(request)
+    items = GalleryItem.objects.all().order_by('sold', 'artist', 'price')
+    context = {
+        'items': items,
+        'cart': cart_obj,
+    }
+    return render(request, 'gallery_home.html', context)
+
+def gallery_cart_home(request):
+    cart_obj, created = GalleryCart.objects.new_or_get(request)
+    context = {
+        'cart': cart_obj
+    }
+    return render(request, 'gallery_cart.html', context)
