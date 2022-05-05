@@ -999,7 +999,7 @@ def art_sponsor_checkout(request):
 
 def gallery_home(request):
     cart_obj, created = GalleryCart.objects.new_or_get(request)
-    items = GalleryItem.objects.all().order_by('sold', 'artist', 'price')
+    items = GalleryItem.objects.all().order_by('order', 'artist', 'price')
     context = {
         'items': items,
         'cart': cart_obj,

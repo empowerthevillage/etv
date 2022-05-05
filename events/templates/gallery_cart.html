@@ -17,7 +17,7 @@
         <div class="divider" style="margin-top: 10px; margin-bottom: 10px"></div>
           <form id="ticket-form">
               {% for x in cart.items.all %}
-                <div class="row z-depth-3" style="padding: 1%">
+                <div class="row z-depth-3 row-{{ x.pk }}" style="padding: 1%">
                     <div class="col s4 l2">
                         <img src="{{ x.image.url }}" class="z-depth-1" width=100%>
                     </div>
@@ -48,7 +48,7 @@
                         </thead>
                         <tbody class="tbody summary-table-body" id="summary-tb1">
                             {% for x in  cart.items.all %}
-                            <tr class="product-row {{ x.pk }}-row">
+                            <tr class="product-row row-{{ x.pk }}">
                                 <td class="product-summary">
                                     <b>{{ x.title }}</b>
                                     <p><i>By {{ x.artist }}</i></p>
@@ -71,9 +71,10 @@
             <div class="card center-align" style="padding: 3%">
                 <h7 class="modal-summary-title">Important Order Info</h7>
                 <p class="required">ALL SALES FINAL</p>
-                <p>Artwork must be picked up in person during <a href="/events/love-of-art-fundraiser" target="_blank">ETV's For the Love of Art Juneteenth Celebration</a>. All items will be on display for the duration of the event on Saturday, June 18th, 2022. Event attendance is encouraged but not requried for pre-sale art purchases. Artwork must be picked up at the end of the event on Saturday, June 18th, 2022, or on Sunday, June 19th from 12pm-5pm.</p>
-                <p><b>Pickup Location</b></p>
-                <p><a href="https://goo.gl/maps/d4Sp5L5MyJiXtmSv9" target="_blank">Montclair Art Museum</a></p>
+                <p>Artwork must be picked up in-person during <a href="/events/love-of-art-fundraiser" target="_blank">ETV's For the Love of Art Juneteenth Celebration</a>. All items will be on display at the event on Saturday, June 18th, 2022. Event attendance is encouraged but not required for pre-sale art purchases. Artwork must be picked up on Saturday, June 18th, 2022, or no later than Sunday, June 19th from 12pm-5pm.</p>
+                <p><b>Pickup Location: <a href="https://goo.gl/maps/d4Sp5L5MyJiXtmSv9" target="_blank">Montclair Art Museum</a></b></p>
+                <p style="margin-bottom:5px"><i>3 S Mountain Ave</i></p> 
+                        <p style="margin-top: 0"><i>Montclair, NJ 07042</i></p>
                 <p><b>Saturday, 6/18/22, </b>5-9 PM</p>
                 <p><b>Sunday, 6/19/22, </b>12-5 PM</p>
                 <p><a href="/events/love-of-art-fundraiser" target="_blank">Full Event Details</a></p>
@@ -91,9 +92,10 @@
                     <div class="card center-align" style="padding: 3%">
                         <h7 class="modal-summary-title">Important Order Info</h7>
                         <p class="required">ALL SALES FINAL</p>
-                        <p>Artwork must be picked up in person during <a href="/events/love-of-art-fundraiser" target="_blank">ETV's For the Love of Art Juneteenth Celebration</a>. All items will be on display for the duration of the event on Saturday, June 18th, 2022. Event attendance is encouraged but not requried for pre-sale art purchases. Artwork must be picked up at the end of the event on Saturday, June 18th, 2022, or on Sunday, June 19th from 12pm-5pm.</p>
-                        <p><b>Pickup Location</b></p>
-                        <p><a href="https://goo.gl/maps/d4Sp5L5MyJiXtmSv9" target="_blank">Montclair Art Museum</a></p>
+                        <p>Artwork must be picked up in-person during <a href="/events/love-of-art-fundraiser" target="_blank">ETV's For the Love of Art Juneteenth Celebration</a>. All items will be on display at the event on Saturday, June 18th, 2022. Event attendance is encouraged but not required for pre-sale art purchases. Artwork must be picked up on Saturday, June 18th, 2022, or no later than Sunday, June 19th from 12pm-5pm.</p>
+                        <p><b>Pickup Location: <a href="https://goo.gl/maps/d4Sp5L5MyJiXtmSv9" target="_blank">Montclair Art Museum</a></b></p>
+                        <p style="margin-bottom:5px"><i>3 S Mountain Ave</i></p> 
+                        <p style="margin-top: 0"><i>Montclair, NJ 07042</i></p>
                         <p><b>Saturday, 6/18/22, </b>5-9 PM</p>
                         <p><b>Sunday, 6/19/22, </b>12-5 PM</p>
                         <p><a href="/events/love-of-art-fundraiser" target="_blank">Full Event Details</a></p>
@@ -113,8 +115,8 @@
                       </div>
                       <p class="center-align">
                         <label>
-                          <input class="with-gap" name="agreement" type="radio" required />
-                          <span>I understand the terms of sale outlined above<b class="required">*</b></span>
+                          <input id="agreement" class="with-gap" name="agreement" type="radio" required />
+                          <span style="height: fit-content; text-align: left;">I understand the terms of sale outlined above<b class="required">*</b></span>
                         </label>
                       </p>
                     </form>
@@ -136,7 +138,7 @@
                             </thead>
                             <tbody class="tbody summary-table-body" id="summary-tb1">
                                 {% for x in  cart.items.all %}
-                                <tr class="product-row {{ x.pk }}-row">
+                                <tr class="product-row row-{{ x.pk }}">
                                     <td class="product-summary">
                                         <b>{{ x.title }}</b>
                                         <p><i>By {{ x.artist }}</i></p>
@@ -223,7 +225,7 @@
                         
                         <div class="center-align">
                             <p style="margin-top:0" class="summary-total">Total - <b class="total-line">${{ cart.total|intcomma }}</b></p>
-                            <button class="btn disabled waves-effect z-depth-1 place-order-btn" style="margin-bottom: 20px; background-color: rgb(29, 154, 29) !important;">
+                            <button class="btn waves-effect z-depth-1 place-order-btn" style="margin-bottom: 20px; background-color: rgb(29, 154, 29) !important;">
                                 Complete Order
                             </button>
                             <br>
@@ -252,7 +254,7 @@
                         </thead>
                         <tbody class="tbody summary-table-body" id="summary-tb1">
                             {% for x in  cart.items.all %}
-                            <tr class="product-row {{ x.pk }}-row">
+                            <tr class="product-row row-{{ x.pk }}">
                                 <td class="product-summary">
                                     <b>{{ x.title }}</b>
                                     <p><i>By {{ x.artist }}</i></p>
@@ -268,16 +270,17 @@
                     <div class="total-line"><b>Total</b> - ${{ cart.total|intcomma }}</div>
                     <p class="required" style="margin-top: 5px; padding-top: 0">*ALL SALES FINAL*</p>
                     <p>
-                    <a style="margin-bottom: 5px" href="" class="disabled btn checkout" id="step3-continue" style="background-color: rgb(29, 154, 29) !important; font-size: 32px !important">Complete Order</a>
+                    <a style="margin-bottom: 5px" href="" class="btn checkout" id="step3-continue" style="background-color: rgb(29, 154, 29) !important; font-size: 32px !important">Complete Order</a>
                     <i class="secure"><i class="fas fa-lock"></i> Secure </i></p>
                 </div>
             </div>
                 <div class="card center-align" style="padding: 3%">
                     <h7 class="modal-summary-title">Important Order Info</h7>
                     <p class="required">ALL SALES FINAL</p>
-                    <p>Artwork must be picked up in person during <a href="/events/love-of-art-fundraiser" target="_blank">ETV's For the Love of Art Juneteenth Celebration</a>. All items will be on display for the duration of the event on Saturday, June 18th, 2022. Event attendance is encouraged but not requried for pre-sale art purchases. Artwork must be picked up at the end of the event on Saturday, June 18th, 2022, or on Sunday, June 19th from 12pm-5pm.</p>
-                    <p><b>Pickup Location</b></p>
-                    <p><a href="https://goo.gl/maps/d4Sp5L5MyJiXtmSv9" target="_blank">Montclair Art Museum</a></p>
+                    <p>Artwork must be picked up in-person during <a href="/events/love-of-art-fundraiser" target="_blank">ETV's For the Love of Art Juneteenth Celebration</a>. All items will be on display at the event on Saturday, June 18th, 2022. Event attendance is encouraged but not required for pre-sale art purchases. Artwork must be picked up on Saturday, June 18th, 2022, or no later than Sunday, June 19th from 12pm-5pm.</p>
+                    <p><b>Pickup Location: <a href="https://goo.gl/maps/d4Sp5L5MyJiXtmSv9" target="_blank">Montclair Art Museum</a></b></p>
+                    <p style="margin-bottom:5px"><i>3 S Mountain Ave</i></p> 
+                        <p style="margin-top: 0"><i>Montclair, NJ 07042</i></p>
                     <p><b>Saturday, 6/18/22, </b>5-9 PM</p>
                     <p><b>Sunday, 6/19/22, </b>12-5 PM</p>
                     <p><a href="/events/love-of-art-fundraiser" target="_blank">Full Event Details</a></p>
@@ -525,135 +528,6 @@
     }
 </style>
 <script>
-  var $input = $('#custom-donation-1');
-  $input.on('keyup', function () {
-    $('#custom-donation-add').removeClass('hidden')
-  });
-  $('#donation-add').on('click', function(){
-    var data = {
-      'amount': $("#custom-donation-1").val(),
-      'event': $('#event-title').attr('eventTitle'),
-      csrfmiddlewaretoken: '{{ csrf_token }}'
-    }
-    $.ajax({
-            data: data,
-            url: '/events/ticket-donation-update-cart/',
-            method: 'POST',
-            success: function(data){
-              Swal.fire({
-                  icon: 'success',
-                  title: 'Success!',
-                  text: 'Cart Updated Successfully',
-                })
-                var price = data.price
-                var quantity = data.quantity
-              
-                $('.summary-table-body').append('<tr class="product-row '+ data.pk +'-row"><td class="product-summary"> Custom Donation </td><td class="product-summary-price '+ data.pk + '-price">'+ data.price +'</td><td class="product-summary-quantity center-align '+ data.pk +'-quantity"> 1</td><td id="'+ data.pk +'-DonationRemove"><span class="material-icons cartDonationRemove" pk="'+ data.pk +'">remove_circle</span></td></tr>')
-     
-                var total = data.total
-                $('.total-line').html(total)
-                $('#guest-form').load()
-                },
-                error: function(data){
-                }
-          })
-  })
-  $(document).on('click', '.cartDonationRemove', function(){
-    var data = {
-      'pk': $(this).attr('pk'),
-      'event': $('#event-title').attr('eventTitle'),
-      csrfmiddlewaretoken: '{{ csrf_token }}'
-    }
-    $.ajax({
-            data: data,
-            url: '/events/ticket-donation-remove/',
-            method: 'POST',
-            success: function(data){
-                var price = data.price
-                var quantity = data.quantity
-                var row = data.row
-                $(row).remove()
-     
-                var total = data.total
-                $('.total-line').html(total)
-                },
-                error: function(data){
-                }
-          })
-  })
-    $('#custom-donation-1').maskMoney({prefix:'$ '})
-    $(document).on('click', '.add-to-cart', function(){
-      var container = $(this).closest()
-      var adType = $(this).attr('tid')
-      var data = {
-        'type': 'add',
-        'adType': adType,
-        'event': $('#event-title').attr('eventTitle'),
-        csrfmiddlewaretoken: '{{ csrf_token }}'
-      }
-          
-      $.ajax({
-            data: data,
-            url: '/events/ticket-ad-update-cart/',
-            method: 'POST',
-            success: function(data){
-                Swal.fire({
-                  icon: 'success',
-                  title: 'Success!',
-                  text: 'Cart Updated Successfully',
-                })
-                var price = data.price
-                var quantity = data.quantity
-                $('.summary-table-body').append('<tr class="product-row '+ data.pk +'-AdRow"><td class="product-summary">'+ data.ad +'</td><td class="product-summary-price '+ data.pk + '-Adprice">'+ data.price +'</td><td class="product-summary-quantity center-align '+ data.pk +'-quantity">'+ data.quantity +'</td><td id="'+ data.pk +'-removeAd" ><span class="material-icons cartAdRemove" typeId="'+ data.typeId +'" tid="'+ data.pk +'">remove_circle</span></td></tr>')
-                $(data.removeContainer).html('<div class="btn cartAdRemove red darken-4" typeId="'+ data.typeId +'" tid="'+ data.pk +'" style="width:fit-content">Remove From Cart</div>')
-                var total = data.total
-                $('.total-line').html(total)
-                $('#guest-form').load()
-                },
-                error: function(data){
-                }
-            })
-    })
-    $('.qty-counter').on('change', function(){
-        var qty = $(this).val()
-        var tid = $(this).attr('tid')
-        var data = {
-            'quantity': qty,
-            'tid': tid,
-            'event': $('#event-title').attr('eventTitle'),
-            csrfmiddlewaretoken: '{{ csrf_token }}'
-        }
-        $.ajax({
-            data: data,
-            url: '/events/ticket-update-cart/',
-            method: 'POST',
-            success: function(data){
-              Swal.fire({
-                  icon: 'success',
-                  title: 'Success!',
-                  text: 'Cart Updated Successfully',
-                })
-                var price = data.price
-                var quantity = data.quantity
-                if (data.previousQuantity > 0) {
-                  if (quantity > 0){
-                    $(data.priceTarget).html(price)
-                    $(data.quantityTarget).html(quantity)
-                  } else {
-                      $(data.row).remove()
-                  }
-                }
-                else if (data.previousQuantity == 0) {
-                    $('.summary-table-body').append('<tr class="product-row '+ data.pk +'-row"><td class="product-summary">'+ data.ticket +'</td><td class="product-summary-price '+ data.pk + '-price">'+ data.price +'</td><td class="product-summary-quantity center-align '+ data.pk +'-quantity">'+ data.quantity +'</td><td id="'+ data.pk +'-remove" ><span class="material-icons cartRemove" tid="'+ data.typePk +'">remove_circle</span></td></tr>')
-                }
-                var total = data.total
-                $('.total-line').html(total)
-                $('#guest-form').load()
-                },
-                error: function(data){
-                }
-            })
-        })
     $('#step1-continue').on('click', function(event){
         event.preventDefault()
         $('#ticket-checkout-p1').hide()
@@ -683,6 +557,10 @@
           $('#ticketholder_email').parent('.input-field').append('<p class="required-message">This field is required</p>')
           Swal.fire('Please complete all required fields')
         }
+        else if (! $('#agreement').is(':checked')){
+          $('#agreement').focus()
+          Swal.fire('Please complete all required fields')
+        }
         else{
           $('#ticket-checkout-p2').hide()
           $('#ticket-checkout-p3').show()
@@ -694,88 +572,37 @@
         $('#ticket-checkout-p2').show();
         
     })
-    $('#sponsor-step3-back').on('click', function(event){
-        event.preventDefault()
-        $('#sponsor-checkout-p3').hide();
-        $('#sponsor-checkout-p2').show();
-        
-    })
-    $('#sponsor-step1-continue').on('click', function(event){
-        event.preventDefault()
-        $('#sponsor-checkout-p1').hide()
-        $('#sponsor-checkout-p2').show()
-    })
-    $('#sponsor-step2-back').on('click', function(event){
-        event.preventDefault()
-        $('#sponsor-checkout-p2').hide();
-        $('#sponsor-checkout-p1').show();
-        
-    })
-    $('#sponsor-step-2-billing').on('click', function(event){
-        event.preventDefault()
-        $('#sponsor-checkout-p2').hide()
-        $('#sponsor-checkout-p3').show()
-    })
-    $('#sponsor-step3-back').on('click', function(event){
-        event.preventDefault()
-        $('#sponsor-checkout-p3').hide();
-        $('#sponsor-checkout-p2').show();
-        
-    })
+    
     $(document).on('click', '.cartRemove', function(){
-        var qty = '0'
-        var tid = $(this).attr('tid')
-        var data = {
-            'quantity': qty,
-            'tid': tid,
-            'event': $('#event-title').attr('eventTitle'),
-            csrfmiddlewaretoken: '{{ csrf_token }}'
+        data = {
+          csrfmiddlewaretoken: '{{ csrf_token }}',
+          'item' : $(this).attr('tid'),
         }
         $.ajax({
             data: data,
-            url: '/events/ticket-update-cart/',
-            method: 'POST',
-            success: function(data){
+            url: '/cart/gallery-remove',
+            method: "POST",
+            success:function(data){
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Item Removed',
+                    iconColor: 'white',
+                    position: 'center',
+                    customClass: {
+                        popup: 'success-toast'
+                    },
+                    showConfirmButton: false,
+                    timer: 1500,
+                    timerProgressBar: true
+                })
                 var price = data.price
-                var quantity = data.quantity
-                $(data.row).remove();
-                $(data.select).val('0');
-                $(data.select).formSelect('destroy');
-                $(data.select).formSelect();
-                var total = data.total;
-                $('.total-line').html(total)
-                $('#guest-form').load()
-                },
-                error: function(data){
-                }
+                $('.row-'+data.pk).remove();
+                var formatted = Intl.NumberFormat('en-US', {style: 'currency', currency: 'USD'}).format(data.total)
+                $('.total-line').html('<b>Total</b> - '+formatted)
+            },
         })
     })
-    $(document).on('click', '.cartAdRemove', function(){
-      var qty = '0'
-        var tid = $(this).attr('tid')
-        var typeId = $(this).attr('typeId')
-        var data = {
-            'type': 'remove',
-            'tid': tid,
-            'typeId': typeId,
-            'event': $('#event-title').attr('eventTitle'),
-            csrfmiddlewaretoken: '{{ csrf_token }}'
-        }
-        $.ajax({
-            data: data,
-            url: '/events/ticket-ad-update-cart/',
-            method: 'POST',
-            success: function(data){
-                $(data.row).remove();
-                var total = data.total;
-                $('.total-line').html(total)
-                $(data.removeContainer).html('<div class="btn add-to-cart grey darken-4" tid="'+ data.typeId +'" id="'+ data.typeId +'-add-ad" style="width:fit-content">Add to Cart</div>')
-                $('#guest-form').load()
-                },
-                error: function(data){
-                }
-        })
-    })
+    
   </script>
   <style>
     .hidden {
@@ -1280,9 +1107,8 @@
             console.error(tokenizeErr);
             return;
           }
-          var billing_type= $('#billing-saved-or-new').val();
           $('#nonce-input').attr('value', payload.nonce);
-          ticketNB();
+          galleryCheckout();
           
         });
       });
@@ -1366,7 +1192,7 @@
                   )
                 }
                 $('#nonce-input').attr('value', result.nonce);
-                ticketNB();
+                galleryCheckout();
               })
             }).catch(function(err){
               Swal.fire(
@@ -1407,9 +1233,9 @@
             return paypalCheckoutInstance.tokenizePayment(data, function(err, payload){
               $('#nonce-input').attr('value', payload.nonce);
               if (shipping_type === 'saved'){
-                ticketNB()
+                galleryCheckout()
               }else{
-                ticketNB()
+                galleryCheckout()
               }
               
             });
@@ -1463,40 +1289,51 @@
   
   function handleVenmoSuccess(payload) {
     $('#nonce-input').attr('value', payload.nonce);
-    ticketNB();
+    galleryCheckout();
   }
-  function ticketNB(){
-      var guestList = $('#ticket-guest-list').val()
+  function galleryCheckout(){
       var first_name = $('#ticketholder_first_name').val()
       var last_name = $('#ticketholder_last_name').val()
       var email = $('#ticketholder_email').val()
+      if($('#agreement').is(':checked')){
+        var agreed = 'True'
+      }else{
+        var agreed = 'False'
+      }
       var nonce = $('#nonce-input').val()
       var deviceData = $('device-data-input').val()
       var csrf_token = $('[name="csrfmiddlewaretoken"]').val()
-      var event = $('#event-hidden-input-sponsor').val()
       data = {
         csrfmiddlewaretoken: csrf_token,
-        'guestList': guestList,
+        'agreed': agreed,
         'nonce': nonce,
         'deviceData': deviceData,
         'email': email,
         'first_name': first_name,
         'last_name': last_name,
-        'event': event
       }
       $.ajax({
-        url: '/cart/ticket-nb',
+        url: '/cart/presale-checkout',
         method: 'POST',
         data: data,
         success: function(data){
-          Swal.fire({
-            icon: 'success',
-            title: 'Thank You!',
-            text: 'You will receive an email with your tickets shortly!',
-            timer: 3000,
-          });
+          if(data.status == 'success'){
+            Swal.fire({
+              icon: 'success',
+              title: 'Thank You!',
+              text: 'You will receive an email confirmation shortly!',
+              timer: 3000,
+            });
           var delay = 3000
-          setTimeout(function(){ window.location.replace('/events/') }, delay);
+          setTimeout(function(){ window.location.replace('/events/love-of-art-fundraiser/') }, delay);
+          }else{
+            Swal.fire({
+              icon: 'error',
+              title: 'Oops...',
+              text: data.message,
+              timer: 3000,
+            });
+          }
         },
         error: function(data){
           Swal.fire({

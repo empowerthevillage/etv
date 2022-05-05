@@ -7,7 +7,8 @@ from django.urls import reverse
 from django.db import models
 from django.db.models.signals import pre_save, post_save
 from etv.utils import unique_order_id_generator
-from carts.models import Cart, cartItem
+from carts.models import Cart, cartItem, GalleryCart
+from events.models import GalleryItem
 
 import braintree
 import shippo
@@ -345,3 +346,22 @@ class Transaction(models.Model):
             self.status = "SubmittedForSettlement"
             self.save()
         return self.status
+
+class LOAPresalePurchase(models.Model):
+    braintree_id = models.CharField(max_length=270, blank=True, null=True)
+    first_name = models.CharField(max_length=100, blank=True, null=True)
+    last_name = models.CharField(max_length=100, blank=True, null=True)
+    email = models.EmailField(blank=True, null=True)
+    items = models.ManyToManyField(GalleryItem, blank=True)
+    total = models.DecimalField(default=0.00, max_digits=6, decimal_places=2)
+    timestamp = models.DateTimeField(auto_now_add=True, null=True, blank=True)
+    updated = models.DateTimeField(auto_now=True, null=True, blank=True)
+    receipt_sent = models.BooleanField(default=False)
+    
+    def __str__(self):
+        return self.braintree_id
+
+    class Meta:
+        ordering = ['-timestamp', '-updated']
+        verbose_name = "Juneteenth Art Show Pre-Sale Order"
+        verbose_name_plural = "Juneteenth Art Show Pre-Sale Orders"

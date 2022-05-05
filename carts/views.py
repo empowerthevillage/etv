@@ -5,7 +5,7 @@ from django.shortcuts import render
 from django.shortcuts import redirect
 from .models import *
 from billing.models import BillingProfile, Card
-from orders.models import Order
+from orders.models import Order, LOAPresalePurchase
 from orders.models import Transaction
 from merchandise.models import *
 from accounts.forms import LoginForm, GuestForm
@@ -529,6 +529,87 @@ def gallery_cart_remove(request):
     response = {
         'status': status,
         'count': len(cart_obj.items.all()),
-        'pk': item.pk
+        'pk': item.pk,
+        'total': cart_obj.total
     }
     return JsonResponse(response)
+
+def gallery_sale(request):
+    billing_profile, billing_profile_created = BillingProfile.objects.new_or_get(request)
+    if billing_profile is None:
+        email = request.POST.get('email')
+        request.session['guest_email'] = email
+        billing_profile, billing_profile_created = BillingProfile.objects.new_or_get(request)
+    else:
+        email = billing_profile.email
+    email = request.POST.get('email')
+    first_name = request.POST.get('first_name')
+    last_name = request.POST.get('last_name')
+    cart_obj, created = GalleryCart.objects.new_or_get(request)
+    amount = str(cart_obj.total)
+    nonce = request.POST.get('nonce')
+
+    result = gateway.transaction.sale({
+        "amount": amount,
+        "payment_method_nonce": nonce,
+        "device_data": request.POST.get('device_data'),
+        "customer": {
+            "first_name": first_name,
+            "last_name": last_name,
+            "email": email
+        },
+        "options": {
+            "submit_for_settlement": True
+        }
+    })
+    print(result)
+    if result.is_success:
+        items = cart_obj.items.all()
+        order_obj = LOAPresalePurchase()
+        order_obj.braintree_id = result.transaction.id
+        order_obj.first_name = first_name
+        order_obj.last_name = last_name
+        order_obj.total = amount
+        order_obj.save()
+        for x in items:
+            x.sold = True
+            x.save()
+            order_obj.items.add(x)
+            order_obj.save()
+        
+        cart_obj.active = False
+        cart_obj.save()
+        confirmation_subject = 'ETV Love of Art Pre-Sale Purchase Confirmation'
+        from_email = 'etvnotifications@gmail.com'
+        confirmation_content = render_to_string('presale-email.html',
+        {
+            'items': items,
+        })
+        confirmation_plain_text = 'View email in browser'      
+        
+        send_mail(confirmation_subject, confirmation_plain_text, from_email, [str(email)], html_message=confirmation_content)
+        detail_content = render_to_string('ticket-admin-email.html',
+        {
+            'purchaser': '%s %s' %(first_name, last_name),
+            'items': items,
+        })
+        
+        #recipients = ['chandler@eliftcreations.com', 'admin@empowerthevillage.org', 'ayo@empowerthevillage.org']
+        recipients = ['chandler@eliftcreations.com']
+        send_mail(
+            'New Art Show Pre-Sale Purchase!',
+            str('A ticket purchase has been successfully processed! Purchaser: '+ str(email)),
+            'etvnotifications@gmail.com',
+            recipients,
+            html_message=detail_content,
+            fail_silently=True
+        )
+        status = 'success'
+    else:
+        status = 'failure'
+    message = result.transaction.processor_response_text
+    data = {
+        'status': status,
+        'message': message
+    }
+    return JsonResponse(data)

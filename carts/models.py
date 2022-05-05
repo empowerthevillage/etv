@@ -179,7 +179,7 @@ class ticketAd(models.Model):
 class GalleryCartManager(models.Manager):
     def new_or_get(self, request):
         cart_id = request.session.get("gallery_cart_id", None)
-        qs = self.get_queryset().filter(id=cart_id)
+        qs = self.get_queryset().filter(id=cart_id).filter(active=True)
         if qs.count() == 1:
             new_obj = False
             cart_obj = qs.first()
@@ -219,5 +219,4 @@ class GalleryCart(models.Model):
         for x in self.items.all():
             prices.append(x.price)
         total = sum(prices)
-        print(total)
         return total
