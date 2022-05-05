@@ -284,8 +284,12 @@
         
     }
     .carousel-item img {
-        width:fit-content;
-        height:100%;
+        width: auto;
+        max-width: 280px;
+        height: 100%;
+        overflow: hidden;
+        overflow-x: hidden;
+        overflow-y: hidden;
     }
     #page {
         background: url("{% static 'img/vbp-collage.svg' %}");
@@ -340,6 +344,14 @@
         margin-top: 10px
     }
     @media only screen and (min-width: 601px) {
+        .carousel-item img {
+            width: auto;
+            max-width:fit-content;
+            height: 100%;
+            overflow: visible;
+            overflow-x: visible;
+            overflow-y: visible;
+        }
         .gallery-item-details {
             width: 100%;
         }
