@@ -594,8 +594,8 @@ def gallery_sale(request):
             'items': items,
         })
         
-        #recipients = ['chandler@eliftcreations.com', 'admin@empowerthevillage.org', 'ayo@empowerthevillage.org']
-        recipients = ['chandler@eliftcreations.com']
+        recipients = ['chandler@eliftcreations.com', 'admin@empowerthevillage.org', 'ayo@empowerthevillage.org']
+        #recipients = ['chandler@eliftcreations.com']
         send_mail(
             'New Art Show Pre-Sale Purchase!',
             str('A ticket purchase has been successfully processed! Purchaser: '+ str(email)),
