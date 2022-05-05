@@ -588,7 +588,7 @@ def gallery_sale(request):
         confirmation_plain_text = 'View email in browser'      
         
         send_mail(confirmation_subject, confirmation_plain_text, from_email, [str(email)], html_message=confirmation_content)
-        detail_content = render_to_string('ticket-admin-email.html',
+        detail_content = render_to_string('presale-admin-email.html',
         {
             'purchaser': '%s %s' %(first_name, last_name),
             'items': items,
