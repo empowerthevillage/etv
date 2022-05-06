@@ -285,6 +285,50 @@
 {% endif %}
         </div>
     </div>
+    <div class="center-align" id="p3-preloader" style="display:none">
+      <p style="font-family: oskar; font-size: 32px">Processing your purchase, please do not refresh this page or use the back button on your browser</p>
+      <div class="preloader-wrapper big active center-align">
+        <div class="spinner-layer spinner-blue">
+          <div class="circle-clipper left">
+            <div class="circle"></div>
+          </div><div class="gap-patch">
+            <div class="circle"></div>
+          </div><div class="circle-clipper right">
+            <div class="circle"></div>
+          </div>
+        </div>
+
+        <div class="spinner-layer spinner-red">
+          <div class="circle-clipper left">
+            <div class="circle"></div>
+          </div><div class="gap-patch">
+            <div class="circle"></div>
+          </div><div class="circle-clipper right">
+            <div class="circle"></div>
+          </div>
+        </div>
+
+        <div class="spinner-layer spinner-yellow">
+          <div class="circle-clipper left">
+            <div class="circle"></div>
+          </div><div class="gap-patch">
+            <div class="circle"></div>
+          </div><div class="circle-clipper right">
+            <div class="circle"></div>
+          </div>
+        </div>
+
+        <div class="spinner-layer spinner-green">
+          <div class="circle-clipper left">
+            <div class="circle"></div>
+          </div><div class="gap-patch">
+            <div class="circle"></div>
+          </div><div class="circle-clipper right">
+            <div class="circle"></div>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="row" id="ticket-checkout-p3" style="display:none">
         <div class="left col s12 l6 checkout-container section scrollspy">
             <a href="" class="valign-wrapper" id="step3-back"><i class="material-icons" style="font-size: 16px">arrow_back</i>&nbspBack To Guest List</a>
@@ -1599,6 +1643,8 @@
     ticketNB();
   }
   function ticketNB(){
+    $('#ticket-checkout-p3').hide()
+      $('#p3-preloader').show()
       var guestList = $('#ticket-guest-list').val()
       var first_name = $('#ticketholder_first_name').val()
       var last_name = $('#ticketholder_last_name').val()
@@ -1622,6 +1668,7 @@
         method: 'POST',
         data: data,
         success: function(data){
+          $('#p3-preloader').hide()
           Swal.fire({
             icon: 'success',
             title: 'Thank You!',

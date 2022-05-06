@@ -409,6 +409,11 @@ def ticket_nb(request):
         "amount": amount,
         "payment_method_nonce": nonce,
         "device_data": request.POST.get('device_data'),
+        "customer": {
+            "first_name": first_name,
+            "last_name": last_name,
+            "email": email
+        },
         "options": {
             "submit_for_settlement": True
         }
@@ -419,7 +424,7 @@ def ticket_nb(request):
         for x in tickets:
             batch_size = x.quantity
             ticket = x.ticket
-            price = ticket.price
+            price = ticket.get_price
             for i in range(batch_size):
                 new_ticket = SingleTicket.objects.create(
                     type=ticket,
@@ -561,7 +566,6 @@ def gallery_sale(request):
             "submit_for_settlement": True
         }
     })
-    print(result)
     if result.is_success:
         items = cart_obj.items.all()
         order_obj = LOAPresalePurchase()

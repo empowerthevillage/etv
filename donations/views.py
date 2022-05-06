@@ -224,6 +224,7 @@ def donation_complete(request):
                 str('A new $'+ str(amount) +' donation has been received from '+ str(donation_obj.get_full_name) +' through www.empowerthevillage.org!'),
                 'etvnotifications@gmail.com',
                 ['admin@empowerthevillage.org', 'chandler@eliftcreations.com', 'ayo@empowerthevillage.org'],
+                #['chandler@eliftcreations.com'],
                 fail_silently=True
             )
             del request.session['donation_id']
@@ -259,9 +260,10 @@ def donation_complete(request):
             mailchimp.customerJourneys.trigger(2794, 15013, {"email_address": str(email)})
             send_mail(
                 'New Donation!',
-                str('A new $'+ amount +'donation has been received from '+ donation_obj.get_full_name +'through www.empowerthevillage.org!'),
+                str('A new $'+ amount +' donation has been received from '+ donation_obj.get_full_name +' through www.empowerthevillage.org!'),
                 'etvnotifications@gmail.com',
                 ['admin@empowerthevillage.org', 'chandler@eliftcreations.com', 'ayo@empowerthevillage.org'],
+                #['chandler@eliftcreations.com'],
                 fail_silently=True
             )
             data = 'success'
@@ -290,6 +292,7 @@ def donation_complete(request):
                 str('A new $'+ str(amount) +'donation has been received from '+ str(donation_obj.get_full_name) +'through www.empowerthevillage.org!'),
                 'etvnotifications@gmail.com',
                 ['admin@empowerthevillage.org', 'chandler@eliftcreations.com', 'ayo@empowerthevillage.org'],
+                #['chandler@eliftcreations.com'],
                 fail_silently=True
             )
             del request.session['donation_id']
