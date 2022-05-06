@@ -12,8 +12,7 @@ from accounts.forms import LoginForm, GuestForm
 from accounts.models import GuestEmail
 from addresses.forms import AddressForm, ShippingAddressForm, BillingAddressForm
 from addresses.models import Address
-from events.models import SingleTicket
-from events.models import CompleteDonation
+from events.models import *
 from donors.models import Donor
 from itertools import islice
 import braintree

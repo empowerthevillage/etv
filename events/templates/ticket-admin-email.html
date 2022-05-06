@@ -141,7 +141,7 @@ padding:10px 30px 10px 30px!important;
 </table></td>
 </tr>
 <tr>
-<td align="center" class="es-m-txt-l" style="padding:0;Margin:0"><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:helvetica, 'helvetica neue', arial, verdana, sans-serif;line-height:32px;color:#000000;font-size:16px"><strong>Ticket ID:</strong>&nbsp;{{ x }}<br><strong>Ticket Type:&nbsp;</strong>{{ x.type }}<br><strong>Ticket Price:&nbsp;</strong>${{ x.purchase_price }}<br><b>Guest List:&nbsp;</b>{{ x.guest_list }}<br></p></td>
+<td align="center" class="es-m-txt-l" style="padding:0;Margin:0"><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:helvetica, 'helvetica neue', arial, verdana, sans-serif;line-height:32px;color:#000000;font-size:16px"><strong>Ticket ID:</strong>&nbsp;{{ x }}<br><strong>Ticket Type:&nbsp;</strong>{{ x.type }}<br><strong>Ticket Price:&nbsp;</strong>${{ x.type.get_price }}<br><b>Guest List:&nbsp;</b>{{ x.guest_list }}<br></p></td>
 </tr>
 {% endfor %}
 {% endif %}
