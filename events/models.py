@@ -241,6 +241,7 @@ class TicketManager(models.Manager):
             {'field':'event','type':'foreignkey'},
             {'field':'type','type':'foreignkey'},
             {'field':'ticket_id','type':'plain'},
+            {'field':'braintree_id', 'type':'braintree_transaction'},
             {'field':'purchase_price','type':'currency'},
             {'field':'first_name','type':'plain'},
             {'field':'last_name','type':'plain'},

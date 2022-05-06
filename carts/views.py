@@ -434,7 +434,8 @@ def ticket_nb(request):
                     first_name=first_name,
                     last_name=last_name,
                     guest_list=guest_list,
-                    purchase_price=price)
+                    purchase_price=price,
+                    braintree_id=result.transaction.id)
                 ticket_list.append(new_ticket)
         donations = ticketDonation.objects.filter(cart=cart_obj)
         for x in donations:

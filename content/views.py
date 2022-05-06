@@ -1,4 +1,6 @@
 from django.shortcuts import redirect, render
+from django.template.loader import render_to_string
+from django.core.mail import send_mail
 from content.forms import ContactForm
 from etv.forms import MailchimpForm
 from mailchimp_marketing import Client
@@ -47,6 +49,22 @@ def contact(request):
                 user = request.user
                 obj.user = user
               obj.save()
+              detail_content = render_to_string('contact-admin-email.html',
+              {
+                  'name': obj.name,
+                  'email': obj.email,
+                  'message': obj.message,
+              })
+              recipients = ['chandler@eliftcreations.com', 'admin@empowerthevillage.org', 'ayo@empowerthevillage.org']
+              send_mail(
+                  'New Contact Us Request',
+                  str('A new contact request has been received from'+ str(obj.name)),
+                  'etvnotifications@gmail.com',
+                  #recipients,
+                  ['chandler@eliftcreations.com'],
+                  html_message=detail_content,
+                  fail_silently=True
+              )
               sweetify.success(request, title='Thank you!', icon='success', text="We'll be in touch!", button='OK', timer=4000)
       else:
             sweetify.toast(request, "We want to make sure you're a human! Please complete the RECAPTCHA", icon="error", timer=3000)        
