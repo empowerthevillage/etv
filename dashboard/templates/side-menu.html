@@ -7,7 +7,7 @@
                 <li class="list-heading">Village Black Pages</li>
                 <li>Books
                     <div class="right">
-                        <a href=""><i class="bi bi-plus-square add-model-obj tooltipped" data-position="bottom" data-tooltip="Add New {{ model }}"></i></a>
+                        <a href="/dashboard/Village%20Black%20Pages/vbp_book-list/create/"><i class="bi bi-plus-square add-model-obj tooltipped" data-position="bottom" data-tooltip="Add New"></i></a>
                         <a href="/dashboard/Village%20Black%20Pages/vbp_book-list/"><i class="bi bi-window-plus view-model-objs tooltipped" data-position="top" data-tooltip="View All {{ model.model_name_plural }}"></i></a>
                     </div>
                 </li>
@@ -28,7 +28,7 @@
                     {% for model in x.list %}
                     <li>{{ model.get_model_name_plural }}
                         <div class="right">
-                            <a href=""><i class="bi bi-plus-square add-model-obj tooltipped" data-position="bottom" data-tooltip="Add New {{ model }}"></i></a>
+                            <a href="/dashboard/{{ model.category }}/{{ model }}-list/create/"><i class="bi bi-plus-square add-model-obj tooltipped" data-position="bottom" data-tooltip="Add New"></i></a>
                             <a href="/dashboard/{{ model.category }}/{{ model }}-list/"><i class="bi bi-window-plus view-model-objs tooltipped" data-position="top" data-tooltip="View All {{ model.model_name_plural }}"></i></a>
                         </div>
                     </li>

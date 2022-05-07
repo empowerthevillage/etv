@@ -60,8 +60,8 @@ def contact(request):
                   'New Contact Us Request',
                   str('A new contact request has been received from'+ str(obj.name)),
                   'etvnotifications@gmail.com',
-                  #recipients,
-                  ['chandler@eliftcreations.com'],
+                  recipients,
+                  #['chandler@eliftcreations.com'],
                   html_message=detail_content,
                   fail_silently=True
               )

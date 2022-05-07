@@ -24,6 +24,7 @@
                         <div class="card">
                             <div class="card-heading">
                                 <p class="card-title">{{ dashboardModel.get_model_name_plural }}</p>
+                                <a class="center-align" href="/dashboard/{{ dashboardModel.category }}/{{ dashboardModel.model_name }}-list/create/"><p class=""><i class="bi bi-plus-circle-dotted"></i> Add New</p></a>
                             </div>
                             <div class="card-body row">
                                 {{ field_pairs }}
@@ -65,7 +66,7 @@
                                                         <td>
                                                             <p>
                                                                 <label>
-                                                                <input type="checkbox" name="line-item">
+                                                                <input type="checkbox" name="line-item" value="{{ x.pk }}">
                                                                 <span></span>
                                                                 </label>
                                                             </p>
@@ -98,7 +99,7 @@
                                                     <td>
                                                         <p>
                                                             <label>
-                                                            <input type="checkbox" name="line-item">
+                                                            <input type="checkbox" name="line-item" value="{{ x.pk }}">
                                                             <span></span>
                                                             </label>
                                                         </p>

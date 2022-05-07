@@ -14,24 +14,21 @@
                     <div class="col s12" style="margin-bottom: 10px">
                         <a href="{{ dashboard_url }}" class="breadcrumb">Dashboard</a>
                         <a href="/dashboard/{{ dashboardModel.category }}/{{ dashboardModel.model_name }}-list/" class="breadcrumb">{{ dashboardModel.get_model_name }} List</a>
-                        <a href="/dashboard/{{ dashboardModel.category }}/{{ dashboardModel.model_name }}-list/view/{{ obj.pk }}" class="breadcrumb">{{ obj }}</a>
-                        <a class="breadcrumb active">Edit</a>
+                        <a class="breadcrumb active">New</a>
                       </div>
                     <div class="col s12">
                         <div class="card">
                             <div class="card-heading" style="margin-bottom: 20px">
-                                <p class="card-title" style="color: rgb(20, 155, 20); border-bottom: none">EDIT</p>
-                                <p class="card-title">{{ obj }}</p>
+                                <p class="card-title" style="color: rgb(20, 155, 20); border-bottom: none">New {{ dashboardModel.get_model_name }}</p>
                             </div>
                             <div class="col s12 right-align">
                                 <div class="btn admin-save">SAVE</div>
                                 <div class="btn admin-delete">DELETE</div>
                             </div>
                             <div class="card-body row">
-                                <form id="changeForm" method="POST" action="/dashboard/save/">
+                                <form id="changeForm" method="POST" action="/dashboard/create/">
                                     {% csrf_token %}
                                     <input type="hidden" name="model" value="{{ dashboardModel }}">
-                                    <input type="hidden" name="pk" value="{{ obj.pk }}">
                                     {% for field in form %}
                                     <div class="col s6 input-field">
                                         {{ field }}

@@ -253,7 +253,7 @@ class TicketManager(models.Manager):
         return fields
     
     def dashboard_display_qty(self):
-        qty = 30
+        qty = 20
         return qty
         
     def dashboard_category(self):
@@ -434,9 +434,12 @@ class CompleteDonation(models.Model):
 
     objects         = EventDonationManager()
 
+    def __str__(self):
+        return '$%s Event Donation from %s %s' %(self.amount, self.first_name, self.last_name)
+
     class Meta:
-        verbose_name = 'Donation'
-        verbose_name_plural = 'Donations'
+        verbose_name = 'Event Donation'
+        verbose_name_plural = 'Event Donations'
 
 class Artist(models.Model):
     name            = models.CharField(max_length=270)

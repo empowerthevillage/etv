@@ -60,36 +60,8 @@ def updateDonors(request):
     return HttpResponse('success')
 
 def DashboardHome(request):
-    bonnie = Donor.objects.get(first_name='Bonnie')
-    #Accounts
-    users = MyUser.objects.all()
-    teams = Team.objects.all()
-    bfc_partiipants = Participant.objects.all()
-
-    #Addresses
-    addresses = Address.objects.all()
-
-    #BFChallenge
-    bingo_cards = bingo_card.objects.all()
-    user_bingo_cards = user_bingo_card.objects.all()
-    user_bingo_forms = user_bingo_form.objects.all()
-    rss_transactions = readysetshop_transaction.objects.all()
-    vbp_nomination = nomination.objects.all()
-
-    #Billing
-    billing_profiles = BillingProfile.objects.all()
-
-    #Carts
-    shopping_carts = Cart.objects.all()
-    ticket_carts = TicketCart.objects.all()
-
-    #Content
-    contact_requests = contact_submission.objects.all()
-
     #Donations
     donations = donation.objects.all()
-    tags = tag.objects.all()
-    donation_events = donation_event.objects.all()
     donors = Donor.objects.all()
 
     top_donors = donors.order_by('-total')[:5]
@@ -100,15 +72,10 @@ def DashboardHome(request):
     latest_donations = donations.filter(status="complete").filter(updated__range=[str(d), str(datetime.datetime.now())])
     last_5_donations = donations.filter(status="complete").order_by('-updated')[:5]
 
-    #Events
-    events = Event.objects.all()
-
-    #Ticketing
-    ticket_types = TicketType.objects.all()
     tickets = SingleTicket.objects.all()
 
     latest_tickets = tickets.filter(updated__range=[str(d), str(datetime.datetime.now())])
-    last_5_tickets = tickets.order_by('-updated')[:5]
+    last_5_tickets = tickets.order_by('-created')[:5]
 
     #Orders
     orders = Order.objects.all()
@@ -133,9 +100,9 @@ def DashboardHome(request):
         all_ticket_amounts.append(0)
         
     for x in latest_donations:
-        year = x.updated.year
-        month = x.updated.strftime("%m")
-        day = x.updated.strftime("%d")
+        year = x.created.year
+        month = x.created.strftime("%m")
+        day = x.created.strftime("%d")
         all_donation_dates.append('%s-%s-%s' %(year, month, day))
         all_donation_amounts.append(int(x.amount))
 
@@ -147,9 +114,9 @@ def DashboardHome(request):
         donation_amounts.append(grouped_donations[x])
 
     for x in latest_tickets:
-        year = x.updated.year
-        month = x.updated.strftime("%m")
-        day = x.updated.strftime("%d")
+        year = x.created.year
+        month = x.created.strftime("%m")
+        day = x.created.strftime("%d")
         all_ticket_dates.append('%s-%s-%s' %(year, month, day))
         all_ticket_amounts.append(int(x.type.price))
     
@@ -161,7 +128,6 @@ def DashboardHome(request):
         ticket_amounts.append(grouped_tickets[x])
 
     context = {
-        'bonnie': bonnie,
         "app_list": app_list,
         "donation_data": grouped_donations,
         "ticket_data": grouped_tickets,
@@ -361,6 +327,7 @@ def delete_obj(request):
         }
         return JsonResponse(data)
 
+
 def save_obj(request):
     if request.user.is_admin:
         model = request.POST.get('model')
@@ -417,4 +384,110 @@ def save_obj(request):
             else:
                 print('no new counselor')
         sweetify.success(request, 'Update Successful!')
+        return redirect(redirect_url)
+def objectNew(request, category, model):
+
+    app_list = dashboardModel.objects.all().order_by('category', 'model_name')
+    model_obj = dashboardModel.objects.filter(model_name=str(model)).first()
+    model = django.apps.apps.get_model(str(model_obj.app_name), str(model))
+
+    form = None
+    form_pairs = [
+        {'model':'contact_submission','form':ContactForm()},
+        {'model':'donation','form':DonationForm()},
+        {'model':'Donor','form':DonorForm()},
+        {'model':'Event','form':EventForm()},
+        {'model':'SingleTicket','form':TicketForm()},
+        {'model':'TicketType','form':TicketTypeForm()},
+        {'model':'Nomination','form':VenBusinessForm()},
+        {'model':'FamilyNomination','form':VenFamilyForm()},
+        {'model':'vbp_book','form':VBPBookForm()},
+    ]
+    
+    for x in form_pairs:
+        if model_obj.model_name == x['model']:
+            form = x['form']
+    
+    fields = model._meta.get_fields()
+    fields_formatted = []
+    for x in fields:
+        field_type = field_type_generator(x)
+        if field_type == 'choice':
+            choices = x.choices
+        else:
+            choices = ''
+        try:
+            formfield = x.formfield()
+            widget_html = formfield.widget.render
+        except:
+            formfield = 'manytomany'
+            widget_html = ''
+  
+        fields_formatted.append({"field": x, "type": field_type, "formfield": formfield, "widget_html": widget_html, "choices": choices,})
+        
+    context = {
+        "model": model,
+        "dashboardModel": model_obj,
+        "fields": fields,
+        "fields_formatted": fields_formatted,
+        "app_list": app_list,
+        "form": form
+    }
+    return render(request, 'obj-new.html', context)
+
+def new_obj(request):
+    if request.user.is_admin:
+        model = request.POST.get('model')
+        if model == 'contact_submission':
+            instance = contact_submission()
+            form = ContactForm(request.POST, instance=instance)
+            redirect_url = '/dashboard/Contact%sUs/contact_submission-list/' %('%20')
+        elif model == 'donation':
+            instance = donation()
+            form = DonationForm(request.POST, instance=instance)
+            redirect_url = '/dashboard/donations/donation-list/'
+        elif model == 'Donor':
+            instance = Donor()
+            form = DonorForm(request.POST, instance=instance)
+            redirect_url = '/dashboard/donations/Donor-list/'
+        elif model == 'Event':
+            instance = Event()
+            form = EventForm(request.POST, instance=instance)
+            redirect_url = '/dashboard/Events/Event-list/'
+        elif model == 'SingleTicket':
+            instance = SingleTicket()
+            form = TicketForm(request.POST, instance=instance)
+            redirect_url = '/dashboard/Events/SingleTicket-list/'
+        elif model == 'TicketType':
+            instance = TicketType()
+            form = TicketTypeForm(request.POST, instance=instance)
+            redirect_url = '/dashboard/Events/TicketType-list/'
+        elif model == 'Nomination':
+            instance = Nomination()
+            prev_counselor = instance.counselor
+            form = VenBusinessForm(request.POST, instance=instance)
+            redirect_url = '/dashboard/Village%sEmpowerment%sNetwork/Nomination-list/' %('%20','%20')
+        elif model == 'FamilyNomination':
+            instance = FamilyNomination()
+            form = VenFamilyForm(request.POST, instance=instance)
+            redirect_url = '/dashboard/Village%sEmpowerment%sNetwork/FamilyNomination-list/' %('%20','%20')
+        elif model == 'vbp_book':
+            instance = vbp_book()
+            form = VBPBookForm(request.POST, instance=instance)
+            redirect_url = '/dashboard/Village%sBlack%sPages/vbp_book-list/' %('%20','%20')
+        form.save()
+        if model == 'Nomination':
+            if prev_counselor != instance.counselor:
+                subject = "Congratulations! You've Matched With A Village Empowerment Network Counselor!"
+                from_email = 'etvnotifications@gmail.com'
+                content = render_to_string('counselor-assignment.html',
+                {
+                    'counselor':instance.counselor,
+                    'counsel_link':'https://empowerthevillage.org/village-empowerment-network/schedule/%s' %(instance.ven_id)
+                })
+                plain_text = 'View email in browser'
+                send_mail(subject, plain_text, from_email, [str(instance.nominator_email)], html_message=content)
+            else:
+                pass
+        sweetify.success(request, 'Item Created Successfully!')
         return redirect(redirect_url)
