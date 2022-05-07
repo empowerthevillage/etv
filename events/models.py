@@ -257,7 +257,7 @@ class TicketManager(models.Manager):
         return qty
         
     def dashboard_category(self):
-        category = 'Events'
+        category = 'orders'
         return category
 
 class SingleTicket(models.Model):
@@ -418,7 +418,7 @@ class EventDonationManager(models.Manager):
         return qty
         
     def dashboard_category(self):
-        category = 'Events'
+        category = 'donations'
         return category
 
 class CompleteDonation(models.Model):
@@ -447,6 +447,28 @@ class Artist(models.Model):
     def __str__(self):
         return str(self.name)
 
+class GalleryManager(models.Manager):
+
+    def filter_objs(self):
+        filtered_qs = self
+        return filtered_qs
+        
+    def dashboard_get_fields(self):
+        list_fields = [{'field':'title','type':'plain'},{'field':'artist','type':'foreignkey'},{"field":'price','type':'currency'},{'field':'sold','type':'boolean'}]
+        return list_fields
+    
+    def dashboard_get_view_fields(self):
+        fields = [{'field':'title','type':'plain'},{'field':'artist','type':'foreignkey'},{"field":'description','type':'plain'},{"field":'price','type':'currency'},{'field':'image','type':'image'},{'field':'width','type':'plain'},{'field':'height','type':'plain'},{'field':'sold','type':'boolean'},{'field':'order','type':'plain'}]
+        return fields
+    
+    def dashboard_display_qty(self):
+        qty = 20
+        return qty
+        
+    def dashboard_category(self):
+        category = 'Events'
+        return category
+
 class GalleryItem(models.Model):
     
     title           = models.CharField(max_length=270)
@@ -458,7 +480,14 @@ class GalleryItem(models.Model):
     height          = models.CharField(max_length=20, blank=True)
     sold            = models.BooleanField(default=False)
     order           = models.IntegerField(null=True, blank=True)
+
+    objects         = GalleryManager()
     
+    class Meta:
+        verbose_name = 'Juneteenth Pre-Sale Item'
+        verbose_name_plural = 'Juneteenth Pre-Sale Items'
+        ordering = ['artist', 'price']
+
     def __str__(self):
         return str(self.title)
 

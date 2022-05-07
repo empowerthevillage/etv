@@ -171,12 +171,16 @@ def modelHome(request, category, model):
 
     ticket_type_list = {}
     event_list ={}
+    art_list ={}
     ticket_pks = TicketType.objects.all()
     for x in ticket_pks:
         ticket_type_list.update({str(x.pk):str(x.title)})
     event_pks = Event.objects.all()
     for x in event_pks:
         event_list.update({str(x.pk):str(x.title)})
+    art_pks = GalleryItem.objects.all()
+    for x in art_pks:
+        art_list.update({str(x.pk):str(x.artist)})
 
     for x in fields:
         item = model._meta.get_field(str(x["field"]))
@@ -199,6 +203,7 @@ def modelHome(request, category, model):
         "app_list": app_list,
         "ticketTypes": json.dumps(ticket_type_list),
         "eventTypes": json.dumps(event_list),
+        "artists": json.dumps(art_list),
     }
     return render(request, 'model-home.html', context)
 
@@ -214,6 +219,8 @@ def objectChange(request, category, model, pk):
         {'model':'donation','form':DonationForm(instance=obj)},
         {'model':'Donor','form':DonorForm(instance=obj)},
         {'model':'Event','form':EventForm(instance=obj)},
+        {'model':'Ad','form':AdForm(instance=obj)},
+        {'model':'CompleteDonation','form':EventDonationForm(instance=obj)},
         {'model':'SingleTicket','form':TicketForm(instance=obj)},
         {'model':'TicketType','form':TicketTypeForm(instance=obj)},
         {'model':'Nomination','form':VenBusinessForm(instance=obj)},
@@ -327,7 +334,6 @@ def delete_obj(request):
         }
         return JsonResponse(data)
 
-
 def save_obj(request):
     if request.user.is_admin:
         model = request.POST.get('model')
@@ -348,10 +354,18 @@ def save_obj(request):
             instance = Event.objects.get(pk=pk)
             form = EventForm(request.POST, instance=instance)
             redirect_url = '/dashboard/Events/Event-list/view/%s' %(pk)
+        elif model == 'Ad':
+            instance = Ad(pk=pk)
+            form = AdForm(request.POST, instance=instance)
+            redirect_url = '/dashboard/Events/Ad-list/view/%s' %(pk)
+        elif model == 'CompleteDonation':
+            instance = CompleteDonation(pk=pk)
+            form = EventDonationForm(request.POST, instance=instance)
+            redirect_url = '/dashboard/donations/CompleteDonation-list/view/%s' %(pk)
         elif model == 'SingleTicket':
             instance = SingleTicket.objects.get(pk=pk)
             form = TicketForm(request.POST, instance=instance)
-            redirect_url = '/dashboard/Events/SingleTicket-list/view/%s' %(pk)
+            redirect_url = '/dashboard/orders/SingleTicket-list/view/%s' %(pk)
         elif model == 'TicketType':
             instance = TicketType.objects.get(pk=pk)
             form = TicketTypeForm(request.POST, instance=instance)
@@ -385,6 +399,7 @@ def save_obj(request):
                 print('no new counselor')
         sweetify.success(request, 'Update Successful!')
         return redirect(redirect_url)
+
 def objectNew(request, category, model):
 
     app_list = dashboardModel.objects.all().order_by('category', 'model_name')
@@ -397,6 +412,8 @@ def objectNew(request, category, model):
         {'model':'donation','form':DonationForm()},
         {'model':'Donor','form':DonorForm()},
         {'model':'Event','form':EventForm()},
+        {'model':'Ad','form':AdForm()},
+        {'model':'CompleteDonation','form':EventDonationForm()},
         {'model':'SingleTicket','form':TicketForm()},
         {'model':'TicketType','form':TicketTypeForm()},
         {'model':'Nomination','form':VenBusinessForm()},
@@ -454,10 +471,18 @@ def new_obj(request):
             instance = Event()
             form = EventForm(request.POST, instance=instance)
             redirect_url = '/dashboard/Events/Event-list/'
+        elif model == 'Ad':
+            instance = Ad()
+            form = AdForm(request.POST, instance=instance)
+            redirect_url = '/dashboard/Events/Ad-list/'
+        elif model == 'CompleteDonation':
+            instance = CompleteDonation()
+            form = EventDonationForm(request.POST, instance=instance)
+            redirect_url = '/dashboard/donations/CompleteDonation-list/'
         elif model == 'SingleTicket':
             instance = SingleTicket()
             form = TicketForm(request.POST, instance=instance)
-            redirect_url = '/dashboard/Events/SingleTicket-list/'
+            redirect_url = '/dashboard/order/SingleTicket-list/'
         elif model == 'TicketType':
             instance = TicketType()
             form = TicketTypeForm(request.POST, instance=instance)

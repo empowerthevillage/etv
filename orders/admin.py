@@ -1,6 +1,7 @@
 from django.contrib import admin
 from .models import *
 from accounts.admin import admin_site
+from dashboard.models import dashboardModel
 
 class OrderAdmin(admin.ModelAdmin):
     list_display = ['braintree_id', 'billing_profile', 'formatted_total', 'status']
@@ -15,3 +16,4 @@ class OrderAdmin(admin.ModelAdmin):
 
 
 admin_site.register(Order, OrderAdmin)
+dashboardModel.objects.dash_register(LOAPresalePurchase)

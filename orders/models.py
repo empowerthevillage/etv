@@ -347,6 +347,28 @@ class Transaction(models.Model):
             self.save()
         return self.status
 
+class LOAPresaleManager(models.Manager):
+
+    def filter_objs(self):
+        filtered_qs = self
+        return filtered_qs
+        
+    def dashboard_get_fields(self):
+        list_fields = [{'field':'braintree_id','type':'braintree_transaction'},{'field':'first_name','type':'plain'},{"field":'last_name','type':'plain'},{"field":'email','type':'email'},{'field':'total','type':'currency'},{'field':'receipt_sent','type':'boolean'}]
+        return list_fields
+    
+    def dashboard_get_view_fields(self):
+        fields = [{'field':'braintree_id','type':'braintree_transaction'},{'field':'first_name','type':'plain'},{"field":'last_name','type':'plain'},{"field":'email','type':'email'},{'field':'items','type':'manytomany'},{'field':'total','type':'currency'},{'field':'timestamp','type':'datetime'},{'field':'receipt_sent','type':'boolean'}]
+        return fields
+    
+    def dashboard_display_qty(self):
+        qty = 20
+        return qty
+        
+    def dashboard_category(self):
+        category = 'orders'
+        return category
+
 class LOAPresalePurchase(models.Model):
     braintree_id = models.CharField(max_length=270, blank=True, null=True)
     first_name = models.CharField(max_length=100, blank=True, null=True)
@@ -358,10 +380,12 @@ class LOAPresalePurchase(models.Model):
     updated = models.DateTimeField(auto_now=True, null=True, blank=True)
     receipt_sent = models.BooleanField(default=False)
     
+    objects = LOAPresaleManager()
+
     def __str__(self):
         return self.braintree_id
 
     class Meta:
         ordering = ['-timestamp', '-updated']
-        verbose_name = "Juneteenth Art Show Pre-Sale Order"
-        verbose_name_plural = "Juneteenth Art Show Pre-Sale Orders"
+        verbose_name = "Juneteenth Pre-Sale Order"
+        verbose_name_plural = "Juneteenth Pre-Sale Orders"

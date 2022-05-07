@@ -168,6 +168,16 @@
         })
     </script>
     {% endif %}
+    {% if dashboardModel.model_name == 'GalleryItem' %}
+    <script>
+        var artists = JSON.parse('{{ artists|safe }}')
+        $('.data-table-row').each(function(){
+            var artist = $(this).find('.data-cell:nth-child(3)')
+            artist_pk = parseInt(artist.text())
+            artist.text(artists[artist_pk])
+        })
+    </script>
+    {% endif %}
     {% if dashboardModel.model_name == 'SingleTicket' %}
     <script>
         var tickets = JSON.parse('{{ ticketTypes|safe }}')
@@ -219,6 +229,14 @@
         })
     </script>
     <script>
+         $('.data-table-row').each(function(){
+            var no = $(this).find('.data-cell:contains("False")')
+            var yes = $(this).find('.data-cell:contains("True")')
+            
+            no.html('<i class="bi bi-x-circle" style="color: red;"></i> No')
+            yes.html('<i class="bi bi-check-circle" style="color: green;"></i> Yes')
+            
+        })
         function addCommas(x) {
             var parts = x.toString().split(".");
             parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");

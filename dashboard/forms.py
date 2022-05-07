@@ -17,7 +17,7 @@ from .signals import user_logged_in
 from content.models import contact_submission
 from donations.models import donation
 from donors.models import Donor
-from events.models import Event, SingleTicket, TicketType
+from events.models import Ad, CompleteDonation, Event, SingleTicket, TicketType
 from vbp.models import *
 from ven.models import Nomination, FamilyNomination
 
@@ -39,6 +39,16 @@ class DonorForm(ModelForm):
 class EventForm(ModelForm):
     class Meta:
         model = Event
+        fields = '__all__'
+
+class AdForm(ModelForm):
+    class Meta:
+        model = Ad
+        fields = '__all__'
+
+class EventDonationForm(ModelForm):
+    class Meta:
+        model = CompleteDonation
         fields = '__all__'
 
 class TicketForm(ModelForm):
