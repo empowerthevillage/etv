@@ -171,3 +171,6 @@ def subscription_vault_create(sender, instance, *args, **kwargs):
     gateway.subscription.create({"payment_method_token":payment_token,"plan_id":plan_id,"id":braintree_id})
 
 post_save.connect(subscription_vault_create, sender=Subscription)
+
+class Disbursement(models.Model):
+    noitfication = models.CharField(max_length=4000)

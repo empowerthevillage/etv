@@ -64,18 +64,14 @@ def updateDonors(request):
 def braintree_accounting(request):
     if request.method == 'POST':
         webhook_notification = gateway.webhook_notification.parse(str(request.form['bt_signature']), request.form['bt_payload'])
+        Disbursement.objects.create(notification=webhook_notification)
+        Disbursement.objects.create(notification='notification not too long')
         context={
             "webhook_notification": webhook_notification
         }
         return render(request, 'braintree-dash.html', context, status=200)
     else:
-        transactions = gateway.transaction.search(
-            braintree.TransactionSearch.status == 'settled'
-        )
-        context = {
-            'transactions': transactions
-        }
-        return render(request, 'braintree-dash.html', context)
+        return HttpResponse('no webhook received')
 
 def DashboardHome(request):
     #Donations

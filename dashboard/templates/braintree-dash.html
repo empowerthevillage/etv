@@ -20,9 +20,7 @@
                         <a href="{{ dashboard_url }}" class="breadcrumb">Dashboard</a>
                         <a class="breadcrumb active">{{ dashboardModel.get_model_name }} List</a>
                       </div>
-                      {% for x in transactions %}
-                        <p>{{ x }}</p>
-                      {% endfor %}
+                      {{ webhook_notification }}
                     <div class="col s12">
                         <div class="card">
                             <div class="card-heading">

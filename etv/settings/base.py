@@ -106,6 +106,7 @@ INSTALLED_APPS = [
     'donations',
     'donors',
     'django_quill',
+    "django_extensions",
     'etv',
     'education',
     'events',
