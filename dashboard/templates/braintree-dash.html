@@ -1,0 +1,297 @@
+{% extends 'base_nofooter.html' %}
+{% load humanize %}
+
+{% block content %}
+
+{% if request.user.is_admin %}
+<script>
+    $(document).ready(function(){
+    $('.tooltipped').tooltip();
+  });
+</script>
+    <div class="row" style="min-height: 1000px">
+        <div class="col l3 hide-on-med-and-down admin-side-menu">
+            {% include 'side-menu.html' %}
+        </div>
+        <div class="col s12 l9">
+            <div class="admin-container">
+                <div class="row">
+                    <div class="col s12" style="margin-bottom: 10px">
+                        <a href="{{ dashboard_url }}" class="breadcrumb">Dashboard</a>
+                        <a class="breadcrumb active">{{ dashboardModel.get_model_name }} List</a>
+                      </div>
+                      {% for x in transactions %}
+                        <p>{{ x }}</p>
+                      {% endfor %}
+                    <div class="col s12">
+                        <div class="card">
+                            <div class="card-heading">
+                                <p class="card-title">{{ dashboardModel.get_model_name_plural }}</p>
+                                <a class="center-align" href="/dashboard/{{ dashboardModel.category }}/{{ dashboardModel.model_name }}-list/create/"><p class=""><i class="bi bi-plus-circle-dotted"></i> Add New</p></a>
+                            </div>
+                            <div class="card-body row">
+                                {{ field_pairs }}
+                                <div class="col s12 item-counter" page-no="1">
+                                    Displaying 1-
+                                    {% if p.object_list|length > p.per_page %}
+                                    {{ p.per_page }} 
+                                    {% else %}
+                                    {{ p.object_list|length }}
+                                    {% endif %}
+                                    of 
+                                    {{ data|length }} {{ dashboardModel.get_model_name_plural }}
+                                </div>
+                                <div class="col s12" id="selected-line"></div>
+                                <div class="col s12">
+                                    <table class="dashboard-list highlight">
+                                        <thead>
+                                            <tr>
+                                                <td>
+                                                    <p>
+                                                        <label>
+                                                          <input type="checkbox" id="select-all">
+                                                          <span></span>
+                                                        </label>
+                                                      </p>
+                                                </td>
+                                            {% for x in fields %}
+                                                <td class="field-header" data-fieldtype="{{ x.type }}">{{ x.verbose }}</td>
+                                            {% endfor %}
+                                            <td class="center-align">Actions</td>
+                                            </tr>
+                                        </thead>
+                                        {% for page in p %}
+                                            {% if page.number == 1 %}
+                                            <tbody class="table-page" page-no="{{ page.number }}">
+
+                                                    {% for x in page.object_list %}
+                                                    <tr class="data-table-row">
+                                                        <td>
+                                                            <p>
+                                                                <label>
+                                                                <input type="checkbox" name="line-item" value="{{ x.pk }}">
+                                                                <span></span>
+                                                                </label>
+                                                            </p>
+                                                        </td>
+                                                        {% for field in x|slice:"1:" %}
+                                                            {% if field is not None %}
+                                                                <td class="data-cell">
+                                                                    {{ field }}
+                                                                </td>
+                                                            {% else %}
+                                                                <td></td>
+                                                            {% endif %}
+                                                        {% endfor %}
+                                                        
+                                                        <td class="center-align" style="min-width: 110px">
+                                                            {% for pk in x|slice:":1" %}
+                                                            <a href="view/{{ pk }}"><i class="bi bi-eye tooltipped changelist-view" data-position="bottom" data-tooltip="View"></i></a>
+                                                            <a href="edit/{{ pk }}"><i class="bi bi-pencil-square tooltipped changelist-add" data-position="top" data-tooltip="Edit"></i></a>
+                                                            <i class="bi bi-trash tooltipped changelist-delete" pk="{{ pk }}" data-position="bottom" data-tooltip="Delete"></i>
+                                                            {% endfor %}
+                                                        </td>
+                                                    </tr>
+                                                    {% endfor %}
+                                                
+                                            </tbody>
+                                            {% else %}
+                                            <tbody class="table-page hidden" page-no="{{ page.number }}">
+                                                {% for x in page.object_list %}
+                                                <tr class="data-table-row">
+                                                    <td>
+                                                        <p>
+                                                            <label>
+                                                            <input type="checkbox" name="line-item" value="{{ x.pk }}">
+                                                            <span></span>
+                                                            </label>
+                                                        </p>
+                                                    </td>
+                                                    {% for field in x|slice:"1:" %}
+                                                        {% if field is not None %}
+                                                            <td class="data-cell">
+                                                               {{ field }}
+                                                            </td>
+                                                        {% else %}
+                                                            <td></td>
+                                                        {% endif %}
+                                                    {% endfor %}
+                                                    
+                                                    <td class="center-align">
+                                                        {% for pk in x|slice:":1" %}
+                                                        <a href="view/{{ pk }}"><i class="bi bi-eye tooltipped changelist-view" data-position="bottom" data-tooltip="View"></i></a>
+                                                        <a href="edit/{{ pk }}"><i class="bi bi-pencil-square tooltipped changelist-add" data-position="top" data-tooltip="Edit"></i></a>
+                                                        <i class="bi bi-trash tooltipped changelist-delete" pk="{{ pk }}" data-position="bottom" data-tooltip="Delete"></i>
+                                                        {% endfor %}
+                                                    </td>
+                                                </tr>
+                                                {% endfor %}
+                                            </tbody>
+                                            {% endif %}
+                                        {% endfor %}
+                                    </table>
+                                    <ul class="pagination center-align">
+                                        <li class="disabled"><a><i class="material-icons">chevron_left</i></a></li>
+                                        {% for page in p %}
+                                            {% if page.number == 1 %}
+                                            <li class="active waves-effect page-selector" page-no="1"><a>1</a></li>
+                                            {% else %}
+                                            <li class="waves-effect page-selector" page-no="{{ page.number }}"><a>{{ page.number }}</a></li>
+                                            {% endif %}
+                                        {% endfor %}
+                                        
+                                        <li class="waves-effect"><a><i class="material-icons">chevron_right</i></a></li>
+                                      </ul>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% if dashboardModel.model_name == 'TicketType' %}
+    <script>
+        var events = JSON.parse('{{ eventTypes|safe }}')
+        $('.data-table-row').each(function(){
+            var event = $(this).find('.data-cell:nth-child(2)')
+            event_pk = parseInt(event.text())
+            event.text(events[event_pk])
+        })
+    </script>
+    {% endif %}
+    {% if dashboardModel.model_name == 'CompleteDonation' %}
+    <script>
+        var events = JSON.parse('{{ eventTypes|safe }}')
+        $('.data-table-row').each(function(){
+            var event = $(this).find('.data-cell:nth-child(2)')
+            event_pk = parseInt(event.text())
+            event.text(events[event_pk])
+        })
+    </script>
+    {% endif %}
+    {% if dashboardModel.model_name == 'GalleryItem' %}
+    <script>
+        var artists = JSON.parse('{{ artists|safe }}')
+        $('.data-table-row').each(function(){
+            var artist = $(this).find('.data-cell:nth-child(3)')
+            artist_pk = parseInt(artist.text())
+            artist.text(artists[artist_pk])
+        })
+    </script>
+    {% endif %}
+    {% if dashboardModel.model_name == 'SingleTicket' %}
+    <script>
+        var tickets = JSON.parse('{{ ticketTypes|safe }}')
+        var events = JSON.parse('{{ eventTypes|safe }}')
+
+        $('.data-table-row').each(function(){
+            var event = $(this).find('.data-cell:nth-child(2)')
+            var type = $(this).find('.data-cell:nth-child(3)')
+            event_pk = parseInt(event.text())
+            type_pk = parseInt(type.text())
+            
+            type.text(tickets[type_pk])
+            event.text(events[event_pk])
+            
+        })
+    </script>
+    {% endif %}
+    <script>
+        $('.changelist-delete').on('click', function(){
+            var obj = $(this)
+            Swal.fire({
+                icon: 'warning',
+                title: "Are you sure?",
+                text: "This action will permanantly delete this object",
+                showDenyButton: false,
+                showCancelButton: true,
+                confirmButtonText: 'Delete',
+                }).then((result) => {
+                /* Read more about isConfirmed, isDenied below */
+                if (result.isConfirmed) {
+                    var pk = $(this).attr('pk')
+                    var dashmodel = '{{ dashboardModel }}'
+                    var data = {
+                        'pk': pk,
+                        'dashmodel': dashmodel,
+                        csrfmiddlewaretoken: '{{ csrf_token }}'
+                    }
+                    $.ajax({
+                        data: data,
+                        url: '/dashboard/delete/',
+                        method: "POST",
+                        success:function(){
+                            $(obj).closest('.data-table-row').remove()
+                            
+                        },
+                    })
+                }
+            })
+        })
+    </script>
+    <script>
+         $('.data-table-row').each(function(){
+            var no = $(this).find('.data-cell:contains("False")')
+            var yes = $(this).find('.data-cell:contains("True")')
+            
+            no.html('<i class="bi bi-x-circle" style="color: red;"></i> No')
+            yes.html('<i class="bi bi-check-circle" style="color: green;"></i> Yes')
+            
+        })
+        function addCommas(x) {
+            var parts = x.toString().split(".");
+            parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+            return parts.join(".");
+        };
+        $('#select-all').on('change', function(){
+            if($(this).prop('checked')){
+                var items = $('input[name="line-item"]').prop('checked', true)
+                $('#selected-line').text(items.length+' items selected')
+            }
+            else{
+                $('input[name="line-item"]').prop('checked', false)
+                $('#selected-line').text('0 items selected')
+            }
+        });
+        $('input[name="line-item"]').on('change', function(){
+            var items = $('input[name="line-item"]:checkbox:checked')
+            $('#selected-line').text(items.length+' items selected')
+            
+        });
+        $('.field-header').each(function(index){
+            var type = $(this).attr('data-fieldtype')
+            var tableIndex = index+2
+            if(type == 'currency'){
+                var item = $('.data-cell:nth-of-type('+tableIndex+')')
+                $(item).each(function(){
+                    var amount = $(this).text()
+                    $(this).text('$'+addCommas(amount))
+                })
+            }else if(type == 'email'){
+                $('.data-cell:nth-of-type('+tableIndex+')').css('text-transform', 'lowercase')
+            }
+        });
+        $('.page-selector').on('click', function(){
+            var page = $(this).attr('page-no')
+            $(this).addClass('active')
+            $('.page-selector[page-no!="'+page+'"]').removeClass('active')
+            $('.table-page[page-no="'+page+'"]').removeClass('hidden')
+            $('.table-page[page-no!="'+page+'"]').addClass('hidden')
+        });
+        
+    </script>
+    <script>
+        $('#vbp-selector').on('change',function(){
+            var selected = $(this).find(':selected')
+            var url = '/dashboard/Village%20Black%20Pages/'+selected.val()+'-list/'
+            window.location.replace(url)
+        })
+    </script>
+{% else %}
+<div style="display: flex; align-items: center; justify-content: center;padding-top: 10%">
+    <h6>This page is restricted, please <a href="{{ login_url }}">login</a> to continue</h6>
+</div>
+{% endif %}
+{% endblock %}

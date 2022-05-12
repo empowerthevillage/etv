@@ -59,6 +59,15 @@ def updateDonors(request):
         x.save()
     return HttpResponse('success')
 
+def braintree_accounting(request):
+    transactions = gateway.transaction.search(
+        braintree.TransactionSearch.status == 'settled'
+    )
+    context = {
+        'transactions': transactions
+    }
+    return render(request, 'braintree-dash.html', context)
+
 def DashboardHome(request):
     #Donations
     donations = donation.objects.all()

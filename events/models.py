@@ -278,6 +278,7 @@ class SingleTicket(models.Model):
     updated         = models.DateTimeField(auto_now=True, null=True, blank=True)
     purchase_price  = models.DecimalField(max_digits=30, decimal_places=2, null=True, blank=True)
     braintree_id    = models.CharField(max_length=270, blank=True, null=True)
+    checked_in      = models.BooleanField(default=False, blank=True, null=True)
 
     objects         = TicketManager()
     def __str__(self):
@@ -494,3 +495,7 @@ class GalleryItem(models.Model):
     @property
     def get_availability(self):
         return self.sold
+
+class CheckIn(models.Model):
+    ticket          = models.ForeignKey(SingleTicket, on_delete=models.SET_NULL, null=True)
+    time            = models.DateTimeField(auto_now_add=True)

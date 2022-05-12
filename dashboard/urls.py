@@ -4,6 +4,7 @@ from .views import *
 
 urlpatterns = [
     path('', DashboardHome, name="home"),
+    path('braintree-dash/', braintree_accounting, name="braintree-dash"),
     path('create/', new_obj, name="save-new"),
     path('delete/', delete_obj, name="delete"),
     path('save/', save_obj, name="save"),

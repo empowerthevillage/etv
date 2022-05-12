@@ -2,6 +2,22 @@
 {% include 'base/css.html' %}
 {% include 'base/js.html' %}
 
+{% if request.user.is_authenticated %}
+<div id="page">
+    <div id="overlay">
+        <div class="card ticket-card">
+            <div class="row center-align">
+                <img class="col s12" src="{% static 'img/footer-logo.png' %}" id="ticket-logo">
+                <p class="col s12 ticket-title">{{ object.event }} Check-In</p>
+                <p class="ticket-detail"><b>Ticket ID:</b> {{ object.ticket_id }}</p>
+                <p class="ticket-detail"><i>{{ object.type }}</i></p>
+                <p class="ticket-detail" style="text-transform: capitalize">{{ object.first_name }} {{ object.last_name }}</p>
+                
+            </div>
+        </div>
+    </div>
+</div>
+{% else %}
 <div id="page">
     <div id="overlay">
         <div class="card ticket-card">
@@ -16,6 +32,7 @@
         </div>
     </div>
 </div>
+{% endif %}
 <style>
     #page {
         background: url('{% static "img/vbp_collage.png" %}');
@@ -39,8 +56,8 @@
         font-size: 20px
     }
     .ticket-card {
-        width: 80%;
-        margin-left: 10%;
+        width: 90%;
+        margin-left: 5%;
         padding: 5%
     }
     @media only screen and (min-width: 601px) {
