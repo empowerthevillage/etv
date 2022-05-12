@@ -60,13 +60,16 @@ def updateDonors(request):
     return HttpResponse('success')
 
 def braintree_accounting(request):
-    transactions = gateway.transaction.search(
-        braintree.TransactionSearch.status == 'settled'
-    )
-    context = {
-        'transactions': transactions
-    }
-    return render(request, 'braintree-dash.html', context)
+    if request.method == 'POST':
+        return HttpResponse(request.POST)
+    else:
+        transactions = gateway.transaction.search(
+            braintree.TransactionSearch.status == 'settled'
+        )
+        context = {
+            'transactions': transactions
+        }
+        return render(request, 'braintree-dash.html', context)
 
 def DashboardHome(request):
     #Donations

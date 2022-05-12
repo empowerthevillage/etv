@@ -3,7 +3,6 @@ import django
 from django.db import models
 
 class dashboardModelManager(models.Manager):
-   
     def dash_register(self, model):
         (registration, created) = dashboardModel.objects.get_or_create(model_name=str(model.__name__))
         registration.app_name = model._meta.app_label
