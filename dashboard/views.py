@@ -10,6 +10,7 @@ from django.db import connection
 from django.forms import ModelForm
 from django.http import HttpResponse
 from django.views.generic.edit import FormMixin
+from django.views.decorators.csrf import csrf_exempt
 from django.urls import reverse
 from django.utils.http import is_safe_url
 from django.utils.safestring import mark_safe
@@ -59,6 +60,7 @@ def updateDonors(request):
         x.save()
     return HttpResponse('success')
 
+@csrf_exempt
 def braintree_accounting(request):
     if request.method == 'POST':
         data = request.body
