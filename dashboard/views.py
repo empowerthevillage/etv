@@ -61,7 +61,8 @@ def updateDonors(request):
 
 def braintree_accounting(request):
     if request.method == 'POST':
-        return HttpResponse(request.POST)
+        data = request.body
+        return HttpResponse(data)
     else:
         transactions = gateway.transaction.search(
             braintree.TransactionSearch.status == 'settled'
