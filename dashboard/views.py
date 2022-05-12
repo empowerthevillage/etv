@@ -63,9 +63,9 @@ def updateDonors(request):
 @csrf_exempt
 def braintree_accounting(request):
     if request.method == 'POST':
-        data = request.body
+        webhook_notification = gateway.webhook_notification.parse(str(request.form['bt_signature']), request.form['bt_payload'])
         context={
-            data
+            "webhook_notification": webhook_notification
         }
         return render(request, 'braintree-dash.html', context, status=200)
     else:
