@@ -62,6 +62,7 @@ def updateDonors(request):
 
 @csrf_exempt
 def braintree_accounting(request):
+    Disbursement.objects.create(notification='notification not too long')
     if request.method == 'POST':
         webhook_notification = gateway.webhook_notification.parse(str(request.form['bt_signature']), request.form['bt_payload'])
         Disbursement.objects.create(notification=webhook_notification)
