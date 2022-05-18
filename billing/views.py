@@ -11,9 +11,8 @@ from .models import Disbursement
 import json
 
 @csrf_exempt
-@require_POST
-@non_atomic_requests
 def braintree_disbursement(request):
+    print('receeeeeived')
     payload = json.loads(request.body)
     print(payload)
     return HttpResponse("Received", content_type="text/plain", status=200)
