@@ -16,6 +16,10 @@ gateway = settings.GATEWAY
 @require_POST
 def braintree_disbursement(request):
     print(request.POST)
-    print(request.POST['bt_signature'])
+    signature = str(request.POST['bt_signature'])
+    print(signature)
+    payload = str(request.POST['bt_payload'])
     print(request.POST['bt_payload'])
+    webhook_notification = gateway.webhook_notification.parse(signature, payload)
+    print(webhook_notification)
     return HttpResponse(status=200)
