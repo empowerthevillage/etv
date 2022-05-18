@@ -554,7 +554,6 @@ def home(request):
                 markers.append(x)
                 
             mapPubValues.update({'US-%s' %(x): y})
-    print(mapPubValues)
     return render(
         request, 
         'vbp_list copy.html', 

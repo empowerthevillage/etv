@@ -603,8 +603,8 @@
         },
         onRegionClick: function(event, code) {
             var regionName = map.getRegionName(code);
-            var publishedStates = ["US-CT", 'US-FL', "US-DC", 'US-NC', "US-DE", "US-MD", "US-NY", "US-OH", "US-PA", "US-VA", "US-NJ", "US-MA", "US-AR", "US-AL", "US-IL", "US-MI", "US-MO", "US-IN", "US-SC", "US-TN", "US-LA", "US-MS", 'US-TX'];
-            var phaseOne = ['US-GA', 'US-CA']
+            var publishedStates = ["US-CT", 'US-GA', 'US-FL', "US-DC", 'US-NC', "US-DE", "US-MD", "US-NY", "US-OH", "US-PA", "US-VA", "US-NJ", "US-MA", "US-AR", "US-AL", "US-IL", "US-MI", "US-MO", "US-IN", "US-SC", "US-TN", "US-LA", "US-MS", 'US-TX'];
+            var phaseOne = ['US-CA']
             if (phaseOne.indexOf(code) != -1) {
                 Swal.fire({
                     title:'Village Black Pages: '+regionName+' Coming Soon!',
