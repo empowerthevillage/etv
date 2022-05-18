@@ -10,9 +10,11 @@ from .models import Disbursement
 
 import json
 
+gateway = settings.GATEWAY
+
 @csrf_exempt
+@require_POST
 def braintree_disbursement(request):
-    print('receeeeeived')
-    payload = json.loads(request.body)
-    print(payload)
-    return HttpResponse("Received", content_type="text/plain", status=200)
+    webhook_notification = gateway.webhook_notification.parse(str(request.form['bt_signature']), request.form['bt_payload'])
+    print(webhook_notification)
+    return HttpResponse(status=200)
