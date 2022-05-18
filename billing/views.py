@@ -15,6 +15,6 @@ gateway = settings.GATEWAY
 @csrf_exempt
 @require_POST
 def braintree_disbursement(request):
-    webhook_notification = gateway.webhook_notification.parse(str(request.POST['bt_signature']), request.POST['bt_payload'])
+    webhook_notification = gateway.webhook_notification.parse(str(request.POST.get('bt_signature')), request.POST.get('bt_payload'))
     print(webhook_notification)
     return HttpResponse(status=200)
