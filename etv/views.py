@@ -52,3 +52,6 @@ def shop(request):
         'title': 'ETV | Shop',
     }
     return render(request, "shop.html", context)
+
+def robots(request):
+    return render(request, "robots.txt")

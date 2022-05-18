@@ -151,6 +151,7 @@ urlpatterns = [
     path('economic-prosperity-and-employment/', include(("prosperity.urls", "prosperity"), namespace='prosperity')),
     path('events/', include(("events.urls", "events"), namespace='events')),
     path('news/', news, name='news'),
+    path('robots.txt/', robots, name="robots"),
     path('shop/', shop, name='shop'),
     path('login/', LoginView.as_view(), name='login'),
     path('logout/', LogoutView.as_view(next_page=settings.LOUGOUT_REDIRECT_URL), name='logout'),

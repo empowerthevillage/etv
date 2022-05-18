@@ -1,0 +1,4 @@
+User-agent: DotBot
+Disallow: /
+
+Crawl-delay: 1
