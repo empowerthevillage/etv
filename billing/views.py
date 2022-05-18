@@ -16,6 +16,5 @@ gateway = settings.GATEWAY
 @require_POST
 def braintree_disbursement(request):
     print('no error before gateway')
-    print(request.form)
     print(request.POST)
     return HttpResponse(status=200)
