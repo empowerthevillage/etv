@@ -173,4 +173,10 @@ def subscription_vault_create(sender, instance, *args, **kwargs):
 post_save.connect(subscription_vault_create, sender=Subscription)
 
 class Disbursement(models.Model):
-    noitfication = models.CharField(max_length=4000)
+    recieved_at = models.DateTimeField(auto_now_add=True, null=True)
+    payload = models.JSONField(default=None, null=True)
+
+    class Meta:
+        indexes = [
+            models.Index(fields=['recieved_at'])
+        ]

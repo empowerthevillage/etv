@@ -1,22 +1,18 @@
 from django.conf import settings
 from django.core.mail import EmailMessage
-from django.http.response import HttpResponse
+from django.db.transaction import atomic, non_atomic_requests
+from django.http.response import HttpResponse, HttpResponseForbidden
+from django.views.decorators.csrf import csrf_exempt
+from django.views.decorators.http import require_POST
+from django.utils import timezone
+from .models import Disbursement
 
-def send_email(response):
-    subject = 'receipt',
-    body = 'bodyyy',
-    email = 'admin@empowerthevillage.org'
-    try:
-        print('tried')
-        email_msg = EmailMessage(
-            subject=subject, 
-            body = body, 
-            from_email='admin@empowerthevillage.org', 
-            to=['chandlerprevatt@utexas.edu'], 
-            reply_to=[email]
-            )
-        print(email_msg)
-        email_msg.send()
-        return HttpResponse('sent!')
-    except:
-        return "Message failed, try again later :("
+import json
+
+@csrf_exempt
+@require_POST
+@non_atomic_requests
+def braintree_disbursement(request):
+    payload = json.loads(request.body)
+    print(payload)
+    return HttpResponse("Received", content_type="text/plain")
