@@ -1,3 +1,4 @@
+from telnetlib import STATUS
 from django.conf import settings
 from django.core.mail import EmailMessage
 from django.db.transaction import atomic, non_atomic_requests
@@ -15,4 +16,4 @@ import json
 def braintree_disbursement(request):
     payload = json.loads(request.body)
     print(payload)
-    return HttpResponse("Received", content_type="text/plain")
+    return HttpResponse("Received", content_type="text/plain", status=200)
