@@ -10,6 +10,10 @@ import braintree
 User = settings.AUTH_USER_MODEL
 gateway = settings.GATEWAY
 
+PAYMENT_FEE_CHOICES = (
+    ('card', 'Card'),
+    ('paypal', 'PayPal')
+)
 class BillingProfileManager(models.Manager):
     def new_or_get(self, request):
         user = request.user
@@ -172,11 +176,66 @@ def subscription_vault_create(sender, instance, *args, **kwargs):
 
 post_save.connect(subscription_vault_create, sender=Subscription)
 
-class Disbursement(models.Model):
-    recieved_at = models.DateTimeField(auto_now_add=True, null=True)
-    payload = models.JSONField(default=None, null=True)
-
+class BraintreeTransaction(models.Model):
+    braintree_id = models.CharField(max_length=50, null=True)
+    item = models.CharField(max_length=270)
+    purchaser = models.CharField(max_length=270)
+    amount = models.DecimalField(max_digits=200, decimal_places=2)
+    payment_method = models.CharField(max_length=20, choices=PAYMENT_FEE_CHOICES, null=True)
+    url = models.CharField(max_length=270, null=True)
+    
+    def __str__(self):
+        return str(self.braintree_id)
+    
     class Meta:
-        indexes = [
-            models.Index(fields=['recieved_at'])
-        ]
+        ordering = ['-amount']
+
+class Disbursement(models.Model):
+    disbursement_date = models.DateField(null=True, blank=True)
+    disbursement_id = models.CharField(max_length=270, null=True, blank=True)
+    transactions = models.CharField(max_length=500, null=True)
+
+    def __str__(self):
+        return str(self.disbursement_date)
+    
+    class Meta:
+        ordering = ['-disbursement_date']
+
+    @property
+    def get_data(self):
+        line_item = {"date": self.disbursement_date, "transactions": {}}
+        transaction_ids = self.transactions.strip('][').split(',')
+        transaction_count = len(transaction_ids)
+        list = []
+        total_list = []
+        fees_list = [0.49*transaction_count]
+        net_list = []
+        items = []
+        for x in transaction_ids:
+            list.append(x)
+            transactions = BraintreeTransaction.objects.filter(braintree_id=x)
+            for x in transactions:
+                items.append(x)
+                total_list.append(x.amount)
+                if x.payment_method == 'card':
+                    fee = x.amount * int(0.0199)
+                    fees_list.append(fee)
+                elif x.payment_method == 'paypal':
+                    fee = x.amount * int(0.0349)
+                    fees_list.append(fee)
+                else:
+                    fee = float(x.amount) * 0.0199
+                    fees_list.append(fee)
+                net_list.append(float(x.amount) - fee)
+        total = {"gross": sum(total_list)}
+        fees = {"fees": sum(fees_list)}
+        net = {"net": sum(net_list)}
+        transaction_list = {"transactions": list}
+        item_list = {"items": items}
+        line_item.update(total)
+        line_item.update(fees)
+        line_item.update(net)
+        line_item.update(item_list)
+        line_item.update(transaction_list)
+        return line_item
+        

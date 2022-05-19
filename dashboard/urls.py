@@ -1,10 +1,12 @@
 from django.urls import path
 from django.conf.urls import url
+
+from billing.views import braintree_disbursement
 from .views import *
 
 urlpatterns = [
     path('', DashboardHome, name="home"),
-    path('braintree-dash/', braintree_accounting, name="braintree-dash"),
+    path('braintree-dash/', braintree_disbursements, name="braintree-dash"),
     path('create/', new_obj, name="save-new"),
     path('delete/', delete_obj, name="delete"),
     path('save/', save_obj, name="save"),

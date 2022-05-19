@@ -32,3 +32,7 @@ def mailchimp_request(context):
 def mailchimp_post(context):
     mailchimp_form = context['mailchimp_form']
     return render('base.html', context)
+
+@register.filter
+def multiply(value, arg):
+    return (value) * int(arg)

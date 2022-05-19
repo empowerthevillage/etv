@@ -66,6 +66,8 @@ class OrderManager(models.Manager):
         return obj, created
 
 class Order(models.Model):
+    first_name = models.CharField(max_length=120, null=True)
+    last_name = models.CharField(max_length=120, null=True)
     order_id = models.CharField(max_length=120, blank=True)
     braintree_id = models.CharField(max_length=270, blank=True, null=True, verbose_name='ID')
     billing_profile = models.ForeignKey(BillingProfile, models.SET_NULL, null=True, blank=True)

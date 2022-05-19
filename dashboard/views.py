@@ -532,3 +532,14 @@ def new_obj(request):
                 pass
         sweetify.success(request, 'Item Created Successfully!')
         return redirect(redirect_url)
+
+def braintree_disbursements(request):
+    disbursements = []
+    for x in Disbursement.objects.all():
+        disbursements.append(x.get_data)
+    p = Paginator(disbursements, 10)
+    context = {
+        "disbursements": disbursements,
+        "p": p
+    }
+    return render(request, "braintree-dash.html", context)
