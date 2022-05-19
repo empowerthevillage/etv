@@ -1,6 +1,12 @@
 <div class="side-menu-overlay">
     <section>
         <ul>
+            <li class="list-heading">Billing</li>
+                <li>Braintree Disbursements
+                    <div class="right">
+                        <a href="/dashboard/braintree-dash/"><i class="bi bi-window-plus view-model-objs tooltipped" data-position="top" data-tooltip="View All Braintree Disbursements"></i></a>
+                    </div>
+                </li>
         {% regroup app_list by category as apps %}
             {% for x in apps %}
                 {% if x.grouper == 'Village Black Pages' %}
@@ -22,7 +28,6 @@
                     </select>
                     <label style="color: black">VBP Individual Listings</label>
                   </div>
-                <li</li>
                 {% else %}
                 <li class="list-heading">{{ x.grouper }}</li>
                     {% for model in x.list %}
