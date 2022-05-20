@@ -231,7 +231,7 @@ class Disbursement(models.Model):
                 net_list.append(float(x.amount) - fee)
         total = {"gross": sum(total_list)}
         fees = {"fees": sum(fees_list)}
-        net = {"net": sum(net_list)}
+        net = {"net": float(sum(total_list)) - sum(fees_list)}
         transaction_list = {"transactions": list}
         item_list = {"items": items}
         line_item.update(total)
