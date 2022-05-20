@@ -1664,23 +1664,24 @@
         method: 'POST',
         data: data,
         success: function(data){
-          $('#p3-preloader').hide()
-          Swal.fire({
-            icon: 'success',
-            title: 'Thank You!',
-            text: 'You will receive an email with your tickets shortly!',
-            timer: 3000,
-          });
-          var delay = 3000
-          setTimeout(function(){ window.location.replace('/events/') }, delay);
-        },
-        error: function(data){
-          Swal.fire({
-            icon: 'error',
-            title: 'Oops...',
-            text: 'Something went wrong! Please try again',
-          })
-        } 
+          if (data.status == 'success'){
+            $('#p3-preloader').hide()
+            Swal.fire({
+              icon: 'success',
+              title: 'Thank You!',
+              text: 'You will receive an email with your tickets shortly!',
+              timer: 3000,
+            });
+            var delay = 3000
+            setTimeout(function(){ window.location.replace('/events/') }, delay);
+          }else{
+              Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Something went wrong! Please try again',
+              })
+            } 
+          },
       })
   }
 })

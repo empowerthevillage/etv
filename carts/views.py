@@ -12,6 +12,7 @@ from accounts.forms import LoginForm, GuestForm
 from accounts.models import GuestEmail
 from addresses.forms import AddressForm, ShippingAddressForm, BillingAddressForm
 from addresses.models import Address
+from billing.models import BraintreeTransaction
 from events.models import *
 from donors.models import Donor
 from itertools import islice
@@ -437,6 +438,16 @@ def ticket_nb(request):
                     purchase_price=price,
                     braintree_id=result.transaction.id)
                 ticket_list.append(new_ticket)
+                try:
+                    bt_obj = BraintreeTransaction()
+                    bt_obj.braintree_id = new_ticket.braintree_id
+                    bt_obj.item = 'Ticket - %s' %(new_ticket.type)
+                    bt_obj.purchaser = '%s %s' %(new_ticket.first_name, new_ticket.last_name)
+                    bt_obj.amount = new_ticket.purchase_price
+                    bt_obj.url = '/dashboard/orders/SingleTicket-list/view/%s' %(new_ticket.pk)
+                    bt_obj.save()
+                except:
+                    pass
         donations = ticketDonation.objects.filter(cart=cart_obj)
         for x in donations:
             donor_obj = Donor.objects.filter(first_name=first_name, last_name=last_name).first()
@@ -504,7 +515,9 @@ def ticket_nb(request):
             html_message=detail_content,
             fail_silently=True
         )
-    return redirect('events:home')
+        return JsonResponse({"status":"success"})
+    else:
+        return JsonResponse({"status":"error"})
 
 def gallery_cart_update(request):
     itemID = request.POST.get('item')

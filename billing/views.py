@@ -50,7 +50,6 @@ def disbursement_test(request):
     obj.disbursement_id = disbursement_id
     obj.transactions = transaction_ids
     obj.amount = amount
-    obj.save()
     return HttpResponse(status=200)
 
 def populate_transactions(request):

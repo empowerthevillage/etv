@@ -212,16 +212,18 @@ class Disbursement(models.Model):
         net_list = []
         items = []
         for x in transaction_ids:
+            x = str(x).strip("'")
+            x = str(x).strip(" '")
             list.append(x)
             transactions = BraintreeTransaction.objects.filter(braintree_id=x)
             for x in transactions:
                 items.append(x)
                 total_list.append(x.amount)
                 if x.payment_method == 'card':
-                    fee = x.amount * int(0.0199)
+                    fee = float(x.amount) * 0.0199
                     fees_list.append(fee)
                 elif x.payment_method == 'paypal':
-                    fee = x.amount * int(0.0349)
+                    fee = float(x.amount) * 0.0349
                     fees_list.append(fee)
                 else:
                     fee = float(x.amount) * 0.0199
