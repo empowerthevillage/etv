@@ -937,6 +937,7 @@ braintree.client.create({
   braintree.googlePayment.create({
     client: clientInstance,
     googlePayVersion: 2,
+    googleMerchantId: 'BCR2DN6TQ6A4P4CS'
     
   }, function (err, googlePaymentInstance) {
     paymentsClient.isReadyToPay({

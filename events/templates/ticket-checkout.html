@@ -1512,7 +1512,7 @@
     braintree.googlePayment.create({
       client: clientInstance,
       googlePayVersion: 2,
-      
+      googleMerchantId: 'BCR2DN6TQ6A4P4CS'
     }, function (err, googlePaymentInstance) {
       paymentsClient.isReadyToPay({
         // see https://developers.google.com/pay/api/web/reference/object#IsReadyToPayRequest for all options
