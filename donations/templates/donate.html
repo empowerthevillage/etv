@@ -270,9 +270,8 @@ ETV | Donate
                   <div id="or">OR</div>
                   </div>
                   <div class="col s10 offset-s1 m6 offset-m3" style="padding-left:0; padding-right: 0">
-                    <p class="help-text">Donate With:</p>
-                    <button class="btn waves-effect google-button valign-wrapper z-depth-0" id="google-pay-button" style="border: solid 1px rgb(211, 211, 211)">
-                      <img src="{% static 'img/googlepay-full.svg' %}" style="width: 60px; margin-left: 3px">
+                    
+                    <button id="google-pay-button">
                     </button>
                   </div>
                   <!--
@@ -283,7 +282,7 @@ ETV | Donate
                   </div>
                 -->
                   <div class="col s10 offset-s1 m6 offset-m3" style="padding-left:0; padding-right: 0">
-                    <div id="paypal-button" style="margin:5px; letter-spacing: 1.5px"></div>
+                    <div id="paypal-button"></div>
                   </div>
                   <div class="col s10 offset-s1 m6 offset-m3" style="padding-left:0; padding-right: 0">
                     <button class="valign-wrapper btn waves-effect venmo-button z-depth-0" id="venmo-button" style="display:none;">
@@ -565,11 +564,10 @@ braintree.client.create({
     }
   });
   
+  var googleButton = document.querySelector('#google-pay-button');
   var paymentsClient = new google.payments.api.PaymentsClient({
     environment: 'PRODUCTION'
   });
-  var googleButton = document.querySelector('#google-pay-button');
-  
   braintree.googlePayment.create({
     client: clientInstance,
     googlePayVersion: 2,
@@ -601,7 +599,7 @@ braintree.client.create({
                 Swal.fire({
                   icon: 'error',
                   title: 'Oops...',
-                  text: 'There was a problem with your Google Pay payment method! Please try again',
+                  text: err,
                 })
               }
               $('.step-1').addClass('hidden');
@@ -655,21 +653,18 @@ braintree.client.create({
                   $('#preloader').hide()
                   $('.step-3').removeClass('hidden')
               },
-              error: function(){
-                Swal.fire(
-                  'An Error Occured',
-                  'Please Try Again',
-                  'error'
-                )
+              error: function(data){
+                
               }
             });
             
             })
           }).catch(function(err){
+            console.error(err)
             Swal.fire({
               icon: 'error',
               title: 'Oops...',
-              text: 'There was a problem with your Google Pay payment method! Please try again',
+              text: 'Something went wrong, please try again!',
             })
           })
         })
@@ -690,9 +685,10 @@ braintree.client.create({
         fundingSource: paypal.FUNDING.PAYPAL,
         style: {
           color: 'gold',
-          shape: 'pill',
+          shape: 'rect',
           height: 50,
-          width: 'responsive'
+          width: 'responsive',
+          label: 'paypal'
         },
         createBillingAgreement: function(){
           return paypalCheckoutInstance.createPayment({
@@ -1215,21 +1211,12 @@ function handleVenmoSuccess(payload) {
             line-height: 20px
         }
         .venmo-button {
-          width: 95%;
+          width: 100%;
           margin-left: 0;
         }
         .creditcard-button {
           width: 95%;
           font-size: 18px;
-        }
-        .google-button {
-          width: 95%;
-        }
-        .paypal-button {
-          width: 95%;
-        }
-        #paypal-button {
-          width: 95%;
         }
         .applepay-button {
           width: 95%;
@@ -1259,8 +1246,6 @@ function handleVenmoSuccess(payload) {
         .donation-title {
             font-family: oskar-inline;
             font-size: 42px;
-        }
-        .venmo-button {
         }
         .fieldset-title {
           font-family: oskar;
@@ -1299,9 +1284,6 @@ function handleVenmoSuccess(payload) {
           font-size: 20px;
         }
         .google-button {
-          font-size: 16px;
-        }
-        .paypal-button {
           font-size: 16px;
         }
         .applepay-button {
@@ -1345,12 +1327,12 @@ function handleVenmoSuccess(payload) {
     .venmo-button {
         background-color: #3d95ce;
         color:white;
-        margin:5px;
         letter-spacing: 1.5px;
         font-weight:500;
         height: 50px;
         line-height: 45px;
-        border-radius: 40px;
+        border-radius: 5px;
+        margin-top: 10px
     }
     .venmo-button:hover {
         background-color:#739296
@@ -1380,24 +1362,6 @@ function handleVenmoSuccess(payload) {
     }
     .google-button:hover {
         background-color:#ded8d8
-    }
-    .paypal-button {
-      background-color: #ffffff;
-      color:rgb(50, 50, 50);
-        margin:5px;
-        letter-spacing: 1.5px;
-        font-weight:500;
-        height: 50px;
-        line-height: 45px;
-        border-radius: 40px !important;
-    }
-    .paypal-button:hover {
-        background-color:#d3d1da
-    }
-    .paypal-button-container{
-      font-family: poppins !important;
-      font-weight: 500;
-      text-transform: uppercase !important;
     }
     .applepay-button {
       background-color: #181818;
