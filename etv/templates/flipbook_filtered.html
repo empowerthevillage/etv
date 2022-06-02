@@ -2834,27 +2834,8 @@
         event.preventDefault()
         data = $('#filter-form').serialize()
         state = $('#filter-form-state').val()
-        if($('#filter-form-state').val() == 'US-CT'){
-            url = '/village-black-pages/ct/filter'
-        } else if($('#filter-form-state').val() == 'US-NY'){
-            url = '/village-black-pages/ny/filter'
-        } else if($('#filter-form-state').val() == 'US-NJ'){
-            url = '/village-black-pages/nj/filter'
-        } else if($('#filter-form-state').val() == 'US-MA'){
-            url = '/village-black-pages/ma/filter'
-        } else if($('#filter-form-state').val() == 'US-VA'){
-            url = '/village-black-pages/va/filter'
-        } else if($('#filter-form-state').val() == 'US-PA'){
-            url = '/village-black-pages/pa/filter'
-        } else if($('#filter-form-state').val() == 'US-OH'){
-            url = '/village-black-pages/oh/filter'
-        } else if($('#filter-form-state').val() == 'US-MD'){
-            url = '/village-black-pages/md/filter'
-        } else if($('#filter-form-state').val() == 'US-DC'){
-            url = '/village-black-pages/dc/filter'
-        } else if($('#filter-form-state').val() == 'US-DE'){
-            url = '/village-black-pages/de/filter'
-        }
+        url = '/village-black-pages/new/'+ state + '/filter'
+        
         $.ajax({
             state: state,
             data: data,

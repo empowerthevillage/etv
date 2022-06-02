@@ -14,6 +14,7 @@ class VBPBook(admin.ModelAdmin):
     ordering = ['state']
     list_display = ['state', 'published']
     list_filter = ['published', 'state']
+    actions = ['make_active', 'make_inactive', 'download_csv']
     def make_active(self, request, queryset):
         updated = queryset.update(approved=True)
         self.message_user(request, ngettext(
@@ -31,13 +32,30 @@ class VBPBook(admin.ModelAdmin):
             updated,
         ) % updated, messages.SUCCESS)
     make_inactive.short_description = "Mark selected VBP books as not approved"
+    
+    def download_csv(self, request, queryset):
+        opts = queryset.model._meta
+        model = queryset.model
+        response = HttpResponse(content_type='text/csv')
+        # force download.
+        response['Content-Disposition'] = 'attachment;filename=export.csv'
+        # the csv writer
+        writer = csv.writer(response)
+        field_names = [field.name for field in opts.fields]
+        # Write a first row with header information
+        writer.writerow(field_names)
+        # Write data rows
+        for obj in queryset:
+            writer.writerow([getattr(obj, field) for field in field_names])
+        return response
+    download_csv.short_description = "Download selected as csv"
 
 class VBPAdmin(admin.ModelAdmin):
     list_display = ['business_name', 'approved', 'city', 'state', 'nominator_name']
     list_filter = ['approved', 'state', 'online_only', 'category', 'subcategory', 'nominator_name']
     search_fields = ['business_name', 'state', 'city', 'category', 'subcategory', 'nominator_name', 'nominator_email']
     ordering = ['state', 'business_name']
-    actions = ['make_active', 'make_inactive']
+    actions = ['make_active', 'make_inactive', 'download_csv']
     fieldsets = (
         (None, {
             'fields': ('business_name', 'website', 'category', 'subcategory', 'approved')
@@ -156,7 +174,7 @@ class VBPStateAdmin(admin.ModelAdmin):
     add_county.short_description = "Add county"
 
 admin.site.register(vbp)
-admin.site.register(vbp_book)
+admin.site.register(vbp_book, VBPBook)
 admin_site.register(vbp)
 admin_site.register(vbp_book, VBPBook)
 admin_site.register(vbp_ct, VBPStateAdmin)
