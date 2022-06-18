@@ -1,8 +1,4 @@
 from django.urls import path
-<<<<<<< HEAD
-from django.conf.urls import url
-=======
->>>>>>> fa87848 (initial launch)
 from .views import *
 
 urlpatterns = [
