@@ -548,5 +548,6 @@ class GalleryFilter(django_filters.FilterSet):
         
 class CheckIn(models.Model):
     tickets          = models.ManyToManyField(SingleTicket, blank=True)
-    guests          = models.IntegerField(default=0)
+    guests          = models.IntegerField(default=0, null=True)
+    guest_list      = models.TextField(null=True, blank=True)
     time            = models.DateTimeField(auto_now_add=True)

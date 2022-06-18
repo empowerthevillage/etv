@@ -14,6 +14,7 @@ from orders.models import Transaction
 import braintree
 import shippo
 import json
+import sweetify
 
 from carts.models import GalleryCart, TicketCart, ticketItem, ticketDonation, ticketAd, FullGalleryCart
 from .models import *
@@ -1085,3 +1086,27 @@ def gallery_search(request):
         return HttpResponse(html)
     else:
         return HttpResponse('No Matching Pieces')
+
+def checkin(request):
+    if request.method == 'POST':
+        tickets = request.POST.getlist('ticket')
+        data = []
+        for x in tickets:
+            ticket = SingleTicket.objects.get(ticket_id = x)
+            if ticket.checked_in == False:
+                checkin = CheckIn()
+                checkin.guests = request.POST.get('guest_qty')
+                checkin.guest_list = request.POST.get('guest_list')
+                checkin.save()
+                ticket.checked_in == True
+                ticket.save()
+                checkin.tickets.add(ticket)
+                data.append({'ticket': ticket.ticket_id, 'status': 'Checked In Successfully!'})
+            elif ticket.checked_in == True:
+                checkin = CheckIn.objects.filter(tickets__ticket_id = ticket.ticket_id).first()
+                data.append({'ticket': ticket.ticket_id, 'status': 'ERROR - Ticket Already Checked In %s' %(ticket.time)})
+        context = {
+            'data': 'data'
+        }
+        return render()
+    

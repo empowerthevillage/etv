@@ -36,6 +36,9 @@ class ArtAdmin(admin.ModelAdmin):
 
 class AuctionAdmin(admin.ModelAdmin):
     list_display = ['title', 'artist', 'image']
+    
+class CheckinAdmin(admin.ModelAdmin):
+    list_display = ['time']
                     
 admin_site.register(tag)
 admin_site.register(Event, EventAdmin)
@@ -45,6 +48,7 @@ admin_site.register(AddOn)
 admin_site.register(Option)
 admin_site.register(AdType)
 admin_site.register(Ad)
+admin_site.register(CheckIn, CheckinAdmin)
 admin_site.register(CompleteDonation)
 admin_site.register(GalleryItem, ArtAdmin)
 admin_site.register(FullGalleryItem, ArtAdmin)

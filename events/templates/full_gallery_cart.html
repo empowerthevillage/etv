@@ -99,7 +99,7 @@
                             <option name="pickup-window" value="{{ window }}">{{ verbose }}</option>
                             {% endfor %}
                           </select>
-                          <label>Pickup Window</label>
+                          <label id="pickup-label">Pickup Window</label>
                         </div>
                         <p>Artwork must be picked up in-person at <a href="/events/love-of-art-fundraiser" target="_blank">ETV's For the Love of Art Juneteenth Celebration</a> during your selected pickup window. All items will be on display at the event on Saturday, June 18th, 2022. Event attendance is encouraged but not required for pre-sale art purchases. Artwork must be picked up no later than Sunday, June 19th.</p>
                         <p><b>Pickup Location: <a href="https://goo.gl/maps/d4Sp5L5MyJiXtmSv9" target="_blank">Montclair Art Museum</a></b></p>
@@ -280,6 +280,7 @@
                 </div>
                 <div class="" style="padding-top: 10px;">
                     <div class="total-line"><b>Total</b> - ${{ cart.total|intcomma }}</div>
+                    <input id="final-total" value="{{ cart.total }}" type="hidden">
                     <p class="required" style="margin-top: 5px; padding-top: 0">*ALL SALES FINAL*</p>
                     <p>
                     <a style="margin-bottom: 5px" href="" class="btn checkout" id="step3-continue" style="background-color: rgb(29, 154, 29) !important; font-size: 32px !important">Complete Order</a>
@@ -574,8 +575,9 @@
           $('#phone').parent('.input-field').append('<p class="required-message">This field is required</p>')
           Swal.fire('Please complete all required fields')
         }
-        else if ($('#pickup-window').val()==''){
+        else if ($('#pickup-window').val()==null){
           $('#pickup-window').focus()
+          $('#pickup-label').append('<p class="required-message">This field is required</p>')
           $('#pickup-window').parent('.input-field').append('<p class="required-message">This field is required</p>')
           Swal.fire('Please complete all required fields')
         }
@@ -621,6 +623,7 @@
                 $('.row-'+data.pk).remove();
                 var formatted = Intl.NumberFormat('en-US', {style: 'currency', currency: 'USD'}).format(data.total)
                 $('.total-line').html('<b>Total</b> - '+formatted)
+                $('#final-total').val(data.total)
             },
         })
     })
@@ -1211,7 +1214,7 @@
         if (isReadyToPay.result) {
           googleButton.addEventListener('click', function(event){
             event.preventDefault();
-            var totalPrice = String($('#final-total').attr('value'))
+            var totalPrice = String($('#final-total').val())
             var paymentDataRequest = googlePaymentInstance.createPaymentDataRequest({
               transactionInfo: {
                 currencyCode: 'USD',
@@ -1271,12 +1274,7 @@
           onApprove: function(data, actions) {
             return paypalCheckoutInstance.tokenizePayment(data, function(err, payload){
               $('#nonce-input').attr('value', payload.nonce);
-              if (shipping_type === 'saved'){
-                galleryCheckout()
-              }else{
-                galleryCheckout()
-              }
-              
+              galleryCheckout()
             });
           },
           onCancel: function (data) {
@@ -1331,6 +1329,11 @@
     galleryCheckout();
   }
   function galleryCheckout(){
+      Swal.fire({
+        title: 'Order Processing',
+        text: "Please wait while we complete your order, do not refresh your browser or use the back button",
+        showConfirmButton: false,
+      })
       var first_name = $('#ticketholder_first_name').val()
       var last_name = $('#ticketholder_last_name').val()
       var email = $('#ticketholder_email').val()
