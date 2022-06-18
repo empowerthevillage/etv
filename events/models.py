@@ -545,9 +545,24 @@ class GalleryFilter(django_filters.FilterSet):
     class Meta:
         model = FullGalleryItem
         fields = ['artist', 'title']
+
+class TicketFilter(django_filters.FilterSet):
+    email = django_filters.CharFilter(lookup_expr='icontains')
+    first_name = django_filters.CharFilter(lookup_expr='icontains')
+    last_name = django_filters.CharFilter(lookup_expr='icontains')
+    
+    class Meta:
+        model = SingleTicket
+        fields = ['last_name', 'first_name', 'ticket_id', 'email']
         
 class CheckIn(models.Model):
-    tickets          = models.ManyToManyField(SingleTicket, blank=True)
-    guests          = models.IntegerField(default=0, null=True)
+    tickets         = models.ManyToManyField(SingleTicket, blank=True)
+    email           = models.EmailField(null=True, blank=True)
+    first_name      = models.CharField(max_length=270, null=True, blank=True)
+    last_name       = models.CharField(max_length=270, null=True, blank=True)
+    guests          = models.IntegerField(default=0, null=True, blank=True)
     guest_list      = models.TextField(null=True, blank=True)
     time            = models.DateTimeField(auto_now_add=True)
+    
+    class Meta:
+        ordering = ['-time']

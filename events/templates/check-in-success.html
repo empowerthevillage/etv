@@ -1,7 +1,6 @@
 {% load static %}
 {% include 'base/css.html' %}
 {% include 'base/js.html' %}
-{% load sweetify %}
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 <!-- JQuery Mask -->
@@ -24,60 +23,21 @@
   </script>
 <!doctype html>
 <html lang="en">
-{% if request.user.is_authenticated %}
 <div id="page">
     <div id="overlay">
         <div class="card ticket-card">
+            <p class="ticket-title">Ticket Lookup</p>
             <div class="row center-align">
-                <img class="col s12" src="{% static 'img/logo.jpeg' %}" style="width: 30%; margin-left: 35%; margin-right: 35%" id="ticket-logo">
-                <p class="col s12 ticket-title">{{ object.event }} Check-In</p>
-                <p class="ticket-detail"><b>Ticket ID:</b> {{ object.ticket_id }}</p>
-                <form id="checkinForm" action="/events/checkin/" method="POST">
-                    {% csrf_token %}
-                    <p class="ticket-detail"><b>Tickets:</b></p>
-                    {% for x in related %}
-                    <p style="margin-top: 0; margin-bottom: 0">
-                        <label>
-                            <input type="checkbox" name="ticket" value="{{ x.ticket_id }}"/>
-                            <span class="ticket-opt"><b>{{ x.ticket_id }}</b> - {{ x.type }}</span>
-                        </label>
-                    </p>
-                    {% endfor %}
-                    <p class="ticket-detail"><b>Purchaser:</b> {{ object.first_name }} {{ object.last_name }}</p>
-                    <p class="ticket-detail"><b>Email:</b> {{ object.email }}</p>
-                    <div class="row">
-                        <div class="input-field col s10 offset-s1">
-                            <input placeholder="0" name="guest-qty" id="guest-qty" type="number">
-                            <label for="guest-qty">Number of Guests (optional)</label>
-                          </div>
-                        <div class="input-field col s12">
-                            <i class="material-icons prefix">account_circle</i>
-                            <textarea id="textarea1" name="guest-list" class="materialize-textarea">{{ object.guest_list }}</textarea>
-                            <label for="textarea1">Guest List (optional)</label>
-                        </div>
-                    </div>
-                    <button class="checkin-btn btn" id="checkin-btn" type="submit">Check In Guests</button>
-                </form>
+                <h4 style="font-family: oskar">Success!</h4>
+                <p>Check in successful!</p>
+                <a class="btn" href="/events/new-check-in/">New Check In</a>
             </div>
+            
         </div>
     </div>
 </div>
-{% else %}
-<div id="page">
-    <div id="overlay">
-        <div class="card ticket-card">
-            <div class="row center-align">
-                <img class="col s12" src="{% static 'img/footer-logo.png' %}" id="ticket-logo">
-                <p class="col s12 ticket-title">{{ object.event }} Ticket</p>
-                <p class="ticket-detail">Ticket ID: {{ object.ticket_id }}</p>
-                <p class="ticket-detail">{{ object.type }}</p>
-                <p class="ticket-detail">{{ object.email }}</p>
-                <img src="{{ object.get_qr_code_path }}" width=30%>
-            </div>
-        </div>
-    </div>
-</div>
-{% endif %}
+
+{% load sweetify %}
 <style>
     .ticket-detail {
         font-size: 16px;
@@ -104,7 +64,8 @@
         font-family: oskar-inline;
         color: #01a650;
         font-size: 20x;
-        line-height: 22px
+        line-height: 22px;
+        text-align: center
     }
     p {
         font-size: 20px
@@ -129,8 +90,7 @@
         .ticket-title {
             font-family: oskar-inline;
             color: #01a650;
-            font-size: 32px;
-            line-height: 42px;
+            font-size: 32px
         }
         p {
             font-size: 24px

@@ -1,7 +1,7 @@
 
 from django.core.paginator import Paginator
 from django.http.response import JsonResponse
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from accounts.models import GuestEmail
 from addresses.forms import AddressForm, ShippingAddressForm, BillingAddressForm
 from addresses.models import Address
@@ -599,7 +599,7 @@ def ticket(request, ticket_id):
     object = SingleTicket.objects.get(ticket_id=ticket_id)
     email = object.email
     if request.user.is_authenticated:
-        related = SingleTicket.objects.filter(email=email)
+        related = SingleTicket.objects.filter(email=email).filter(checked_in=False)
         context = {
             'related': related,
             'object': object
@@ -1090,23 +1090,53 @@ def gallery_search(request):
 def checkin(request):
     if request.method == 'POST':
         tickets = request.POST.getlist('ticket')
-        data = []
+        first = SingleTicket.objects.get(ticket_id=tickets[0])
+        checkin = CheckIn()
+        checkin.first_name = first.first_name
+        checkin.last_name = first.last_name
+        checkin.email = first.email
+        try:
+            checkin.guests = int(request.POST.get('guest-qty'))
+        except:
+            checkin.guests = 0
+        checkin.guest_list = request.POST.get('guest-list')
+        checkin.save()
         for x in tickets:
             ticket = SingleTicket.objects.get(ticket_id = x)
-            if ticket.checked_in == False:
-                checkin = CheckIn()
-                checkin.guests = request.POST.get('guest_qty')
-                checkin.guest_list = request.POST.get('guest_list')
-                checkin.save()
-                ticket.checked_in == True
-                ticket.save()
-                checkin.tickets.add(ticket)
-                data.append({'ticket': ticket.ticket_id, 'status': 'Checked In Successfully!'})
-            elif ticket.checked_in == True:
-                checkin = CheckIn.objects.filter(tickets__ticket_id = ticket.ticket_id).first()
-                data.append({'ticket': ticket.ticket_id, 'status': 'ERROR - Ticket Already Checked In %s' %(ticket.time)})
-        context = {
-            'data': 'data'
-        }
-        return render()
-    
+            ticket.checked_in == True
+            ticket.save()
+            checkin.tickets.add(ticket)
+            
+        sweetify.success(request, title='Success!', icon='success', text="Check in successful!", button='OK', timer=10000)
+        return redirect('/events/check-in-success/')
+           
+def new_checkin(request):
+    f = TicketFilter(request.GET, queryset=SingleTicket.objects.filter(checked_in=False))
+    items = f.qs
+    context = {
+        'f': f,
+        'items': items,
+    }
+    return render(request, 'check-in-home.html', context)
+
+def ticket_search(request):
+    if request.method == 'POST':
+        f = TicketFilter(request.POST, queryset=SingleTicket.objects.all())
+        items = f.qs
+        if len(items) > 0:
+            first = items.first()
+            path = '/events/ticket/%s/' %(first.ticket_id)
+            return redirect(path)
+        else:
+            sweetify.error('Ticket not found')
+            return HttpResponse('Ticket not found')
+        
+def checkin_success(request):
+    return render(request, 'check-in-success.html')
+
+def view_checkins(request):
+    checkins = CheckIn.objects.all()
+    context = {
+        'checkins': checkins
+    }
+    return render(request, 'view-checkins.html', context)
