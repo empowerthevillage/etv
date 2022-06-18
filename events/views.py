@@ -1008,20 +1008,30 @@ def art_sponsor_checkout(request):
     return render(request, "art-sponsor-checkout.html", context)
 
 def gallery_home(request):
-    cart_obj, created = GalleryCart.objects.new_or_get(request)
-    items = GalleryItem.objects.filter(pre_sale=True).order_by('order', 'artist', 'price')
+    cart_obj, created = FullGalleryCart.objects.new_or_get(request)
+    items = FullGalleryItem.objects.all().order_by('order', 'artist', 'price')
+    artists = Artist.objects.all().order_by('name')
+    auction_items = AuctionItem.objects.all()
+    p = Paginator(items, 6)
+    filter = GalleryFilter(request.GET, queryset=items)
     context = {
         'items': items,
+        'p': p,
         'cart': cart_obj,
+        'filter': filter,
+        'auction_items': auction_items,
+        'artists': artists,
     }
-    return render(request, 'gallery_home.html', context)
+    return render(request, 'full_gallery_home.html', context)
 
 def gallery_cart_home(request):
-    cart_obj, created = GalleryCart.objects.new_or_get(request)
+    cart_obj, created = FullGalleryCart.objects.new_or_get(request)
+    pickup_options = ART_PICKUP_CHOICES
     context = {
-        'cart': cart_obj
+        'cart': cart_obj,
+        'pickup_windows': pickup_options,
     }
-    return render(request, 'gallery_cart.html', context)
+    return render(request, 'full_gallery_cart.html', context)
 
 def full_gallery_cart_home(request):
     cart_obj, created = FullGalleryCart.objects.new_or_get(request)

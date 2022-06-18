@@ -61,6 +61,7 @@ class Event(models.Model):
     title           = models.CharField(max_length=270)
     subtitle        = models.CharField(max_length=270, null=True, blank=True)
     content         = HTMLField(null=True, blank=True)
+    page_content    = RichTextField(null=True, blank=True)
     slug            = models.SlugField()
     checkout_image  = models.ImageField(blank=True, null=True)
     checkout_img_link = models.CharField(max_length=270, null=True, blank=True)
@@ -546,5 +547,6 @@ class GalleryFilter(django_filters.FilterSet):
         fields = ['artist', 'title']
         
 class CheckIn(models.Model):
-    ticket          = models.ForeignKey(SingleTicket, on_delete=models.SET_NULL, null=True)
+    tickets          = models.ManyToManyField(SingleTicket, blank=True)
+    guests          = models.IntegerField(default=0)
     time            = models.DateTimeField(auto_now_add=True)
