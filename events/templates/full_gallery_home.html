@@ -26,7 +26,7 @@
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;">For The Love of Art <br>Juneteenth Celebration</div>
-        <div class="center-align event-page-title" style="color:black">Full Art Collection</div>
+        <div class="center-align event-page-title" style="color:black">Full Art Collection & Artist Bios</div>
         <div class="divider-dotted"></div>
         <p class="subtitle" style="margin-bottom: 10px">Preview & Purchase 100+ exquisite works of art from ETV's exclusive collection below!</p>
         <p class="subtitle" style="margin-top: 0; margin-bottom: 10px"><a  href="/events/love-of-art-fundraiser/buy-tickets/">Buy your tickets today</a> to enjoy the VIP reception and view the live collection of 100+ beautiful works of art!</p>
@@ -50,6 +50,9 @@
                     <label>Artist</label>
                     <div class="btn" type="submit" id="search-title-go" style="margin-left: 10px"><i class="material-icons">arrow_forward_ios</i></div>
                 </div>
+                <div class="col s12 valign-wrapper" style="color: rgb(59, 95, 252); cursor: pointer; display: none" id="filter-blank"><span class="material-icons">
+                    visibility
+                    </span> &nbsp; View Full Gallery</div>
             </form>
         </div>
         <div id="gallery-container">
@@ -197,6 +200,10 @@
 </div>
 
 <style>
+    #sold-btn {
+        background-color: rgb(176, 28, 28) !important;
+
+    }
     .artist-read-more {
         color: rgb(70, 70, 248);
         transition: all 0.3s ease-in-out;
@@ -219,7 +226,7 @@
     }
     #load-more-btn {
         color: white;
-        background:rgb(52, 52, 52);
+        background:rgb(195, 16, 16);
         width: fit-content;
         font-size: 22px;
         margin-top: 3%;
@@ -230,7 +237,7 @@
         transition: all 0.3s ease-in-out
     }
     #load-more-btn:hover {
-        background:rgb(96, 96, 96);
+        background:rgb(235, 79, 79);
         transform: scale(1.05)
     }
     .gradient-border {
@@ -671,6 +678,7 @@
             url: '/events/gallery-search/',
             method: 'GET',
             success: function(data){
+                $('#filter-blank').show()
                 $('#gallery-container').html(data)
                 $('#load-more-btn').hide()
                 $('#load-preloader').hide();
@@ -680,7 +688,25 @@
                 btn.hide();
             }
         })
-    })
+    });
+    $('#filter-blank').on('click', function(){
+        var btn = $('#load-more-btn')
+        var data = {'page': 1}
+        $.ajax({
+            data: data,
+            url: '/events/gallery-get-next/',
+            method: 'GET',
+            success: function(data){
+                $('#gallery-container').html(data)
+                $('#load-more-btn').hide()
+                $('#load-preloader').hide();
+                btn.show();
+            },
+            error: function(data){
+                btn.hide();
+            }
+        })
+    });
     $('#load-more-btn').on('click', function(){
         var btn = $(this)
         btn.hide()

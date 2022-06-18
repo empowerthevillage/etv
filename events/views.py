@@ -596,9 +596,17 @@ def art(request):
 
 def ticket(request, ticket_id):
     object = SingleTicket.objects.get(ticket_id=ticket_id)
-    context = {
-        'object': object,
-    }
+    email = object.email
+    if request.user.is_authenticated:
+        related = SingleTicket.objects.filter(email=email)
+        context = {
+            'related': related,
+            'object': object
+        }
+    else:
+        context = {
+            'object': object,
+        }
     return render(request, 'ticket.html', context)
 
 def golf_checkout(request):
