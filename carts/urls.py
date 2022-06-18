@@ -1,5 +1,4 @@
 from django.urls import path
-from django.conf.urls import url
 from .views import *
 
 urlpatterns = [
@@ -20,4 +19,7 @@ urlpatterns = [
     path('gallery-update', gallery_cart_update, name='gallery-update'),
     path('gallery-remove', gallery_cart_remove, name='gallery-remove'),
     path('presale-checkout', gallery_sale, name="gallery-checkout"),
+    path('full-gallery-update', full_gallery_cart_update, name='full-gallery-update'),
+    path('full-gallery-remove', full_gallery_cart_remove, name='full-gallery-remove'),
+    path('full-gallery-checkout', full_gallery_sale, name="full-gallery-checkout"),
 ]

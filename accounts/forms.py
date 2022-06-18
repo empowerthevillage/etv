@@ -71,7 +71,6 @@ class LoginForm(forms.Form):
         password = data.get("password")
         user = authenticate(request, email=email, password=password)
         if user is None:
-            print(user)
             msg4 = "Incorrect Email Address or Password"
             raise forms.ValidationError(mark_safe(msg4))
         login(request, user)

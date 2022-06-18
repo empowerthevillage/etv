@@ -12,11 +12,11 @@ import qrcode
 import json
 from PIL import Image, ImageDraw
 import qrcode.image.svg
+import django_filters
 from io import BytesIO
 from django.core.files import File
 
 from ckeditor.fields import RichTextField
-from django_quill.fields import QuillField
 
 class tag(models.Model):
     tag             = models.CharField(max_length=270, blank=True, null=True)
@@ -445,7 +445,9 @@ class CompleteDonation(models.Model):
 
 class Artist(models.Model):
     name            = models.CharField(max_length=270)
-
+    image           = models.FileField(blank=True, null=True)
+    bio             = models.TextField(null=True, blank=True)
+    
     def __str__(self):
         return str(self.name)
 
@@ -482,12 +484,40 @@ class GalleryItem(models.Model):
     height          = models.CharField(max_length=20, blank=True)
     sold            = models.BooleanField(default=False)
     order           = models.IntegerField(null=True, blank=True)
+    pre_sale        = models.BooleanField(default=False)
 
     objects         = GalleryManager()
     
     class Meta:
-        verbose_name = 'Juneteenth Pre-Sale Item'
-        verbose_name_plural = 'Juneteenth Pre-Sale Items'
+        verbose_name = 'Juneteenth Pre-Sale Art Show Item'
+        verbose_name_plural = 'Juneteenth Pre-Sale Art Show Items'
+        ordering = ['artist', 'price']
+
+    def __str__(self):
+        return str(self.title)
+
+    @property
+    def get_availability(self):
+        return self.sold
+    
+class FullGalleryItem(models.Model):
+    
+    title           = models.CharField(max_length=270)
+    artist          = models.CharField(max_length=270)
+    image           = models.ImageField(blank=True)
+    description     = models.TextField(blank=True)
+    price           = models.DecimalField(max_digits=20, decimal_places=2, default=0.00)
+    width           = models.CharField(max_length=20, blank=True)
+    height          = models.CharField(max_length=20, blank=True)
+    sold            = models.BooleanField(default=False)
+    order           = models.IntegerField(null=True, blank=True)
+    pre_sale        = models.BooleanField(default=False)
+
+    objects         = GalleryManager()
+    
+    class Meta:
+        verbose_name = 'Juneteenth Art Show Item'
+        verbose_name_plural = 'Juneteenth Art Show Items'
         ordering = ['artist', 'price']
 
     def __str__(self):
@@ -497,6 +527,24 @@ class GalleryItem(models.Model):
     def get_availability(self):
         return self.sold
 
+class AuctionItem(models.Model):
+    title           = models.CharField(max_length=270)
+    artist          = models.CharField(max_length=270)
+    image           = models.ImageField(blank=True)
+    description     = models.TextField(blank=True)
+    width           = models.CharField(max_length=20, blank=True)
+    height          = models.CharField(max_length=20, blank=True)
+    
+    def __str__(self):
+        return str(self.title)
+    
+class GalleryFilter(django_filters.FilterSet):
+    title = django_filters.CharFilter(lookup_expr='icontains')
+    artist = django_filters.CharFilter(lookup_expr='icontains')
+    class Meta:
+        model = FullGalleryItem
+        fields = ['artist', 'title']
+        
 class CheckIn(models.Model):
     ticket          = models.ForeignKey(SingleTicket, on_delete=models.SET_NULL, null=True)
     time            = models.DateTimeField(auto_now_add=True)

@@ -1,0 +1,29 @@
+{% load humanize %}
+{% for x in page.object_list %}
+<div class="col s12 m4 center-align grid-col" style="padding: 1%;">
+  <div class="" style="display: flex; justify-content: center; width: 100%">
+      <img class="z-depth-2 grid-item-mini materialboxed-sm lazy" src="{{ x.image.url }}" id="item-sm-{{ x.pk }}" item-title="{{ x.title }}" item-artist="{{ x.artist }}" item-price="{{ x.price }}" item-description="{{ x.description }}" item-dimensions='{{ x.width }}" x {{ x.height }}"' style="cursor:pointer">
+  </div>
+  <div class="gallery-item-details-min center">
+      <p id="item-title-sm"></p>
+      <div class="divider-dotted"></div>
+      <p id="item-title-sm">{{ x.title }}</p>
+      <p id="item-artist-sm"><b>Artist: </b>{{ x.artist }}</p>
+      <p id="item-price-sm">${{ x.price|intcomma }}</p>
+      <p id="item-description-sm"><b>Medium: </b>{{ x.description }}</p>
+      <p id="item-dimensions-sm"><b>Dimensions: </b>{{ x.width}}" x {{ x.height }}"</p>
+      {% if x.get_availability == True %}
+      <div id="sold-btn" class="btn disabled">Sold</div>
+      {% else %}
+          {% if x in cart.items.all %}
+          <div id="add-to-cart-{{ x.pk }}" class="btn add-to-cart add-grid" itemID="{{ x.pk }}" style="display: none"><i class="bi bi-cart-plus"></i> Add To Cart</div>
+          <div id="remove-from-cart-{{ x.pk }}" class="btn red darken-2 remove-from-cart remove-grid" itemID="{{ x.pk }}"><i class="bi bi-cart-x"></i> Remove from Cart</div>
+          {% else %}
+          <div id="add-to-cart-{{ x.pk }}" class="btn add-to-cart add-grid" itemID="{{ x.pk }}"><i class="bi bi-cart-plus"></i> Add To Cart</div>
+          <div id="remove-from-cart-{{ x.pk }}" class="btn red darken-2 remove-from-cart remove-grid" itemID="{{ x.pk }}" style="display: none"><i class="bi bi-cart-x"></i> Remove from Cart</div>
+          {% endif %}
+      {% endif %}
+      
+  </div>
+</div>
+{% endfor %}

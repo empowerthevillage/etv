@@ -14,6 +14,6 @@ class OrderAdmin(admin.ModelAdmin):
         formatted_total = str("$"+string)
         return formatted_total
 
-
 admin_site.register(Order, OrderAdmin)
+admin_site.register(LOAArtPurchase)
 dashboardModel.objects.dash_register(LOAPresalePurchase)

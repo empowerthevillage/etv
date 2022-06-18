@@ -1,5 +1,4 @@
 from django.urls import path
-from django.conf.urls import url
 
 from billing.views import braintree_disbursement
 from .views import *

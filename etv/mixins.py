@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 from django.utils.http import is_safe_url
+=======
+>>>>>>> fa87848 (initial launch)
 from .decorators import ajax_required
 from django.utils.decorators import method_decorator
 
@@ -15,9 +18,16 @@ class NextUrlMixin(object):
         next_ = request.GET.get('next')
         next_post = request.POST.get('next')
         redirect_path = next_ or next_post or None
+<<<<<<< HEAD
         if is_safe_url(redirect_path, request.get_host()):
             return redirect_path
         return self.default_next
+=======
+        try:
+            return redirect_path
+        except:
+            return self.default_next
+>>>>>>> fa87848 (initial launch)
 
 
 class AjaxRequiredMixin(object):

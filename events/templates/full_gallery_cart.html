@@ -6,8 +6,8 @@
 <div id="page">
     <div id="overlay" style="padding: 5% 2%">
       <div class="row center-align" style="border-bottom: dotted 1px rgb(233, 233, 233); padding-bottom: 2%; margin-bottom: 2%">
-        <a class="valign-wrapper" href="/events/art-presale"><i class="material-icons" style="font-size: 16px">arrow_back</i>&nbsp; Back to Pre-Sale</a>
-        <h6 class="modal-title scale-up-center">For the Love of Art Juneteenth Celebration Pre-Sale</h6>
+        <a class="valign-wrapper" href="/events/art-gallery"><i class="material-icons" style="font-size: 16px">arrow_back</i>&nbsp; Back to Gallery</a>
+        <h6 class="modal-title scale-up-center">For the Love of Art Juneteenth Celebration Art Checkout</h6>
     
         <a href="/events/love-of-art-fundraiser" target="_blank"><h6 class="modal-date scale-up-center" style="width: 100%">Event Details</h6></a>
     </div>
@@ -71,14 +71,10 @@
             <div class="card center-align" style="padding: 3%">
                 <h7 class="modal-summary-title">Important Order Info</h7>
                 <p class="required">ALL SALES FINAL</p>
-<<<<<<< HEAD
-                <p>Artwork must be picked up in-person during <a href="/events/love-of-art-fundraiser" target="_blank">ETV's For the Love of Art Juneteenth Celebration</a>. All items will be on display at the event on Saturday, June 18th, 2022. Event attendance is encouraged but not required for pre-sale art purchases. Artwork must be picked up on Saturday, June 18th, 2022, or no later than Sunday, June 19th from 12pm-5pm.</p>
-=======
                 <p>Artwork must be picked up in-person at <a href="/events/love-of-art-fundraiser" target="_blank">ETV's For the Love of Art Juneteenth Celebration</a> during your selected pickup window. All items will be on display at the event on Saturday, June 18th, 2022. Event attendance is encouraged but not required for pre-sale art purchases. Artwork must be picked up no later than Sunday, June 19th from 12pm-5pm.</p>
->>>>>>> fa87848 (initial launch)
                 <p><b>Pickup Location: <a href="https://goo.gl/maps/d4Sp5L5MyJiXtmSv9" target="_blank">Montclair Art Museum</a></b></p>
                 <p style="margin-bottom:5px"><i>3 S Mountain Ave</i></p> 
-                        <p style="margin-top: 0"><i>Montclair, NJ 07042</i></p>
+                <p style="margin-top: 0"><i>Montclair, NJ 07042</i></p>
                 <p><b>Saturday, 6/18/22, </b>5-9 PM</p>
                 <p><b>Sunday, 6/19/22, </b>12-5 PM</p>
                 <p><a href="/events/love-of-art-fundraiser" target="_blank">Full Event Details</a></p>
@@ -96,30 +92,38 @@
                     <div class="card center-align" style="padding: 3%">
                         <h7 class="modal-summary-title">Important Order Info</h7>
                         <p class="required">ALL SALES FINAL</p>
-<<<<<<< HEAD
-                        <p>Artwork must be picked up in-person during <a href="/events/love-of-art-fundraiser" target="_blank">ETV's For the Love of Art Juneteenth Celebration</a>. All items will be on display at the event on Saturday, June 18th, 2022. Event attendance is encouraged but not required for pre-sale art purchases. Artwork must be picked up on Saturday, June 18th, 2022, or no later than Sunday, June 19th from 12pm-5pm.</p>
-=======
-                        <p>Artwork must be picked up in-person at <a href="/events/love-of-art-fundraiser" target="_blank">ETV's For the Love of Art Juneteenth Celebration</a> during your selected pickup window. All items will be on display at the event on Saturday, June 18th, 2022. Event attendance is encouraged but not required for pre-sale art purchases. Artwork must be picked up no later than Sunday, June 19th from 12pm-5pm.</p>
->>>>>>> fa87848 (initial launch)
+                        <div class="input-field col s12">
+                          <select id="pickup-window">
+                            <option name="pickup-window" value="" disabled selected>Select Pickup Window</option>
+                            {% for window,verbose in pickup_windows %}
+                            <option name="pickup-window" value="{{ window }}">{{ verbose }}</option>
+                            {% endfor %}
+                          </select>
+                          <label>Pickup Window</label>
+                        </div>
+                        <p>Artwork must be picked up in-person at <a href="/events/love-of-art-fundraiser" target="_blank">ETV's For the Love of Art Juneteenth Celebration</a> during your selected pickup window. All items will be on display at the event on Saturday, June 18th, 2022. Event attendance is encouraged but not required for pre-sale art purchases. Artwork must be picked up no later than Sunday, June 19th.</p>
                         <p><b>Pickup Location: <a href="https://goo.gl/maps/d4Sp5L5MyJiXtmSv9" target="_blank">Montclair Art Museum</a></b></p>
                         <p style="margin-bottom:5px"><i>3 S Mountain Ave</i></p> 
                         <p style="margin-top: 0"><i>Montclair, NJ 07042</i></p>
-                        <p><b>Saturday, 6/18/22, </b>5-9 PM</p>
-                        <p><b>Sunday, 6/19/22, </b>12-5 PM</p>
+                        <p><b>Sunday, 6/19/22, </b>11-6 PM</p>
                         <p><a href="/events/love-of-art-fundraiser" target="_blank">Full Event Details</a></p>
                     </div>
                     <form id="guest-form">
                       <div class="input-field col s6">
                         <input id="ticketholder_first_name" name="first-name" type="text" required>
-                        <label for="ticketholder_first_name">Your First Name<b class="required">*</b></label>
+                        <label for="ticketholder_first_name">First Name<b class="required">*</b></label>
                       </div>
                       <div class="input-field col s6">
                         <input id="ticketholder_last_name" name="last-name" type="text" required>
-                        <label for="ticketholder_last_name">Your Last Name<b class="required">*</b></label>
+                        <label for="ticketholder_last_name">Last Name<b class="required">*</b></label>
                       </div>
                       <div class="input-field col s12">
                         <input id="ticketholder_email" name="email" type="email" required>
-                        <label for="ticketholder_email">Your Email<b class="required">*</b></label>
+                        <label for="ticketholder_email">Email<b class="required">*</b></label>
+                      </div>
+                      <div class="input-field col s12">
+                        <input id="phone" name="phone" type="text" required>
+                        <label for="phone">Phone<b class="required">*</b></label>
                       </div>
                       <p class="center-align">
                         <label>
@@ -212,16 +216,16 @@
                         
                         <div class="col s12">
                         <h6>Express Checkout</h6>
-                        <div class="col s6 m6 l4" style="padding-left:0; padding-right: 0">
-                            <button class="btn waves-effect google-button valign-wrapper z-depth-0" id="google-pay-button" style="border: solid 1px rgb(211, 211, 211)">
-                            <img src="{% static 'img/googlepay-full.svg' %}" style="width: 60px; margin-left: 3px">
+                        <div class="col s12 xl4" style="padding-left:0; padding-right: 0">
+                            <button class="btn waves-effect google-button valign-wrapper z-depth-0" id="google-pay-button" style="margin: 5px 0px; width: 95%; border-radius: 40px;">
+             
                             </button>
                         </div>
-                        <div class="col s6 m6 l4" style="padding-left:0; padding-right: 0">
-                            <div id="paypal-button" style="margin:5px; letter-spacing: 1.5px"></div>
+                        <div class="col s12 xl4" style="padding-left:0; padding-right: 0">
+                            <div id="paypal-button" style="margin:5px; margin-left: 2.5% !important; letter-spacing: 1.5px"></div>
                         </div>
-                        <div class="col s6 m6 offset-m3 l4" style="padding-left:0; padding-right: 0">
-                            <button class="valign-wrapper btn waves-effect venmo-button z-depth-0" id="venmo-button" style="display:none;">
+                        <div class="col s12 xl4" style="padding-left:0; padding-right: 0">
+                            <button class="valign-wrapper btn waves-effect venmo-button z-depth-0" id="venmo-button" style="display:none; margin-left: 2.5%">
                             <img src="{% static 'img/venmo-white.svg' %}" style="width: 80px; margin-left: 2px">
                             </button>
                         </div>
@@ -285,11 +289,7 @@
                 <div class="card center-align" style="padding: 3%">
                     <h7 class="modal-summary-title">Important Order Info</h7>
                     <p class="required">ALL SALES FINAL</p>
-<<<<<<< HEAD
-                    <p>Artwork must be picked up in-person during <a href="/events/love-of-art-fundraiser" target="_blank">ETV's For the Love of Art Juneteenth Celebration</a>. All items will be on display at the event on Saturday, June 18th, 2022. Event attendance is encouraged but not required for pre-sale art purchases. Artwork must be picked up on Saturday, June 18th, 2022, or no later than Sunday, June 19th from 12pm-5pm.</p>
-=======
                     <p>Artwork must be picked up in-person at <a href="/events/love-of-art-fundraiser" target="_blank">ETV's For the Love of Art Juneteenth Celebration</a> during your selected pickup window. All items will be on display at the event on Saturday, June 18th, 2022. Event attendance is encouraged but not required for pre-sale art purchases. Artwork must be picked up no later than Sunday, June 19th from 12pm-5pm.</p>
->>>>>>> fa87848 (initial launch)
                     <p><b>Pickup Location: <a href="https://goo.gl/maps/d4Sp5L5MyJiXtmSv9" target="_blank">Montclair Art Museum</a></b></p>
                     <p style="margin-bottom:5px"><i>3 S Mountain Ave</i></p> 
                         <p style="margin-top: 0"><i>Montclair, NJ 07042</i></p>
@@ -569,6 +569,16 @@
           $('#ticketholder_email').parent('.input-field').append('<p class="required-message">This field is required</p>')
           Swal.fire('Please complete all required fields')
         }
+        else if ($('#phone').val()==''){
+          $('#phone').focus()
+          $('#phone').parent('.input-field').append('<p class="required-message">This field is required</p>')
+          Swal.fire('Please complete all required fields')
+        }
+        else if ($('#pickup-window').val()==''){
+          $('#pickup-window').focus()
+          $('#pickup-window').parent('.input-field').append('<p class="required-message">This field is required</p>')
+          Swal.fire('Please complete all required fields')
+        }
         else if (! $('#agreement').is(':checked')){
           $('#agreement').focus()
           Swal.fire('Please complete all required fields')
@@ -592,7 +602,7 @@
         }
         $.ajax({
             data: data,
-            url: '/cart/gallery-remove',
+            url: '/cart/full-gallery-remove',
             method: "POST",
             success:function(data){
                 Swal.fire({
@@ -1124,7 +1134,23 @@
           
         });
       });
-    
+      $('#step3-continue').on('click', function(event){
+        event.preventDefault();
+        Swal.fire({
+          title: 'Order Processing',
+          text: "Please wait while we complete your order, do not refresh your browser or use the back button",
+          showConfirmButton: false,
+        })
+        hostedFieldsInstance.tokenize(function (tokenizeErr, payload) {
+          if (tokenizeErr) {
+            console.error(tokenizeErr);
+            return;
+          }
+          $('#nonce-input').attr('value', payload.nonce);
+          galleryCheckout();
+          
+        });
+      });
     braintree.dataCollector.create({
       client: clientInstance,
       paypal: true
@@ -1308,6 +1334,8 @@
       var first_name = $('#ticketholder_first_name').val()
       var last_name = $('#ticketholder_last_name').val()
       var email = $('#ticketholder_email').val()
+      var phone = $('#phone').val()
+      var pickupWindow = $('#pickup-window').val()
       if($('#agreement').is(':checked')){
         var agreed = 'True'
       }else{
@@ -1322,11 +1350,13 @@
         'nonce': nonce,
         'deviceData': deviceData,
         'email': email,
+        'phone': phone,
         'first_name': first_name,
         'last_name': last_name,
+        'pickup': pickupWindow
       }
       $.ajax({
-        url: '/cart/presale-checkout',
+        url: '/cart/full-gallery-checkout',
         method: 'POST',
         data: data,
         success: function(data){

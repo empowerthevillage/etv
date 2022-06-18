@@ -12,7 +12,6 @@ from django.http import HttpResponse
 from django.views.generic.edit import FormMixin
 from django.views.decorators.csrf import csrf_exempt
 from django.urls import reverse
-from django.utils.http import is_safe_url
 from django.utils.safestring import mark_safe
 from django.core.exceptions import PermissionDenied
 from django.core.mail import send_mail

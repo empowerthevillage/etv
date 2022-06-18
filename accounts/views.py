@@ -6,7 +6,6 @@ from django.http import HttpResponse
 from django.views.generic import CreateView, FormView, DetailView, View, UpdateView, ListView
 from django.views.generic.edit import FormMixin
 from django.urls import reverse
-from django.utils.http import is_safe_url
 from django.utils.safestring import mark_safe
 
 from billing.models import BillingProfile
@@ -104,5 +103,9 @@ class LoginView(NextUrlMixin, RequestFormAttachMixin, FormView):
     register_form = RegisterForm
 
     def form_valid(self, form):
+<<<<<<< HEAD
             next_path = self.get_next_url()
             return redirect(next_path)
+=======
+            return redirect('/')
+>>>>>>> fa87848 (initial launch)

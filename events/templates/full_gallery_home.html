@@ -1,0 +1,942 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load humanize %}
+{% block content %}
+
+<div class="search hidden z-depth-2"><i class="bi bi-chevron-up"></i></div>
+<div class="to-top hidden z-depth-2"><i class="bi bi-chevron-up"></i></div>
+<div class="to-top hidden z-depth-2"><i class="bi bi-chevron-up"></i></div>
+<div id="page">
+    <div class="event-container">
+        <div class="row">
+            <div class="cart right">
+                <div class="valign-wrapper">
+                    <div id="cart-counter">
+                        <span class="badge" data-badge-caption="">{{ cart.items.all|length }}</span>
+                    </div>
+                    <a href="/events/loa-gallery-cart/">
+                        <i class="bi bi-cart4"></i>
+                        My Cart
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="center-align event-page-title" style="background: rgb(226, 10, 32);
+        background: linear-gradient(135deg, rgb(226, 10, 32) 0%, rgba(1,166,80,1) 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;">For The Love of Art <br>Juneteenth Celebration</div>
+        <div class="center-align event-page-title" style="color:black">Full Art Collection</div>
+        <div class="divider-dotted"></div>
+        <p class="subtitle" style="margin-bottom: 10px">Preview & Purchase 100+ exquisite works of art from ETV's exclusive collection below!</p>
+        <p class="subtitle" style="margin-top: 0; margin-bottom: 10px"><a  href="/events/love-of-art-fundraiser/buy-tickets/">Buy your tickets today</a> to enjoy the VIP reception and view the live collection of 100+ beautiful works of art!</p>
+        <p class="subtitle" style="margin-top: 0">*All artwork comes framed or on hangable canvas with the exception of textiles and sculptures</p>
+        
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="row gallery-grid" id="gallery-grid" style="margin-bottom: 0; padding-bottom: 20px">
+        <div class="row">
+            <form class="col s12 l6 offset-l3" id="gallery-search">
+                <div class="input-field valign-wrapper col s12 m6" style="margin-top: 0">
+                    <i class="material-icons prefix">search</i>
+                    {{ filter.form.title }}
+                    <label>Title</label>
+                </div>
+                <div class="input-field valign-wrapper col s12 m6" style="margin-top: 0">
+                    <i class="material-icons prefix">search</i>
+                    {{ filter.form.artist }}
+                    <label>Artist</label>
+                    <div class="btn" type="submit" id="search-title-go" style="margin-left: 10px"><i class="material-icons">arrow_forward_ios</i></div>
+                </div>
+            </form>
+        </div>
+        <div id="gallery-container">
+        {% for page in p %}
+            {% if not page.has_previous %}
+                {% for x in page.object_list %}
+                    <div class="col s12 m4 center-align grid-col" style="padding: 1%;">
+                        <div class="" style="display: flex; justify-content: center; width: 100%">
+                            <img class="z-depth-2 grid-item-mini materialboxed-sm lazy" data-src="{{ x.image.url }}" id="item-sm-{{ x.pk }}" item-title="{{ x.title }}" item-artist="{{ x.artist }}" item-price="{{ x.price }}" item-description="{{ x.description }}" item-dimensions='{{ x.width }}" x {{ x.height }}"' style="cursor:pointer">
+                        </div>
+                        <div class="gallery-item-details-min center">
+                            <p id="item-title-sm"></p>
+                            <div class="divider-dotted"></div>
+                            <p id="item-title-sm">{{ x.title }}</p>
+                            <p id="item-artist-sm"><b>Artist: </b>{{ x.artist }}</p>
+                            <p id="item-price-sm">${{ x.price|intcomma }}</p>
+                            <p id="item-description-sm"><b>Medium: </b>{{ x.description }}</p>
+                            <p id="item-dimensions-sm"><b>Dimensions: </b>{{ x.width}}" x {{ x.height }}"</p>
+                            {% if x.get_availability == True %}
+                            <div id="sold-btn" class="btn disabled">Sold</div>
+                            {% else %}
+                                {% if x in cart.items.all %}
+                                <div id="add-to-cart-{{ x.pk }}" class="btn add-to-cart add-grid" itemID="{{ x.pk }}" style="display: none"><i class="bi bi-cart-plus"></i> Add To Cart</div>
+                                <div id="remove-from-cart-{{ x.pk }}" class="btn red darken-2 remove-from-cart remove-grid" itemID="{{ x.pk }}"><i class="bi bi-cart-x"></i> Remove from Cart</div>
+                                {% else %}
+                                <div id="add-to-cart-{{ x.pk }}" class="btn add-to-cart add-grid" itemID="{{ x.pk }}"><i class="bi bi-cart-plus"></i> Add To Cart</div>
+                                <div id="remove-from-cart-{{ x.pk }}" class="btn red darken-2 remove-from-cart remove-grid" itemID="{{ x.pk }}" style="display: none"><i class="bi bi-cart-x"></i> Remove from Cart</div>
+                                {% endif %}
+                            {% endif %}
+                            
+                        </div>
+                    </div>
+                {% endfor %}
+            {% endif %}
+            
+        {% endfor %}
+        </div>
+        <div class="center-align">
+        <div class="btn" id="load-more-btn" page="1">Load More</div>
+        <div class="preloader-wrapper active" id="load-preloader" style="display:none">
+            <div class="spinner-layer spinner-blue">
+              <div class="circle-clipper left">
+                <div class="circle"></div>
+              </div><div class="gap-patch">
+                <div class="circle"></div>
+              </div><div class="circle-clipper right">
+                <div class="circle"></div>
+              </div>
+            </div>
+      
+            <div class="spinner-layer spinner-red">
+              <div class="circle-clipper left">
+                <div class="circle"></div>
+              </div><div class="gap-patch">
+                <div class="circle"></div>
+              </div><div class="circle-clipper right">
+                <div class="circle"></div>
+              </div>
+            </div>
+      
+            <div class="spinner-layer spinner-yellow">
+              <div class="circle-clipper left">
+                <div class="circle"></div>
+              </div><div class="gap-patch">
+                <div class="circle"></div>
+              </div><div class="circle-clipper right">
+                <div class="circle"></div>
+              </div>
+            </div>
+      
+            <div class="spinner-layer spinner-green">
+              <div class="circle-clipper left">
+                <div class="circle"></div>
+              </div><div class="gap-patch">
+                <div class="circle"></div>
+              </div><div class="circle-clipper right">
+                <div class="circle"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="divider"></div>
+
+    <div class="row" style="background: rgba(255, 255, 255, 0.921); width: 100%; margin-bottom: 0; padding: 3% 1%;">
+        <div class="col s12">
+            <div class="center-align event-page-title" style="color:black">Raffle/Auction Collection</div>
+            <div class="divider-dotted"></div>
+        <p class="subtitle" style="margin-bottom: 3%">100% of Sales Proceeds Benefit ETV</p>
+            {% for x in auction_items %}
+                    <div class="col s12 m4 center-align auction-grid-col" >
+                        
+                        <div class="" style="display: flex; justify-content: center; width: 100%">
+                            <img class="z-depth-2 grid-item-mini materialboxed-sm lazy" data-src="{{ x.image.url }}" id="item-sm-{{ x.pk }}" item-title="{{ x.title }}" item-artist="{{ x.artist }}" item-description="{{ x.description }}" item-dimensions='{{ x.width }}" x {{ x.height }}"' style="cursor:pointer">
+                        </div>
+                        <div class="gallery-item-details-min center">
+                            <p id="item-title-sm"></p>
+                            <div class="divider-dotted"></div>
+                            <p id="item-title-sm">{{ x.title }}</p>
+                            <p id="item-artist-sm"><b>Artist: </b>{{ x.artist }}</p>
+                            <p id="item-description-sm"><b>Medium: </b>{{ x.description }}</p>
+                            <p id="item-dimensions-sm"><b>Dimensions: </b>{{ x.width}}" x {{ x.height }}"</p>
+                        </div>
+                    </div>
+                {% endfor %}
+        </div>
+        
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="row" style="background: rgba(255, 255, 255, 0.989); width: 100%; margin-bottom: 0">
+        <div class="col s12 xl10 offset-xl1" style="padding: 3%">
+            <div class="center-align event-page-title" style="background: rgb(226, 10, 32);
+            background: linear-gradient(135deg, rgb(226, 10, 32) 0%, rgba(1,166,80,1) 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent; margin-bottom: 3%">Meet The Artists</div>
+            {% for x in artists %}
+                    <div class="col s12 m6 artist-col">
+                        <div class="left">
+                            <img class="z-depth-2 artist-grid-item-mini materialboxed-sm lazy" data-src="{{ x.image.url }}" style="cursor:pointer">
+                        </div>
+                        <div class="artist-details">
+                            <p id="item-title-sm" style="margin-top: 0">{{ x.name }}</p>
+                            <p id="item-description-sm" id="{{ x.pk }}-bio">{{ x.bio }}</p>
+                            
+                        </div>
+                        <p class="artist-read-more right" target="{{ x.pk }}-bio">Read Full Bio ></p>
+                    </div>
+                {% endfor %}
+        </div>
+        
+    </div>
+    <div class="divider"></div>
+    
+    <div class="row" style="background: rgba(255, 255, 255, 0.921); width: 100%; margin-bottom: 0">
+        <div class="col s12 m8 offset-m2" style="padding: 3%">
+            <a href="/events/love-of-art-fundraiser/buy-tickets/"><img data-src="{% static 'img/loa-0520.svg' %}" class="z-depth-1 lazy" width="100%"></a>
+        </div>
+        
+    </div>
+    
+    </div>
+</div>
+
+<style>
+    .artist-read-more {
+        color: rgb(70, 70, 248);
+        transition: all 0.3s ease-in-out;
+        cursor: pointer;
+    }
+    .artist-read-more:hover {
+        color: rgb(131, 131, 206);
+    }
+    .artist-col {
+        height: fit-content;
+        margin-top: 3%;
+    }
+    .artist-details {
+        height: 150px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .artist-details.open {
+        height: fit-content;
+    }
+    #load-more-btn {
+        color: white;
+        background:rgb(52, 52, 52);
+        width: fit-content;
+        font-size: 22px;
+        margin-top: 3%;
+        margin-bottom: 5%;
+        line-height: 5px;
+        letter-spacing: 2px;
+        padding: 20px 30px;
+        transition: all 0.3s ease-in-out
+    }
+    #load-more-btn:hover {
+        background:rgb(96, 96, 96);
+        transform: scale(1.05)
+    }
+    .gradient-border {
+        background-image: radial-gradient(circle at 100% 100%, transparent -7px, #cb1010 -7px, #cb1010 1px, transparent 1px), linear-gradient(to right, #cb1010, #2caf2e), radial-gradient(circle at 0% 100%, transparent -7px, #2caf2e -7px, #2caf2e 1px, transparent 1px), linear-gradient(to bottom, #2caf2e, #098143), radial-gradient(circle at 0% 0%, transparent -7px, #098143 -7px, #098143 1px, transparent 1px), linear-gradient(to left, #098143, #dc1818), radial-gradient(circle at 100% 0%, transparent -7px, #dc1818 -7px, #dc1818 1px, transparent 1px), linear-gradient(to top, #dc1818, #cb1010);
+        background-size: 1px 1px, calc(100% - 2px) 8px, 1px 1px, 8px calc(100% - 2px);
+        background-position: top left,top center,top right,center right, bottom right,bottom center,bottom left,center left;
+        background-repeat: no-repeat;
+    }
+    .subtitle {
+        text-align: center;
+        font-size: 14px;
+        z-index: 800;
+        position: relative;
+    }
+    .gallery-grid {
+        background: rgba(255, 255, 255, 0.994);
+        padding-top: 50px
+    }
+    .gallery-grid p {
+        margin: 0;
+        padding: 3px
+    }
+    .grid-col {
+        height: 550px
+    }
+    .auction-grid-col {
+        height: 525px
+    }
+    .grid-item-mini {
+        height: 250px;
+        width: auto;
+        margin-top: 2%;
+    }
+    .artist-grid-item-mini {
+        height: 100px;
+        width: auto;
+        margin-right: 10px;
+        margin-bottom: 10px
+    }
+    #gallery-grid img{
+        max-width: 100%;
+    }
+    #cart-counter span {
+        width: fit-content;
+        background: rgb(52, 52, 52);
+        color: white;
+        padding: 5px 10px;
+        height: 30px;
+        min-width:0;
+        margin-right: 10px;
+        border-radius:10px;
+        font-size: 14px
+    }
+    .cart{
+        font-size: 18px
+    }
+    .sold-out {
+        top: 1em;
+        left: -4em;
+        color: #fff;
+        display: block;
+        position:absolute;
+        text-align: center;
+        text-decoration: none;
+        letter-spacing: 1px;
+        background-color: #A00;
+        padding: 0.5em 5em 0.4em 5em;
+        text-shadow: 0 0 0.75em #444;
+        box-shadow: 0 0 0.5em rgba(0,0,0,0.5);
+        font: bold 16px/1.2em Arial, Sans-Serif;
+        -webkit-text-shadow: 0 0 0.75em #444;
+        -webkit-box-shadow: 0 0 0.5em rgba(0,0,0,0.5);
+        -webkit-transform: rotate(-45deg) scale(0.75,1);
+        z-index:10;
+    }
+    .sold-out::before {
+        content: '';
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        position: absolute;
+        margin: -0.3em -5em;
+        transform: scale(0.7);
+        -webkit-transform: scale(0.7);
+        border: 3px rgba(255,255,255,0.7) dotted;
+    }
+    .add-to-cart {
+        font-size: 16px;
+        letter-spacing: 1px;
+        margin-top: 10px;
+        background:#01a650;
+    }
+    .add-to-cart:hover {
+        background: #058443
+    }
+    .remove-from-cart {
+        font-size: 16px;
+        letter-spacing: 1px;
+        margin-top: 10px
+    }
+    .divider-dotted {
+        border-top: 2px dotted rgb(194, 194, 194);
+        width: 60%;
+        margin-top: 10px;
+        margin-left: 20%
+    }
+    .gallery-item-details {
+        width: 100%;
+        margin-top: -120px
+    }
+    #item-title {
+        font-family: oskar;
+        font-size: 32px;
+        margin: 10px 0px 0px 0px;
+        background: rgb(226, 10, 32);
+        background: linear-gradient(135deg, rgb(226, 10, 32) 0%, rgba(1,166,80,1) 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        line-height: 40px;
+        cursor: default
+    }
+    #item-title-sm {
+        font-family: oskar;
+        font-size: 26px;
+        margin: 10px 0px 10px 0px;
+        background: rgb(226, 10, 32);
+        background: linear-gradient(135deg, rgb(226, 10, 32) 0%, rgba(1,166,80,1) 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        line-height: 28px;
+        cursor: default
+    }
+    #item-artist {
+        font-family: oskar;
+        font-size: 22px;
+        margin: 15px 0px 10px 0px;
+        cursor: default
+    }
+    #item-price {
+        color: #0c7b00;
+        font-size: 24px;
+        font-family: oskar;
+        margin: 10px 0px;
+        cursor: default
+    }
+    #item-price-sm {
+        color: #0c7b00;
+        font-size: 18px;
+        font-family: oskar;
+        cursor: default
+    }
+    #item-description {
+        color: #5f5f5f;
+        font-size: 16px;
+        margin: 10px 0px;
+        font-style:italic;
+        cursor: default
+    }
+    #item-dimensions {
+        color: #5f5f5f;
+        font-size: 16px;
+        margin: 10px 0px;
+        font-style:italic;
+        cursor: default
+    }
+    .carousel .indicators .indicator-item {
+        margin: 10px 4px !important
+    }
+    .carousel {
+        height: 600px !important;
+        margin-top: -150px
+    }
+    .carousel-item {
+        display: flex;
+        justify-content: center;
+        
+    }
+    .carousel-item img {
+        width: auto;
+        max-width: 280px;
+        height: 100%;
+        overflow: hidden;
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+    #page {
+        background: url("{% static 'img/vbp-collage.svg' %}");
+        background-size: 100%;
+        height: fit-content
+    }
+    .event-page-title {
+        font-family: oskar-inline;
+        font-size: 28px;
+        line-height: 32px;
+        margin-bottom: 10px
+    }
+    .carousel {
+        height: 600px;
+        overflow: visible;
+    }
+    .event-text {
+        padding: 3% !important;
+        text-align: center;
+    }
+    .event-container {
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.957);
+        padding: 5%;
+        height: 100%
+    }
+    .event-title {
+        font-family: oskar-inline;
+        font-size: 21px;
+        color: #01a650;
+        transition: color 0.2s ease-in-out
+    }
+    .event-title:hover {
+        color: #068845
+    }
+    .event-date {
+        font-family: oskar;
+        font-size: 16px;
+        font-weight: 400
+    }
+    .event-location {
+        font-family: oskar;
+        margin-top: 5px;
+        margin-bottom: 0;
+        font-size: 18px
+    }
+    .event-description {
+        font-size: 12px;
+        font-weight: 200
+    }
+    .learn-more-btn {
+        margin-top: 10px
+    }
+    @media only screen and (min-width: 601px) {
+        .carousel-item img {
+            width: auto;
+            max-width:fit-content;
+            height: 100%;
+            overflow: visible;
+            overflow-x: visible;
+            overflow-y: visible;
+        }
+        .gallery-item-details {
+            width: 100%;
+        }
+        .add-to-cart {
+            font-size: 18px;
+            margin-bottom: 30px
+        }
+        .remove-from-cart {
+            font-size: 18px;
+            margin-bottom: 30px
+        }
+        #item-title {
+            font-size: 40px;
+            margin: 20px 0px 0px 0px;
+            line-height: 40px;
+        }
+        #item-artist {
+            font-family: oskar;
+            font-size: 28px;
+            margin: 15px 0px 10px 0px;
+        }
+        #item-price {
+            color: #0c7b00;
+            font-size: 30px;
+            font-family: oskar;
+            margin: 10px 0px;
+        }
+        #item-description {
+            color: #5f5f5f;
+            font-size: 18px;
+            margin: 10px 0px;
+            font-style:italic;
+        }
+        #item-dimensions {
+            color: #5f5f5f;
+            font-size: 18px;
+            margin: 10px 0px;
+            font-style:italic;
+        }
+        #page {
+            height: fit-content
+        }
+        .event-container {
+            padding: 2% 3%
+        }
+        .event-page-title {
+            font-family: oskar-inline;
+            font-size: 42px;
+            margin-bottom: 1%;
+            margin-top: 10px;
+            line-height: 48px
+        }
+        .event-title {
+            font-size: 28px;
+        }
+        .event-date {
+            font-size: 20px;
+        }
+        .event-location {
+            font-family: oskar;
+            margin-top: 3px;
+            margin-bottom: 0;
+            font-size: 20px
+        }
+        .event-description {
+            font-size: 14px;
+            
+        }
+    }
+    @media only screen and (min-width: 993px) {
+        .divider-dotted {
+        border-top: 2px dotted rgb(194, 194, 194);
+        width: 30%;
+        margin-top: 20px;
+        margin-left: 35%
+    }
+        .gallery-item-details {
+            bottom: -200px
+        }
+        .carousel {
+            height: 700px !important;
+            overflow: visible;
+        }
+        #page {
+            height: fit-content
+        }
+        .event-text {
+            text-align: left;
+            padding: 2% !important
+        }
+        .event-title {
+            font-size: 26px;
+        }
+        .event-date {
+            font-size: 18px;
+        }
+        .event-location {
+            font-family: oskar;
+            margin-top: 3px;
+            margin-bottom: 0;
+            font-size: 20px
+        }
+        .event-description {
+            font-size: 14px;
+            
+        }
+    }
+    @media only screen and (min-width: 1226px) {
+        #page {
+            height: fit-content
+        }
+        .event-container {
+            padding: 3%
+        }
+        .event-page-title {
+            font-size: 49px;
+        }
+        .event-title {
+            font-size: 30px;
+        }
+        .event-date {
+            font-size: 22px;
+        }
+        .event-location {
+            font-family: oskar;
+            margin-top: 3px;
+            margin-bottom: 0;
+            font-size: 24px
+        }
+        .event-description {
+            font-size: 14px;
+            
+        }
+    }
+    @media only screen and (min-width: 1400px) {
+        #page {
+            height: fit-content
+        }
+        .event-page-title {
+            font-size: 56px;
+        }
+        .event-title {
+            font-size: 40px;
+        }
+        .event-date {
+            font-size: 24px;
+        }
+        .event-location {
+            font-family: oskar;
+            margin-top: 3px;
+            margin-bottom: 0;
+            font-size: 26px
+        }
+        .event-description {
+            font-size: 16px;
+            
+        }
+    }
+    .carousel .indicators .indicator-item {
+        background-color: rgba(158, 158, 158, 0.5);
+    }
+    .carousel .indicators .indicator-item.active {
+        background-color: rgba(22, 186, 7, 0.5);
+    }
+    .success-toast.swal2-icon-success {
+        background-color: #a5dc86 !important;
+    }
+    .success-toast .swal2-title {
+        color: white;
+    }
+
+    .success-toast .swal2-close {
+        color: white;
+    }
+
+    .success-toast .swal2-html-container {
+        color: white;
+    }
+</style>
+<script>
+    $('.artist-read-more').on('click', function(){
+        $(this).siblings('.artist-details').toggleClass('open')
+    })
+    $('#search-title-go').on('click', function(event){
+        event.preventDefault()
+        var data = $('#gallery-search').serialize()
+        $.ajax({
+            data: data,
+            url: '/events/gallery-search/',
+            method: 'GET',
+            success: function(data){
+                $('#gallery-container').html(data)
+                $('#load-more-btn').hide()
+                $('#load-preloader').hide();
+                btn.show();
+            },
+            error: function(data){
+                btn.hide();
+            }
+        })
+    })
+    $('#load-more-btn').on('click', function(){
+        var btn = $(this)
+        btn.hide()
+        $('#load-preloader').show()
+        var current_page = btn.attr('page')
+        var next_page = parseInt(current_page) + 1
+        var data = {
+            'page': next_page,
+        }
+        btn.attr('page', next_page)
+        $.ajax({
+            data: data,
+            url: '/events/gallery-get-next/',
+            method: 'GET',
+            success: function(data){
+                $('#gallery-container').append(data)
+                    
+                $('#load-preloader').hide();
+                btn.show();
+            },
+            error: function(data){
+                btn.hide();
+            }
+          })
+    });
+    $('.to-top').on('click', function(){
+            window.scrollTo(0,0)
+        });
+    $(document).scroll(function() {
+
+    scrollBtn = $('.to-top');
+
+    var myScrollFunc = function () {
+        var y = window.scrollY;
+        if (y >= 200) {
+            scrollBtn.removeClass('hidden')
+        } else {
+            scrollBtn.addClass('hidden')
+        }
+    };
+    window.addEventListener("scroll", myScrollFunc);
+    });
+    $(document).ready(function(){
+        
+        $('.materialboxed').materialbox({
+            onCloseStart: function(){
+            $('.gallery-item-details').show()
+            $('.subtitle').show()
+        },
+        onOpenStart: function(){
+            $('.gallery-item-details').hide()
+            $('.subtitle').hide()
+        }});
+        $('.materialboxed-sm').materialbox({});
+        $('.carousel').carousel(
+            {indicators: false, 
+            numVisible: 20, 
+            onCycleTo: function(){
+                var artist = $('.carousel-item.active').attr('item-artist')
+                var title = $('.carousel-item.active').attr('item-title')
+                var price = $('.carousel-item.active').attr('item-price')
+                var dimensions = $('.carousel-item.active').attr('item-dimensions')
+                var priceFormatted = Intl.NumberFormat('en-US', {style: 'currency', currency: 'USD'}).format(price);
+                var description = $('.carousel-item.active').attr('item-description')
+                var availability = $('.carousel-item.active').attr('status')
+                var id = $('.carousel-item.active').attr('item-id')
+                var inCart = $('.carousel-item.active').attr('inCart')
+                $('#item-title').text(title)
+                $('#item-artist').html('<b>Artist</b>: '+artist)
+                $('#item-price').text(priceFormatted)
+                $('#item-description').text(description)
+                $('#item-dimensions').html('<b>Dimensions</b>: '+dimensions)
+                $('#add-to-cart').attr('itemID', id)
+                $('#remove-from-cart').attr('itemID', id)
+                if(availability=='sold'){
+                    $('#sold-btn').show()
+                    $('#add-to-cart').hide()
+                    $('#remove-from-cart').hide()
+                }else if(inCart=='true'){
+                    $('#sold-btn').hide()
+                    $('#add-to-cart').hide()
+                    $('#remove-from-cart').show()
+                }else{
+                    $('#sold-btn').hide()
+                    $('#add-to-cart').show()
+                    $('#remove-from-cart').hide()
+                }
+            }
+        });
+        $(document).on('click', '#add-to-cart', function(){
+            btn = $(this)
+            data = {
+                csrfmiddlewaretoken: '{{ csrf_token }}',
+                'item' : $(this).attr('itemID'),
+            }
+            $.ajax({
+                data: data,
+                url: '/cart/full-gallery-update',
+                method: "POST",
+                success:function(data){
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Item Added to Cart',
+                        iconColor: 'white',
+                        position: 'center',
+                        customClass: {
+                            popup: 'success-toast'
+                        },
+                        showConfirmButton: false,
+                        timer: 1000,
+                        timerProgressBar: true
+                    })
+                    $('#cart-counter span').text(data.count)
+                    $('#item-'+data.pk).attr('inCart', 'true')
+                    $('#add-to-cart').hide()
+                    $('#remove-from-cart').show()
+                    $('#add-to-cart-'+data.pk).hide()
+                    $('#remove-from-cart-'+data.pk).show()
+                },
+            })
+        });
+        $(document).on('click', '.add-grid', function(){
+            var active = $('.carousel-item.active').attr('item-id')
+            data = {
+                csrfmiddlewaretoken: '{{ csrf_token }}',
+                'item' : $(this).attr('itemID'),
+            }
+            $.ajax({
+                data: data,
+                url: '/cart/full-gallery-update',
+                method: "POST",
+                success:function(data){
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Item Added to Cart',
+                        iconColor: 'white',
+                        position: 'center',
+                        customClass: {
+                            popup: 'success-toast'
+                        },
+                        showConfirmButton: false,
+                        timer: 1000,
+                        timerProgressBar: true
+                    })
+                    $('#cart-counter span').text(data.count)
+                    $('#item-'+data.pk).attr('inCart', 'true')
+                    $('#item-sm'+data.pk).attr('inCart', 'true')
+                    if(active==data.pk){
+                        $('#add-to-cart').hide()
+                        $('#remove-from-cart').show()
+                    }
+                    $('#add-to-cart-'+data.pk).hide()
+                    $('#remove-from-cart-'+data.pk).show()
+                },
+            })
+        });
+        $(document).on('click', '#remove-from-cart', function(){
+            data = {
+                csrfmiddlewaretoken: '{{ csrf_token }}',
+                'item' : $(this).attr('itemID'),
+            }
+            $.ajax({
+                data: data,
+                url: '/cart/full-gallery-remove',
+                method: "POST",
+                success:function(data){
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Item Removed',
+                        iconColor: 'white',
+                        position: 'center',
+                        customClass: {
+                            popup: 'success-toast'
+                        },
+                        showConfirmButton: false,
+                        timer: 1500,
+                        timerProgressBar: true
+                    })
+                    $('#add-to-cart').show()
+                    $('#add-to-cart-'+data.pk).show()
+                    $('#remove-from-cart').hide()
+                    $('#remove-from-cart-'+data.pk).hide()
+                    $('#cart-counter span').text(data.count)
+                    $('#item-'+data.pk).attr('inCart', 'false')
+                },
+            })
+        });
+        $(document).on('click', '.remove-grid', function(){
+            var active = $('.carousel-item.active').attr('item-id')
+            data = {
+                csrfmiddlewaretoken: '{{ csrf_token }}',
+                'item' : $(this).attr('itemID'),
+            }
+            $.ajax({
+                data: data,
+                url: '/cart/full-gallery-remove',
+                method: "POST",
+                success:function(data){
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Item Removed',
+                        iconColor: 'white',
+                        position: 'center',
+                        customClass: {
+                            popup: 'success-toast'
+                        },
+                        showConfirmButton: false,
+                        timer: 1500,
+                        timerProgressBar: true
+                    })
+                    
+                    $('#cart-counter span').text(data.count)
+                    $('#item-'+data.pk).attr('inCart', 'false')
+                    $('#item-sm-'+data.pk).attr('inCart', 'false')
+                    $('#add-to-cart-'+data.pk).show()
+                    $('#remove-from-cart-'+data.pk).hide()
+                    if(active==data.pk){
+                        $('#add-to-cart').show()
+                        $('#remove-from-cart').hide()
+                    }
+                },
+            })
+        });
+    });
+    
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var lazyloadImages = document.querySelectorAll("img.lazy");    
+        var lazyloadThrottleTimeout;
+        
+        function lazyload () {
+          if(lazyloadThrottleTimeout) {
+            clearTimeout(lazyloadThrottleTimeout);
+          }    
+          
+          lazyloadThrottleTimeout = setTimeout(function() {
+              var scrollTop = window.pageYOffset;
+              lazyloadImages.forEach(function(img) {
+                  if(img.offsetTop < (window.innerHeight + scrollTop)) {
+                    img.src = img.dataset.src;
+                    img.classList.remove('lazy');
+                  }
+              });
+              if(lazyloadImages.length == 0) { 
+                document.removeEventListener("scroll", lazyload);
+                window.removeEventListener("resize", lazyload);
+                window.removeEventListener("orientationChange", lazyload);
+              }
+          }, 20);
+        }
+        
+        document.addEventListener("scroll", lazyload);
+        window.addEventListener("resize", lazyload);
+        window.addEventListener("orientationChange", lazyload);
+      });
+</script>
+
+{% endblock %}

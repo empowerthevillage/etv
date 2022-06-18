@@ -23,7 +23,10 @@ from accounts.admin import admin_site
 
 from .views import *
 from accounts.views import LoginView, RegisterView, GuestRegisterView
+<<<<<<< HEAD
 from vbp.views import home
+=======
+>>>>>>> fa87848 (initial launch)
 from content.views import efbf, efbf_subscribed, contact, mailchimp_signup
 
 from vbp.models import *
@@ -142,7 +145,10 @@ urlpatterns = [
     path('about/', about_page, name='about'),
     path('accounts/', RedirectView.as_view(url='/account')),
     path('account/', include(("accounts.urls", "accounts"), namespace='account')),
+<<<<<<< HEAD
     path('accounts/', include("accounts.passwords.urls")),
+=======
+>>>>>>> fa87848 (initial launch)
     path('black-friday-challenge/', include(("bfchallenge.urls", "bfchallenge"), namespace='bfchallenge')),
     path('billing/', include(("billing.urls", "billing"), namespace='billing')),
     path('cart/', include(("carts.urls", "carts"), namespace='carts')),

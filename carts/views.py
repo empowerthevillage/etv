@@ -1,12 +1,11 @@
 from django.conf import settings
-from django.http import JsonResponse, HttpResponseRedirect
+from django.http import JsonResponse
 from django.template.loader import render_to_string
 from django.shortcuts import render
 from django.shortcuts import redirect
 from .models import *
-from billing.models import BillingProfile, Card
-from orders.models import Order, LOAPresalePurchase
-from orders.models import Transaction
+from billing.models import BillingProfile
+from orders.models import Order, LOAPresalePurchase, LOAArtPurchase
 from merchandise.models import *
 from accounts.forms import LoginForm, GuestForm
 from accounts.models import GuestEmail
@@ -15,10 +14,8 @@ from addresses.models import Address
 from billing.models import BraintreeTransaction
 from events.models import *
 from donors.models import Donor
-from itertools import islice
-import braintree
+
 import shippo
-import sweetify
 from django.core.mail import send_mail
 
 shippo.config.api_key = settings.SHIPPO_KEY
@@ -616,6 +613,128 @@ def gallery_sale(request):
         send_mail(
             'New Art Show Pre-Sale Purchase!',
             str('A ticket purchase has been successfully processed! Purchaser: '+ str(email)),
+            'etvnotifications@gmail.com',
+            recipients,
+            html_message=detail_content,
+            fail_silently=True
+        )
+        status = 'success'
+    else:
+        status = 'failure'
+    message = result.transaction.processor_response_text
+    data = {
+        'status': status,
+        'message': message
+    }
+    return JsonResponse(data)
+
+def full_gallery_cart_update(request):
+    itemID = request.POST.get('item')
+    item = FullGalleryItem.objects.get(pk=itemID)
+    cart_obj,created = FullGalleryCart.objects.new_or_get(request)
+    if item in cart_obj.items.all():
+        status = 'inCart'
+    else:
+        cart_obj.items.add(item)
+        status = 'success'
+    response = {
+        'status': status,
+        'count': len(cart_obj.items.all()),
+        'pk': item.pk
+    }
+    return JsonResponse(response)
+
+def full_gallery_cart_remove(request):
+    itemID = request.POST.get('item')
+    item = FullGalleryItem.objects.get(pk=itemID)
+    cart_obj,created = FullGalleryCart.objects.new_or_get(request)
+    if item in cart_obj.items.all():
+        cart_obj.items.remove(item)
+        status = 'success'
+    else:
+        status = 'error'
+    response = {
+        'status': status,
+        'count': len(cart_obj.items.all()),
+        'pk': item.pk,
+        'total': cart_obj.total
+    }
+    return JsonResponse(response)
+
+def full_gallery_sale(request):
+    print(request.POST)
+    billing_profile, billing_profile_created = BillingProfile.objects.new_or_get(request)
+    if billing_profile is None:
+        email = request.POST.get('email')
+        request.session['guest_email'] = email
+        billing_profile, billing_profile_created = BillingProfile.objects.new_or_get(request)
+    else:
+        email = billing_profile.email
+    email = request.POST.get('email')
+    phone = request.POST.get('phone')
+    first_name = request.POST.get('first_name')
+    last_name = request.POST.get('last_name')
+    pickup = request.POST.get('pickup')
+    cart_obj, created = FullGalleryCart.objects.new_or_get(request)
+    amount = str(cart_obj.total)
+    nonce = request.POST.get('nonce')
+
+    result = gateway.transaction.sale({
+        "amount": amount,
+        "payment_method_nonce": nonce,
+        "device_data": request.POST.get('device_data'),
+        "customer": {
+            "first_name": first_name,
+            "last_name": last_name,
+            "email": email
+        },
+        "options": {
+            "submit_for_settlement": True
+        }
+    })
+    if result.is_success:
+        items = cart_obj.items.all()
+        order_obj = LOAArtPurchase()
+        order_obj.braintree_id = result.transaction.id
+        order_obj.first_name = first_name
+        order_obj.last_name = last_name
+        order_obj.email = email
+        order_obj.phone = phone
+        order_obj.pickup_window = pickup
+        order_obj.total = amount
+        order_obj.save()
+        for x in items:
+            x.sold = True
+            x.save()
+            order_obj.items.add(x)
+            order_obj.save()
+        
+        cart_obj.active = False
+        cart_obj.save()
+        confirmation_subject = 'ETV Love of Art Art Purchase Confirmation'
+        from_email = 'etvnotifications@gmail.com'
+        confirmation_content = render_to_string('art-email.html',
+        {
+            'items': items,
+            'pickup_window': order_obj.pickup_window,
+        })
+        confirmation_plain_text = 'View email in browser'      
+        
+        send_mail(confirmation_subject, confirmation_plain_text, from_email, [str(email)], html_message=confirmation_content)
+        detail_content = render_to_string('art-admin-email.html',
+        {
+            'purchaser': '%s %s' %(first_name, last_name),
+            'email': email,
+            'phone': phone,
+            'pickup_window': order_obj.pickup_window,
+            'items': items,
+        })
+        
+        recipients = ['chandler@eliftcreations.com', 'shannon@empowerthevillage.org', 'admin@empowerthevillage.org', 'ayo@empowerthevillage.org']
+        #recipients = ['chandler@eliftcreations.com']
+        send_mail(
+            'New Art Show Purchase!',
+            str('An art piece has been successfully processed! Purchaser: '+ str(email)),
             'etvnotifications@gmail.com',
             recipients,
             html_message=detail_content,

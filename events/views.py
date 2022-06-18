@@ -1,8 +1,11 @@
+
+from django.core.paginator import Paginator
 from django.http.response import JsonResponse
 from django.shortcuts import render
 from accounts.models import GuestEmail
 from addresses.forms import AddressForm, ShippingAddressForm, BillingAddressForm
 from addresses.models import Address
+from django.template.loader import render_to_string
 
 from billing.models import BillingProfile, Card
 from orders.models import Order
@@ -12,12 +15,19 @@ import braintree
 import shippo
 import json
 
-from carts.models import GalleryCart, TicketCart, ticketItem, ticketDonation, ticketAd
+from carts.models import GalleryCart, TicketCart, ticketItem, ticketDonation, ticketAd, FullGalleryCart
 from .models import *
 from django.conf import settings
 
 User = settings.AUTH_USER_MODEL
 gateway = settings.GATEWAY
+
+ART_PICKUP_CHOICES = (
+    ('Sunday, 11am - 1pm', 'Sunday, 11am - 1pm'),
+    ('Sunday, 1pm - 3pm', 'Sunday, 1pm - 3pm'),
+    ('Sunday, 3pm - 6pm', 'Sunday, 3pm - 6pm')
+)
+
 STATE_CHOICES = (
     ('AL', 'Alabama'),
     ('AK', 'Alaska'),
@@ -999,7 +1009,7 @@ def art_sponsor_checkout(request):
 
 def gallery_home(request):
     cart_obj, created = GalleryCart.objects.new_or_get(request)
-    items = GalleryItem.objects.all().order_by('order', 'artist', 'price')
+    items = GalleryItem.objects.filter(pre_sale=True).order_by('order', 'artist', 'price')
     context = {
         'items': items,
         'cart': cart_obj,
@@ -1012,3 +1022,48 @@ def gallery_cart_home(request):
         'cart': cart_obj
     }
     return render(request, 'gallery_cart.html', context)
+
+def full_gallery_cart_home(request):
+    cart_obj, created = FullGalleryCart.objects.new_or_get(request)
+    pickup_options = ART_PICKUP_CHOICES
+    context = {
+        'cart': cart_obj,
+        'pickup_windows': pickup_options,
+    }
+    return render(request, 'full_gallery_cart.html', context)
+
+def full_gallery_home(request):
+    cart_obj, created = FullGalleryCart.objects.new_or_get(request)
+    items = FullGalleryItem.objects.all().order_by('order', 'artist', 'price')
+    artists = Artist.objects.all().order_by('name')
+    auction_items = AuctionItem.objects.all()
+    p = Paginator(items, 6)
+    filter = GalleryFilter(request.GET, queryset=items)
+    context = {
+        'items': items,
+        'p': p,
+        'cart': cart_obj,
+        'filter': filter,
+        'auction_items': auction_items,
+        'artists': artists,
+    }
+    return render(request, 'full_gallery_home.html', context)
+
+def gallery_get_next(request):
+    requested_page = request.GET['page']
+    items = FullGalleryItem.objects.all().order_by('order', 'artist', 'price')
+    p = Paginator(items, 12)
+    page = p.get_page(requested_page)
+    if page.has_next:
+        html = render_to_string('gallery-next.html', {'page': page})
+        return HttpResponse(html)
+    
+def gallery_search(request):
+    f = GalleryFilter(request.GET, queryset=FullGalleryItem.objects.all().order_by('order', 'artist', 'price'))
+    items = f.qs
+    if len(items) > 0:
+        p = Paginator(items, 12)
+        html = render_to_string('gallery-next.html', {'page': p})
+        return HttpResponse(html)
+    else:
+        return HttpResponse('No Matching Pieces')

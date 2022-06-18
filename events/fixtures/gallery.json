@@ -1,0 +1,978 @@
+[
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "Aleathia Brown",
+      "title": "Community",
+      "price": 2100
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "Aleathia Brown",
+      "title": "Color N' Time",
+      "price": 1750
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "Aleathia Brown",
+      "title": "Vibe Red",
+      "price": 1350
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "Aleathia Brown",
+      "title": "Live Confusion",
+      "price": 1780
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "Aleathia Brown",
+      "title": "Black Vanity",
+      "price": 2000
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "Aleathia Brown",
+      "title": "Stevie's Song",
+      "price": 2000
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "Aleathia Brown",
+      "title": "Vertical Movement",
+      "price": 1760
+    }
+},
+
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "Anthony Boone",
+      "title": "Fire After The Storm",
+      "price": 6100
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "Anthony Boone",
+      "title": "Welcome To My World",
+      "price": 3400
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "Anthony Boone",
+      "title": "Beyond The Solar System",
+      "price": 3400
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "Anthony Boone",
+      "title": "Eddies At The Beach #3",
+      "price": 3100
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "Anthony Boone",
+      "title": "Eddies At The Beach #9",
+      "price": 520
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "Anthony Boone",
+      "title": "Eddies At The Beach #10",
+      "price": 520
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "Anthony Boone",
+      "title": "Eddies At The Beach #11",
+      "price": 520
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "Anthony Boone",
+      "title": "Eddies At The Beach #13",
+      "price": 520
+    }
+},
+
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "Anthony Gartmond",
+      "title": "Geri Allen",
+      "price": 1300
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "Anthony Gartmond",
+      "title": "Brothers",
+      "price": 500
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "Anthony Gartmond",
+      "title": "Earth Mother",
+      "price": 400
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "Anthony Gartmond",
+      "title": "Nina Simone in Concert",
+      "price": 800
+    }
+},
+
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "BAi",
+      "title": "Bird of Prey",
+      "price": 800
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "BAi",
+      "title": "If Tomorrow Was Yesterday",
+      "price": 800
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "BAi",
+      "title": "Ancient Yesterdays",
+      "price": 5000
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "BAi",
+      "title": "Avalon Bay",
+      "price": 600
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "BAi",
+      "title": "Our Thoughts Are With You",
+      "price": 2500
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "BAi",
+      "title": "Eyes of The Storm Redux",
+      "price": 500
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "BAi",
+      "title": "Moorea",
+      "price": 600
+    }
+},
+
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "Ben Jones",
+      "title": "In The Spirit",
+      "price": 250
+    }
+},
+
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "Cassandra Martin",
+      "title": "Honoring The Ancestors #1",
+      "price": 700
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "Cassandra Martin",
+      "title": "Spirit",
+      "price": 350
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "Cassandra Martin",
+      "title": "The Archer/Shaman",
+      "price": 600
+    }
+},
+
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "Danielle Scott",
+      "title": "Grandma's Hands",
+      "price": 325
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "Danielle Scott",
+      "title": "Violin Girl",
+      "price": 325
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "Danielle Scott",
+      "title": "Lady Rose",
+      "price": 1500
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "Danielle Scott",
+      "title": "Lady Pearl",
+      "price": 1500
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "Danielle Scott",
+      "title": "Lady Blue Diamond",
+      "price": 1500
+    }
+},
+
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "Demarcus McGaughey",
+      "title": "Silky",
+      "price": 10000
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "Demarcus McGaughey",
+      "title": "Madea's Garden",
+      "price": 3210
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "Demarcus McGaughey",
+      "title": "Boyz In The Hood",
+      "price": 5350
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "Demarcus McGaughey",
+      "title": "La Morena Bella (The Black Beauty)",
+      "price": 5350
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "Demarcus McGaughey",
+      "title": "Green Eyes",
+      "price": 3210
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "Demarcus McGaughey",
+      "title": "Dans Me Yeux (In My Eyes)",
+      "price": 3210
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "Demarcus McGaughey",
+      "title": "This Woman's Work",
+      "price": 2880
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "Demarcus McGaughey",
+      "title": "The Gift",
+      "price": 3210
+    }
+},
+
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "Dodji Gbedmah",
+      "title": "Supreme Redemption",
+      "price": 5000
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "Dodji Gbedmah",
+      "title": "Duafe Beauty",
+      "price": 3000
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "Dodji Gbedmah",
+      "title": "“Dwennimmen” Rams Horns",
+      "price": 3000
+    }
+},
+
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "Earlene Hardie Cox",
+      "title": "A Mother's Love",
+      "price": 1100
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "Earlene Hardie Cox",
+      "title": "Emerge",
+      "price": 950
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "Earlene Hardie Cox",
+      "title": "The Look",
+      "price": 1500
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "Earlene Hardie Cox",
+      "title": "To Be Young...",
+      "price": 1500
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "Earlene Hardie Cox",
+      "title": "To Sir",
+      "price": 1500
+    }
+},
+
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "Gabrielle Baker",
+      "title": "Gold in Quartz",
+      "price": 800
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "Gabrielle Baker",
+      "title": "Copper Oxidized With Copper Cinders",
+      "price": 4000
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "Gabrielle Baker",
+      "title": "Copper Oxidized",
+      "price": 4000
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "Gabrielle Baker",
+      "title": "Ethiopian Opal",
+      "price": 4000
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "Gabrielle Baker",
+      "title": "Amethyst",
+      "price": 4000
+    }
+},
+
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "Heather Williams",
+      "title": "Locs",
+      "price": 450
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "Heather Williams",
+      "title": "Left Out of the Equation III",
+      "price": 2000
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "Heather Williams",
+      "title": "Entanglement",
+      "price": 2000
+    }
+},
+
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "Jerome China",
+      "title": "Pronouns - His and Hers",
+      "price": 3500
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "Jerome China",
+      "title": "The Scales Have Been Tipped",
+      "price": 2700
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "Jerome China",
+      "title": "No Strings Attached VIII",
+      "price": 850
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "Jerome China",
+      "title": "Piece of the Same Thing",
+      "price": 2700
+    }
+},
+
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "Jimmy James Greene",
+      "title": "Mangbetu Revisited",
+      "price": 500
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "Jimmy James Greene",
+      "title": "Easter Ritual",
+      "price": 2000
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "Jimmy James Greene",
+      "title": "Youngblood",
+      "price": 2000
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "Jimmy James Greene",
+      "title": "Antennas Up",
+      "price": 500
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "Jimmy James Greene",
+      "title": "Ring Around The Rosie",
+      "price": 625
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "Jimmy James Greene",
+      "title": "Libation",
+      "price": 2000
+    }
+},
+
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "Kortez",
+      "title": "Blood Moon Remixed",
+      "price": 950
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "Kortez",
+      "title": "Ode 2 Jerry Gant",
+      "price": 3000
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "Kortez",
+      "title": "Black Lives Matter",
+      "price": 800
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "Kortez",
+      "title": "Voodoo Child",
+      "price": 4000
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "Kortez",
+      "title": "Life Sucks",
+      "price": 3000
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "Kortez",
+      "title": "Dreams In Full Color",
+      "price": 800
+    }
+},
+
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "Mark Anthony McLeod",
+      "title": "Speak on It",
+      "price": 3200
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "Mark Anthony McLeod",
+      "title": "Shine Bright Love",
+      "price": 3200
+    }
+},
+
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "Martryce Roach",
+      "title": "Sleeping on the Ropes",
+      "price": 2200
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "Martryce Roach",
+      "title": "Moody Jones",
+      "price": 1200
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "Martryce Roach",
+      "title": "Bricklaying",
+      "price": 2000
+    }
+},
+
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "Mason Archie",
+      "title": "Guide Me Home (Framed)",
+      "price": 4350
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "Mason Archie",
+      "title": "Guide Me Home (Unframed)",
+      "price": 3650
+    }
+},
+
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "Melanie McAllister",
+      "title": "Origin of Oshun",
+      "price": 1600
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "Melanie McAllister",
+      "title": "Guitar God",
+      "price": 1000
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "Melanie McAllister",
+      "title": "Sun Kissed Moon 1/2",
+      "price": 1250
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "Melanie McAllister",
+      "title": "Yara",
+      "price": 550
+    }
+},
+
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "Mercy Moyo",
+      "title": "Shelter",
+      "price": 2250
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "Mercy Moyo",
+      "title": "It Is Well",
+      "price": 2500
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "Mercy Moyo",
+      "title": "Fallen Rose",
+      "price": 4500
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "Mercy Moyo",
+      "title": "Untitled",
+      "price": 950
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "Mercy Moyo",
+      "title": "Untitled",
+      "price": 950
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "Mercy Moyo",
+      "title": "Untitled",
+      "price": 950
+    }
+},
+
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "Robin Holder",
+      "title": "Nina’s Choice I",
+      "price": 3200
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "Robin Holder",
+      "title": "Resurgence",
+      "price": 1700
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "Robin Holder",
+      "title": "Blue Note 1",
+      "price": 900
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "Robin Holder",
+      "title": "Iridium 2",
+      "price": 900
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "Robin Holder",
+      "title": "Map of Nubia VI",
+      "price": 1700
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "Robin Holder",
+      "title": "Wonder",
+      "price": 1700
+    }
+},
+
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "Sandra White",
+      "title": "Amanda",
+      "price": 550
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "Sandra White",
+      "title": "Night Dancer",
+      "price": 1500
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "Sandra White",
+      "title": "Sassy Dancer",
+      "price": 1500
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "Sandra White",
+      "title": "Wildflowers, Stones, and Paths",
+      "price": 475
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "Sandra White",
+      "title": "African Women",
+      "price": 450
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "Sandra White",
+      "title": "Sunny Garden",
+      "price": 225
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "Sandra White",
+      "title": "Jasmine",
+      "price": 575
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "Sandra White",
+      "title": "Garden Paths",
+      "price": 520
+    }
+},
+
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "Wilhelmina Grant-Cooper",
+      "title": "Untitled Mask",
+      "price": 600
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "Wilhelmina Grant-Cooper",
+      "title": "Beyond The Door",
+      "price": 2500
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "Wilhelmina Grant-Cooper",
+      "title": "Warrior Moor",
+      "price": 800
+    }
+},
+
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "Will Porter",
+      "title": "Bashful Brother (Blue Hand)",
+      "price": 3200
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "Will Porter",
+      "title": "Brilliant Brother",
+      "price": 1800
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "Will Porter",
+      "title": "Kill Bill (Excerpt)",
+      "price": 2000
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "Will Porter",
+      "title": "New York State of Mind",
+      "price": 1900
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "Will Porter",
+      "title": "Loco Motives",
+      "price": 1900
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "Will Porter",
+      "title": "Red Dali",
+      "price": 1900
+    }
+},
+
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "William Daniels",
+      "title": "Code",
+      "price": 800
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "William Daniels",
+      "title": "Sea Turtle (Yellow)",
+      "price": 400
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "William Daniels",
+      "title": "Sea Turtle (Multi-Black)",
+      "price": 600
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields":{
+      "artist": "William Daniels",
+      "title": "Bovid Mask with Burkino Faso Border #7",
+      "price": 1200
+    }
+}
+]

@@ -1,21 +1,27 @@
 from django.conf import settings
-import math
-from django.shortcuts import render, redirect
+from django.shortcuts import redirect
 from addresses.models import Address
 from billing.models import BillingProfile
 from django.urls import reverse
 from django.db import models
-from django.db.models.signals import pre_save, post_save
+from django.db.models.signals import pre_save
 from etv.utils import unique_order_id_generator
-from carts.models import Cart, cartItem, GalleryCart
-from events.models import GalleryItem
+from carts.models import Cart, cartItem
+from events.models import GalleryItem, FullGalleryItem
+from phonenumber_field.modelfields import PhoneNumberField
 
 import braintree
 import shippo
 import sweetify
 
+
 gateway = settings.GATEWAY
 
+ART_PICKUP_CHOICES = (
+    ('11to1', '11am - 1pm'),
+    ('1to3', '1pm - 3pm'),
+    ('3to6', '3pm - 6pm')
+)
 ORDER_STATUS_CHOICES = (
     ('created', 'Created'),
     ('authorization_expired', 'Authorization Expired'),
@@ -381,6 +387,7 @@ class LOAPresalePurchase(models.Model):
     timestamp = models.DateTimeField(auto_now_add=True, null=True, blank=True)
     updated = models.DateTimeField(auto_now=True, null=True, blank=True)
     receipt_sent = models.BooleanField(default=False)
+    pickup_window = models.CharField(max_length=270, blank=True, null=True)
     
     objects = LOAPresaleManager()
 
@@ -391,3 +398,48 @@ class LOAPresalePurchase(models.Model):
         ordering = ['-timestamp', '-updated']
         verbose_name = "Juneteenth Pre-Sale Order"
         verbose_name_plural = "Juneteenth Pre-Sale Orders"
+
+class LOAArtManager(models.Manager):
+
+    def filter_objs(self):
+        filtered_qs = self
+        return filtered_qs
+        
+    def dashboard_get_fields(self):
+        list_fields = [{'field':'braintree_id','type':'braintree_transaction'},{'field':'first_name','type':'plain'},{"field":'last_name','type':'plain'},{"field":'email','type':'email'},{'field':'total','type':'currency'},{'field':'receipt_sent','type':'boolean'}]
+        return list_fields
+    
+    def dashboard_get_view_fields(self):
+        fields = [{'field':'braintree_id','type':'braintree_transaction'},{'field':'first_name','type':'plain'},{"field":'last_name','type':'plain'},{"field":'email','type':'email'},{'field':'items','type':'manytomany'},{'field':'total','type':'currency'},{'field':'timestamp','type':'datetime'},{'field':'receipt_sent','type':'boolean'}]
+        return fields
+    
+    def dashboard_display_qty(self):
+        qty = 20
+        return qty
+        
+    def dashboard_category(self):
+        category = 'orders'
+        return category
+    
+class LOAArtPurchase(models.Model):
+    braintree_id = models.CharField(max_length=270, blank=True, null=True)
+    first_name = models.CharField(max_length=100, blank=True, null=True)
+    last_name = models.CharField(max_length=100, blank=True, null=True)
+    email = models.EmailField(blank=True, null=True)
+    phone = PhoneNumberField(blank=True, null=True)
+    items = models.ManyToManyField(FullGalleryItem, blank=True)
+    total = models.DecimalField(default=0.00, max_digits=6, decimal_places=2)
+    timestamp = models.DateTimeField(auto_now_add=True, null=True, blank=True)
+    updated = models.DateTimeField(auto_now=True, null=True, blank=True)
+    receipt_sent = models.BooleanField(default=False)
+    pickup_window = models.CharField(max_length=100, blank=True, null=True)
+    
+    objects = LOAArtManager()
+
+    def __str__(self):
+        return self.braintree_id
+
+    class Meta:
+        ordering = ['-timestamp', '-updated']
+        verbose_name = "Juneteenth Art Purchase"
+        verbose_name_plural = "Juneteenth Art Purchase"

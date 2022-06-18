@@ -1,0 +1,22 @@
+<!-- Materialize CSS-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+{% load static %}
+<div class="carousel" id="carousel-sm">
+{% for x in items %}
+    {% if x.get_availability == True %}
+    <div class="carousel-item" id="item-{{ x.pk }}" item-title="{{ x.title }}" item-artist="{{ x.artist }}" item-price="{{ x.price }}" item-description="{{ x.description }}" item-dimensions='{{ x.width }}" x {{ x.height }}"' status="sold" style="overflow:hidden">
+        <div class="sold-out z-index-2">Sold</div><img class="" data-src="{{ x.image.url }}">
+    </div>
+    {% else %}
+        {% if x in cart.items.all %}
+        <div class="carousel-item" inCart='true' id="item-{{ x.pk }}" item-id="{{ x.pk }}" item-title="{{ x.title }}" item-artist="{{ x.artist }}" item-price="{{ x.price }}" item-dimensions='{{ x.width }}" x {{ x.height }}"' status="available" item-description="{{ x.description }}">
+        {% else %}
+        <div class="carousel-item" inCart='false' id="item-{{ x.pk }}" item-id="{{ x.pk }}" item-title="{{ x.title }}" item-artist="{{ x.artist }}" item-price="{{ x.price }}"item-dimensions='{{ x.width }}" x {{ x.height }}"' status="available" item-description="{{ x.description }}">
+        {% endif %}   
+            <img class="materialboxed" src="{{ x.image.url }}">
+        </div>
+    {% endif %}
+{% endfor %}
+</div>
