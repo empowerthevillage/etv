@@ -600,6 +600,8 @@ def ticket(request, ticket_id):
     email = object.email
     if request.user.is_authenticated:
         related = SingleTicket.objects.filter(email=email).filter(checked_in=False)
+        if len(related) == 0:
+            related = [object]
         context = {
             'related': related,
             'object': object
@@ -1089,6 +1091,7 @@ def gallery_search(request):
 
 def checkin(request):
     if request.method == 'POST':
+        print(request.POST)
         tickets = request.POST.getlist('ticket')
         first = SingleTicket.objects.get(ticket_id=tickets[0])
         checkin = CheckIn()
