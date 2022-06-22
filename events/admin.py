@@ -7,6 +7,9 @@ from django.contrib import messages
 from .models import *
 from accounts.admin import admin_site
 
+import csv
+from django.http import HttpResponse
+
 
 class EventAdmin(admin.ModelAdmin):
     list_display = ['title', 'date']
@@ -18,6 +21,24 @@ class ArtistAdmin(admin.ModelAdmin):
     
 class TicketAdmin(admin.ModelAdmin):
     list_display = ['last_name', 'first_name', 'event']
+    actions = ['download_csv']
+    
+    def download_csv(self, request, queryset):
+        opts = queryset.model._meta
+        model = queryset.model
+        response = HttpResponse(content_type='text/csv')
+        # force download.
+        response['Content-Disposition'] = 'attachment;filename=export.csv'
+        # the csv writer
+        writer = csv.writer(response)
+        field_names = [field.name for field in opts.fields]
+        # Write a first row with header information
+        writer.writerow(field_names)
+        # Write data rows
+        for obj in queryset:
+            writer.writerow([getattr(obj, field) for field in field_names])
+        return response
+    download_csv.short_description = "Download selected as csv"
 
 class TicketTypeAdmin(admin.ModelAdmin):
     list_display = ['id', 'title', 'price', 'event']
@@ -39,7 +60,9 @@ class AuctionAdmin(admin.ModelAdmin):
     
 class CheckinAdmin(admin.ModelAdmin):
     list_display = ['time']
-                    
+
+    
+
 admin_site.register(tag)
 admin_site.register(Event, EventAdmin)
 admin_site.register(SingleTicket, TicketAdmin)
