@@ -193,7 +193,7 @@ class BraintreeTransaction(models.Model):
 class Disbursement(models.Model):
     disbursement_date = models.DateField(null=True, blank=True)
     disbursement_id = models.CharField(max_length=270, null=True, blank=True)
-    transactions = models.CharField(max_length=500, null=True)
+    transactions = models.CharField(max_length=1000, null=True)
 
     def __str__(self):
         return str(self.disbursement_date)

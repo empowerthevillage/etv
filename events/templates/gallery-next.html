@@ -1,8 +1,8 @@
 {% load humanize %}
 {% for x in page.object_list %}
 <div class="col s12 m4 center-align grid-col" style="padding: 1%;">
-  <div class="" style="display: flex; justify-content: center; width: 100%">
-      <img class="z-depth-2 grid-item-mini materialboxed-sm lazy" src="{{ x.image.url }}" id="item-sm-{{ x.pk }}" item-title="{{ x.title }}" item-artist="{{ x.artist }}" item-price="{{ x.price }}" item-description="{{ x.description }}" item-dimensions='{{ x.width }}" x {{ x.height }}"' style="cursor:pointer">
+  <div class="" style="width: 100%">
+    {% if x.get_availability == True %}<div class="sold-out z-index-2">Sold</div>{% endif %}<img class="{% if x.get_availability == True %}sold-img{% endif %} z-depth-2 grid-item-mini materialboxed-sm lazy" src="{{ x.image.url }}" id="item-sm-{{ x.pk }}" item-title="{{ x.title }}" item-artist="{{ x.artist }}" item-price="{{ x.price }}" item-description="{{ x.description }}" item-dimensions='{{ x.width }}" x {{ x.height }}"' style="cursor:pointer">
   </div>
   <div class="gallery-item-details-min center">
       <p id="item-title-sm"></p>

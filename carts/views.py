@@ -14,6 +14,7 @@ from addresses.models import Address
 from billing.models import BraintreeTransaction
 from events.models import *
 from donors.models import Donor
+from donations.models import donation
 
 import shippo
 from django.core.mail import send_mail
@@ -674,7 +675,6 @@ def full_gallery_sale(request):
     phone = request.POST.get('phone')
     first_name = request.POST.get('first_name')
     last_name = request.POST.get('last_name')
-    pickup = request.POST.get('pickup')
     cart_obj, created = FullGalleryCart.objects.new_or_get(request)
     amount = str(cart_obj.total)
     nonce = request.POST.get('nonce')
@@ -700,7 +700,6 @@ def full_gallery_sale(request):
         order_obj.last_name = last_name
         order_obj.email = email
         order_obj.phone = phone
-        order_obj.pickup_window = pickup
         order_obj.total = amount
         order_obj.save()
         for x in items:
@@ -716,7 +715,6 @@ def full_gallery_sale(request):
         confirmation_content = render_to_string('art-email.html',
         {
             'items': items,
-            'pickup_window': order_obj.pickup_window,
         })
         confirmation_plain_text = 'View email in browser'      
         
@@ -726,7 +724,6 @@ def full_gallery_sale(request):
             'purchaser': '%s %s' %(first_name, last_name),
             'email': email,
             'phone': phone,
-            'pickup_window': order_obj.pickup_window,
             'items': items,
         })
         
@@ -749,3 +746,38 @@ def full_gallery_sale(request):
         'message': message
     }
     return JsonResponse(data)
+
+def gallery_make_disbursement(request):
+    purchases = LOAArtPurchase.objects.all()
+    for x in purchases:
+        try:
+            bt_obj = BraintreeTransaction()
+            bt_obj.braintree_id = x.braintree_id
+            objs = []
+            for piece in x.items.all():
+                objs.append('%s by %s' %(piece.title, piece.artist))
+            string = ' | '.join(objs)
+            bt_obj.item = 'Art Purchase - %s' %(string)
+            bt_obj.purchaser = '%s %s' %(x.first_name, x.last_name)
+            bt_obj.amount = x.total
+            bt_obj.save()
+        except:
+            pass
+        
+    return HttpResponse('success')
+
+def donation_make_disbursement(request):
+    donations = donation.objects.all()
+    for x in donations:
+        try:
+            bt_obj = BraintreeTransaction()
+            bt_obj.braintree_id = x.braintree_id
+            bt_obj.item = 'Donation'
+            bt_obj.purchaser = '%s %s' %(x.first_name, x.last_name)
+            bt_obj.amount = x.amount
+            bt_obj.save()
+            
+        except:
+            pass
+        
+    return HttpResponse('success')

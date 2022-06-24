@@ -25,11 +25,10 @@
         background: linear-gradient(135deg, rgb(226, 10, 32) 0%, rgba(1,166,80,1) 100%);
         background-clip: text;
         -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;">For The Love of Art <br>Juneteenth Celebration</div>
+        -webkit-text-fill-color: transparent;">For The Love of Art <br>Juneteenth Last Chance Gallery</div>
         <div class="center-align event-page-title" style="color:black">Full Art Collection & Artist Bios</div>
         <div class="divider-dotted"></div>
-        <p class="subtitle" style="margin-bottom: 10px">Preview & Purchase 100+ exquisite works of art from ETV's exclusive collection below!</p>
-        <p class="subtitle" style="margin-top: 0; margin-bottom: 10px"><a  href="/events/love-of-art-fundraiser/buy-tickets/">Buy your tickets today</a> to enjoy the VIP reception and view the live collection of 100+ beautiful works of art!</p>
+        <p class="subtitle" style="margin-bottom: 10px">Purchase remaining exquisite works of art from ETV's exclusive collection below!</p>
         <p class="subtitle" style="margin-top: 0">*All artwork comes framed or on hangable canvas with the exception of textiles and sculptures</p>
         
     </div>
@@ -60,8 +59,8 @@
             {% if not page.has_previous %}
                 {% for x in page.object_list %}
                     <div class="col s12 m4 center-align grid-col" style="padding: 1%;">
-                        <div class="" style="display: flex; justify-content: center; width: 100%">
-                            <img class="z-depth-2 grid-item-mini materialboxed-sm lazy" data-src="{{ x.image.url }}" id="item-sm-{{ x.pk }}" item-title="{{ x.title }}" item-artist="{{ x.artist }}" item-price="{{ x.price }}" item-description="{{ x.description }}" item-dimensions='{{ x.width }}" x {{ x.height }}"' style="cursor:pointer">
+                        <div class="" style="width: 100%">
+                            {% if x.get_availability == True %}<div class="sold-out z-index-2">Sold</div>{% endif %}<img class="{% if x.get_availability == True %}sold-img{% endif %} z-depth-2 grid-item-mini materialboxed-sm lazy" data-src="{{ x.image.url }}" id="item-sm-{{ x.pk }}" item-title="{{ x.title }}" item-artist="{{ x.artist }}" item-price="{{ x.price }}" item-description="{{ x.description }}" item-dimensions='{{ x.width }}" x {{ x.height }}"' style="cursor:pointer">
                         </div>
                         <div class="gallery-item-details-min center">
                             <p id="item-title-sm"></p>
@@ -139,9 +138,10 @@
 
     <div class="row" style="background: rgba(255, 255, 255, 0.921); width: 100%; margin-bottom: 0; padding: 3% 1%;">
         <div class="col s12">
-            <div class="center-align event-page-title" style="color:black">Raffle/Auction Collection</div>
+            <div class="center-align event-page-title" style="color:black">Raffle Collection</div>
             <div class="divider-dotted"></div>
-        <p class="subtitle" style="margin-bottom: 3%">100% of Sales Proceeds Benefit ETV</p>
+            <h6 style="text-align: center">Congratulations to the winners of our raffle!</h6>
+            <p class="subtitle" style="margin-bottom: 3%; color: grey">100% of Sales Proceeds Benefit ETV</p>
             {% for x in auction_items %}
                     <div class="col s12 m4 center-align auction-grid-col" >
                         
@@ -294,29 +294,33 @@
     .cart{
         font-size: 18px
     }
+    .sold-img {
+        position: relative
+    }
     .sold-out {
-        top: 1em;
-        left: -4em;
+        width: 150px;
+        height: fit-content;
+        margin-bottom: -30px;
         color: #fff;
         display: block;
-        position:absolute;
+        position:relative;
         text-align: center;
         text-decoration: none;
         letter-spacing: 1px;
         background-color: #A00;
-        padding: 0.5em 5em 0.4em 5em;
+        padding: 0.5em 5em 0.4em 3.5em;
         text-shadow: 0 0 0.75em #444;
         box-shadow: 0 0 0.5em rgba(0,0,0,0.5);
         font: bold 16px/1.2em Arial, Sans-Serif;
         -webkit-text-shadow: 0 0 0.75em #444;
         -webkit-box-shadow: 0 0 0.5em rgba(0,0,0,0.5);
-        -webkit-transform: rotate(-45deg) scale(0.75,1);
         z-index:10;
     }
     .sold-out::before {
+        width: 210px;
         content: '';
         top: 0;
-        left: 0;
+        left: 50px;
         right: 0;
         bottom: 0;
         position: absolute;

@@ -22,4 +22,6 @@ urlpatterns = [
     path('full-gallery-update', full_gallery_cart_update, name='full-gallery-update'),
     path('full-gallery-remove', full_gallery_cart_remove, name='full-gallery-remove'),
     path('full-gallery-checkout', full_gallery_sale, name="full-gallery-checkout"),
+    path('make-art-disb', gallery_make_disbursement),
+    path('make-don-disb', donation_make_disbursement)
 ]
