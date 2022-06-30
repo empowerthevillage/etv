@@ -187,6 +187,7 @@
           <li><a href="{{ about_url }}" class="waves-effect">About</a></li>
           <li><a href="{{ contact_url }}" class="waves-effect">Contact</a></li>
           <li><a class="waves-effect" href="{{ events_url }}">Events</a></li>
+          <li><a class="waves-effect" href="{{ news_url }}">News</a></li>
           <li><a class="waves-effect" href="{{ merchandise_url }}">Shop</a></li>
           <li class="divider"></li>
           <li><a href="{{ pillars_url }}">Strategic Pillars</a></li>
@@ -259,8 +260,12 @@
           </li>
           <li class="divider"></li>
           {% if request.user.is_authenticated %}
+          {% if request.user.is_staff %}
+          <li><a href="{{ dashboard_url }}" class="waves-effect">Dashboard</a></li>
+          {% endif %}
           <li><a href="{{ account_url }}" class="waves-effect">Account</a></li>
           <li><a href="{{ logout_url }}" class="waves-effect">Logout</a></li>
+          
           {% else %}
           <li><a href="{{ login_url }}" class="waves-effect">Login</a></li>
           <li><a href="{{ register_url }}" class="waves-effect">Register</a></li>
