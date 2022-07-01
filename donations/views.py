@@ -1,7 +1,5 @@
-from dis import dis
 from http.client import HTTPResponse
 from django.shortcuts import render
-from .models import donation_submission
 from django.http.response import HttpResponse, JsonResponse
 from django.shortcuts import render, redirect
 from django.conf import settings
@@ -12,12 +10,8 @@ from addresses.models import Address
 from addresses.forms import BillingAddressForm
 from .models import donation
 from django.core.mail import send_mail
-from billing.models import BraintreeTransaction, Disbursement
 
-import sweetify
-import json
 from mailchimp_marketing import Client
-from mailchimp_marketing.api_client import ApiClientError
 
 mailchimp = Client()
 mailchimp.set_config({
@@ -50,7 +44,7 @@ def mail_test(request):
     return render(request, 'email_test.html', context)
 
 def donate(request):
-    user = request.user
+    tokenization_key = settings.BRAINTREE_TOKENIZATION_KEY
     donor_form = DonorForm()
     billing_address_form = BillingAddressForm()
     billing_addresses = None
@@ -64,7 +58,8 @@ def donate(request):
         'title': 'ETV | Donate',
         'mailing_form': donor_form,
         'billing_form': billing_address_form,
-        'billing_addresses': billing_addresses
+        'billing_addresses': billing_addresses,
+        'tokenization_key': tokenization_key,
     }
     return render(request, "donate.html", context)
 

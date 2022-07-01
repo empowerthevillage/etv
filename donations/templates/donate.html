@@ -60,7 +60,7 @@ ETV | Donate
                 </div>
               </div>
             </div>
-            </div>
+          </div>
           <div class="step-1">
             <form id="donation-form">
               {% csrf_token %}
@@ -212,51 +212,63 @@ ETV | Donate
                         </div>
                     </div>
                 </fieldset>
-                <fieldset class="checkout-fieldset z-depth-1">
+                <fieldset class="checkout-fieldset z-depth-1 hidden" id="donor-detail-section">
                   <h5 class="fieldset-title">Donor Details</h5>
                   <div class="row" style="margin-bottom: 0;">
-                    <div class=" col s12 m6">
-                        {{ mailing_form.first_name }}
-                        <label>First Name<b class="required">*</b></label>
+                    <div class="input-field col s12 m6">
+                      <input type="text" name="first_name" class="textfield" required id="id_first_name">
+                        <label for="id_first_name">First Name<b class="required">*</b></label>
                     </div>
-                    <div class=" col s12 m6">
+                    <div class="input-field col s12 m6">
                       <input type="text" required id="last_name">
-                      <label>Last Name<b class="required">*</b></label>
+                      <label for="id_last_name">Last Name<b class="required">*</b></label>
                     </div>
-                    <div class=" col s12 m8" style="margin-top: 0">
-                      <input type="text" required id="email">
-                      <label>Email<b class="required">*</b></label>
+                    <div class="input-field col s12 m8" style="margin-top: 0">
+                      <input type="text" name="email" required id="email">
+                      <label for="id_email">Email<b class="required">*</b></label>
                     </div>
-                    <div class=" col s12 m4" style="margin-top: 0">
+                    <div class="input-field col s12 m4" style="margin-top: 0">
                       <input type="text" class="phone_us" id="phone">
-                      <label>Phone (Optional)</label>
+                      <label for="phone">Phone (Optional)</label>
                     </div>
-                    <div class=" col s12" style="margin-top: 0">
+                    <div class="input-field col s12" style="margin-top: 0">
                       {{ mailing_form.address_line_1 }}
-                      <label>Mailing Address</label>
+                      <label for="id_address_line_1">Mailing Address</label>
                     </div>
-                    <div class="col s12" style="margin-top: 0">
+                    <div class="input-field col s12" style="margin-top: 0">
                       {{ mailing_form.address_line_2 }}
-                      <label>{{ mailing_form.address_line_2.label }}</label>
+                      <label for="id_address_line_2">{{ mailing_form.address_line_2.label }}</label>
                     </div>
-                    <div class="col s12 m5" style="margin-top: 0">
+                    <div class="input-field col s12 m5" style="margin-top: 0">
                       {{ mailing_form.city }}
-                      <label>City</label>
+                      <label for="id_city">City</label>
                     </div>
                     <div class="col s12 m4 input-field" style="margin-top: 0">
                       {{ mailing_form.state }}
                       <label>State</label>
                     </div>
-                    <div class=" col s12 m3" style="margin-top: 0">
+                    <div class="input-field col s12 m3" style="margin-top: 0">
                       {{ mailing_form.zip }}
-                      <label>{{ mailing_form.zip.label }}</label>
+                      <label for="id_zip">{{ mailing_form.zip.label }}</label>
                     </div>
-                    
+                    <div class="col s12" style="padding-top: 15px; padding-bottom: 20px;">
+                      <p class="">
+                        <label>
+                        <input name="cover-fee" type="checkbox" value="yes" id="cover-fee">
+                        <span>I'd like to cover all transaction fees so 100% of my donation goes to Empower The Village</span>
+                        </label>
+                      </p>
+                    </div>
                   </div>
                 </fieldset>
                 <div class="row">
+                  <div class="col s12 center-align">
+                    <p style="font-family: oskar; font-size: 18px; margin-top: 0; margin-bottom: 0;">Total:</p>
+                    <p id="donationTotal" style="font-family: oskar; font-size: 26px; margin-top: 5px; margin-bottom: 10px;font-weight:700"></p>
+                  </div>
                   <div class="col s10 offset-s1 m6 offset-m3" style="padding-left:0; padding-right: 0">
-                    <button class="valign-wrapper btn waves-effect creditcard-button step1-create z-depth-0" id="creditcard-button">
+                    
+                    <button class="valign-wrapper btn waves-effect creditcard-button step1-create z-depth-0 disabled" id="creditcard-button">
                       <div class="donate-text-small"><i class="fas fa-credit-card"></i> DONATE</div><div class="donate-text-large"><i class="fas fa-credit-card"></i> DONATE</div>
                     </button>
                     <div class="valign-wrapper" style="display: flex; justify-content: center;">
@@ -266,28 +278,23 @@ ETV | Donate
                       <i class="fab fa-cc-amex" style="font-size: 32px; padding: 5px"></i>
                     </div>
                   </div>
-                  <div class="col s12">
-                  <div id="or">OR</div>
-                  </div>
-                  <div class="col s10 offset-s1 m6 offset-m3" style="padding-left:0; padding-right: 0">
-                    
-                    <button id="google-pay-button">
-                    </button>
-                  </div>
-                  <!--
-                  <div class="col s10 offset-s1 m4" style="padding-left:0; padding-right: 0">
-                    <button class="btn waves-effect applepay-button valign-wrapper z-depth-0" id="apple-pay-button">
-                      <img src="{% static 'img/applepay.svg' %}" style="width: 60px; padding-top: 0; margin-left: 3px">
-                    </button>
-                  </div>
-                -->
-                  <div class="col s10 offset-s1 m6 offset-m3" style="padding-left:0; padding-right: 0">
-                    <div id="paypal-button"></div>
-                  </div>
-                  <div class="col s10 offset-s1 m6 offset-m3" style="padding-left:0; padding-right: 0">
-                    <button class="valign-wrapper btn waves-effect venmo-button z-depth-0" id="venmo-button" style="display:none;">
-                      <img src="{% static 'img/venmo-white.svg' %}" style="width: 80px; margin-left: 2px">
-                    </button>
+                  
+                  <div id="express-pay-options" class="hidden">
+                      <div class="col s12">
+                        <div id="or">OR</div>
+                      </div>
+                      <div class="col s10 offset-s1 m6 offset-m3" style="padding-left:0; padding-right: 0">
+                        <button id="google-pay-button">
+                        </button>
+                      </div>
+                      <div class="col s10 offset-s1 m6 offset-m3" style="padding-left:0; padding-right: 0">
+                        <div id="paypal-button"></div>
+                      </div>
+                      <div class="col s10 offset-s1 m6 offset-m3" style="padding-left:0; padding-right: 0">
+                        <button class="valign-wrapper btn waves-effect venmo-button z-depth-0" id="venmo-button" style="display:none;">
+                          <img src="{% static 'img/venmo-white.svg' %}" style="width: 80px; margin-left: 2px">
+                        </button>
+                      </div>
                   </div>
                 </div>
             </form>
@@ -393,7 +400,9 @@ ETV | Donate
           <h7 style="padding-top: 20px;">Our mission is to develop, guide and implement breakthrough, scalable strategies that <b>empower Black people, businesses and community organizations to realize their full potential.</b></h7>
           <iframe class="yt-video" src="https://www.youtube.com/embed/7ypFvkUOtwo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           <style>
-            
+            #make-my-donation {
+              display: none;
+            }
             .yt-video {
               height: 200px;
               margin-top: 5%;
@@ -438,7 +447,7 @@ ETV | Donate
 var venmoButton = document.getElementById('venmo-button');
 
 braintree.client.create({
-    authorization: 'production_pgz5pm7q_tb3vd7jd2hynhxcn'
+    authorization: '{{ tokenization_key }}'
   }, function (clientErr, clientInstance) {
   if (clientErr) {
     console.error('Error creating client:', clientErr);
@@ -491,6 +500,21 @@ braintree.client.create({
       hostedFieldsInstance.tokenize(function (tokenizeErr, payload) {
         if (tokenizeErr) {
           console.error(tokenizeErr);
+          $('#preloader').hide()
+          if(tokenizeErr.code == 'HOSTED_FIELDS_FIELDS_INVALID'){
+            Swal.fire(
+              'Incorrect Card Details',
+              'Verify your card information and try again!',
+              'error'
+            )
+          }else{
+            Swal.fire(
+              'An Error Occured',
+              'There was a problem with your payment method. Please verify your card details, refresh the page, and try again!',
+              'error'
+            )
+          }
+          $('.step-2').removeClass('hidden');
           return;
         }
         var nonce_id = payload.nonce
@@ -662,11 +686,14 @@ braintree.client.create({
             })
           }).catch(function(err){
             console.error(err)
+            
             Swal.fire({
               icon: 'error',
               title: 'Oops...',
               text: 'Something went wrong, please try again!',
-            })
+            });
+            $('#preloader').hide()
+            $('.step-1').removeClass('hidden');
           })
         })
       }
@@ -872,10 +899,18 @@ function handleVenmoSuccess(payload) {
 <script>
   $('#ven-select').on('change', function(){
     var quantity = $(this).val()
-    var total = 1500*quantity
-    $('#ven-sponsor-amount').text('$'+total.toLocaleString())
-    $('#ven-sponsor').attr('value', total)
-    $('#donation-level-input').attr('value', total)
+    var amount = 1500*quantity
+    $('#ven-sponsor-amount').text('$'+amount.toLocaleString())
+    $('#ven-sponsor').attr('value', amount)
+    if($('#cover-fee').is(':checked')){
+      var fee = parseInt(amount * 0.0199 + 0.49)
+      var total = amount + fee
+      $('#donation-level-input').attr('value', total.toFixed(2))
+      $('#donationTotal').text('$' + parseFloat(total, 10).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString())
+    }else{
+      $('#donation-level-input').attr('value', amount)
+      $('#donationTotal').text('$' + parseFloat(amount, 10).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString())
+    }
     if(quantity != 1){
       $('#ven-label-end').text('registrants')
     }else{
@@ -883,8 +918,18 @@ function handleVenmoSuccess(payload) {
     }
   })
   $('[name="donation_level"]').on('change', function(){
-      var level = $(this).val()
-      $('#donation-level-input').attr('value', level)
+      var level = parseInt($(this).val())
+      
+      if($('#cover-fee').is(':checked')){
+        var fee = level * 0.0199 + 0.49
+        var total = level + fee
+        $('#donation-level-input').attr('value', total.toFixed(2))
+        $('#donationTotal').text('$' + parseFloat(total, 10).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString())
+      }else{
+        $('#donation-level-input').attr('value', level)
+        $('#donationTotal').text('$' + parseFloat(level, 10).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString())
+      }
+      
       if($('#ven-sponsor').is(':checked')){
         $('#ven-quantity').removeClass('hidden')
       }else{
@@ -897,7 +942,18 @@ function handleVenmoSuccess(payload) {
     });
     $('#other-donation').on('keyup', function(){
       var level = $(this).val()
-      $('#donation-level-input').attr('value', level)
+      
+      if($('#cover-fee').is(':checked')){
+        var fee = level * 0.0199 + 0.49
+        var total = level + fee
+        $('#donation-level-input').attr('value', total.toFixed(2))
+        $('#donationTotal').text('$' + parseFloat(total, 10).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString())
+      }else{
+        $('#donation-level-input').attr('value', level)
+        $('#donationTotal').text('$' + parseFloat(level, 10).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString())
+      }
+
+      $('#donationTotal').text('$' + parseFloat(level, 10).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString())
       $('#frequency-input').attr('value', 'once')
       $('#frequency-verbose-input').attr('value', 'One Time Donation')
     });
@@ -906,7 +962,17 @@ function handleVenmoSuccess(payload) {
       var frequencyVerbose = $(this).attr('confirm-display')
       $('#frequency-input').attr('value', frequency)
       $('#frequency-verbose-input').attr('value', frequencyVerbose)
+      $('#donor-detail-section').removeClass('hidden')
     });
+    $('#donor-detail-section input').on('change', function(){
+      var donor_first = $('#id_first_name').val()
+      var donor_last = $('#last_name').val()
+      var donor_email = $('#email').val()
+      if(donor_first != '' && donor_first != '' && donor_email != ''){
+        $('#creditcard-button').removeClass('disabled')
+        $('#express-pay-options').removeClass('hidden')
+      }
+    })
     $('.step1-next').click(function(event){
       event.preventDefault();
       $('.step-1').addClass('hidden')
@@ -1034,13 +1100,30 @@ function handleVenmoSuccess(payload) {
     });
     $('#other-donation').keyup(function(){
         var value = $(this).val();
-
+        $('#donor-detail-section').removeClass('hidden')
     });
     $('.other').change(function(){
         $('#make-my-donation').hide();
+        if($('#other-donation').val() == ''){
+          $('#donationTotal').text('Enter Custom Amount Above')
+          $('#donor-detail-section').addClass('hidden')
+        }
         $('[value="once"]').prop('checked', true);
-        
-        
+    })
+    $('#cover-fee').on('change', function(){
+      if($(this).is(':checked')){
+        var amount = parseInt($('#donation-level-input').val())
+        var fee =  amount * 0.0199 + 0.49
+        var total = amount + fee
+        $('#donation-level-input').attr('value', total.toFixed(2))
+        $('#donationTotal').text('$' + parseFloat(total, 10).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString())
+        //$('#donation-level-input').attr('value', level)
+        //$('#donationTotal').text('$' + parseFloat(level, 10).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString())
+      }else{
+        var amount = parseInt($('#donation-level-input').val())
+        $('#donation-level-input').attr('value', amount)
+        $('#donationTotal').text('$' + parseFloat(amount, 10).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString())
+      }
     })
     $('label').on('click', function(){
       $(this).addClass('active')

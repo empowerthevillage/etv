@@ -33,6 +33,8 @@ environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
 braintree_merchant_id = env('MERCHANT_ID')
 braintree_public = env('PUBLIC_KEY')
 braintree_private = env('PRIVATE_KEY')
+BRAINTREE_TOKENIZATION_KEY = env('TOKENIZATION_KEY')
+
 GATEWAY = braintree.BraintreeGateway(
     braintree.Configuration(
         braintree.Environment.Production,
