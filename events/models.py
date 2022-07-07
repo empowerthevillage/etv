@@ -57,6 +57,10 @@ class EventManager(models.Manager):
         category = 'Events'
         return category
 
+class PhotoGalleryItem(models.Model):
+    image = models.ImageField()
+    
+    
 class Event(models.Model):
     title           = models.CharField(max_length=270)
     subtitle        = models.CharField(max_length=270, null=True, blank=True)
@@ -74,7 +78,9 @@ class Event(models.Model):
     thumbnail       = models.FileField(null=True, blank=True)
     price_description = models.CharField(max_length=270, null=True, blank=True)
     checkout_video_html = HTMLField(null=True, blank=True)
-
+    has_gallery     = models.BooleanField(default=False, null=True, blank=True)
+    gallery_photos = models.ManyToManyField(PhotoGalleryItem, blank=True)
+    
     objects         = EventManager()
 
     def get_absolute_url(self):

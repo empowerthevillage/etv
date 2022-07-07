@@ -410,6 +410,41 @@ def save_obj(request):
                 })
                 plain_text = 'View email in browser'
                 send_mail(subject, plain_text, from_email, [str(instance.nominator_email)], html_message=content)
+                
+                counselor_subject = "VEN - You've Matched With A New Business Owner!"
+                counselor_confirmation_content = render_to_string('counselor_notification.html',
+                {
+                    'business_nomination': True,
+                    'pk': instance.pk,
+                    'name': instance.nominator_name,
+                    'email': instance.nominator_email,
+                    'business_name': instance.business_name,
+                    'owner_name': instance.owner_name,
+                    'website': instance.website,
+                    'city': instance.city,
+                    'state': instance.state,
+                    'phone': instance.phone,
+                    'category': instance.category,
+                    'subcategory': instance.subcategory,
+                    'instagram': instance.instagram,
+                    'facebook': instance.facebook,
+                    'twitter': instance.twitter,
+                    'owned': instance.nominator_owner,
+                    'years_in_bus': instance.years_in_business,
+                    'employees': instance.employees,
+                    'revenue': instance.revenue,
+                    'structure': instance.structure,
+                    'bus_priority1': instance.priority1,
+                    'bus_priority2': instance.priority2,
+                    'bus_priority3': instance.priority3,
+                })
+                if instance.counselor == "Andrew Frazier":
+                    send_mail(counselor_subject, plain_text, from_email, ['andrew@smallbusinesslikeapro.com'], html_message=counselor_confirmation_content)
+                elif instance.counselor == "Michelle Harlan":
+                    send_mail(counselor_subject, plain_text, from_email, ['MHarlan@financialguide.com'], html_message=counselor_confirmation_content)
+                else:
+                    pass
+                counselor_plain_text = 'View email in browser'  
             else:
                 print('no new counselor')
         sweetify.success(request, 'Update Successful!')

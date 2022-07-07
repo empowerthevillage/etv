@@ -97,6 +97,7 @@ COUNSELOR_CHOICES = (
     ('Andrew Frazier', 'Andrew Frazier'),
     ('Michelle Harlan', 'Michelle Harlan'),
 )
+
 class NominationManager(models.Manager):
     def filter_objs(self):
         filtered_qs = Nomination.objects.all()

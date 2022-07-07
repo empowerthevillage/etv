@@ -17,6 +17,18 @@
         {% endif %}
         <div class="divider-dotted"></div>
         {{ event.content|safe }}
+        
+        {% if event.has_gallery %}
+        <div class="divider-dotted" style="margin-bottom: 0"></div>
+        <div class="row">
+          {% for x in event.gallery_photos.all %}
+          <div class="col s12 m4 l3">
+            <img class="materialboxed lazy z-depth-1" src="{{ x.image.url }}" style="max-width:100%; margin-top: 20px;">
+          </div>
+          {% endfor %}
+          
+        </div>
+        {% endif %}
     </div>
 </div>
 <style>
@@ -160,7 +172,7 @@
     #overlay {
         background: rgba(255, 255, 255, 0.938);
         width: 100%;
-        padding: 7% 3%
+        padding: 2% 3%
     }
     .text {
         font-family: oskar;
@@ -664,4 +676,7 @@
     color: rgb(186, 186, 186) !important
   }
   </style>
+  <script>
+    $('.materialboxed').materialbox({});
+  </script>
 {% endblock %}

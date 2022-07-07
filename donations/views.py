@@ -191,6 +191,7 @@ def donation_complete(request):
     nonce = donation_obj.payment_method
     amount = donation_obj.amount
     first_name = str(donation_obj.first_name)
+    last_name = str(donation_obj.last_name)
     email = str(donation_obj.billing_profile)
     frequency = donation_obj.frequency
     if frequency == 'once':
@@ -199,7 +200,7 @@ def donation_complete(request):
             "customer_id": braintree_id,
             "payment_method_nonce": nonce,
             "custom_fields": {
-                "memo": 'donation'
+                "memo": 'Donation - %s from %s %s' %(amount, first_name, last_name)
             },
             "options": {
                 "submit_for_settlement": True,
