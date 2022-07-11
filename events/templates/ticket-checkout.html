@@ -30,9 +30,9 @@
                   <div class="col s12 m9">
                       <p class="ticket-title">{{ x.type.title }}</p>
                       {% if x.type.on_sale %}
-                      <p class="ticket-price"><b style="text-decoration: line-through; font-weight:400">${{ x.type.price|floatformat:"0" }}</b> <b class="sale">&nbsp${{ x.type.sale_price|floatformat:"0" }}</b> - {{ x.type.sale_description }}</p>
+                      <p class="ticket-price"><b style="text-decoration: line-through; font-weight:400">${{ x.type.price|floatformat:"0"|intcomma }}</b> <b class="sale">&nbsp${{ x.type.sale_price|floatformat:"0"|intcomma }}</b> - {{ x.type.sale_description }}</p>
                       {% else %}
-                      <p class="ticket-price">${{ x.type.price|floatformat:"0" }} {% if x.type.price_description is not none %}- {{ x.type.price_description }}{% endif %}</p>
+                      <p class="ticket-price">${{ x.type.price|floatformat:"0"|intcomma }} {% if x.type.price_description is not none %}- {{ x.type.price_description }}{% endif %}</p>
                       {% endif %}
                       <p class="ticket-description">{{ x.type.description }}</p>
                   </div>
@@ -79,9 +79,9 @@
                 <div class="col s12 m8">
                     <p class="ticket-title">{{ x.type }}</p>
                     {% if x.type.on_sale %}
-                    <p class="ticket-price"><b style="text-decoration: line-through; font-weight:400">${{ x.type.price|floatformat:"0" }}</b> <b class="sale">&nbsp${{ x.type.sale_price|floatformat:"0" }}</b> - {{ x.type.sale_description }}</p>
+                    <p class="ticket-price"><b style="text-decoration: line-through; font-weight:400">${{ x.type.price|floatformat:"0"|intcomma }}</b> <b class="sale">&nbsp${{ x.type.sale_price|floatformat:"0"|intcomma }}</b> - {{ x.type.sale_description }}</p>
                     {% else %}
-                    <p class="ticket-price">${{ x.type.price|floatformat:"0" }} {% if x.type.price_description is not none %}- {{ x.type.price_description }}{% endif %}</p>
+                    <p class="ticket-price">${{ x.type.price|floatformat:"0"|intcomma }} {% if x.type.price_description is not none %}- {{ x.type.price_description }}{% endif %}</p>
                     {% endif %}
                     <p class="ticket-description">{{ x.type.description|safe }}</p>
                 </div>
@@ -108,9 +108,9 @@
                                 <div class="col s12 m9">
                                     <p class="ticket-title">{{ x.type.title }}</p>
                                     {% if x.type.on_sale %}
-                                    <p class="ticket-price"><b style="text-decoration: line-through; font-weight:400">${{ x.type.price|floatformat:"0" }}</b> <b class="sale">&nbsp${{ x.type.sale_price|floatformat:"0" }}</b> - {{ x.type.sale_description }}</p>
+                                    <p class="ticket-price"><b style="text-decoration: line-through; font-weight:400">${{ x.type.price|floatformat:"0"|intcomma }}</b> <b class="sale">&nbsp${{ x.type.sale_price|floatformat:"0"|intcomma }}</b> - {{ x.type.sale_description }}</p>
                                     {% else %}
-                                    <p class="ticket-price">${{ x.type.price|floatformat:"0" }} {% if x.type.price_description is not none %}- {{ x.type.price_description }}{% endif %}</p>
+                                    <p class="ticket-price">${{ x.type.price|floatformat:"0"|intcomma }} {% if x.type.price_description is not none %}- {{ x.type.price_description }}{% endif %}</p>
                                     {% endif %}
                                     <p class="ticket-description">{{ x.type.description }}</p>
                                 </div>
