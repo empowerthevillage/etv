@@ -251,6 +251,27 @@ class vbp_book(models.Model):
         verbose_name_plural = 'Books'
         ordering = ['-published', 'state']
 
+class mv_private(models.Model):
+    business_name    = models.CharField(max_length=200)
+    website          = models.URLField(blank=True, max_length=500, null=True)
+    city             = models.CharField(max_length=100, null=True, blank=True)
+    county           = models.CharField(max_length=300, blank=True, null=True)
+    phone            = PhoneField(blank=True, help_text='Business Phone Number')
+    category         = models.CharField(max_length=100, choices=CATEGORY_CHOICES, null=True, blank=True)
+    subcategory      = models.CharField(max_length=200, blank=True, null=True)
+    owner_name       = models.CharField(max_length=300, blank=True, null=True)
+    owner_email      = models.EmailField(blank=True, null=True)
+    created          = models.DateTimeField(auto_now_add=True, blank=True, null=True)
+    updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
+   
+    def __str__(self):
+        return str(self.business_name)
+    
+    class Meta:
+        ordering = ['category', 'city', 'business_name']
+        verbose_name = "Martha's Vineyard listing"
+        verbose_name_plural = "Martha's Vineyard listings"
+    
 class vbp_al(models.Model):
     directory_source  = models.CharField(max_length=200, null=True, blank=True)
     business_name    = models.CharField(max_length=200)

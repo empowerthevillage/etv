@@ -311,6 +311,7 @@ STRUCTURE_CHOICES = (
     ('llc', 'LLC'),
     ('none', 'None of the above')
 )
+
 class BusinessForm(forms.Form):
     nominator_name = forms.CharField(label='Your Name', widget=forms.TextInput(attrs={'class':'textfield',}), label_suffix='', required=True)
     nominator_email = forms.EmailField(label='Your Email Address', widget=forms.EmailInput(attrs={'class':'textfield'}), label_suffix='', required=True)

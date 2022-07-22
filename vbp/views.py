@@ -5,7 +5,7 @@ from django.http.response import HttpResponse, JsonResponse
 from django.shortcuts import render, redirect
 
 from bfchallenge.models import STATE_CHOICES
-from .models import vbp, vbp_book, vbp_al, vbp_az, vbp_az, vbp_ar, vbp_ca, vbp_co, vbp_ct, vbp_de, vbp_dc, vbp_fl, vbp_ga, vbp_hi, vbp_id, vbp_il, vbp_in, vbp_ia, vbp_ks, vbp_ky, vbp_la, vbp_me, vbp_md, vbp_ma, vbp_mi, vbp_mi, vbp_ms, vbp_mn, vbp_mo, vbp_mt, vbp_ne, vbp_nv, vbp_nh, vbp_nj, vbp_nm, vbp_ny, vbp_nc, vbp_nd, vbp_oh, vbp_ok, vbp_or, vbp_pa, vbp_ri, vbp_sc, vbp_sd, vbp_tn, vbp_tx, vbp_ut, vbp_vt, vbp_va, vbp_wa, vbp_wv, vbp_wi, vbp_wy  
+from .models import mv_private, vbp, vbp_book, vbp_al, vbp_az, vbp_az, vbp_ar, vbp_ca, vbp_co, vbp_ct, vbp_de, vbp_dc, vbp_fl, vbp_ga, vbp_hi, vbp_id, vbp_il, vbp_in, vbp_ia, vbp_ks, vbp_ky, vbp_la, vbp_me, vbp_md, vbp_ma, vbp_mi, vbp_mi, vbp_ms, vbp_mn, vbp_mo, vbp_mt, vbp_ne, vbp_nv, vbp_nh, vbp_nj, vbp_nm, vbp_ny, vbp_nc, vbp_nd, vbp_oh, vbp_ok, vbp_or, vbp_pa, vbp_ri, vbp_sc, vbp_sd, vbp_tn, vbp_tx, vbp_ut, vbp_vt, vbp_va, vbp_wa, vbp_wv, vbp_wi, vbp_wy  
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.conf import settings
 from .forms import NominationForm
@@ -272,7 +272,77 @@ VISUAL_CHOICES = [
     ("music", "Music Lessons/Instruments"),
     ("other", "Other"),
 ]
+CATEGORY_CHOICES = [
+    ('beauty','Beauty & Personal Grooming'),
+    ('books', 'Books & Publishing'),
+    ('cars', 'Cars & Automotive'),
+    ('child', "Childcare | Children's Services & Products"),
+    ('cleaning', 'Cleaning'),
+    ('clothing', 'Clothing & Fashion'),
+    ('construction', 'Construction & Trades'),
+    ('education', 'Education'),
+    ('eldercare', 'Eldercare'),
+    ('electronics', 'Electronics & Technology'),
+    ('entertainment', 'Entertainment'),
+    ('farming', 'Farming & Agriculture'),
+    ('florists', 'Florists'),
+    ('grocery', 'Grocery & Food Services'),
+    ('health', 'Health & Wellness'),
+    ('home', 'Home & Garden'),
+    ('hotels', 'Hotels & Hospitality | Travel'),
+    ('jewelry', 'Jewelry & Accessories'),
+    ('legal', 'Legal & Financial Services'),
+    ('lifestyle', 'Lifestyle'),
+    ('marketing', 'Marketing & Advertising'),
+    ('medical', 'Medical Services'),
+    ('packaging', 'Packaging | Delivery | Shipping'),
+    ('pets', 'Pets & Animal Care'),
+    ('photography', 'Photography & Video'),
+    ('professional', 'Professional Services'),
+    ('real estate', 'Real Estate'),
+    ('recreation', 'Recreation & Sports'),
+    ('restaurants', 'Restaurants & Bars | Event Spaces'),
+    ('security', 'Security Services'),
+    ('transportation', 'Transportation & Trucking'),
+    ('visual', 'Visual & Performing Arts | Culture'),
+    ('other', 'Other'),
+]
 
+
+def mv_view(request):
+    f = mv_private.objects.all()
+    listings_full = f.exclude(city='').order_by('category', 'city', 'business_name')
+    listings_empty = f.filter(city='').order_by('category', 'business_name')
+    all_listings = list(listings_full) + list(listings_empty)
+    sections = []
+    page_count = 5
+    for category, verbose in CATEGORY_CHOICES:
+        dict = []
+        for x in all_listings:
+            if x.category == category:
+                dict.append(x)
+        if len(dict)>0:
+            pagination_obj = Paginator(dict, 16)
+            start_page = page_count + 1
+            page_count += pagination_obj.num_pages
+            line = {"category": category, "verbose": str(verbose), "pagination": pagination_obj, "start_page": start_page, "last_page": page_count, "cover": "https://etv-empowerthevillage.s3.amazonaws.com/static/img/vbp/%s.svg" %(category), "right": "https://etv-empowerthevillage.s3.amazonaws.com/static/img/vbp/%s_right.svg" %(category),"left": "https://etv-empowerthevillage.s3.amazonaws.com/static/img/vbp/%s_left.svg" %(category)}
+            sections.append(line)
+        else:
+            pass
+    
+    col_1_end = round(len(sections)/2)
+    col_2_start = col_1_end + 1
+    col_2_end = len(sections)
+    col1 = sections[0:col_1_end]
+    col2 = sections[col_2_start:col_2_end]
+    context = {
+        "sections": sections,
+        "col1": col1,
+        "col2":  col2,
+        "filter": f,
+    }
+    return render(request, 'vbp/mv.html', context)
+    
 def listing_filter(request, state):
     state_formatted = state.split("-")[1].lower()
     model = django.apps.apps.get_model('vbp', 'vbp_%s' %(state_formatted))

@@ -120,39 +120,45 @@ class Donor(models.Model):
 
     @property
     def get_total(self):
-        donation_list = []
-        for x in self.donations.all():
-            donation_list.append(x.amount)
-        for x in self.event_donations.all():
-            donation_list.append(x.amount)
-            
-        total = sum(donation_list)
-        return total
+        try:
+            donation_list = []
+            for x in self.donations.all():
+                donation_list.append(x.amount)
+            for x in self.event_donations.all():
+                donation_list.append(x.amount)
+                
+            total = sum(donation_list)
+            return total
+        except:
+            pass
     
     @property
     def get_level(self):
-        total = self.total
-        if total >= 25000:
-            level = "Founder's Circle - Platinum"
-        elif total >= 15000:
-            level = "Founder's Circle - Gold"
-        elif total >= 10000:
-            level = "Founder's Circle - Silver"
-        elif total >= 5000:
-            level = "Founder's Circle - Bronze"
-        elif total >= 1000:
-            level = "Village Ambassador"
-        elif total >= 500:
-            level = "Village Leader"
-        elif total >= 100:
-            level = "Village Supporter"
-        elif total >= 50:
-            level = "Village Patron"
-        elif total >= 25:
-            level = "Village Member"
-        else:
-            level = "Past Donor - Data Unavailable"
-        return level
+        try:
+            total = self.total
+            if total >= 25000:
+                level = "Founder's Circle - Platinum"
+            elif total >= 15000:
+                level = "Founder's Circle - Gold"
+            elif total >= 10000:
+                level = "Founder's Circle - Silver"
+            elif total >= 5000:
+                level = "Founder's Circle - Bronze"
+            elif total >= 1000:
+                level = "Village Ambassador"
+            elif total >= 500:
+                level = "Village Leader"
+            elif total >= 100:
+                level = "Village Supporter"
+            elif total >= 50:
+                level = "Village Patron"
+            elif total >= 25:
+                level = "Village Member"
+            else:
+                level = "Past Donor - Data Unavailable"
+            return level
+        except:
+            pass
 
     @property
     def has_card(self):

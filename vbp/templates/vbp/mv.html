@@ -1,0 +1,1638 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}ETV | Village Black Pages®{% endblock %}
+{% block canonical %}https://www.empowerthevillage.org/village-black-pages/{% endblock %}
+{% block seo_description %}Village Black Pages® (VBP) is the critical resource Americans can rely on to locate Black-owned businesses to support when responding to our charge to Make Every Friday, Black Friday®!{% endblock %}
+
+
+{% block content %}
+<div class="content-container">
+<div class="parallax-container box-shadow valign-wrapper">
+    
+    <div class="scale-up-center container z-depth-4 center-align parallax-banner" style="background:rgba(255, 255, 255, 0.906); border: rgb(43, 43, 43) 3px solid; display: flex; justify-content: center; align-items: center">
+        <img src="{% static 'img/vbp-logo.svg' %}" width="90%" style="margin:0; padding: 0">
+    </div>
+    <div class="parallax" style="opacity: 1;">
+        <img src='{% static "img/vbp_collage-min.webp" %}'>
+    </div>
+
+</div>
+
+    <div id="vbp-resources" class="col s12">
+        
+        <div class="z-depth-4 row vbp-booklet-container" style="margin:0; background: white; padding-top: 20px" id="vbp-row">
+   
+            <div class="col s12" id="book">
+                <div id="flipbook-fullsize-container">
+                    <div class="" id="vbp-flipbook">
+                
+                        <div class="row center-align" style="margin-top:0; padding-top:0">
+                              
+                            <a class="contents-page" style="cursor: pointer" id="view-tc">VIEW TABLE OF CONTENTS</a> | Jump To Page: <input type="text" id="page-jump" style="width: 80px; margin-right: 10px">
+                            <div class="btn-container">
+                                <div class="btn btn-large" id="go-btn" style="background-color: rgb(55, 55, 55); margin-bottom: 15px">GO</div>
+                            </div>
+                    
+                        </div>
+                
+                        <div class="row valign-wrapper">
+                            <div class="col s1" style="margin-left: 2%">
+                            <i class="material-icons flipbook-arrows" id="prev">arrow_back_ios</i>
+                            </div>
+                            <div class="col s10 flipbook-wrapper valign-wrapper" id="flipbook-content-wrapper" style="padding:0">
+                                <div class="aspect" id="aspect">
+                                    <div class="aspect-inner" id="aspect-inner">
+                                        <div id="flipbook" class="flipbook">
+                                            <div class="hard" id="cover-page"></div>
+                                            <div class="hard">
+                                                <div class="col 11" style="margin-top:15%;width:100%">
+                                                    <div class="center-align intro-page1">
+                                                        <img src="https://etv-empowerthevillage.s3.amazonaws.com/static/img/logo.webp" width=17% style="margin-top:10%">
+                                                        <div style="margin-top: 10%">
+                                                            <p>Copyright © {% now "Y" %} Empower The Village, Inc.</p>
+                                                            <p>All rights reserved.</p>
+                                                            <p>Empower The Village, Inc.</p>
+                                                            <p>178 E. Hanover Avenue, Suite 103-312</p>
+                                                            <p>Cedar Knolls, NJ 07927</p>
+                                                        </div>
+                                                        <div class="row" style="margin-top: 5%; margin-bottom:0">
+                                                            <a href="https://www.empowerthevillage.org"><img src="https://etv-empowerthevillage.s3.amazonaws.com/static/img/web-icon.svg" height=10vw style="margin-bottom:-2px"> &nbsp;empowerthevillage.org</a>
+                                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                            <a href="mailto: info@empowerthevillage.org"><img src="https://etv-empowerthevillage.s3.amazonaws.com/static/img/at-icon.svg" height=10vw style="margin-bottom:-2px"> &nbsp;info@empowerthevillage.org</a>
+                                                        </div>
+                                                        <div class="row" style="margin-bottom:0">
+                                                            <a href="https://www.facebook.com/empoweretv"><img src="https://etv-empowerthevillage.s3.amazonaws.com/static/img/fb-icon.svg" height=10vw style="margin-bottom:-2px"> &nbsp;@empoweretv</a>
+                                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                            <a href="https://twitter.com/empower_etv"><img src="https://etv-empowerthevillage.s3.amazonaws.com/static/img/ig-icon.svg" height=10vw style="margin-bottom:-2px"> <img src="https://etv-empowerthevillage.s3.amazonaws.com/static/img/twitter-icon.svg" height=10vw style="margin-bottom:-2px"> &nbsp;@empower_etv</a>
+                                                        </div>
+                                                        <div class="" style="margin-top:30%; margin-bottom:10%">
+                                                            <p class="">Photos via <a href="www.unsplash.com" style="text-decoration: underline;">Unsplash</a></p>
+                                                            <p class="">Graphic Design by Alexandra Stennett</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="" style="background: url('https://etv-empowerthevillage.s3.amazonaws.com/static/img/vbp-efbf-page.svg'); background-size: 102%"></div>
+                                            <div class="" style="background: url('https://etv-empowerthevillage.s3.amazonaws.com/static/img/vbp-welcome-page.svg');background-size: 105%"></div>
+                                            <div class="" style="background: black; color: white; padding: 1%">
+                                                <h6 class="tc-title" style="font-family: 'oskar'; margin-bottom:10px; text-align: center">TABLE OF CONTENTS</h6>
+                                                <div style="border-top:dotted white 0.1px; padding: 2%"></div>
+                       
+                                                    <table class="col s6 table-of-contents">
+                                                        {% for category in col1 %}
+                                                        <tr>
+                                                            <td class="category-link" dataPage="{{ category.start_page }}">{{ category.verbose }}</td>
+                                                            <td class="category-link" dataPage="{{ category.start_page }}">{{ category.start_page }}</td>
+                                                        </tr>
+                                                        {% endfor %}
+                                                    </table>
+                                                    <table class="col s6 table-of-contents">
+                                                        {% for category in col2 %}
+                                                        <tr>
+                                                            <td class="category-link" dataPage="{{ category.start_page }}">{{ category.verbose }}</td>
+                                                            <td class="category-link" dataPage="{{ category.start_page }}">{{ category.start_page }}</td>
+                                                        </tr>
+                                                        {% endfor %}
+                                                    </table>
+                                            </div>
+                                            
+                                            {% for section in sections %}
+                                            <div class="section-cover" id="{{ section.category }}-cover" style="background: url({{ section.cover }}); background-size: 105%"></div>
+                                            {% for response in section.pagination %}
+                                            <div class="{{ section.category }}-section {{ section.category }}">
+                                                <div class="data-table">
+                                                    <table class="highlight">
+                                                        <colgroup>
+                                                            <col span="1" style="width: 45%;">
+                                                            <col span="1" style="width: 25%;">
+                                                            <col span="1" style="width: 35%;">
+                                                         </colgroup>
+                                                         <tbody>
+                                                            {% for vbp in response %}
+                                                            <tr>
+                                                                <td style="max-width: 35%; font-weight:500">
+                                                                    {% if vbp|length > 20%}
+                                                                        {% if vbp.website %}
+                                                                        <a href="{{ vbp.website }}" target="_blank" style="font-weight: 500;font-size: 0.35vw">{{ vbp }}</a>
+                                                                        {% else %}
+                                                                        <a style="font-size: 0.35vw; color:black">{{ vbp }}</a>
+                                                                        {% endif %}
+                                                                    {% else %}
+                                                                        {% if vbp.website %}
+                                                                        <a href="{{ vbp.website }}" target="_blank" style="font-weight: 500;">{{ vbp }}</a>
+                                                                        {% else %}
+                                                                        <a style="color:rgb(55, 55, 55); font-weight:400">{{ vbp }}</a>
+                                                                        {% endif %}
+                                                                    {% endif %}
+                                                                </td>
+                                                                <td>{{ vbp.city }}</td>
+                                                                {% if vbp.phone is not None %}<td style="text-align:right;min-width: 6vw">{{ vbp.phone }}</td>
+                                                                {% else %}<td style="text-align:right;min-width: 6vw"></td>
+                                                                {% endif %}
+                                                            </tr>
+                                                            {% endfor %}
+                                                         </tbody>
+                                                    </table>
+                                                    {% if response.object_list|length > 6 %}
+                                                        {% else %}
+                                                        <div class="center-align roomformore" style="margin-top: 5%; background:rgb(29, 29, 29); padding: 1vw 2vw">
+                                                            <p style="color:white; ">There's always room for more!</p>
+                                                            <p style="color:white; text-align: justify">If you know of a great business we should include, or if you own a business and would like to be listed, please fill out the <a href="{{ nomination_url }}">Business Nomination Form</a> on our website. VBP is ever-evolving and we update our directories quarterly!</p>
+                                                        </div>
+                                                        {% endif %}
+                                                </div>
+                                            </div>
+                                            {% endfor%}
+                                            {% endfor %}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col s1" style="">
+                                <i class="material-icons flipbook-arrows" id="next">arrow_forward_ios</i>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    .flipbook-arrows {
+        outline: none !important;
+    }
+    input {
+        font-family: poppins !important;
+        font-weight: 200 !important;
+        letter-spacing: 1px !important;
+    }
+    @media only screen and (min-width:0px) {
+        .table-of-contents {
+            width: 42% !important;
+            margin-left: 4% !important;
+        }
+        .category-link {
+            font-size:14px; 
+            padding-top:2%;
+            padding-bottom: 2%; 
+            margin:0; 
+            text-transform: capitalize;
+            cursor: pointer;
+            color: white
+        }
+
+    }
+    @media only screen and (min-width:450px) {
+        .category-link {
+            font-size:8px; 
+            padding-top:0.2vw;
+            padding-bottom: 0.2vw; 
+            margin:0; 
+            text-transform: capitalize;
+        }
+    }
+    @media only screen and (min-width:620px) {
+        .category-link {
+            font-size:12px; 
+            padding-top:0.2vw;
+            padding-bottom: 0.2vw; 
+            margin:0; 
+            text-transform: capitalize;
+        }
+    }
+    @media only screen and (min-width:760px) {
+        .category-link {
+            font-size:14px; 
+            padding-top:0.2vw;
+            padding-bottom: 0.2vw; 
+            margin:0; 
+            text-transform: capitalize;
+        }
+    }
+    @media only screen and (min-width:801px) {
+        .category-link {
+            font-size:16px; 
+            padding-top:0.2vw;
+            padding-bottom: 0.2vw; 
+            margin:0; 
+            text-transform: capitalize;
+        }
+    }
+    @media only screen and (min-width:992px) {
+        .category-link {
+            font-size:14px; 
+            padding-top:0.2vw;
+            padding-bottom: 0.2vw; 
+            margin:0; 
+            text-transform: capitalize;
+        }
+    }
+    @media only screen and (min-width:1350px){
+        .category-link {
+            font-size:18px; 
+            padding-top:0.2vw;
+            padding-bottom: 0.2vw; 
+            margin:0; 
+            text-transform: capitalize;
+        }
+    }
+    #id-city {
+        font-weight: 300;
+        letter-spacing: 1px;
+        font-family: Poppins !important
+    }
+    .multiple-select-dropdown {
+        width: 300px !important
+    }
+    .fullscreen-btn:hover {
+        background-color:white;
+    }
+    
+    {% for category in pages %}
+    .{{ category.category }}-section.odd {
+        background: url({{ category.right }});
+        background-size: 101%;
+    }
+    .{{ category.category }}-section.even {
+        background-image: url({{ category.left }}); 
+        background-size: 101%
+    }
+    .{{ category.category }}-section.odd .data-table {
+        padding-right: 10%;
+        padding-left: 5%;
+        padding-top: 10%;
+    }
+    .{{ category.category }}-section.even .data-table {
+        padding-left: 10%;
+        padding-right: 5%;
+        padding-top: 10%;
+    }
+    .{{ category.category }}-section.{{ category.category }}-single {
+        background-image: url({{ category.right }}); 
+        background-size: 101%
+    }
+    .{{ category.category }}-section.{{ category.category }}-single .data-table {
+        padding-left: 7%;
+        padding-right: 10%;
+        padding-top: 12%;
+    }
+    {% endfor %}
+
+    .data-table {
+        height: 100%
+    }
+
+</style>
+<script>
+    var book = $('#flipbook').turn({
+        display: 'double',
+        autoCenter: true
+    });
+    $(document).on('click', '#next', function(){
+        $('#flipbook').turn('next')
+    });
+    $(document).on('click', '#prev', function(){
+        $('#flipbook').turn('previous')
+    });
+    $(document).on('click', '#view-tc', function(){
+        $('#flipbook').turn('page', 5)
+    });
+    $(document).on('click', '#go-btn', function(){
+        var page = $('#page-jump').val()
+        $('#flipbook').turn('page', page)
+    });
+    $(document).on('click', '.category-link', function(){
+        var page = $(this).attr('dataPage')
+        $('#flipbook').turn('page', page)
+    })
+    var elem = document.getElementById("flipbook");
+    function openFullscreen() {
+    if (elem.requestFullscreen) {
+        elem.requestFullscreen();
+    } else if (elem.webkitRequestFullscreen) { /* Safari */
+        elem.webkitRequestFullscreen();
+    } else if (elem.msRequestFullscreen) { /* IE11 */
+        elem.msRequestFullscreen();
+    }
+    };
+    var flipbookEL = document.getElementById('flipbook');
+
+    window.addEventListener('resize', function (e) {
+        flipbookEL.style.width = '';
+        flipbookEL.style.height = '';
+        $(flipbookEL).turn('size', flipbookEL.clientWidth, flipbookEL.clientHeight);
+        });
+    
+    var flipbookEL2 = document.getElementById('flipbook-mobile');
+
+    window.addEventListener('resize', function (e) {
+        flipbookEL2.style.width = '';
+        flipbookEL2.style.height = '';
+        $(flipbookEL2).turn('size', flipbookEL2.clientWidth, flipbookEL2.clientHeight);
+        });
+</script>
+    <style>
+        .btn-contact {
+            border: none;
+            margin-left: 0;
+            font-size: 16px;
+            font-family: inherit;
+            color: inherit;
+            cursor: pointer;
+            display: inline-block;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 500;
+            outline: none;
+            position: relative;
+            -webkit-transition: all 0.3s;
+            -moz-transition: all 0.3s;
+            transition: all 0.3s;
+            background: rgb(38, 109, 18);;
+            color: #fff;
+            box-shadow: 0 6px rgb(30, 82, 14);
+            -webkit-transition: none;
+            -moz-transition: none;
+            transition: none;
+            border-radius: 0px;
+            line-height: 20px;
+            width: 50%;
+            height: 47px;
+            padding: 20px;
+            padding-top: 15px;
+            margin-bottom: 50px;
+            margin-top: 40px
+}
+.btn-nominate:after {
+  content: '';
+	position: absolute;
+	z-index: -1;
+, -webkit-transition: all 0.3s;
+, -moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+ 
+        .sponsor-info {
+            background-color: rgb(23, 23, 23);
+            padding: 30px
+        }
+        
+        .quarterly-list li {
+            color: white;
+            font-size: 16px;
+            font-weight: 200;
+        }
+        .annual-list li {
+            color: white;
+            font-size: 16px;
+            font-weight: 200;
+        }
+        .price-row .card {
+            background-color:rgb(40, 40, 40);
+         
+            padding: 20px;
+        }
+        .card p {
+            margin:0;
+            text-transform: uppercase;
+            text-decoration: underline;
+        }
+        @media only screen and (max-width: 600px) {
+            .price-row .card {
+        }
+        .btn-contact {
+            width: 100%;
+        }
+        .sponsor-info h6 {
+            font-size: 52px
+        }
+        }
+        @media only screen and (min-width: 601px) {
+            .price-row .card {
+            width: 60%; margin-left: 20%
+        }
+            .btn-contact {
+                width: 55%;
+                font-size: 18px
+            }
+            .quarterly-list li {
+            color: white;
+            font-size: 18px;
+            font-weight: 200;
+        }
+        .sponsor-info h6 {
+            font-size: 62px
+        }
+        .annual-list li {
+            color: white;
+            font-size: 18px;
+            font-weight: 200;
+        }
+        .sponsor-info p {
+            font-size: 22px
+        }
+        }
+        @media only screen and (min-width: 993px) {
+            .price-row .card {
+            width: 50%; margin-left: 25%
+        }
+            .btn-contact {
+                width: 45%;
+                font-size: 22px
+            }
+            .quarterly-list li {
+            color: white;
+            font-size: 22px;
+            font-weight: 200;
+        }
+        .annual-list li {
+            color: white;
+            font-size: 22px;
+            font-weight: 200;
+        }
+        .sponsor-info p {
+            font-size: 22px
+        }
+        }
+    </style>
+</div>
+<script src="{% static 'js/raphael.js' %}"></script>
+<script src="{% static 'js/jquery.usmap.js' %}"></script>
+<script src="{% static 'js/jquery-jvectormap-2.0.5.min.js' %}"></script>
+<script src="{% static 'js/jquery-jvectormap-us-aea.js' %}"></script>
+<script>
+    
+    $(function(){
+    map = new jvm.Map({
+        map: 'us_aea',
+        container: $('#map'),
+        height: '700px',
+        width: '900px',
+        markerStyle: {
+            initial: {
+                image: 'https://etv-empowerthevillage.s3.amazonaws.com/static/img/mapstarc.png',
+                "z-index": '2',
+                }
+            },
+        markers: [
+           {% for x in markers %}
+            {latLng: [{{ x.latitude}}, {{ x.longitude }}], name: "{{ x }}"},
+           {% endfor %}
+        ],
+        zoomOnScroll: false,
+        regionLabelStyle: {
+          initial: {
+            fill: 'black',
+            'font-family': 'Poppins',
+          },
+          hover: {
+            fill: 'grey'
+          },
+        },
+        backgroundColor: 'white',
+        labels: {
+          regions: {
+            render: function(code){
+              var doNotShow = ['US-RI', 'US-DC', 'US-DE', 'US-MD'];
+    
+              if (doNotShow.indexOf(code) === -1) {
+                return code.split('-')[1];
+              }
+            },
+            offsets: function(code){
+              return {
+                'CA': [-10, 10],
+                'ID': [0, 40],
+                'OK': [25, 0],
+                'LA': [-20, 0],
+                'FL': [45, 0],
+                'KY': [10, 5],
+                'VA': [15, 5],
+                'MI': [30, 30],
+                'AK': [50, -25],
+                'HI': [25, 50]
+              }[code.split('-')[1]];
+            }
+          }
+        },
+        regionStyle: {
+            initial: {
+                fill: '#cccccc',
+            },
+            hover: {
+                "fill-opacity": 0.9,
+            }
+        },
+        regionLabelStyle: {
+            "z-index": '3'
+        },
+        series: {
+            regions: [{
+                scale: {
+                    'published': '#19b529',
+                    'soon': '#199456',
+                },
+                attribute: 'fill',
+                values: {
+                    {% for x,y in mapPubValues.items %}
+                    "{{ x }}":"{{ y }}",
+                    {% endfor %}
+                },
+            }],
+        },
+        onRegionClick: function(event, code) {
+            var regionName = map.getRegionName(code);
+            var publishedStates = ["US-CT", 'US-GA', 'US-FL', "US-DC", 'US-NC', "US-DE", "US-MD", "US-NY", "US-OH", "US-PA", "US-VA", "US-NJ", "US-MA", "US-AR", "US-AL", "US-IL", "US-MI", "US-MO", "US-IN", "US-SC", "US-TN", "US-LA", "US-MS", 'US-TX'];
+            var phaseOne = ['US-CA']
+            if (phaseOne.indexOf(code) != -1) {
+                Swal.fire({
+                    title:'Village Black Pages: '+regionName+' Coming Soon!',
+                    html: '<a class="btn btn-nominate swal-nominate waves-effect" href="{{ nomination_url }}">NOMINATE YOUR FAVORITE BLACK-OWNED BUSINESS TODAY!<a>',
+                    showComfirmButton: false,
+                    showCancelButton: false,
+                    showCloseButton: false,
+                    text:'Village Black Pages: '+regionName+' Coming Soon!',
+                });
+            } else if (publishedStates.indexOf(code) != -1) {
+                var data = {
+                    'state': code,
+                }
+                var state = code
+                $('#flipbook-mobile-container').hide();
+                $('#flipbook-container').hide();
+                $('.preloader').show();
+                $('#cover-grid').addClass('hidden')
+                $('#vbp-grid-display-all').removeClass('hidden')
+                var instance = M.Tabs.getInstance($('.vbp-tabs'));
+                instance.select('vbp-resources');
+                $.ajax({
+                    data: data,
+                    state: state,
+                    url: '/village-black-pages/get-state',
+                    method: "GET",
+                    success: function(data) {
+                        $('.preloader').hide();
+                        $('#book').html(data);
+                        $('#mobile-book').html(data);
+                        $('#cover-page').attr('value', state);
+                        $('#cover-page-mobile').attr('value', state);
+                        $('#vbp-flipbook').attr('value', state);
+                        $('#vbp-flipbook-mobile').attr('value', state);
+                        $('#filter-form-state').attr('value', state);
+                        $('#filter-form-state-mobile').attr('value', state);
+                        ;
+                    },
+                })
+                $([document.documentElement, document.body]).animate({
+                scrollTop: $("#book").offset().top
+                }, 500);
+                
+            }
+        },
+       
+      });
+    });
+</script>
+    <script>
+    
+        $(".legendStar").on('click', function(){
+            var data = {
+                    'state': 'US-DC',
+                }
+                var state = data
+                $.ajax({
+                    data: data,
+                    state: state,
+                    url: '/village-black-pages/get-state',
+                    beforeSend: function(){
+                        $('.preloader').show();
+                        $('#flipbook-mobile-container').hide();
+                        $('#flipbook-container').hide();
+                        $('#cover-grid').addClass('hidden')
+                        $('#vbp-grid-display-all').removeClass('hidden')
+                        var instance = M.Tabs.getInstance($('.vbp-tabs'));
+                        instance.select('vbp-resources');
+                    },
+                    method: "GET",
+                    success: function(data) {
+                        $('.preloader').hide();
+                        $('#book').html(data);
+                        $('#mobile-book').html(data);
+                        $('#cover-page').attr('value', 'US-DC');
+                        $('#cover-page-mobile').attr('value', 'US-DC');
+                        $('#vbp-flipbook').attr('value', 'US-DC');
+                        $('#vbp-flipbook-mobile').attr('value', 'US-DC');
+                        $('#filter-form-state').attr('value', 'US-DC');
+                        $('#filter-form-state-mobile').attr('value', 'US-DC');
+                        
+                    }
+                })
+                $([document.documentElement, document.body]).animate({
+                scrollTop: $("#book").offset().top
+                }, 500);
+        });
+        $('.legendStar2').on('click', function(){
+            var data = {
+                    'state': 'US-DE',
+                }
+                var state = data
+                $.ajax({
+                    data: data,
+                    state: state,
+                    url: '/village-black-pages/get-state',
+                    beforeSend: function(){
+                        $('.preloader').show();
+                        $('#flipbook-mobile-container').hide();
+                        $('#flipbook-container').hide();
+                        $('#cover-grid').addClass('hidden')
+                        $('#vbp-grid-display-all').removeClass('hidden')
+                        var instance = M.Tabs.getInstance($('.vbp-tabs'));
+                        instance.select('vbp-resources');
+                    },
+                    method: "GET",
+                    success: function(data) {
+                        $('.preloader').hide();
+                        $('#book').html(data);
+                        $('#mobile-book').html(data);
+                        $('#cover-page').attr('value', 'US-DE');
+                        $('#cover-page-mobile').attr('value', 'US-DE');
+                        $('#vbp-flipbook').attr('value', 'US-DE');
+                        $('#vbp-flipbook-mobile').attr('value', 'US-DE');
+                        $('#filter-form-state').attr('value', 'US-DE');
+                        $('#filter-form-state-mobile').attr('value', 'US-DE');
+                    }
+                })
+                $([document.documentElement, document.body]).animate({
+                scrollTop: $("#book").offset().top
+                }, 500);
+        });
+        $('.legendStar3').on('click', function(){
+            var data = {
+                    'state': 'US-MD',
+                }
+                var state = data
+                $.ajax({
+                    data: data,
+                    state: state,
+                    url: '/village-black-pages/get-state',
+                    beforeSend: function(){
+                        $('.preloader').show();
+                        $('#flipbook-mobile-container').hide();
+                        $('#flipbook-container').hide();
+                        $('#cover-grid').addClass('hidden')
+                        $('#vbp-grid-display-all').removeClass('hidden')
+                        var instance = M.Tabs.getInstance($('.vbp-tabs'));
+                        instance.select('vbp-resources');
+                    },
+                    method: "GET",
+                    success: function(data) {
+                        $('.preloader').hide();
+                        $('#book').html(data);
+                        $('#mobile-book').html(data);
+                        $('#cover-page').attr('value', 'US-MD');
+                        $('#cover-page-mobile').attr('value', 'US-MD');
+                        $('#vbp-flipbook').attr('value', 'US-MD');
+                        $('#vbp-flipbook-mobile').attr('value', 'US-MD');
+                        $('#filter-form-state').attr('value', 'US-MD');
+                        $('#filter-form-state-mobile').attr('value', 'US-MD');
+                        
+                    }
+                })
+                $([document.documentElement, document.body]).animate({
+                scrollTop: $("#book").offset().top
+                }, 500);
+        });
+        
+    </script>
+<script>
+$(document).ready(function(){
+    $('.carousel').carousel({
+            indicators: true, numVisible: 10,
+        });
+        $('.tabs').tabs();
+    $('.collapsible').collapsible();
+    $('.parallax').parallax();
+    $('.dropdown-trigger').dropdown({hover: true, constrainWidth: false, coverTrigger: false, container:'.dropdown-container'});
+    $('.sidenav').sidenav();
+    $('select').formSelect();
+    $('.carousel').carousel({indicators: true, numVisible: 10,});
+    $('.tooltipped').tooltip({'margin':'0', 'transitionMovement': '0',});
+    $('.phone_us').mask('(000) 000-0000');
+    $('.money').mask('000,000.00', {reverse: true});
+    $('#other-donation').mask('000,000', {reverse: true});
+    $('.datepicker').datepicker();
+    $('.ways-to-play-tabs').tabs();
+});
+$('#category-select').on('change', function(){
+    var category = $(this).find(':selected').val()
+    $('#disabled-subcat').hide()
+    $('[cat="'+ category +'"]').removeClass('hidden')
+    $('.subcat-div[cat!="'+ category +'"]').addClass('hidden')
+});
+$('svg').resize(function(event){
+    event.preventDefault();
+})
+    $(function() {
+    $(".c1").click(function() {
+            
+            var carouselState = $(".c1.active").attr("name");
+            var data = {
+                'state': carouselState,
+            }
+            $('#cover-grid').addClass('hidden')
+            $('#vbp-grid-display-all').removeClass('hidden')
+            var instance = M.Tabs.getInstance($('.vbp-tabs'));
+            instance.select('vbp-resources');
+            var state = data
+            $.ajax({
+                data: data,
+                state: state,
+                url: '/village-black-pages/get-state',
+                beforeSend: function(){
+                    $('.preloader').show();
+                    $('#flipbook-mobile-container').hide();
+                    $('#flipbook-container').hide();
+                },
+                method: "GET",
+                success: function(data) {
+                    $('.preloader').hide();
+                    $('#book').html(data);
+                    $('#mobile-book').html(data);
+                    $('#cover-page').attr('value', carouselState);
+                    $('#cover-page-mobile').attr('value', carouselState);
+                    $('#filter-submit').attr('id', 'filter-submit-state'+ carouselState +'');
+                    $('#vbp-flipbook').attr('value', carouselState);
+                    $('#vbp-flipbook-mobile').attr('value', carouselState);
+                    $('#filter-form-state').attr('value', carouselState);
+                    $('#filter-form-state-mobile').attr('value', carouselState);
+                }
+            })
+            $([document.documentElement, document.body]).animate({
+            scrollTop: $("#book").offset().top
+            }, 500);
+            
+        })
+    });
+    $(".c2").click(function() {
+            
+            var carouselState = $(".c2.active").attr("name");
+            var data = {
+                'state': carouselState,
+            }
+            $('#cover-grid').addClass('hidden')
+            $('#vbp-grid-display-all').removeClass('hidden')
+            var instance = M.Tabs.getInstance($('.vbp-tabs'));
+            instance.select('vbp-resources');
+            var state = data
+            $.ajax({
+                data: data,
+                state: state,
+                url: '/village-black-pages/get-state',
+                beforeSend: function(){
+                    $('.preloader').show();
+                    $('#flipbook-mobile-container').hide();
+                    $('#flipbook-container').hide();
+                },
+                method: "GET",
+                success: function(data) {
+                    $('.preloader').hide();
+                    $('#book').html(data);
+                    $('#mobile-book').html(data);
+                    $('#cover-page').attr('value', carouselState);
+                    $('#cover-page-mobile').attr('value', carouselState);
+                    $('#filter-submit').attr('id', 'filter-submit-state'+ carouselState +'');
+                    $('#vbp-flipbook').attr('value', carouselState);
+                    $('#vbp-flipbook-mobile').attr('value', carouselState);
+                    $('#filter-form-state').attr('value', carouselState);
+                    $('#filter-form-state-mobile').attr('value', carouselState);
+                }
+            })
+            $([document.documentElement, document.body]).animate({
+            scrollTop: $("#book").offset().top
+            }, 500);
+            
+        })
+    $('#vbp-grid-display-all').on('click', function(){
+        
+        $('#cover-grid').toggleClass('hidden');
+    });
+    $('#vbp-grid-display').on('hover', function(){
+        $('#toggle-arrow-grid').toggleClass('rotated')
+    })
+    $('.grid-item').on('click', function(){
+        var carouselState = $(this).attr("name");
+            var data = {
+                'state': carouselState,
+            }
+            $('#cover-grid').addClass('hidden')
+            $('#vbp-grid-display-all').removeClass('hidden')
+            var state = data
+            $.ajax({
+                data: data,
+                state: state,
+                url: '/village-black-pages/get-state',
+                beforeSend: function(){
+                    $('.preloader').show();
+                    $('#flipbook-mobile-container').hide();
+                    $('#flipbook-container').hide();
+                },
+                method: "GET",
+                success: function(data) {
+                    $('.preloader').hide();
+                    $('#book').html(data);
+                    $('#mobile-book').html(data);
+                    $('#cover-page').attr('value', carouselState);
+                    $('#cover-page-mobile').attr('value', carouselState);
+                    $('#filter-submit').attr('id', 'filter-submit-state'+ carouselState +'');
+                    $('#vbp-flipbook').attr('value', carouselState);
+                    $('#vbp-flipbook-mobile').attr('value', carouselState);
+                    $('#filter-form-state').attr('value', carouselState);
+                    $('#filter-form-state-mobile').attr('value', carouselState);
+                }
+            })
+            $([document.documentElement, document.body]).animate({
+            scrollTop: $("#book").offset().top
+            }, 500);
+    });
+    
+</script>
+
+<style>
+    .rotated {
+        transform: rotate(90deg)
+    }
+    .vbp-text {
+        text-align: center;
+    }
+    .vbp-tabs {
+        background-color: black;
+    }
+    .vbp-tabs li:nth-of-type(0) {
+        width: 25%
+    }
+    .vbp-tabs li:nth-of-type(0) {
+        width: 75%
+    }
+    .vbp-tabs a {
+        background-color: black;
+        color: white !important;
+        font-size: 12px !important;
+    }
+    .vbp-tabs a.active {
+        color: rgb(39, 187, 3) !important
+    }
+    .vbp-tabs .indicator {
+        background-color: rgb(39, 187, 3) !important;
+    }
+    .vbp-tabs .indicator:nth-of-type(0) {
+        width: 25%
+    }
+    .vbp-tabs .indicator:nth-of-type(1) {
+        width: 75%
+    }
+    .btn-nominate:focus {
+        background-color: rgb(196, 66, 66) !important
+    }
+    #vbp-nomination-form b {
+        color: red
+    }
+    @media only screen and (min-width: 401px) {
+        .vbp-tabs a {
+            font-size: 14px !important;
+        }
+    }
+    @media only screen and (min-width: 601px){
+        .vbp-tabs a {
+            font-size: 18px !important;
+        }
+        #nomination-form .input-field input{
+        font-size: 16px;
+        font-weight: 300;
+        letter-spacing: 1px;
+        padding: 0
+        }
+        [type="radio"]:not(:checked)+span, [type="radio"]:checked+span {
+            font-size: 16px !important;
+        }
+        .helper-text {
+            font-size: 16px !important;
+        }
+        #nomination-form .input-field label{
+            font-size: 16px
+        }
+    }
+    @media only screen and (min-width: 992px){
+        .vbp-tabs a {
+            font-size: 22px !important;
+        }
+        .vbp-tabs li:nth-of-type(0) {
+            width: 50%
+        }
+        .vbp-tabs li:nth-of-type(0) {
+            width: 50%
+        }
+        .vbp-tabs .indicator:nth-of-type(0) {
+            width: 50%
+        }
+        .vbp-tabs .indicator:nth-of-type(1) {
+            width: 50%
+        }
+    }
+    @media only screen and (min-width: 1201px){
+
+}
+    #nomination-form .input-field input{
+        font-size: 16px;
+        font-weight: 300;
+        letter-spacing: 1px;
+        padding: 0
+        }
+        [type="radio"]:not(:checked)+span, [type="radio"]:checked+span {
+            font-size: 16px !important;
+        }
+        .helper-text {
+            font-size: 16px !important;
+        }
+        #nomination-form .input-field label{
+            font-size: 16px
+        }
+    .carousel .indicators .indicator-item {
+        background-color: rgba(208, 208, 208, 0.5);
+    }
+    .carousel .indicators .indicator-item.active {
+        background-color: rgba(118, 193, 111, 0.5);
+    }
+    
+    .hidden {
+        display: none;
+    }
+    .flipbook-wrapper {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        margin: 0%;
+        width: 90%;
+    }
+    #next {
+        padding:2%;
+        transition: all 0.3s ease-in-out;
+    }
+    #prev {
+        padding:2%;
+        transition: all 0.3s ease-in-out;
+    }
+    .aspect {
+        padding-bottom: 70%;
+        position: relative;
+        width: 100%;
+    }
+    .aspect-inner {
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .page {
+        background-color: white;
+    }
+    #flipbook {
+        height:93%;
+        transition: margin-left 0.25s ease-out;
+        width: 100%;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+    @media only screen and (max-width: 992px){
+        #flipbook-mobile-container {
+            display: block;
+            height: 220vw
+        }
+        #flipbook-fullsize-container {
+            display: none
+        }
+    }
+    @media only screen and (min-width: 993px){
+        #flipbook-mobile-container {
+            display: none;
+            
+        }
+        #flipbook-fullsize-container {
+            display: block
+        }
+    }
+    #flipbook-mobile {
+        transition: margin-left 0.25s ease-out;
+        width: 100%;
+        height: 186%;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+    .flipbook .shadow {
+        box-shadow: 0 4px 10px #666;
+    }
+    .flipbook a {
+        transition: color 0.3s ease-in-out
+    }
+    .flipbook a:hover {
+        color: rgb(73, 113, 216);
+    }
+    @media only screen and (max-width:992px) {
+        .flipbook-arrows {
+        font-size: 28px;
+        cursor: crosshair;
+        color:rgb(113, 112, 112);
+        padding-left:0;
+    }
+    }
+    @media only screen and (min-width:993px) {
+        .flipbook-arrows {
+        font-size: 36px;
+        cursor: crosshair;
+        color:rgb(113, 112, 112);
+        padding-left:0;
+    }
+    }
+    .flipbook .page {
+        height: 100%;
+        width: 100%;
+    }
+    .intro-page1{
+        height:100%;
+        width:100%;
+    }
+    .intro-page1 p {
+        margin-bottom:0;
+        margin-top:0;
+        font-weight:200;
+        letter-spacing:0.25px;
+        font-size: 0.7vw;
+    }
+    .intro-page1 a {
+        font-weight:200;
+        letter-spacing:0.25px;
+        transform: scale(1,0.9);
+        font-size: 0.7vw;
+        color:rgb(176, 176, 176);
+    }
+    tr {
+        border-bottom: sollid rgb(136, 136, 136) 1px;
+    }
+    .td.sc-td {
+        font-size: 0.5vw
+    }
+  @media only screen and (max-width: 400px) {
+        td {
+            font-size: 10px;
+        }
+        td, th {
+        padding: 0;
+        }
+        #prev-mobile {
+            font-size: 16px !important
+        }
+        #next-mobile {
+            font-size: 16px !important
+        }
+        .roomformore p {
+            font-size: 8px
+        }
+        .tc-title{
+            font-size: 16px
+        }
+}
+    @media only screen and (min-width: 401px) {
+        td {
+            font-size: 12px;
+        }
+        td, th {
+            padding: 0;
+        }
+        .roomformore p {
+            font-size: 10px
+        }
+        .tc-title{
+            font-size: 18px
+        }
+    }
+    @media only screen and (min-width: 490px) {
+        td {
+            font-size: 13;
+        }
+        td, th {
+            padding: 1px;
+        }
+        .roomformore p {
+            font-size: 13
+        }
+        .tc-title{
+            font-size: 19px
+        }
+    }
+    @media only screen and (min-width: 540px) {
+        td {
+            font-size: 14;
+        }
+        td, th {
+            padding: 1.2px;
+        }
+        .roomformore p {
+            font-size: 14
+        }
+        .tc-title{
+            font-size: 20px
+        }
+    }
+    @media only screen and (min-width: 601px) {
+        td {
+            font-size: 15;
+        }
+        td, th {
+            padding: 2;
+        }
+        .tc-title{
+            font-size: 17px
+        }
+    }
+    @media only screen and (min-width: 660px) {
+        td {
+            font-size: 16;
+        }
+        td, th {
+            padding: 2px;
+        }
+        .roomformore p {
+            font-size: 15
+        }
+        .tc-title{
+            font-size: 22px
+        }
+    }
+    @media only screen and (min-width: 701px) {
+        td {
+            font-size: 18;
+        }
+        td, th {
+            padding: 3px;
+        }
+        .roomformore p {
+            font-size: 17
+        }
+        .tc-title{
+            font-size: 24px
+        }
+    }
+    @media only screen and (min-width: 800px) {
+        td {
+            font-size: 20;
+        }
+        td, th {
+            padding: 3px;
+        }
+        .roomformore p {
+            font-size: 18
+        }
+        .tc-title{
+            font-size: 26px
+        }
+    }
+    @media only screen and (min-width: 993px) {
+        td {
+            font-size: 12;
+        }
+        td, th {
+            padding: 1px;
+        }
+        .roomformore p {
+            font-size: 12
+        }
+        .tc-title{
+            font-size: 18px
+        }
+}
+    @media only screen and (min-width: 1125px) {
+        td {
+            font-size: 13;
+        }
+        td, th {
+            padding: 1.2px;
+        }
+        .roomformore p {
+            font-size: 12
+        }
+        .tc-title{
+            font-size: 20px
+        }
+    }
+    @media only screen and (min-width: 1300px) {
+        td {
+            font-size: 14;
+        }
+        td, th {
+            padding: 1.1px;
+        }
+        .roomformore p {
+            font-size: 12
+        }
+        .tc-title{
+            font-size: 21px
+        }
+    }
+    @media only screen and (min-width: 1400px) {
+        td {
+            font-size: 15;
+        }
+        td, th {
+            padding: 1.1px;
+        }
+        .roomformore p {
+            font-size: 13
+        }
+        .tc-title{
+            font-size: 22px
+        }
+    }
+    @media only screen and (min-width: 1500px) {
+        td {
+            font-size: 16;
+        }
+        td, th {
+            padding: 1.2px;
+        }
+        .roomformore p {
+            font-size: 16
+        }
+        .tc-title{
+            font-size: 23px
+        }
+    }
+    @media only screen and (min-width: 1600px) {
+        td {
+            font-size: 18;
+        }
+        td, th {
+            padding: 1.5px;
+        }
+        .roomformore p {
+            font-size: 16
+        }
+        .tc-title{
+            font-size: 24px
+        }
+    }
+    @media only screen and (min-width: 1700px) {
+        td {
+            font-size: 19;
+        }
+        td, th {
+            padding: 1.7px;
+        }
+        .roomformore p {
+            font-size: 17
+        }
+        .tc-title{
+            font-size: 25px
+        }
+    }
+    @media only screen and (min-width: 1800px) {
+        td {
+            font-size: 20;
+        }
+        td, th {
+            padding: 2px;
+        }
+        .roomformore p {
+            font-size: 17
+        }
+        .tc-title{
+            font-size: 26px
+        }
+    }
+    td {
+        font-weight:300;
+        letter-spacing: 0px;
+    }
+    
+    .select-wrapper input {
+        color:white
+    }
+    #select-options-c18df006-ccb4-46e4-d0d7-bcc6fa78a6b4{
+        color:white
+    }
+    .submit-btn {
+    border: solid 1px rgb(237, 237, 237);
+    background-color: rgb(57, 57, 57);
+    cursor: pointer;
+    padding: 30px 0px;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 300;
+    outline: none;
+    position: relative;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    overflow: hidden;
+    border-radius:0;
+    transform:scale(1,0.9);
+    line-height:0px;
+    width:40%;
+    font-size:16px
+  }
+  .view-btn {
+      background-color:rgba(68, 140, 32, 0.66); 
+      font-size: 16px; 
+      width:120px;
+      margin-top:20px;
+      margin-bottom:0
+    }
+  .submit-btn:after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    width: 100%;
+    height: 0;
+    top: 50%;
+    left: 50%;
+    background: rgb(237, 237, 237);
+    opacity: 0;
+    -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    -moz-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    -ms-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  }
+  .submit-btn:hover,
+  .submit-btn:active {
+    color: #319657;
+    background-color: rgb(89, 121, 89);
+  }
+
+  .submit-btn:hover:after {
+    height: 300%;
+    opacity: 1;
+  }
+  .submit-btn2 {
+    border: solid 1px rgb(237, 237, 237);
+    background-color: rgb(57, 57, 57);
+    cursor: pointer;
+    padding: 30px 0px;
+    display: inline-block;
+    margin: 15px 5px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 300;
+    outline: none;
+    position: relative;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    overflow: hidden;
+    border-radius:0;
+    transform:scale(1,0.9);
+    line-height:0px;
+    width:40%;
+    font-size:16px
+  }
+  .submit-btn2:after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    width: 100%;
+    height: 0;
+    top: 50%;
+    left: 50%;
+    background: rgb(237, 237, 237);
+    opacity: 0;
+    -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    -moz-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    -ms-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  }
+  .submit-btn2:hover,
+  .submit-btn2:active {
+    color: #319657;
+    background-color: rgb(89, 121, 89);
+  }
+  .jvectormap-legend-tick {
+        background: url("https://etv-empowerthevillage.s3.amazonaws.com/static/img/mapstard.png");
+        background-size: 97%;
+        background-repeat:no-repeat;
+        background-position-y: -2px
+    }
+    
+              .jvectormap-legend-tick-text {
+                  font-size: 10px;
+                  padding: 10px;
+                  font-weight: 800
+              }
+  .submit-btn2:hover:after {
+    height: 200%;
+    opacity: 1;
+  }
+  #state-strategy-title {
+      font-family: oskar-inline;
+      color: rgb(157, 59, 59);
+  }
+ .map-container {
+     padding:0;
+     padding-bottom: 60px
+ }
+ #map {
+     width: 100%
+ }
+ @media only screen and (max-width: 500px) {
+    .jvectormap-container {
+     max-height: 400px
+ }
+
+ .jvectormap-container svg {
+      width: 100%;
+      height: 300px;
+      zoom: 100%
+  }
+  .jvectormap-marker {
+    width: 30px;
+    transform: translateX(485px) translateY(485px) !important;
+    height: 30px !important;
+    opacity: 0.7
+}
+}
+@media only screen and (min-width: 501px) {
+    .jvectormap-container {
+     max-height: 450px
+ }
+
+ .jvectormap-container svg {
+      width: 100%;
+      height: 400px;
+  }
+ 
+  .jvectormap-marker {
+    width: 40px;
+    transform: translateX(479px) translateY(480px);
+    height: 40px !important;
+}
+}
+@media only screen and (min-width: 701px) {
+    .jvectormap-container {
+     max-height: 500px;
+ }
+
+ .jvectormap-container svg {
+      width: 100%;
+      height: 400px;
+  }
+  
+}
+@media only screen and (min-width: 992px) {
+    .jvectormap-container {
+     max-height: 700px
+ }
+
+ .jvectormap-container svg {
+      width: 100%;
+      height: 600px;
+  }
+}
+
+
+  [type="radio"]:checked+span:after, [type="radio"].with-gap:checked+span:before, [type="radio"].with-gap:checked+span:after {
+    border: 2px solid rgb(67, 135, 33);
+}
+[type="radio"]:checked+span:after, [type="radio"].with-gap:checked+span:after {
+    background-color: rgb(67, 135, 33);
+}
+    .textfield {
+      font-family: 'Poppins';
+      font-weight: 300;
+      letter-spacing: 1px;
+      color:rgb(60, 60, 60);
+      font-size:18px
+    }
+    .input-field {
+      padding-bottom: 10px;
+    }
+    /* label color */
+   .input-field label {
+     color: rgb(128, 128, 128);;
+     font-family: 'Poppins';
+      font-weight: 300;
+      letter-spacing: 1px;
+      font-size:14px;
+      padding-bottom:10px
+    }
+    /* label focus color */
+    .input-field input[type=text]:focus + label {
+      color: rgb(67, 135, 33) !important;
+    }
+    /* label underline focus color */
+    .input-field input[type=text]:focus {
+      border-bottom: 1px solid rgb(67, 135, 33) !important;
+      box-shadow: 0 1px 0 0 rgb(67, 135, 33) !important;
+    }
+    
+    /* icon prefix focus color */
+    .input-field .prefix.active {
+      color: #000;
+    }
+    .select-wrapper input {
+    color: rgb(60, 60, 60);
+}
+    .select-dropdown {
+      font-family: 'Poppins';
+      font-weight: 300;
+      color:rgb(60, 60, 60);
+      letter-spacing: 1px;
+      padding-top: 10px
+    }
+    #page {
+      background-image: url("https://etv-empowerthevillage.s3.amazonaws.com/static/img/login-collage.svg");
+      background-size: 50%;
+      background-repeat: repeat;
+    }
+    .submit-btn {
+    border: solid 1px rgb(237, 237, 237);
+    background-color: rgb(57, 57, 57);
+    cursor: pointer;
+    padding: 30px 0px;
+    display: inline-block;
+    margin: 15px 5px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 300;
+    outline: none;
+    position: relative;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    overflow: hidden;
+    border-radius:0;
+    transform:scale(1,0.9);
+    line-height:0px;
+    width:40%;
+    font-size:16px
+  }
+  .swal2-confirm {
+      display: none !important
+  }
+  .submit-btn:after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    width: 100%;
+    height: 0;
+    top: 50%;
+    left: 50%;
+    background: rgb(237, 237, 237);
+    opacity: 0;
+    -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    -moz-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    -ms-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  }
+  .submit-btn:hover,
+  .submit-btn:active {
+    color: #319657;
+    background-color: rgb(89, 121, 89);
+  }
+
+  .submit-btn:hover:after {
+    height: 300%;
+    opacity: 1;
+  }
+  .recommended-label {
+    color: rgb(128, 128, 128);;
+     font-family: 'Poppins';
+      font-weight: 300;
+      letter-spacing: 1px;
+      font-size:16px;
+      padding-bottom:0px
+  }
+  
+  #cover-page {
+    background-image: url('https://etv-empowerthevillage.s3.amazonaws.com/static/img/vbp/mv-cover.png');
+    background-size: 100%
+  }
+  
+</style>
+{% endblock %}
