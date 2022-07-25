@@ -11,7 +11,60 @@
   <div class="marquee">
     It Takes A Village ... Empower The Village!&nbsp;&nbsp;   |&nbsp;&nbsp;   Explore ETV's Four Strategic Pillars&nbsp;&nbsp;  |  
   </div>
-  <div class="pillar-intro" xstyle="margin-bottom: 30px;">
+  <div class="row valign-lg" style="margin-bottom: 7px">
+    <div class="col s12 l4 intro-tile">
+      <a href="{{ vbp_url }}" class="fade-in"><img src="{% static 'img/vbp_new_r.png' %}"></a>
+    </div>
+    <div class="col s12 l4 intro-tile">
+      <a href="{{ efbf_url }}" class="fade-in"><img src="{% static 'img/EFBF_new_r.png' %}"></a>
+    </div>
+    <div class="col s12 l4 intro-tile tile-final">
+      <a href="{{ ven_url }}" class="fade-in"><img src="{% static 'img/ven-long.png' %}"></a>
+    </div>
+  </div>
+  <style>
+    
+    .intro-tile {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .intro-tile a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-top:15px !important;
+      padding-bottom: 10px !important;
+      padding-left: 0 !important;
+      width: 100%
+    }
+    .intro-tile img {
+      width: 90%
+    }
+    .tile-final {
+      margin-top: 10px;
+      margin-bottom: 3%
+    }
+    @media only screen and (min-width: 601px){
+      .intro-tile img {
+        width: 70%
+      }
+    }
+    @media only screen and (min-width: 901px){
+      .intro-tile img {
+        width: 90%
+      }
+      .valign-lg {
+        display: flex;
+        align-items: center;
+      }
+      .tile-final {
+        margin-top: 0px;
+        margin-bottom: 0px;
+      }
+    }
+  </style>
+  <div class="pillar-intro" style="margin-bottom: 30px;">
     <div class="row pillar-intro-row z-depth-2">
       <a href="{{ ep_url }}" class="pillar-intro-link">
         <div class="col s12 l3 pillar-intro-col fade-in" style="background-image: url('{% static 'img/prosperity.svg' %}')">
@@ -59,21 +112,6 @@
         </div>
       </a>
     </div>
-  </div>
-
-  <div>
-    <div class="center-align" style="padding-top: 2%; padding-bottom: 2%"><img src="{% static 'img/footer-logo.png' %}" width="30%"></div>
-    <div class="center-align home-heading" style="background: rgb(226, 10, 32);
-      background: linear-gradient(135deg, rgb(226, 10, 32) 0%, rgba(1,166,80,1) 100%); margin-top: 0; margin-bottom: 2%;
-      background-clip: text;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent; font-family: oskar-inline; line-height: 42px">For The Love of Art Juneteenth Celebration!
-    </div>
-    <div class="divider-dotted" style="border-bottom: dotted 2px rgb(214, 214, 214); width: 60%; margin-left: 20%; margin-bottom: 30px"></div>
-    <div class="center-align" style="margin-bottom: 30px">
-    <a href="/events/art-gallery">Click to view and purchase artwork from ETV's For the Love of Art Juneteenth Celebration!</a>
-    </div>
-    <div style="position:relative;padding-top:max(60%,326px);height:0;width:100%"><iframe allow="clipboard-write" loading="lazy" sandbox="allow-top-navigation allow-top-navigation-by-user-activation allow-downloads allow-scripts allow-same-origin allow-popups allow-modals allow-popups-to-escape-sandbox" allowfullscreen="true" style="position:absolute;border:none;width:100%;height:100%;left:0;right:0;top:0;bottom:0;" src="https://e.issuu.com/embed.html?backgroundColor=%23ffffff&backgroundColorFullscreen=%23ffffff&d=brochure_resized_1_&hideIssuuLogo=true&hideShareButton=true&showOtherPublicationsAsSuggestions=true&u=empowerthevillage"></iframe></div>
   </div>
 
   <div class="carousel carousel-slider center z-depth-2" id="home-carousel">
@@ -346,7 +384,7 @@
               <div class="col s12">
                 <p class="left-align">
                   <b>February 24th, 2022 - Morristown, New Jersey –</b> ETV co-hosts an educational  panel and its founder explores the vestiges of PTSS, the impact of U.S. policy and actions throughout history that have shaped the state of the Black economy today and offers solutions on accelerating positive change through accurately reframing the narrative, leaning into a growth mindset and take economic-based action.</p>
-                  <!-- <p><a href="">Check out excerpts from the roundtable.</a></p> -->
+                
                 <a target="_blank" href="https://issuu.com/empowerthevillage/docs/press_release_empower_the_village_says_february_is?mode=window" class="btn grey darken-4">Full Press Release</a>
               </div>
             </div>
@@ -402,14 +440,6 @@
 
     
     <script>
-        $(document).ready(function(){
-            Swal.fire({
-              html: '<a href="/events/art-gallery/"><img src="{% static "img/shop-art.webp" %}" width=100%></a>',
-              showCancelButton: false,
-              showCloseButton: true,
-              showConfirmButton: false,
-            })     
-        })
         $('#mailchimp-efbf-form').submit(event, function(){
             event.preventDefault();
             var email = $('#mailchimp-email-efbf').val()
