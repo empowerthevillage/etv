@@ -3,13 +3,13 @@
 
 {% block title %}ETV | Education{% endblock %}
 {% block canonical %}https://www.empowerthevillage.org/education-and-employment/{% endblock %}
-{% block seo_description %}ETV Strategic Pillars: Education{% endblock %}
+{% block seo_description %}ETV Strategic Pillars: Education & Culture{% endblock %}
 
 {% block content %}
 <div class="parallax-container z-depth-3 box-shadow valign-wrapper">
     
     <div class="container z-depth-4 center-align parallax-banner" style="margin-top: 0">
-        <img src='{% static "img/education_title_updated.png" %}' style="width:80%; padding: 6%">
+        <img src='{% static "img/ed-culture.png" %}' style="width:100%; padding: 6%">
     </div>
     <div class="parallax">
         <img src='{% static "img/ed_collage_big.png" %}'>
@@ -18,24 +18,24 @@
 </div>
 <div style="background: url('{% static 'img/ed_collage_big.png' %}'); background-size: 180%; height: 100%">
     <div class="row" style="height: 100%; background-color: rgba(255, 255, 255, 0.781); width:100%">
-        <div class="col s12 l10 offset-l1  pillar-body">
-            <div class="row" style="width: 90%; margin-left: 5%">
+        <div class="col s12  pillar-body">
+            <div class="row" style="width: 90%; margin-left: 5%;">
                 <div class="row center-align">
                     <p class="pillar-tagline">
-                        ETV’s Education pillar is designed to prepare The Village to succeed in the 21st century workforce. Our programs empower students and other community members to leverage academic enrichment, prepare for college success, and explore technical/vocational training opportunities.
+                        ETV’s Education & Culture pillar is designed to prepare The Village for success. Our programs empower students and other community members to leverage academic enrichment and vocational training, prepare for college success, and explore the rich culture and history of Black Americans.
                     </p>
                     <div class="divider" style="margin-bottom: 15px; margin-top: 15px;width: 50%; margin-left: 25%; border-bottom: dotted 3px rgb(222, 222, 222); background-color: transparent"></div>
                     <p class="dyk" style="color: rgb(184, 23, 23); margin:0; padding:0; padding-top: 2%; padding-bottom: 20px; margin-top: -10px">State Of The Village: <a style="color:rgba(38, 38, 38, 0.947); font-family: oskar">Did You Know...?</a></p>
                     <div class="divider"></div>
                     <div class="row" style="margin-bottom: 0; padding-top: 3%; padding-left: 1%; padding-right: 1%;">
                         
-                        <div class="col s12 l10 offset-l1">
+                        <div class="col s12 l6 offset-l3">
                             <div class="row dyk-row">
-                                <p class="col s12 m8 offset-m1 state-text" style="align-self: center; margin-right: 20px" > ~23% of the Black adult population has a bachelor’s degree or higher (versus ~36% of White adults)</p>
+                                <p class="col s12 state-text" style="align-self: center; margin-right: 20px" > ~23% of the Black adult population has a bachelor’s degree or higher (versus ~36% of White adults)</p>
                                 <img class="col s12 m3 ed-ss" src="{% static 'img/education_ss_2.png'%}">
                             </div>
                         </div>
-                        <div class="col s12">
+                        <div class="col s12 l6 offset-l3">
                             <div class="row dyk-row">
                                 <img class="ed-gc" src="{% static 'img/grad-cap.png' %}">
                                 <p class="state-text">
@@ -110,7 +110,22 @@
                 </div>
    
             </div>
-                
+            <div class="row valign-lg">
+                <div class="col s12 xl6" style="padding: 0">
+                    <iframe class="z-depth-1 event-thumbnail" width="100%" src="https://www.youtube.com/embed/ql8U8oy12wA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="col s12 xl6 event-text center-align" style="padding: 3%">
+                    <a href="https://issuu.com/empowerthevillage/docs/press_release_empower_the_village_says_february_is?mode=window" target="_blank"><h6 class="event-title">Community Education Panel - Post Traumatic Slave Syndrome & Reframing the Narrative</h6></a>
+                    <h6 class="event-date">February 24th, 2022</h6>
+                    <a href="https://youtu.be/ql8U8oy12wA" target="_blank"><p class="event-location">Virtual Event - Click Here To Watch</p></a>
+                    
+                    <p class="event-description"> <b>February 24th, 2022 - Morristown, New Jersey –</b> ETV co-hosts an educational  panel and its founder explores the vestiges of PTSS, the impact of U.S. policy and actions throughout history that have shaped the state of the Black economy today and offers solutions on accelerating positive change through accurately reframing the narrative, leaning into a growth mindset and take economic-based action.</p>
+                    
+                    <div class="row" style="display:flex; justify-content: center">
+                        <a class="btn btn-large learn-more-btn" href="https://issuu.com/empowerthevillage/docs/press_release_empower_the_village_says_february_is?mode=window" target="_blank" style="background-color:#b8261c">Full Press Release</a>
+                    </div>
+                </div>
+            </div>
             
         </div>
     </div>
@@ -380,6 +395,162 @@
         }
         blockquote {
             font-size: 24px;
+        }
+    }
+</style>
+<style>
+    
+    .event-text {
+        padding: 3% !important;
+        text-align: center;
+    }
+    .event-container {
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.897);
+        padding: 5%
+    }
+    .event-title {
+        font-family: oskar-inline;
+        font-size: 21px;
+        color: #01a650;
+        transition: color 0.2s ease-in-out;
+        text-align: center
+    }
+    .event-title:hover {
+        color: #068845
+    }
+    .event-date {
+        font-family: oskar;
+        font-size: 16px;
+        font-weight: 400;
+        text-align: center
+    }
+    .event-location {
+        font-family: oskar;
+        margin-top: 5px;
+        margin-bottom: 0;
+        font-size: 18px
+    }
+    .event-description {
+        font-size: 12px;
+        font-weight: 200
+    }
+    .learn-more-btn {
+        margin-top: 10px
+    }
+    @media only screen and (min-width: 601px) {
+        .event-container {
+            padding: 2% 3%
+        }
+        .event-page-title {
+            font-family: oskar-inline;
+            font-size: 42px;
+            margin-bottom: 1%
+        }
+        .event-title {
+            font-size: 28px;
+        }
+        .event-date {
+            font-size: 20px;
+        }
+        .event-location {
+            font-family: oskar;
+            margin-top: 3px;
+            margin-bottom: 0;
+            font-size: 20px
+        }
+        .event-description {
+            font-size: 14px;
+            
+        }
+    }
+    @media only screen and (min-width: 601px) {
+        .event-text {
+            padding: 3% !important;
+            text-align: center;
+        }
+        .event-title {
+            font-size: 28px;
+        }
+        .event-date {
+            font-size: 20px;
+        }
+        .event-location {
+            font-family: oskar;
+            margin-top: 3px;
+            margin-bottom: 0;
+            font-size: 20px
+        }
+        .event-description {
+            font-size: 14px;
+            
+        }
+    }
+    @media only screen and (min-width: 993px) {
+        .event-text {
+            text-align: left;
+            padding: 2% !important
+        }
+        .event-title {
+            font-size: 26px;
+        }
+        .event-date {
+            font-size: 18px;
+        }
+        .event-location {
+            font-family: oskar;
+            margin-top: 3px;
+            margin-bottom: 0;
+            font-size: 20px
+        }
+        .event-description {
+            font-size: 14px;
+            
+        }
+    }
+    @media only screen and (min-width: 1226px) {
+        .event-container {
+            padding: 5% 3%
+        }
+        .event-page-title {
+            font-size: 49px;
+        }
+        .event-title {
+            font-size: 30px;
+        }
+        .event-date {
+            font-size: 22px;
+        }
+        .event-location {
+            font-family: oskar;
+            margin-top: 3px;
+            margin-bottom: 0;
+            font-size: 24px
+        }
+        .event-description {
+            font-size: 14px;
+            
+        }
+    }
+    @media only screen and (min-width: 1400px) {
+        .event-page-title {
+            font-size: 56px;
+        }
+        .event-title {
+            font-size: 38px;
+        }
+        .event-date {
+            font-size: 24px;
+        }
+        .event-location {
+            font-family: oskar;
+            margin-top: 3px;
+            margin-bottom: 0;
+            font-size: 26px
+        }
+        .event-description {
+            font-size: 16px;
+            
         }
     }
 </style>

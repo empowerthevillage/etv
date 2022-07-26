@@ -11,60 +11,287 @@
   <div class="marquee">
     It Takes A Village ... Empower The Village!&nbsp;&nbsp;   |&nbsp;&nbsp;   Explore ETV's Four Strategic Pillars&nbsp;&nbsp;  |  
   </div>
-  <div class="row valign-lg" style="margin-bottom: 7px">
-    <div class="col s12 l4 intro-tile">
-      <a href="{{ vbp_url }}" class="fade-in"><img src="{% static 'img/vbp_new_r.png' %}"></a>
-    </div>
-    <div class="col s12 l4 intro-tile">
-      <a href="{{ efbf_url }}" class="fade-in"><img src="{% static 'img/EFBF_new_r.png' %}"></a>
-    </div>
-    <div class="col s12 l4 intro-tile tile-final">
-      <a href="{{ ven_url }}" class="fade-in"><img src="{% static 'img/ven-long.png' %}"></a>
-    </div>
-  </div>
-  <style>
+  
+  <div class="carousel carousel-slider center z-depth-2" id="home-carousel">
     
-    .intro-tile {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .intro-tile a {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding-top:15px !important;
-      padding-bottom: 10px !important;
-      padding-left: 0 !important;
-      width: 100%
-    }
-    .intro-tile img {
-      width: 90%
-    }
-    .tile-final {
-      margin-top: 10px;
-      margin-bottom: 3%
-    }
-    @media only screen and (min-width: 601px){
-      .intro-tile img {
-        width: 70%
+    <style>
+      .carousel-title {
+        font-family: oskar;
+        font-size: 16px;
+        line-height: 20px;
       }
-    }
-    @media only screen and (min-width: 901px){
-      .intro-tile img {
+      .donate-img {
         width: 90%
       }
-      .valign-lg {
-        display: flex;
-        align-items: center;
+      #panel-four .carousel-wash{
+        padding-top: 12%
       }
-      .tile-final {
-        margin-top: 0px;
-        margin-bottom: 0px;
+      .carousel-wash {
+        padding-top: 1%
       }
-    }
-  </style>
-  <div class="pillar-intro" style="margin-bottom: 30px;">
+      .mission-thumbnail {
+        height: 190px;
+        margin-left: -10
+      }
+      .pillars-thumbnail {
+        height: 190px;
+        margin-left: 0;
+        padding-left: 0
+      }
+      .carousel-item {
+        min-height: 0 !important
+      }
+      @media only screen and (min-width:400px){
+        .carousel-title {
+        font-size: 18px;
+        line-height: 24px;
+      }
+      .donate-img {
+        width: 80%
+      }
+        #panel-four .carousel-wash{
+        padding-top: 5%
+      }
+        .mission-thumbnail {
+        height: 220px;
+        margin-left: -10
+      }
+      .pillars-thumbnail {
+        height: 220px;
+        margin-left: 0;
+        padding-left: 0
+      }
+      }
+      @media only screen and (min-width:480px){
+        .carousel-title {
+        font-family: oskar;
+        font-size: 20px;
+        line-height: 20px;
+      }
+        #panel-four .carousel-wash{
+        padding-top: 6%
+      }
+        .mission-thumbnail {
+        height: 250px;
+        margin-left: -10
+      }
+      .pillars-thumbnail {
+        height: 250px;
+        margin-left: 0;
+        padding-left: 0
+      }
+      }
+      @media only screen and (min-width:540px){
+        #panel-four .carousel-wash{
+        padding-top: 4%
+      }
+        .mission-thumbnail {
+        height: 280px;
+        margin-left: -10
+      }
+      .pillars-thumbnail {
+        height: 280px;
+        margin-left: 0;
+        padding-left: 0
+      }
+      }
+      @media only screen and (min-width:601px){
+        .carousel-title {
+        font-size: 22px;
+        line-height: 32px;
+      }
+      .donate-img {
+        width: 100%
+      }
+        #panel-four .carousel-wash{
+        padding-top: 5%
+      }
+      }
+      @media only screen and (min-width:620px){
+        
+        .mission-thumbnail {
+        height: 310px;
+        margin-left: -10
+      }
+      .pillars-thumbnail {
+        height: 310px;
+        margin-left: 0;
+        padding-left: 0
+      }
+      }
+      @media only screen and (min-width:695px){
+        #panel-four .carousel-wash{
+        padding-top: 4%
+      }
+        .mission-thumbnail {
+        height: 320px;
+        margin-left: -10
+      }
+      .pillars-thumbnail {
+        height: 320px;
+        margin-left: 0;
+        padding-left: 0
+      }
+      }
+      @media only screen and (min-width:993px){
+        .carousel-title {
+        font-size: 26px;
+        line-height: 32px;
+      }
+      .donate-img {
+        width: 100%
+      }
+        #panel-four .carousel-wash{
+        padding-top: 0%
+      }
+        .mission-thumbnail {
+        height: 380px;
+        margin-left: -10
+      }
+      .pillars-thumbnail {
+        height: 380px;
+        margin-left: 0;
+        padding-left: 0
+      }
+      }
+      @media only screen and (min-width:1221px){
+        .carousel-title {
+        font-size: 32px;
+        line-height: 42px;
+      }
+      .donate-img {
+        width: 80%
+      }
+        #panel-four .carousel-wash{
+        padding-top: 2%
+      }
+        .mission-thumbnail {
+        height: 370px;
+        margin-left: -10
+      }
+      .pillars-thumbnail {
+        height: 370px;
+        margin-left: 0;
+        padding-left: 0
+      }
+      }
+      @media only screen and (min-width:1400px){
+        .carousel-title {
+        font-size: 42px;
+        line-height: 52px;
+      }
+      .donate-img {
+        width: 90%
+      }
+        #panel-four .carousel-wash{
+        padding-top: 1%
+      }
+        .mission-thumbnail {
+        height: 540px;
+        margin-left: -10
+      }
+      .pillars-thumbnail {
+        height: 540px;
+        margin-left: 0;
+        padding-left: 0
+      }
+      }
+    </style>
+   
+      <div class="carousel-item" href="" style="background: url('{% static 'img/pillar_vectorized2.svg' %}'); background-size: 40% !important;" id="panel-one">
+        <div class="carousel-wash row">
+          <div class="col s12">
+          <a href="{{ vbp_url }}"><img id="vbp-title" src="{% static 'img/vbp_new_r.png' %}" style="padding-top: 0px; padding-bottom: 10px"></a>
+          </div>
+          <div class="col s12">
+          <a href="{{ vbp_url }}"><img id="vbp-carousel-pic" src="{% static 'img/covercarousel.png' %}"></a>
+          </div>
+          <div class="col s12">
+            <a class="btn" href="{{ vbp_url }}" id="slide-one-btn">VISIT</a>
+            <p style="margin-top: 0px;font-weight: 600" id="slide-one-text">Explore ETV’s interactive Black-owned business & community resource directory!</b>
+            <br>
+            Over 30,000 Black-owned businesses to support!</p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item" href="" style="background: url('{% static 'img/efbf_twenties_light.webp' %}'); background-size: 110 !important; background-position-y: -200px" id="panel-two">
+        
+        <div class="carousel-wash row valign-wrapper" style="background-color: transparent !important">
+  
+          <div class="col s12 z-depth-4 center-align parallax-banner" style="width: 90%; margin-left:5%; padding-top: 2%; padding-bottom: 2%; background-color: rgba(255, 255, 255, 0.616)">
+              <a href="{{ efbf_url }}"><img src="{% static 'img/EFBF_new_r.png' %}" class="efbf-title"></a><br>
+              <a href="{{ efbf_url }}"><img src="{% static 'img/EFBF bag.png' %}" width=20% style="margin-top: 10px; margin-bottom: 10px"></a>
+              
+              <p style="margin-top: 5px; margin-bottom: 0; padding-bottom: 0; font-weight: 600" id="slide-two-text">Support Black-owned businesses at least 1 out of 7 days each week!</b></p>
+              <a class="btn" href="{{ efbf_url }}" id="slide-two-btn" style="margin-top: 10px; padding-top: 2px">VISIT</a>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item" href="">
+        
+        <div class="carousel-wash"  style="background-color: black !important">
+          <a href="{{ ven_url }}"><img src="{% static 'img/ven-knockout.png' %}" class="ven-logo"></a>
+          <h3 class="ven-title">Empowering Black entrepreneurs, individuals, and families with the expert counseling and training needed to build generational wealth!</h3>
+          <a class="btn" href="{{ ven_url }}" id="slide-two-btn" style="margin-top: 0px; margin-bottom: 20px; padding-top: 2px">REGISTER</a>
+          <div class="row" style="width: 70%">
+            <div class="col s6">
+              <a href="{{ ven_url }}"><img class="z-depth-3" src="{% static 'img/ven-tile-1.webp' %}" width="100%"></a>
+            </div>
+            <div class="col s6">
+              <a href="{{ ven_url }}"><img class="z-depth-3" src="{% static 'img/ven-tile-2.webp' %}"  width="100%"></a>
+            </div>
+          </div>
+          
+        </div>
+        <style>
+          .ven-row a img {
+            width: 50%
+          }
+          .ven-title {
+            color: white; 
+            font-family: poppins; 
+            font-weight: 600;
+            font-size: 14px; 
+            line-height: 18px;
+            padding-left: 5%; 
+            padding-right: 5%;
+            margin-top: 20px
+          }
+          .ven-logo {
+            width: 100%;
+          }
+          @media only screen and (min-width:601px){
+            .ven-title {
+              font-size: 20px; 
+              line-height: 26px;
+            }
+            .ven-logo {
+              width: 90%;
+            }
+          }
+          @media only screen and (min-width:901px){
+            .ven-logo {
+              width: 70%;
+            }
+          }
+          @media only screen and (min-width:1201px){
+            .ven-title {
+              font-size: 26px; 
+              line-height: 36px;
+            }
+          }
+        </style>
+      </div>
+</div>
+<div class="nav-content z-depth-1" style="margin-top: 10px; margin-bottom: 10px">
+  <ul class="tabs tabs-transparent tabs-fixed-width z-depth-2 tabs-navigation-menu">
+    <li class="tab"><a style="margin-left: 6px" class="nav-tab" href="{{ efbf_url }}">Make Every Friday, Black Friday®</a></li>
+    <li class="tab"><a style="margin-left: 6px" class="nav-tab" href="{{ vbp_url }}">Village Black Pages®</a></li>
+    <li class="tab"><a style="margin-left: 6px" class="nav-tab" href="{{ ven_url }}">Village Empowerment Network™</a></li>
+    <li class="tab"><a style="margin-left: 6px" class="nav-tab" href="/policy-and-power/voting/">Operation: Ballot Box™</a></li>
+  </ul>
+</div>
+  <div class="pillar-intro" style="margin-bottom: 0px;">
     <div class="row pillar-intro-row z-depth-2">
       <a href="{{ ep_url }}" class="pillar-intro-link">
         <div class="col s12 l3 pillar-intro-col fade-in" style="background-image: url('{% static 'img/prosperity.svg' %}')">
@@ -107,263 +334,39 @@
           <div class="pillar-intro-overlay " style="background: #363231; opacity: 0.6;">
           </div>
           <div class="center-align pillar-text-container scale-in-center-5">
-            <p>Education</p>
+            <div>
+              <p>Education &</p>
+              <p>Culture</p>
+            </div>
           </div>
         </div>
       </a>
     </div>
   </div>
-
-  <div class="carousel carousel-slider center z-depth-2" id="home-carousel">
-    
-      <style>
-        .carousel-title {
-          font-family: oskar;
-          font-size: 16px;
-          line-height: 20px;
-        }
-        .donate-img {
-          width: 90%
-        }
-        #panel-four .carousel-wash{
-          padding-top: 12%
-        }
-        .carousel-wash {
-          padding-top: 1%
-        }
-        .mission-thumbnail {
-          height: 190px;
-          margin-left: -10
-        }
-        .pillars-thumbnail {
-          height: 190px;
-          margin-left: 0;
-          padding-left: 0
-        }
-        .carousel-item {
-          min-height: 0 !important
-        }
-        @media only screen and (min-width:400px){
-          .carousel-title {
-          font-size: 18px;
-          line-height: 24px;
-        }
-        .donate-img {
-          width: 80%
-        }
-          #panel-four .carousel-wash{
-          padding-top: 5%
-        }
-          .mission-thumbnail {
-          height: 220px;
-          margin-left: -10
-        }
-        .pillars-thumbnail {
-          height: 220px;
-          margin-left: 0;
-          padding-left: 0
-        }
-        }
-        @media only screen and (min-width:480px){
-          .carousel-title {
-          font-family: oskar;
-          font-size: 20px;
-          line-height: 20px;
-        }
-          #panel-four .carousel-wash{
-          padding-top: 6%
-        }
-          .mission-thumbnail {
-          height: 250px;
-          margin-left: -10
-        }
-        .pillars-thumbnail {
-          height: 250px;
-          margin-left: 0;
-          padding-left: 0
-        }
-        }
-        @media only screen and (min-width:540px){
-          #panel-four .carousel-wash{
-          padding-top: 4%
-        }
-          .mission-thumbnail {
-          height: 280px;
-          margin-left: -10
-        }
-        .pillars-thumbnail {
-          height: 280px;
-          margin-left: 0;
-          padding-left: 0
-        }
-        }
-        @media only screen and (min-width:601px){
-          .carousel-title {
-          font-size: 22px;
-          line-height: 32px;
-        }
-        .donate-img {
-          width: 100%
-        }
-          #panel-four .carousel-wash{
-          padding-top: 5%
-        }
-        }
-        @media only screen and (min-width:620px){
-          
-          .mission-thumbnail {
-          height: 310px;
-          margin-left: -10
-        }
-        .pillars-thumbnail {
-          height: 310px;
-          margin-left: 0;
-          padding-left: 0
-        }
-        }
-        @media only screen and (min-width:695px){
-          #panel-four .carousel-wash{
-          padding-top: 4%
-        }
-          .mission-thumbnail {
-          height: 320px;
-          margin-left: -10
-        }
-        .pillars-thumbnail {
-          height: 320px;
-          margin-left: 0;
-          padding-left: 0
-        }
-        }
-        @media only screen and (min-width:993px){
-          .carousel-title {
-          font-size: 26px;
-          line-height: 32px;
-        }
-        .donate-img {
-          width: 100%
-        }
-          #panel-four .carousel-wash{
-          padding-top: 0%
-        }
-          .mission-thumbnail {
-          height: 380px;
-          margin-left: -10
-        }
-        .pillars-thumbnail {
-          height: 380px;
-          margin-left: 0;
-          padding-left: 0
-        }
-        }
-        @media only screen and (min-width:1221px){
-          .carousel-title {
-          font-size: 32px;
-          line-height: 42px;
-        }
-        .donate-img {
-          width: 80%
-        }
-          #panel-four .carousel-wash{
-          padding-top: 2%
-        }
-          .mission-thumbnail {
-          height: 370px;
-          margin-left: -10
-        }
-        .pillars-thumbnail {
-          height: 370px;
-          margin-left: 0;
-          padding-left: 0
-        }
-        }
-        @media only screen and (min-width:1400px){
-          .carousel-title {
-          font-size: 42px;
-          line-height: 52px;
-        }
-        .donate-img {
-          width: 90%
-        }
-          #panel-four .carousel-wash{
-          padding-top: 1%
-        }
-          .mission-thumbnail {
-          height: 540px;
-          margin-left: -10
-        }
-        .pillars-thumbnail {
-          height: 540px;
-          margin-left: 0;
-          padding-left: 0
-        }
-        }
-      </style>
-      <div class="carousel-item" href="" style="background: url('{% static 'img/pillar_vectorized2.svg' %}'); background-size: 40% !important;">
-        <div class="carousel-wash row center-align" style="background-color: rgba(255, 255, 255, 0.879)">
-          <div class="col s12 m10 offset-m1 carousel-title"><a href="{{ donate_url }}" style="color:#01a650">Invest in the Village!</a> Make your tax deductible donation to ETV today to Restore Prosperity, Peace & Power to the Black Community</div>
-          <div class="col s8 m4 offset-s2 offset-m4 center-align" style="padding:0; padding-right: 5px">
-            <a href="{{ donate_url }}"><img class="z-depth-2 donate-img" src="{% static 'img/gift-of-empowerment-2022.png' %}" style="margin-top: 10px"></a>
-          </div>
-        </div> 
-      </div> 
-        <div class="carousel-item" href="" style="background: url('{% static 'img/pillar_vectorized2.svg' %}'); background-size: 40% !important;" id="panel-one">
-          <div class="carousel-wash row">
-            <div class="col s12">
-            <a href="{{ vbp_url }}"><img id="vbp-title" src="{% static 'img/vbp_new_r.png' %}" style="padding-top: 20px; padding-bottom: 10px"></a>
-            </div>
-            <div class="col s12">
-            <a href="{{ vbp_url }}"><img id="vbp-carousel-pic" src="{% static 'img/covercarousel.png' %}"></a>
-            </div>
-            <div class="col s12">
-              <a class="btn" href="{{ vbp_url }}" id="slide-one-btn">VISIT</a>
-              <p style="margin-top: 5px" id="slide-one-text">Explore ETV’s interactive Black-owned business & community resource directory!</b></p>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item" href="" style="background: url('{% static 'img/pillar_vectorized2.svg' %}'); background-size: 60% !important;" id="panel-two">
-          
-          <div class="carousel-wash row valign-wrapper">
-            <div class="col s4 m3 l2">
-              <a href="{{ efbf_url }}"><img src="{% static 'img/EFBF bag.png' %}" width=100%></a>
-            </div>
-            <div class="container col s8 m9 l10 row z-depth-4 center-align parallax-banner" style="width: 70%; margin-left:0; padding-top: 2%; padding-bottom: 2%">
-                <a href="{{ efbf_url }}"><img src="{% static 'img/EFBF_new_r.png' %}" width="100%"></a><br>
-                <a class="btn" href="{{ efbf_url }}" id="slide-two-btn" style="margin-top: 10px">VISIT</a>
-                <p style="margin-top: 5px; margin-bottom: 0; padding-bottom: 0" id="slide-two-text">Support Black-owned businesses at least 1 out of 7 days each week!</b></p>
-                
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item" href="" style="background: url('{% static 'img/pillar_vectorized2.svg' %}'); background-size: 40% !important;" id="panel-three">
-          
-          <div class="carousel-wash row valign-wrapper">
-            <div class="col s4 m3 l2">
-              <a href="{{ bf_home_url }}"><img class="z-depth-3" src="{% static 'img/bingo-snip.png' %}" width=100%></a>
-            </div>
-            <div class="container col s8 m9 l10 row z-depth-4 center-align parallax-banner" style="padding: 2%;">
-              <a href="{{ bf_home_url }}"><img src="{% static 'img/bf_challenge_logo.png' %}" style="width: 90%; padding-left: 0%"></a>
-              <br>
-              <a class="btn" href="{{ bf_home_url }}" id="slide-two-btn" style="margin-top: 20px">VISIT</a>
-              <p style="margin-top: 10px; margin-bottom: 0; padding-bottom: 0" id="slide-two-text">Learn About ETV's Fun <b>Black Friday Challenge™!</b></p>
-              
-          </div>
-          </div>
-        </div>
+  <div class="row">
+    <h6 class="center-align home-heading" style="color: #bf1e2d;">Join Us for ETV's 2022 Signature Events</h6>
+    <div class="valign-lg-2">
+      <div class="col s12 m6">
+        <a href="events/power-swing-classic/"><img class="z-depth-1" src="{% static 'img/golf-flyer-northstar.webp' %}" width=100%></a>
         
+        <br>
+        
+      </div>
+      <div class="col s12 m6">
+        <a href="events/power-swing-classic/"><img src="{% static 'img/golf-invite-1.png' %}" width="95%"></a>
+        <a href="events/power-swing-classic/"><img src="{% static 'img/golf-invite-2.png' %}" width="95%"></a>
+      </div>
+      </div>
+    <style>
+      .valign-lg-2 {
+        display: flex;
+        align-items: center;
+      }
+    </style>
   </div>
-  <div class="nav-content z-depth-1">
-    <ul class="tabs tabs-transparent tabs-fixed-width z-depth-2 tabs-navigation-menu">
-      <li class="tab"><a style="margin-left: 6px" class="nav-tab {% if request.path == efbf_url %}active{% endif %}" href="{{ efbf_url }}">Make Every Friday, Black Friday®</a></li>
-      <li class="tab"><a style="margin-left: 6px" class="nav-tab {% if request.path == vbp_url %}active{% endif %}" href="{{ vbp_url }}">Village Black Pages®</a></li>
-      <li class="tab"><a style="margin-left: 6px" class="nav-tab {% if request.path == ven_url %}active{% endif %}" href="{{ ven_url }}">Village Empowerment Network™</a></li>
-      <li class="tab"><a style="margin-left: 6px" class="nav-tab {% if request.path == vaw_url %}active{% endif %}" href="{{ vaw_url }}">Village@Work™</a></li>
-    </ul>
-  </div>
-
-  
+  <div class="divider" style="margin-bottom: 0; width: 90%; margin-left: 5%"></div>
     <div>
-      <h6 class="center-align home-heading" style="color: #bf1e2d;">ETV Mission & Vision Video!</h6>
+      <h6 class="center-align home-heading" style="color: #149e0f;">ETV Mission & Vision Video!</h6>
         <div class="center-align z-depth-3" style="background: url('{% static 'img/collage1.svg' %}'); background-size: 50%">
           <div style="background-color: rgba(223, 223, 223, 0.632);">
             <iframe class="mission-video scale-up-center" width="80%" src="https://www.youtube.com/embed/7ypFvkUOtwo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -371,7 +374,7 @@
         </div> 
         <div class="divider" style="border-bottom: solid 1px rgb(233, 233, 233); margin-top: 30px; width: 80%; margin-left: 10%; margin-bottom: 30px"></div>
         <div class="center-align">
-          <h6 class="center-align home-heading" style="color: #149e0f;">Community Education Panel - Post Traumatic Slave Syndrome & Reframing the Narrative</h6>
+          <h6 class="center-align home-heading" style="color: #bf1e2d;">Community Education Panel - Post Traumatic Slave Syndrome & Reframing the Narrative</h6>
           <div class="divider" style="width: 40%; margin-left: 30%; margin-top: 20px; margin-bottom: 30px"></div>
           <div class="row valign-lg">
             <div class="col s12 l6">
@@ -392,33 +395,7 @@
           
           
         </div>
-        <div class="divider" style="border-bottom: solid 1px rgb(233, 233, 233); margin-top: 30px; width: 80%; margin-left: 10%"></div>
-        <div class="row">
-          <h6 class="center-align home-heading" style="color: #bf1e2d;">Join Us for ETV's 2022 Signature Events</h6>
-          <div class="col s12 m6">
-            <a href="events/love-of-art-fundraiser/"><img class="z-depth-2" src="{% static 'img/loa-0520.svg' %}" style="width: 100%"></a>
-          </div>
-          <div class="col s12 m6">
-            <a href="events/power-swing-classic/"><img class="z-depth-1" src="{% static 'img/golf-flyer.png' %}" width=100%></a>
-            
-            <br>
-            
-          </div>
-          <div class="col s12 l5 xl6" style="padding-top: 28px">
-            <a href="https://www.tapinto.net/towns/soma/articles/empower-the-village-celebrates-juneteenth-black-artists-and-economic-empowerment-at-4th-annual-for-the-love-of-art-show-6"><img class="lazy z-depth-2" style="width:100%;" src="{% static 'img/juneteenth-22-thumbnail.jpeg' %}"></a>
-            <p class="photo-caption">Artist Melanie McAllister (2nd from right); ETV Advisory Council Member Tammye Jones (left), David Jones (center), and family. Paintings by Melanie McAllister</p>
-            <p class="photo-credit">Photo Credit: Todd Easley</p>
-          </div>
-          <div class="col s12 l7 xl6 center-align" style="padding-top: 22px">
-            <div class="card juneteenth-card center-align">
-              <div>
-                <h6 style="color:#bf1e2d;">In the News - ETV’s Successful Juneteenth Art Show!</h6>
-                <p class="left-align"><b>(Morristown, NJ)</b> The second annual Juneteenth federal holiday weekend was celebrated in spectacular fashion, as Empower The Village Inc, a New Jersey-based 501(c)3 nonprofit organization, showcased Black excellence in the arts and hosted over 200 attendees at their annual For The Love of Art: A Juneteenth Celebration of Justice & Joy, an art show and fundraiser at the Montclair Art Museum (MAM) last weekend.</p>
-                <a target="_blank" style="margin-top: 20px" href="https://www.tapinto.net/towns/soma/articles/empower-the-village-celebrates-juneteenth-black-artists-and-economic-empowerment-at-4th-annual-for-the-love-of-art-show-6" class="btn light-green darken-2">Read the Full Press Release</a>
-              </div>
-            </div>
-          </div>
-        </div>
+              
         <div class="z-depth-2 center-align" style="margin-top:-10px; margin-top: 20px;padding-bottom: 5%">
           
           <div class="row" style="padding-top: 30px">
@@ -434,12 +411,20 @@
         </div>
       
       </div>
-      <div class="divider" style="margin-bottom: 0; width: 90%; margin-left: 5%"></div>
+      
     </div>     
     
 
     
     <script>
+      $(document).ready(function(){
+        Swal.fire({
+          html: '<a href="/events/power-swing-classic/buy-tickets/"><img src="https://empowerthevillage.s3.amazonaws.com/static/img/golf-popup.webp" width=100%></a>',
+          showComfirmButton: false,
+          showCancelButton: false,
+          showCloseButton: true,
+          })
+      })
         $('#mailchimp-efbf-form').submit(event, function(){
             event.preventDefault();
             var email = $('#mailchimp-email-efbf').val()
@@ -481,14 +466,13 @@
     });
     var intervalId = window.setInterval(function(){
       $('.carousel.carousel-slider').carousel('next');
-    }, 20000);
+    }, 10000);
       
     </script>
     <script>
       $(function(){
         $('.marquee').marquee({
           duration: 10000,
-          delayBeforeStart: 3200,
           pauseOnHover: true,
           duplicated: true,
           easing: 'linear',
@@ -547,6 +531,12 @@
     <style>
       
       @media only screen and (min-width:0px){
+        .efbf-title {
+          width: 100%;
+        }
+        #slide-one-text {
+          font-size: 13px !important
+        }
         .photo-caption {
           color:rgb(4, 4, 4);
           font-size: 14px;
@@ -696,14 +686,12 @@
         #panel-one {
           background-size: 150% !important
         }
-        .carousel-wash {
-          }
           #vbp-title {
-            max-height: 100px;
+            max-height: 90px;
             max-width: 90%
           }
           #vbp-carousel-pic {
-            max-height: 200px;
+            max-height: 150px;
             min-height: 80px;
             max-width: 100%
           }
@@ -755,6 +743,12 @@
           }
       }
       @media only screen and (min-width:601px){
+        .efbf-title {
+          width: 100%;
+        }
+        #slide-one-text {
+          font-size: 20px !important
+        }
         .marquee {
           width: 100%;
           overflow: hidden;
@@ -805,7 +799,7 @@
             height: 390px !important
           }
           #slide-two-text {
-            font-size: 18px
+            font-size: 20px !important
           }
           #slide-two-btn {
             background-color:rgba(68, 140, 32, 0.66); 
@@ -831,6 +825,10 @@
           }
       }
       @media only screen and (min-width:993px){
+        .efbf-title {
+          width: 80%;
+          margin-bottom: 20px
+        }
         .mission-video {
                 height: 515
               }
@@ -838,7 +836,7 @@
                 height: 515
               }
         .home-heading {
-          margin-top: 40px; 
+          margin-top: 0px; 
           margin-bottom: 40px;
           font-size: 48px;
         }
@@ -866,8 +864,11 @@
         #home-carousel {
             height: 420px !important
           }
+          #slide-one-text {
+            font-size: 28px !important
+          }
           #slide-two-text {
-            font-size: 20px
+            font-size: 28px !important
           }
       }
       @media only screen and (min-width:1225px){
@@ -885,10 +886,7 @@
           line-height: 36px
         }
         #home-carousel {
-            height: 430px !important;
-          }
-          #vbp-title {
-            
+            height: 400px !important;
           }
       }
       @media only screen and (min-width:1400px){
@@ -905,9 +903,7 @@
             min-height: 100px;
             max-width: 100%
           }
-          #slide-one-text {
-            font-size: 18px
-          }
+          
       }
       @media only screen and (max-width:992px){
                     .coming-soon-group {
