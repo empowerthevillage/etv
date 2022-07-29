@@ -325,7 +325,7 @@ def mv_view(request):
             pagination_obj = Paginator(dict, 16)
             start_page = page_count + 1
             page_count += pagination_obj.num_pages
-            line = {"category": category, "verbose": str(verbose), "pagination": pagination_obj, "start_page": start_page, "last_page": page_count, "cover": "https://etv-empowerthevillage.s3.amazonaws.com/static/img/vbp/%s.svg" %(category), "right": "https://etv-empowerthevillage.s3.amazonaws.com/static/img/vbp/%s_right.svg" %(category),"left": "https://etv-empowerthevillage.s3.amazonaws.com/static/img/vbp/%s_left.svg" %(category)}
+            line = {"category": category, "verbose": str(verbose), "pagination": pagination_obj, "start_page": start_page, "last_page": page_count, "cover": "https://etv-empowerthevillage.s3.amazonaws.com/static/img/vbp/%s.svg" %(str(verbose)), "right": "https://etv-empowerthevillage.s3.amazonaws.com/static/img/vbp/%s_right.svg" %(str(verbose)),"left": "https://etv-empowerthevillage.s3.amazonaws.com/static/img/vbp/%s_left.svg" %(str(verbose))}
             sections.append(line)
         else:
             pass

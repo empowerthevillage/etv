@@ -1,0 +1,746 @@
+[
+    {
+      "model": "vbp.mv_private",
+"fields": {
+      "business_name": "Hair Raising",
+      "website": "https://instagram.com/hairraisingmv?igshid=YmMyMTA2M2Y=",
+      "city": "Oak Bluffs",
+      "phone": "(202) 702-7586",
+      "category": "beauty",
+      "owner_name": "Tamara Robertson Chin",
+      "owner_email": ""
+    }
+},
+    {
+      "model": "vbp.mv_private",
+"fields": {
+      "business_name": "Gypsy Barbershop",
+      "website": "",
+      "city": "Edgartown",
+      "phone": "(508) 939-4551",
+      "category": "beauty",
+      "owner_name": "",
+      "owner_email": ""
+    }
+},
+    {
+      "model": "vbp.mv_private",
+"fields": {
+      "business_name": "Blair's Barber Shop",
+      "website": "",
+      "city": "Vineyard Haven",
+      "phone": "(508)338-7902",
+      "category": "beauty",
+      "owner_name": "",
+      "owner_email": ""
+    }
+},
+    {
+      "model": "vbp.mv_private",
+"fields": {
+      "business_name": "The Author Jennifer Smith Turner",
+      "website": "https://theauthorjennifer.wordpress.com/",
+      "city": "Online",
+      "phone": "",
+      "category": "books",
+      "owner_name": "",
+      "owner_email": ""
+    }
+},
+    {
+      "model": "vbp.mv_private",
+"fields": {
+      "business_name": "Skip Finley",
+      "website": "https://www.skipfinley.com/",
+      "city": "Online",
+      "phone": "",
+      "category": "books",
+      "owner_name": "",
+      "owner_email": ""
+    }
+},
+    {
+      "model": "vbp.mv_private",
+"fields": {
+      "business_name": "Michael Araujo Car Detailing",
+      "website": "",
+      "city": "Oak Bluffs",
+      "phone": "(508)696-0725",
+      "category": "cars",
+      "owner_name": "",
+      "owner_email": ""
+    }
+},
+    {
+      "model": "vbp.mv_private",
+"fields": {
+      "business_name": "Legendary MV",
+      "website": "https://legendarymv.com/",
+      "city": "Oak Bluffs",
+      "phone": "(410) 207-7905",
+      "category": "clothing",
+      "owner_name": "",
+      "owner_email": ""
+    }
+},
+    {
+      "model": "vbp.mv_private",
+"fields": {
+      "business_name": "Deloris' Designs",
+      "website": "http://www.delorisdesigns.com/",
+      "city": "Vineyard Haven",
+      "phone": "(508)560-3352",
+      "category": "clothing",
+      "owner_name": "",
+      "owner_email": ""
+    }
+},
+    {
+      "model": "vbp.mv_private",
+"fields": {
+      "business_name": "Lennox & Harvey",
+      "website": "https://lennoxandharvey.com/",
+      "city": "Vineyard Haven",
+      "phone": "(508)687-9372",
+      "category": "clothing",
+      "owner_name": "",
+      "owner_email": ""
+    }
+},
+    {
+      "model": "vbp.mv_private",
+"fields": {
+      "business_name": "Francois' Fine Tailoring",
+      "website": "",
+      "city": "Edgartown",
+      "phone": "(508)627-9393",
+      "category": "clothing",
+      "owner_name": "",
+      "owner_email": ""
+    }
+},
+    {
+      "model": "vbp.mv_private",
+"fields": {
+      "business_name": "C’est La Vie",
+      "website": "https://c-est-la-vie-oak-bluffs.edan.io/,",
+      "city": "Oak Bluffs",
+      "phone": "(508) 693-618",
+      "category": "clothing",
+      "owner_name": "",
+      "owner_email": "cestlaviemv@gmail.com"
+    }
+},
+    {
+      "model": "vbp.mv_private",
+"fields": {
+      "business_name": "Superar Strike",
+      "website": "https://superarstrike.com/",
+      "city": "Oak Bluffs",
+      "phone": "(774) 563-2647",
+      "category": "clothing",
+      "owner_name": "",
+      "owner_email": "superarstrikeclothing@gmail.com"
+    }
+},
+    {
+      "model": "vbp.mv_private",
+"fields": {
+      "business_name": "Bonbon-T",
+      "website": "https://bonbontonline.com/",
+      "city": "Edgartown",
+      "phone": "",
+      "category": "clothing",
+      "owner_name": "",
+      "owner_email": "bonbon.online@gmail.com"
+    }
+},
+    {
+      "model": "vbp.mv_private",
+"fields": {
+      "business_name": "B. Edelin Events Planning, Inc.",
+      "website": "https://www.bedelinevents.com/home.html",
+      "city": "Oak Bluffs",
+      "phone": "(617)480-7828",
+      "category": "entertainment",
+      "owner_name": "",
+      "owner_email": ""
+    }
+},
+    {
+      "model": "vbp.mv_private",
+"fields": {
+      "business_name": "MV Escapes Concierge & Events",
+      "website": "https://www.mvescapes.com/weddings-events",
+      "city": "Oak Bluffs",
+      "phone": "(508)930-9839",
+      "category": "entertainment",
+      "owner_name": "",
+      "owner_email": ""
+    }
+},
+    {
+      "model": "vbp.mv_private",
+"fields": {
+      "business_name": "Geno’s BBQ Backyard",
+      "website": "instagram:@genosbackyardbbq",
+      "city": "",
+      "phone": "(508) 560-5071",
+      "category": "grocery",
+      "owner_name": "",
+      "owner_email": "genosbackyardbbq@gmail.com"
+    }
+},
+    {
+      "model": "vbp.mv_private",
+"fields": {
+      "business_name": "Nyamnz MV, Chef Lacey",
+      "website": "instagram: @NyamnzMV",
+      "city": "",
+      "phone": "(774) 549-0959",
+      "category": "grocery",
+      "owner_name": "",
+      "owner_email": "NymanzMV@gmail.com"
+    }
+},
+    {
+      "model": "vbp.mv_private",
+"fields": {
+      "business_name": "Caleen’s Day Spa",
+      "website": "https://www.caleensdayspa.com/",
+      "city": "",
+      "phone": "(508) 693-2898",
+      "category": "health",
+      "owner_name": "Caleen Abraham",
+      "owner_email": "caleensdayspa@vineyard.net"
+    }
+},
+    {
+      "model": "vbp.mv_private",
+"fields": {
+      "business_name": "Healed Therapy",
+      "website": "",
+      "city": "Vineyard Haven",
+      "phone": "(508) 693-0001",
+      "category": "health",
+      "owner_name": "",
+      "owner_email": "csr@healedtherapy.com"
+    }
+},
+    {
+      "model": "vbp.mv_private",
+"fields": {
+      "business_name": "Nu-Life Home Revitalizing",
+      "website": "",
+      "city": "Vineyard Haven",
+      "phone": "(850) 381-4308",
+      "category": "home",
+      "owner_name": "",
+      "owner_email": ""
+    }
+},
+    {
+      "model": "vbp.mv_private",
+"fields": {
+      "business_name": "Cummings Manor",
+      "website": "https://www.22narragansettmv.com/",
+      "city": "Oak Bluffs",
+      "phone": "(617) 431-1911",
+      "category": "hotels",
+      "owner_name": "",
+      "owner_email": "22NarragansettMV@gmail.com"
+    }
+},
+    {
+      "model": "vbp.mv_private",
+"fields": {
+      "business_name": "Inkwell Haven",
+      "website": "https://inkwellbeach.com//",
+      "city": "Vineyard Haven",
+      "phone": "(508) 693-3627",
+      "category": "hotels",
+      "owner_name": "",
+      "owner_email": ""
+    }
+},
+    {
+      "model": "vbp.mv_private",
+"fields": {
+      "business_name": "Larrier House",
+      "website": "www.larrierhouse.com",
+      "city": "Vineyard Haven",
+      "phone": "",
+      "category": "hotels",
+      "owner_name": "",
+      "owner_email": "larrierhouse@yahoo.com"
+    }
+},
+    {
+      "model": "vbp.mv_private",
+"fields": {
+      "business_name": "Blueprint Travel",
+      "website": "www.yourblueprinttravel.com",
+      "city": "",
+      "phone": "(646)-265-9902",
+      "category": "hotels",
+      "owner_name": "",
+      "owner_email": "ayasha@yourblueprinttravel.com"
+    }
+},
+    {
+      "model": "vbp.mv_private",
+"fields": {
+      "business_name": "Granny's Cottage",
+      "website": "https://www.houfy.com/lodging/granny-s-cottage/16783",
+      "city": "Oak Bluffs",
+      "phone": "(408)4393114",
+      "category": "hotels",
+      "owner_name": "",
+      "owner_email": ""
+    }
+},
+    {
+      "model": "vbp.mv_private",
+"fields": {
+      "business_name": "Martha's Vineyard Resort & Racquet Club",
+      "website": "https://www.resortsandlodges.com/lodging/usa/massachusetts/marthas-vineyard/marthas-vineyard-resort-racquet-club.html",
+      "city": "Oak Bluffs",
+      "phone": "(800)874-4403",
+      "category": "hotels",
+      "owner_name": "",
+      "owner_email": ""
+    }
+},
+    {
+      "model": "vbp.mv_private",
+"fields": {
+      "business_name": "Sea U On the Vineyard",
+      "website": "https://www.seauonthevineyard.com/about",
+      "city": "Oak Bluffs",
+      "phone": "(484)639-9539",
+      "category": "hotels",
+      "owner_name": "",
+      "owner_email": ""
+    }
+},
+    {
+      "model": "vbp.mv_private",
+"fields": {
+      "business_name": "Shearer Cottage",
+      "website": "https://www.shearercottage.com/",
+      "city": "Oak Bluffs",
+      "phone": "(781)322 1866",
+      "category": "hotels",
+      "owner_name": "",
+      "owner_email": ""
+    }
+},
+    {
+      "model": "vbp.mv_private",
+"fields": {
+      "business_name": "The Oak Bluffs Inn",
+      "website": "https://oakbluffsinn.com/",
+      "city": "Oak Bluffs",
+      "phone": "(508)693-7171",
+      "category": "hotels",
+      "owner_name": "",
+      "owner_email": ""
+    }
+},
+    {
+      "model": "vbp.mv_private",
+"fields": {
+      "business_name": "Hoverfly Media",
+      "website": "www.HoverFlyMedia.com",
+      "city": "",
+      "phone": "(202) 415-6264",
+      "category": "marketing",
+      "owner_name": "",
+      "owner_email": "fly@hoverflymedia.com"
+    }
+},
+    {
+      "model": "vbp.mv_private",
+"fields": {
+      "business_name": "Martha's Vineyard Endodontics",
+      "website": "https://www.marthasvineyardendo.com/",
+      "city": "Vineyard Haven",
+      "phone": "(508)687-9950",
+      "category": "medical",
+      "owner_name": "",
+      "owner_email": ""
+    }
+},
+    {
+      "model": "vbp.mv_private",
+"fields": {
+      "business_name": "Aco Patient Advocacy",
+      "website": "https://www.acopatientadvocacy.com/",
+      "city": "",
+      "phone": "(857) 246-9729",
+      "category": "health",
+      "owner_name": "",
+      "owner_email": "ardell@acopatientadvocacy.com"
+    }
+},
+    {
+      "model": "vbp.mv_private",
+"fields": {
+      "business_name": "All MV Sound and Video Rentals",
+      "website": "",
+      "city": "",
+      "phone": "(508) 292-6862",
+      "category": "electronics",
+      "owner_name": "",
+      "owner_email": "vineyardsteve@aol.com"
+    }
+},
+    {
+      "model": "vbp.mv_private",
+"fields": {
+      "business_name": "Off Main",
+      "website": "https://off-main.business.site/",
+      "city": "Vineyard Haven",
+      "phone": "(508)696-5354",
+      "category": "clothing",
+      "owner_name": "",
+      "owner_email": ""
+    }
+},
+    {
+      "model": "vbp.mv_private",
+"fields": {
+      "business_name": "Sideline Brand Studio",
+      "website": "https://www.facebook.com/sidelinebrandstudio/",
+      "city": "Vineyard Haven",
+      "phone": "",
+      "category": "photography",
+      "owner_name": "",
+      "owner_email": "sidelinebrand@gmail.com"
+    }
+},
+    {
+      "model": "vbp.mv_private",
+"fields": {
+      "business_name": "So Focused Photography",
+      "website": "https://www.instagram.com/sofocusedphotography/?hl=en",
+      "city": "Oak Bluffs",
+      "phone": "(646)319-0360",
+      "category": "photography",
+      "owner_name": "",
+      "owner_email": ""
+    }
+},
+    {
+      "model": "vbp.mv_private",
+"fields": {
+      "business_name": "Michael Johnson Photography",
+      "website": "http://www.michaeljimage.com/Welcome.html",
+      "city": "Vineyard Haven",
+      "phone": "(415) 2387572",
+      "category": "photography",
+      "owner_name": "",
+      "owner_email": ""
+    }
+},
+    {
+      "model": "vbp.mv_private",
+"fields": {
+      "business_name": "Hustle & Thrive Consulting",
+      "website": "https://sidelineceo.co/about-us",
+      "city": "Vineyard Haven",
+      "phone": "(508)685-0484",
+      "category": "professional",
+      "owner_name": "",
+      "owner_email": ""
+    }
+},
+    {
+      "model": "vbp.mv_private",
+"fields": {
+      "business_name": "Luxury Restrooms",
+      "website": "https://www.luxuryrestroomsmv.com/",
+      "city": "Vineyard Haven",
+      "phone": "(508)360-1950",
+      "category": "professional",
+      "owner_name": "",
+      "owner_email": ""
+    }
+},
+    {
+      "model": "vbp.mv_private",
+"fields": {
+      "business_name": "Donnelly & Co.",
+      "website": "https://donnellyandco.com/marthas-vineyard/",
+      "city": "Edgartown",
+      "phone": "(508)6271022",
+      "category": "real estate",
+      "owner_name": "",
+      "owner_email": ""
+    }
+},
+    {
+      "model": "vbp.mv_private",
+"fields": {
+      "business_name": "Jennifer DaSilva Realtor",
+      "website": "https://www.homesnap.com/Jennifer-DaSilva-1/gmb",
+      "city": "Edgartown",
+      "phone": "(973)568-7093",
+      "category": "real estate",
+      "owner_name": "",
+      "owner_email": ""
+    }
+},
+    {
+      "model": "vbp.mv_private",
+"fields": {
+      "business_name": "LAER Realty Partners / MV Roy Cutrer",
+      "website": "https://www.laerrealty.com/agents/18845-roy-cutrer",
+      "city": "Vineyard Haven",
+      "phone": "(774)8368545",
+      "category": "real estate",
+      "owner_name": "",
+      "owner_email": ""
+    }
+},
+    {
+      "model": "vbp.mv_private",
+"fields": {
+      "business_name": "MV Island-Wide Realty",
+      "website": "http://www.mvislandwiderealty.com/",
+      "city": "Vineyard Haven",
+      "phone": "(508)6933700",
+      "category": "real estate",
+      "owner_name": "",
+      "owner_email": ""
+    }
+},
+    {
+      "model": "vbp.mv_private",
+"fields": {
+      "business_name": "Byrd, Rosemary",
+      "website": "https://oceanparkmv.com/realestate/agent/rosemary/",
+      "city": "Oak Bluffs",
+      "phone": "(508) 221-0411",
+      "category": "real estate",
+      "owner_name": "",
+      "owner_email": "roseabella@icloud.com"
+    }
+},
+    {
+      "model": "vbp.mv_private",
+"fields": {
+      "business_name": "Christiansen, Shelley",
+      "website": "www.facebook.com/SconMVrealestate",
+      "city": "Edgartown",
+      "phone": "(914) 274-0024",
+      "category": "real estate",
+      "owner_name": "",
+      "owner_email": "schristian@donnellyandco.com"
+    }
+},
+    {
+      "model": "vbp.mv_private",
+"fields": {
+      "business_name": "Clarke, Nya",
+      "website": "​​https://mvislandwiderealty.com/",
+      "city": "",
+      "phone": "(508) 572-3636",
+      "category": "real estate",
+      "owner_name": "",
+      "owner_email": ""
+    }
+},
+    {
+      "model": "vbp.mv_private",
+"fields": {
+      "business_name": "Furr McSween, Deborah",
+      "website": "https://MvhomesbyDeb.exprealty.com",
+      "city": "Edgartown",
+      "phone": "(866) 201-6210",
+      "category": "real estate",
+      "owner_name": "",
+      "owner_email": "Deborah@Thevineyardlife.com"
+    }
+},
+    {
+      "model": "vbp.mv_private",
+"fields": {
+      "business_name": "Goldson, Amy",
+      "website": "https://oceanparkmv.com/realestate/agent/amy-goldson/",
+      "city": "Oak Bluffs",
+      "phone": "(202) 251-2922",
+      "category": "real estate",
+      "owner_name": "",
+      "owner_email": "AmyGoldson@oceanparkmv.com"
+    }
+},
+    {
+      "model": "vbp.mv_private",
+"fields": {
+      "business_name": "Edgartown Diner",
+      "website": "https://edgartowndiner.com/",
+      "city": "Edgartown",
+      "phone": "(508)6279337",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": ""
+    }
+},
+    {
+      "model": "vbp.mv_private",
+"fields": {
+      "business_name": "Biscuits",
+      "website": "https://www.mvbiscuits.com/",
+      "city": "Oak Bluffs",
+      "phone": "(508)693-2033",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": ""
+    }
+},
+    {
+      "model": "vbp.mv_private",
+"fields": {
+      "business_name": "Chef Deon's Kitchen",
+      "website": "https://www.chefdeon.com/",
+      "city": "Oak Bluffs",
+      "phone": "(508)627-0330",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": ""
+    }
+},
+    {
+      "model": "vbp.mv_private",
+"fields": {
+      "business_name": "Dilly's Taqueria",
+      "website": "https://www.dillystaqueria.com/",
+      "city": "Oak Bluffs",
+      "phone": "(508)693-9851",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": ""
+    }
+},
+    {
+      "model": "vbp.mv_private",
+"fields": {
+      "business_name": "Flavors MV",
+      "website": "https://www.flavorsmvy.com/",
+      "city": "Oak Bluffs",
+      "phone": "(508) 338-740",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": ""
+    }
+},
+    {
+      "model": "vbp.mv_private",
+"fields": {
+      "business_name": "Vineyard Caribbean Cuisine",
+      "website": "https://www.facebook.com/pages/category/Jamaican-Restaurant/Vineyard-Caribbean-Cuisine-272974826514023/",
+      "city": "Oak Bluffs",
+      "phone": "(508) 338 7077",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": ""
+    }
+},
+    {
+      "model": "vbp.mv_private",
+"fields": {
+      "business_name": "Winston’s Kitchen",
+      "website": "https://www.winstonskitchenmv.com/menu",
+      "city": "Oak Bluffs",
+      "phone": "(508) 687-9572",
+      "category": "restaurants",
+      "owner_name": "",
+      "owner_email": "winstonskitchen20@yahoo.com"
+    }
+},
+    {
+      "model": "vbp.mv_private",
+"fields": {
+      "business_name": "AdamHelper",
+      "website": "https://adamhelper.com/",
+      "city": "Medford",
+      "phone": "(617)9822744",
+      "category": "transportation",
+      "owner_name": "",
+      "owner_email": ""
+    }
+},
+    {
+      "model": "vbp.mv_private",
+"fields": {
+      "business_name": "Cousen Rose Gallery",
+      "website": "https://www.cousenrose.com/'",
+      "city": "Oak Bluffs",
+      "phone": "(508)693-6656",
+      "category": "visual",
+      "owner_name": "",
+      "owner_email": ""
+    }
+},
+    {
+      "model": "vbp.mv_private",
+"fields": {
+      "business_name": "Harry Seymour Gallery",
+      "website": "https://hseymour.artspan.com/contact",
+      "city": "Oak Bluffs",
+      "phone": "(413)531-1084",
+      "category": "visual",
+      "owner_name": "",
+      "owner_email": ""
+    }
+},
+    {
+      "model": "vbp.mv_private",
+"fields": {
+      "business_name": "Knowhere Art Gallery",
+      "website": "https://knowhereart.com/",
+      "city": "Oak Bluffs",
+      "phone": "(917)9609344",
+      "category": "visual",
+      "owner_name": "",
+      "owner_email": ""
+    }
+},
+    {
+      "model": "vbp.mv_private",
+"fields": {
+      "business_name": "The African American Heritage",
+      "website": "www.mvafricanamericanheritagetrail.org",
+      "city": "West Tisbury",
+      "phone": "(508) 693-4361",
+      "category": "visual",
+      "owner_name": "Carrie Camillo Tankard and Elaine Cawley Weintraub",
+      "owner_email": ""
+    }
+},
+    {
+      "model": "vbp.mv_private",
+"fields": {
+      "business_name": "Island-Life Studio",
+      "website": "https://mvislandwiderealty.com/island-life-studio",
+      "city": "Oak Bluffs",
+      "phone": "(508) 572-3636",
+      "category": "visual",
+      "owner_name": "Nya Clarke",
+      "owner_email": ""
+    }
+},
+    {
+      "model": "vbp.mv_private",
+"fields": {
+      "business_name": "Oak Hill Consulting",
+      "website": "https://oakhillconsultingpartners.com/",
+      "city": "Mystic Grove",
+      "phone": "(617) 306-2771",
+      "category": "professional",
+      "owner_name": "",
+      "owner_email": "karl@oakhillconsultingpartners.com"
+    }
+}
+  ]
