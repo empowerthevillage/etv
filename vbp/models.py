@@ -187,6 +187,8 @@ class vbp(models.Model):
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
     user             = models.ForeignKey(User, models.SET_NULL, null=True, blank=True)
     team             = models.ForeignKey(Team, models.SET_NULL, null=True, blank=True)
+    cat_ordering = models.IntegerField(blank=True, null=True)
+
     objects         = vbpStateManager()
 
     unapproved_objects = vbpManager()
@@ -263,12 +265,13 @@ class mv_private(models.Model):
     owner_email      = models.EmailField(blank=True, null=True)
     created          = models.DateTimeField(auto_now_add=True, blank=True, null=True)
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
-   
+    cat_ordering     = models.IntegerField(null=True, blank=True)
+    
     def __str__(self):
         return str(self.business_name)
     
     class Meta:
-        ordering = ['category', 'city', 'business_name']
+        ordering = ['category', 'cat_ordering', 'city', 'business_name']
         verbose_name = "Martha's Vineyard listing"
         verbose_name_plural = "Martha's Vineyard listings"
     
@@ -296,6 +299,8 @@ class vbp_al(models.Model):
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
     user             = models.ForeignKey(User, models.SET_NULL, null=True, blank=True)
     team             = models.ForeignKey(Team, models.SET_NULL, null=True, blank=True)
+    cat_ordering = models.IntegerField(blank=True, null=True)
+
     objects         = vbpStateManager()
 
     def __str__(self):
@@ -333,6 +338,8 @@ class vbp_ak(models.Model):
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
     user             = models.ForeignKey(User, models.SET_NULL, null=True, blank=True)
     team             = models.ForeignKey(Team, models.SET_NULL, null=True, blank=True)
+    cat_ordering = models.IntegerField(blank=True, null=True)
+
     objects         = vbpStateManager()
 
     def __str__(self):
@@ -370,6 +377,8 @@ class vbp_az(models.Model):
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
     user             = models.ForeignKey(User, models.SET_NULL, null=True, blank=True)
     team             = models.ForeignKey(Team, models.SET_NULL, null=True, blank=True)
+    cat_ordering = models.IntegerField(blank=True, null=True)
+
     objects         = vbpStateManager()
 
     def __str__(self):
@@ -407,6 +416,8 @@ class vbp_ar(models.Model):
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
     user             = models.ForeignKey(User, models.SET_NULL, null=True, blank=True)
     team             = models.ForeignKey(Team, models.SET_NULL, null=True, blank=True)
+    cat_ordering = models.IntegerField(blank=True, null=True)
+
     objects         = vbpStateManager()
 
     def __str__(self):
@@ -444,6 +455,8 @@ class vbp_ca(models.Model):
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
     user             = models.ForeignKey(User, models.SET_NULL, null=True, blank=True)
     team             = models.ForeignKey(Team, models.SET_NULL, null=True, blank=True)
+    cat_ordering = models.IntegerField(blank=True, null=True)
+
     objects         = vbpStateManager()
 
     def __str__(self):
@@ -481,6 +494,8 @@ class vbp_co(models.Model):
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
     user             = models.ForeignKey(User, models.SET_NULL, null=True, blank=True)
     team             = models.ForeignKey(Team, models.SET_NULL, null=True, blank=True)
+    cat_ordering = models.IntegerField(blank=True, null=True)
+
     objects         = vbpStateManager()
 
     def __str__(self):
@@ -518,6 +533,8 @@ class vbp_ct(models.Model):
     updated          = models.DateTimeField(auto_now=True, null=True, blank=True)
     user             = models.ForeignKey(User, models.SET_NULL, null=True, blank=True)
     team             = models.ForeignKey(Team, models.SET_NULL, null=True, blank=True)
+    cat_ordering = models.IntegerField(blank=True, null=True)
+
     objects         = vbpStateManager()
 
     def __str__(self):
@@ -555,6 +572,8 @@ class vbp_de(models.Model):
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
     user             = models.ForeignKey(User, models.SET_NULL, null=True, blank=True)
     team             = models.ForeignKey(Team, models.SET_NULL, null=True, blank=True)
+    cat_ordering = models.IntegerField(blank=True, null=True)
+
     objects         = vbpStateManager()
 
     def __str__(self):
@@ -592,6 +611,8 @@ class vbp_dc(models.Model):
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
     user             = models.ForeignKey(User, models.SET_NULL, null=True, blank=True)
     team             = models.ForeignKey(Team, models.SET_NULL, null=True, blank=True)
+    cat_ordering = models.IntegerField(blank=True, null=True)
+
     objects         = vbpStateManager()
 
     def __str__(self):
@@ -629,6 +650,8 @@ class vbp_fl(models.Model):
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
     user             = models.ForeignKey(User, models.SET_NULL, null=True, blank=True)
     team             = models.ForeignKey(Team, models.SET_NULL, null=True, blank=True)
+    cat_ordering = models.IntegerField(blank=True, null=True)
+
     objects         = vbpStateManager()
 
     def __str__(self):
@@ -666,6 +689,8 @@ class vbp_ga(models.Model):
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
     user             = models.ForeignKey(User, models.SET_NULL, null=True, blank=True)
     team             = models.ForeignKey(Team, models.SET_NULL, null=True, blank=True)
+    cat_ordering = models.IntegerField(blank=True, null=True)
+
     objects         = vbpStateManager()
 
     def __str__(self):
@@ -703,6 +728,8 @@ class vbp_hi(models.Model):
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
     user             = models.ForeignKey(User, models.SET_NULL, null=True, blank=True)
     team             = models.ForeignKey(Team, models.SET_NULL, null=True, blank=True)
+    cat_ordering = models.IntegerField(blank=True, null=True)
+
     objects         = vbpStateManager()
 
     def __str__(self):
@@ -740,6 +767,8 @@ class vbp_id(models.Model):
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
     user             = models.ForeignKey(User, models.SET_NULL, null=True, blank=True)
     team             = models.ForeignKey(Team, models.SET_NULL, null=True, blank=True)
+    cat_ordering = models.IntegerField(blank=True, null=True)
+
     objects         = vbpStateManager()
 
     def __str__(self):
@@ -777,6 +806,8 @@ class vbp_il(models.Model):
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
     user             = models.ForeignKey(User, models.SET_NULL, null=True, blank=True)
     team             = models.ForeignKey(Team, models.SET_NULL, null=True, blank=True)
+    cat_ordering = models.IntegerField(blank=True, null=True)
+
     objects         = vbpStateManager()
 
     def __str__(self):
@@ -814,6 +845,8 @@ class vbp_in(models.Model):
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
     user             = models.ForeignKey(User, models.SET_NULL, null=True, blank=True)
     team             = models.ForeignKey(Team, models.SET_NULL, null=True, blank=True)
+    cat_ordering = models.IntegerField(blank=True, null=True)
+
     objects         = vbpStateManager()
 
     def __str__(self):
@@ -851,6 +884,8 @@ class vbp_ia(models.Model):
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
     user             = models.ForeignKey(User, models.SET_NULL, null=True, blank=True)
     team             = models.ForeignKey(Team, models.SET_NULL, null=True, blank=True)
+    cat_ordering = models.IntegerField(blank=True, null=True)
+
     objects         = vbpStateManager()
 
     def __str__(self):
@@ -888,6 +923,8 @@ class vbp_ks(models.Model):
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
     user             = models.ForeignKey(User, models.SET_NULL, null=True, blank=True)
     team             = models.ForeignKey(Team, models.SET_NULL, null=True, blank=True)
+    cat_ordering = models.IntegerField(blank=True, null=True)
+
     objects         = vbpStateManager()
 
     def __str__(self):
@@ -925,6 +962,8 @@ class vbp_ky(models.Model):
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
     user             = models.ForeignKey(User, models.SET_NULL, null=True, blank=True)
     team             = models.ForeignKey(Team, models.SET_NULL, null=True, blank=True)
+    cat_ordering = models.IntegerField(blank=True, null=True)
+
     objects         = vbpStateManager()
 
     def __str__(self):
@@ -963,6 +1002,8 @@ class vbp_la(models.Model):
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
     user             = models.ForeignKey(User, models.SET_NULL, null=True, blank=True)
     team             = models.ForeignKey(Team, models.SET_NULL, null=True, blank=True)
+    cat_ordering = models.IntegerField(blank=True, null=True)
+
     objects         = vbpStateManager()
 
     def __str__(self):
@@ -1000,6 +1041,8 @@ class vbp_me(models.Model):
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
     user             = models.ForeignKey(User, models.SET_NULL, null=True, blank=True)
     team             = models.ForeignKey(Team, models.SET_NULL, null=True, blank=True)
+    cat_ordering = models.IntegerField(blank=True, null=True)
+
     objects         = vbpStateManager()
 
     def __str__(self):
@@ -1037,6 +1080,8 @@ class vbp_md(models.Model):
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
     user             = models.ForeignKey(User, models.SET_NULL, null=True, blank=True)
     team             = models.ForeignKey(Team, models.SET_NULL, null=True, blank=True)
+    cat_ordering = models.IntegerField(blank=True, null=True)
+
     objects         = vbpStateManager()
 
     def __str__(self):
@@ -1074,6 +1119,8 @@ class vbp_ma(models.Model):
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
     user             = models.ForeignKey(User, models.SET_NULL, null=True, blank=True)
     team             = models.ForeignKey(Team, models.SET_NULL, null=True, blank=True)
+    cat_ordering = models.IntegerField(blank=True, null=True)
+
     objects         = vbpStateManager()
 
     def __str__(self):
@@ -1111,6 +1158,8 @@ class vbp_mi(models.Model):
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
     user             = models.ForeignKey(User, models.SET_NULL, null=True, blank=True)
     team             = models.ForeignKey(Team, models.SET_NULL, null=True, blank=True)
+    cat_ordering = models.IntegerField(blank=True, null=True)
+
     objects         = vbpStateManager()
 
     def __str__(self):
@@ -1148,6 +1197,8 @@ class vbp_mn(models.Model):
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
     user             = models.ForeignKey(User, models.SET_NULL, null=True, blank=True)
     team             = models.ForeignKey(Team, models.SET_NULL, null=True, blank=True)
+    cat_ordering = models.IntegerField(blank=True, null=True)
+
     objects         = vbpStateManager()
 
     def __str__(self):
@@ -1185,6 +1236,8 @@ class vbp_ms(models.Model):
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
     user             = models.ForeignKey(User, models.SET_NULL, null=True, blank=True)
     team             = models.ForeignKey(Team, models.SET_NULL, null=True, blank=True)
+    cat_ordering = models.IntegerField(blank=True, null=True)
+
     objects         = vbpStateManager()
 
     def __str__(self):
@@ -1222,6 +1275,8 @@ class vbp_mo(models.Model):
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
     user             = models.ForeignKey(User, models.SET_NULL, null=True, blank=True)
     team             = models.ForeignKey(Team, models.SET_NULL, null=True, blank=True)
+    cat_ordering = models.IntegerField(blank=True, null=True)
+
     objects         = vbpStateManager()
 
     def __str__(self):
@@ -1259,6 +1314,8 @@ class vbp_mt(models.Model):
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
     user             = models.ForeignKey(User, models.SET_NULL, null=True, blank=True)
     team             = models.ForeignKey(Team, models.SET_NULL, null=True, blank=True)
+    cat_ordering = models.IntegerField(blank=True, null=True)
+
     objects         = vbpStateManager()
 
     def __str__(self):
@@ -1296,6 +1353,8 @@ class vbp_ne(models.Model):
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
     user             = models.ForeignKey(User, models.SET_NULL, null=True, blank=True)
     team             = models.ForeignKey(Team, models.SET_NULL, null=True, blank=True)
+    cat_ordering = models.IntegerField(blank=True, null=True)
+
     objects         = vbpStateManager()
 
     def __str__(self):
@@ -1333,6 +1392,8 @@ class vbp_nv(models.Model):
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
     user             = models.ForeignKey(User, models.SET_NULL, null=True, blank=True)
     team             = models.ForeignKey(Team, models.SET_NULL, null=True, blank=True)
+    cat_ordering = models.IntegerField(blank=True, null=True)
+
     objects         = vbpStateManager()
 
     def __str__(self):
@@ -1370,6 +1431,8 @@ class vbp_nh(models.Model):
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
     user             = models.ForeignKey(User, models.SET_NULL, null=True, blank=True)
     team             = models.ForeignKey(Team, models.SET_NULL, null=True, blank=True)
+    cat_ordering = models.IntegerField(blank=True, null=True)
+
     objects         = vbpStateManager()
 
     def __str__(self):
@@ -1407,6 +1470,8 @@ class vbp_nj(models.Model):
     updated          = models.DateTimeField(auto_now=True, null=True, blank=True)
     user             = models.ForeignKey(User, models.SET_NULL, null=True, blank=True)
     team             = models.ForeignKey(Team, models.SET_NULL, null=True, blank=True)
+    cat_ordering = models.IntegerField(blank=True, null=True)
+
     objects         = vbpStateManager()
 
     def __str__(self):
@@ -1444,6 +1509,8 @@ class vbp_nm(models.Model):
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
     user             = models.ForeignKey(User, models.SET_NULL, null=True, blank=True)
     team             = models.ForeignKey(Team, models.SET_NULL, null=True, blank=True)
+    cat_ordering = models.IntegerField(blank=True, null=True)
+
     objects         = vbpStateManager()
 
     def __str__(self):
@@ -1481,6 +1548,8 @@ class vbp_ny(models.Model):
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
     user             = models.ForeignKey(User, models.SET_NULL, null=True, blank=True)
     team             = models.ForeignKey(Team, models.SET_NULL, null=True, blank=True)
+    cat_ordering = models.IntegerField(blank=True, null=True)
+
     objects         = vbpStateManager()
 
     def __str__(self):
@@ -1519,6 +1588,8 @@ class vbp_nc(models.Model):
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
     user             = models.ForeignKey(User, models.SET_NULL, null=True, blank=True)
     team             = models.ForeignKey(Team, models.SET_NULL, null=True, blank=True)
+    cat_ordering = models.IntegerField(blank=True, null=True)
+
     objects         = vbpStateManager()
 
     def __str__(self):
@@ -1556,6 +1627,8 @@ class vbp_nd(models.Model):
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
     user             = models.ForeignKey(User, models.SET_NULL, null=True, blank=True)
     team             = models.ForeignKey(Team, models.SET_NULL, null=True, blank=True)
+    cat_ordering = models.IntegerField(blank=True, null=True)
+
     objects         = vbpStateManager()
 
     def __str__(self):
@@ -1593,6 +1666,8 @@ class vbp_oh(models.Model):
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
     user             = models.ForeignKey(User, models.SET_NULL, null=True, blank=True)
     team             = models.ForeignKey(Team, models.SET_NULL, null=True, blank=True)
+    cat_ordering = models.IntegerField(blank=True, null=True)
+
     objects         = vbpStateManager()
 
     def __str__(self):
@@ -1630,6 +1705,8 @@ class vbp_ok(models.Model):
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
     user             = models.ForeignKey(User, models.SET_NULL, null=True, blank=True)
     team             = models.ForeignKey(Team, models.SET_NULL, null=True, blank=True)
+    cat_ordering = models.IntegerField(blank=True, null=True)
+
     objects         = vbpStateManager()
 
     def __str__(self):
@@ -1667,6 +1744,8 @@ class vbp_or(models.Model):
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
     user             = models.ForeignKey(User, models.SET_NULL, null=True, blank=True)
     team             = models.ForeignKey(Team, models.SET_NULL, null=True, blank=True)
+    cat_ordering = models.IntegerField(blank=True, null=True)
+
     objects         = vbpStateManager()
 
     def __str__(self):
@@ -1704,6 +1783,8 @@ class vbp_pa(models.Model):
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
     user             = models.ForeignKey(User, models.SET_NULL, null=True, blank=True)
     team             = models.ForeignKey(Team, models.SET_NULL, null=True, blank=True)
+    cat_ordering = models.IntegerField(blank=True, null=True)
+
     objects         = vbpStateManager()
 
     def __str__(self):
@@ -1741,6 +1822,8 @@ class vbp_ri(models.Model):
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
     user             = models.ForeignKey(User, models.SET_NULL, null=True, blank=True)
     team             = models.ForeignKey(Team, models.SET_NULL, null=True, blank=True)
+    cat_ordering = models.IntegerField(blank=True, null=True)
+
     objects         = vbpStateManager()
 
     def __str__(self):
@@ -1780,6 +1863,8 @@ class vbp_sc(models.Model):
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
     user             = models.ForeignKey(User, models.SET_NULL, null=True, blank=True)
     team             = models.ForeignKey(Team, models.SET_NULL, null=True, blank=True)
+    cat_ordering = models.IntegerField(blank=True, null=True)
+
     objects         = vbpStateManager()
 
     def __str__(self):
@@ -1817,6 +1902,8 @@ class vbp_sd(models.Model):
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
     user             = models.ForeignKey(User, models.SET_NULL, null=True, blank=True)
     team             = models.ForeignKey(Team, models.SET_NULL, null=True, blank=True)
+    cat_ordering = models.IntegerField(blank=True, null=True)
+
     objects         = vbpStateManager()
 
     def __str__(self):
@@ -1854,6 +1941,8 @@ class vbp_tn(models.Model):
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
     user             = models.ForeignKey(User, models.SET_NULL, null=True, blank=True)
     team             = models.ForeignKey(Team, models.SET_NULL, null=True, blank=True)
+    cat_ordering = models.IntegerField(blank=True, null=True)
+
     objects         = vbpStateManager()
 
     def __str__(self):
@@ -1891,6 +1980,8 @@ class vbp_tx(models.Model):
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
     user             = models.ForeignKey(User, models.SET_NULL, null=True, blank=True)
     team             = models.ForeignKey(Team, models.SET_NULL, null=True, blank=True)
+    cat_ordering = models.IntegerField(blank=True, null=True)
+
     objects         = vbpStateManager()
 
     def __str__(self):
@@ -1928,6 +2019,8 @@ class vbp_ut(models.Model):
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
     user             = models.ForeignKey(User, models.SET_NULL, null=True, blank=True)
     team             = models.ForeignKey(Team, models.SET_NULL, null=True, blank=True)
+    cat_ordering = models.IntegerField(blank=True, null=True)
+
     objects         = vbpStateManager()
 
     def __str__(self):
@@ -1965,6 +2058,8 @@ class vbp_vt(models.Model):
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
     user             = models.ForeignKey(User, models.SET_NULL, null=True, blank=True)
     team             = models.ForeignKey(Team, models.SET_NULL, null=True, blank=True)
+    cat_ordering = models.IntegerField(blank=True, null=True)
+
     objects         = vbpStateManager()
 
     def __str__(self):
@@ -2002,6 +2097,8 @@ class vbp_va(models.Model):
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
     user             = models.ForeignKey(User, models.SET_NULL, null=True, blank=True)
     team             = models.ForeignKey(Team, models.SET_NULL, null=True, blank=True)
+    cat_ordering = models.IntegerField(blank=True, null=True)
+
     objects         = vbpStateManager()
 
     def __str__(self):
@@ -2039,6 +2136,8 @@ class vbp_wa(models.Model):
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
     user             = models.ForeignKey(User, models.SET_NULL, null=True, blank=True)
     team             = models.ForeignKey(Team, models.SET_NULL, null=True, blank=True)
+    cat_ordering = models.IntegerField(blank=True, null=True)
+
     objects         = vbpStateManager()
     
     def __str__(self):
@@ -2076,6 +2175,8 @@ class vbp_wv(models.Model):
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
     user             = models.ForeignKey(User, models.SET_NULL, null=True, blank=True)
     team             = models.ForeignKey(Team, models.SET_NULL, null=True, blank=True)
+    cat_ordering = models.IntegerField(blank=True, null=True)
+
     objects         = vbpStateManager()
 
     def __str__(self):
@@ -2113,6 +2214,8 @@ class vbp_wi(models.Model):
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
     user             = models.ForeignKey(User, models.SET_NULL, null=True, blank=True)
     team             = models.ForeignKey(Team, models.SET_NULL, null=True, blank=True)
+    cat_ordering = models.IntegerField(blank=True, null=True)
+
     objects         = vbpStateManager()
 
     def __str__(self):
@@ -2150,6 +2253,8 @@ class vbp_wy(models.Model):
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
     user             = models.ForeignKey(User, models.SET_NULL, null=True, blank=True)
     team             = models.ForeignKey(Team, models.SET_NULL, null=True, blank=True)
+    cat_ordering = models.IntegerField(blank=True, null=True)
+
     objects         = vbpStateManager()
     
     def __str__(self):

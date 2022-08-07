@@ -117,7 +117,7 @@ class VBPStateAdmin(admin.ModelAdmin):
     actions = ['make_active', 'make_inactive', 'download_csv']
     fieldsets = (
         (None, {
-            'fields': ('business_name', 'website', 'category', 'subcategory', 'approved')
+            'fields': ('business_name', 'website', 'category', 'subcategory', 'approved','cat_ordering')
         }),
         ('Contact Information', {
             'fields': ('online_only', 'phone', 'city', 'county',)
