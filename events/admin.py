@@ -21,7 +21,17 @@ class ArtistAdmin(admin.ModelAdmin):
     
 class TicketAdmin(admin.ModelAdmin):
     list_display = ['last_name', 'first_name', 'event']
-    actions = ['download_csv']
+    actions = ['download_csv', 'mark_checkedin']
+    search_fields = ['event', 'last_name']
+    
+    def mark_checkedin(self, request, queryset):
+        updated = queryset.update(checked_in=True)
+        self.message_user(request, ngettext(
+            '%d listing successfully marked as checked in.', 
+            '%d listings successfully marked as checked in.', 
+            updated,
+        ) % updated, messages.SUCCESS)
+    mark_checkedin.short_description = "Mark selected as checked in"
     
     def download_csv(self, request, queryset):
         opts = queryset.model._meta
@@ -53,13 +63,23 @@ class ArtAdmin(admin.ModelAdmin):
             '%d listings successfully marked as presale.', 
             updated,
         ) % updated, messages.SUCCESS)
-    make_presale.short_description = "Mark selected VBP books as presale"
+    make_presale.short_description = "Mark selected as presale"
 
 class AuctionAdmin(admin.ModelAdmin):
     list_display = ['title', 'artist', 'image']
     
 class CheckinAdmin(admin.ModelAdmin):
     list_display = ['time']
+    actions = ['mark_inactive']
+    def mark_inactive(self, request, queryset):
+        updated = queryset.update(active=False)
+        self.message_user(request, ngettext(
+            '%d listing successfully marked as inactive.', 
+            '%d listings successfully marked as inactive.', 
+            updated,
+        ) % updated, messages.SUCCESS)
+    mark_inactive.short_description = "Mark selected as inactive"
+
 
     
 

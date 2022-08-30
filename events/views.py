@@ -1106,7 +1106,7 @@ def checkin(request):
         checkin.save()
         for x in tickets:
             ticket = SingleTicket.objects.get(ticket_id = x)
-            ticket.checked_in == True
+            ticket.checked_in = True
             ticket.save()
             checkin.tickets.add(ticket)
             
@@ -1138,7 +1138,7 @@ def checkin_success(request):
     return render(request, 'check-in-success.html')
 
 def view_checkins(request):
-    checkins = CheckIn.objects.all()
+    checkins = CheckIn.objects.filter(active=True)
     context = {
         'checkins': checkins
     }

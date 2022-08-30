@@ -13,9 +13,7 @@
         {% csrf_token %}
          {{ form }}
         <button type="submit" class='btn login-btn' style="margin-top:24; padding:22px; line-height:0px; margin-bottom:15px">Login</button>
-        <div class="center">
-          <a href='{% url "password_reset" %}' class='text-center' style="color:grey;"><p style="margin-bottom:80px; margin-top:35px">Forgot Password?</p></a>
-        </div>
+      
       </form>
       
     </div>

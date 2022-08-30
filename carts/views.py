@@ -417,6 +417,7 @@ def ticket_nb(request):
             "submit_for_settlement": True
         }
     })
+    print(result)
     if result.is_success:
         tickets = ticketItem.objects.filter(cart=cart_obj)
         ticket_list = []

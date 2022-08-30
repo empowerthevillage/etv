@@ -569,6 +569,7 @@ class CheckIn(models.Model):
     guests          = models.IntegerField(default=0, null=True, blank=True)
     guest_list      = models.TextField(null=True, blank=True)
     time            = models.DateTimeField(auto_now_add=True)
+    active          = models.BooleanField(default=True)
     
     class Meta:
         ordering = ['-time']
