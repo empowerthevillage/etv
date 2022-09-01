@@ -52,6 +52,15 @@ class TicketAdmin(admin.ModelAdmin):
 
 class TicketTypeAdmin(admin.ModelAdmin):
     list_display = ['id', 'title', 'price', 'event']
+    actions = ['set_inactive']
+    def set_inactive(self, request, queryset):
+        updated = queryset.update(active=False)
+        self.message_user(request, ngettext(
+            '%d ticket marked as inactive',
+            '%d ticket marked as inactive',
+            updated,
+        ) % updated, messages.SUCCESS)
+    set_inactive.short_description = "Mark selected as inactive"
 
 class ArtAdmin(admin.ModelAdmin):
     list_display = ['title', 'artist', 'price', 'image', 'sold', 'pre_sale']

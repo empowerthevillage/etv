@@ -177,6 +177,7 @@ class TicketType(models.Model):
     description     = models.TextField(null=True, blank=True)
     price_description = models.CharField(max_length=270, null=True, blank=True)
     order           = models.IntegerField(null=True, blank=True)
+    active          = models.BooleanField(default=True)
     
     objects         = TicketTypeManager()
 

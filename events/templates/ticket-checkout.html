@@ -95,6 +95,7 @@
               </div>
               {% endfor %}
           </form>
+          {% if cart_sponsor_items|length > 0 %}
             <ul class="collapsible popout">
               <li class="active">
                 <div class="collapsible-header" style="align-items: center; justify-content: center;"><p class="ticket-title valign-wrapper" style="padding: 0; margin: 0; color: black">Sponsorships <span class="material-icons">
@@ -139,6 +140,7 @@
                 </div>
               </li>
             </ul>
+          {% endif %}
         </div>
         <div class="col s12 l6 summary-card-container" id="ticket-summary-container">
             <div class="z-depth-1 summary-card" id="ticket-summary">
