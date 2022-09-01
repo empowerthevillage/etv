@@ -176,7 +176,8 @@ class TicketType(models.Model):
     event           = models.ForeignKey(Event, on_delete=models.CASCADE)
     description     = models.TextField(null=True, blank=True)
     price_description = models.CharField(max_length=270, null=True, blank=True)
-
+    order           = models.IntegerField(null=True, blank=True)
+    
     objects         = TicketTypeManager()
 
     def __str__(self):
@@ -200,7 +201,7 @@ class TicketType(models.Model):
     class Meta:
         verbose_name = 'Ticket Type'
         verbose_name_plural = 'Ticket Types'
-        ordering = ['event', 'price']
+        ordering = ['event', 'order', 'price']
 
 class TicketManagerQuerySet(models.query.QuerySet):
     def by_request(self, request):

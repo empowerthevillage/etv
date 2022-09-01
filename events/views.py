@@ -106,8 +106,8 @@ def event_detail(request, slug):
 
 def event_ticket_checkout(request, slug):
     event = Event.objects.get(slug=slug)
-    ticket_types = TicketType.objects.filter(event=event).filter(sponsorship=False).order_by('price')
-    sponsor_types = TicketType.objects.filter(event=event).filter(sponsorship=True).order_by('price')
+    ticket_types = TicketType.objects.filter(event=event).filter(sponsorship=False).order_by('order', 'price')
+    sponsor_types = TicketType.objects.filter(event=event).filter(sponsorship=True).order_by('order', 'price')
     (cart_obj) = TicketCart.objects.new_or_get(request, event)
     
     item_list = ticketItem.objects.filter(cart=cart_obj)
@@ -192,8 +192,8 @@ def event_ticket_checkout(request, slug):
 
 def event_sponsor_checkout(request, slug):
     event = Event.objects.get(slug=slug)
-    ticket_types = TicketType.objects.filter(event=event).filter(sponsorship=False).order_by('price')
-    sponsor_types = TicketType.objects.filter(event=event).filter(sponsorship=True).order_by('price')
+    ticket_types = TicketType.objects.filter(event=event).filter(sponsorship=False).order_by('order','price')
+    sponsor_types = TicketType.objects.filter(event=event).filter(sponsorship=True).order_by('order','price')
     (cart_obj) = TicketCart.objects.new_or_get(request, event)
     
     item_list = ticketItem.objects.filter(cart=cart_obj)
