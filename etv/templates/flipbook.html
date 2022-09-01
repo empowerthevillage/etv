@@ -4564,51 +4564,32 @@
             event.preventDefault()
             data = $('#filter-form-mobile').serialize()
             state = $('#filter-form-state-mobile').val()
-            if($('#filter-form-state-mobile').val() == 'US-CT'){
-                url = '/village-black-pages/ct/filter'
-            } else if($('#filter-form-state-mobile').val() == 'US-NY'){
-                url = '/village-black-pages/ny/filter'
-            } else if($('#filter-form-state-mobile').val() == 'US-NJ'){
-                url = '/village-black-pages/nj/filter'
-            } else if($('#filter-form-state-mobile').val() == 'US-MA'){
-                url = '/village-black-pages/ma/filter'
-            } else if($('#filter-form-state-mobile').val() == 'US-VA'){
-                url = '/village-black-pages/va/filter'
-            } else if($('#filter-form-state-mobile').val() == 'US-PA'){
-                url = '/village-black-pages/pa/filter'
-            } else if($('#filter-form-state-mobile').val() == 'US-OH'){
-                url = '/village-black-pages/oh/filter'
-            } else if($('#filter-form-state-mobile').val() == 'US-MD'){
-                url = '/village-black-pages/md/filter'
-            } else if($('#filter-form-state-mobile').val() == 'US-DC'){
-                url = '/village-black-pages/dc/filter'
-            } else if($('#filter-form-state-mobile').val() == 'US-DE'){
-                url = '/village-black-pages/de/filter'
-            }
+            url = '/village-black-pages/new/'+ state + '/filter'
+            
             $.ajax({
                 state: state,
                 data: data,
                 url: url,
                 beforeSend: function(){
-                        $('.preloader').show();
-                        $('#flipbook-mobile-container').hide();
-                        $('#flipbook-container').hide();
-                    },
-                    method: "GET",
-                    success: function(data) {
-                        $('.preloader').hide();
-                        $('#book').html(data);
-                        $('#mobile-book').html(data);
-                        $('#cover-page').attr('value', state);
-                        $('#cover-page-mobile').attr('value', state);
-                        $('#vbp-flipbook').attr('value', state);
-                        $('#vbp-flipbook-mobile').attr('value', state);
-                        $('#filter-form-state').attr('value', state);
-                        $('#filter-form-state-mobile').attr('value', state);
-                    },
-                    error: function(error) {
-                        Swal.fire('Coming Soon!', 'There are no Black-owned businesses that match your search combination. Try a broader search!', 'warning')
-                    }
+                    $('.preloader').show();
+                    $('#flipbook-mobile-container').hide();
+                    $('#flipbook-container').hide();
+                },
+                method: "GET",
+                success: function(data) {
+                    $('.preloader').hide();
+                    $('#book').html(data);
+                    $('#mobile-book').html(data);
+                    $('#cover-page').attr('value', state);
+                    $('#cover-page-mobile').attr('value', state);
+                    $('#vbp-flipbook').attr('value', state);
+                    $('#vbp-flipbook-mobile').attr('value', state);
+                    $('#filter-form-state').attr('value', state);
+                    $('#filter-form-state-mobile').attr('value', state);
+                },
+                error: function(error) {
+                    Swal.fire('Coming Soon!', 'There are no Black-owned businesses that match your search combination. Try a broader search!', 'warning')
+                }
             })
             $([document.documentElement, document.body]).animate({
             scrollTop: $("#book").offset().top
