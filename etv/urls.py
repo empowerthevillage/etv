@@ -170,6 +170,7 @@ urlpatterns = [
     path('village-empowerment-network/', include(("ven.urls", "ven"), namespace='ven')),
     path('village-empowerment-network-nomination/', venForm, name='ven-nomination'),
     path('tinymce/', include('tinymce.urls')),
+    path('troubleshoot/', troubleshooting)
 ]
 
 if settings.DEBUG:
