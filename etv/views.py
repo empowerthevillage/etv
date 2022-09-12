@@ -15,57 +15,7 @@ mailchimp.set_config({
     "api_key": settings.MAILCHIMP_API_KEY,
     "server": "us7"
 })
-
-def troubleshooting(request):
-    token = "tokencc_bc_9xhp78_y7z7yf_fm3db2_wjgykw_424"
-    donation_obj = donation.objects.get(pk=383)
-    amount = donation_obj.amount
-    first_name = "Mikeisha"
-    last_name = "Anderson Jones"
-    email = "mikeisha@hotmail.com"
-    result = gateway.transaction.sale({
-        "amount": amount,
-        "payment_method_nonce": token,
-        "custom_fields": {
-            "memo": 'Donation - %s from %s %s' %(amount, first_name, last_name)
-        },
-        "options": {
-            "submit_for_settlement": True,
-        },
-    })
-    if result.is_success:
-        donation_obj.status = 'complete'
-        donation_obj.braintree_id = result.transaction.id
-        donation_obj.save()
-        first_name = donation_obj.first_name
-        merge_fields = {
-            "FNAME": str(first_name),
-            "ETVAMOUNT": str(amount)
-        }
-        mailchimp.lists.set_list_member("bfb104d810", email, {"email_address": email, "status_if_new": "subscribed", "merge_fields": merge_fields})
-        mailchimp.customerJourneys.trigger(2794, 15013, {"email_address": str(email)})
-        send_mail(
-            'New Donation!',
-            str('A new $'+ str(amount) +' donation has been received from '+ str(donation_obj.get_full_name) +' through www.empowerthevillage.org!'),
-            'etvnotifications@gmail.com',
-            ['admin@empowerthevillage.org', 'chandler@eliftcreations.com', 'ayo@empowerthevillage.org'],
-            #['chandler@eliftcreations.com'],
-            fail_silently=True
-        ) 
-        print(result)
-        print('successfully charged')
-        data = {
-            "result": str(result)
-        }
-        return JsonResponse(data)
-    else:
-        print('error')
-        print(result)
-        data = {
-            "result": str(result)
-        }
-        return JsonResponse(data)
-        
+  
     
 def home_page(request):
     form = BusinessForm()
