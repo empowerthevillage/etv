@@ -17,7 +17,7 @@
         {% if event.is_multiday %}
         <h6 class="modal-date scale-up-center" style="width: 100%">{{ event.start_date|date:"F jS" }} & {{ event.end_date|date:"jS" }}, {{ event.end_date|date:"Y"}}</h6>
         {% else %}
-        <h6 class="modal-date scale-up-center" style="width: 100%">{{ event.start_date|date:"F jS Y" }}</h6>
+        <h6 class="modal-date scale-up-center" style="width: 100%">{{ event.start_date|date:"F jS, Y" }}{% if event.start_time is not None %}, {{ event.start_time|date:"P" }}{% endif %}</h6>
         {% endif %}
     </div>
     <div class="row" id="ticket-checkout-p1">
@@ -622,7 +622,7 @@
         color:#bf1e2d;
     }
     .modal-date {
-        font-family: oskar-inline, sans-serif;
+        font-family: oskar, sans-serif;
         font-size: 22px
     }
     .ticket-description{
@@ -655,7 +655,7 @@
     }
     @media only screen and (min-width: 601px){
       .modal-date {
-        font-family: oskar-inline, sans-serif;
+        font-family: oskar, sans-serif;
         font-size: 32px
     }
         .btn-ticket {

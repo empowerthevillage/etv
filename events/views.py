@@ -89,10 +89,8 @@ def email_view(request):
     }
     return render(request, 'ticket-email.html', context)
 def event_home(request):
-    events = Event.objects.all()
     context = {
         'title':'ETV | Events',
-        'events': events,
     }
     return render(request, "events-home.html", context)
 
