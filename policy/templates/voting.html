@@ -9,20 +9,21 @@
 <div class="parallax-container z-depth-3 box-shadow valign-wrapper">
     
     <div class="container z-depth-4 center-align parallax-banner">
-        <img src='{% static "img/policy_power.png" %}' style="width:90%; padding: 4% 0%">
+        <h4 style="padding: 1% 0%; font-family: poppins; font-weight: 800; font-size: 62px; letter-spacing: 2px; color:rgb(184, 23, 23)">POWER</h4>
     </div>
     <div class="parallax">
-        <img src='{% static "img/policy_collage_final.png" %}'>
+        <img src='{% static "img/policy-collage-final-min.jpg" %}'>
     </div>
 
 </div>
-<div style="background: url('{% static 'img/policy_collage_final.png' %}');">
+<div style="background: url('{% static 'img/policy-collage-final-min.jpg' %}');">
     <div class="row" style="background-color: rgba(255, 255, 255, 0.781);">
         <div class="col s12 l10 offset-l1  pillar-body center-align">
             <h5 class="phase-one-title" style="margin-bottom: 10px">Operation: Ballot Box™</h5>
-            <h6 style='font-size: 28px; font-weight: 300; margin-bottom: 50px'>How and Where to Vote Safely and Reliably</h6>
-            <h4 style="background: black; color: white; padding: 3%">Coming Soon! 2022 Election Info</h4>
-           
+            <h6 class="voting-subtitle">How and Where to Vote Safely and Reliably</h6>
+            <div style="display: flex; justify-content:center">
+                <h4 class="coming-soon-text z-depth-2" style="background: black; color: white; padding: 3%; width: fit-content">Coming Soon! 2022 Election Info</h4>
+            </div>
               <div class="divider" style="margin-top: 40px; margin-bottom: 40px"></div>
             <p style="text-align: center;margin-top:0">Click your state to download and share key voting info with friends, family and your network!</p>
 
@@ -34,24 +35,12 @@
             
             <div class="row center-align">
                 <div class="divider" style="margin-top: 60px; margin-bottom: 30px"></div>
-                <div class="col s6 l3 center-align">
-                  <a href="{% static 'img/US-NJ-2021.pdf' %}" target="_blank"><img class="z-depth-2" src="{% static 'img/US-NJ-2021.png' %}" width=100%></a>
+                <div class="col s6 l4 offset-l2 center-align">
+                    <a href="{% static 'img/obb-generic.jpeg' %}" target="_blank"><img class="z-depth-2" src="{% static 'img/obb-generic.jpeg' %}" width=100%></a>
+                  </div>
+                <div class="col s6 l4 center-align">
+                  <a href="{% static 'img/US-NJ-22.pdf' %}" target="_blank"><img class="z-depth-2" src="{% static 'img/nj-vote-22-min.jpg' %}" width=100%></a>
                 </div>
-                <div class="col s6 l3 center-align">
-                  <a href="{% static 'img/US-OH-2021.pdf' %}" target="_blank"><img class="z-depth-2" src="{% static 'img/US-OH-2021.png' %}" width=100%></a>
-                </div>
-                <div class="col s6 l3 center-align">
-                  <a href="{% static 'img/US-VA-2021.pdf' %}" target="_blank"><img class="z-depth-2" src="{% static 'img/US-VA-2021.png' %}" width=100%></a>
-                </div>
-                <div class="col s6 l3 center-align">
-                  <a href="{% static 'img/US-FL-2021.pdf' %}" target="_blank"><img class="z-depth-2" src="{% static 'img/US-FL-2021.png' %}" width=100%></a>
-                </div>
-              </div>
-            <div class="row">
-                <div class="divider" style="margin-top: 60px;"></div>
-                <h5 class="center-align coming-soon-title" style="font-size: 48px;color: rgb(184, 34, 34); padding-bottom: 20px; padding-top: 30px">Coming Soon!</h5>
-                <h6 style="font-weight: 400"><b style="font-weight: 400; font-family: oskar-inline; font-size: 56px">Lights, Camera ... <b style="color: rgb(24, 186, 24); font-size: 56px; font-weight: 400">VOTE!</b></b></h6>
-                <h6 style="padding-top: 10px; font-weight: 400"> Get Info About Voter ID Requirements & Navigate the Process to Acquire ID</h6>
             </div>
         </div>
     </div>
@@ -108,7 +97,15 @@
         }
         .phase-one-title {
             font-size: 38px;
-            
+            line-height: 48px;
+        }
+        .voting-subtitle {
+            font-size: 24px; 
+            font-weight: 300; 
+            margin-bottom: 20px
+        }
+        .coming-soon-text {
+            font-size: 28px;
         }
         .pillar-collapsible {
         width: 100%;
@@ -139,8 +136,16 @@
         }
         .phase-one-title {
             font-size: 48px;
-            width: 80%; 
+            line-height: 56px;
             margin-left: 10%
+        }
+        .voting-subtitle {
+            font-size: 28px; 
+            font-weight: 300; 
+            margin-bottom: 25px
+        }
+        .coming-soon-text {
+            font-size: 32px;
         }
         p {
             font-size:18px
@@ -171,16 +176,18 @@
         }
         .phase-one-title {
             font-size: 64px;
-            width: 70%; 
-            margin-left: 15%
+            line-height: 72px;
         }
         p {
             font-size:22px
         }
         .pillar-collapsible {
-        width: 70%;
-        margin-left:15%;
-    }
+            width: 70%;
+            margin-left:15%;
+        }
+        .coming-soon-text {
+            font-size: 38px;
+        }
 }
     @media only screen and (min-width:1201px){
        
@@ -205,7 +212,9 @@
 <style>
     .phase-one-title{
         font-family: oskar-inline;
-        text-align: center
+        text-align: center;
+        width: 100%;
+        margin-left: 0;
     }
     .jvectormap-container {
         height: 100%;
@@ -297,22 +306,19 @@
                 attribute: 'fill',
                 values: {
                     'US-NJ': 'published',
-                    'US-OH': 'published',
-                    'US-VA': 'published',
-                    'US-FL': 'published',
                 },
                 
             }],
         },
         onRegionClick: function(event, code) {
             var regionName = map.getRegionName(code);
-            var publishedStates = ["US-NJ", "US-VA", "US-OH", "US-FL"];
+            var publishedStates = ["US-NJ"];
             if (publishedStates.indexOf(code) != -1) {
                 var data = {
                     'state': code,
                 }
                 var state = code
-                window.location.href = "https://empowerthevillage.s3.amazonaws.com/static/img/"+ code +"-2021.pdf";
+                window.location.href = "https://empowerthevillage.s3.amazonaws.com/static/img/"+ code +"-22.pdf";
                 
             } 
         },

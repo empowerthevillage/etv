@@ -25,8 +25,6 @@
 {% url 'health:health-initiatives' as health_initiatives_url %}
 {% url 'policy:policy-home' as policy_url %}
 {% url 'policy:voting' as voting_url %}
-{% url 'education:education-home' as education_url %}
-{% url 'education:education-phase-one' as education_initiatives_url %}
 {% url 'prosperity:home' as ep_url %}
 {% url 'news' as news_url %}
 {% url 'shop' as shop_url %}
@@ -152,7 +150,7 @@
           <ul id="top-dropdown-pillars" class="dropdown-content dd-base collapsible">
             <li><a class="center-align valign-wrapper {% if request.path == efbf_url %}active{% endif %}" href="{{ pillars_url }}">Overview</a></li>
               <li>
-                <a class="center-align valign-wrapper collapsible-header">Economic Prosperity & Employment</a>
+                <a class="center-align valign-wrapper collapsible-header">Prosperity</a>
                 <div class="collapsible-body">
                 <ul>
                   <li><a href="{{ ep_url }}">Overview</a></li>
@@ -165,19 +163,16 @@
               </div>
               </li>
               <li>
-                <a href="{{ health_url }}">Health & Wellness</a>
+                <a href="{{ health_url }}">Peace</a>
               </li>
               <li>
-                <a class="center-align valign-wrapper collapsible-header">Policy & Power</av>
+                <a class="center-align valign-wrapper collapsible-header">Power</a>
                 <div class="collapsible-body">
                   <ul>
                     <li><a href="{{ policy_url }}">Overview</a></li>
                     <li><a href="{{ voting_url }}">Operation: Ballot Box™</a></li>
                   </ul>
                 </div>
-              </li>
-              <li>
-                <a href="{{ education_url }}">Education & Culture</a>
               </li>
           </ul>
         </div>
@@ -212,7 +207,7 @@
             
             <ul class="collapsible" style="padding-left: 4.5%">
               <li>
-                <a class="collapsible-header ">Economic Prosperity & Employment</a>
+                <a class="collapsible-header ">Prosperity</a>
                 <div class="collapsible-body">
                   <ul>
                     <li><a href="{{ ep_url }}">Overview</a></li>
@@ -227,9 +222,17 @@
             </ul>
           </li>
           <li class="">
+            <ul class="" style="padding-left: 0">
+              <li>
+                <a href="{{ health_url }}">Peace</a>
+                
+              </li>
+            </ul>
+          </li>
+          <li class="">
             <ul class="collapsible" style="padding-left: 4.5%">
               <li>
-                <a class="collapsible-header ">Policy & Power</a>
+                <a class="collapsible-header ">Power</a>
                 <div class="collapsible-body">
                   <ul>
                     <li><a href="{{ policy_url }}">Overview</a></li>
@@ -239,25 +242,7 @@
               </li>
             </ul>
           </li>
-          
-          <li class="">
-            <ul class="" style="padding-left: 0">
-              <li>
-                <a href="{{ health_url }}">Health & Wellness</a>
-                
-              </li>
-            </ul>
-          </li>
-          
-          
-          <li class="">
-            <ul class="" style="padding-left: 0%">
-              <li>
-                <a href="{{ education_url }}">Education</a>
-                
-              </li>
-            </ul>
-          </li>
+        
           <li class="divider"></li>
           {% if request.user.is_authenticated %}
           {% if request.user.is_staff %}
@@ -291,11 +276,11 @@
           </div>
           <div class="dropdown-container">
             <ul id="nav-dropdown-bf" class="dropdown-content dd-base">
-              <li><a href="{{ ep_url }}" class="center-align valign-wrapper {% if request.path == ep_url %}active{% endif %}">Economic Prosperity & Employment</a>
+              <li><a href="{{ ep_url }}" class="center-align valign-wrapper {% if request.path == ep_url %}active{% endif %}">Prosperity</a>
               </li>
-              <li><a href="{{ education_url }}" class="center-align valign-wrapper dropdown-trigger {% if request.path == education_url %}active{% endif %}">Education</a></li>
-              <li><a href="{{ health_url }}" class="center-align valign-wrapper dropdown-trigger {% if request.path == health_url %}active{% endif %}">Health & Wellness</a></li>
-              <li><a href="{{ policy_url }}" class="center-align valign-wrapper dropdown-trigger {% if request.path == policy_url %}active{% endif %}">Policy & Power</a></li>
+              
+              <li><a href="{{ health_url }}" class="center-align valign-wrapper dropdown-trigger {% if request.path == health_url %}active{% endif %}">Peace</a></li>
+              <li><a href="{{ policy_url }}" class="center-align valign-wrapper dropdown-trigger {% if request.path == policy_url %}active{% endif %}">Power</a></li>
             </ul>
           </div>
           <div class="dropdown-container">
@@ -308,13 +293,6 @@
               <li><a style="color: black; text-transform: none; font-size: 14px;" href="{{ nomination_url }}" class="center-align valign-wrapper {% if request.path == nomination_url %}active{% endif %}">Nomination Challenge</a</li>
               
               <li><a style="color: black; text-transform: none; font-size: 14px;" class="center-align {% if request.path == bingo_url %}active{% endif %}" href="{{ bingo_url }}">Power Bingo</a></li>
-            </ul>
-          </div>
-          <div class="dropdown-container">
-            <ul id="nav-dropdown-ee" class="dropdown-content dd-base">
-              <li><a href="{{ education_url }}" class="center-align valign-wrapper {% if request.path == education_url %}active{% endif %}">Overview</a></li>
-              <li><a href="{{ education_initiatives_url }}" class="center-align valign-wrapper {% if request.path == education_initiatives_url %}active{% endif %}">Initiatives</a></li>
-              
             </ul>
           </div>
           <div class="dropdown-container">
@@ -399,10 +377,9 @@
                   <div class="col s12 m6">
                     <ul class="other-links">
                       <li><a class="" href="{{ news_url }}">News</a></li>
-                      <li><a class="" href="{{ ep_url }}">Economic Prosperity & Employment</a></li>
-                      <li><a class="" href="{{ education_url }}">Education</a></li>
-                      <li><a class="" href="{{ health_url }}">Health & Wellness</a></li>
-                      <li><a class="" href="{{ policy_url }}">Policy & Power</a></li>
+                      <li><a class="" href="{{ ep_url }}">Prosperity</a></li>
+                      <li><a class="" href="{{ health_url }}">Peace</a></li>
+                      <li><a class="" href="{{ policy_url }}">Power</a></li>
                     </ul>
                   </div>
                 </div>

@@ -17,21 +17,15 @@
 <div class="row" style="margin-bottom: 0; background: url('{% static 'img/ed_collage_big.png' %}'); background-size: 180%; height: 100%">
     <div class="row col s12" style="margin-bottom: 0; background: rgba(255, 255, 255, 0.913);">
     <div class="col s10 offset-s1 center-align">
-        <h5 class="dyk" style="padding-top: 20px; padding-bottom: 20px">Education Initiatives</h5>
       
-            <div class="divider" style="margin-bottom: 20px"></div>
-
             <div class="row">
-                <div class="col l4 ee-image">
-                    <img class="z-depth-2" src="{% static 'img/schoolgirl.png' %}" style="margin-top: 60px">
+                <div class="col s12 striver-title">
+                    <img src="{% static 'img/village-strivers_logo.png' %}">
                 </div>
-                <div class="col s12 l8" style="margin-top: -20px">
-                    <img src="{% static 'img/village-strivers_logo.png' %}" style="width: 60%; padding-top: 0px;">
-                    <h6 class="pillar-h5 program-text" style="margin-top: 0; padding-top: 0; margin-bottom: 20px"><b>Village Strivers™:</b> This ETV program provides academic enrichment, homework help, coaching and tutoring, test prep, resources, and financial support for college-bound youth as well as job training for adults and youth (virtually or in-person).</h6>
-                    
-                    <h6 class="pillar-h5 program-text" style="margin-top:0; padding-top:0">The program is implemented in partnership with Village volunteers and paid teachers of color who serve as role model, mentors, and academic coaches. For eligible registrants, ETV subsidizes the cost of individual and group sessions with enrichment providers and independent tutors, emphasizing math, science, writing, and public speaking skills.</h6>
-
+                <div class="col s12 ee-image">
+                    <img class="z-depth-2" src="{% static 'img/schoolgirl.png' %}" style="margin-top: 20px">
                 </div>
+                
             </div>
     </div>
 </div>
@@ -103,6 +97,9 @@
         color: black
     }
     @media only screen and (min-width: 0px) {
+        .striver-title img {
+            width: 100%
+        }
         .ee-image img {
             width: 60%
         }
@@ -199,6 +196,9 @@
         }
     }
     @media only screen and (min-width: 601px) {
+        .striver-title img {
+            width: 60%
+        }
         .ee-image img {
             width: 60%
         }
@@ -254,8 +254,7 @@
     }
     @media only screen and (min-width: 993px) {
         .ee-image img {
-            width: 110%;
-            margin-top: 3%
+            width: 40%;
         }
         .program-text {
             text-align: left;
@@ -272,10 +271,6 @@
         }
     }
     @media only screen and (min-width: 1201px) {
-        .ee-image img {
-            width: 110%;
-            margin-top: 3%
-        }
         .program-text {
             text-align: left;
             font-size: 22px
