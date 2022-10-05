@@ -8,8 +8,8 @@
 {% block content %}
 <div class="parallax-container z-depth-3 box-shadow valign-wrapper">
     
-    <div class="container z-depth-4 center-align parallax-banner">
-        <h4 style="padding: 1% 0%; font-family: poppins; font-weight: 800; font-size: 62px; letter-spacing: 2px; color:rgb(184, 23, 23)">POWER</h4>
+    <div class="container z-depth-4 center-align parallax-banner" id="obb-banner">
+        <h4 style="padding: 1% 1% 3% 1%; font-family: oskar; font-weight: 800; font-size: 52px; letter-spacing: 1px; color:rgb(184, 23, 23)">Operation: Ballot Box™</h4>
     </div>
     <div class="parallax">
         <img src='{% static "img/policy-collage-final-min.jpg" %}'>
@@ -19,16 +19,24 @@
 <div style="background: url('{% static 'img/policy-collage-final-min.jpg' %}');">
     <div class="row" style="background-color: rgba(255, 255, 255, 0.781);">
         <div class="col s12 l10 offset-l1  pillar-body center-align">
-            <h5 class="phase-one-title" style="margin-bottom: 10px">Operation: Ballot Box™</h5>
+            <!--<h5 class="phase-one-title" style="margin-bottom: 10px">Operation: Ballot Box™</h5>-->
             <h6 class="voting-subtitle">How and Where to Vote Safely and Reliably</h6>
-
+            <div class="divider" style="margin-top: 20px; margin-bottom: 30px"></div>
+            <div class="row">
+                <div class="col s12 l10 xl8 offset-l1 offset-xl2">
+                    <img class="z-depth-1" src="{% static 'img/obb-slide-min.jpg' %}" width="100%">
+                </div>
+            </div>
+            
+            <div class="divider" style="margin-top: 40px; margin-bottom: 40px"></div>
             <div class="row center-align">
                 <div class="col s6 l4 offset-l2 center-align">
-                    <a href="{% static 'img/obb-generic.jpeg' %}" target="_blank"><img class="z-depth-2" src="{% static 'img/obb-generic.jpeg' %}" width=100%></a>
-                    <p style="margin-bottom: 0">Print and share nationwide!</p>
+                    <a href="{% static 'img/obb-generic-2.jpg' %}" target="_blank"><img class="z-depth-2" src="{% static 'img/obb-generic-2.jpg' %}" width=100%></a>
+                    <a class="print-btn" href="{% static 'img/obb-generic-2.jpg' %}" target="_blank"><p>Click to print and share nationwide!</p></a>
                   </div>
                 <div class="col s6 l4 center-align">
                   <a href="{% static 'img/US-NJ-22.pdf' %}" target="_blank"><img class="z-depth-2" src="{% static 'img/nj-vote-22-min.jpg' %}" width=100%></a>
+                  <a class="print-btn" href="{% static 'img/nj-22-print.pdf' %}" target="_blank"><p>Click to print and share!</p></a>
                 </div>
             </div>
             <div class="divider" style="margin-top: 40px; margin-bottom: 40px"></div>
@@ -84,6 +92,30 @@
         text-align: center;
     }
     @media only screen and (min-width:0px){
+        #obb-banner {
+            width: fit-content;
+        }
+        .print-btn {
+            width: fit-content;
+            
+        }
+        .print-btn p {
+            background: black;
+            color: white;
+            font-family: oskar;
+            font-size: 24px;
+            line-height: 32px;
+            font-weight: 300;
+            box-shadow: 0px 0px 7px 0px rgba(66,66,66,0.72);
+            -webkit-box-shadow: 0px 0px 7px 0px rgba(66,66,66,0.72);
+            -moz-box-shadow: 0px 0px 7px 0px rgba(66,66,66,0.72);
+            transition: all 0.3s ease-in-out;
+            padding: 10px 2px
+        }
+        .print-btn p:hover {
+            background: rgb(54, 159, 20);
+            cursor: pointer;
+        }
         .health-main-title {
         font-family: oskar-inline;
         font-size: 36px;
@@ -126,6 +158,9 @@
         }
     }
     @media only screen and (min-width:601px){
+        #obb-banner {
+            width: 60%;
+        }
         .health-main-title {
         font-family: oskar-inline;
         font-size: 48px;
@@ -166,6 +201,10 @@
         }
     }
     @media only screen and (min-width:993px){
+        #obb-banner {
+            width: 60%;
+        }
+        
         .health-main-title {
         font-size: 48px;
         text-align: left;
@@ -192,7 +231,9 @@
         }
 }
     @media only screen and (min-width:1201px){
-       
+        #obb-banner {
+            width: 55%;
+        }
         .pillar-collapsible {
         width: 60%;
         margin-left:20%;
