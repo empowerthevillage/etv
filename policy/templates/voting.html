@@ -21,8 +21,19 @@
         <div class="col s12 l10 offset-l1  pillar-body center-align">
             <h5 class="phase-one-title" style="margin-bottom: 10px">Operation: Ballot Box™</h5>
             <h6 class="voting-subtitle">How and Where to Vote Safely and Reliably</h6>
+
+            <div class="row center-align">
+                <div class="col s6 l4 offset-l2 center-align">
+                    <a href="{% static 'img/obb-generic.jpeg' %}" target="_blank"><img class="z-depth-2" src="{% static 'img/obb-generic.jpeg' %}" width=100%></a>
+                    <p style="margin-bottom: 0">Print and share nationwide!</p>
+                  </div>
+                <div class="col s6 l4 center-align">
+                  <a href="{% static 'img/US-NJ-22.pdf' %}" target="_blank"><img class="z-depth-2" src="{% static 'img/nj-vote-22-min.jpg' %}" width=100%></a>
+                </div>
+            </div>
+            <div class="divider" style="margin-top: 40px; margin-bottom: 40px"></div>
             <div style="display: flex; justify-content:center">
-                <h4 class="coming-soon-text z-depth-2" style="background: black; color: white; padding: 3%; width: fit-content">Coming Soon! 2022 Election Info</h4>
+                <h4 class="coming-soon-text z-depth-2" style="background: black; color: white; padding: 3%; width: fit-content">Additional 2022 Election Info Coming Soon!</h4>
             </div>
               <div class="divider" style="margin-top: 40px; margin-bottom: 40px"></div>
             <p style="text-align: center;margin-top:0">Click your state to download and share key voting info with friends, family and your network!</p>
@@ -33,15 +44,7 @@
                     </div>     
             </div>
             
-            <div class="row center-align">
-                <div class="divider" style="margin-top: 60px; margin-bottom: 30px"></div>
-                <div class="col s6 l4 offset-l2 center-align">
-                    <a href="{% static 'img/obb-generic.jpeg' %}" target="_blank"><img class="z-depth-2" src="{% static 'img/obb-generic.jpeg' %}" width=100%></a>
-                  </div>
-                <div class="col s6 l4 center-align">
-                  <a href="{% static 'img/US-NJ-22.pdf' %}" target="_blank"><img class="z-depth-2" src="{% static 'img/nj-vote-22-min.jpg' %}" width=100%></a>
-                </div>
-            </div>
+            
         </div>
     </div>
 </div>
@@ -102,7 +105,7 @@
         .voting-subtitle {
             font-size: 24px; 
             font-weight: 300; 
-            margin-bottom: 20px
+            margin-bottom: 30px
         }
         .coming-soon-text {
             font-size: 28px;
@@ -142,7 +145,6 @@
         .voting-subtitle {
             font-size: 28px; 
             font-weight: 300; 
-            margin-bottom: 25px
         }
         .coming-soon-text {
             font-size: 32px;
@@ -245,6 +247,7 @@
         }
     }
 </style>
+
 <script>
     $(function(){
     map = new jvm.Map({
@@ -264,7 +267,7 @@
         labels: {
           regions: {
             render: function(code){
-          var doNotShow = ['US-RI', 'US-DC', 'US-DE', 'US-MD'];
+          var doNotShow = ['US-RI', 'US-DC', 'US-DE'];
 
           if (doNotShow.indexOf(code) === -1) {
             return code.split('-')[1];
@@ -306,6 +309,19 @@
                 attribute: 'fill',
                 values: {
                     'US-NJ': 'published',
+                    'US-AZ': 'published',
+                    'US-AR': 'published',
+                    'US-FL': 'published',
+                    'US-GA': 'published',
+                    'US-TX': 'published',
+                    'US-KY': 'published',
+                    'US-LA': 'published',
+                    'US-MD': 'published',
+                    'US-MI': 'published',
+                    'US-WI': 'published',
+                    'US-NC': 'published',
+                    'US-OH': 'published',
+                    'US-PA': 'published',
                 },
                 
             }],
