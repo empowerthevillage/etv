@@ -1018,8 +1018,8 @@ def art_sponsor_checkout(request):
 
 def gallery_home(request):
     cart_obj, created = FullGalleryCart.objects.new_or_get(request)
-    items = FullGalleryItem.objects.all().order_by('order', 'artist', 'price')
-    artists = Artist.objects.all().order_by('name')
+    items = FullGalleryItem.objects.filter(active=True).order_by('order', 'artist', 'price')
+    artists = Artist.objects.filter(active=True).order_by('name')
     auction_items = AuctionItem.objects.all()
     p = Paginator(items, 6)
     filter = GalleryFilter(request.GET, queryset=items)
@@ -1053,8 +1053,8 @@ def full_gallery_cart_home(request):
 
 def full_gallery_home(request):
     cart_obj, created = FullGalleryCart.objects.new_or_get(request)
-    items = FullGalleryItem.objects.all().order_by('order', 'artist', '-sold', 'price')
-    artists = Artist.objects.all().order_by('name')
+    items = FullGalleryItem.objects.filter(active=True).order_by('order', 'artist', '-sold', 'price')
+    artists = Artist.objects.filter(active=True).order_by('name')
     auction_items = AuctionItem.objects.all()
     p = Paginator(items, 6)
     filter = GalleryFilter(request.GET, queryset=items)
@@ -1070,7 +1070,7 @@ def full_gallery_home(request):
 
 def gallery_get_next(request):
     requested_page = request.GET['page']
-    items = FullGalleryItem.objects.all().order_by('order', 'artist', '-sold', 'price')
+    items = FullGalleryItem.objects.filter(active=True).order_by('order', 'artist', '-sold', 'price')
     p = Paginator(items, 12)
     page = p.get_page(requested_page)
     if page.has_next:
@@ -1078,7 +1078,7 @@ def gallery_get_next(request):
         return HttpResponse(html)
     
 def gallery_search(request):
-    f = GalleryFilter(request.GET, queryset=FullGalleryItem.objects.all().order_by('order', 'artist', 'price'))
+    f = GalleryFilter(request.GET, queryset=FullGalleryItem.objects.filter(active=True).order_by('order', 'artist', 'price'))
     items = f.qs
     if len(items) > 0:
         p = Paginator(items, 12)

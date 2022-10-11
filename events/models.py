@@ -456,9 +456,13 @@ class Artist(models.Model):
     name            = models.CharField(max_length=270)
     image           = models.FileField(blank=True, null=True)
     bio             = models.TextField(null=True, blank=True)
+    active          = models.BooleanField(default=False)
     
     def __str__(self):
         return str(self.name)
+    
+    class Meta:
+        ordering = ['pk']
 
 class GalleryManager(models.Manager):
 
@@ -521,6 +525,7 @@ class FullGalleryItem(models.Model):
     sold            = models.BooleanField(default=False)
     order           = models.IntegerField(null=True, blank=True)
     pre_sale        = models.BooleanField(default=False)
+    active          = models.BooleanField(default=True)
 
     objects         = GalleryManager()
     

@@ -343,6 +343,40 @@ def mv_view(request):
     }
     return render(request, 'vbp/mv.html', context)
     
+def nj_view(request):
+    f = vbp_nj.objects.all()
+    listings_full = f.exclude(city='').order_by('category', 'cat_ordering', 'city', 'business_name')
+    listings_empty = f.filter(city='').order_by('category', 'cat_ordering', 'business_name')
+    all_listings = list(listings_full) + list(listings_empty)
+    sections = []
+    page_count = 5
+    for category, verbose in CATEGORY_CHOICES:
+        dict = []
+        for x in all_listings:
+            if x.category == category:
+                dict.append(x)
+        if len(dict)>0:
+            pagination_obj = Paginator(dict, 16)
+            start_page = page_count + 1
+            page_count += pagination_obj.num_pages
+            line = {"category": category, "verbose": str(verbose), "pagination": pagination_obj, "start_page": start_page, "last_page": page_count, "cover": "https://etv-empowerthevillage.s3.amazonaws.com/static/img/vbp/%s.svg" %(str(verbose)), "right": "https://etv-empowerthevillage.s3.amazonaws.com/static/img/vbp/%s_right.svg" %(str(verbose)),"left": "https://etv-empowerthevillage.s3.amazonaws.com/static/img/vbp/%s_left.svg" %(str(verbose))}
+            sections.append(line)
+        else:
+            pass
+    
+    col_1_end = round(len(sections)/2)
+    col_2_start = col_1_end + 1
+    col_2_end = len(sections)
+    col1 = sections[0:col_1_end]
+    col2 = sections[col_2_start:col_2_end]
+    context = {
+        "sections": sections,
+        "col1": col1,
+        "col2":  col2,
+        "filter": f,
+    }
+    return render(request, 'vbp/nj_only.html', context)
+
 def listing_filter(request, state):
     state_formatted = state.split("-")[1].lower()
     model = django.apps.apps.get_model('vbp', 'vbp_%s' %(state_formatted))

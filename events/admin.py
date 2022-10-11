@@ -64,7 +64,7 @@ class TicketTypeAdmin(admin.ModelAdmin):
 
 class ArtAdmin(admin.ModelAdmin):
     list_display = ['title', 'artist', 'price', 'image', 'sold', 'pre_sale']
-    actions = ['make_presale']
+    actions = ['make_presale', 'mark_inactive']
     def make_presale(self, request, queryset):
         updated = queryset.update(pre_sale=True)
         self.message_user(request, ngettext(
@@ -73,6 +73,15 @@ class ArtAdmin(admin.ModelAdmin):
             updated,
         ) % updated, messages.SUCCESS)
     make_presale.short_description = "Mark selected as presale"
+    
+    def mark_inactive(self, request, queryset):
+        updated = queryset.update(active=False)
+        self.message_user(request, ngettext(
+            '%d listing successfully marked as inactive.', 
+            '%d listings successfully marked as inactive.', 
+            updated,
+        ) % updated, messages.SUCCESS)
+    mark_inactive.short_description = "Mark selected as inactive"
 
 class AuctionAdmin(admin.ModelAdmin):
     list_display = ['title', 'artist', 'image']
