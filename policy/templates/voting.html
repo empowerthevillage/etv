@@ -47,22 +47,22 @@
             <div class="divider" style="margin-top: 40px; margin-bottom: 40px"></div>
             <div class="row">
                 <div class="col s12 m6 l4">
-                    <a href="{% static 'img/US-AR-22.pdf' %}" target="_blank"><img class="lazy z-depth-1" src="{% static 'img/US-AR-22.jpg' %}" width="100%" style="margin-top: 10px"></a>
+                    <a href="{% static 'img/US-AR-22.pdf' %}" target="_blank"><img class="lazy z-depth-1" src="{% static 'img/US-AR-22.webp' %}" width="100%" style="margin-top: 10px"></a>
                 </div>
                 <div class="col s12 m6 l4">
-                    <a href="{% static 'img/US-AZ-22.pdf' %}" target="_blank"><img class="lazy z-depth-1" src="{% static 'img/US-AZ-22.jpg' %}" width="100%" style="margin-top: 10px"></a>
+                    <a href="{% static 'img/US-AZ-22.pdf' %}" target="_blank"><img class="lazy z-depth-1" src="{% static 'img/US-AZ-22.webp' %}" width="100%" style="margin-top: 10px"></a>
                 </div>
                 <div class="col s12 m6 l4">
-                    <a href="{% static 'img/US-LA-22.pdf' %}" target="_blank"><img class="lazy z-depth-1" src="{% static 'img/US-LA-22.jpg' %}" width="100%" style="margin-top: 10px"></a>
+                    <a href="{% static 'img/US-LA-22.pdf' %}" target="_blank"><img class="lazy z-depth-1" src="{% static 'img/US-LA-22.webp' %}" width="100%" style="margin-top: 10px"></a>
                 </div>
                 <div class="col s12 m6 l4">
-                    <a href="{% static 'img/US-MI-22.pdf' %}" target="_blank"><img class="lazy z-depth-1" src="{% static 'img/US-MI-22.jpg' %}" width="100%" style="margin-top: 10px"></a>
+                    <a href="{% static 'img/US-MI-22.pdf' %}" target="_blank"><img class="lazy z-depth-1" src="{% static 'img/US-MI-22.webp' %}" width="100%" style="margin-top: 10px"></a>
                 </div>
                 <div class="col s12 m6 l4">
-                    <a href="{% static 'img/US-TX-22.pdf' %}" target="_blank"><img class="lazy z-depth-1" src="{% static 'img/US-TX-22.jpg' %}" width="100%" style="margin-top: 10px"></a>
+                    <a href="{% static 'img/US-TX-22.pdf' %}" target="_blank"><img class="lazy z-depth-1" src="{% static 'img/US-TX-22.webp' %}" width="100%" style="margin-top: 10px"></a>
                 </div>
                 <div class="col s12 m6 l4">
-                    <a href="{% static 'img/US-WI-22.pdf' %}" target="_blank"><img class="lazy z-depth-1" src="{% static 'img/US-WI-22.jpg' %}" width="100%" style="margin-top: 10px"></a>
+                    <a href="{% static 'img/US-WI-22.pdf' %}" target="_blank"><img class="lazy z-depth-1" src="{% static 'img/US-WI-22.webp' %}" width="100%" style="margin-top: 10px"></a>
                 </div>
             </div>
               <div class="divider" style="margin-top: 40px; margin-bottom: 40px"></div>
@@ -402,7 +402,7 @@
                     'state': code,
                 }
                 var state = code
-                window.location.href = "https://empowerthevillage.s3.amazonaws.com/static/img/"+ code +"-22.pdf";
+                window.open("https://empowerthevillage.s3.amazonaws.com/static/img/"+ code +"-22.pdf", "_blank")
                 
             } 
         },
