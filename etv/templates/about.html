@@ -45,7 +45,7 @@ ETV | About
                 <div class="collapsible-header about-collapsible valign-wrapper"><i class="material-icons">outlined_flag</i>Mission</div>
                 <div class="collapsible-body about-table" style="background-color: #151515;">
                     
-                    <img src="{% static 'img/mission-possible.png' %}" width=100%>
+                    <img class="lazy" src="{% static 'img/mission-possible.png' %}" width=100%>
                     
                         <div class="row">
                             <div class="col s12 m3" style="color: rgb(81, 187, 81); font-weight: 600;">VISION</div>
@@ -65,13 +65,13 @@ ETV | About
             <li>
                 <div class="collapsible-header about-collapsible valign-wrapper"><i class="material-icons">portrait</i>Our Founder</div>
                 <div class="collapsible-body">
-                    <img src="{% static 'img/founder-card.jpeg' %}" width=100%>
+                    <img class="lazy" src="{% static 'img/founder-card.jpeg' %}" width=100%>
                 </div>
             </li>
             <li class="active">
                 <div class="collapsible-header about-collapsible valign-wrapper"><i class="material-icons">groups</i>Leadership</div>
                 <div class="collapsible-body">
-                    <img src="{% static 'img/etv-board-922.jpg' %}" width=100%>
+                    <img src="{% static 'img/board-101322.jpg' %}" width=100%>
                     <div class="divider"></div>
                     <div class="row" style="margin-top: 30px">
                         <div class="col 12">
@@ -131,6 +131,12 @@ ETV | About
                             }
                         }
                     </style>
+                </div>
+            </li>
+            <li>
+                <div class="collapsible-header about-collapsible valign-wrapper"><i class="material-icons">portrait</i>Corporate Sponsors & Donors</div>
+                <div class="collapsible-body">
+                    <img class="lazy" src="{% static 'img/sponsors.png' %}" width=100%>
                 </div>
             </li>
         </ul> 

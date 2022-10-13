@@ -45,7 +45,7 @@
                 </div>
             </div>
             <div class="divider" style="margin-top: 40px; margin-bottom: 40px"></div>
-            <p class="voting-subtitle" style="text-align: center;margin-top:0">Click your state to download and share key voting info with friends, family and your network!</p>
+            <p class="voting-subtitle" style="text-align: center;margin-top:0" id="flyer-print">Click your state to download and share key voting info with friends, family and your network!</p>
 
             <div class="map-container">
                     <div id="map" style="height: 600px">
@@ -333,6 +333,12 @@
 </style>
 
 <script>
+    $(document).ready(function(){
+        $('#flyer-print').on('click', function(event){
+            event.preventDefault()
+            alert('sanity')
+        })
+    });
     $(function(){
     map = new jvm.Map({
         map: 'us_aea',

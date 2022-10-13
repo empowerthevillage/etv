@@ -28,9 +28,10 @@
         -webkit-text-fill-color: transparent;">National Medical Fellowships <br>Gala Gallery</div>
         <!--<div class="center-align event-page-title" style="color:black">Full Art Collection & Artist Bios</div>-->
         <div class="divider-dotted"></div>
-        <p class="subtitle" style="margin-bottom: 10px">Purchase remaining exquisite works of art from ETV's exclusive collection below!</p>
-        <p class="subtitle" style="margin-top: 0">*All artwork comes framed or on hangable canvas with the exception of textiles and sculptures</p>
-        
+         
+         <p class="subtitle" style="margin-top: 20px">Shop the Online Gallery & view Artist Bios below!</p>
+         <p class="subtitle" style="margin-top: 20px">Generous portion of proceeds will benefit National Medical Fellowships and Empower The Village</p>
+         <p class="subtitle" style="margin-top: 20px">2 nonprofit partners empowering the BIPOC community</p>
     </div>
 
     <div class="divider"></div>
@@ -54,9 +55,9 @@
                     </span> &nbsp; View Full Gallery</div>
             </form>
         </div>
+        <p class="subtitle" style="margin-top: 0px">*All artwork comes framed or on hangable canvas with the exception of textiles</p>
         <div id="gallery-container">
         {% for page in p %}
-            {% if not page.has_previous %}
                 {% for x in page.object_list %}
                     <div class="col s12 m4 center-align grid-col" style="padding: 1%;">
                         <div class="" style="width: 100%">
@@ -85,7 +86,6 @@
                         </div>
                     </div>
                 {% endfor %}
-            {% endif %}
             
         {% endfor %}
         </div>
