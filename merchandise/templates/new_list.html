@@ -3,19 +3,19 @@
 {% block title %}{{ title }}{% endblock %}
 
 {% block content %}
-<div style="background: url('{% static 'img/pillar_collage.png' %}');">
+<div style="background: url('{% static 'img/pillar-collage-min.jpg' %}');">
     <div class="merchandise-container" style="background-color: rgba(255, 255, 255, 0.666);">
         <div class="row title-row" style="margin-bottom: 0; background: rgba(255, 255, 255, 0.733)">
             <div class="col s12 row cart-row">
                 <div class="col s12 right-align">
-                        <a href="{{ cart_home_url }}">
+                        <a href="/cart/">
                         <div class="col s12">
                             <img class="cart-count-image" src="{% static 'images/cart.svg' %}">
                             
                         </div>
                         </a>
-                        <a href="{{ cart_home_url }}">
-                        <div class="col s12  cart-count-mycart">
+                        <a href="/cart/">
+                        <div class="col s12 cart-count-mycart">
                             My Cart
                         </div>
                     </a>
@@ -487,9 +487,7 @@
             color: rgb(44, 150, 44)
         }
     }
-    @media only screen and (min-width:1226px){
-        .merchandise-container {
-           padding-top: 45px
+    @media only screen and (min-width:1226px){ padding-top: 45px
         }
         .page-title {
             font-size: 64px;
