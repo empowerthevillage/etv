@@ -165,8 +165,8 @@ class Order(models.Model):
             "width": "12",
             "height": "1",
             "distance_unit": "in",
-            "weight": "8",
-            "mass_unit": "oz"
+            "weight": "1",
+            "mass_unit": "lb"
         }
 
         shipment = shippo.Shipment.create(
@@ -181,7 +181,6 @@ class Order(models.Model):
             label_file_type='PDF',
         )
         if transaction.status == "SUCCESS":
-            
             return transaction
         else:
             sweetify.error(self.request, 'Address could not be confirmed! Please update shipping address and try again')

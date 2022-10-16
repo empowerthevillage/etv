@@ -46,31 +46,6 @@ def cart_home(request):
     }
     return render(request, "carts/cart_home.html", context)
 
-def cart_update(request):
-    item_id = request.POST.get('item_id')
-
-    if item_id is not None:
-        try:
-            item_obj = item.objects.get(id=item_id)
-        except item.DoesNotExist:
-            return redirect("merchandise:list")
-        cart_obj, new_obj = Cart.objects.new_or_get(request)
-        if item_obj in cart_obj.products.all():
-            cart_obj.products.remove(item_obj)
-            added = False
-        else:
-            cart_obj.products.add(item_obj)
-            added = True
-        request.session['cart_items'] = cart_obj.products.count()
-        if request.is_ajax():
-            json_data = {
-                "added": added,
-                "removed": not added,
-                "cartItemCount": cart_obj.products.count(),
-            }
-            return JsonResponse(json_data)
-    return redirect('merchandise:list')
-
 def checkout_home(request):
     cart_obj, cart_created = Cart.objects.new_or_get(request)
     item_list        = cartItem.objects.filter(cart=cart_obj)
@@ -361,13 +336,20 @@ def new_charge(request):
         email = request.POST.get('email')
         request.session['guest_email'] = email
         billing_profile, billing_profile_created = BillingProfile.objects.new_or_get(request)
-        print(billing_profile)
     charge = order_obj.charge
     order_obj.braintree_id = charge.transaction.id
     label = order_obj.new_label
     order_obj.shippo_obj = label.object_id
     order_obj.label = label.label_url
     order_obj.save()
+    send_mail(
+            'New Merchandise Purchase',
+            str('A merchandise purchase has been successfully processed! Purchaser: '+ str(billing_profile.email)),
+            'etvnotifications@gmail.com',
+            #recipients,
+            ['chandler@eliftcreations.com','admin@empowerthevillage.org'],
+            fail_silently=True
+        )
     return redirect('carts:checkout-done')
 
 def checkout_done(request):
@@ -417,7 +399,6 @@ def ticket_nb(request):
             "submit_for_settlement": True
         }
     })
-    print(result)
     if result.is_success:
         tickets = ticketItem.objects.filter(cart=cart_obj)
         ticket_list = []
