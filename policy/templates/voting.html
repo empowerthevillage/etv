@@ -6,6 +6,7 @@
 {% block seo_description %}Operation: Ballot Box™: Learn how and where to vote safely and reliably!{% endblock %}
 
 {% block content %}
+
 <div class="parallax-container z-depth-3 box-shadow valign-wrapper">
     
     <div class="container z-depth-4 center-align parallax-banner" id="obb-banner">
@@ -16,6 +17,7 @@
     </div>
 
 </div>
+
 <div style="background: url('{% static 'img/policy-collage-final-min.jpg' %}');">
     <div class="row" style="background-color: rgba(255, 255, 255, 0.781);">
         <div class="col s12 l10 offset-l1  pillar-body center-align">
@@ -33,19 +35,19 @@
                 <div class="col s6 l5 offset-l1 center-align">
                     <a href="{% static 'img/US-NJ-22.pdf' %}" target="_blank"><img class="z-depth-2" src="{% static 'img/nj-vote-22-min.jpg' %}" width=100%></a>
                     
-                  </div>
+                </div>
                 <div class="col s6 l5 center-align">
-                  <a href="{% static 'img/US-NJ-22.pdf' %}" target="_blank"><img class="z-depth-2" src="{% static 'img/US-NJ-22-pg2.jpg' %}" width=100%></a>
-                  
+                <a href="{% static 'img/US-NJ-22.pdf' %}" target="_blank"><img class="z-depth-2" src="{% static 'img/US-NJ-22-pg2.jpg' %}" width=100%></a>
+                
                 </div>
             </div>
             <div class="row center-align">
                 <div class="col s12 m10 offset-m1 l8 offset-l2">
-                    <a class="print-btn" href="{% static 'img/nj-22-print.pdf' %}" target="_blank"><p>Download print version with QR codes to distribute flyers!</p></a>
+                    <a class="print-btn modal-trigger" href="#state-modal" id="print-btn"><p>Download print version with QR codes to distribute flyers!</p></a>
                 </div>
             </div>
             <div class="divider" style="margin-top: 40px; margin-bottom: 40px"></div>
-            <p class="voting-subtitle" style="text-align: center;margin-top:0" id="flyer-print">Click your state to download and share key voting info with friends, family and your network!</p>
+            <p class="voting-subtitle" style="text-align: center;margin-top:0">Click your state to download and share key voting info with friends, family and your network!</p>
 
             <div class="map-container">
                     <div id="map" style="height: 600px">
@@ -88,14 +90,42 @@
                     <a href="{% static 'img/US-WI-22.pdf' %}" target="_blank"><img class="lazy z-depth-1" src="{% static 'img/US-WI-22.webp' %}" width="100%" style="margin-top: 10px"></a>
                 </div>
             </div>
-              
+            
             
             
         </div>
     </div>
 </div>
 
+<div class="modal" id="state-modal">
+    <p class="voting-subtitle" style="text-align: center;margin-top:0">Choose your state to download and share key voting info with friends, family and your network!</p>
+    <div class="input-field">
+        <select id="flyer-state-select">
+        <option value="" disabled selected>Choose state</option>
+        <option value="US-AZ">Arizona</option>
+        <option value="US-AR">Arkansas</option>
+        <option value="US-FL">Florida</option>
+        <option value="US-KY">Kentucky</option>
+        <option value="US-LA">Louisiana</option>
+        <option value="US-MD">Maryland</option>
+        <option value="US-MI">Michigan</option>
+        <option value="US-NJ">New Jersey</option>
+        <option value="US-NC">North Carolina</option>
+        <option value="US-OH">Ohio</option>
+        <option value="US-TX">Texas</option>
+        <option value="US-WI">Wisconson</option>
+    </select>
+</div>
+
 <style>
+    #state-modal {
+        padding: 2%;
+        height: 80%
+    }
+    #state-modal .input-field {
+        width: 60%;
+        margin-left: 20%;
+    }
     h5 b {
         font-family: poppins;
         font-weight: 500;
@@ -334,10 +364,10 @@
 
 <script>
     $(document).ready(function(){
-        $('#flyer-print').on('click', function(event){
-            event.preventDefault()
-            alert('sanity')
-        })
+        $('#state-modal').on('change', function(event){
+            var code = $('#state-modal option:selected').val()
+            window.open("https://empowerthevillage.s3.amazonaws.com/static/img/"+ code +"-22-print.pdf", "_blank")
+        });
     });
     $(function(){
     map = new jvm.Map({
