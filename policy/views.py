@@ -13,6 +13,12 @@ def policy_home(request):
 
 def voting(request):
     context = {
-        'title': 'ETV | Voting',
+        'title': 'ETV | Operation Ballot Box',
     }
     return render(request, "voting.html", context)
+
+def voting_print(request):
+    context = {
+        'title': 'ETV | Operation Ballot Box',
+    }
+    return render(request, "voting_print.html", context)

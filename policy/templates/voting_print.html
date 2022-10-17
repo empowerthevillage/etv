@@ -1,0 +1,457 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}ETV | Operation: Ballot Box™{% endblock %}
+{% block canonical %}https://www.empowerthevillage.org/policy-and-power/voting/{% endblock %}
+{% block seo_description %}Operation: Ballot Box™: Learn how and where to vote safely and reliably!{% endblock %}
+
+{% block content %}
+
+<div class="parallax-container z-depth-3 box-shadow valign-wrapper">
+    
+    <div class="container z-depth-4 center-align parallax-banner" id="obb-banner">
+        <h4 style="padding: 1% 1% 3% 1%; font-family: oskar; font-weight: 800; font-size: 52px; letter-spacing: 1px; color:rgb(184, 23, 23)">Operation: <b style="font-weight:800; color: black">Ballot Box™</b></h4>
+    </div>
+    <div class="parallax">
+        <img src='{% static "img/policy-collage-final-min.jpg" %}'>
+    </div>
+
+</div>
+
+<div style="background: url('{% static 'img/policy-collage-final-min.jpg' %}');">
+    <div class="row" style="background-color: rgba(255, 255, 255, 0.781);">
+        <div class="col s12 l10 offset-l1  pillar-body center-align">
+            <h6 class="voting-subtitle">Print and Share! How and Where to Vote Safely and Reliably</h6>
+            
+            <div class="divider" style="margin-top: 40px; margin-bottom: 40px"></div>
+            <div class="row center-align">
+                <div class="col s6 l5 offset-l1 center-align">
+                    <a href="{% static 'img/US-NJ-22-print.pdf' %}" target="_blank"><img class="z-depth-2" src="{% static 'img/nj-vote-22-min.jpg' %}" width=100%></a>
+                    
+                </div>
+                <div class="col s6 l5 center-align">
+                <a href="{% static 'img/US-NJ-22-print.pdf' %}" target="_blank"><img class="z-depth-2" src="{% static 'img/US-NJ-22-pg2.jpg' %}" width=100%></a>
+                
+                </div>
+            </div>
+            <div class="row center-align">
+                <div class="col s12 m10 offset-m1 l8 offset-l2">
+                    <a class="print-btn modal-trigger" href="#state-modal" id="print-btn"><p>Download print version with QR codes to distribute flyers!</p></a>
+                </div>
+            </div>
+            <div class="divider" style="margin-top: 40px; margin-bottom: 40px"></div>
+            <p class="voting-subtitle" style="text-align: center;margin-top:0">Click your state to download and share key voting info with friends, family and your network!</p>
+
+            <div class="map-container">
+                    <div id="map" style="height: 600px">
+                            
+                    </div>     
+            </div>
+            <div class="divider" style="margin-top: 40px; margin-bottom: 40px"></div>
+            <div class="row">
+                <div class="col s12 m6 l4">
+                    <a href="{% static 'img/US-AZ-22-print.pdf' %}" target="_blank"><img class="lazy z-depth-1" src="{% static 'img/US-AZ-22.webp' %}" width="100%" style="margin-top: 10px"></a>
+                </div>
+                <div class="col s12 m6 l4">
+                    <a href="{% static 'img/US-AR-22-print.pdf' %}" target="_blank"><img class="lazy z-depth-1" src="{% static 'img/US-AR-22.webp' %}" width="100%" style="margin-top: 10px"></a>
+                </div>
+                <div class="col s12 m6 l4">
+                    <a href="{% static 'img/US-FL-22-print.pdf' %}" target="_blank"><img class="lazy z-depth-1" src="{% static 'img/US-FL-22.webp' %}" width="100%" style="margin-top: 10px"></a>
+                </div>
+                <div class="col s12 m6 l4">
+                    <a href="{% static 'img/US-KY-22-print.pdf' %}" target="_blank"><img class="lazy z-depth-1" src="{% static 'img/US-KY-22.webp' %}" width="100%" style="margin-top: 10px"></a>
+                </div>
+                <div class="col s12 m6 l4">
+                    <a href="{% static 'img/US-LA-22-print.pdf' %}" target="_blank"><img class="lazy z-depth-1" src="{% static 'img/US-LA-22.webp' %}" width="100%" style="margin-top: 10px"></a>
+                </div>
+                <div class="col s12 m6 l4">
+                    <a href="{% static 'img/US-MD-22-print.pdf' %}" target="_blank"><img class="lazy z-depth-1" src="{% static 'img/US-MD-22.webp' %}" width="100%" style="margin-top: 10px"></a>
+                </div>
+                <div class="col s12 m6 l4">
+                    <a href="{% static 'img/US-MI-22-print.pdf' %}" target="_blank"><img class="lazy z-depth-1" src="{% static 'img/US-MI-22.webp' %}" width="100%" style="margin-top: 10px"></a>
+                </div>
+                <div class="col s12 m6 l4">
+                    <a href="{% static 'img/US-NC-22-print.pdf' %}" target="_blank"><img class="lazy z-depth-1" src="{% static 'img/US-NC-22.webp' %}" width="100%" style="margin-top: 10px"></a>
+                </div>
+                <div class="col s12 m6 l4">
+                    <a href="{% static 'img/US-OH-22-print.pdf' %}" target="_blank"><img class="lazy z-depth-1" src="{% static 'img/US-OH-22.webp' %}" width="100%" style="margin-top: 10px"></a>
+                </div>
+                <div class="col s12 m6 l4">
+                    <a href="{% static 'img/US-TX-22-print.pdf' %}" target="_blank"><img class="lazy z-depth-1" src="{% static 'img/US-TX-22.webp' %}" width="100%" style="margin-top: 10px"></a>
+                </div>
+                <div class="col s12 m6 l4">
+                    <a href="{% static 'img/US-WI-22-print.pdf' %}" target="_blank"><img class="lazy z-depth-1" src="{% static 'img/US-WI-22.webp' %}" width="100%" style="margin-top: 10px"></a>
+                </div>
+            </div>
+            
+            
+            
+        </div>
+    </div>
+</div>
+
+<div class="modal" id="state-modal">
+    <p class="voting-subtitle" style="text-align: center;margin-top:0">Choose your state to download and share key voting info with friends, family and your network!</p>
+    <div class="input-field">
+        <select id="flyer-state-select">
+        <option value="" disabled selected>Choose state</option>
+        <option value="US-AZ">Arizona</option>
+        <option value="US-AR">Arkansas</option>
+        <option value="US-FL">Florida</option>
+        <option value="US-KY">Kentucky</option>
+        <option value="US-LA">Louisiana</option>
+        <option value="US-MD">Maryland</option>
+        <option value="US-MI">Michigan</option>
+        <option value="US-NJ">New Jersey</option>
+        <option value="US-NC">North Carolina</option>
+        <option value="US-OH">Ohio</option>
+        <option value="US-TX">Texas</option>
+        <option value="US-WI">Wisconson</option>
+    </select>
+</div>
+
+<style>
+    #state-modal {
+        padding: 2%;
+        height: 80%
+    }
+    #state-modal .input-field {
+        width: 60%;
+        margin-left: 20%;
+    }
+    h5 b {
+        font-family: poppins;
+        font-weight: 500;
+        font-size: 24px;
+        padding-right: 5%
+    }
+    h5 a {
+        font-family: poppins;
+        font-weight: 400;
+        font-size: 22px;
+        padding-right: 5%
+    }
+    #map {
+        background-color: transparent;
+    }
+    .pillar-header {
+        background-color: white;
+    }
+    
+    .pillar-collapsible li {
+        margin:0 !important;
+    }
+    .phase-one-list {
+        padding-left: 10% !important;
+        padding-right: 10%;
+    }
+    .phase-one-list li {
+        padding: 15px;
+    }
+    .phase-one-title{
+        font-family: oskar-inline;
+        text-align: center;
+    }
+    @media only screen and (min-width:0px){
+        #obb-banner {
+            width: fit-content;
+        }
+        .print-btn {
+            width: fit-content;
+            
+        }
+        .print-btn p {
+            background: black;
+            color: white;
+            font-family: oskar;
+            font-size: 28px;
+            line-height: 36px;
+            font-weight: 300;
+            box-shadow: 0px 0px 7px 0px rgba(66,66,66,0.72);
+            -webkit-box-shadow: 0px 0px 7px 0px rgba(66,66,66,0.72);
+            -moz-box-shadow: 0px 0px 7px 0px rgba(66,66,66,0.72);
+            transition: all 0.3s ease-in-out;
+            padding: 10px
+        }
+        .print-btn p:hover {
+            background: rgb(54, 159, 20);
+            cursor: pointer;
+        }
+        .health-main-title {
+        font-family: oskar-inline;
+        font-size: 36px;
+        text-align: center;
+        color:rgb(18, 148, 18);
+        margin-bottom: 0;
+        margin-top: 20px
+    }
+    .health-main-text {
+        line-height: 32px;
+    }
+        .phase-one-list {
+            font-size: 16px
+        }
+        .phase-one-title {
+            font-size: 38px;
+            line-height: 48px;
+        }
+        .voting-subtitle {
+            font-size: 24px; 
+            font-weight: 300; 
+            margin-bottom: 30px
+        }
+        .coming-soon-text {
+            font-size: 28px;
+        }
+        .pillar-collapsible {
+        width: 100%;
+        margin-left:0;
+    }
+        p {
+            font-size:16px
+        }
+        .pillar-title {
+            color: black;
+            font-family: poppins;
+            font-size: 16px;
+            letter-spacing: 1px;
+            text-transform: none;
+        }
+    }
+    @media only screen and (min-width:601px){
+        #obb-banner {
+            width: 60%;
+        }
+        .health-main-title {
+        font-family: oskar-inline;
+        font-size: 48px;
+        text-align: center;
+        color:rgb(18, 148, 18);
+        margin-bottom: 0;
+        margin-top: 20px
+    }
+        .phase-one-list {
+            font-size: 18px
+        }
+        .phase-one-title {
+            font-size: 48px;
+            line-height: 56px;
+            margin-left: 10%
+        }
+        .voting-subtitle {
+            font-size: 28px; 
+            font-weight: 300; 
+        }
+        .coming-soon-text {
+            font-size: 32px;
+            line-height: 56px;
+        }
+        p {
+            font-size:18px
+        }
+        .pillar-title {
+            font-size: 20px;
+            letter-spacing: 2px;
+        }
+        .pillar-collapsible {
+        width: 80%;
+        margin-left:10%;
+    }
+        h5 b {
+            font-size: 32px;
+            line-height: 40px
+        }
+    }
+    @media only screen and (min-width:993px){
+        .print-btn p {
+            font-size: 36px;
+            padding-bottom: 15px
+        }
+        #obb-banner {
+            width: 60%;
+        }
+        
+        .health-main-title {
+        font-size: 48px;
+        text-align: left;
+        color:rgb(18, 148, 18);
+        margin-bottom: 0;
+        margin-top:0
+    }
+        .phase-one-list {
+            font-size: 22px
+        }
+        .phase-one-title {
+            font-size: 64px;
+            line-height: 72px;
+        }
+        p {
+            font-size:22px
+        }
+        .pillar-collapsible {
+            width: 70%;
+            margin-left:15%;
+        }
+        .coming-soon-text {
+            font-size: 38px;
+        }
+}
+    @media only screen and (min-width:1201px){
+        #obb-banner {
+            width: 55%;
+        }
+        .pillar-collapsible {
+        width: 60%;
+        margin-left:20%;
+    }
+    .pillar-title {
+            font-size: 24px;
+            letter-spacing: 2px;
+        }
+        .health-main-title {
+        font-size: 52px;
+    }
+    .health-main-text {
+        font-size: 24px;
+        line-height: 40px
+    }
+    }
+    
+</style>
+<style>
+    .phase-one-title{
+        font-family: oskar-inline;
+        text-align: center;
+        width: 100%;
+        margin-left: 0;
+    }
+    .jvectormap-container {
+        height: 100%;
+    }
+    .map-container{
+        background-color: transparent;
+    }
+    h6 {
+        font-weight: 500;
+        text-align: center;
+    }
+    p {
+        padding-left: 10%;
+        padding-right: 10%
+    }
+    @media only screen and (min-width: 0px) {
+        h5 {
+            font-size: 54px;
+            line-height: 36px
+        }
+        h6 {
+            font-size: 22px;
+            letter-spacing: 1px;
+            line-height: 36px
+        }
+        p {
+            font-size: 20px
+        }
+    }
+</style>
+
+<script>
+    $(document).ready(function(){
+        $('#state-modal').on('change', function(event){
+            var code = $('#state-modal option:selected').val()
+            window.open("https://empowerthevillage.s3.amazonaws.com/static/img/"+ code +"-22-print.pdf", "_blank")
+        });
+    });
+    $(function(){
+    map = new jvm.Map({
+        map: 'us_aea',
+        container: $('#map'),
+        zoomOnScroll: false,
+        regionLabelStyle: {
+          initial: {
+            fill: 'black',
+            'font-family': 'Poppins',
+          },
+          hover: {
+            fill: 'grey'
+          },
+        },
+        backgroundColor: 'transparent',
+        labels: {
+          regions: {
+            render: function(code){
+          var doNotShow = ['US-RI', 'US-DC', 'US-DE'];
+
+          if (doNotShow.indexOf(code) === -1) {
+            return code.split('-')[1];
+          }
+        },
+            offsets: function(code){
+              return {
+                'CA': [-10, 10],
+                'ID': [0, 40],
+                'OK': [25, 0],
+                'LA': [-20, 0],
+                'FL': [45, 0],
+                'KY': [10, 5],
+                'VA': [15, 5],
+                'MI': [30, 30],
+                'AK': [50, -25],
+                'HI': [25, 50]
+              }[code.split('-')[1]];
+            }
+          }
+        },
+        regionStyle: {
+            initial: {
+                fill: '#cccccc',
+            },
+            hover: {
+                "fill-opacity": 0.9,
+            }
+        },
+        regionLabelStyle: {
+            "z-index": '3'
+        },
+        series: {
+            regions: [{
+                scale: {
+                    'published': '#19b529',
+                    'soon': '#199456',
+                },
+                attribute: 'fill',
+                values: {
+                    'US-NJ': 'published',
+                    'US-AZ': 'published',
+                    'US-AR': 'published',
+                    'US-FL': 'published',
+                    'US-GA': 'published',
+                    'US-TX': 'published',
+                    'US-KY': 'published',
+                    'US-LA': 'published',
+                    'US-MD': 'published',
+                    'US-MI': 'published',
+                    'US-WI': 'published',
+                    'US-NC': 'published',
+                    'US-OH': 'published',
+                    'US-PA': 'published',
+                },
+                
+            }],
+        },
+        onRegionClick: function(event, code) {
+            var regionName = map.getRegionName(code);
+            var publishedStates = ["US-NJ", "US-AR", "US-AZ", "US-FL", "US-KY", "US-LA", "US-MD", "US-MI", "US-NC", "US-OH", "US-TX", "US-WI"];
+            if (publishedStates.indexOf(code) != -1) {
+                var data = {
+                    'state': code,
+                }
+                var state = code
+                window.open("https://empowerthevillage.s3.amazonaws.com/static/img/"+ code +"-22-print.pdf", "_blank")
+                
+            } 
+        },
+       });
+    });
+    </script>
+{% endblock %}
