@@ -59,6 +59,9 @@
                     <a href="{% static 'img/US-FL-22-print.pdf' %}" target="_blank"><img class="lazy z-depth-1" src="{% static 'img/US-FL-22.webp' %}" width="100%" style="margin-top: 10px"></a>
                 </div>
                 <div class="col s12 m6 l4">
+                    <a href="{% static 'img/US-GA-22-print.pdf' %}" target="_blank"><img class="lazy z-depth-1" src="{% static 'img/US-GA-22.webp' %}" width="100%" style="margin-top: 10px"></a>
+                </div>
+                <div class="col s12 m6 l4">
                     <a href="{% static 'img/US-KY-22-print.pdf' %}" target="_blank"><img class="lazy z-depth-1" src="{% static 'img/US-KY-22.webp' %}" width="100%" style="margin-top: 10px"></a>
                 </div>
                 <div class="col s12 m6 l4">
@@ -75,6 +78,9 @@
                 </div>
                 <div class="col s12 m6 l4">
                     <a href="{% static 'img/US-OH-22-print.pdf' %}" target="_blank"><img class="lazy z-depth-1" src="{% static 'img/US-OH-22.webp' %}" width="100%" style="margin-top: 10px"></a>
+                </div>
+                <div class="col s12 m6 l4">
+                    <a href="{% static 'img/US-TX-22-print.pdf' %}" target="_blank"><img class="lazy z-depth-1" src="{% static 'img/US-TX-22.webp' %}" width="100%" style="margin-top: 10px"></a>
                 </div>
                 <div class="col s12 m6 l4">
                     <a href="{% static 'img/US-TX-22-print.pdf' %}" target="_blank"><img class="lazy z-depth-1" src="{% static 'img/US-TX-22.webp' %}" width="100%" style="margin-top: 10px"></a>
@@ -441,7 +447,7 @@
         },
         onRegionClick: function(event, code) {
             var regionName = map.getRegionName(code);
-            var publishedStates = ["US-NJ", "US-AR", "US-AZ", "US-FL", "US-KY", "US-LA", "US-MD", "US-MI", "US-NC", "US-OH", "US-TX", "US-WI"];
+            var publishedStates = ["US-NJ", "US-AR", "US-AZ", "US-FL", "US-GA", "US-KY", "US-LA", "US-MD", "US-MI", "US-NC", "US-OH", "US-PA", "US-TX", "US-WI"];
             if (publishedStates.indexOf(code) != -1) {
                 var data = {
                     'state': code,
