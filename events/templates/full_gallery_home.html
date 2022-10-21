@@ -130,9 +130,11 @@
             -webkit-text-fill-color: transparent; margin-bottom: 3%">Meet The Artists</div>
             {% for x in artists %}
                     <div class="col s12 m6 artist-col">
+                        {% if x.image is not None %}
                         <div class="left">
                             <img class="z-depth-2 artist-grid-item-mini materialboxed-sm lazy" data-src="{{ x.image.url }}" style="cursor:pointer">
                         </div>
+                        {% endif %}
                         <div class="artist-details">
                             <p id="item-title-sm" style="margin-top: 0">{{ x.name }}</p>
                             <p id="item-description-sm" id="{{ x.pk }}-bio">{{ x.bio }}</p>
