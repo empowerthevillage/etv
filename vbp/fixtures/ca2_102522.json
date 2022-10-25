@@ -1,0 +1,1809 @@
+[
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "Raimo Shea Butter",
+      "website": "",
+      "owner_name": "Luna Rose",
+      "city": "San Diego",
+      "phone": "619-952-6007",
+      "owner_email": "raimosheabutter@gmail.com",
+      "category": "beauty",
+      "subcategory": "Bath & Body"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "Frederick K. Taylor, Procopio",
+      "website": "https://www.procopio.com/people/frederick-k-taylor/",
+      "owner_name": "Frederick K. Taylor",
+      "city": "San Diego",
+      "phone": "619-515-3279",
+      "owner_email": "",
+      "category": "legal",
+      "subcategory": "Legal Services"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "Jedra Label",
+      "website": "https://www.facebook.com/Jedralabel/",
+      "owner_name": "Jedra Label",
+      "city": "San Diego",
+      "phone": "",
+      "owner_email": "info@jedralabel.com",
+      "category": "clothing",
+      "subcategory": "Apparel"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "Mom on Purpose Living",
+      "website": "https://www.momonpurposeliving.com/",
+      "owner_name": "Tiah Lewis",
+      "city": "Murrieta",
+      "phone": "",
+      "owner_email": "tiahlewis@momonpurposeliving.com",
+      "category": "other",
+      "subcategory": "Realtor Services & Life Coach"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "Fuel Thy Cells",
+      "website": "",
+      "owner_name": "",
+      "city": "San Diego",
+      "phone": "619-844-5044",
+      "owner_email": "info@fuelthycells.com",
+      "category": "grocery",
+      "subcategory": "Food Product/Brand"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "Skynknowlogy",
+      "website": "https://skynknowlogy.as.me/schedule.php",
+      "owner_name": "Kim Jefferson",
+      "city": "San Diego",
+      "phone": "(951) 490-3751",
+      "owner_email": "",
+      "category": "beauty",
+      "subcategory": "Bath & Body"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "Old Town Soap Company",
+      "website": "https://www.theoldtownsoapcompany.com/",
+      "owner_name": "Ernestine Brown",
+      "city": "San Diego",
+      "phone": "(619) 518-1893",
+      "owner_email": "info@theoldtownsoapcompany.com",
+      "category": "beauty",
+      "subcategory": "Bath & Body"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "Here Comes the Bride",
+      "website": "https://hctb.net/",
+      "owner_name": "",
+      "city": "San Diego",
+      "phone": "(619) 688-9201",
+      "owner_email": "info@hctb.net",
+      "category": "clothing",
+      "subcategory": "Bridalshop"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "Endless Organic Beauty",
+      "website": "https://endlessorganicbeauty.com/",
+      "owner_name": "",
+      "city": "Norco",
+      "phone": "(951)893-8900",
+      "owner_email": "Info.endlessorganicbeauty@gmail.com",
+      "category": "beauty",
+      "subcategory": "Hair Products"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "Californice Handmade Soaps LLC",
+      "website": "https://calihandmadesoaps.com/",
+      "owner_name": "",
+      "city": "Chula Vista",
+      "phone": "(619) 796-3399",
+      "owner_email": "",
+      "category": "beauty",
+      "subcategory": "Bath & Body"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "Always More LLC",
+      "website": "https://tekstop.tech/",
+      "owner_name": "",
+      "city": "Orange",
+      "phone": "216-308-9043",
+      "owner_email": "info@tekstop.tech",
+      "category": "electronics",
+      "subcategory": "IT Services"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "Simply Tantra",
+      "website": "https://www.simply-tantra.com/",
+      "owner_name": "Sequieta Whitfield",
+      "city": "San Diego",
+      "phone": "(916) 825-2182",
+      "owner_email": "sequieta@simply-tantra.com",
+      "category": "health",
+      "subcategory": "Meditation"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "Lavish Ocean LLC",
+      "website": "https://www.lavishocean.com/",
+      "owner_name": "",
+      "city": "Oceanside",
+      "phone": "",
+      "owner_email": "products@lavishocean.com",
+      "category": "beauty",
+      "subcategory": "Hair Products"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "marcuskinghitmusic.com",
+      "website": "https://www.marcuskinghitmusic.com/",
+      "owner_name": "Marcus King",
+      "city": "Los Angeles",
+      "phone": "",
+      "owner_email": "info@marcuskinghitmusic.com",
+      "category": "visual",
+      "subcategory": "Musician"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "M. Webb Eduation Specialist & Advcoate",
+      "website": "https://www.mwebbspedconsultant.com/",
+      "owner_name": "Meisje Webb",
+      "city": "San Diego",
+      "phone": "(619) 880-6409",
+      "owner_email": "mwebbeducationconsultant@gmail.com",
+      "category": "education",
+      "subcategory": "Tutoring/Academic Planning"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "Rackley's Flowers and Gifts",
+      "website": "https://www.rackleysfloralandgifts.com/",
+      "owner_name": "Terrell Rackley",
+      "city": "San Diego",
+      "phone": "866-264-7225",
+      "owner_email": "rackleysflowersandgifts@gmail.com",
+      "category": "other",
+      "subcategory": "Florist"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "Sealed by Lis",
+      "website": "https://www.sealedbylisnotary.com/",
+      "owner_name": "Ellisabeth Logans",
+      "city": "San Diego",
+      "phone": "(619) 821-5927",
+      "owner_email": "elogans42@hotmail.com",
+      "category": "professional",
+      "subcategory": "Notary Services"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "Sit n Sip Events SD",
+      "website": "",
+      "owner_name": "",
+      "city": "San Diego",
+      "phone": "",
+      "owner_email": "sitnsipevents@gmail.com",
+      "category": "entertainment",
+      "subcategory": "Event Planning/Services"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "Restoratively, Zenani Educational Coaching",
+      "website": "",
+      "owner_name": "d. Zenani Mzube",
+      "city": "San Diego",
+      "phone": "619-354-1120",
+      "owner_email": "zenani@restorativelyzenani.com",
+      "category": "education",
+      "subcategory": "Homeschool training"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "Skinvig",
+      "website": "https://skinvig.com/",
+      "owner_name": "Marion Birdine",
+      "city": "San Diego",
+      "phone": "1-833- 619-7546",
+      "owner_email": "marion@skinvig.com",
+      "category": "beauty",
+      "subcategory": "Bath & Body"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "HerbNStar",
+      "website": "https://www.herbnstar.com/",
+      "owner_name": "Pamela Wood",
+      "city": "Lemon Grove",
+      "phone": "",
+      "owner_email": "urbanempressff@gmail.com",
+      "category": "lifestyle",
+      "subcategory": "CBD Products"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "Rods Drains & Plumbing",
+      "website": "https://rodsdrainsandplumbing.com/",
+      "owner_name": "Rodney Rouse",
+      "city": "Vista",
+      "phone": "619-288-2867",
+      "owner_email": "rodsdrainsandplumbing@gmail.com",
+      "category": "construction",
+      "subcategory": "Plumbing"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "Ink Mindset Studios",
+      "website": "https://www.facebook.com/inkmindsetstudios/",
+      "owner_name": "",
+      "city": "San Diego",
+      "phone": "(619) 207-5910",
+      "owner_email": "inkmindsetstudios@gmail.com",
+      "category": "lifestyle",
+      "subcategory": "Piercing/Tattoos"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "Fingersnaps Media Arts",
+      "website": "",
+      "owner_name": "DJ Lamont",
+      "city": "San Francisco",
+      "phone": "(628) 867-3212",
+      "owner_email": "​lamont@fingersnaps.net",
+      "category": "visual",
+      "subcategory": "DJ"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "African Arts Academy",
+      "website": "https://www.africanartsacademy.com/",
+      "owner_name": "",
+      "city": "San Francisco",
+      "phone": "(650) 834-2038",
+      "owner_email": "africanartsacademy@gmail.com",
+      "category": "visual",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "DJ Snick at Night Audiovisual Co",
+      "website": "https://www.djsnickatnight.com/",
+      "owner_name": "",
+      "city": "San Francisco",
+      "phone": "(415) 800-1170",
+      "owner_email": "djsnickatnight@gmail.com",
+      "category": "visual",
+      "subcategory": "DJ"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "Les Play House",
+      "website": "https://www.lesplayhouseparty.com/",
+      "owner_name": "J. Jaxx",
+      "city": "San Francisco",
+      "phone": "",
+      "owner_email": "jaxxonera@gmail.com",
+      "category": "Restaurants & Bars",
+      "subcategory": "Bar/Night club"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "Studio 121",
+      "website": "https://studio-121.org/",
+      "owner_name": "Nitty Dupree & Dallas Andrew",
+      "city": "San Francisco",
+      "phone": "415-284-6256",
+      "owner_email": "info@studio-121.org",
+      "category": "visual",
+      "subcategory": "Dance Studions/Lessons"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "Alonzo King LINES Ballet",
+      "website": "https://linesballet.org/",
+      "owner_name": "",
+      "city": "San Francisco",
+      "phone": "415-863-3040",
+      "owner_email": "info@linesballet.org",
+      "category": "visual",
+      "subcategory": "Dance Sudios/Lessons"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "Honey Art Studio",
+      "website": "https://honeyartstudio.godaddysites.com/",
+      "owner_name": "Ericka Scott",
+      "city": "San Francisco",
+      "phone": "",
+      "owner_email": "Honeyartstudio415@gmail.com",
+      "category": "visual",
+      "subcategory": "Artists/Art Lessons"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "Cheryl Derricotte Studio",
+      "website": "https://www.cherylderricottestudio.com/",
+      "owner_name": "Cheryl Derricotte",
+      "city": "Santa Rosa",
+      "phone": "",
+      "owner_email": "cheryl@cherylderricottestudio.com",
+      "category": "visual",
+      "subcategory": "Artists/Art Lessons"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "Trackd Out",
+      "website": "https://www.trackdout.com/",
+      "owner_name": "Deo Morgan",
+      "city": "San Francisco",
+      "phone": "",
+      "owner_email": "deo@trackdout.com",
+      "category": "visual",
+      "subcategory": "Music Studio"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "DJ Shy",
+      "website": "https://djshytia.business.site/",
+      "owner_name": "Tia McFarlane",
+      "city": "San Francisco",
+      "phone": "(949) 295-1777",
+      "owner_email": "itsdjshy@gmail.com",
+      "category": "visual",
+      "subcategory": "DJ"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "LE Bohemian Muse",
+      "website": "https://www.lebohemianmuse.com/",
+      "owner_name": "",
+      "city": "San Francisco",
+      "phone": "323-250-0981",
+      "owner_email": "info@lebohemianmuse.com",
+      "category": "visual",
+      "subcategory": "Artists"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "Glam Jam",
+      "website": "https://www.glamjam.rocks/",
+      "owner_name": "",
+      "city": "San Francisco",
+      "phone": "",
+      "owner_email": "glamjamrocks@gmail.com",
+      "category": "beauty",
+      "subcategory": "Bath & Body"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "The Black Woman is God",
+      "website": "https://www.theblackwomanisgod.com/",
+      "owner_name": "",
+      "city": "San Francisco",
+      "phone": "(510) 828-5682",
+      "owner_email": "krncrrwy@yahoo.com",
+      "category": "visual",
+      "subcategory": "Artists"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "Sharae Latrice",
+      "website": "",
+      "owner_name": "Sharae Brown",
+      "city": "Oakland",
+      "phone": "(415) 935-3279",
+      "owner_email": "",
+      "category": "beauty",
+      "subcategory": "Beauty Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "Urban Aesthestics",
+      "website": "https://byderekarnell.com/",
+      "owner_name": "Derek Arnell",
+      "city": "San Francisco",
+      "phone": "(833) 344-0598",
+      "owner_email": "info@byderekarnell.com",
+      "category": "beauty",
+      "subcategory": "Bath & Body"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "Red Dipper Electric",
+      "website": "https://www.reddipper.com/",
+      "owner_name": "Dough Parrish",
+      "city": "San Francisco",
+      "phone": "510-746-6041",
+      "owner_email": "info@reddipper.com",
+      "category": "construction",
+      "subcategory": "Electrical"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "415 Electric",
+      "website": "https://www.415electric.com/",
+      "owner_name": "",
+      "city": "San Francisco",
+      "phone": "415-578-6000",
+      "owner_email": "biz@415ele.com",
+      "category": "construction",
+      "subcategory": "Electrical"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "Presidio Builders",
+      "website": "https://presidiobuilders.com/",
+      "owner_name": "Randy Swayne",
+      "city": "San Francisco",
+      "phone": "(415) 508-9727",
+      "owner_email": "presidiobuilders@live.com",
+      "category": "construction",
+      "subcategory": "Construction"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "Empire Engineering & Construction, Inc",
+      "website": "https://www.empireconstructionsf.com/",
+      "owner_name": "Clifton J. Burch",
+      "city": "San Francisco",
+      "phone": "415-294-5100",
+      "owner_email": "info@empireconstructionsf.com",
+      "category": "construction",
+      "subcategory": "Construction/Enginerring"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "Eagle Environmental Construction",
+      "website": "http://eec-corp.com/",
+      "owner_name": "",
+      "city": "San Francisco",
+      "phone": "415-480-0280",
+      "owner_email": "rbatiste@eec-corp.com",
+      "category": "construction",
+      "subcategory": "Construction"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "YCAT-C",
+      "website": "http://www.ycat-c.com/",
+      "owner_name": "Yolanda Jones",
+      "city": "San Francisco",
+      "phone": "(415) 647-2682",
+      "owner_email": "",
+      "category": "construction",
+      "subcategory": "Construction Operations"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "R&I Glassworks",
+      "website": "",
+      "owner_name": "Raymond Horne",
+      "city": "San Francisco",
+      "phone": "650-488-7186",
+      "owner_email": "irma@riglassworks.net",
+      "category": "construction",
+      "subcategory": "Glass Installation"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "Mansfield & Mansfield Construction Clean-Up Co. Site Support",
+      "website": "https://www.mansfieldconstructioncleanup.com/",
+      "owner_name": "La Sonia Mansfield",
+      "city": "San Francisco",
+      "phone": "(415) 756-7876",
+      "owner_email": "info@mansfieldconstructioncleanup.com",
+      "category": "cleaning",
+      "subcategory": "Construction Clean Up"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "TransAmerican Engineers & Associates",
+      "website": "",
+      "owner_name": "",
+      "city": "San Francisco",
+      "phone": "(415) 553-4092",
+      "owner_email": "",
+      "category": "construction",
+      "subcategory": "Construction/Enginerring"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "Harris Hoisting",
+      "website": "https://www.harrishoisting.com/",
+      "owner_name": "Tana Harris",
+      "city": "San Francisco",
+      "phone": "415-913-0143",
+      "owner_email": "infor@harrishoisting.com",
+      "category": "construction",
+      "subcategory": "Constrcution"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "Q4 Mechnical Corporation",
+      "website": "",
+      "owner_name": "",
+      "city": "San Francisco",
+      "phone": "(510) 224-0511",
+      "owner_email": "",
+      "category": "construction",
+      "subcategory": "Construction"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "Master Painting & Decorating",
+      "website": "http://www.masterpaintingservices.com/",
+      "owner_name": "Ashley Rhodes",
+      "city": "San Francisco",
+      "phone": "415-571-6320",
+      "owner_email": "masterjo376@gmail.com",
+      "category": "construction",
+      "subcategory": "Painting Services"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "Gordon Plastering, Inc.",
+      "website": "https://www.gordonplastering.com/",
+      "owner_name": "Carl Gordon",
+      "city": "San Francisco",
+      "phone": "415-937-3722",
+      "owner_email": "carl@gordonplastering.com",
+      "category": "construction",
+      "subcategory": "Construction"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "Carney's Plastering",
+      "website": "https://carneysplastering.com/",
+      "owner_name": "wil Carney",
+      "city": "Oakland",
+      "phone": "(415) 240-9402",
+      "owner_email": "",
+      "category": "construction",
+      "subcategory": "Construction"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "Streamline Drywall Inc.",
+      "website": "https://www.streamlinedrywall.com/",
+      "owner_name": "Triston Dion & Dashaun Briant",
+      "city": "San Francisco",
+      "phone": "707-853-7113",
+      "owner_email": "triston@streamlinedrywall.com",
+      "category": "construction",
+      "subcategory": "Construction"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "I Rooter & Plumbing",
+      "website": "https://irooterandplumbing.com/",
+      "owner_name": "",
+      "city": "San Francisco",
+      "phone": "(415) 910-0068",
+      "owner_email": "info@irooterplumbing.info",
+      "category": "construction",
+      "subcategory": "Plumbing"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "Coats Plumbing",
+      "website": "",
+      "owner_name": "",
+      "city": "Pittsburg",
+      "phone": "925-439-2390",
+      "owner_email": "",
+      "category": "construction",
+      "subcategory": "Plumbing"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "Sister Web",
+      "website": "https://www.sisterweb.org/",
+      "owner_name": "",
+      "city": "San Francisco",
+      "phone": "1-415-470-6207",
+      "owner_email": "info@sisterweb.org",
+      "category": "other",
+      "subcategory": "Doula Support Network"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "In My Nature with April Shabazz",
+      "website": "http://www.aprilshabazz.com/",
+      "owner_name": "April Shabazz",
+      "city": "Pleasanton",
+      "phone": "925-276-0686",
+      "owner_email": "april.inmynature@gmail.com",
+      "category": "health",
+      "subcategory": "Nutrition/Wellness Services"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "Dr. Julius Johnson, PhD",
+      "website": "",
+      "owner_name": "Dr. Julius Johnson",
+      "city": "San Francisco",
+      "phone": "(415) 386-7789",
+      "owner_email": "",
+      "category": "health",
+      "subcategory": "Mental Health Support"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "Magnified Cleaning Service",
+      "website": "",
+      "owner_name": "",
+      "city": "San Francisco",
+      "phone": "(628) 237-8220",
+      "owner_email": "",
+      "category": "cleaning",
+      "subcategory": "Cleaning"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "Jaaz Creative Designs",
+      "website": "https://www.jaazworld.com/",
+      "owner_name": "Jacqueline Marie Norris",
+      "city": "San Francisco",
+      "phone": "415-596-6595",
+      "owner_email": "Jacque@jaazworld.com",
+      "category": "other",
+      "subcategory": "Notary Services & Publications"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "The Lemonade Bar",
+      "website": "https://www.thelemonadebar.org/",
+      "owner_name": "Imani M-Glover",
+      "city": "San Francisco",
+      "phone": "415-374-6795",
+      "owner_email": "thelemonadebar@gmail.com",
+      "category": "grocery",
+      "subcategory": "Food Product/Brand"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "Sams Gourmet Jams",
+      "website": "https://www.etsy.com/shop/SamsGourmetJams",
+      "owner_name": "Shirley A Moore",
+      "city": "San Francisco",
+      "phone": "(415) 467-0787",
+      "owner_email": "",
+      "category": "grocery",
+      "subcategory": "Food Product/Brand"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "Inter-Communications",
+      "website": "https://www.inter-communications.com/index.html",
+      "owner_name": "",
+      "city": "San Francisco",
+      "phone": "1-888-861-2679",
+      "owner_email": "",
+      "category": "other",
+      "subcategory": "Office Supplies"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "The Sun-Reporter",
+      "website": "https://thesunreporter.com/",
+      "owner_name": "",
+      "city": "San Francisco",
+      "phone": "415-671-1000",
+      "owner_email": "Sunreporter@sbcglobal.net",
+      "category": "books",
+      "subcategory": "Newspaper"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "SVR Security Solutions",
+      "website": "https://svrsecuritysolutions.com/",
+      "owner_name": "",
+      "city": "San Francisco",
+      "phone": "415-295-4457",
+      "owner_email": "info@svrsecuritysolutions.com",
+      "category": "other",
+      "subcategory": "Security Services"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "RCB Security Inc",
+      "website": "http://rcbsecurity.com/index.html",
+      "owner_name": "Ramona Addison",
+      "city": "San Francisco",
+      "phone": "415-795-1890",
+      "owner_email": "info@rcbsecurity.com",
+      "category": "other",
+      "subcategory": "Security Services"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "A1 Protective Services",
+      "website": "http://www.a1prosecurity.com/",
+      "owner_name": "",
+      "city": "San Francisco",
+      "phone": "415-467-7200",
+      "owner_email": "",
+      "category": "other",
+      "subcategory": "Security Services"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "MCD Trucking",
+      "website": "",
+      "owner_name": "",
+      "city": "San Francisco",
+      "phone": "415-584-5511",
+      "owner_email": "",
+      "category": "transportation",
+      "subcategory": "Trucking"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "San Francisco Black Firefighters Association",
+      "website": "https://www.sfbfa.org/",
+      "owner_name": "",
+      "city": "San Francisco",
+      "phone": "(415) 845-2378",
+      "owner_email": "",
+      "category": "other",
+      "subcategory": "Professional Organization"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "New Community Leadership Foundation",
+      "website": "https://nclfinc.org/",
+      "owner_name": "",
+      "city": "San Francisco",
+      "phone": "415-857-1136",
+      "owner_email": "info@nclfinc.org",
+      "category": "other",
+      "subcategory": "Non-profit Organization"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "JN Outreach Foundation, Inc",
+      "website": "https://www.jnoutreach.org/",
+      "owner_name": "",
+      "city": "San Francisco",
+      "phone": "(415) 859-9924",
+      "owner_email": "",
+      "category": "other",
+      "subcategory": "Non-profit Organization"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "Officers for Justice, San Francisco",
+      "website": "https://ofjsf.com/",
+      "owner_name": "",
+      "city": "San Francisco",
+      "phone": "(415) 822-2225",
+      "owner_email": "",
+      "category": "other",
+      "subcategory": "Non-profit Organization"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "Our Kids First Educational Program",
+      "website": "https://www.ourkidsfirstsf.org/",
+      "owner_name": "",
+      "city": "San Francisco",
+      "phone": "415-585-1104",
+      "owner_email": "okfprogram@yahoo.com",
+      "category": "education",
+      "subcategory": "Enrichment"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "The Good Rural",
+      "website": "https://thegoodrural.org/",
+      "owner_name": "Delia Fitzpatrick",
+      "city": "San Francisco",
+      "phone": "415-666-2331",
+      "owner_email": "info@thegoodrural.org",
+      "category": "other",
+      "subcategory": "Non-profit Organization"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "Elaine Redus",
+      "website": "https://go.elaineredus.com/",
+      "owner_name": "Elaine Redus",
+      "city": "San Francisco",
+      "phone": "",
+      "owner_email": "",
+      "category": "legal",
+      "subcategory": "Financial Services"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "Booksmart PRO",
+      "website": "https://www.booksmartpro.com/",
+      "owner_name": "",
+      "city": "San Francisco",
+      "phone": "877-213-6336",
+      "owner_email": "info@booksmartpro.com",
+      "category": "legal",
+      "subcategory": "Financial Services"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "BPMSE",
+      "website": "https://bpmse.com/",
+      "owner_name": "Alpha Buie",
+      "city": "San Francisco",
+      "phone": "(415)824-8011",
+      "owner_email": "info@bpmse.com",
+      "category": "legal",
+      "subcategory": "Financial Services"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "JBR Partners, Inc",
+      "website": "http://www.jbrpartners.com/",
+      "owner_name": "",
+      "city": "San Francisco",
+      "phone": "415-970-9051",
+      "owner_email": "INFO@JBRPARTNERS.COM",
+      "category": "professional",
+      "subcategory": "Facilitation & Labor relations"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "Pembroke PR",
+      "website": "http://www.pembrokepr.com/",
+      "owner_name": "Temi Adamolekun",
+      "city": "San Francisco",
+      "phone": "415-867-6145",
+      "owner_email": "Temi@PembrokePR.com",
+      "category": "marketing",
+      "subcategory": "Public Relations"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "Urban Advantage TV",
+      "website": "https://www.urbanadvantagetv.com/",
+      "owner_name": "William Hammons",
+      "city": "San Francisco",
+      "phone": "415-800-8682",
+      "owner_email": "",
+      "category": "other",
+      "subcategory": "TV/Film Media services"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "Big Mouth Productions",
+      "website": "http://bigmouthproductionssf.com/",
+      "owner_name": "Karwana Dyson",
+      "city": "San Francisco",
+      "phone": "888-694-6446",
+      "owner_email": "info@bigmouthproductionssf.com",
+      "category": "Photography & Video",
+      "subcategory": "Photos & Video"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "J&C Consulting Services",
+      "website": "https://jandcconsultingservices.mystrikingly.com/",
+      "owner_name": "",
+      "city": "San Francisco",
+      "phone": "510-851-3538",
+      "owner_email": "jjones@jandcconsulting.com",
+      "category": "construction",
+      "subcategory": "Architect & Engineering"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "She Got Goals",
+      "website": "https://shesgotgoals.com/",
+      "owner_name": "Karwana Dyson",
+      "city": "San Francisco",
+      "phone": "888-694-6446",
+      "owner_email": "contact@shegotgoals.com",
+      "category": "professional",
+      "subcategory": "Small Business Mentoring"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "Ball Business Consulting",
+      "website": "https://ballconsultingsf.com/",
+      "owner_name": "Dontaye Ball",
+      "city": "San Francisco",
+      "phone": "415-604-6177",
+      "owner_email": "dontaye@ballconsultingsf.com",
+      "category": "professional",
+      "subcategory": "Consulting"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "Original equity Group, Spc",
+      "website": "",
+      "owner_name": "",
+      "city": "San Francisco",
+      "phone": "(415) 519-3834",
+      "owner_email": "",
+      "category": "education",
+      "subcategory": "Educational Services"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "Mays Civic Innovation",
+      "website": "",
+      "owner_name": "Carla Mays",
+      "city": "San Francisco",
+      "phone": "(415) 857-2881",
+      "owner_email": "",
+      "category": "construction",
+      "subcategory": "Construction/Enginerring"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "Open Circles",
+      "website": "https://opencircles.net/",
+      "owner_name": "Sylvia Doss",
+      "city": "San Francisco",
+      "phone": "(415) 309-7115",
+      "owner_email": "sylvia@opencircles.net",
+      "category": "professional",
+      "subcategory": "Consulting/Business Strategy and Advising"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "Warren Law Firm",
+      "website": "https://warrenlawfirm.net/",
+      "owner_name": "Angela Warren",
+      "city": "San Francisco",
+      "phone": "415-991-6066",
+      "owner_email": "angela@warrenlawfirm.net",
+      "category": "legal",
+      "subcategory": "Legal Services"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "Law Office of Tamiko Moore",
+      "website": "https://law-offices-of-tamiko-o-moore.business.site/?utm_source=gmb&utm_medium=referral",
+      "owner_name": "Tamiko Moore",
+      "city": "San Francisco",
+      "phone": "415-986-2668",
+      "owner_email": "",
+      "category": "legal",
+      "subcategory": "Legal Services"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "The Allen Group LLC",
+      "website": "https://www.the-allen-group.com/",
+      "owner_name": "Laverde O. Allen",
+      "city": "San Francisco",
+      "phone": "415-538-1830",
+      "owner_email": "",
+      "category": "construction",
+      "subcategory": "Construction/Enginerring"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "Marie Sturgell BRE #02022792",
+      "website": "https://mariesturgell.myrealestateplatform.com/",
+      "owner_name": "Marie Sturgell",
+      "city": "San Francisco",
+      "phone": "415-671-6948",
+      "owner_email": "marie@realestatebayareas.com",
+      "category": "real estate",
+      "subcategory": "Real Estate agents/ Brokers"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "Tickle Me Travel",
+      "website": "https://www.ticklemetravel.com/",
+      "owner_name": "",
+      "city": "San Francisco",
+      "phone": "415-378-6227",
+      "owner_email": "info@ticklemetravel.com",
+      "category": "Hotels, Hospitality and Travel",
+      "subcategory": "Travel Agent"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "Chloe Jackman Studios",
+      "website": "https://chloejackman.com/",
+      "owner_name": "Chloe Jackman",
+      "city": "San Francisco",
+      "phone": "",
+      "owner_email": "hello@chloejackman.com",
+      "category": "Photography & Video",
+      "subcategory": "Photography"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "The Path Group",
+      "website": "https://www.pathgroup.co/",
+      "owner_name": "Stephen Bediako",
+      "city": "San Francisco",
+      "phone": "",
+      "owner_email": "tom@pathgroup.co",
+      "category": "professional",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "Diamond's Mobile Notary",
+      "website": "https://www.diamondsmobilenotary.com/",
+      "owner_name": "Diamond Davis",
+      "city": "San Francisco",
+      "phone": "707-654-3598",
+      "owner_email": "",
+      "category": "professional",
+      "subcategory": "Notary Services"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "Kenly Warren",
+      "website": "https://kenlywarren.com/",
+      "owner_name": "Kenly Warren",
+      "city": "San Francisco",
+      "phone": "",
+      "owner_email": "k1@kenlywarren.com",
+      "category": "jewelry",
+      "subcategory": "Fine jewelry"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "Peace Love Plant",
+      "website": "https://peaceloveplant.com/",
+      "owner_name": "",
+      "city": "San Bruno",
+      "phone": "415-341-6940",
+      "owner_email": "",
+      "category": "home",
+      "subcategory": "Landscaping/Gardening"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "Elevate Your GAME",
+      "website": "https://elevateyourgame.org/home",
+      "owner_name": "Michael Freeman",
+      "city": "Compton",
+      "phone": "(310) 780-4263",
+      "owner_email": "mfreeman@elevateyourgame.org",
+      "category": "other",
+      "subcategory": "Youth mentoring organization"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "ESM Global Consulting",
+      "website": "https://esmglobalconsulting.com/",
+      "owner_name": "",
+      "city": "Culver City",
+      "phone": "",
+      "owner_email": "esmglobalinfo@gmail.com",
+      "category": "electronics",
+      "subcategory": "Tech Support/Repair"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "Educational Attainment Services",
+      "website": "https://www.educationalattainmentservices.com/index",
+      "owner_name": "Mark Lewis",
+      "city": "Playa Del Rey",
+      "phone": "1-800-706-4134",
+      "owner_email": "info@educationalattainmentservices.com",
+      "category": "education",
+      "subcategory": "Enrichment"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "Heru Shabazz LLC",
+      "website": "https://www.thehsellc.com/",
+      "owner_name": "Heru Shabazz",
+      "city": "Los Angeles",
+      "phone": "424-356-8663",
+      "owner_email": "hshabazz@thehsellc.com",
+      "category": "legal",
+      "subcategory": "Insurance"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "OBP Services",
+      "website": "",
+      "owner_name": "",
+      "city": "Los Angeles",
+      "phone": "213-605-2188",
+      "owner_email": "",
+      "category": "transportation",
+      "subcategory": "Food Delivery"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "Native Tounge Communications",
+      "website": "https://www.nativetonguecommunications.com/",
+      "owner_name": "Marissa Nance",
+      "city": "Los Angeles",
+      "phone": "1-800-315-9360",
+      "owner_email": "marissa@nativetonguecommunciations.com",
+      "category": "marketing",
+      "subcategory": "Marketing/Digital Marketing"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "NetServe Systems Inc.",
+      "website": "",
+      "owner_name": "Abdi Ahmed",
+      "city": "Laguna Hills",
+      "phone": "(949) 752-6788",
+      "owner_email": "",
+      "category": "electronics",
+      "subcategory": "IT Services & Consulting"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "New Earth",
+      "website": "https://newearthlife.org/",
+      "owner_name": "Dr. Harry Grammer",
+      "city": "Culver City",
+      "phone": "310-455-2847",
+      "owner_email": "info@newearthlife.org",
+      "category": "other",
+      "subcategory": "Youth mentoring organization"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "DaeCo Real Estate Services",
+      "website": "",
+      "owner_name": "Justin Dae",
+      "city": "Los Angeles",
+      "phone": "213-232-8640",
+      "owner_email": "team@daecorealestate.com",
+      "category": "real estate",
+      "subcategory": "Real Estate agents/ Brokers"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "Waymo",
+      "website": "https://waymo.com/",
+      "owner_name": "Tekedra Mawakana & Dmitri Dolgov",
+      "city": "Mountain View",
+      "phone": "(646) 753-1596",
+      "owner_email": "",
+      "category": "transportation",
+      "subcategory": "Transportation"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "Whiffs on Wheels",
+      "website": "https://www.dkayhomegoods.com/",
+      "owner_name": "Tina Renee",
+      "city": "Los Angeles",
+      "phone": "(855) 915-5127",
+      "owner_email": "wecare@dkayhomegoods.com",
+      "category": "home",
+      "subcategory": "Home Goods/Décor"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "Tokoto Transportation",
+      "website": "",
+      "owner_name": "",
+      "city": "Toluca Lake",
+      "phone": "626-524-5296",
+      "owner_email": "",
+      "category": "transportation",
+      "subcategory": "Trucking"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "The Society Nineteen Group",
+      "website": "https://societynineteengroup.com/#header",
+      "owner_name": "Lela Christine",
+      "city": "Los Angeles",
+      "phone": "323-751-7764",
+      "owner_email": "lela@societynineteengroup.com",
+      "category": "marketing",
+      "subcategory": "Marketing/Digital Marketing"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "The Children's Dental Specialist",
+      "website": "https://www.childrensdentistsouthbay.com/",
+      "owner_name": "",
+      "city": "Carson",
+      "phone": "(310) 327-7969",
+      "owner_email": "",
+      "category": "medical",
+      "subcategory": "Dental/Orthodontics"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "tbg Events",
+      "website": "https://tbg-events.com/",
+      "owner_name": "Tammy Dickerson",
+      "city": "Culver City",
+      "phone": "310-216-4722",
+      "owner_email": "events@tbg-events.com",
+      "category": "entertainment",
+      "subcategory": "Event Planning/Services"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "The Edge Home Automation",
+      "website": "https://www.theedgehomeautomation.com/",
+      "owner_name": "Frederic D. Breaux",
+      "city": "Anaheim",
+      "phone": "714-726-3960",
+      "owner_email": "emailtheedge@gmail.com",
+      "category": "electronics",
+      "subcategory": "Tech Products"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "The Zaman Group",
+      "website": "http://www.thezamangroup.com/index.html",
+      "owner_name": "Karim Zaman",
+      "city": "Los Angeles",
+      "phone": "323-596-4690",
+      "owner_email": "",
+      "category": "other",
+      "subcategory": "Payphone services & Airport retailer"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "The Ross Group, Inc.",
+      "website": "https://rossgroup.org/",
+      "owner_name": "Armen D. Ross",
+      "city": "Los Angeles",
+      "phone": "(323) 712-5800",
+      "owner_email": "",
+      "category": "professional",
+      "subcategory": "Public Relations"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "Taco Pete",
+      "website": "https://originaltacopete.com/contact/",
+      "owner_name": "",
+      "city": "Los Angeles",
+      "phone": "(323) 569-5164",
+      "owner_email": "",
+      "category": "Restaurants & Bars",
+      "subcategory": "Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "The HOME Girl",
+      "website": "https://www.facebook.com/thehomegirlonline/",
+      "owner_name": "",
+      "city": "Inglewood",
+      "phone": "(323) 975-5275",
+      "owner_email": "cheyenne.myles@gmail.com",
+      "category": "real estate",
+      "subcategory": "Real Estate agents/ Brokers"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "The JCB Services",
+      "website": "https://thejcbservices.com/",
+      "owner_name": "",
+      "city": "Gardena",
+      "phone": "(562)216-0016",
+      "owner_email": "tcarpenter@thejcbservices.com",
+      "category": "legal",
+      "subcategory": "Financial Services"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "Wilson Financial LLC",
+      "website": "https://www.wilsonfinancialmgmt.com/",
+      "owner_name": "Floyddell Wilson II",
+      "city": "Indio",
+      "phone": "(318) 503-3010",
+      "owner_email": "",
+      "category": "legal",
+      "subcategory": "Financial Services"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "Sassitize LLC",
+      "website": "https://www.sassitize.net/",
+      "owner_name": "Sidra \"Cee Cee\" Sherrod-Strong",
+      "city": "Eastvale",
+      "phone": "310-980-4006",
+      "owner_email": "Sassitize21@gmail.com",
+      "category": "beauty",
+      "subcategory": "Bath & Body"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "SUI Generis Safety",
+      "website": "https://www.suigenerissafety.com/",
+      "owner_name": "deontaye Chisholm",
+      "city": "Los Angeles",
+      "phone": "310-294-6662",
+      "owner_email": "Dchisholm@suigenerissafety.com",
+      "category": "other",
+      "subcategory": "Safety Consulting & Training"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "Semna",
+      "website": "",
+      "owner_name": "",
+      "city": "Riverside",
+      "phone": "(909) 327-8169",
+      "owner_email": "",
+      "category": "construction",
+      "subcategory": "Construction"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "Sidney Thomas",
+      "website": "https://sidneythomas.kw.com/",
+      "owner_name": "Sidney Thomas",
+      "city": "Los Angeles",
+      "phone": "(678) 702-7414",
+      "owner_email": "sidneythomas@kw.com",
+      "category": "real estate",
+      "subcategory": "Real Estate agents/ Brokers"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "Satzfyd Registration Services",
+      "website": "https://satzfydtitles.com/",
+      "owner_name": "Chelle Worthy",
+      "city": "Upland",
+      "phone": "424-261-0302",
+      "owner_email": "info@satzfydtitles.com",
+      "category": "other",
+      "subcategory": "DMV services"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "Superfood School",
+      "website": "https://www.superfoodschool.com/janevents",
+      "owner_name": "Lynete Astaire",
+      "city": "Santa Monica",
+      "phone": "",
+      "owner_email": "hello@superfoodschool.com",
+      "category": "grocery",
+      "subcategory": "Cooking classes"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "SISTAH FRIENDS Women's Counseling Services",
+      "website": "https://sistahfriends.org/",
+      "owner_name": "",
+      "city": "Los Angeles",
+      "phone": "213-291-9039",
+      "owner_email": "yolanda@sistahfriends.org",
+      "category": "health",
+      "subcategory": "Mental Health Support"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "SP Consulting Group",
+      "website": "https://www.officialspcg.com/",
+      "owner_name": "Dr. Shane Petite",
+      "city": "Los Angeles",
+      "phone": "805-265-3802",
+      "owner_email": "info@officialspcg.com",
+      "category": "health",
+      "subcategory": "Mental Health Support"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "SM Music, Media, Marketing",
+      "website": "http://www.ShallBeProductions.com",
+      "owner_name": "LaRita \"Jazzy Rita\" Shelby",
+      "city": "Los Angeles",
+      "phone": "",
+      "owner_email": "Bookme@LaRitaShelby.com",
+      "category": "marketing",
+      "subcategory": "Marketing/Digital Marketing"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "SNAP Productions",
+      "website": "https://snap-productions.com/",
+      "owner_name": "Ginger Campbell",
+      "city": "Los Angeles",
+      "phone": "323-933-4155",
+      "owner_email": "",
+      "category": "other",
+      "subcategory": "Non-profit Organization"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "Vobecky Enterprises, Inc",
+      "website": "https://vobecky.com/materials/",
+      "owner_name": "Bianca Vobecky",
+      "city": "Glendora",
+      "phone": "(626) 852-5800",
+      "owner_email": "service@vobecky.com",
+      "category": "construction",
+      "subcategory": "Construction"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "Vader Air",
+      "website": "https://www.vaderair.com/",
+      "owner_name": "Phillip Walker",
+      "city": "Gardena",
+      "phone": "(866) 374-5099",
+      "owner_email": "",
+      "category": "construction",
+      "subcategory": "HVAC"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "Representative Karen Bass",
+      "website": "https://bass.house.gov/contact/offices/los-angeles-ca-office",
+      "owner_name": "Rep. Karen Bass",
+      "city": "Los Angeles",
+      "phone": "(323) 965-1422",
+      "owner_email": "",
+      "category": "other",
+      "subcategory": "Congress Representative"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "Representative Maxine Waters",
+      "website": "https://waters.house.gov/",
+      "owner_name": "Rep. Maxine Waters",
+      "city": "Hawthorne",
+      "phone": "(323) 757-8900",
+      "owner_email": "",
+      "category": "other",
+      "subcategory": "Congress Representative"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "Representative Barbara Lee",
+      "website": "https://lee.house.gov/",
+      "owner_name": "Rep. Barbara Lee",
+      "city": "Oakland",
+      "phone": "(510) 763-0370",
+      "owner_email": "",
+      "category": "other",
+      "subcategory": "Congress Representative"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "School To Success Training System",
+      "website": "https://careerguidanceathome.com/home",
+      "owner_name": "Dr. Moses McCutcheon Jr.",
+      "city": "Los Angeles",
+      "phone": "(213) 437-3468",
+      "owner_email": "info@schoolstosuccess.org",
+      "category": "education",
+      "subcategory": "Tutoring/Academic Planning"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "SoLa Impact",
+      "website": "https://solaimpact.com/",
+      "owner_name": "Martin Muoto",
+      "city": "Los Angeles",
+      "phone": "(323) 306-4648",
+      "owner_email": "info@solaimpact.com",
+      "category": "other",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "Suite Life SoCal",
+      "website": "https://www.suitelifesocal.com/",
+      "owner_name": "",
+      "city": "Los Angeles",
+      "phone": "(323) 445-6745",
+      "owner_email": "Suitelifesocal@gmail.com",
+      "category": "books",
+      "subcategory": "Online Publication"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "Sr. Cliff's Texas Style Burritos",
+      "website": "",
+      "owner_name": "Clifford W.",
+      "city": "Compton",
+      "phone": "(310) 609-2755",
+      "owner_email": "",
+      "category": "Restaurants & Bars",
+      "subcategory": "Restaurant"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields":{
+      "business_name": "Southeast Electric",
+      "website": "",
+      "owner_name": "",
+      "city": "San Francisco",
+      "phone": "(415) 574-6582",
+      "owner_email": "",
+      "category": "construction",
+      "subcategory": "Electrical"
+    }
+}
+  ]

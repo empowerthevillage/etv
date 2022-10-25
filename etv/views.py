@@ -1,20 +1,8 @@
-from http.client import HTTPResponse
-from django.shortcuts import render, redirect
-from django.http import JsonResponse
+from django.shortcuts import render
 from ven.forms import BusinessForm
-import json
 from django.conf import settings
-from donations.models import donation
-from django.core.mail import send_mail
-
-from mailchimp_marketing import Client
 
 gateway = settings.GATEWAY_PUBLIC
-mailchimp = Client()
-mailchimp.set_config({
-    "api_key": settings.MAILCHIMP_API_KEY,
-    "server": "us7"
-})
   
     
 def home_page(request):

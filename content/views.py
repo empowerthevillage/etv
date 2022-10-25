@@ -7,7 +7,7 @@ from mailchimp_marketing import Client
 from mailchimp_marketing.api_client import ApiClientError
 from django.conf import settings
 from content.models import contact_submission
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse
 import sweetify
 import requests
 import json
@@ -75,7 +75,6 @@ def contact(request):
 
 def mailchimp_signup(request):
   if request.method == 'POST':
-    print(request.POST)
     mailchimp_form = MailchimpForm(request.POST)
     if mailchimp_form.is_valid():
       member_info = {
@@ -84,8 +83,8 @@ def mailchimp_signup(request):
       }
       try:
         response = mailchimp.lists.add_list_member('bfb104d810', member_info)
-        print("response: {}".format(response))
       except ApiClientError as error:
         print("An exception occurred: {}".format(error.text))
+        response = ''
       
-    return redirect('/make-every-friday-black-friday/')
+    return JsonResponse(response)

@@ -433,8 +433,8 @@ class vbp_ar(models.Model):
 
 class vbp_ca(models.Model):
     directory_source  = models.CharField(max_length=200, null=True, blank=True)
-    business_name    = models.CharField(max_length=200)
-    website          = models.URLField(blank=True, max_length=500, null=True)
+    business_name    = models.CharField(max_length=270)
+    website          = models.URLField(blank=True, max_length=700, null=True)
     instagram        = models.URLField(blank=True, null=True, max_length=200)
     twitter          = models.URLField(blank=True, null=True, max_length=200)
     facebook         = models.URLField(blank=True, null=True, max_length=200)
@@ -442,7 +442,7 @@ class vbp_ca(models.Model):
     county           = models.CharField(max_length=300, blank=True, null=True)
     phone            = PhoneField(blank=True, help_text='Business Phone Number')
     category         = models.CharField(max_length=100, choices=CATEGORY_CHOICES, null=True, blank=True)
-    subcategory      = models.CharField(max_length=200, blank=True, null=True)
+    subcategory      = models.CharField(max_length=270, blank=True, null=True)
     online_only      = models.BooleanField(default=False)
     nominator_name   = models.CharField(max_length=300, blank=True, null=True)
     nominator_email  = models.EmailField(blank=True, null=True)
