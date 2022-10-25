@@ -149,6 +149,7 @@ urlpatterns = [
     path('economic-prosperity-and-employment/', include(("prosperity.urls", "prosperity"), namespace='prosperity')),
     path('events/', include(("events.urls", "events"), namespace='events')),
     path('news/', news, name='news'),
+    path('news-and-events/', news, name='news'),
     path('robots.txt/', robots, name="robots"),
     path('shop/', shop, name='shop'),
     path('login/', LoginView.as_view(), name='login'),

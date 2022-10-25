@@ -10038,7 +10038,7 @@
     {
       "model": "vbp.vbp_ca",
 "fields": {
-      "business_name": "Elissa Forsyth Realtor\\u00ae - HomeSmart Evergreen Realty",
+      "business_name": "Elissa Forsyth Realtor - HomeSmart Evergreen Realty",
       "website": "http://elissaforsyth.com",
       "city": "Aliso Viejo",
       "phone": "(949) 201-0467",
@@ -14732,7 +14732,7 @@
       "model": "vbp.vbp_ca",
 "fields": {
       "business_name": "Georgia Southern BBQ",
-      "website": "https://georgia-southern-bbq.business.site/?utm_source=googlemybusiness&utm_medium=referral",
+      "website": "https://georgia-southern-bbq.business.site",
       "city": "San Diego",
       "phone": "(619) 928-9499",
       "owner_name": "",

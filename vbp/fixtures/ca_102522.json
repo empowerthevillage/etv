@@ -1,0 +1,7347 @@
+[
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Polished Skinn",
+      "website": "http://www.polishedskinn.com",
+      "city": "Antioch",
+      "phone": "(415) 261-2335",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "beauty",
+      "subcategory": "Cosmetics"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Royal Touch Wellness",
+      "website": "http://royaltouchwellness.com",
+      "city": "Castro Valley",
+      "phone": "(510) 274-1092",
+      "owner_name": "Roshonda Parker",
+      "owner_email": "",
+      "category": "health",
+      "subcategory": "Spa/ Massage Therapy"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Center Stage Salon",
+      "website": "http://www.centerstagesalon.com",
+      "city": "Oakland",
+      "phone": "(510) 465-9552",
+      "owner_name": "Bobbie Cooper",
+      "owner_email": "",
+      "category": "beauty",
+      "subcategory": "Beauty Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Moods Beauty Bar",
+      "website": "http://dessmoods@yahoo.com",
+      "city": "Oakland",
+      "phone": "",
+      "owner_name": "Omar Childs",
+      "owner_email": "",
+      "category": "beauty",
+      "subcategory": "Beauty Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Paparazzi Beauty Bar",
+      "website": "http://www.paparazzibeautybar.com",
+      "city": "Oakland",
+      "phone": "(510) 472-8526",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "beauty",
+      "subcategory": "Beauty Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "The Sag3 Boutique",
+      "website": "http://thesag3.com",
+      "city": "Oakland",
+      "phone": "(510) 495-7667",
+      "owner_name": "Anna Reitzell",
+      "owner_email": "",
+      "category": "beauty",
+      "subcategory": "Beauty Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Head Designs",
+      "website": "http://www.headdesigns.com",
+      "city": "Oakland",
+      "phone": "(510) 658-8226",
+      "owner_name": "Sheila Head",
+      "owner_email": "",
+      "category": "beauty",
+      "subcategory": "Beauty Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Honey Dipped Hair LLC",
+      "website": "http://www.HoneyDippedHair.com",
+      "city": "Oakland",
+      "phone": "(510) 698-4430",
+      "owner_name": "Jasmin Cameron",
+      "owner_email": "",
+      "category": "beauty",
+      "subcategory": "Beauty Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "AspireCustomz",
+      "website": "http://www.aspirecustomz.com",
+      "city": "Sacramento",
+      "phone": "(925) 852-7683",
+      "owner_name": "Mia Carr-Sledge",
+      "owner_email": "aspirecustomz@gmail.com",
+      "category": "beauty",
+      "subcategory": "Beauty Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "California Barbering & Cosmetology Apprenticeship Learning Center",
+      "website": "",
+      "city": "Sacramento",
+      "phone": "(916) 395-4218",
+      "owner_name": "Lasana McNealey",
+      "owner_email": "lasanamc@yahoo.com",
+      "category": "beauty",
+      "subcategory": "Barber"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Lorrie Williams Stylist",
+      "website": "http://www.lorriewilliamsstylist.com",
+      "city": "Sacramento",
+      "phone": "(916) 562-2894",
+      "owner_name": "Lorrie Williams",
+      "owner_email": "lorrie.williams.stylist@gmail.com",
+      "category": "beauty",
+      "subcategory": "Beauty Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Bronze Goddess Beauty LLC",
+      "website": "https://www.bronzegoddessbeauty.shop/",
+      "city": "Sacramento",
+      "phone": "(916) 544-7843",
+      "owner_name": "Melinda Powell",
+      "owner_email": "TTT@BronzeGoddessBeauty.shop",
+      "category": "beauty",
+      "subcategory": "Beauty Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "JJames Unisex Salon",
+      "website": "",
+      "city": "Sacramento",
+      "phone": "(916) 541-3308",
+      "owner_name": "Jerome Anderson",
+      "owner_email": "",
+      "category": "beauty",
+      "subcategory": "Beauty Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Royal Beauty Bar LLC",
+      "website": "",
+      "city": "San Leandro",
+      "phone": "(510) 309-6935",
+      "owner_name": "Wilesha Lee",
+      "owner_email": "",
+      "category": "beauty",
+      "subcategory": "Beauty Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Jacqueline's Boutique",
+      "website": "https://www.jacquelinesbeeutique.com/",
+      "city": "",
+      "phone": "(916) 224-9019",
+      "owner_name": "Jacqueline Doyle",
+      "owner_email": "",
+      "category": "beauty",
+      "subcategory": "Beauty Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "The Tammed Mane Salon",
+      "website": "",
+      "city": "",
+      "phone": "",
+      "owner_name": "Tiffany Brock",
+      "owner_email": "",
+      "category": "beauty",
+      "subcategory": "Beauty Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Sacramento Business Journal",
+      "website": "http://www.sacramentobusinessjournal.com",
+      "city": "Sacramento",
+      "phone": "(916) 558-7883",
+      "owner_name": "",
+      "owner_email": "dlustig@bizjournals.com",
+      "category": "books",
+      "subcategory": "Books Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Sacramento Observer Newspaper",
+      "website": "http://www.SacObserver.com",
+      "city": "Sacramento",
+      "phone": "(916) 452-4781",
+      "owner_name": "Larry Lee",
+      "owner_email": "larry.lee@sacobserver.com",
+      "category": "books",
+      "subcategory": "Books Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "MotherWit Magazine",
+      "website": "",
+      "city": "Scramento",
+      "phone": "(916) 821-8471",
+      "owner_name": "Audrea Lynn Williams",
+      "owner_email": "audrea@motherwitmagazine.com",
+      "category": "books",
+      "subcategory": "Books Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Elk Grove Chamber of Commerce",
+      "website": "http://www.elkgroveca.com",
+      "city": "Elk Grove",
+      "phone": "(916) 691-3760",
+      "owner_name": "Angela Perry",
+      "owner_email": "angip@elkgroveca.com",
+      "category": "legal",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Rancho Cordova Chamber of Commerce",
+      "website": "http://www.ranchocordova.org",
+      "city": "Rancho Cordova",
+      "phone": "(916) 273-5688",
+      "owner_name": "Jane Daly",
+      "owner_email": "jdaly@ranchocordova.org",
+      "category": "legal",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "California Black Chamber of Commerce",
+      "website": "http://www.calbcc.org",
+      "city": "Sacramento",
+      "phone": "(916) 463-0177",
+      "owner_name": "",
+      "owner_email": "astone@calbcc.org",
+      "category": "legal",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Rainbow Chamber of Commerce",
+      "website": "http://www.rainbowchamber.com",
+      "city": "Sacramento",
+      "phone": "(916) 266-9630",
+      "owner_name": "",
+      "owner_email": "vp@rainbowchamber.com",
+      "category": "legal",
+      "subcategory": "Chamber Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Sacramento Hispanic Chamber of Commerce",
+      "website": "http://www.sachcc.org",
+      "city": "Sacramento",
+      "phone": "(916) 486-7700",
+      "owner_name": "",
+      "owner_email": "alice@sachcc.org",
+      "category": "legal",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Slavic-American Chamber of Commerce",
+      "website": "",
+      "city": "Sacramento",
+      "phone": "(916) 207-2295",
+      "owner_name": "",
+      "owner_email": "sergeyt@slavicamericanchamber.org",
+      "category": "legal",
+      "subcategory": "Chamber Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "San Francisco African American Chamber of Commerce",
+      "website": "http://www.sfaacc.org/",
+      "city": "San Francisco",
+      "phone": "(415) 749-6400",
+      "owner_name": "Position:",
+      "owner_email": "Administrative Director",
+      "category": "legal",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Solano County Black Chamber of Commerce",
+      "website": "http://www.scbcc.org",
+      "city": "Vallejo",
+      "phone": "(707) 704-7426",
+      "owner_name": "",
+      "owner_email": "info@scbcc.org",
+      "category": "legal",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "West Sacramento Chamber of Commerce",
+      "website": "http://www.westsacramentochamber.com",
+      "city": "West Sacramento",
+      "phone": "(916) 371-7042",
+      "owner_name": "Denice A. Seals",
+      "owner_email": "denice@westsacramentochamber.com",
+      "category": "legal",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Mini Blessings Daycare",
+      "website": "",
+      "city": "Oakland",
+      "phone": "",
+      "owner_name": "Helana Pennywell",
+      "owner_email": "",
+      "category": "child",
+      "subcategory": "Childcare| Children's Servives Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Girl Scouts Heart of Central California",
+      "website": "https://www.girlscoutshcc.org/",
+      "city": "Sacramento",
+      "phone": "(916) 453-5211",
+      "owner_name": "Linda Farley",
+      "owner_email": "leslie.parker@girlscoutshcc.org",
+      "category": "child",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "KMP Environmental Services Corporation",
+      "website": "http://www.kmpenvironmental.com/",
+      "city": "Sacramento",
+      "phone": "(833) 715-0740 toll free or (916) 888-8007",
+      "owner_name": "Position:",
+      "owner_email": "",
+      "category": "cleaning",
+      "subcategory": "Cleaning Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Unibail-Rodamco-Westfield Group",
+      "website": "https://www.urw.com/en",
+      "city": "Los Angeles",
+      "phone": "",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "clothing",
+      "subcategory": "Clothing Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Duafe Designs",
+      "website": "",
+      "city": "Oakland",
+      "phone": "",
+      "owner_name": "Ayodele Kinchen",
+      "owner_email": "",
+      "category": "clothing",
+      "subcategory": "Clothing Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "KENYAN SAFARI DESIGNS",
+      "website": "http://www.Ksafarigiftshop.com",
+      "city": "Oakland",
+      "phone": "(510) 827-5930",
+      "owner_name": "Agnes R",
+      "owner_email": "",
+      "category": "clothing",
+      "subcategory": "Clothing Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Love Iguehi",
+      "website": "http://LoveIguehi.com",
+      "city": "Oakland",
+      "phone": "(510) 842-5001",
+      "owner_name": "Iguehi James",
+      "owner_email": "",
+      "category": "clothing",
+      "subcategory": "Clothing Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Newfangles for Tall Fashions",
+      "website": "",
+      "city": "Oakland",
+      "phone": "(510) 839-0457",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "clothing",
+      "subcategory": "Clothing Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Omi's Stuff and Things",
+      "website": "",
+      "city": "Oakland",
+      "phone": "",
+      "owner_name": "Donielle Woods",
+      "owner_email": "",
+      "category": "clothing",
+      "subcategory": "Clothing Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Queen Hippie Gypsy",
+      "website": "http://www.QueenHippieGypsy.com",
+      "city": "Oakland",
+      "phone": "(510) 333-4010",
+      "owner_name": "Lilly Ayers",
+      "owner_email": "",
+      "category": "clothing",
+      "subcategory": "Clothing Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "The Lords Helper Boutique",
+      "website": "",
+      "city": "Oakland",
+      "phone": "",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "clothing",
+      "subcategory": "Clothing Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Too Cute Boutique",
+      "website": "http://www.toocutestore.com",
+      "city": "Oakland",
+      "phone": "(510) 693-8722",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "clothing",
+      "subcategory": "Clothing Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "McMullen",
+      "website": "http://Shopmcmullen.com",
+      "city": "Oakland",
+      "phone": "(510) 508-0773",
+      "owner_name": "Sherri McMullen",
+      "owner_email": "",
+      "category": "clothing",
+      "subcategory": "Clothing Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Hey Sis LLC",
+      "website": "https://www.heysisbox.com/",
+      "city": "Sacramento",
+      "phone": "(916) 842-8011",
+      "owner_name": "Melanie Thurmond",
+      "owner_email": "info@heysisbox.com",
+      "category": "clothing",
+      "subcategory": "Clothing Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "I-Darling and Joe's Kaftans Design",
+      "website": "http://www.idjkdesigns.com",
+      "city": "SACRAMENTO",
+      "phone": "(916) 627-8359",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "clothing",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Shuga & Shea Essentials Llc",
+      "website": "http://Dorthias.com",
+      "city": "Sacramento",
+      "phone": "(415) 374-4370",
+      "owner_name": "Marcia Brown-Kelly",
+      "owner_email": "shugaandsheaessentials@gmail.com",
+      "category": "clothing",
+      "subcategory": "Shea Esse"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Prideful Patchez",
+      "website": "https://pridefulpatchez.com",
+      "city": "San Francisco",
+      "phone": "(800) 841-7759",
+      "owner_name": "Regina Harris",
+      "owner_email": "",
+      "category": "clothing",
+      "subcategory": "Clothing Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "on the runway ACCESSORIES LLC",
+      "website": "http://www.ontherunwayfashion.com",
+      "city": "San Leandro",
+      "phone": "(510) 969-8710",
+      "owner_name": "Angela Ajetomobi",
+      "owner_email": "",
+      "category": "clothing",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Limbani Clothing Company",
+      "website": "https://Limbaniclothingcompany.com",
+      "city": "Vallejo",
+      "phone": "",
+      "owner_name": "Octavia Racy",
+      "owner_email": "",
+      "category": "clothing",
+      "subcategory": "Clothing Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Hey Carter! Books",
+      "website": "http://www.heycarterbooks.com",
+      "city": "",
+      "phone": "",
+      "owner_name": "Dr. Thomishia Booker",
+      "owner_email": "",
+      "category": "books",
+      "subcategory": "Books Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "ADF Plumbing",
+      "website": "",
+      "city": "Sacramento",
+      "phone": "(926) 470-7008",
+      "owner_name": "Alex Deorosan",
+      "owner_email": "adfplumbingadf@yahoo.com",
+      "category": "construction",
+      "subcategory": "Construcation Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Martin Herzfeld - California Contractor Lic.#833782, UL Certified PV Installer #17",
+      "website": "http://www.herzfeld.org/",
+      "city": "El Sobrante",
+      "phone": "(510) 243-0190",
+      "owner_name": "Martin Herzfeld",
+      "owner_email": "mail@herzfeld.org",
+      "category": "construction",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Cirius Engineering, L.L.C.",
+      "website": "http://ciriusengineering.com",
+      "city": "Hayward",
+      "phone": "(510) 290-8556",
+      "owner_name": "Earl Faust",
+      "owner_email": "",
+      "category": "construction",
+      "subcategory": "Construction Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "AM Hauling",
+      "website": "http://www.amhauling2.com/",
+      "city": "Oakland",
+      "phone": "(510) 478-4262",
+      "owner_name": "Snehpal Mander",
+      "owner_email": "amhauling2@gmail.com",
+      "category": "construction",
+      "subcategory": "Construction Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Baila Floors & Deco Center",
+      "website": "http://www.bailafloors.com",
+      "city": "Oakland",
+      "phone": "(510) 250-8700",
+      "owner_name": "Michael Pinnock",
+      "owner_email": "",
+      "category": "construction",
+      "subcategory": "Floors & De"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Ball By Yourself",
+      "website": "",
+      "city": "Oakland",
+      "phone": "",
+      "owner_name": "Chad E. Briscoe",
+      "owner_email": "",
+      "category": "construction",
+      "subcategory": "Construction Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Cooper Construction & Engineering",
+      "website": "http://www.cooperconstructionandengineering.com",
+      "city": "Oakland",
+      "phone": "(510) 415-3654",
+      "owner_name": "DENISE COOPER",
+      "owner_email": "",
+      "category": "construction",
+      "subcategory": "Constructi"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Eclipse Electric of California",
+      "website": "http://eclipseelectricofcalifornia.com",
+      "city": "Oakland",
+      "phone": "(510) 424-5472",
+      "owner_name": "Nedir Bey.",
+      "owner_email": "",
+      "category": "construction",
+      "subcategory": "Construction Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Future Power Corp dba Energy Conservation Options",
+      "website": "http://www.ecoptions.biz",
+      "city": "Oakland",
+      "phone": "(510) 647-8450",
+      "owner_name": "Dahlia Moodie",
+      "owner_email": "",
+      "category": "construction",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Micah Electric Co.",
+      "website": "http://www.micahelectric.co",
+      "city": "Oakland",
+      "phone": "(510) 710-0534",
+      "owner_name": "Micah J.",
+      "owner_email": "",
+      "category": "construction",
+      "subcategory": "Construction Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Owow",
+      "website": "http://owow.com",
+      "city": "Oakland",
+      "phone": "(631) 921-7522",
+      "owner_name": "Danny Haber",
+      "owner_email": "",
+      "category": "construction",
+      "subcategory": "Construction Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "PG&E",
+      "website": "http://pge.com",
+      "city": "Oakland",
+      "phone": "(510) 847-6151",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "construction",
+      "subcategory": "Construction Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "RF Contractors",
+      "website": "http://rfcontractors.com",
+      "city": "Oakland",
+      "phone": "(510) 395-7644",
+      "owner_name": "Richard Ferrel",
+      "owner_email": "",
+      "category": "construction",
+      "subcategory": "Construction Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Turner Building Construction Services Inc",
+      "website": "",
+      "city": "Oakland",
+      "phone": "",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "construction",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Will 2 Bill Construction",
+      "website": "",
+      "city": "Oakland",
+      "phone": "(510) 812-5541",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "construction",
+      "subcategory": "Construction Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "AHI Construction, Inc",
+      "website": "https://www.ahiconstructs.com/",
+      "city": "Sacramento",
+      "phone": "(916) 400-3710",
+      "owner_name": "Mark Adams",
+      "owner_email": "info@ahiconstructs.com",
+      "category": "construction",
+      "subcategory": "Construction Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "PICINC / THEGROUP",
+      "website": "",
+      "city": "Sacramento",
+      "phone": "(916) 320-2951",
+      "owner_name": "JOHN ASHFORD KOFI ODUM",
+      "owner_email": "PICINCINFO@GMAIL.COM",
+      "category": "construction",
+      "subcategory": "Construction Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Sunelectricllc",
+      "website": "https://www.sunelectricsolar.com/",
+      "city": "Sacramento",
+      "phone": "(916) 541-3579",
+      "owner_name": "Kevin Nave",
+      "owner_email": "",
+      "category": "construction",
+      "subcategory": "Construction Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "West Coast Construction",
+      "website": "",
+      "city": "Sacramento",
+      "phone": "(916) 333-4583",
+      "owner_name": "Vernon Emile Smith Sr.",
+      "owner_email": "Vernsacking66@gmail.com",
+      "category": "construction",
+      "subcategory": "Construction Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "1 AAA Consolidated Construction, Inc",
+      "website": "http://www.1aaaconstruction.com",
+      "city": "Sacramento",
+      "phone": "(916) 437-4005",
+      "owner_name": "James Shiloh",
+      "owner_email": "info@1aaaconstruction.com",
+      "category": "construction",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Eco-Alpha Environmental and Engineering Svcs, INC",
+      "website": "https://eco-alpha.com/",
+      "city": "Sacramento",
+      "phone": "(916) 945-3604",
+      "owner_name": "Uzoma Okoro",
+      "owner_email": "info@eco-alpha.com",
+      "category": "construction",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Habitat for Humanity of Greater Sacramento",
+      "website": "https://habitatgreatersac.org/",
+      "city": "Sacramento",
+      "phone": "(916) 440-1215 ext 1108",
+      "owner_name": "",
+      "owner_email": "lhimmelmann@habitatgreatersac.org",
+      "category": "construction",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Tidewater Capital, LLC",
+      "website": "https://tidewatercap.com/",
+      "city": "San Francisco",
+      "phone": "(510) 290-9901",
+      "owner_name": "Craig Young",
+      "owner_email": "",
+      "category": "construction",
+      "subcategory": "Construction Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "TAZ Auto Detailing",
+      "website": "",
+      "city": "San Francisco",
+      "phone": "",
+      "owner_name": "Lamonte J.",
+      "owner_email": "",
+      "category": "construction",
+      "subcategory": "Construction Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Baines Group Inc.",
+      "website": "",
+      "city": "",
+      "phone": "(510) 238-4669",
+      "owner_name": "Michael Baines",
+      "owner_email": "",
+      "category": "construction",
+      "subcategory": "Construction Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Brooks & Sons Electric Company",
+      "website": "",
+      "city": "",
+      "phone": "(916) 573-9579",
+      "owner_name": "Bruce Brooks",
+      "owner_email": "contact@brooksandsons.org",
+      "category": "construction",
+      "subcategory": "Sons Ele"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "3 Kings Consulting",
+      "website": "",
+      "city": "ALAMEDA",
+      "phone": "(510) 421-4129",
+      "owner_name": "Ron King",
+      "owner_email": "",
+      "category": "education",
+      "subcategory": "Education Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "UC Davis Campus Community Relations",
+      "website": "http://www.ucdavis.edu",
+      "city": "Davis",
+      "phone": "(530) 752-2071",
+      "owner_name": "Rahim Reed",
+      "owner_email": "rreed@ucdavis.edu",
+      "category": "education",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "True2E",
+      "website": "",
+      "city": "Elk Grove",
+      "phone": "(916) 628-1128",
+      "owner_name": "Ena Jamille Williams",
+      "owner_email": "true2e3@gmail.com",
+      "category": "education",
+      "subcategory": "Education Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "AIMSk12 Charter District",
+      "website": "http://AIMSk12.org",
+      "city": "Oakalnd",
+      "phone": "(510) 508-6957",
+      "owner_name": "Maya Woods-Cadiz",
+      "owner_email": "",
+      "category": "education",
+      "subcategory": "Education Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Ethnic Ties LLC",
+      "website": "http://ethnictiestravels.com",
+      "city": "Oakland",
+      "phone": "(510) 629-1439",
+      "owner_name": "ACACIA WOODSCHAN",
+      "owner_email": "",
+      "category": "education",
+      "subcategory": "Education Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Explore Your Diaspora",
+      "website": "",
+      "city": "Oakland",
+      "phone": "(510) 817-4027",
+      "owner_name": "Sana Javeri Kadri",
+      "owner_email": "",
+      "category": "education",
+      "subcategory": "Education Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "HIGHER GROUND NEIGHBORHOOD DEVELOPMENT CORPORATION",
+      "website": "http://www.highergroundndc.com",
+      "city": "Oakland",
+      "phone": "(510) 907-3943",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "education",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Holy Names University",
+      "website": "http://hnu.edu",
+      "city": "Oakland",
+      "phone": "(510) 436-1351",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "education",
+      "subcategory": "Education Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Like The Moon Press",
+      "website": "http://www.kidsloveoakland.com",
+      "city": "Oakland",
+      "phone": "(510) 328-7552",
+      "owner_name": "Kamaria Lofton",
+      "owner_email": "",
+      "category": "education",
+      "subcategory": "Education Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Peralta Colleges Foundation",
+      "website": "http://www.peraltafoundation.org",
+      "city": "Oakland",
+      "phone": "(510) 587-7890",
+      "owner_name": "LaNiece Jones",
+      "owner_email": "",
+      "category": "education",
+      "subcategory": "Education Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "The Chinue X Project Inc An Afrocentric Educational Resource Service",
+      "website": "https://tcxpi.org/",
+      "city": "Oakland",
+      "phone": "(510) 417-5992",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "education",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Sierra Community College District",
+      "website": "https://www.sierracollege.edu/index.php",
+      "city": "Rocklin",
+      "phone": "(916) 660-7103",
+      "owner_name": "",
+      "owner_email": "ljackson7@sierracollege.edu",
+      "category": "education",
+      "subcategory": "Education Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Author Kelly D Horton",
+      "website": "",
+      "city": "Sacramento",
+      "phone": "(216) 315-3902",
+      "owner_name": "Kelly D Horton",
+      "owner_email": "authorkellydhorton@gmail.com",
+      "category": "education",
+      "subcategory": "Education Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "California State University Sacramento",
+      "website": "http://www.csus.edu",
+      "city": "Sacramento",
+      "phone": "(916) 278-6435",
+      "owner_name": "Karyl Lee",
+      "owner_email": "kburwell@csus.edu",
+      "category": "education",
+      "subcategory": "Education Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Fortune School of Education",
+      "website": "https://www.fortuneschool.us",
+      "city": "Sacramento",
+      "phone": "(916) 924-8633",
+      "owner_name": "",
+      "owner_email": "mfortune@fortuneschool.us",
+      "category": "education",
+      "subcategory": "Education Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Golden State Educational Services",
+      "website": "https://goldenstatedealer.com/",
+      "city": "SACRAMENTO",
+      "phone": "(916) 271-8990",
+      "owner_name": "Bridgett Smalls",
+      "owner_email": "goldenstatedealer@gmail.com",
+      "category": "education",
+      "subcategory": "Education Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Los Rios Community College District",
+      "website": "http://www.losrios.edu",
+      "city": "Sacramento",
+      "phone": "(916) 568-3039",
+      "owner_name": "Brian King",
+      "owner_email": "ansellj@losrios.edu",
+      "category": "education",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Nichols Strategies",
+      "website": "http://www.nicholsstrategies.com",
+      "city": "Sacramento",
+      "phone": "(916) 476-3471",
+      "owner_name": "",
+      "owner_email": "info@nicholsstrategies.com",
+      "category": "education",
+      "subcategory": "Education Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Sacramento City College",
+      "website": "",
+      "city": "Sacramento",
+      "phone": "(916) 558-2141",
+      "owner_name": "Michael Poindexter",
+      "owner_email": "PoindeM@scc.losrios.edu",
+      "category": "education",
+      "subcategory": "Education Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Sacramento History Alliance, Inc.",
+      "website": "http://www.sachistorymuseum.org",
+      "city": "Sacramento",
+      "phone": "(916) 769-7678",
+      "owner_name": "",
+      "owner_email": "dmello@sachistorymuseum.org",
+      "category": "education",
+      "subcategory": "Education Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "University of Phoenix",
+      "website": "http://www.phoenix.edu",
+      "city": "Sacramento",
+      "phone": "(916) 830-3809",
+      "owner_name": "",
+      "owner_email": "chris.nunes@phoenix.edu",
+      "category": "education",
+      "subcategory": "Education Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Operation Innovate/Code For Hood",
+      "website": "https://codeforhood.com/",
+      "city": "Sacramento",
+      "phone": "(510) 779-8272",
+      "owner_name": "",
+      "owner_email": "gina@hackerlab.org",
+      "category": "education",
+      "subcategory": "Education Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Sierra Nevada Journeys",
+      "website": "https://www.sierranevadajourneys.org/",
+      "city": "Sacramento",
+      "phone": "916-827-0765",
+      "owner_name": "Eaton Dunkelberger",
+      "owner_email": "comms@sierranevadajourneys.org",
+      "category": "education",
+      "subcategory": "Education Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "St. Francis Catholic High School",
+      "website": "https://www.stfrancishs.org/",
+      "city": "Sacramento",
+      "phone": "(916) 452-3461",
+      "owner_name": "",
+      "owner_email": "gvinella@stfrancishs.org",
+      "category": "education",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Urban Advocates & Achievers, Inc",
+      "website": "https://theurbanadvocates.org/",
+      "city": "Sacramento",
+      "phone": "916-644-2994",
+      "owner_name": "Alecia Eugene-Chasten",
+      "owner_email": "achasten@theurbanadvocates.org",
+      "category": "education",
+      "subcategory": "Advocates &"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "The Sacramento Black Bridge",
+      "website": "https://www.thesacramentoblackbridge.org/",
+      "city": "",
+      "phone": "(916) 880-6670",
+      "owner_name": "Blair Coates",
+      "owner_email": "",
+      "category": "education",
+      "subcategory": "Education Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Entevos",
+      "website": "http://www.entevos.com",
+      "city": "Danville",
+      "phone": "(415) 799-1751",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "education",
+      "subcategory": "Education Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Pulse Check 101 LLC",
+      "website": "http://www.pulsecheck101.com",
+      "city": "San Francisco",
+      "phone": "(650) 270-1957",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "education",
+      "subcategory": "Education Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "ABC Security Service, Inc.",
+      "website": "http://abcsecurityservices.us",
+      "city": "Oakland",
+      "phone": "(800) 872-1666",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "electronics",
+      "subcategory": "Electronics Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Elite Security",
+      "website": "",
+      "city": "Oakland",
+      "phone": "",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "electronics",
+      "subcategory": "Electronics Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Alpha Ballers Technologies",
+      "website": "http://alphaballertechnologies.com",
+      "city": "Roseville",
+      "phone": "(916) 580-5798",
+      "owner_name": "Position:",
+      "owner_email": "VP of Admin/Accounting",
+      "category": "electronics",
+      "subcategory": "Electronics Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Siemens Mobility, Inc.",
+      "website": "http://www.siemens.com",
+      "city": "Sacramento",
+      "phone": "(916) 525-2854",
+      "owner_name": "Michelle Picard",
+      "owner_email": "michelle.picard@siemens.com",
+      "category": "electronics",
+      "subcategory": "Electronics Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Marina Security Services, Inc.",
+      "website": "http://www.marinssecurities.com",
+      "city": "San Francisco",
+      "phone": "(415) 773-2300",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "electronics",
+      "subcategory": "Electronics Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "MAXX ELITE LLC",
+      "website": "",
+      "city": "el sobrante",
+      "phone": "(510) 871-0186",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "entertainment",
+      "subcategory": "Entertainment Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Gamers World Lounge",
+      "website": "http://www.gamersworldlounge.com",
+      "city": "Elk Grove",
+      "phone": "(562) 676-7140",
+      "owner_name": "Deval Turner",
+      "owner_email": "manager@gamersworldlounge.com",
+      "category": "entertainment",
+      "subcategory": "Entertainment Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Kali Tours",
+      "website": "http://www.kalitours.com",
+      "city": "Elk Grove",
+      "phone": "(707) 319-5215",
+      "owner_name": "Ingram Griffin Jr",
+      "owner_email": "kristiegriffin@gmail.com",
+      "category": "entertainment",
+      "subcategory": "Entertainment Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Northern California Filmmakers Coalition",
+      "website": "",
+      "city": "Elk Grove",
+      "phone": "(916) 384-5796",
+      "owner_name": "Gary P. Bell",
+      "owner_email": "garybell@ncfc.media",
+      "category": "entertainment",
+      "subcategory": "Entertainment Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Samona Michael Whiteside",
+      "website": "",
+      "city": "Elk Grove",
+      "phone": "(916) 459-6575",
+      "owner_name": "Samona Michael Whiteside",
+      "owner_email": "encouragedtoinspire@gmail.com",
+      "category": "entertainment",
+      "subcategory": "Entertainment Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "ClariT Media",
+      "website": "https://www.youtube.com/channel/UCkzUxtXOhd9tvZTVnowY5Ag?view_as=subscriber",
+      "city": "Fairfield",
+      "phone": "(707) 430-8355",
+      "owner_name": "Garrett Garcia",
+      "owner_email": "",
+      "category": "entertainment",
+      "subcategory": "Entertainment Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "DJ Alex Reyes Entertainment",
+      "website": "http://www.djalexreyes.com",
+      "city": "Fremont",
+      "phone": "(510) 754-5383",
+      "owner_name": "Alex Reyes",
+      "owner_email": "",
+      "category": "entertainment",
+      "subcategory": "Entertainment Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Ovis",
+      "website": "http://www.ovis.news",
+      "city": "Hayward",
+      "phone": "(510) 866-1414",
+      "owner_name": "Shannon",
+      "owner_email": "",
+      "category": "entertainment",
+      "subcategory": "Entertainment Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Thunder Valley Casino Resort",
+      "website": "https://thundervalleyresort.com/home",
+      "city": "Lincoln",
+      "phone": "(916)408-8398",
+      "owner_name": "Jacqueline Benecke",
+      "owner_email": "jacqueline.benecke@thundervalleyresorts.com",
+      "category": "entertainment",
+      "subcategory": "Entertainment Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "8th Avenue Enterprise",
+      "website": "",
+      "city": "Oakland",
+      "phone": "(510) 967-9884",
+      "owner_name": "Kevin Hoyt",
+      "owner_email": "",
+      "category": "entertainment",
+      "subcategory": "Entertainment Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Alameda Publishing Corporation",
+      "website": "",
+      "city": "Oakland",
+      "phone": "",
+      "owner_name": "Tracy McKean",
+      "owner_email": "",
+      "category": "entertainment",
+      "subcategory": "Entertainment Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "All I Do is Pen Publishing",
+      "website": "",
+      "city": "Oakland",
+      "phone": "",
+      "owner_name": "C.W. Burnett",
+      "owner_email": "",
+      "category": "entertainment",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Calif. Golden Tigers Basketball",
+      "website": "http://www.goldentigers.club",
+      "city": "Oakland",
+      "phone": "(510) 200-3053",
+      "owner_name": "David Johnson",
+      "owner_email": "",
+      "category": "entertainment",
+      "subcategory": "Entertainment Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Kids Play Zone",
+      "website": "http://www.kidsplayzoneoakland.com",
+      "city": "Oakland",
+      "phone": "(510) 817-4384",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "entertainment",
+      "subcategory": "Entertainment Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Liege LBR, LLC.",
+      "website": "",
+      "city": "Oakland",
+      "phone": "(510) 835-4343",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "entertainment",
+      "subcategory": "Entertainment Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Trapxart",
+      "website": "http://trapxart.com",
+      "city": "Oakland",
+      "phone": "(510) 725-7511",
+      "owner_name": "Amina Brooks",
+      "owner_email": "",
+      "category": "entertainment",
+      "subcategory": "Entertainment Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Welsh PR & Event Planning",
+      "website": "http://www.welshprgroup.com",
+      "city": "Oakland",
+      "phone": "(510) 326-8668",
+      "owner_name": "Paula Welsh",
+      "owner_email": "",
+      "category": "entertainment",
+      "subcategory": "PR & Event"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "West Coast Blues Society",
+      "website": "http://westcoastblues.org",
+      "city": "Oakland",
+      "phone": "(510) 472-8800",
+      "owner_name": "John Jacob",
+      "owner_email": "",
+      "category": "entertainment",
+      "subcategory": "Entertainment Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Opportunities In Urban Renaissance Television",
+      "website": "http://www.ourtv.tv",
+      "city": "Oakland",
+      "phone": "(510) 638-5100",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "entertainment",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Black Business Round Table",
+      "website": "",
+      "city": "Oakland (Alameda)",
+      "phone": "(510) 875-8030",
+      "owner_name": "LaTanya Hawkins",
+      "owner_email": "",
+      "category": "entertainment",
+      "subcategory": "Entertainment Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "ABC 10",
+      "website": "http://abc10.com",
+      "city": "Sacramento",
+      "phone": "(916) 321-3211",
+      "owner_name": "",
+      "owner_email": "cazevedo@abc10.com",
+      "category": "entertainment",
+      "subcategory": "Entertainment Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Fun Friends Entertainment",
+      "website": "http://Funfriendsent.com",
+      "city": "Sacramento",
+      "phone": "(916) 870-0988",
+      "owner_name": "Ranita Harris",
+      "owner_email": "ranita@funfriends.com",
+      "category": "entertainment",
+      "subcategory": "Entertainment Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "KCRA TV/KQCA TV",
+      "website": "http://KCRA.com",
+      "city": "Sacramento",
+      "phone": "(916) 325-3202",
+      "owner_name": "Ariel Roblin",
+      "owner_email": "aroblin@hearst.com",
+      "category": "entertainment",
+      "subcategory": "Entertainment Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Sacramento Republic FC",
+      "website": "http://www.sacrepublicfc.com%20",
+      "city": "Sacramento",
+      "phone": "(916) 307-6100",
+      "owner_name": "Kevin Burdick",
+      "owner_email": "kburdick@sacrepublicfc.com",
+      "category": "entertainment",
+      "subcategory": "Entertainment Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Harpist from the Hood",
+      "website": "",
+      "city": "",
+      "phone": "",
+      "owner_name": "Stephanie Louis",
+      "owner_email": "",
+      "category": "entertainment",
+      "subcategory": "Entertainment Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Seismic Media Works",
+      "website": "",
+      "city": "",
+      "phone": "(916) 955-1774",
+      "owner_name": "Scott Williams",
+      "owner_email": "seismicmediaworks@gmail.com",
+      "category": "entertainment",
+      "subcategory": "Entertainment Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "The Badelle Group, Inc.",
+      "website": "",
+      "city": "",
+      "phone": "",
+      "owner_name": "Brett Badelle",
+      "owner_email": "",
+      "category": "entertainment",
+      "subcategory": "Entertainment Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Roux and Vine",
+      "website": "",
+      "city": "Alameda",
+      "phone": "(510) 374-0082",
+      "owner_name": "Leilani Baugh",
+      "owner_email": "",
+      "category": "grocery",
+      "subcategory": "Grocery Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Wachira Wines",
+      "website": "",
+      "city": "Alameda",
+      "phone": "(510) 995-8261",
+      "owner_name": "Christine Wachira",
+      "owner_email": "",
+      "category": "grocery",
+      "subcategory": "Grocery Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Mise en Place Events and Catering",
+      "website": "http://www.bebepreston.com",
+      "city": "Antioch",
+      "phone": "(925) 635-8076",
+      "owner_name": "Beatrice Preston",
+      "owner_email": "",
+      "category": "grocery",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Island Vibe",
+      "website": "",
+      "city": "BRENTWOOD",
+      "phone": "(510) 692-2951",
+      "owner_name": "Rick Louis",
+      "owner_email": "",
+      "category": "grocery",
+      "subcategory": "Grocery Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Sugar Coated Cupcakes",
+      "website": "https://sugarcoatedcupcakes.com/",
+      "city": "Elk Grove",
+      "phone": "(916) 378 9200",
+      "owner_name": "LaQueanya Henry",
+      "owner_email": "info@sugarcoatedcupcakes.com",
+      "category": "grocery",
+      "subcategory": "Grocery Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Whole Foods",
+      "website": "http://wholefoods.com",
+      "city": "Emeryville",
+      "phone": "",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "grocery",
+      "subcategory": "Grocery Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "BLACKBERRY SOUL CATERING",
+      "website": "",
+      "city": "HERCULES",
+      "phone": "(866) 278-8688",
+      "owner_name": "Rene Johnson",
+      "owner_email": "",
+      "category": "grocery",
+      "subcategory": "Grocery Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Coco's Cocktails",
+      "website": "http://www.cocoscocktails.com",
+      "city": "Lathrop",
+      "phone": "(925) 784-7927",
+      "owner_name": "Robin Pajaro",
+      "owner_email": "",
+      "category": "grocery",
+      "subcategory": "Grocery Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Ayaba Wines",
+      "website": "",
+      "city": "Oakland",
+      "phone": "",
+      "owner_name": "Jerry Bailey",
+      "owner_email": "",
+      "category": "grocery",
+      "subcategory": "Grocery Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Chef Nikki Shaw LLC",
+      "website": "",
+      "city": "Oakland",
+      "phone": "(510) 701-0087",
+      "owner_name": "Nikki Shaw",
+      "owner_email": "",
+      "category": "grocery",
+      "subcategory": "Grocery Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Chris Evans Event and Catering",
+      "website": "http://www.chrisevansevents.com",
+      "city": "Oakland",
+      "phone": "(510) 746-6973",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "grocery",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "COCO BREEZE  RESTAURANT AND CATERING SERVICE",
+      "website": "Http://www.Cocobreeze.co",
+      "city": "Oakland",
+      "phone": "(510) 479-3270",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "grocery",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Cook and Run Catering Services LLC",
+      "website": "",
+      "city": "Oakland",
+      "phone": "",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "grocery",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Gussie\\u2019s Southern Table",
+      "website": "http://www.chefmichele.com",
+      "city": "Oakland",
+      "phone": "(510) 867-6659",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "grocery",
+      "subcategory": "Grocery Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Gussie's Southern Table and Bar",
+      "website": "http://chefmichele.com",
+      "city": "Oakland",
+      "phone": "(510) 867-6659",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "grocery",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Hook You Up Catering & BBQ Services",
+      "website": "",
+      "city": "Oakland",
+      "phone": "(510) 712-4572",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "grocery",
+      "subcategory": "You Up Cater"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Horizon Beverage Company",
+      "website": "http://horizonbev.com",
+      "city": "Oakland",
+      "phone": "(510) 500-9548",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "grocery",
+      "subcategory": "Grocery Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "JUSLA Eats",
+      "website": "http://Chef lala Harrison.com",
+      "city": "Oakland",
+      "phone": "(510) 705-3721",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "grocery",
+      "subcategory": "Grocery Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Philly's Best Cheesesteak",
+      "website": "http://www.eatphillysbest.com",
+      "city": "Oakland",
+      "phone": "(707) 235-1170",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "grocery",
+      "subcategory": "Grocery Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Red Door Catering",
+      "website": "http://reddoorcatering.com",
+      "city": "Oakland",
+      "phone": "(510) 339-2320",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "grocery",
+      "subcategory": "Grocery Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "shabazz fish & seafood delivery service",
+      "website": "",
+      "city": "Oakland",
+      "phone": "(925) 282-9595",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "grocery",
+      "subcategory": "fish & se"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "The Lemonade Bar",
+      "website": "http://thelemonadebar.org",
+      "city": "Oakland",
+      "phone": "(415) 374-3883",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "grocery",
+      "subcategory": "Grocery Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "The Busy Wife Personal Chef and Catering",
+      "website": "http://www.thebusywife.net",
+      "city": "Oakland",
+      "phone": "(510) 927-0531",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "grocery",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Hella Coastal LLC",
+      "website": "http://www.hellacoastal.com",
+      "city": "Oakland Ca",
+      "phone": "(510) 409-9765",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "grocery",
+      "subcategory": "Grocery Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Tara's Teas",
+      "website": "http://www.tarasteas.com",
+      "city": "Oakland, CA",
+      "phone": "(510) 381-9625",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "grocery",
+      "subcategory": "Grocery Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Colemans Cupcakes, Cakes & Desserts",
+      "website": "",
+      "city": "Sacramento",
+      "phone": "(916) 896-5859",
+      "owner_name": "Debra Coleman",
+      "owner_email": "colemanscupcakes@yahoo.com",
+      "category": "grocery",
+      "subcategory": "Cupcakes"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Sandra Dee's Bar-B-Que & Seafood",
+      "website": "http://www.sandradeesbbq.com/",
+      "city": "Sacramento",
+      "phone": "(916) 448-6375",
+      "owner_name": "",
+      "owner_email": "jeff@sandradeesbbq.com",
+      "category": "grocery",
+      "subcategory": "Dee's Bar-"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Habesha Restaurant",
+      "website": "http://www.habeshacapitol.com",
+      "city": "Sacramento",
+      "phone": "(916) 925-8591",
+      "owner_name": "",
+      "owner_email": "mikeamharai@gmail.com",
+      "category": "grocery",
+      "subcategory": "Grocery Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Muhammads Meats and Desserts",
+      "website": "https://muhammadsmeatsanddesserts.com/",
+      "city": "Sacramento",
+      "phone": "(916 ) 710-2125/ (916) 320- 7588",
+      "owner_name": "",
+      "owner_email": "muhammadsmeats@gmail.com",
+      "category": "grocery",
+      "subcategory": "Grocery Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Whole Foods Market",
+      "website": "https://www.wholefoodsmarket.com/",
+      "city": "Sacramento",
+      "phone": "(916) 488-2800",
+      "owner_name": "Amber Parker",
+      "owner_email": "",
+      "category": "grocery",
+      "subcategory": "Grocery Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Pinx",
+      "website": "http://www.pinxcatering.com",
+      "city": "San Leandro",
+      "phone": "(510) 566-1455",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "grocery",
+      "subcategory": "Grocery Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Izzy\\u2019s Event Center",
+      "website": "",
+      "city": "Vallejo",
+      "phone": "(530) 921-4070",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "grocery",
+      "subcategory": "Grocery Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Chef Mimi Inc",
+      "website": "",
+      "city": "",
+      "phone": "",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "grocery",
+      "subcategory": "Grocery Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Hella Nuts, LLC",
+      "website": "",
+      "city": "",
+      "phone": "",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "grocery",
+      "subcategory": "Grocery Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Spirits and Spells",
+      "website": "",
+      "city": "",
+      "phone": "",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "grocery",
+      "subcategory": "Grocery Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Sugarsweet Cookie + Cake Studio",
+      "website": "",
+      "city": "",
+      "phone": "",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "grocery",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Sisters of Nia, Inc.",
+      "website": "http://www.sistersofnia.org/",
+      "city": "Elk Grove",
+      "phone": "(707) 469-3642",
+      "owner_name": "",
+      "owner_email": "ssmith@sistersofnia.org",
+      "category": "health",
+      "subcategory": "Health Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Sutter Health",
+      "website": "http://www.sutterhealth.org",
+      "city": "Emeryville",
+      "phone": "(510) 450-7329",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "health",
+      "subcategory": "Health Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Wellness Linkage Consulting",
+      "website": "",
+      "city": "Emeryville",
+      "phone": "(415) 228-0094",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "health",
+      "subcategory": "Health Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "TIRO LIFE COACHING, LLC",
+      "website": "http://www.tirolifecoaching.com",
+      "city": "Fremont",
+      "phone": "(510) 825-2841",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "health",
+      "subcategory": "Health Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "A Diamond in The Ruff, Incorporated",
+      "website": "http://www.adiamondintheruffhouse.org",
+      "city": "Oakland",
+      "phone": "(888) 292-4308",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "health",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Magi Arts Fitness Division",
+      "website": "https://supremeayai2.wixsite.com/website",
+      "city": "Oakland",
+      "phone": "(818) 814-0382",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "health",
+      "subcategory": "Health Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "NextGen Dentistry",
+      "website": "http://oaklandnextgendentistry.com",
+      "city": "OAKLAND",
+      "phone": "(510) 763-7400",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "health",
+      "subcategory": "Health Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Preventive Care Pathways",
+      "website": "http://drwatsonwellness.com",
+      "city": "Oakland",
+      "phone": "",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "health",
+      "subcategory": "Health Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "The Root Doctress",
+      "website": "http://www.therootdoctress.com",
+      "city": "oakland",
+      "phone": "(510) 866-8007",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "health",
+      "subcategory": "Health Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Mentoring in Medicine & Science",
+      "website": "",
+      "city": "Oakland",
+      "phone": "(510) 835-1747",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "health",
+      "subcategory": "Medi"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Vision Service Plan",
+      "website": "http://www.vsp.com",
+      "city": "Rancho Cordova",
+      "phone": "(800) 505-5557/916.858.5788",
+      "owner_name": "Marvin Davenport",
+      "owner_email": "marvin.davenport@vsp.com",
+      "category": "health",
+      "subcategory": "Health Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Blue Shield of California",
+      "website": "https://www.blueshieldca.com/",
+      "city": "Sacramento",
+      "phone": "(800) 393-6130",
+      "owner_name": "Position:",
+      "owner_email": "Director of Corporate Reputation",
+      "category": "health",
+      "subcategory": "Health Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Cornerstone - Nursing Education Training Center",
+      "website": "https://cornerstonecareercenter.com/",
+      "city": "Sacramento",
+      "phone": "(916) 479-6443",
+      "owner_name": "Joanyett Mays-Scott",
+      "owner_email": "info@cornerstonecareercenter.com",
+      "category": "health",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "HER Health First",
+      "website": "http://herhealthfirst.org/",
+      "city": "Sacramento",
+      "phone": "(916) 558-4812",
+      "owner_name": "",
+      "owner_email": "shannon@herhealthfirst.org",
+      "category": "health",
+      "subcategory": "Health Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Kaiser Permanente",
+      "website": "http://www.kp.org",
+      "city": "Sacramento",
+      "phone": "(916) 614-4525",
+      "owner_name": "Diana Croon White",
+      "owner_email": "Diana.Croon-White@kp.org",
+      "category": "health",
+      "subcategory": "Health Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "One Community Health",
+      "website": "https://onecommunityhealth.com/",
+      "city": "Sacramento",
+      "phone": "(916) 443-3299",
+      "owner_name": "Valerie Scruggs",
+      "owner_email": "VScruggs@OneCommunityHealth.com",
+      "category": "health",
+      "subcategory": "Health Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Pucci's Pharmacy",
+      "website": "http://www.puccirx.com/",
+      "city": "Sacramento",
+      "phone": "(916) 442-5891",
+      "owner_name": "",
+      "owner_email": "joel@puccirx.com",
+      "category": "health",
+      "subcategory": "Health Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Smile Urgicenter",
+      "website": "http://www.smileurgicenter.com/",
+      "city": "Sacramento",
+      "phone": "(916) 400-3000",
+      "owner_name": "Dr. Richard Lynton",
+      "owner_email": "info@smileurgicenter.com",
+      "category": "health",
+      "subcategory": "Health Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "SpeakHer Consulting",
+      "website": "",
+      "city": "Sacramento",
+      "phone": "(916) 287-3643",
+      "owner_name": "Wanda Abney",
+      "owner_email": "speakherconsulting@gmail.com",
+      "category": "health",
+      "subcategory": "Health Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Sutter Health Valley Area (SHVA)",
+      "website": "http://www.sutterhealth.org",
+      "city": "Sacramento",
+      "phone": "",
+      "owner_name": "Tommy Trejo",
+      "owner_email": "trejot@sutterhealth.org",
+      "category": "health",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "UC Davis Health System",
+      "website": "http://www.ucdmc.ucdavis.edu",
+      "city": "Sacramento",
+      "phone": "(916) 734-5530",
+      "owner_name": "Shelton Duruisseau",
+      "owner_email": "shelton.duruisseau@ucdmc.ucdavis.edu",
+      "category": "health",
+      "subcategory": "Health Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Valley Vision",
+      "website": "http://www.valleyvision.org",
+      "city": "Sacramento",
+      "phone": "(916) 325-1630",
+      "owner_name": "",
+      "owner_email": "evan.schmidt@valleyvision.org",
+      "category": "health",
+      "subcategory": "Health Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Western Health Advantage",
+      "website": "http://www.westernhealth.com",
+      "city": "Sacramento",
+      "phone": "(916) 563-2203",
+      "owner_name": "",
+      "owner_email": "m.gilroy@westernhealth.com",
+      "category": "health",
+      "subcategory": "Health Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Natura",
+      "website": "https://www.natura.io/",
+      "city": "Sacramento",
+      "phone": "(916) 402-8810",
+      "owner_name": "",
+      "owner_email": "info@natura.io",
+      "category": "health",
+      "subcategory": "Health Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "The Academy Training and Performance Center / All City Riders",
+      "website": "https://www.theacademyfitness.com/",
+      "city": "Sacramento",
+      "phone": "(916) 761-2047",
+      "owner_name": "Bryan Washington",
+      "owner_email": "INFO@THEACADEMYFITNESS.COM",
+      "category": "health",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Inner Athlete Fitness LLC",
+      "website": "http://www.inner-athlete.com",
+      "city": "San Leandro",
+      "phone": "(510) 638-3103",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "health",
+      "subcategory": "Health Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Elite Body Sculptors LLC",
+      "website": "http://www.elitebodysculptors.net",
+      "city": "San Leandro",
+      "phone": "(650) 241-0134",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "health",
+      "subcategory": "Health Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Back On Course Educational Services",
+      "website": "https://www.backoncourse.com/",
+      "city": "Shannadora Hollis",
+      "phone": "(916) 382-2783",
+      "owner_name": "",
+      "owner_email": "info@backoncourse.com",
+      "category": "health",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Baby Got Back Up",
+      "website": "",
+      "city": "",
+      "phone": "",
+      "owner_name": "Kairis Joy Chiaji",
+      "owner_email": "doula_in_heels@live.com",
+      "category": "health",
+      "subcategory": "Health Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "JLS Independence Gym",
+      "website": "",
+      "city": "",
+      "phone": "",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "health",
+      "subcategory": "Health Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "KeepsItLit LLC",
+      "website": "",
+      "city": "",
+      "phone": "",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "health",
+      "subcategory": "Health Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Green Acres Nursery & Supply",
+      "website": "https://idiggreenacres.com/",
+      "city": "Folsom",
+      "phone": "(916) 673-9290",
+      "owner_name": "Tami Kint",
+      "owner_email": "tami.kint@idiggreenacres.com",
+      "category": "home",
+      "subcategory": "Acres Nurse"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Happy Soul Candles",
+      "website": "http://www.happysoulcandles.com",
+      "city": "Oakland",
+      "phone": "(510) 457-1096",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "home",
+      "subcategory": "Home Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Firecode Safety Equipment",
+      "website": "https://firecode.com/",
+      "city": "Sacramento",
+      "phone": "(916) 456-5561",
+      "owner_name": "",
+      "owner_email": "service@firecode.com",
+      "category": "home",
+      "subcategory": "Home Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Empyrean Pest Management",
+      "website": "http://www.empyreanpest.com",
+      "city": "Sacramento",
+      "phone": "(916) 712-2522",
+      "owner_name": "",
+      "owner_email": "mgmt@empyreanpest.com",
+      "category": "home",
+      "subcategory": "Home Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Interlock Home Loans and Real Estate Services",
+      "website": "",
+      "city": "Sacramento",
+      "phone": "(916) 400-1337",
+      "owner_name": "Position:",
+      "owner_email": "",
+      "category": "home",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "MB Lawn Barbers",
+      "website": "",
+      "city": "",
+      "phone": "(916) 470-3918",
+      "owner_name": "Marque Brown",
+      "owner_email": "Mblawnbarbers@gmail.com",
+      "category": "home",
+      "subcategory": "Home Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Black Food Collective",
+      "website": "http://www.blackfoodcollective.com",
+      "city": "Oakland",
+      "phone": "(510) 501-5138",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "hotels",
+      "subcategory": "Hotels Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Belle Noire Accessories",
+      "website": "http://www.bellenoireaccessories.com",
+      "city": "Oakland",
+      "phone": "(415) 420-4738",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "jewelry",
+      "subcategory": "Jewelry Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Dorian Webb",
+      "website": "http://www.dorianwebb.com",
+      "city": "Oakland",
+      "phone": "(510) 842-8462",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "jewelry",
+      "subcategory": "Jewelry Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Shani Shania & Associates, LLC",
+      "website": "",
+      "city": "Alameda",
+      "phone": "(510) 229-7886",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "legal",
+      "subcategory": "Shania & As"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "USI Insurance Services",
+      "website": "http://www.usi.com",
+      "city": "Concord",
+      "phone": "(925) 214-0130",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "legal",
+      "subcategory": "Legal Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Kline Law Firm",
+      "website": "",
+      "city": "Davis",
+      "phone": "(916) 835-5557",
+      "owner_name": "Brandon Kline",
+      "owner_email": "brandon.kline@gmail.com",
+      "category": "legal",
+      "subcategory": "Legal Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Bridgeway Realty & Financial",
+      "website": "",
+      "city": "El Cerrito",
+      "phone": "(916) 397-0601",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "legal",
+      "subcategory": "Realty"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Farmers Insurance - Eddie Fairchild Agency",
+      "website": "http://agents.farmers.com/efairchild",
+      "city": "Elk Grove",
+      "phone": "(916) 305-2477",
+      "owner_name": "",
+      "owner_email": "fairchildinsuranceagency@gmail.com",
+      "category": "legal",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Law Offices of Delonda K. Coleman P.C.",
+      "website": "",
+      "city": "Elk Grove",
+      "phone": "(916) 896-0433",
+      "owner_name": "Delonda K. Coleman",
+      "owner_email": "",
+      "category": "legal",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Lee & Sakai LLC",
+      "website": "",
+      "city": "Elk Grove",
+      "phone": "(916) 479-0641",
+      "owner_name": "Marilyn Sakai",
+      "owner_email": "marilyn@leeandsakai.com",
+      "category": "legal",
+      "subcategory": "Legal Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Principal Financial Group",
+      "website": "https://www.principal.com/northerncalifornia",
+      "city": "Elk Grove",
+      "phone": "(916) 683 6240",
+      "owner_name": "",
+      "owner_email": "parker.craig@principal.com",
+      "category": "legal",
+      "subcategory": "Legal Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Kierre LeShon Luat - Insurance Agent",
+      "website": "",
+      "city": "Elk Grove",
+      "phone": "(916) 833-8595",
+      "owner_name": "",
+      "owner_email": "klluat@ft.newyorklife.com",
+      "category": "legal",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Russell Postell- Capstone Financial",
+      "website": "https://www.linkedin.com/in/russell-postell-2228909/",
+      "city": "FOLSOM",
+      "phone": "(916) 751-9958",
+      "owner_name": "",
+      "owner_email": "Rpostell@capstonefinancial.net",
+      "category": "legal",
+      "subcategory": "Legal Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Law Offices of Chadwick J. Johnson",
+      "website": "http://www.mindfulinjurylaw.com",
+      "city": "Gold River",
+      "phone": "(916) 538-0890",
+      "owner_name": "Chadwick Johnson",
+      "owner_email": "chad@mindfulinjurylaw.com",
+      "category": "legal",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Vance D&S Financial",
+      "website": "",
+      "city": "Hayward",
+      "phone": "(510) 812-1560",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "legal",
+      "subcategory": "Legal Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "California Bank & Trust",
+      "website": "",
+      "city": "Huntington Beach",
+      "phone": "(714) 861-7622",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "legal",
+      "subcategory": "Bank &"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "SAFE Credit Union",
+      "website": "http://www.safecu.org",
+      "city": "North Highlands",
+      "phone": "(916) 971-4513",
+      "owner_name": "James Allen",
+      "owner_email": "james.allen@safecu.org",
+      "category": "legal",
+      "subcategory": "Legal Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "1st Federal Financial Services",
+      "website": "http://www.1stfederalfinancialservices.com",
+      "city": "Oakland",
+      "phone": "(510) 459-0711",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "legal",
+      "subcategory": "Legal Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Alkebulan Financial Solutions LLC",
+      "website": "",
+      "city": "OAKLAND",
+      "phone": "(408) 887-9321",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "legal",
+      "subcategory": "Legal Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Cornelius Jackson",
+      "website": "",
+      "city": "Oakland",
+      "phone": "(510) 452-3349",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "legal",
+      "subcategory": "Legal Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Emerge Financial Group",
+      "website": "http://www.emergefinancial.com",
+      "city": "Oakland",
+      "phone": "(707) 424-6032",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "legal",
+      "subcategory": "Legal Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "George Holland, Attorney at Law",
+      "website": "",
+      "city": "Oakland",
+      "phone": "(510) 465-4100",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "legal",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Heritage Bank of commerce",
+      "website": "https://www.heritagebankofcommerce.bank/",
+      "city": "Oakland",
+      "phone": "(510) 825-4781",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "legal",
+      "subcategory": "Legal Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Law Office of Mia Mitchell",
+      "website": "",
+      "city": "Oakland",
+      "phone": "(323) 387-0564",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "legal",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Law Offices of Verleana D. Green",
+      "website": "http://www.vdglaw.com",
+      "city": "Oakland",
+      "phone": "(510) 479-0768",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "legal",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Lowe Services LLC",
+      "website": "http://www.angellowe.net",
+      "city": "Oakland",
+      "phone": "(510) 431-2643",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "legal",
+      "subcategory": "Legal Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Matthews Financial & Insurance Solutions Inc",
+      "website": "http://www.mfis.biz",
+      "city": "Oakland",
+      "phone": "(510) 229-7608",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "legal",
+      "subcategory": "Financia"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Matthews Financial & Insurance Solutions- Thandiwe Cato",
+      "website": "https://www.linkedin.com/in/thandiwe-c-43342367/",
+      "city": "Oakland",
+      "phone": "(510) 943-2124",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "legal",
+      "subcategory": "Financia"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Merriwether & Williams Insurance Services",
+      "website": "",
+      "city": "Oakland",
+      "phone": "(510) 301-7085",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "legal",
+      "subcategory": "Wil"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Nor- Cal Financial Development Corporation",
+      "website": "",
+      "city": "Oakland",
+      "phone": "(408) 823-2660",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "legal",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Pamela Y. Price, Attorney at Law",
+      "website": "http://pypesq.com",
+      "city": "Oakland",
+      "phone": "(510) 452-0292",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "legal",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "PF Wealth Management Group, LLC",
+      "website": "http://www.pfwealthmanagement.com",
+      "city": "Oakland",
+      "phone": "(510) 986-0598",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "legal",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Robert Harris Legal Services",
+      "website": "http://robertlharris.net",
+      "city": "Oakland",
+      "phone": "(415) 850-6432",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "legal",
+      "subcategory": "Legal Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "The Wilkerson Law Office, P.C.",
+      "website": "http://www.thewilkersonlawoffice.com",
+      "city": "Oakland",
+      "phone": "(510) 962-8633",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "legal",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "TLJ Professional Services Inc",
+      "website": "https://www.tljprofessionalservices.com",
+      "city": "Oakland",
+      "phone": "(415) 305-5361",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "legal",
+      "subcategory": "Legal Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Truudus, Inc",
+      "website": "http://www.Truudus.com",
+      "city": "Oakland",
+      "phone": "(415) 340-0074",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "legal",
+      "subcategory": "Legal Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Bank of America",
+      "website": "http://www.bankofamerica.com",
+      "city": "Rancho Cordova",
+      "phone": "(916) 589-4148",
+      "owner_name": "Senior Vice",
+      "owner_email": "lori.rianda@bankofamerica.com",
+      "category": "legal",
+      "subcategory": "Legal Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "AFLAC - Harvey Bolar-Nord",
+      "website": "",
+      "city": "Roseville",
+      "phone": "(917) 207-0233",
+      "owner_name": "Harvey Bolar-Nord",
+      "owner_email": "harvey_bolar-nord@us.aflac.com",
+      "category": "legal",
+      "subcategory": "Legal Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Ayo Akinwande - Financial Advisor",
+      "website": "https://advisor.morganstanley.com/ayo.akinwande",
+      "city": "Roseville",
+      "phone": "(916) 960-6451",
+      "owner_name": "",
+      "owner_email": "ayo.akinwande@morganstanley.com",
+      "category": "legal",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Reliable Tax LLC",
+      "website": "http://reliabletaxllc.com",
+      "city": "Roseville",
+      "phone": "(916) 571-5587",
+      "owner_name": "Timika Wilson",
+      "owner_email": "reliabletaxllc@gmail.com",
+      "category": "legal",
+      "subcategory": "Legal Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Bulletproof Tax and Accounting Firm",
+      "website": "https://www.bulletprooftax.com/",
+      "city": "Sacramento",
+      "phone": "(888) 534-9425",
+      "owner_name": "",
+      "owner_email": "ira@bulletprooftax.com",
+      "category": "legal",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "California Capital F.D.C.",
+      "website": "http://www.cacapital.org",
+      "city": "Sacramento",
+      "phone": "(916) 442-1729",
+      "owner_name": "",
+      "owner_email": "cwilliams@cacapital.org",
+      "category": "legal",
+      "subcategory": "Legal Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "CDC Small Business Finance",
+      "website": "http://cdcloans.com/",
+      "city": "Sacramento",
+      "phone": "(800) 611-5170",
+      "owner_name": "Robert Villarreal",
+      "owner_email": "rvillarreal@cdcloans.com",
+      "category": "legal",
+      "subcategory": "Legal Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Damon Jennings - SavePlus Insurance Center",
+      "website": "http://www.saveplusinsurance.com/",
+      "city": "Sacramento",
+      "phone": "(916) 886-7408",
+      "owner_name": "Damon Jennings",
+      "owner_email": "Damon@saveplusinsurance.com",
+      "category": "legal",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Feruzi Mwero - Insurance Provider",
+      "website": "http://jeremywakamiya.nm.com/team.htm",
+      "city": "Sacramento",
+      "phone": "(702) 505-5957",
+      "owner_name": "",
+      "owner_email": "feruzi.mwero@nm.com",
+      "category": "legal",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Parisi Insurance Agency",
+      "website": "http://www.healthinsurance411.com",
+      "city": "Sacramento",
+      "phone": "(916) 481-6534",
+      "owner_name": "",
+      "owner_email": "jhart@parisi-insurance.com",
+      "category": "legal",
+      "subcategory": "Legal Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "The Ward Firm",
+      "website": "http://www.jlwardfirm.com",
+      "city": "Sacramento",
+      "phone": "(916) 443-2474",
+      "owner_name": "",
+      "owner_email": "justin@jlwardfirm.com",
+      "category": "legal",
+      "subcategory": "Legal Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Wells Fargo",
+      "website": "http://www.wellsfargo.com",
+      "city": "Sacramento",
+      "phone": "(916) 539-6578",
+      "owner_name": "",
+      "owner_email": "haroldbellamy@wellsfargo.com",
+      "category": "legal",
+      "subcategory": "Legal Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Abell Insurance Agency LLC dba Northwestern Mutual",
+      "website": "https://www.northwesternmutual.com/office/ca/sacramento/20692045/",
+      "city": "Sacramento",
+      "phone": "916) 929-7200",
+      "owner_name": "",
+      "owner_email": "gina.loza@nm.com",
+      "category": "legal",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Bank of the West",
+      "website": "https://www.bankofthewest.com/customer-service/branch/california/sacramento/500-capitol-mall.html",
+      "city": "Sacramento",
+      "phone": "(916) 561-3524/(916) 552-4300",
+      "owner_name": "Sean Mullin",
+      "owner_email": "sean.mullin@bankofthewest.com",
+      "category": "legal",
+      "subcategory": "Legal Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "First Northern Bank",
+      "website": "https://www.thatsmybank.com/",
+      "city": "Sacramento",
+      "phone": "(916) 570-1235",
+      "owner_name": "Position:",
+      "owner_email": "",
+      "category": "legal",
+      "subcategory": "Legal Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "First U.S. Community Credit Union",
+      "website": "https://www.firstus.org/",
+      "city": "Sacramento",
+      "phone": "(916) 576-5668",
+      "owner_name": "Dan Adamson",
+      "owner_email": "firstus@firstus.org",
+      "category": "legal",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Lumenite Law",
+      "website": "https://www.lumenitelaw.com/",
+      "city": "Sacramento",
+      "phone": "(916) 354-5334",
+      "owner_name": "Lauren McDonald",
+      "owner_email": "hello@lumenitelaw.com",
+      "category": "legal",
+      "subcategory": "Legal Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Pam's Miracles on Paper",
+      "website": "https://www.pmop.biz/",
+      "city": "Sacramento",
+      "phone": "(916) 562-3250",
+      "owner_name": "Pamela Shaw- Buffin",
+      "owner_email": "pam@pmop.biz",
+      "category": "legal",
+      "subcategory": "Legal Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Robinson Notary Services",
+      "website": "",
+      "city": "Sacramento",
+      "phone": "(916) 572-3934",
+      "owner_name": "Lecreshia Robinson",
+      "owner_email": "notarybyrobinson@gmail.com",
+      "category": "legal",
+      "subcategory": "Legal Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Leah Davis Coaching",
+      "website": "http://www.leahcoaching.com",
+      "city": "San Ramon",
+      "phone": "(408) 518-9924",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "legal",
+      "subcategory": "Legal Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Debbie Mitchell: Allstate Insurance",
+      "website": "https://agents.allstate.com/debbie-mitchell-woodland-ca.html",
+      "city": "Woodland",
+      "phone": "(916) 708-2334",
+      "owner_name": "",
+      "owner_email": "dmitchell7@allstate.com",
+      "category": "legal",
+      "subcategory": "Legal Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "G A Sheppard Insurance Services",
+      "website": "",
+      "city": "",
+      "phone": "(323) 394-5870",
+      "owner_name": "Glynis Sheppard",
+      "owner_email": "gasinsures@live.com",
+      "category": "legal",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Key Pro & Financial Services",
+      "website": "",
+      "city": "",
+      "phone": "(510) 586-8589",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "legal",
+      "subcategory": "Pro & Financi"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Suncrest Bank",
+      "website": "https://www.suncrestbank.com/",
+      "city": "",
+      "phone": "(916) 830-3596",
+      "owner_name": "Elizabeth Zennadi",
+      "owner_email": "ezennadi@suncrestbank.com",
+      "category": "legal",
+      "subcategory": "Legal Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "MAAT Apothecary",
+      "website": "http://www.MAATApothecary.com",
+      "city": "emeryville",
+      "phone": "(408) 636-8826",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "lifestyle",
+      "subcategory": "Lifestyle Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "All Things Hemp",
+      "website": "http://www.allthingshemp510.com",
+      "city": "Oakland",
+      "phone": "(510) 290-1673",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "lifestyle",
+      "subcategory": "Lifestyle Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "BayQueen",
+      "website": "http://bayqueen.life",
+      "city": "Oakland",
+      "phone": "(510) 460-0822",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "lifestyle",
+      "subcategory": "Lifestyle Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Kamnisha Wellness L.LC",
+      "website": "http://kamnisha Wellness.com",
+      "city": "Oakland",
+      "phone": "(510) 228-7507",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "lifestyle",
+      "subcategory": "Lifestyle Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Crystal Nugs, Inc.",
+      "website": "http://www.crystalnugs.com",
+      "city": "Sacramento",
+      "phone": "",
+      "owner_name": "",
+      "owner_email": "Maisha@crystalnugs.com",
+      "category": "lifestyle",
+      "subcategory": "Lifestyle Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "House of Queen Sheba / Shashemene Institute",
+      "website": "https://www.queenshebas.com/",
+      "city": "Sacramento",
+      "phone": "(916) 446-1223",
+      "owner_name": "Zion Taddese",
+      "owner_email": "",
+      "category": "lifestyle",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "GroCal Farms",
+      "website": "",
+      "city": "Sacramento",
+      "phone": "(916) 595-5118",
+      "owner_name": "Tranell Sevier",
+      "owner_email": "grocalfarms@gmail.com",
+      "category": "lifestyle",
+      "subcategory": "Lifestyle Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Perfect Union",
+      "website": "https://www.perfect-union.com/",
+      "city": "Sacramento",
+      "phone": "(916) 925-5696",
+      "owner_name": "Shayna Schonauer",
+      "owner_email": "outreach@perfect-union.com.",
+      "category": "lifestyle",
+      "subcategory": "Lifestyle Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Resziin LLC",
+      "website": "",
+      "city": "",
+      "phone": "(916) 842-7460",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "lifestyle",
+      "subcategory": "Lifestyle Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Talon",
+      "website": "https://talonent.com/",
+      "city": "Davis",
+      "phone": "(530) 601-9690",
+      "owner_name": "",
+      "owner_email": "INFO@TALONENT.COM",
+      "category": "marketing",
+      "subcategory": "Marketing Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "lajones&associates",
+      "website": "http://www.lajonesmedia.com",
+      "city": "Oakland",
+      "phone": "(510) 568-5563",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "marketing",
+      "subcategory": "Marketing Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Money Pages of Oakland",
+      "website": "https://www.moneypages.com/locations/oakland-california/",
+      "city": "Oakland",
+      "phone": "(510) 455-2204",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "marketing",
+      "subcategory": "Marketing Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Sandra Varner",
+      "website": "",
+      "city": "Oakland",
+      "phone": "(510) 910-5652",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "marketing",
+      "subcategory": "Marketing Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "The Core Graphix",
+      "website": "",
+      "city": "Oakland",
+      "phone": "(510) 265-4722",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "marketing",
+      "subcategory": "Marketing Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Wellington Studio",
+      "website": "http://wellington-studio.com",
+      "city": "Oakland",
+      "phone": "(510) 725-5726",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "marketing",
+      "subcategory": "Marketing Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "3STEPS4WARD: A Marketing Company",
+      "website": "http://www.3steps4ward.com/",
+      "city": "Pleasanton",
+      "phone": "(650) 490-5065",
+      "owner_name": "Position:",
+      "owner_email": "",
+      "category": "marketing",
+      "subcategory": "Marketing Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "ACS Digital Media - Web Design",
+      "website": "http://www.acs-digital.com",
+      "city": "Sacramento",
+      "phone": "(916) 743-5565",
+      "owner_name": "",
+      "owner_email": "tarik@acs-digital.com",
+      "category": "marketing",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Push Visual Marketing Company",
+      "website": "https://www.pushvmc.com",
+      "city": "Sacramento",
+      "phone": "(916) 800-2968",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "marketing",
+      "subcategory": "Marketing Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Uptown Studios",
+      "website": "http://www.uptownstudios.net",
+      "city": "Sacramento",
+      "phone": "(916) 446-1082",
+      "owner_name": "Tina Reynolds",
+      "owner_email": "tina@uptownstudios.net",
+      "category": "marketing",
+      "subcategory": "Marketing Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "3fold Communications",
+      "website": "https://3foldcomm.com/",
+      "city": "Sacramento",
+      "phone": "(916) 442- 1394, ext. 100",
+      "owner_name": "",
+      "owner_email": "jamie@3foldcomm.com",
+      "category": "marketing",
+      "subcategory": "Marketing Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "CLEAR GRAPHICS AND PRINTING",
+      "website": "http://www.clearprinting.net",
+      "city": "Sacramento",
+      "phone": "(916) 868-9478",
+      "owner_name": "",
+      "owner_email": "clearprinting@gmail.com",
+      "category": "marketing",
+      "subcategory": "Marketing Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "KJ 2 Productions",
+      "website": "http://kj2productions.com/",
+      "city": "Sacramento",
+      "phone": "(916) 524-0184",
+      "owner_name": "",
+      "owner_email": "kj@kj2productions.com",
+      "category": "marketing",
+      "subcategory": "Marketing Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Runyon Saltzman",
+      "website": "",
+      "city": "Sacramento",
+      "phone": "(916) 446-9900",
+      "owner_name": "Alicia Chatman",
+      "owner_email": "",
+      "category": "marketing",
+      "subcategory": "Marketing Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Grace Marking Agency",
+      "website": "http://www.gracemarketingagency.com",
+      "city": "SAN LEANDRO",
+      "phone": "(415) 715-4714",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "marketing",
+      "subcategory": "Marketing Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "FLW Living Well Services",
+      "website": "https://www.psychologytoday.com/us/therapists/ricka-l-white-soso-oakland-ca/84569",
+      "city": "Oakland",
+      "phone": "(510) 496-3475",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "medical",
+      "subcategory": "Medical Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Heather Hall MD LLC",
+      "website": "",
+      "city": "Sacramento",
+      "phone": "(650) 455-5507",
+      "owner_name": "Heather Hall",
+      "owner_email": "",
+      "category": "medical",
+      "subcategory": "Medical Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Sierra Donor Services",
+      "website": "https://sierradonor.org/",
+      "city": "West Sacramento",
+      "phone": "(916) 223-5195",
+      "owner_name": "",
+      "owner_email": "sds.info@dcids.org",
+      "category": "medical",
+      "subcategory": "Medical Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Black Cultural Zone Community Development Corporation",
+      "website": "http://www.blackculturalzone.org/",
+      "city": "Alameda",
+      "phone": "(510) 200-8081",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "other",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Introducing Youth to American Infrastructure, Inc. (\"Iyai+\")",
+      "website": "http://www.iyai.org",
+      "city": "Albany",
+      "phone": "(833) 492-4674",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "other",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Women's Council of Associated Real Property Brokers",
+      "website": "http://www.ARPBWOMENSCOUNCIL.com",
+      "city": "Berkeley",
+      "phone": "(510) 385-0409",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "other",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "National Coalition of 100 Black Women, Inc. Sacramento Chapter",
+      "website": "http://www.ncbw.org/",
+      "city": "Citrus Heights",
+      "phone": "(916) 381-9484",
+      "owner_name": "",
+      "owner_email": "evelynfrazier@sbcglobal.net",
+      "category": "other",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Score Capitol Corridor",
+      "website": "https://www.score.org/",
+      "city": "Citrus Heights",
+      "phone": "(916) 720-9990",
+      "owner_name": "Geary.Mckoy@scorevolunteer.org",
+      "owner_email": "sacinfo@scorevolunteer.org",
+      "category": "other",
+      "subcategory": "Other Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Cosumnes Community Services District",
+      "website": "https://www.yourcsd.com/",
+      "city": "Elk Grove",
+      "phone": "(916) 405-7190",
+      "owner_name": "",
+      "owner_email": "AdminHRStaff@yourcsd.com",
+      "category": "other",
+      "subcategory": "Other Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Intel Corporation",
+      "website": "",
+      "city": "Folsom",
+      "phone": "(916) 377-4120",
+      "owner_name": "Anna Ballard",
+      "owner_email": "anna.ballard@intel.com",
+      "category": "other",
+      "subcategory": "Other Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Angela Brisco",
+      "website": "",
+      "city": "Hayward",
+      "phone": "(510) 627-1560",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "other",
+      "subcategory": "Other Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Forever Silhouette Management",
+      "website": "http://Foreversilhouettemgmt.com",
+      "city": "Middletown",
+      "phone": "(209) 678-3809",
+      "owner_name": "",
+      "owner_email": "titiana@foreversilhouettemgmt.com",
+      "category": "other",
+      "subcategory": "Other Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Just GirlTalk With Doc",
+      "website": "",
+      "city": "Oak",
+      "phone": "(510) 381-1401",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "other",
+      "subcategory": "Other Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Black Card",
+      "website": "",
+      "city": "Oakland",
+      "phone": "(510) 878-0332",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "other",
+      "subcategory": "Other Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "GHC",
+      "website": "",
+      "city": "Oakland",
+      "phone": "",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "other",
+      "subcategory": "Other Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "0-90 Health & Human Servicing",
+      "website": "",
+      "city": "Oakland",
+      "phone": "(831) 224-2744",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "other",
+      "subcategory": "Hum"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Acts Full Gospel Church",
+      "website": "http://www.actsfullgospel.org",
+      "city": "Oakland",
+      "phone": "(510) 567-1300",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "other",
+      "subcategory": "Other Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Alameda County Assessor's office",
+      "website": "http://www.acgov.org/assessor",
+      "city": "Oakland",
+      "phone": "(510) 891-5541",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "other",
+      "subcategory": "Other Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Allen Temple Health & Social Services",
+      "website": "http://www.atwellness.org",
+      "city": "Oakland",
+      "phone": "(510) 544-8947",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "other",
+      "subcategory": "Temple Heal"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Arsola's Distribution Center and Community Services",
+      "website": "http://arsola.org",
+      "city": "Oakland",
+      "phone": "(510) 830-7851",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "other",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Auditor-Controller/Clerk-Recorder of Alameda County",
+      "website": "https://acgov.org/auditor",
+      "city": "Oakland",
+      "phone": "(510) 272-6659",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "other",
+      "subcategory": "Other Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Barbara Lee for Congress",
+      "website": "http://lee.house.gov",
+      "city": "Oakland",
+      "phone": "(510) 268-1600",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "other",
+      "subcategory": "Other Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Bonita House, Inc.",
+      "website": "http://www.bonitahouse.org",
+      "city": "Oakland",
+      "phone": "(510) 923-1099 ext.311",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "other",
+      "subcategory": "Other Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "BWOPA/TILE",
+      "website": "http://www.bwopatileleads.org",
+      "city": "Oakland",
+      "phone": "(510) 763-9523",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "other",
+      "subcategory": "Other Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "CDA Consulting Group",
+      "website": "http://cdaconsultingroup.com",
+      "city": "Oakland",
+      "phone": "(510) 601-8013",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "other",
+      "subcategory": "Other Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Change To Come",
+      "website": "http://Www.change to come.org",
+      "city": "Oakland",
+      "phone": "(415) 203-8493",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "other",
+      "subcategory": "Other Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Comcast Financial Agency Corporation",
+      "website": "",
+      "city": "Oakland",
+      "phone": "",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "other",
+      "subcategory": "Other Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "EOYDC - East Oakland Youth Development Center",
+      "website": "http://eoydc.org/",
+      "city": "Oakland",
+      "phone": "",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "other",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Everybody's Cool: Humanity First",
+      "website": "http://www.everybodyscool.com",
+      "city": "Oakland",
+      "phone": "(510) 934-9716",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "other",
+      "subcategory": "Other Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "James V.Copes",
+      "website": "",
+      "city": "Oakland",
+      "phone": "",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "other",
+      "subcategory": "Other Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Joyce Gordon Gallery/JGordon Foundation of the Arts 501c3",
+      "website": "http://jgordongallery",
+      "city": "Oakland",
+      "phone": "(510) 465-8928",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "other",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Kneal Resource System Inc",
+      "website": "",
+      "city": "Oakland",
+      "phone": "(510) 430-1252",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "other",
+      "subcategory": "Other Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Korea Town Oakland Northgate",
+      "website": "http://www.oaklandfirstfridays.org",
+      "city": "Oakland",
+      "phone": "(510) 361-0561",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "other",
+      "subcategory": "Other Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Kos Read Group, Inc.",
+      "website": "http://www.kosreadgroup.com",
+      "city": "Oakland",
+      "phone": "(510) 292-5715",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "other",
+      "subcategory": "Other Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Make-A-Wish Greater Bay Area",
+      "website": "http://www.sf.wish.org",
+      "city": "Oakland",
+      "phone": "(415) 982-9474",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "other",
+      "subcategory": "Other Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Meals on Wheels of Alameda County",
+      "website": "http://www.feedingseniors.org",
+      "city": "Oakland",
+      "phone": "(510) 777-9560",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "other",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Melton Business Advisors",
+      "website": "http://www.jimmymelton.com",
+      "city": "Oakland",
+      "phone": "(510) 866-3086",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "other",
+      "subcategory": "Other Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "MOCHA By Marie",
+      "website": "http://www.mochabymarie.com",
+      "city": "Oakland",
+      "phone": "(510) 575-7553",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "other",
+      "subcategory": "Other Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Museum of Children\\u2019s Art",
+      "website": "http://www.mocha.org",
+      "city": "Oakland",
+      "phone": "(510) 465-8770",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "other",
+      "subcategory": "Other Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "National Association of Black Accountants, Inc.",
+      "website": "http://nabachapters.org/sanfrancisco",
+      "city": "Oakland",
+      "phone": "",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "other",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Northern California Council of Black Professional Engineers",
+      "website": "http://ncalifblackengineers.org",
+      "city": "Oakland",
+      "phone": "(510) 893-6426",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "other",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Oakland & the World",
+      "website": "",
+      "city": "Oakland",
+      "phone": "",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "other",
+      "subcategory": "Wor"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Oakland African American Chamber of Commerce",
+      "website": "http://oaacc.org",
+      "city": "Oakland",
+      "phone": "(510) 268-1600",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "other",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Oakland Business Collective",
+      "website": "http://oaklandbusinesscollective.com",
+      "city": "Oakland",
+      "phone": "(510) 839-4644",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "other",
+      "subcategory": "Other Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Oakland East Bay Alumni Chapter - Delta Sigma Theta Sorority. Inc",
+      "website": "http://oebacdst.org/",
+      "city": "Oakland",
+      "phone": "(510) 407-6622",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "other",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Oakland Interfaith Gospel Choir",
+      "website": "http://www.oigc.org",
+      "city": "Oakland",
+      "phone": "(510) 839-4361",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "other",
+      "subcategory": "Other Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Oakland Natives Give Back Fund Inc.",
+      "website": "http://www/oaklandnatives.org",
+      "city": "Oakland",
+      "phone": "(510) 917-7751",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "other",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Oakland Parks & Recreation Foundation",
+      "website": "https://www.oaklandparks.org/",
+      "city": "Oakland",
+      "phone": "(510) 465-1850",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "other",
+      "subcategory": "Parks & R"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "St Mary's Center",
+      "website": "http://stmaryscenter.org",
+      "city": "Oakland",
+      "phone": "(510) 923-9600",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "other",
+      "subcategory": "Other Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "StopWaste",
+      "website": "http://www.stopwaste.org",
+      "city": "Oakland",
+      "phone": "(510) 891-6575",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "other",
+      "subcategory": "Other Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Taj Tashombe",
+      "website": "",
+      "city": "Oakland",
+      "phone": "(310) 926-6251",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "other",
+      "subcategory": "Other Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "The Point at Rockridge Senior Living",
+      "website": "http://www.thepointatrockridge.com",
+      "city": "Oakland",
+      "phone": "(510) 658-9266",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "other",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "THE VETERANS COMMUNITY MEDIA NETWORK",
+      "website": "http://www.tvcmn.org",
+      "city": "OAKLAND",
+      "phone": "(510) 925-4051",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "other",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Upline Solutions LLC",
+      "website": "",
+      "city": "Oakland",
+      "phone": "(510) 590-1107",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "other",
+      "subcategory": "Other Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Rancho Cordova Travel & Tourism Corportation",
+      "website": "http://www.visitranchocordova.com/",
+      "city": "Rancho Cordova",
+      "phone": "(916) 460-8207",
+      "owner_name": "Dawn S Hall",
+      "owner_email": "Dawn@VisitRanchoCordova.com",
+      "category": "other",
+      "subcategory": "Cordova Tr"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "PRIDE Industries",
+      "website": "https://prideindustries.com/",
+      "city": "Roseville",
+      "phone": "(916) 788-2357",
+      "owner_name": "Adrienne Lawson",
+      "owner_email": "adrienne.lawson@prideindustries.com",
+      "category": "other",
+      "subcategory": "Other Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Africa House Sacramento",
+      "website": "http://www.africahousesacramento.org/",
+      "city": "Sacramento",
+      "phone": "(916) 490-7079",
+      "owner_name": "Dr. Ernest Uwazie",
+      "owner_email": "admin@africahousesacramento.org",
+      "category": "other",
+      "subcategory": "Other Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "American Leadership Forum",
+      "website": "https://www.alf-mvc.org/",
+      "city": "Sacramento",
+      "phone": "(916) 920-5669",
+      "owner_name": "Bonnie Ferreira",
+      "owner_email": "lauren@alf-mvc.org",
+      "category": "other",
+      "subcategory": "Other Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "American Leadership Forum - Mountain Valley Chapter",
+      "website": "http://www.alf-mvc.org",
+      "city": "Sacramento",
+      "phone": "(916) 920-5669",
+      "owner_name": "",
+      "owner_email": "bonnie@alf-mvc.org",
+      "category": "other",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Asian Resources Inc.",
+      "website": "https://asianresources.org/",
+      "city": "Sacramento",
+      "phone": "(916) 454-1892",
+      "owner_name": "",
+      "owner_email": "info@asianresources.org",
+      "category": "other",
+      "subcategory": "Other Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "AT&T",
+      "website": "http://www.att.com",
+      "city": "Sacramento",
+      "phone": "(916) 972-2953",
+      "owner_name": "",
+      "owner_email": "hl3491@att.com",
+      "category": "other",
+      "subcategory": "Other Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Athletic Affiliates",
+      "website": "http://athleticaffiliates.org",
+      "city": "Sacramento",
+      "phone": "(916) 667-9025",
+      "owner_name": "Aundrelle Lee",
+      "owner_email": "info@athleticaffiliates.org",
+      "category": "other",
+      "subcategory": "Other Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Business Consultant - Project Management",
+      "website": "",
+      "city": "Sacramento",
+      "phone": "(510) 866-4947",
+      "owner_name": "",
+      "owner_email": "parnellyates@ymail.com",
+      "category": "other",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "California Academy of Family Physicians",
+      "website": "https://www.familydocs.org/",
+      "city": "Sacramento",
+      "phone": "(415) 345-8667",
+      "owner_name": "Morgan Cleveland",
+      "owner_email": "cafp@familydocs.org",
+      "category": "other",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "California Black Health Network",
+      "website": "http://cablackhealthnetwork.org",
+      "city": "Sacramento",
+      "phone": "(916) 333-0613",
+      "owner_name": "Rhonda Smith",
+      "owner_email": "ssimpson@cablackhealthnetwork.org",
+      "category": "other",
+      "subcategory": "Other Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "City of Sacramento - Innovation and Economic Development Department",
+      "website": "",
+      "city": "Sacramento",
+      "phone": "(916) 808-5448",
+      "owner_name": "Lorrie Lowry",
+      "owner_email": "llowry@cityofsacramento.org",
+      "category": "other",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Developmental Disabilities Service Organization - DDSO",
+      "website": "http://www.ddso.org",
+      "city": "Sacramento",
+      "phone": "(916) 456-5166",
+      "owner_name": "Yvonne Soto",
+      "owner_email": "",
+      "category": "other",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Fast Break Tech, Inc.",
+      "website": "http://www.fastbreaktech.com",
+      "city": "Sacramento",
+      "phone": "(916) 247-2500",
+      "owner_name": "Steven Walker",
+      "owner_email": "steven@fastbreaktech.com",
+      "category": "other",
+      "subcategory": "Other Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Goodwill Industries of Sacramento Valley & Northern Nevada",
+      "website": "http://www.goodwillsacto.org",
+      "city": "Sacramento",
+      "phone": "(916) 395-9000",
+      "owner_name": "Richard Abrusci",
+      "owner_email": "richarda@goodwillsacto.org",
+      "category": "other",
+      "subcategory": "Industri"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Greater Sacramento Urban League",
+      "website": "http://www.gsul.org/",
+      "city": "Sacramento",
+      "phone": "(916) 286-8600",
+      "owner_name": "",
+      "owner_email": "dellison@gsul.org",
+      "category": "other",
+      "subcategory": "Other Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "GRID Alternatives North Valley",
+      "website": "https://gridalternatives.org/northvalley",
+      "city": "Sacramento",
+      "phone": "(916) 588-9783",
+      "owner_name": "",
+      "owner_email": "asellers@gridalternatives.org",
+      "category": "other",
+      "subcategory": "Other Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "iHeart Biotech",
+      "website": "",
+      "city": "Sacramento",
+      "phone": "(916) 600-5368",
+      "owner_name": "Keyah Brown",
+      "owner_email": "iheartbiotech444@gmail.com",
+      "category": "other",
+      "subcategory": "Other Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Lauren Hammond Consulting",
+      "website": "",
+      "city": "Sacramento",
+      "phone": "(916) 765-0047",
+      "owner_name": "",
+      "owner_email": "lrn.hammond@gmail.com",
+      "category": "other",
+      "subcategory": "Other Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Oak Park Business Association",
+      "website": "http://www.oakparkba.org",
+      "city": "Sacramento",
+      "phone": "(916) 382-4705",
+      "owner_name": "",
+      "owner_email": "opbastaff@gmail.com",
+      "category": "other",
+      "subcategory": "Other Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Pacific Gas & Electric Company (PG&E)",
+      "website": "http://www.pge.com",
+      "city": "Sacramento",
+      "phone": "(916) 386-5705",
+      "owner_name": "",
+      "owner_email": "cxoe@pge.com",
+      "category": "other",
+      "subcategory": "Gas & Ele"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Perry Communications Group, Inc.",
+      "website": "http://www.perrycom.com",
+      "city": "Sacramento",
+      "phone": "(916) 658-0144",
+      "owner_name": "",
+      "owner_email": "kassy@perrycom.com",
+      "category": "other",
+      "subcategory": "Other Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Roberts Family Development Center",
+      "website": "http://www.robertsfdc.com",
+      "city": "Sacramento",
+      "phone": "(916) 646-6631",
+      "owner_name": "",
+      "owner_email": "RobertsFDC@aol.com",
+      "category": "other",
+      "subcategory": "Other Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Sacramento Convention and Visitors Bureau",
+      "website": "http://www.visitsacramento.com",
+      "city": "Sacramento",
+      "phone": "(916) 808-7405",
+      "owner_name": "",
+      "owner_email": "anunez@visitsacramento.com",
+      "category": "other",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Sacramento County Airport System",
+      "website": "http://www.sacairports.org",
+      "city": "Sacramento",
+      "phone": "(916) 874-0662",
+      "owner_name": "",
+      "owner_email": "DoronK@saccounty.net",
+      "category": "other",
+      "subcategory": "Other Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Sacramento Metropolitan Air Quality Management District",
+      "website": "http://www.airquality.org",
+      "city": "Sacramento",
+      "phone": "(916) 874-4827",
+      "owner_name": "",
+      "owner_email": "LNeves@airquality.org",
+      "category": "other",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "SMUD",
+      "website": "http://www.smud.org",
+      "city": "Sacramento",
+      "phone": "(916) 732-5984",
+      "owner_name": "Suzanne Dizon",
+      "owner_email": "Suzanne.Dizon@smud.org",
+      "category": "other",
+      "subcategory": "Other Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Susan G. Komen Sacramento Valley",
+      "website": "http://komensacramento.org/",
+      "city": "Sacramento",
+      "phone": "(916) 231-3148",
+      "owner_name": "Shannon Shields",
+      "owner_email": "shannon@komensacramento.org",
+      "category": "other",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Triumph Cancer Foundation",
+      "website": "http://www.triumphfound.org",
+      "city": "Sacramento",
+      "phone": "(916) 501-3554",
+      "owner_name": "",
+      "owner_email": "pwhitehead@triumphfound.org",
+      "category": "other",
+      "subcategory": "Other Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Troy Communications",
+      "website": "",
+      "city": "Sacramento",
+      "phone": "(916) 826-4588",
+      "owner_name": "",
+      "owner_email": "troy@troycommunications.com",
+      "category": "other",
+      "subcategory": "Other Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "United Way California Capital Region",
+      "website": "http://www.yourlocalunitedway.org",
+      "city": "Sacramento",
+      "phone": "(916) 368-3000",
+      "owner_name": "Steve Heath",
+      "owner_email": "sheath@uwccr.org",
+      "category": "other",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Activism Articulated",
+      "website": "http://www.activismarticulated.com",
+      "city": "Sacramento",
+      "phone": "(512) 577-3107",
+      "owner_name": "",
+      "owner_email": "info@activismarticulated.com",
+      "category": "other",
+      "subcategory": "Other Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "BERKELEY STRATEGY ADVISORS, LLC",
+      "website": "",
+      "city": "Sacramento",
+      "phone": "(916) 832-2676",
+      "owner_name": "",
+      "owner_email": "kenny@berkeleystrategy.org",
+      "category": "other",
+      "subcategory": "Other Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Exodus Project",
+      "website": "http://exodus-project.org/",
+      "city": "Sacramento",
+      "phone": "(916) 972-1212",
+      "owner_name": "Rabbi Seth Castleman",
+      "owner_email": "scastleman@svdp-sacramento.org",
+      "category": "other",
+      "subcategory": "Other Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Kevin Christophe, PhD, PMP, CSM, Progress Consulting Inc.",
+      "website": "",
+      "city": "Sacramento",
+      "phone": "(916) 710-4908",
+      "owner_name": "Kevin Christophe",
+      "owner_email": "drchristophe@yahoo.com",
+      "category": "other",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Lead Star Security, Inc",
+      "website": "http://www.leadstarsecurity.com",
+      "city": "Sacramento",
+      "phone": "(916) 971-6218",
+      "owner_name": "",
+      "owner_email": "bclay@leadstarsec.com",
+      "category": "other",
+      "subcategory": "Other Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Life Matters Inc",
+      "website": "",
+      "city": "Sacramento",
+      "phone": "(916) 905-3550",
+      "owner_name": "Danbaki Johnson",
+      "owner_email": "djohnson@wherelifematters.com",
+      "category": "other",
+      "subcategory": "Other Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Mutual Assistance Network",
+      "website": "http://www.mutualassistance.org/",
+      "city": "Sacramento",
+      "phone": "(916) 927-7694",
+      "owner_name": "Danielle Lawrence",
+      "owner_email": "dlawrence@mutualassistance.org",
+      "category": "other",
+      "subcategory": "Other Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Volunteers of America",
+      "website": "https://www.voa.org/office_search?utf8=%E2%9C%93&office_search%5Blocation%5D=95821",
+      "city": "Sacramento",
+      "phone": "(916) 213-4133",
+      "owner_name": "Christie Holderegger",
+      "owner_email": "",
+      "category": "other",
+      "subcategory": "Other Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "WEAVE Inc",
+      "website": "https://www.weaveinc.org/",
+      "city": "Sacramento",
+      "phone": "(916) 448-2321",
+      "owner_name": "",
+      "owner_email": "twash@weaveinc.org",
+      "category": "other",
+      "subcategory": "Other Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "United Way Bay Area",
+      "website": "http://www.uwba.org",
+      "city": "San Francisco",
+      "phone": "(415) 808-4490",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "other",
+      "subcategory": "Other Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Georgia Pacific",
+      "website": "http://GP.com",
+      "city": "San Leandro",
+      "phone": "(225) 301-6137",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "other",
+      "subcategory": "Other Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Traci Joy Designs",
+      "website": "http://www.tracijoydesigns.com",
+      "city": "San Leandro",
+      "phone": "(415) 706-0480",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "other",
+      "subcategory": "Other Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Valpal of Oakland",
+      "website": "",
+      "city": "St Petersburg",
+      "phone": "(925) 603-7000",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "other",
+      "subcategory": "Other Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "BrandGov Outreach",
+      "website": "https://www.brandgov.com/",
+      "city": "Vallejo",
+      "phone": "(800) 215-0280 ext 700",
+      "owner_name": "K . Patrice Williams",
+      "owner_email": "Patrice@brandgov.com",
+      "category": "other",
+      "subcategory": "Other Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Cancer Support Community of San Francisco",
+      "website": "http://www.cancersupport.net",
+      "city": "Walnut Creek",
+      "phone": "(925) 953-0231",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "other",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Department of General Services - Procurement Division",
+      "website": "http://www.dgs.ca.gov",
+      "city": "West Sacramento",
+      "phone": "(916) 375-4483",
+      "owner_name": "",
+      "owner_email": "Jermaine.CarterGibson@dgs.ca.gov",
+      "category": "other",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Consolidated Communications",
+      "website": "",
+      "city": "",
+      "phone": "(279) 201-4534",
+      "owner_name": "Loyd Aadil",
+      "owner_email": "",
+      "category": "other",
+      "subcategory": "Other Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Davillier-Sloan, Inc",
+      "website": "http://www.davillier-sloan.com",
+      "city": "",
+      "phone": "(510) 385-1242",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "other",
+      "subcategory": "Other Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Habitually Good",
+      "website": "http://www.habituallygood.com",
+      "city": "",
+      "phone": "",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "other",
+      "subcategory": "Other Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "My Sister's Keeper",
+      "website": "http://Www.mysisterskeeperexpo.com",
+      "city": "",
+      "phone": "(415) 589-9806",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "other",
+      "subcategory": "Other Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Verizon Wireless",
+      "website": "",
+      "city": "",
+      "phone": "(916) 704-6913",
+      "owner_name": "Jay Day",
+      "owner_email": "jay.day@verizon.com",
+      "category": "other",
+      "subcategory": "Other Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "LEVY PROMOTIONALPRODUCTS, INC.",
+      "website": "http://www.levypromo.com",
+      "city": "Oakland",
+      "phone": "(510) 832-5400",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "packaging",
+      "subcategory": "Packaging Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "The UPS Store #4507",
+      "website": "http://owner4507@theupsstore.com",
+      "city": "Sacramento",
+      "phone": "(916) 200-9262",
+      "owner_name": "",
+      "owner_email": "owner4507@theupsstore.com",
+      "category": "packaging",
+      "subcategory": "Packaging Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Cha Cha's Dog Daycare",
+      "website": "http://www.chachasdaycare.com/",
+      "city": "Sacramento",
+      "phone": "(916) 739-6303",
+      "owner_name": "",
+      "owner_email": "info@chachasdaycare.com",
+      "category": "pets",
+      "subcategory": "Pets Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Joy Selfie Company LLC",
+      "website": "http://joyselfiecompany.com",
+      "city": "Fairfield",
+      "phone": "(510) 290-7180",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "photography",
+      "subcategory": "Photography Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Images by Auintard",
+      "website": "http://www.AuintardsImages.com",
+      "city": "Oakland",
+      "phone": "(510) 938-8141",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "photography",
+      "subcategory": "Photography Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Positive Images",
+      "website": "http://www.positiveimages.biz",
+      "city": "Oakland",
+      "phone": "(510) 239-3686",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "photography",
+      "subcategory": "Photography Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Social Dynamism",
+      "website": "http://www.socialdynamism.com",
+      "city": "OAKLAND",
+      "phone": "(909) 746-6721",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "photography",
+      "subcategory": "Photography Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "CA&C Video Productions",
+      "website": "http://www.cacvideo.com",
+      "city": "Pittsburg",
+      "phone": "(209) 877-7636",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "photography",
+      "subcategory": "Photography Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Urban Advantage TV",
+      "website": "",
+      "city": "SAN FRANCISCO",
+      "phone": "(510) 978-6092",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "photography",
+      "subcategory": "Photography Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Carmichael Images, Photographer",
+      "website": "http://carmichaeliamges@gmail.colm",
+      "city": "San Mateo",
+      "phone": "(415) 432-0816",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "photography",
+      "subcategory": "Photography Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Danielle Nicole, LLC. dba The Motley Collective",
+      "website": "",
+      "city": "Alameda",
+      "phone": "(313) 231-0134",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "professional",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "BOSS Programs - Building Opportunities for Self-Sufficiency",
+      "website": "http://www.self-sufficiency.org",
+      "city": "Berkeley",
+      "phone": "(510) 649-1930",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "professional",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Harambee Consulting Group",
+      "website": "http://www.harambeehcg.net",
+      "city": "Berkeley",
+      "phone": "(510) 331-0094",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "professional",
+      "subcategory": "Professional Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "The Diversity Advisors",
+      "website": "http://www.thediversityadvisors.com",
+      "city": "Burbank",
+      "phone": "(314) 575-1715",
+      "owner_name": "",
+      "owner_email": "edward.simon@theiverstyadvisors.com",
+      "category": "professional",
+      "subcategory": "Professional Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "IBRE CORP",
+      "website": "http://www.ibreonline.com",
+      "city": "Burlingame",
+      "phone": "(415) 432-9080",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "professional",
+      "subcategory": "Professional Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "MK GLOBAL CONSULTING PARTNERS",
+      "website": "https://www.mkglobalconsult.com",
+      "city": "castro valley",
+      "phone": "(415) 866-3555",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "professional",
+      "subcategory": "Professional Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Encina Advisors, LLC",
+      "website": "http://www.encinaadvisors.com",
+      "city": "Davis",
+      "phone": "(310) 709-2076",
+      "owner_name": "Justin Adams",
+      "owner_email": "justin@encinadvisors.com",
+      "category": "professional",
+      "subcategory": "Professional Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "VIRTUAL BUSINESS STAFFING",
+      "website": "https://virtualbusinessstaffing.com/",
+      "city": "Delaware",
+      "phone": "(302) 219-6607",
+      "owner_name": "Robert Alexander",
+      "owner_email": "",
+      "category": "professional",
+      "subcategory": "Professional Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Active Coaching Techniques",
+      "website": "http://www.activecoachingtechniques.com",
+      "city": "Elk Grove",
+      "phone": "(916) 714-1764",
+      "owner_name": "SueAnn Freeman",
+      "owner_email": "sfreeman@activecoachingtechniques.com",
+      "category": "professional",
+      "subcategory": "Professional Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Bay Valley Real Estate, Inc.",
+      "website": "http://bayvalleyrealestate.com",
+      "city": "Elk Grove",
+      "phone": "(916) 956-6061",
+      "owner_name": "Dwayne Brown/ Felicia L. Brown",
+      "owner_email": "homes@bayvalleyrealestate.com",
+      "category": "professional",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Essential Resource Management",
+      "website": "http://www.ERManage.com",
+      "city": "Elk Grove",
+      "phone": "(916) 752-9432",
+      "owner_name": "Sheila Bennett",
+      "owner_email": "SBennett@ERManage.com",
+      "category": "professional",
+      "subcategory": "Professional Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Sheila Bennett, Mortgage Broker",
+      "website": "http://sheilasolutions.com/",
+      "city": "Elk Grove",
+      "phone": "(916) 752-9432",
+      "owner_name": "",
+      "owner_email": "sheila@sheilasoultions.com",
+      "category": "professional",
+      "subcategory": "Professional Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Newhouse Project Consulting",
+      "website": "http://NPConsulting.co",
+      "city": "Fairfield",
+      "phone": "(510) 593-6071",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "professional",
+      "subcategory": "Professional Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Syndicated Staffing, LLC",
+      "website": "https://www.syndicatedstaffing.com/",
+      "city": "Folsom",
+      "phone": "(916) 512-3555",
+      "owner_name": "Clarissa Woods",
+      "owner_email": "clarissa@syndicatedstaffing.com",
+      "category": "professional",
+      "subcategory": "Professional Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Beauty Makes Cents LLC.",
+      "website": "http://www.myeshiaj.com",
+      "city": "HAYWARD",
+      "phone": "(510) 432-3536",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "professional",
+      "subcategory": "Professional Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Signet Testing Labs, Inc.",
+      "website": "http://www.signettesting.com",
+      "city": "Hayward",
+      "phone": "(510) 887-8484",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "professional",
+      "subcategory": "Professional Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "360 Total Concept Consulting LLC",
+      "website": "http://www.360tcpr.com",
+      "city": "Oakland",
+      "phone": "(510) 836-0360",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "professional",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Alliance for Community Development",
+      "website": "http://www.alliancecd.org",
+      "city": "Oakland",
+      "phone": "(510) 319-9702",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "professional",
+      "subcategory": "Professional Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Angela Bishop Ross",
+      "website": "http://coachangela.com",
+      "city": "Oakland",
+      "phone": "(510) 428-9366",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "professional",
+      "subcategory": "Professional Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "ANTHONIO, INC.",
+      "website": "",
+      "city": "OAKLAND",
+      "phone": "(510) 798-4202",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "professional",
+      "subcategory": "Professional Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Armour Consulting Group",
+      "website": "https://armourteam.wordpress.com/",
+      "city": "Oakland",
+      "phone": "(510) 710-2776",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "professional",
+      "subcategory": "Professional Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Aseda",
+      "website": "",
+      "city": "Oakland",
+      "phone": "",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "professional",
+      "subcategory": "Professional Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Barbara Taylor Consulting",
+      "website": "",
+      "city": "Oakland",
+      "phone": "(510) 436-5253",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "professional",
+      "subcategory": "Professional Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Becker Boards",
+      "website": "http://www.beckerboards.com",
+      "city": "Oakland",
+      "phone": "(510) 812-3631",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "professional",
+      "subcategory": "Professional Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Butterfly Direct Printing & Screen Printing / Direct Mail Adv. / Marketing / Communication",
+      "website": "http://www.bdprintandmail.com",
+      "city": "Oakland",
+      "phone": "(510) 251-8660",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "professional",
+      "subcategory": "Direct"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Cynthia Dorsey",
+      "website": "",
+      "city": "Oakland",
+      "phone": "(510) 919-683",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "professional",
+      "subcategory": "Professional Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Dianne Millner",
+      "website": "https://www.diannemmillner.com/",
+      "city": "Oakland",
+      "phone": "(510) 394-5051",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "professional",
+      "subcategory": "Professional Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Dream Chaser Academy",
+      "website": "",
+      "city": "Oakland",
+      "phone": "(415) 952-5133",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "professional",
+      "subcategory": "Professional Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Exceptional Community Connections",
+      "website": "http://www.exceptconnect.com",
+      "city": "Oakland",
+      "phone": "(510) 717-8207",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "professional",
+      "subcategory": "Professional Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Gray,Greer,Shelby & Vaughn. LLC",
+      "website": "http://www.ggsvllc.com",
+      "city": "Oakland",
+      "phone": "",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "professional",
+      "subcategory": "Greer,Shelby"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "ISFAC, LLC",
+      "website": "",
+      "city": "Oakland",
+      "phone": "(480) 255-3546",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "professional",
+      "subcategory": "Professional Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "L2Diversity",
+      "website": "https://www.l2diversity.com",
+      "city": "Oakland",
+      "phone": "(415) 609-1133",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "professional",
+      "subcategory": "Professional Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Lowe Consulting Group, Inc.",
+      "website": "http://www.lowecg.com",
+      "city": "Oakland",
+      "phone": "(510) 986-1100",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "professional",
+      "subcategory": "Professional Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Madelyn Mackie & Associates",
+      "website": "https://www.madelynmackie.com",
+      "city": "Oakland",
+      "phone": "(510) 497-0377",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "professional",
+      "subcategory": "Mackie &"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Microphone Mechanics",
+      "website": "http://www.iamjahi.com",
+      "city": "Oakland",
+      "phone": "(510) 423-1077",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "professional",
+      "subcategory": "Professional Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Millennium Career Advantage, LLC",
+      "website": "http://www.MillenniumCareerAdvantage.com",
+      "city": "Oakland",
+      "phone": "(510) 813-7176",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "professional",
+      "subcategory": "Professional Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "PATTERN",
+      "website": "http://www.yourpattern.io",
+      "city": "Oakland",
+      "phone": "(801) 710-2641",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "professional",
+      "subcategory": "Professional Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Sheryl Grant",
+      "website": "",
+      "city": "Oakland",
+      "phone": "",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "professional",
+      "subcategory": "Professional Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Solar-OverSight",
+      "website": "",
+      "city": "Oakland",
+      "phone": "(415) 596-6910",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "professional",
+      "subcategory": "Professional Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Strategy Squad",
+      "website": "",
+      "city": "Oakland",
+      "phone": "(888) 657-7823",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "professional",
+      "subcategory": "Professional Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "The Core Creations",
+      "website": "http://thecorecreations.com",
+      "city": "Oakland",
+      "phone": "(510) 265-4722",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "professional",
+      "subcategory": "Professional Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "The Good Org, LLC",
+      "website": "https://www.thegoodorg.com",
+      "city": "Oakland",
+      "phone": "(415) 891-4177",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "professional",
+      "subcategory": "Professional Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Western Regional Minority Supplier Development Council (WRMSDC)",
+      "website": "http://wrmsdc.org/",
+      "city": "Oakland",
+      "phone": "(510) 913-8833",
+      "owner_name": "",
+      "owner_email": "admin@wrmsdc.org",
+      "category": "professional",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Equity Power Consulting",
+      "website": "http://equitypowerconsulting.com",
+      "city": "Oakland",
+      "phone": "(916) 521-1675",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "professional",
+      "subcategory": "Professional Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Julianna Hynes & Associates",
+      "website": "http://www.juliannahynes.com",
+      "city": "Pittsburg",
+      "phone": "(925) 207-1578",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "professional",
+      "subcategory": "Hynes &"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Guest Brown Impact",
+      "website": "http://www.guestbrownimpact.com",
+      "city": "Roseville",
+      "phone": "(916) 716-2359",
+      "owner_name": "",
+      "owner_email": "guestbrownimpact@gmail.com",
+      "category": "professional",
+      "subcategory": "Professional Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Corbin and Kaiser",
+      "website": "http://www.corbinandkaiser.com",
+      "city": "Sacramento",
+      "phone": "(916) 862-0941",
+      "owner_name": "Samantha Corbin",
+      "owner_email": "dani@corbinandkaiser.com",
+      "category": "professional",
+      "subcategory": "Professional Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Darrell Teat & Associates",
+      "website": "http://www.dteatassociates.com",
+      "city": "Sacramento",
+      "phone": "(916) 470-4870",
+      "owner_name": "Darrell Teat",
+      "owner_email": "darrell@dteatassociates.com",
+      "category": "professional",
+      "subcategory": "Teat & As"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Impact Brands, Inc.",
+      "website": "http://wwwimpactbrandsinc.com",
+      "city": "Sacramento",
+      "phone": "(916) 347-0604",
+      "owner_name": "Veronica Smith",
+      "owner_email": "impact@impactbrandsinc.com",
+      "category": "professional",
+      "subcategory": "Professional Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Infinite Hope LLC",
+      "website": "",
+      "city": "Sacramento",
+      "phone": "(916) 627-0559",
+      "owner_name": "Sharifa Walker",
+      "owner_email": "info@infinitehopellc.org",
+      "category": "professional",
+      "subcategory": "Professional Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Intrepide Enterprises",
+      "website": "http://www.intrepide-enterprises.com",
+      "city": "Sacramento",
+      "phone": "(916) 825-8405",
+      "owner_name": "Tracey Schaal",
+      "owner_email": "tracey@intrepide-enterprises.com",
+      "category": "professional",
+      "subcategory": "Professional Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Sacramento Job Corps",
+      "website": "http://www.jobcorps.org",
+      "city": "Sacramento",
+      "phone": "(916) 394-4307",
+      "owner_name": "Brian Broadway",
+      "owner_email": "Broadway.Brian@JobCorps.org",
+      "category": "professional",
+      "subcategory": "Professional Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Soul Force Enterprise LLC",
+      "website": "https://www.soulforceenterprise.com/",
+      "city": "Sacramento",
+      "phone": "(916) 996-3932",
+      "owner_name": "Cynthia Dees Brooks",
+      "owner_email": "cdees@soulforceenterprise.com",
+      "category": "professional",
+      "subcategory": "Professional Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "American Credit Solutions",
+      "website": "http://americancreditsolutions.org",
+      "city": "Sacramento",
+      "phone": "(916) 519-1920",
+      "owner_name": "Geoffrey Lewis",
+      "owner_email": "enjoygoodcredit5@gmail.com",
+      "category": "professional",
+      "subcategory": "Professional Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Bene Consulting Group",
+      "website": "http://www.benecg.com",
+      "city": "Sacramento",
+      "phone": "(916) 835-0939",
+      "owner_name": "",
+      "owner_email": "mellonie@benecg.com",
+      "category": "professional",
+      "subcategory": "Professional Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Global Transgender Safety Tasks Force USA Inc",
+      "website": "https://globaltrans-safetytasksforce.org/",
+      "city": "Sacramento",
+      "phone": "(916) 502-5078",
+      "owner_name": "Grace Lawrence",
+      "owner_email": "info@globaltrans-safetytasksforce.org",
+      "category": "professional",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Primerica",
+      "website": "https://www.primerica.com/public/",
+      "city": "Sacramento",
+      "phone": "(916) 367-2463",
+      "owner_name": "",
+      "owner_email": "gnp4pfs@gmail.com",
+      "category": "professional",
+      "subcategory": "Professional Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "TRIND Consulting LLC",
+      "website": "https://trind-consulting-llc.business.site/?utm_source=gmb&utm_medium=referral",
+      "city": "Sacramento",
+      "phone": "(916) 582-4902",
+      "owner_name": "Tio Sessoms",
+      "owner_email": "",
+      "category": "professional",
+      "subcategory": "Professional Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Working Solutions",
+      "website": "https://www.workingsolutions.org/",
+      "city": "San Francisco",
+      "phone": "(415) 780-1217",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "professional",
+      "subcategory": "Professional Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "NPower CA",
+      "website": "https://www.npower.org/locations/california/",
+      "city": "San Jose",
+      "phone": "(408) 658-4355",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "professional",
+      "subcategory": "Professional Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Joy Gage - The Life Goal Coach",
+      "website": "http://www.thelifegoalcoach.com",
+      "city": "San Leandro",
+      "phone": "(510) 677-4116",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "professional",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Ron Brown",
+      "website": "",
+      "city": "San Leandro",
+      "phone": "(510) 502-9457",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "professional",
+      "subcategory": "Professional Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "YT CONSULTING LLC",
+      "website": "http://ytconsultingllcservices.com",
+      "city": "Walnut 3",
+      "phone": "(800) 819-0266",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "professional",
+      "subcategory": "Professional Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Destined For Greatness Consulting Services",
+      "website": "",
+      "city": "",
+      "phone": "(415) 409-8750",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "professional",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "iExperience Digital Consulting",
+      "website": "https://www.iexperiencedigital.com",
+      "city": "",
+      "phone": "(510) 640-4870",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "professional",
+      "subcategory": "Professional Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Mason Tillman Associates",
+      "website": "http://masontillman.com",
+      "city": "",
+      "phone": "(510) 835-9012",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "professional",
+      "subcategory": "Professional Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Oakland Proof, LLC DBA Alkali Rye",
+      "website": "",
+      "city": "",
+      "phone": "",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "professional",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Standingrock LLC",
+      "website": "",
+      "city": "",
+      "phone": "",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "professional",
+      "subcategory": "Professional Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Turn Your Passion Into Profit, Inc",
+      "website": "https://www.themarykennedy.com/",
+      "city": "",
+      "phone": "(209) 627-0351",
+      "owner_name": "Mary Kennedy",
+      "owner_email": "info@themarykennedy.com",
+      "category": "professional",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Coldwell Banker Realty/Dalisa Porche",
+      "website": "http://DalisaPorche.com",
+      "city": "Berkeley",
+      "phone": "(510) 387-1720",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "real estate",
+      "subcategory": "Real Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Golden Gate sothebys International Realty",
+      "website": "",
+      "city": "Berkeley",
+      "phone": "(510) 207-2378",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "real estate",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Latrice Peay - Realtor",
+      "website": "http://www.latrice-hatcher.c21selectgroup.com/",
+      "city": "Elk Grove",
+      "phone": "(916) 826-1300",
+      "owner_name": "Latrice Peay",
+      "owner_email": "LPeay@LatricePeayCoRealEstateGroup.com",
+      "category": "real estate",
+      "subcategory": "Real Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "American Foreclosure Association, Inc.",
+      "website": "http://www.afahelp.org",
+      "city": "Oakland",
+      "phone": "(888) 330-7331",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "real estate",
+      "subcategory": "Real Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Berkshire Hathaway Home Services",
+      "website": "http://georgiawrichardson.bhhsdrysdale.com",
+      "city": "Oakland",
+      "phone": "(510) 999-2797",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "real estate",
+      "subcategory": "Real Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Better Home Realty",
+      "website": "http://bhroakmac.com",
+      "city": "Oakland",
+      "phone": "(510) 562-8600",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "real estate",
+      "subcategory": "Real Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Bill Pegg Realty",
+      "website": "http://www.billpeggrealty.com",
+      "city": "Oakland",
+      "phone": "(510) 912-1259",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "real estate",
+      "subcategory": "Real Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Coldwell Banker Realty/Reva Tolbert",
+      "website": "http://www.revatolbert.com",
+      "city": "Oakland",
+      "phone": "(510) 715-9385",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "real estate",
+      "subcategory": "Real Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Delores \"Dee\" Johnson, Broker Associate @ Keller Williams",
+      "website": "http://www.deloresdeejohnson.com",
+      "city": "Oakland",
+      "phone": "(510) 418-3007",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "real estate",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Edrington and Associates",
+      "website": "https://edringtonandassociates.com/",
+      "city": "Oakland",
+      "phone": "(510) 749-4880",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "real estate",
+      "subcategory": "Real Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Felicia Duncan, Real Estate Broker",
+      "website": "",
+      "city": "Oakland",
+      "phone": "",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "real estate",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Guaranteed Rate",
+      "website": "http://www.rate.com/lynellbevels",
+      "city": "Oakland",
+      "phone": "(510) 919-0281",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "real estate",
+      "subcategory": "Real Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Helena Jones-Kim-Broker Associate Keller Williams. CEO HJLC Partners Inc.",
+      "website": "http://helenajoneskim.com",
+      "city": "Oakland",
+      "phone": "(510) 385-7721",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "real estate",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "IDL Properties LLC",
+      "website": "",
+      "city": "Oakland",
+      "phone": "",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "real estate",
+      "subcategory": "Real Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Karen Allen-Realtor",
+      "website": "http://www.KarenAllenRE.com",
+      "city": "Oakland",
+      "phone": "(510) 427-4715",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "real estate",
+      "subcategory": "Real Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Owens Real Estate",
+      "website": "http://www.owensrealestate.com",
+      "city": "Oakland",
+      "phone": "(510) 225-5810",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "real estate",
+      "subcategory": "Real Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Priority Real Eastate & Investments",
+      "website": "",
+      "city": "Oakland",
+      "phone": "",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "real estate",
+      "subcategory": "Real Eas"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "RE/MAX Prestigious Properties",
+      "website": "http://mariesturgell.myrealestateplatform.com",
+      "city": "Oakland",
+      "phone": "(415) 671-6948",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "real estate",
+      "subcategory": "Real Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Strategic Urban Development Alliance, LLC (SUDA) (ADCo)",
+      "website": "http://www.sudallc.com",
+      "city": "oakland",
+      "phone": "(510) 206-7203",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "real estate",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "The Badger Real Estate Group/Intero Real Estate Services",
+      "website": "http://www.TheBadgerRealEstateGroup.com",
+      "city": "Oakland",
+      "phone": "(408) 431-9519",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "real estate",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "The New Oakland",
+      "website": "http://thenewoakland.org",
+      "city": "Oakland",
+      "phone": "(510) 225-5810",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "real estate",
+      "subcategory": "Real Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "UrbanCore Development, LLC",
+      "website": "http://www.UrbanCore LLC.com",
+      "city": "Oakland",
+      "phone": "(415) 748-2300",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "real estate",
+      "subcategory": "Real Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "A.L.L. Real Estate",
+      "website": "",
+      "city": "Sacramento",
+      "phone": "(916) 212-4309",
+      "owner_name": "Alyssa Lozano",
+      "owner_email": "alyssalozano7949@gmail.com",
+      "category": "real estate",
+      "subcategory": "Real Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Sacramento Association of Realtors",
+      "website": "http://www.sacrealtor.org",
+      "city": "Sacramento",
+      "phone": "(916) 437-1208",
+      "owner_name": "Janelle Fallan",
+      "owner_email": "jfallan@sacrealtor.org",
+      "category": "real estate",
+      "subcategory": "Real Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "The Group Investment Corp",
+      "website": "",
+      "city": "Sacramento",
+      "phone": "(916) 320-2951",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "real estate",
+      "subcategory": "Real Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "KeepsItLit LLC/Caston Group",
+      "website": "http://www.castonteam.com",
+      "city": "Sausalito",
+      "phone": "(415) 747-9121",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "real estate",
+      "subcategory": "Real Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "WB Lending Solutions/ WB Strategies",
+      "website": "http://www.wblendingsolutions.com",
+      "city": "Walnut Creek",
+      "phone": "(925) 256-1144",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "real estate",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Lynell Holden",
+      "website": "",
+      "city": "",
+      "phone": "",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "real estate",
+      "subcategory": "Real Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "The Larisa Group",
+      "website": "http://www.larisatroche.com",
+      "city": "",
+      "phone": "(209) 425-3355",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "real estate",
+      "subcategory": "Real Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Aaron Thomas - Empire Home Loans",
+      "website": "https://www.empirehomeloans.com/Team/aaron",
+      "city": "Fair Oaks",
+      "phone": "(916) 770-6311",
+      "owner_name": "",
+      "owner_email": "aaron@empirehomeloans.com",
+      "category": "real estate",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "American Pacific Mortgage",
+      "website": "",
+      "city": "Roseville",
+      "phone": "(916) 303-7664",
+      "owner_name": "Demetria Hudley",
+      "owner_email": "demetria.hudley@apmortgage.com",
+      "category": "real estate",
+      "subcategory": "Real Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Goree & Thompson Real Estate",
+      "website": "http://www.goreeandthompson.com",
+      "city": "Sacramento",
+      "phone": "(916) 601-7653",
+      "owner_name": "",
+      "owner_email": "zorithasellsreo@gmail.com",
+      "category": "real estate",
+      "subcategory": "Thompson"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Sacramento Housing and Redevelopment Agency",
+      "website": "http://www.shra.org",
+      "city": "Sacramento",
+      "phone": "(916) 440-1319",
+      "owner_name": "Position:",
+      "owner_email": "",
+      "category": "real estate",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "The Experience Integrative Fitness Studio",
+      "website": "http://theexperience.fitness",
+      "city": "Emeryville",
+      "phone": "(510) 932-5323",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "recreation",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Body Mechanix Laurel District/ Got Juice Oakland",
+      "website": "http://Www.bmfit.com",
+      "city": "Oakland",
+      "phone": "(510) 775-1348",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "recreation",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Gloria Kamil Total Fitness Transformation",
+      "website": "http://gloriakamilthetransformationist.com",
+      "city": "Oakland",
+      "phone": "(510) 632-6259",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "recreation",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Ultimate Fitness Games",
+      "website": "",
+      "city": "Oakland",
+      "phone": "",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "recreation",
+      "subcategory": "Recreation Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Sacramento Kings",
+      "website": "http://www.kings.com",
+      "city": "Sacramento",
+      "phone": "(916) 840-5760",
+      "owner_name": "",
+      "owner_email": "mmicenheimer@kings.com",
+      "category": "recreation",
+      "subcategory": "Recreation Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Movin\\u2019 Weight Personal Training",
+      "website": "",
+      "city": "",
+      "phone": "",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "recreation",
+      "subcategory": "Recreation Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "ProAction Athletics",
+      "website": "",
+      "city": "",
+      "phone": "",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "recreation",
+      "subcategory": "Recreation Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "D Monaghans on the Hill",
+      "website": "",
+      "city": "Oakland",
+      "phone": "",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "restaurants",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Home of Chicken and Waffles",
+      "website": "http://homeofchickenandwaffles.com",
+      "city": "Oakland",
+      "phone": "(510) 836-4446",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "restaurants",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Kingston 11",
+      "website": "http://www.kingston11eats.com",
+      "city": "Oakland",
+      "phone": "(510) 465-2558",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "restaurants",
+      "subcategory": "Restaurant Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Graffiti Pizza",
+      "website": "",
+      "city": "Oakland",
+      "phone": "(510) 250-9303",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "restaurants",
+      "subcategory": "Restaurant Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "The Burnt Skillet",
+      "website": "",
+      "city": "Folsom",
+      "phone": "(510) 230-6243",
+      "owner_name": "Regina Renee Range",
+      "owner_email": "rrange421@gmail.com",
+      "category": "restaurants",
+      "subcategory": "Restaurants Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "CA\\u00d1A CUBAN PARLOR & CAFE",
+      "website": "http://canaoakland.com",
+      "city": "Oakland",
+      "phone": "(510) 832-1515",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "restaurants",
+      "subcategory": "A CUBAN P"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Everett & Jones BBQ",
+      "website": "",
+      "city": "Oakland",
+      "phone": "",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "restaurants",
+      "subcategory": "Jones B"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Soul Slice",
+      "website": "http://www.soulslicepizza.com",
+      "city": "Oakland",
+      "phone": "(510) 879-7689",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "restaurants",
+      "subcategory": "Restaurants Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Southern Caf\\u00e9",
+      "website": "",
+      "city": "Oakland",
+      "phone": "(510) 708-2013",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "restaurants",
+      "subcategory": "Restaurants Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Geoffrey's Inner Circle",
+      "website": "http://geoffreyslive.com",
+      "city": "Oakland",
+      "phone": "(510) 839-4644",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "restaurants",
+      "subcategory": "Restaurants Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Horn Barbecue",
+      "website": "http://www.hornbarbecue.com",
+      "city": "Oakland",
+      "phone": "(510) 225-6101",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "restaurants",
+      "subcategory": "Restaurants Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Colo's Soul Food",
+      "website": "http://www.colosgotsoul.com",
+      "city": "Sacramento",
+      "phone": "(916) 692-8948",
+      "owner_name": "",
+      "owner_email": "cateringcolosf@gmail.com",
+      "category": "restaurants",
+      "subcategory": "Restaurants Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Nikko\\u2019s Restaurant",
+      "website": "",
+      "city": "",
+      "phone": "",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "restaurants",
+      "subcategory": "Restaurants Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "SEM Logistics Solutions LLC",
+      "website": "https://semlogisticssol.com/",
+      "city": "Elk Grove",
+      "phone": "(916) 629-0294",
+      "owner_name": "Terrell Kennard & Sheila Bennett",
+      "owner_email": "info@semlogisticssol.com",
+      "category": "transportation",
+      "subcategory": "Transportation Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Paradise Getaways",
+      "website": "http://paradisegetaways.inteletravel.com",
+      "city": "Fairfield",
+      "phone": "(510) 435-8637",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "transportation",
+      "subcategory": "Transportation Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Absolute Autos and Logistics Inc",
+      "website": "",
+      "city": "Oakland",
+      "phone": "",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "transportation",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Alameda County Transportation Commission",
+      "website": "https://www.alamedactc.org/",
+      "city": "Oakland",
+      "phone": "(510) 208-7400",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "transportation",
+      "subcategory": "Transportation Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "GSC Logistics",
+      "website": "",
+      "city": "Oakland",
+      "phone": "(510) 851-0031",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "transportation",
+      "subcategory": "Transportation Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Mitchells Transport LLC",
+      "website": "http://www.mitchellsfreight.com",
+      "city": "Oakland",
+      "phone": "(707) 334-8627",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "transportation",
+      "subcategory": "Transportation Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Port of Oakland",
+      "website": "",
+      "city": "Oakland",
+      "phone": "(510) 627-1302",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "transportation",
+      "subcategory": "Transportation Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Abundance Worldwide Enterprises",
+      "website": "http://www.abundanceww.com",
+      "city": "Oakland",
+      "phone": "(510) 812-6446",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "transportation",
+      "subcategory": "Transportation Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "AMD Logistics Inc",
+      "website": "http://amdlogisticsinc.com",
+      "city": "Riverside",
+      "phone": "(510) 459-6212",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "transportation",
+      "subcategory": "Transportation Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "C.M. Longsworth LLC",
+      "website": "",
+      "city": "Sacramento",
+      "phone": "(916) 730-6119",
+      "owner_name": "",
+      "owner_email": "cameron@cmldrives.us",
+      "category": "transportation",
+      "subcategory": "Transportation Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "T&T Mobile Truck Services, Inc",
+      "website": "http://www.tandtmobile.com",
+      "city": "Sacramento",
+      "phone": "(916) 581-0710",
+      "owner_name": "",
+      "owner_email": "anthony@tandtmobile.com",
+      "category": "transportation",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Security Public Storage",
+      "website": "https://www.securitypublicstorage.com/locations/sacramento-fruitridge",
+      "city": "Sacramento",
+      "phone": "(916) 451-6517",
+      "owner_name": "MATTHEW GIFFORD",
+      "owner_email": "Sac1@securitypublicstorage.com",
+      "category": "transportation",
+      "subcategory": "Transportation Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Orgsol, LLC dba. CA-90",
+      "website": "",
+      "city": "",
+      "phone": "",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "transportation",
+      "subcategory": "Transportation Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Skooped Moving & Delivery",
+      "website": "",
+      "city": "",
+      "phone": "",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "transportation",
+      "subcategory": "Moving &"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Culturally Creative Art Program",
+      "website": "http://www.culturallycreativeart.com/%20",
+      "city": "North Highlands",
+      "phone": "(916) 705-0785",
+      "owner_name": "Nishay Gordon",
+      "owner_email": "culturallycreative@outlook.com",
+      "category": "visual",
+      "subcategory": "Visual Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Avant-Garde Art Studio By Andrea",
+      "website": "https://www.avant-gardeartstudiobyandrea.com/",
+      "city": "Oakland",
+      "phone": "(209) 988-7049",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "visual",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Grown Women Dance Collective",
+      "website": "http://www.GrownWomenDance.org",
+      "city": "Oakland",
+      "phone": "(925) 680-4400",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "visual",
+      "subcategory": "Visual Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Picture Painting & Decorating Inc.",
+      "website": "",
+      "city": "Oakland",
+      "phone": "(510) 520-5469",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "visual",
+      "subcategory": "Painting"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Broadway Sacramento",
+      "website": "https://www.broadwaysacramento.com/",
+      "city": "Sacramento",
+      "phone": "(916) 446-5880",
+      "owner_name": "Sara Hansen",
+      "owner_email": "shanson@broadwaysacramento.com",
+      "category": "visual",
+      "subcategory": "Visual Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "iSound Music Performing Arts Community Development Inc",
+      "website": "http://www.isoundperformingarts.org/",
+      "city": "Sacramento",
+      "phone": "(678) 507-6971",
+      "owner_name": "",
+      "owner_email": "isoundperforming@gmail.com",
+      "category": "visual",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "The Library Of MusicLandria",
+      "website": "https://www.musiclandria.com/",
+      "city": "Sacramento",
+      "phone": "(916) 822-4118",
+      "owner_name": "",
+      "owner_email": "buddy@musiclandria.com",
+      "category": "visual",
+      "subcategory": "Visual Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Florin Square",
+      "website": "",
+      "city": "Sacramento",
+      "phone": "(916) 215-1831",
+      "owner_name": "Aaron Boyce",
+      "owner_email": "info.florinsquare@yahoo.com",
+      "category": "visual",
+      "subcategory": "Visual Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Inspirations by Gina",
+      "website": "http://www.inspirationsbygina.com",
+      "city": "Sacramento",
+      "phone": "(916) 243-9574",
+      "owner_name": "Gina Lett Shrewsberry",
+      "owner_email": "gina@inspirationsbygina.com",
+      "category": "visual",
+      "subcategory": "Visual Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Sacramento Public Library",
+      "website": "http://www.saclibrary.org",
+      "city": "Sacramento",
+      "phone": "(916) 264-2830",
+      "owner_name": "Rivkah Sass",
+      "owner_email": "rsass@saclibrary.org",
+      "category": "visual",
+      "subcategory": "Visual Salon"
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "S W Logistics",
+      "website": "",
+      "city": "Oakland",
+      "phone": "(510) 777-9000",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "other",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Signature Development Group",
+      "website": "http://www.signaturedevelopment.com",
+      "city": "Oakland",
+      "phone": "(510) 251-9270",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "other",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "VLH, LLC",
+      "website": "",
+      "city": "Oakland",
+      "phone": "",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "other",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Youth Advocate Program",
+      "website": "",
+      "city": "Oakland",
+      "phone": "",
+      "owner_name": "",
+      "owner_email": "",
+      "category": "education",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Five Star Bank",
+      "website": "https://www.fivestarbank.com/",
+      "city": "Rancho Cordova",
+      "phone": "(916) 640-1507",
+      "owner_name": "Shelley Wetton",
+      "owner_email": "swetton@fivestarbank.com",
+      "category": "legal",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "40 Acre Conservation League",
+      "website": "http://40acreleague.org",
+      "city": "Sacramento",
+      "phone": "(530) 601-9640",
+      "owner_name": "Darryl Lucien",
+      "owner_email": "darryl@lucienpartners.com",
+      "category": "other",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "GFI, Inc.",
+      "website": "http://MEediampc.com",
+      "city": "Sacramento",
+      "phone": "(916) 825-5686",
+      "owner_name": "Position:",
+      "owner_email": "",
+      "category": "other",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Golden 1 Credit Union",
+      "website": "http://www.golden1.com",
+      "city": "Sacramento",
+      "phone": "(916) 732-2894",
+      "owner_name": "Karen Doron",
+      "owner_email": "kdoron@golden1.com",
+      "category": "legal",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Nicole Carter, LCSW",
+      "website": "",
+      "city": "Sacramento",
+      "phone": "(510) 366-3782",
+      "owner_name": "Nicole Carter",
+      "owner_email": "msnicolecarter@gmail.com",
+      "category": "professional",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "Global Transgender Safety Tasks Force USA Inc",
+      "website": "https://globaltrans-safetytasksforce.org/",
+      "city": "Sacramento",
+      "phone": "(916) 650-2507",
+      "owner_name": "Grace F Lawrence",
+      "owner_email": "info@globaltrans-safetytasksforce.org",
+      "category": "other",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "California American Water",
+      "website": "http://www.amwater.com",
+      "city": "San Diego",
+      "phone": "(619) 446-4764",
+      "owner_name": "Edward A Simon II",
+      "owner_email": "gabriel.castaneda@amwater.com",
+      "category": "other",
+      "subcategory": ""
+    }
+},
+    {
+      "model": "vbp.vbp_ca",
+"fields": {
+      "business_name": "PFMC",
+      "website": "",
+      "city": "West Sacramento",
+      "phone": "(510) 681-6887",
+      "owner_name": "",
+      "owner_email": "rabbfinancialwellness@gmail.com",
+      "category": "other",
+      "subcategory": ""
+    }
+}
+  ]
