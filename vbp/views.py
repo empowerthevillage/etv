@@ -597,7 +597,8 @@ def get_counties(request, state):
         if not i.county:
             try:
                 city = i.city
-                geocode_result = geocoder.google(city+", "+state, key='AIzaSyBukRrc4XGDFgougGutTDMjBVMhnZc3YCU')
+                api_key = str(settings.GEOCODER_KEY)
+                geocode_result = geocoder.google(city+", "+state, key=api_key)
                 county = geocode_result.current_result.county
                 i.county = county
                 i.save()
