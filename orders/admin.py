@@ -35,7 +35,7 @@ class OrderAdmin(admin.ModelAdmin):
     download_csv.short_description = "Download selected as csv"
 
 class LOAAdmin(admin.ModelAdmin):
-    list_display = ['braintree_id']
+    list_display = ['braintree_id', 'total', 'first_name', 'last_name', 'email']
     actions = ['download_csv']
     filter_horizontal: ('items')
     

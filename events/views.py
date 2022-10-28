@@ -2,21 +2,14 @@
 from django.core.paginator import Paginator
 from django.http.response import JsonResponse
 from django.shortcuts import render, redirect
-from accounts.models import GuestEmail
-from addresses.forms import AddressForm, ShippingAddressForm, BillingAddressForm
+from addresses.forms import BillingAddressForm
 from addresses.models import Address
 from django.template.loader import render_to_string
 
-from billing.models import BillingProfile, Card
-from orders.models import Order
-from orders.models import Transaction
-
-import braintree
-import shippo
-import json
+from billing.models import BillingProfile
 import sweetify
 
-from carts.models import GalleryCart, TicketCart, ticketItem, ticketDonation, ticketAd, FullGalleryCart
+from carts.models import TicketCart, ticketItem, ticketDonation, ticketAd, FullGalleryCart
 from .models import *
 from django.conf import settings
 
@@ -1035,19 +1028,17 @@ def gallery_home(request):
 
 def gallery_cart_home(request):
     cart_obj, created = FullGalleryCart.objects.new_or_get(request)
-    pickup_options = ART_PICKUP_CHOICES
     context = {
         'cart': cart_obj,
-        'pickup_windows': pickup_options,
+        'state_options': STATE_CHOICES,
     }
     return render(request, 'full_gallery_cart.html', context)
 
 def full_gallery_cart_home(request):
     cart_obj, created = FullGalleryCart.objects.new_or_get(request)
-    pickup_options = ART_PICKUP_CHOICES
     context = {
         'cart': cart_obj,
-        'pickup_windows': pickup_options,
+        'state_options': STATE_CHOICES,
     }
     return render(request, 'full_gallery_cart.html', context)
 

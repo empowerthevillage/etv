@@ -370,41 +370,12 @@
     .fullscreen-btn:hover {
         background-color:white;
     }
-    
-    {% for category in pages %}
-    .{{ category.category }}-section.odd {
-        background: url({{ category.right }});
-        background-size: 101%;
-    }
-    .{{ category.category }}-section.even {
-        background-image: url({{ category.left }}); 
-        background-size: 101%
-    }
-    .{{ category.category }}-section.odd .data-table {
+    .data-table {
+        height: 100%;
         padding-right: 10%;
         padding-left: 5%;
         padding-top: 10%;
     }
-    .{{ category.category }}-section.even .data-table {
-        padding-left: 10%;
-        padding-right: 5%;
-        padding-top: 10%;
-    }
-    .{{ category.category }}-section.{{ category.category }}-single {
-        background-image: url({{ category.right }}); 
-        background-size: 101%
-    }
-    .{{ category.category }}-section.{{ category.category }}-single .data-table {
-        padding-left: 7%;
-        padding-right: 10%;
-        padding-top: 12%;
-    }
-    {% endfor %}
-
-    .data-table {
-        height: 100%
-    }
-
 </style>
 <script>
     var oTurn = $("#flipbook-mobile").turn(
@@ -450,6 +421,13 @@
             turned: function(event, page, pageObj) {
                 $('.data-pg.odd').each(function(index){
                     var link = $(this).attr('bgRight');
+                    var url = 'url("'+ link +'")';
+                    console.log(url);
+                    $(this).css('background-image', url);
+                    $(this).css('background-size', '101%');
+                });
+                $('.data-pg.even').each(function(index){
+                    var link = $(this).attr('bgLeft');
                     var url = 'url("'+ link +'")';
                     console.log(url);
                     $(this).css('background-image', url);

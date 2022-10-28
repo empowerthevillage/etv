@@ -660,7 +660,17 @@ def full_gallery_sale(request):
     cart_obj, created = FullGalleryCart.objects.new_or_get(request)
     amount = str(cart_obj.total)
     nonce = request.POST.get('nonce')
-
+    
+    if request.POST.get('shipped') == 'True':
+        shipped = True
+        shipping_name = request.POST.get('address_data[1][value]')
+        shipping_address_1 = request.POST.get('address_data[2][value]')
+        shipping_address_2 = request.POST.get('address_data[3][value]')
+        shipping_city = request.POST.get('address_data[4][value]')
+        shipping_state = request.POST.get('address_data[5][value]')
+        shipping_zip = request.POST.get('address_data[6]][value]')
+    else:
+        shipped = False
     result = gateway.transaction.sale({
         "amount": amount,
         "payment_method_nonce": nonce,
@@ -683,6 +693,14 @@ def full_gallery_sale(request):
         order_obj.email = email
         order_obj.phone = phone
         order_obj.total = amount
+        if shipped == True:
+            order_obj.shipping_requested = True
+            order_obj.shipping_address_name = shipping_name
+            order_obj.shipping_address_line_1 = shipping_address_1
+            order_obj.shipping_address_line_2 = shipping_address_2
+            order_obj.shipping_address_city = shipping_city
+            order_obj.shipping_address_state = shipping_state
+            order_obj.shipping_address_zip = shipping_zip
         order_obj.save()
         for x in items:
             x.sold = True
@@ -697,6 +715,8 @@ def full_gallery_sale(request):
         confirmation_content = render_to_string('art-email.html',
         {
             'items': items,
+            'shipped': shipped,
+            'order': order_obj
         })
         confirmation_plain_text = 'View email in browser'      
         
@@ -707,6 +727,8 @@ def full_gallery_sale(request):
             'email': email,
             'phone': phone,
             'items': items,
+            'shipped': shipped,
+            'order': order_obj
         })
         
         recipients = ['chandler@eliftcreations.com', 'shannon@empowerthevillage.org', 'admin@empowerthevillage.org', 'ayo@empowerthevillage.org']

@@ -72,6 +72,7 @@ AWS_SECRET_ACCESS_KEY = env('AWS_SECRET_ACCESS_KEY')
 
 SHIPPO_KEY = env('SHIPPO_KEY')
 GEOCODER_KEY = env('GEOCODER_KEY')
+GOOGLE_API_KEY = env('GEOCODER_KEY')
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = env('EMAIL_HOST')
@@ -99,6 +100,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.humanize',
     'accounts',
+    'address',
     'addresses',
     'bfchallenge',
     'billing',

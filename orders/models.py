@@ -1,6 +1,7 @@
 from django.conf import settings
 from django.shortcuts import redirect
 from addresses.models import Address
+from address.models import AddressField
 from billing.models import BillingProfile
 from django.urls import reverse
 from django.db import models
@@ -207,8 +208,6 @@ def pre_save_create_order_id(sender, instance, *args, **kwargs):
         qs.update(active=False)
 
 pre_save.connect(pre_save_create_order_id, sender=Order)
-
-
 
 
 class OrderRating(models.Model):
@@ -432,6 +431,14 @@ class LOAArtPurchase(models.Model):
     updated = models.DateTimeField(auto_now=True, null=True, blank=True)
     receipt_sent = models.BooleanField(default=False)
     pickup_window = models.CharField(max_length=100, blank=True, null=True)
+    shipping_address_name = models.CharField(max_length=270, blank=True, null=True)
+    shipping_requested = models.BooleanField(default=False)
+    shipped = models.BooleanField(default=False)
+    shipping_address_line_1 = models.CharField(max_length=370, blank=True, null=True)
+    shipping_address_line_2 = models.CharField(max_length=100, blank=True, null=True)
+    shipping_address_city = models.CharField(max_length=270, blank=True, null=True)
+    shipping_address_state = models.CharField(max_length=270, blank=True, null=True)
+    shipping_address_zip = models.CharField(max_length=40, blank=True, null=True)
     
     objects = LOAArtManager()
 
