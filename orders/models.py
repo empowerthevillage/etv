@@ -1,7 +1,6 @@
 from django.conf import settings
 from django.shortcuts import redirect
 from addresses.models import Address
-from address.models import AddressField
 from billing.models import BillingProfile
 from django.urls import reverse
 from django.db import models
