@@ -219,8 +219,12 @@
                                             {% for section in sections %}
                                             <div class="section-cover" id="{{ section.category }}-cover" style="background: url('{{ section.cover }}'); background-size: 105%"></div>
                                             {% for response in section.pagination %}
+                                            {% regroup response.object_list by subcategory as subcategory_list %}
+                                  
                                             <div class="data-pg {% if response.number|divisibleby:2 %}even{% else %}odd{% endif %}" bgLeft="{{ section.left }}" bgRight="{{ section.right }}">
-                                                <div class="data-table" style="padding: 10% 10% 10% 5%">
+                                                <div class="data-table" style="padding: 5% 10% 10% 5%">
+                                                    {% for subcategory in subcategory_list %}
+                                                            <p class="subcategory-title">{{ subcategory.grouper }}</p>
                                                     <table class="highlight">
                                                         <colgroup>
                                                             <col span="1" style="width: 45%;">
@@ -228,7 +232,8 @@
                                                             <col span="1" style="width: 35%;">
                                                          </colgroup>
                                                          <tbody>
-                                                            {% for vbp in response %}
+                                                            
+                                                            {% for vbp in subcategory.list %}
                                                             <tr>
                                                                 <td style="max-width: 35%; font-weight:500">
                                                                     {% if vbp|length > 20%}
@@ -251,8 +256,32 @@
                                                                 {% endif %}
                                                             </tr>
                                                             {% endfor %}
+                                                            <!--
+                                                            {% for vbp in response %}
+                                                                <td style="max-width: 35%; font-weight:500">
+                                                                    {% if vbp|length > 20%}
+                                                                        {% if vbp.website %}
+                                                                        <a href="{{ vbp.website }}" target="_blank" style="font-weight: 500;font-size: 0.35vw">{{ vbp }}</a>
+                                                                        {% else %}
+                                                                        <a style="font-size: 0.35vw; color:black">{{ vbp }}</a>
+                                                                        {% endif %}
+                                                                    {% else %}
+                                                                        {% if vbp.website %}
+                                                                        <a href="{{ vbp.website }}" target="_blank" style="font-weight: 500;">{{ vbp }}</a>
+                                                                        {% else %}
+                                                                        <a style="color:rgb(55, 55, 55); font-weight:400">{{ vbp }}</a>
+                                                                        {% endif %}
+                                                                    {% endif %}
+                                                                </td>
+                                                                <td>{{ vbp.city }}</td>
+                                                                {% if vbp.phone is not None %}<td style="text-align:right;min-width: 6vw">{{ vbp.phone }}</td>
+                                                                {% else %}<td style="text-align:right;min-width: 6vw"></td>
+                                                                {% endif %}
+                                                            </tr>
+                                                            {% endfor %}-->
                                                          </tbody>
                                                     </table>
+                                                    {% endfor %}
                                                     {% if response.object_list|length > 6 %}
                                                         {% else %}
                                                         <div class="center-align roomformore" style="margin-top: 5%; background:rgb(29, 29, 29); padding: 1vw 2vw">
@@ -290,6 +319,12 @@
         letter-spacing: 1px !important;
     }
     @media only screen and (min-width:0px) {
+        .subcategory-title {
+            font-family: oskar;
+            text-decoration: underline;
+            margin-bottom: 5px;
+            font-size: 1.2rem
+        }
         .table-of-contents {
             width: 42% !important;
             margin-left: 4% !important;

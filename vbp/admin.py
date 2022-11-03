@@ -110,8 +110,8 @@ class VBPAdmin(admin.ModelAdmin):
 
 class VBPStateAdmin(admin.ModelAdmin):
     list_per_page = 500
-    list_display = ['business_name', 'approved', 'website', 'category', 'city', 'updated', 'nominator_name']
-    list_filter = ['county', 'city','approved', 'online_only', 'category', 'subcategory', 'team', 'nominator_name']
+    list_display = ['business_name','subcategory', 'approved', 'website', 'category', 'city', 'updated', 'nominator_name']
+    list_filter = ['county', 'city','approved', 'online_only', 'category', 'subcategory', 'team', 'nominator_name','subcategory']
     search_fields = ['business_name', 'city', 'category', 'subcategory', 'user', 'nominator_name']
     ordering = ['-updated', 'business_name']
     actions = ['make_active', 'make_inactive', 'download_csv']
@@ -129,6 +129,24 @@ class VBPStateAdmin(admin.ModelAdmin):
             'fields': ('nominator_name', 'nominator_email', 'nominator_owner', 'nominator_recommended', 'user', 'team')
         }),
     )
+    def mark_beauty_service(self, request, queryset):
+        queryset.update(is_grouped=True)
+        updated = queryset.update(group="Beauty Services")
+        self.message_user(request, ngettext(
+            '%d listing successfully marked as beauty services.', 
+            '%d listings successfully marked as beauty services.', 
+            updated,
+        ) % updated, messages.SUCCESS)
+        
+    def mark_beauty_products(self, request, queryset):
+        queryset.update(is_grouped=True)
+        updated = queryset.update(group="Beauty Products")
+        self.message_user(request, ngettext(
+            '%d listing successfully marked as beauty products.', 
+            '%d listings successfully marked as beauty products.', 
+            updated,
+        ) % updated, messages.SUCCESS)
+        
     def download_csv(self, request, queryset):
         opts = queryset.model._meta
         model = queryset.model

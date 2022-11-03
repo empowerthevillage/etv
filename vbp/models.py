@@ -1471,6 +1471,8 @@ class vbp_nj(models.Model):
     user             = models.ForeignKey(User, models.SET_NULL, null=True, blank=True)
     team             = models.ForeignKey(Team, models.SET_NULL, null=True, blank=True)
     cat_ordering = models.IntegerField(blank=True, null=True)
+    is_grouped          = models.BooleanField(default=False)
+    group               = models.CharField(max_length=170, null=True, blank=True)
 
     objects         = vbpStateManager()
 

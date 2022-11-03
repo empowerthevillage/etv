@@ -731,11 +731,17 @@ def full_gallery_sale(request):
             'order': order_obj
         })
         
-        recipients = ['chandler@eliftcreations.com', 'shannon@empowerthevillage.org', 'admin@empowerthevillage.org', 'ayo@empowerthevillage.org']
+        recipients = ['chandler@eliftcreations.com', 'shannon@empowerthevillage.org', 'admin@empowerthevillage.org', 'ayo@empowerthevillage.org','heathercarter1017@gmail.com','ccolon@nmfonline.org']
         #recipients = ['chandler@eliftcreations.com']
+        item_string = ''
+        try:
+            for x in items:
+                item_string += str(x.title)
+        except:
+            pass
         send_mail(
             'New Art Show Purchase!',
-            str('An art piece has been successfully processed! Purchaser: '+ str(email)),
+            str('An art piece has been successfully processed! Purchaser: '+ str(email)+' Items: '+ str(item_string)),
             'etvnotifications@gmail.com',
             recipients,
             html_message=detail_content,

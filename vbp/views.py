@@ -345,8 +345,8 @@ def mv_view(request):
     
 def nj_view(request):
     f = vbp_nj.objects.all()
-    listings_full = f.exclude(city='').order_by('category', 'cat_ordering', 'city', 'business_name')
-    listings_empty = f.filter(city='').order_by('category', 'cat_ordering', 'business_name')
+    listings_full = f.exclude(city='').order_by('category', 'subcategory','cat_ordering', 'city', 'business_name')
+    listings_empty = f.filter(city='').order_by('category', 'subcategory','cat_ordering', 'business_name')
     all_listings = list(listings_full) + list(listings_empty)
     sections = []
     page_count = 5
