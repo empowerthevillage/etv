@@ -65,11 +65,13 @@
         <title>{% block title %}{% endblock %}</title>
         <meta name="description" content="{% block seo_description%}{% endblock %}" />
         <link rel="canonical" href="{% block canonical %}{% endblock %}" />
-        <script async src="https:www.googletagmanager.com/gtag/js?id=G-GFM7WGP9KD"></script>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-GFM7WGP9KD"></script>
         <script>
           window.dataLayer = window.dataLayer || [];
-          function gtag(){window.dataLayer.push(arguments);}
+          function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
+
           gtag('config', 'G-GFM7WGP9KD');
         </script>
         <script>
