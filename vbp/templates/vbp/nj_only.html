@@ -8,7 +8,11 @@
 
 {% block content %}
 <div class="content-container">
-
+    <!--
+    {% regroup cats by category as cats_list %}
+    {% for x in cats_list %}
+    <p>{{ x.grouper }}</p>
+    {% endfor %}-->
     <div id="vbp-resources" class="col s12">
         
         <div class="z-depth-4 row vbp-booklet-container" style="margin:0; background: white; padding-top: 20px" id="vbp-row">
@@ -90,7 +94,7 @@
                                             {% for section in sections %}
                                             <div class="section-cover" id="{{ section.category }}-cover" style="background: url('{{ section.cover }}'); background-size: 105%"></div>
                                             {% for response in section.pagination %}
-                                            <div class="data-pg {% if response.number|divisibleby:2 %}even{% else %}odd{% endif %}" bgLeft="{{ section.left }}" bgRight="{{ section.right }}">
+                                            <div class="data-pg {% if response.number|divisibleby:2 %}even EVENN{% else %}odd ODD{% endif %}" bgLeft="{{ section.left }}" bgRight="{{ section.right }}">
                                                 <div class="data-table" style="padding: 10% 10% 10% 5%">
                                                     <table class="highlight">
                                                         <colgroup>
@@ -145,7 +149,36 @@
                 </div>
                 <div id="flipbook-fullsize-container">
                     <div class="" id="vbp-flipbook">
-                
+                        <!--<div class="row offset-s1" style="padding: 10%; padding-top:2%;padding-bottom:0; margin-bottom:0">
+                            <form id="filter-form">
+                                <input type="hidden" id="filter-form-state">
+                                <div class="row">
+                                    <div class="col s3 input-field">
+                                        <select id="cat-select" multiple>
+                                            
+                                            {% for item in cats_list %}
+                                            <optgroup>{{ item.grouper }}
+                                                {% regroup item.list by subcategory as filter_subs %}
+                                                {% for subcategory in filter_subs.list %}
+                                                <option>{{ subcategory }}</option>
+                                                {% endfor %}
+                                            </optgroup>
+                                            {% endfor %}
+                                        </select>
+                                        <label>Category</label>
+                                    </div>
+                                    <div class="col s3 input-field autocomplete" id="filter-city">
+                                        {{ filter.form.city}}
+                                        <label>City</label>
+                                    </div>
+                                    <div class="col s3 input-field autocomplete" id="filter-county">
+                                        {{ filter.form.county}}
+                                        <label>County</label>
+                                    </div>
+                                    <button class="col s3 light-green darken-2 btn" id="filter-submit" style="margin-top: 25px">FILTER</button>
+                                
+                            </form>
+                        </div>-->
                         <div class="row center-align" style="margin-top:0; padding-top:0">
                               
                             <a class="contents-page" style="cursor: pointer" id="view-tc">VIEW TABLE OF CONTENTS</a> | Jump To Page: <input type="text" id="page-jump" style="width: 80px; margin-right: 10px">
@@ -215,83 +248,110 @@
                                                         {% endfor %}
                                                     </table>
                                             </div>
-                                            
                                             {% for section in sections %}
-                                            <div class="section-cover" id="{{ section.category }}-cover" style="background: url('{{ section.cover }}'); background-size: 105%"></div>
-                                            {% for response in section.pagination %}
-                                            {% regroup response.object_list by subcategory as subcategory_list %}
-                                  
-                                            <div class="data-pg {% if response.number|divisibleby:2 %}even{% else %}odd{% endif %}" bgLeft="{{ section.left }}" bgRight="{{ section.right }}">
-                                                <div class="data-table" style="padding: 5% 10% 10% 5%">
-                                                    {% for subcategory in subcategory_list %}
-                                                            <p class="subcategory-title">{{ subcategory.grouper }}</p>
-                                                    <table class="highlight">
-                                                        <colgroup>
-                                                            <col span="1" style="width: 45%;">
-                                                            <col span="1" style="width: 25%;">
-                                                            <col span="1" style="width: 35%;">
-                                                         </colgroup>
-                                                         <tbody>
-                                                            
-                                                            {% for vbp in subcategory.list %}
-                                                            <tr>
-                                                                <td style="max-width: 35%; font-weight:500">
-                                                                    {% if vbp|length > 20%}
-                                                                        {% if vbp.website %}
-                                                                        <a href="{{ vbp.website }}" target="_blank" style="font-weight: 500;font-size: 0.35vw">{{ vbp }}</a>
-                                                                        {% else %}
-                                                                        <a style="font-size: 0.35vw; color:black">{{ vbp }}</a>
-                                                                        {% endif %}
-                                                                    {% else %}
-                                                                        {% if vbp.website %}
-                                                                        <a href="{{ vbp.website }}" target="_blank" style="font-weight: 500;">{{ vbp }}</a>
-                                                                        {% else %}
-                                                                        <a style="color:rgb(55, 55, 55); font-weight:400">{{ vbp }}</a>
-                                                                        {% endif %}
-                                                                    {% endif %}
-                                                                </td>
-                                                                <td>{{ vbp.city }}</td>
-                                                                {% if vbp.phone is not None %}<td style="text-align:right;min-width: 6vw">{{ vbp.phone }}</td>
-                                                                {% else %}<td style="text-align:right;min-width: 6vw"></td>
-                                                                {% endif %}
-                                                            </tr>
-                                                            {% endfor %}
-                                                            <!--
-                                                            {% for vbp in response %}
-                                                                <td style="max-width: 35%; font-weight:500">
-                                                                    {% if vbp|length > 20%}
-                                                                        {% if vbp.website %}
-                                                                        <a href="{{ vbp.website }}" target="_blank" style="font-weight: 500;font-size: 0.35vw">{{ vbp }}</a>
-                                                                        {% else %}
-                                                                        <a style="font-size: 0.35vw; color:black">{{ vbp }}</a>
-                                                                        {% endif %}
-                                                                    {% else %}
-                                                                        {% if vbp.website %}
-                                                                        <a href="{{ vbp.website }}" target="_blank" style="font-weight: 500;">{{ vbp }}</a>
-                                                                        {% else %}
-                                                                        <a style="color:rgb(55, 55, 55); font-weight:400">{{ vbp }}</a>
-                                                                        {% endif %}
-                                                                    {% endif %}
-                                                                </td>
-                                                                <td>{{ vbp.city }}</td>
-                                                                {% if vbp.phone is not None %}<td style="text-align:right;min-width: 6vw">{{ vbp.phone }}</td>
-                                                                {% else %}<td style="text-align:right;min-width: 6vw"></td>
-                                                                {% endif %}
-                                                            </tr>
-                                                            {% endfor %}-->
-                                                         </tbody>
-                                                    </table>
-                                                    {% endfor %}
-                                                    {% if response.object_list|length > 6 %}
-                                                        {% else %}
-                                                        <div class="center-align roomformore" style="margin-top: 5%; background:rgb(29, 29, 29); padding: 1vw 2vw">
-                                                            <p style="color:white; ">There's always room for more!</p>
-                                                            <p style="color:white; text-align: justify">If you know of a great business we should include, or if you own a business and would like to be listed, please fill out the <a href="{{ nomination_url }}">Business Nomination Form</a> on our website. VBP is ever-evolving and we update our directories quarterly!</p>
+                                                {% if section.category == 'beauty' %}
+                                                    <div class="section-cover" id="{{ section.category }}-cover" style="background: url('{{ section.cover }}'); background-size: 105%"></div>
+                                                    {% for response in section.pagination %}
+                                                        {% regroup response.object_list by group as group_list %}
+                                                        
+                                                        <div class="data-pg" bgLeft="{{ section.left }}" bgRight="{{ section.right }}">
+                                                            <div style="padding: 5% 10%">
+                                                                {% for group in group_list %}
+                                                                    <h6 class="vbp-grouper-title">{{ group.grouper }}</h6>
+                                                                    {% regroup group.list by subcategory as subcategory_list %}
+                                                                    {% for subcategory in subcategory_list %}
+                                                                        <p class="vbp-subcategory-title">{{ subcategory.grouper }}</p>
+                                                                        <table class="highlight">
+                                                                            <colgroup>
+                                                                                <col span="1" style="width: 45%;">
+                                                                                <col span="1" style="width: 25%;">
+                                                                                <col span="1" style="width: 35%;">
+                                                                            </colgroup>
+                                                                            <tbody>
+                                                                               
+                                                                                {% for vbp in subcategory.list %}
+                                                                                <tr>
+                                                                                    <td class="beau" style="max-width: 35%; font-weight:500">
+                                                                                        {% if vbp|length > 20%}
+                                                                                            {% if vbp.website %}
+                                                                                            <a href="{{ vbp.website }}" target="_blank" style="font-weight: 500;font-size: 0.35vw">{{ vbp }}</a>
+                                                                                            {% else %}
+                                                                                            <a style="font-size: 0.35vw; color:black">{{ vbp }}</a>
+                                                                                            {% endif %}
+                                                                                        {% else %}
+                                                                                            {% if vbp.website %}
+                                                                                            <a href="{{ vbp.website }}" target="_blank" style="font-weight: 500;">{{ vbp }}</a>
+                                                                                            {% else %}
+                                                                                            <a style="color:rgb(55, 55, 55); font-weight:400">{{ vbp }}</a>
+                                                                                            {% endif %}
+                                                                                        {% endif %}
+                                                                                    </td>
+                                                                                    <td class="beau">{{ vbp.city }}</td>
+                                                                                    {% if vbp.phone is not None %}<td  class="beau" style="text-align:right;min-width: 6vw">{{ vbp.phone }}</td>
+                                                                                    {% else %}<td style="text-align:right;min-width: 6vw"></td>
+                                                                                    {% endif %}
+                                                                                </tr>
+                                                                                {% endfor %}
+                                                                            </tbody>
+                                                                        </table>
+                                                                    {% endfor %}
+                                                                {% endfor %}
+                                                            </div>
+                                                            <div class="data-table" style="padding: 5% 10% 10% 5%">
+                                                            </div>
                                                         </div>
-                                                        {% endif %}
-                                                </div>
-                                            </div>
-                                            {% endfor %}
+                                                    {% endfor %}
+
+                                                {% else %}
+
+                                                    <div class="section-cover" id="{{ section.category }}-cover" style="background: url('{{ section.cover }}'); background-size: 105%"></div>
+                                                    {% for response in section.pagination %}
+                                                
+                                                            <div class="data-pg" bgLeft="{{ section.left }}" bgRight="{{ section.right }}">
+                                                                <div class="data-table" style="padding: 10% 10% 10% 5%">
+                                                                        <table class="highlight">
+                                                                            <colgroup>
+                                                                                <col span="1" style="width: 45%;">
+                                                                                <col span="1" style="width: 25%;">
+                                                                                <col span="1" style="width: 35%;">
+                                                                            </colgroup>
+                                                                            <tbody>
+                                                                               
+                                                                                {% for vbp in response %}
+                                                                                    <td style="max-width: 35%; font-weight:500">
+                                                                                        {% if vbp|length > 20%}
+                                                                                            {% if vbp.website %}
+                                                                                            <a href="{{ vbp.website }}" target="_blank" style="font-weight: 500;font-size: 0.35vw">{{ vbp }}</a>
+                                                                                            {% else %}
+                                                                                            <a style="font-size: 0.35vw; color:black">{{ vbp }}</a>
+                                                                                            {% endif %}
+                                                                                        {% else %}
+                                                                                            {% if vbp.website %}
+                                                                                            <a href="{{ vbp.website }}" target="_blank" style="font-weight: 500;">{{ vbp }}</a>
+                                                                                            {% else %}
+                                                                                            <a style="color:rgb(55, 55, 55); font-weight:400">{{ vbp }}</a>
+                                                                                            {% endif %}
+                                                                                        {% endif %}
+                                                                                    </td>
+                                                                                    <td>{{ vbp.city }}</td>
+                                                                                    {% if vbp.phone is not None %}<td style="text-align:right;min-width: 6vw">{{ vbp.phone }}</td>
+                                                                                    {% else %}<td style="text-align:right;min-width: 6vw"></td>
+                                                                                    {% endif %}
+                                                                                </tr>
+                                                                                {% endfor %}
+                                                                            </tbody>
+                                                                        </table>
+
+                                                                    {% if response.object_list|length < 6 %}
+                                                                        <div class="center-align roomformore" style="margin-top: 5%; background:rgb(29, 29, 29); padding: 1vw 2vw">
+                                                                            <p style="color:white; ">There's always room for more!</p>
+                                                                            <p style="color:white; text-align: justify">If you know of a great business we should include, or if you own a business and would like to be listed, please fill out the <a href="{{ nomination_url }}">Business Nomination Form</a> on our website. VBP is ever-evolving and we update our directories quarterly!</p>
+                                                                        </div>
+                                                                    {% endif %}
+                                                                </div>
+                                                            </div>
+                                                    {% endfor %}
+                                                {% endif %}
                                             {% endfor %}
                                             <div class="hard" style="background: url({% static 'img/vbp final page.png' %});background-size: 100%"></div>
                                         </div>
@@ -319,6 +379,22 @@
         letter-spacing: 1px !important;
     }
     @media only screen and (min-width:0px) {
+        .beau {
+            font-size: 10px !important;
+        }
+        .vbp-grouper-title {
+            font-family: oskar;
+            color: #bf1e2d;
+            font-size: 16px;
+            text-align: center;
+            text-decoration: underline;
+        }
+        .vbp-subcategory-title {
+            font-family: oskar;
+            color: black;
+            font-size: 12px;
+            text-decoration: underline;
+        }
         .subcategory-title {
             font-family: oskar;
             text-decoration: underline;
@@ -385,6 +461,24 @@
             text-transform: capitalize;
         }
     }
+    @media only screen and (min-width:1190px) {
+        .beau {
+            font-size: 13px !important;
+        }
+        .vbp-grouper-title {
+            font-family: oskar;
+            color: #bf1e2d;
+            font-size: 26px;
+            text-align: center;
+            text-decoration: underline;
+        }
+        .vbp-subcategory-title {
+            font-family: oskar;
+            color: black;
+            font-size: 18px;
+            text-decoration: underline;
+        }
+    }
     @media only screen and (min-width:1350px){
         .category-link {
             font-size:16px; 
@@ -392,6 +486,22 @@
             padding-bottom: 0.2vw; 
             margin:0; 
             text-transform: capitalize;
+        }
+        .beau {
+            font-size: 16px !important;
+        }
+        .vbp-grouper-title {
+            font-family: oskar;
+            color: #bf1e2d;
+            font-size: 32px;
+            text-align: center;
+            text-decoration: underline;
+        }
+        .vbp-subcategory-title {
+            font-family: oskar;
+            color: black;
+            font-size: 20px;
+            text-decoration: underline;
         }
     }
     #id-city {
@@ -515,6 +625,7 @@
         });
 </script>
     <style>
+        
         .btn-contact {
             border: none;
             margin-left: 0;

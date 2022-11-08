@@ -1,18 +1,3 @@
-"""etv URL Configuration
-
-The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/3.2/topics/http/urls/
-Examples:
-Function views
-    1. Add an import:  from my_app import views
-    2. Add a URL to urlpatterns:  path('', views.home, name='home')
-Class-based views
-    1. Add an import:  from other_app.views import Home
-    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
-Including another URLconf
-    1. Import the include() function: from django.urls import include, path
-    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
-"""
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
@@ -25,6 +10,7 @@ from .views import *
 from accounts.views import LoginView, RegisterView, GuestRegisterView
 from content.views import efbf, efbf_subscribed, contact, mailchimp_signup
 
+from policy.views import obb_flyer
 from vbp.models import *
 from ven.views import *
 
@@ -157,6 +143,7 @@ urlpatterns = [
     path('make-every-friday-black-friday/', efbf, name='efbf'),
     path('mailchimp-signup/', mailchimp_signup, name='mailchimp-signup'),
     path('merchandise/', include(("merchandise.urls", "merchandise"), namespace='merchandise')),
+    path('obb-<state>/', obb_flyer),
     path('register/', RegisterView.as_view(), name='register'),
     path('register/guest', GuestRegisterView.as_view(), name='guest_register'),
     path('scraper/', include(("scraper.urls", "scaper"), namespace="scraper")),
