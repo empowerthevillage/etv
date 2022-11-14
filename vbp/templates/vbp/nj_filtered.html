@@ -1,50 +1,8 @@
-{% extends 'base.html' %}
-{% load static %}
-
-{% block title %}ETV | Village Black Pages®{% endblock %}
-{% block canonical %}https://www.empowerthevillage.org/village-black-pages/{% endblock %}
-{% block seo_description %}Village Black Pages® (VBP) is the critical resource Americans can rely on to locate Black-owned businesses to support when responding to our charge to Make Every Friday, Black Friday®!{% endblock %}
-
-
-{% block content %}
 <div class="content-container">
     <div id="vbp-resources" class="col s12">
         
         <div class="z-depth-4 row vbp-booklet-container" style="margin:0; background: white; padding-top: 20px" id="vbp-row">
-            <div class="row">
-                <div class="col s12 m8 l10 offset-m2 offset-l1">
-                    <div class="row" style="margin-bottom: 0">
-                        <div class="col s6 xl3 offset-xl1" id="cat-container">
-                            <select id="cat-filter" multiple>
-                                <option disabled value="">Choose Category</option>
-                                {% for section in sections %}
-                                <option value="{{ section.category }}">{{ section.verbose }}</option>
-                                {% endfor %}
-                            </select>
-                        </div>
-                        <div class="col s6 xl2 hidden" id="subcat-container">
-                            
-                        </div>
-                        <div class="col s6 xl3">
-                            <select id="city-filter" multiple>
-                                <option disabled value="">Choose Cities</option>
-                                {% for city in cities %}
-                                <option value="{{ city }}">{{ city }}</option>
-                                {% endfor %}
-                            </select>
-                        </div>
-                        <div class="col s6 xl3">
-                            <select id="county-filter" multiple>
-                                <option disabled value="">Choose Counties</option>
-                                {% for county in counties %}
-                                <option value="{{ county }}">{{ county }}</option>
-                                {% endfor %}
-                            </select>
-                        </div>
-                        <button class="btn go-btn" id="filter-submit" style="margin-top: 5px;"><i class="material-icons">search</i></button>
-                    </div>
-                </div>
-            </div>
+            
             <div class="col s12" id="book">
                 <div id="flipbook-mobile-container">
                     <div class="" id="vbp-flipbook-mobile">
@@ -167,7 +125,7 @@
                                             </div>
                                             {% endfor %}
                                             {% endfor %}
-                                            <div class="hard" style="background: url({% static 'img/vbp final page.png' %});background-size: 100%"></div>
+                                            <div class="hard" style="background: url('https://empowerthevillage.s3.amazonaws.com/static/img/vbp final page.png');background-size: 100%"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -351,7 +309,7 @@
                                                     {% endfor %}
                                                 {% endif %}
                                             {% endfor %}
-                                            <div class="hard" style="background: url({% static 'img/vbp final page.png' %});background-size: 100%"></div>
+                                            <div class="hard" style="background: url('https://empowerthevillage.s3.amazonaws.com/static/img/vbp final page.png');background-size: 100%"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -525,32 +483,6 @@
 </style>
 <script>
     $(document).ready(function(){
-        $('#cat-filter').on('change', function(){
-            $('#cat-container').removeClass('offset-xl1');
-            var catList = []
-            var verboseList = []
-            $('#cat-filter option:selected').each(function(){
-                catList.push($(this).val())
-                verboseList.push($(this).text())
-            })
-            var data = {
-                csrfmiddlewaretoken: '{{ csrf_token }}',
-                'categories': String(catList),
-                'verboseList': String(verboseList)
-            }
-            $.ajax({
-                data: data,
-                url: '/village-black-pages/get-subcats/',
-                method: "POST",
-                success:function(response){
-                    if(response.status == 'success') {
-                        $('#subcat-container').removeClass('hidden');
-                        $('#subcat-container').html(response.html);
-                        $('#subcat-filter').formSelect();
-                    }
-                },
-            })
-        });
         $('#filter-submit').on('click', function(){
             var categories = []
             $.each($("#cat-filter option:selected"), function(){
@@ -580,12 +512,6 @@
                 url: '/village-black-pages/nj-filter-new/',
                 method: "POST",
                 success:function(result){
-                    if (result.status == 'success'){
-                        $('.content-container').html(result.html);
-                        $('select').formSelect();
-                    }else{
-                        alert('failure')
-                    }
                     
                 },
             })
@@ -635,14 +561,12 @@
                 $('.data-pg.odd').each(function(index){
                     var link = $(this).attr('bgRight');
                     var url = 'url("'+ link +'")';
-                    console.log(url);
                     $(this).css('background-image', url);
                     $(this).css('background-size', '101%');
                 });
                 $('.data-pg.even').each(function(index){
                     var link = $(this).attr('bgLeft');
                     var url = 'url("'+ link +'")';
-                    console.log(url);
                     $(this).css('background-image', url);
                     $(this).css('background-size', '101%');
                 })
@@ -1750,4 +1674,3 @@ $('svg').resize(function(event){
   }
   
 </style>
-{% endblock %}

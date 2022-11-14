@@ -1,0 +1,13 @@
+
+<select id="subcat-filter" multiple>
+    <option disabled value="">Choose Subcategory</option>
+    {% for section in sections %}
+        <optgroup disabled label="{{ section.verbose }}" value="{{ section.category }}">
+            
+                {% for grouper in section.subcategories %}
+                <option value="{{ grouper.subcategory }}">{{ grouper.subcategory }}</option>
+                {% endfor %}
+            
+        </optgroup>
+    {% endfor %}
+</select>

@@ -1,20 +1,14 @@
 import django
-from django.db.models import query, F
-from django.core.serializers import serialize
 from django.http.response import HttpResponse, JsonResponse
-from django.shortcuts import render, redirect
+from django.shortcuts import render
+from django.template.loader import render_to_string
+from django.db.models import Q
 
-from bfchallenge.models import STATE_CHOICES
 from .models import mv_private, vbp, vbp_book, vbp_al, vbp_az, vbp_az, vbp_ar, vbp_ca, vbp_co, vbp_ct, vbp_de, vbp_dc, vbp_fl, vbp_ga, vbp_hi, vbp_id, vbp_il, vbp_in, vbp_ia, vbp_ks, vbp_ky, vbp_la, vbp_me, vbp_md, vbp_ma, vbp_mi, vbp_mi, vbp_ms, vbp_mn, vbp_mo, vbp_mt, vbp_ne, vbp_nv, vbp_nh, vbp_nj, vbp_nm, vbp_ny, vbp_nc, vbp_nd, vbp_oh, vbp_ok, vbp_or, vbp_pa, vbp_ri, vbp_sc, vbp_sd, vbp_tn, vbp_tx, vbp_ut, vbp_vt, vbp_va, vbp_wa, vbp_wv, vbp_wi, vbp_wy  
-from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from django.core.paginator import Paginator
 from django.conf import settings
-from .forms import NominationForm
-from django.db.models import Count
 from .models import StateFilter
-import sweetify
 
-import json
-import django_filters
 import geocoder
 
 BEAUTY_CHOICES = {
@@ -307,7 +301,41 @@ CATEGORY_CHOICES = [
     ('visual', 'Visual & Performing Arts | Culture'),
     ('other', 'Other'),
 ]
-
+CATEGORY_JSON = [
+  {'beauty':'Beauty & Personal Grooming'},
+  {'books':'Books & Publishing'},
+  {'cars':'Cars & Automotive'},
+  {'child':"Childcare | Children's Services & Products"},
+  {'cleaning':"Cleaning"},
+  {'clothing':"Clothing & Fashion"},
+  {'construction':"Construction & Trades"},
+  {'education':"Education"},
+  {'eldercare':"Eldercare"},
+  {'electronics':"Electronics & Technology"},
+  {'entertainment':"Entertainment"},
+  {'farming':"Farming & Agriculture"},
+  {'florists':"Florists"},
+  {'grocery':"Grocery & Food Services"},
+  {'health':"Health & Wellness"},
+  {'home':"Home & Garden"},
+  {'hotels':"Hotels & Hospitality | Travel"},
+  {'jewelry':"Jewelry & Accessories"},
+  {'legal':"Legal & Financial Services"},
+  {'lifestyle':"Lifestyle"},
+  {'marketing':"Marketing & Advertising"},
+  {'medical':"Medical Services"},
+  {'packaging':"Packaging | Delivery | Shipping"},
+  {'pets':"Pets & Animal Care"},
+  {'photography':"Photography & Video"},
+  {'professional':"Professional Services"},
+  {'real estate':"Real Estate"},
+  {'recreation':"Recreation & Sports"},
+  {'restaurants':"Restaurants & Bars | Event Spaces"},
+  {'security':"Security Services"},
+  {'transportation':"Transportation & Trucking"},
+  {'visual':"Visual & Performing Arts | Culture"},
+  {'other':"Other"},
+]
 
 def mv_view(request):
     f = mv_private.objects.all()
@@ -342,7 +370,113 @@ def mv_view(request):
         "filter": f,
     }
     return render(request, 'vbp/mv.html', context)
-    
+
+def get_subcats(request):
+  if request.method == 'POST':
+    categories = request.POST['categories']
+    c_split = categories.split(',')
+    verboses = request.POST['verboseList']
+    v_split = verboses.split(',')
+    merged = zip(c_split, v_split)
+    formatted = list(merged)
+    sections = []
+    for cat in formatted:
+        category = cat[0]
+        verbose = cat[1]
+        subcategories = list(vbp_nj.objects.filter(category=str(category)).order_by('subcategory').distinct('subcategory'))
+        
+        sections.append({'category': category, 'verbose': verbose, 'subcategories': subcategories})
+    context = {
+      'sections': sections
+    }
+    html = render_to_string('vbp/subcategory-filter.html', context)
+    return JsonResponse({'status':'success', 'html':html})
+  else:
+    return JsonResponse({'status':'error'})
+
+def nj_filter_new(request):
+    if request.method == 'POST':
+        categories = request.POST['catList'].split(',')
+        subcategories = request.POST['subcatList'].split(',')
+        cities = request.POST['cityList'].split(',')
+        counties = request.POST['countyList'].split(',')
+        if counties != [''] or cities !=[''] and subcategories != [''] and categories !=['']:
+          result = vbp_nj.objects.filter(Q(county__in=counties)|Q(city__in=cities),Q(subcategory__in=subcategories)|Q(category__in=categories))
+        elif counties != [''] or cities !=[''] and subcategories == [''] and categories == ['']:
+          result = vbp_nj.objects.filter(Q(county__in=counties)|Q(city__in=cities))
+        elif counties == [''] and cities !=[''] and subcategories == [''] and categories ==['']:
+          result = vbp_nj.objects.filter(Q(city__in=cities))
+        elif counties !=[''] and cities == [''] and subcategories == [''] and categories == ['']:
+          result = vbp_nj.objects.filter(Q(county__in=counties))
+        elif counties == [''] and cities == [''] and subcategories == [''] and categories != ['']:
+          result = vbp_nj.objects.filter(Q(category__in=categories))
+        elif counties == [''] and cities == [''] and subcategories != [''] and categories == ['']:
+          result = vbp_nj.objects.filter(Q(subcategory__in=subcategories))
+        elif counties == [''] and cities == [''] and subcategories !=[''] and categories !=['']:
+          result = vbp_nj.objects.filter(Q(subcategory__in=subcategories),Q(category__in=categories))
+          
+        f = vbp_nj.objects.filter(approved=True)
+        listings_beauty = result.filter(category='beauty').order_by('group', 'subcategory', '-city', 'business_name')
+   
+        listings_full = result.exclude(city='').exclude(category='beauty').order_by('category', 'city', 'business_name')
+        listings_empty = result.filter(city='').exclude(category='beauty').order_by('category', 'business_name')
+
+      
+        all_listings = list(listings_beauty) + list(listings_full) + list(listings_empty)
+        sections = []
+        page_count = 5
+        cities = []
+        counties = []
+        cats = []
+        for x in f:
+          if x.city not in cities:
+            cities.append(x.city)
+          if x.county not in counties:
+            counties.append(x.county)
+          
+        city_dict = sorted(cities)
+        county_dict = sorted(counties)
+        for category, verbose in CATEGORY_CHOICES:
+            if x.category not in cats:
+              line = {"category": category, "verbose":verbose}
+              cats.append(line)
+            dict = []
+            subcats = []
+            for x in all_listings:
+                if x.category == category:
+                    dict.append(x)
+                    if x.subcategory not in subcats:
+                      if x.subcategory is not None:
+                        subcats.append(x.subcategory)
+            if len(dict)>0:
+                if category == 'beauty':
+                    pagination_obj = Paginator(dict, 11)
+                else:
+                    pagination_obj = Paginator(dict, 16)
+                start_page = page_count + 1
+                page_count += pagination_obj.num_pages
+                line = {"category": category, "subcats": sorted(subcats), "verbose": str(verbose), "pagination": pagination_obj, "start_page": start_page, "last_page": page_count, "cover": "https://etv-empowerthevillage.s3.amazonaws.com/static/img/vbp/%s.svg" %(str(verbose)), "right": "https://etv-empowerthevillage.s3.amazonaws.com/static/img/vbp/%s_right.svg" %(str(verbose)),"left": "https://etv-empowerthevillage.s3.amazonaws.com/static/img/vbp/%s_left.svg" %(str(verbose))}
+                sections.append(line)
+            else:
+                pass
+          
+        col_1_end = round(len(sections)/2)
+        col_2_start = col_1_end + 1
+        col_2_end = len(sections)
+        col1 = sections[0:col_1_end]
+        col2 = sections[col_2_start:col_2_end]
+        context = {
+            "cities": city_dict,
+            "counties": county_dict,
+            "sections": sections,
+            "col1": col1,
+            "col2":  col2,
+            "filter": f,
+            "cats": cats,
+        }
+    html = render_to_string('vbp/nj_filtered.html',context)
+    return JsonResponse({'status':'success',"html":html})
+      
 def nj_view(request):
     f = vbp_nj.objects.filter(approved=True)
     
@@ -350,25 +484,37 @@ def nj_view(request):
    
     listings_full = f.exclude(city='').exclude(category='beauty').order_by('category', 'city', 'business_name')
     listings_empty = f.filter(city='').exclude(category='beauty').order_by('category', 'business_name')
-    
-    cat_listing = f.order_by('category', 'subcategory')
+
     
     all_listings = list(listings_beauty) + list(listings_full) + list(listings_empty)
     sections = []
     page_count = 5
+    cities = []
+    counties = []
+    for x in all_listings:
+      if x.city not in cities:
+        cities.append(x.city)
+      if x.county not in counties:
+        counties.append(x.county)
+    city_dict = sorted(cities)
+    county_dict = sorted(counties)
     for category, verbose in CATEGORY_CHOICES:
         dict = []
+        subcats = []
         for x in all_listings:
             if x.category == category:
                 dict.append(x)
+                if x.subcategory not in subcats:
+                  if x.subcategory is not None:
+                    subcats.append(x.subcategory)
         if len(dict)>0:
             if category == 'beauty':
-                pagination_obj = Paginator(dict, 9)
+                pagination_obj = Paginator(dict, 11)
             else:
                 pagination_obj = Paginator(dict, 16)
             start_page = page_count + 1
             page_count += pagination_obj.num_pages
-            line = {"category": category, "verbose": str(verbose), "pagination": pagination_obj, "start_page": start_page, "last_page": page_count, "cover": "https://etv-empowerthevillage.s3.amazonaws.com/static/img/vbp/%s.svg" %(str(verbose)), "right": "https://etv-empowerthevillage.s3.amazonaws.com/static/img/vbp/%s_right.svg" %(str(verbose)),"left": "https://etv-empowerthevillage.s3.amazonaws.com/static/img/vbp/%s_left.svg" %(str(verbose))}
+            line = {"category": category, "subcats": sorted(subcats), "verbose": str(verbose), "pagination": pagination_obj, "start_page": start_page, "last_page": page_count, "cover": "https://etv-empowerthevillage.s3.amazonaws.com/static/img/vbp/%s.svg" %(str(verbose)), "right": "https://etv-empowerthevillage.s3.amazonaws.com/static/img/vbp/%s_right.svg" %(str(verbose)),"left": "https://etv-empowerthevillage.s3.amazonaws.com/static/img/vbp/%s_left.svg" %(str(verbose))}
             sections.append(line)
         else:
             pass
@@ -379,7 +525,8 @@ def nj_view(request):
     col1 = sections[0:col_1_end]
     col2 = sections[col_2_start:col_2_end]
     context = {
-        "cats": cat_listing,
+        "cities": city_dict,
+        "counties": county_dict,
         "sections": sections,
         "col1": col1,
         "col2":  col2,
@@ -387,6 +534,15 @@ def nj_view(request):
     }
     return render(request, 'vbp/nj_only.html', context)
 
+def nj_new(request):
+  f = vbp_nj.objects.filter()
+  cats = []
+  for (category,verbose) in CATEGORY_CHOICES:
+    listings = vbp_nj.objects.filter(Q(category__exact=category))
+    cats.append({'category':category,'listings':listings})
+  print(cats)
+  return render(request, 'vbp/nj_only.html')
+  
 def listing_filter(request, state):
     state_formatted = state.split("-")[1].lower()
     model = django.apps.apps.get_model('vbp', 'vbp_%s' %(state_formatted))
@@ -599,319 +755,6 @@ def get_subcategories(request):
         qs = CLEANING_CHOICES
     print(qs)
     return JsonResponse(data)
-
-def assign_groups(request):
-    data = [
-  {
-    "id": 305434,
-    "group": "Products"
-  },
-  {
-    "id": 305416,
-    "group": "Products"
-  },
-  {
-    "id": 305443,
-    "group": "Services"
-  },
-  {
-    "id": 305436,
-    "group": "Services"
-  },
-  {
-    "id": 305417,
-    "group": "Services"
-  },
-  {
-    "id": 305424,
-    "group": "Products"
-  },
-  {
-    "id": 305426,
-    "group": "Services"
-  },
-  {
-    "id": 305446,
-    "group": "Services"
-  },
-  {
-    "id": 305465,
-    "group": "Services"
-  },
-  {
-    "id": 305429,
-    "group": "Products"
-  },
-  {
-    "id": 305421,
-    "group": "Products"
-  },
-  {
-    "id": 305420,
-    "group": "Services"
-  },
-  {
-    "id": 305464,
-    "group": "Services"
-  },
-  {
-    "id": 305455,
-    "group": "Services"
-  },
-  {
-    "id": 305463,
-    "group": "Services"
-  },
-  {
-    "id": 305448,
-    "group": "Products"
-  },
-  {
-    "id": 305475,
-    "group": "Products"
-  },
-  {
-    "id": 305430,
-    "group": "Products"
-  },
-  {
-    "id": 305441,
-    "group": "Services"
-  },
-  {
-    "id": 305456,
-    "group": "Services"
-  },
-  {
-    "id": 305427,
-    "group": "Services"
-  },
-  {
-    "id": 305466,
-    "group": "Services"
-  },
-  {
-    "id": 305452,
-    "group": "Services"
-  },
-  {
-    "id": 305445,
-    "group": "Products"
-  },
-  {
-    "id": 305459,
-    "group": "Services"
-  },
-  {
-    "id": 305470,
-    "group": "Services"
-  },
-  {
-    "id": 305442,
-    "group": "Products"
-  },
-  {
-    "id": 305473,
-    "group": "Products"
-  },
-  {
-    "id": 305444,
-    "group": "Products"
-  },
-  {
-    "id": 305428,
-    "group": "Services"
-  },
-  {
-    "id": 305467,
-    "group": "Products"
-  },
-  {
-    "id": 305419,
-    "group": "Products"
-  },
-  {
-    "id": 305461,
-    "group": "Products"
-  },
-  {
-    "id": 305471,
-    "group": "Services"
-  },
-  {
-    "id": 305418,
-    "group": "Products"
-  },
-  {
-    "id": 305432,
-    "group": "Services"
-  },
-  {
-    "id": 305451,
-    "group": "Products"
-  },
-  {
-    "id": 305457,
-    "group": "Services"
-  },
-  {
-    "id": 305447,
-    "group": "Services"
-  },
-  {
-    "id": 305440,
-    "group": "Services"
-  },
-  {
-    "id": 305450,
-    "group": "Services"
-  },
-  {
-    "id": 305474,
-    "group": "Products"
-  },
-  {
-    "id": 305435,
-    "group": "Products"
-  },
-  {
-    "id": 305472,
-    "group": "Products"
-  },
-  {
-    "id": 305453,
-    "group": "Services"
-  },
-  {
-    "id": 305438,
-    "group": "Products"
-  },
-  {
-    "id": 305478,
-    "group": "Services"
-  },
-  {
-    "id": 305476,
-    "group": "Services"
-  },
-  {
-    "id": 305468,
-    "group": "Services"
-  },
-  {
-    "id": 305422,
-    "group": "Services"
-  },
-  {
-    "id": 305437,
-    "group": "Products"
-  },
-  {
-    "id": 305433,
-    "group": "Products"
-  },
-  {
-    "id": 305462,
-    "group": "Services"
-  },
-  {
-    "id": 305449,
-    "group": "Products"
-  },
-  {
-    "id": 305458,
-    "group": "Products"
-  },
-  {
-    "id": 305477,
-    "group": "Products"
-  },
-  {
-    "id": 305439,
-    "group": "Products"
-  },
-  {
-    "id": 305425,
-    "group": "Services"
-  },
-  {
-    "id": 305460,
-    "group": "Products"
-  },
-  {
-    "id": 305454,
-    "group": "Products"
-  },
-  {
-    "id": 305423,
-    "group": "Services"
-  },
-  {
-    "id": 305415,
-    "group": "Services"
-  },
-  {
-    "id": 305402,
-    "group": "Products"
-  },
-  {
-    "id": 305403,
-    "group": "Products"
-  },
-  {
-    "id": 305404,
-    "group": "Services"
-  },
-  {
-    "id": 305405,
-    "group": "Services"
-  },
-  {
-    "id": 305406,
-    "group": "Products"
-  },
-  {
-    "id": 305407,
-    "group": "Products"
-  },
-  {
-    "id": 305408,
-    "group": "Services"
-  },
-  {
-    "id": 305409,
-    "group": "Products"
-  },
-  {
-    "id": 305410,
-    "group": "Products"
-  },
-  {
-    "id": 305411,
-    "group": "Products"
-  },
-  {
-    "id": 305412,
-    "group": "Products"
-  },
-  {
-    "id": 305413,
-    "group": "Products"
-  },
-  {
-    "id": 305414,
-    "group": "Services"
-  }
-]
-
-    for x in data:
-        id=x.get('id')
-        vbp_obj = vbp_nj.objects.get(pk=id)
-        vbp_obj.is_grouped = True
-        vbp_obj.group = x.get('group')
-        vbp_obj.save()
-        print(vbp_obj.group)
-    return JsonResponse(data, safe=False)
 
 def get_counties(request, state):
     model = django.apps.apps.get_model('vbp', 'vbp_%s' %(state))
@@ -1283,7 +1126,5 @@ def getStateListings(request):
 def filterList(request):
     get = request.GET
     
-    print(get)
     items = get.items()
-    print(items)
     return HttpResponse(220)

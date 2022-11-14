@@ -108,13 +108,54 @@ class VBPAdmin(admin.ModelAdmin):
         ) % updated, messages.SUCCESS)
     make_inactive.short_description = "Mark selected submissions as not approved"
 
+class MVStateAdmin(admin.ModelAdmin):
+    list_per_page = 200
+    list_display = ['business_name', 'category', 'subcategory', 'website', 'city']
+    actions = ['make_active', 'make_inactive', 'download_csv']
+
+    def download_csv(self, request, queryset):
+        opts = queryset.model._meta
+        model = queryset.model
+        response = HttpResponse(content_type='text/csv')
+        # force download.
+        response['Content-Disposition'] = 'attachment;filename=export.csv'
+        # the csv writer
+        writer = csv.writer(response)
+        field_names = [field.name for field in opts.fields]
+        # Write a first row with header information
+        writer.writerow(field_names)
+        # Write data rows
+        for obj in queryset:
+            writer.writerow([getattr(obj, field) for field in field_names])
+        return response
+    download_csv.short_description = "Download selected as csv"
+
+    def make_active(self, request, queryset):
+        updated = queryset.update(approved=True)
+        self.message_user(request, ngettext(
+            '%d listing successfully marked as approved.', 
+            '%d listings successfully marked as approved.', 
+            updated,
+        ) % updated, messages.SUCCESS)
+    make_active.short_description = "Mark selected submissions as approved"
+
+    def make_inactive(self, request, queryset):
+        updated = queryset.update(approved=False)
+        self.message_user(request, ngettext(
+            '%d listing successfully marked as not yet approved.', 
+            '%d listings successfully marked as not yet approved.', 
+            updated,
+        ) % updated, messages.SUCCESS)
+    make_inactive.short_description = "Mark selected submissions as not approved"
+
+
 class VBPStateAdmin(admin.ModelAdmin):
     list_per_page = 500
-    list_display = ['business_name','subcategory', 'approved', 'website', 'category', 'city', 'updated', 'nominator_name']
+    list_display = ['business_name','subcategory', 'approved', 'website', 'category', 'city', 'county','updated', 'nominator_name']
     list_filter = ['county', 'city','approved', 'online_only', 'category', 'subcategory', 'team', 'nominator_name','subcategory']
     search_fields = ['business_name', 'city', 'category', 'subcategory', 'user', 'nominator_name']
     ordering = ['-updated', 'business_name']
-    actions = ['make_active', 'make_inactive', 'download_csv']
+    actions = ['make_active', 'make_inactive', 'download_csv', 'mark_online']
     fieldsets = (
         (None, {
             'fields': ('business_name', 'website', 'category', 'subcategory', 'approved','cat_ordering')
@@ -129,6 +170,15 @@ class VBPStateAdmin(admin.ModelAdmin):
             'fields': ('nominator_name', 'nominator_email', 'nominator_owner', 'nominator_recommended', 'user', 'team')
         }),
     )
+    def mark_online(self, request, queryset):
+        queryset.update(city="Online Only")
+        updated = queryset.update(county="Online Only")
+        self.message_user(request, ngettext(
+            '%d listing successfully marked as beauty services.', 
+            '%d listings successfully marked as beauty services.', 
+            updated,
+        ) % updated, messages.SUCCESS)
+        
     def mark_beauty_service(self, request, queryset):
         queryset.update(is_grouped=True)
         updated = queryset.update(group="Beauty Services")
@@ -195,7 +245,7 @@ admin.site.register(vbp)
 admin.site.register(vbp_book, VBPBook)
 admin_site.register(vbp)
 admin_site.register(vbp_book, VBPBook)
-admin_site.register(mv_private)
+admin_site.register(mv_private, MVStateAdmin)
 admin_site.register(vbp_ct, VBPStateAdmin)
 admin_site.register(vbp_dc, VBPStateAdmin)
 admin_site.register(vbp_de, VBPStateAdmin)
