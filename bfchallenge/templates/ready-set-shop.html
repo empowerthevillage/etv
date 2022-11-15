@@ -9,21 +9,16 @@
       <div class="col s10 offset-s1 login-card">
         <h6 id="vbp-nomination-form-title">Ready, Set, Shop!™ Transaction Form</h6>
         <div class="row">
-          <div class="col s12 m6">
-            <h7 class="bf-subtitle">Ways to Play</h7>
-            <p class="bf-instructions" style="color:rgb(66, 147, 17)"><u><b style="color: black">Team Play</b></u> - Play Ready, Set, Shop!™ as part of a sponsored group challenge with customized prizes!</p>
-            <p class="bf-instructions" style="color:rgb(66, 147, 17)"><u><b style="color: black">Every Friday Challenge!</b></u> - Solo play for Ready, Set, Shop!™ is available at any time for free!</p>
-          </div>
-          <div class="col s12 m6" style="border-left: 1px rgba(128, 128, 128, 0.756) dotted">
-            <h7 class="bf-subtitle">Ways to Win</h7>
-            <p class="bf-instructions" style="color:rgb(165, 55, 55)"><u><b style="color: black">Show Me The Money!</b></u> - Team/player with the highest dollar amount spent at VBP-listed Black-owned businesses within the challenge period wins!</p>
-            <p class="bf-instructions" style="color:rgb(165, 55, 55)"><u><b style="color: black">Throw It In The Bag!</b></u> - Team/player with the most transactions with VBP businesses within the challenge period wins!</p>
+          <div class="col s12">
+            <h7 class="bf-subtitle" style="color:#319657">2022 Holiday Challenge Prizes</h7>
+            <p class="bf-instructions" style="color:rgb(195, 32, 32)"><u><b style="color: black">1st Place - Show Me The Money!</b></u><br>Player with the highest dollar amount spent at Black-owned businesses within the challenge period wins!</p>
+            <p class="bf-instructions" style="color:rgb(195, 32, 32)"><u><b style="color: black">2nd Place - Throw It In The Bag!</b></u><br>Player with the most transactions at Black-owned businesses within the challenge period wins!</p>
+            <p class="bf-instructions" style="color:rgb(195, 32, 32)"><u><b style="color: black">3rd Place - Nomination Challenge!</b></u><br>Player with the most nominations to the Village Black Pages® within the challenge period wins!</p>
           </div>
         </div>
-          <p style="margin:0; padding-bottom:0; color: rgb(74, 74, 74); font-weight: 500">*Businesses must be listed in the Village Black Pages® to count!*</p>
-          <p style="margin:0; padding-bottom:0; color: rgb(113, 113, 113)">If you shopped at a non-VBP business, <a href="{{ nomination_url }}">click here</a> to nominate it for VBP inclusion before the challenge period ends!</p>
-        
-       
+        <p style="margin:0; padding-bottom:5px; color: rgb(113, 113, 113)">If you shopped at a non-VBP business, <a href="{{ nomination_url }}">click here</a> to nominate it for VBP inclusion before the challenge period ends!</p>
+        <p style="margin:0; padding-bottom:20px; color: rgb(74, 74, 74); font-weight: 500">*Businesses must be listed in the Village Black Pages® to count!*</p>
+          
           <form enctype="multipart/form-data" method="POST" style="padding-left:10%; padding-right:10%;" id="nomination-form">
             {% csrf_token %}
             

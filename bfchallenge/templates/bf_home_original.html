@@ -19,12 +19,8 @@
 </div>
 
 <div class="row valign-wrapper" style="padding-left: 5%; padding-right:5%">
-    <div class="col s12 m5 text-center">
-        <img style="padding-top: 40px;width: 100%" src="{% static 'img/bf-holiday-23.jpg' %}">
-        <div class="btn" style="cursor: default; background-color:rgb(24, 144, 24); width: 100%; margin-top: 10px; height: fit-content; line-height: 42px; padding: 20px 10px; font-family: oskar;font-size: 28px;">November 25th-December 31st, 2022</div>
-        <img class="" id="timemoney-top" src="{% static 'img/timemoney.png' %}" width=110% height=100% style="margin-right:0px; margin-top:0px; margin-left:0%">
-    </div>
-    <div class="vbp-text col s12 m7" style="padding-top: 0px">
+    <img class="col s6 m5" id="timemoney-top" src="{% static 'img/timemoney.png' %}" width=110% height=100% style="margin-right:0px; margin-top:0px; margin-left:0%">
+    <div class="vbp-text col s12 m7">
         <p style="margin-bottom:0; padding-bottom:10px"><b>ETV’s Black Friday (BF) Challenges</b>
             are friendly competitions designed to help all consumers <i>recirculate</i> dollars & <i>increase</i> economic prosperity in the Black community!</p> 
                         
@@ -33,8 +29,11 @@
                         
         <p style="margin-bottom:0; margin-top:10px"><b>The Real Winners are the businesses supported and communities that prosper as a result of the BF Challenge!</b></p>
         <div class="row center-align" style="padding-top: 10px; padding-bottom: 5px">
-            <div class="col s12">
-                <div class="btn btn-large create-account-btn" id="getStartedBtn" style="background-color:rgb(24, 144, 24); width: 100%; margin-top: 10px; height: fit-content; line-height: 42px; padding: 20px 10px; font-family: oskar;font-size: 32px;">Click to Get Started!</div>
+            <div class="col s12 l6">
+                <a class="btn btn-large create-account-btn" href="{{ register_url }}" style="background-color:rgb(28, 29, 28); width: 100%; margin-top: 10px; height: fit-content; line-height: 24px; padding: 10px">Create Your Account to Get Started!</a>
+            </div>
+            <div class="col s12 l6">
+                <a class="btn btn-large create-account-btn" href="{{ contact_url }}" style="background-color:rgb(28, 155, 28);  width: 100%; margin-top: 10px; height: fit-content; line-height: 24px; padding: 10px">Click here to sponsor a group challenge!</a>
             </div>
         </div>
         <ul class="collapsible z-depth-0" style="border:none;">
@@ -110,153 +109,98 @@
 </div>
 <img class="col s12 timemoney-bottom" src="{% static 'img/timemoney.png' %}" width=90% style="margin-right:0px; margin-top:0px; margin-left:5%">
 
-<div class="vbp-text center-align" id="wtpContainer">
-    <p id="wtpTitle"><b class="ways-to-play-title">2022 Holiday BFChallenge Prizes</b></p>
+<div class="vbp-text center-align">
+    <p><b class="ways-to-play-title">Ways to Play</b></p>
 </div>
-<div class="vbp-text center-align prizes row">
-    <div class="col s12 m4">
-        <p class="title">1st Place<br>Show Me The Money</p>
-        <p><b style="color:#01a650">Weekend 4 day/3 night getaway at rustic Black-owned Catskills AirBnb + ETV Premium Swag Basket!</b> Relax on this 40+ acre property with firepit, vintage arcade, hot tub, and more! Sleeps 8, <b style="text-decoration: underline; color:#bf1e2d"> PLUS,</b><b style="color:#01a650"> gift cards with a total value of $150</b> to one or more of the following Black-owned business: <a href="https://theblackhome.com/" target="_blank">The Black Home</a>, <a href="https://calabashtea.com/" target="_blank">Calabash Tea & Tonics</a>, and <a href="https://www.sankofa.com/">Sankofa Bookstore</a>.</p>
-        <p><b style="color:rgb(189, 33, 33)">Approximate Value: $2,000</b></p>
-    </div>
-    <div class="vdiv"></div>
-    <div class="col s12 m4">
-        <p class="title">2nd Place<br>Throw It In The Bag</p>
-        
-        <p><b style="color:#01a650">ETV 2023 Signature Events Passport</b> - Two free registrations for ETV's Power Swing Classic Golf Tournament & North Star Celebration - Tuesday, August 29th <b style="text-decoration: underline; color:#bf1e2d">OR</b> two VIP day passes ETV Juneteenth For The Love of Art Celebration at Montclair Art Museum Friday, June 16th & Saturday, June 17th <b style="text-decoration: underline; color:#bf1e2d">PLUS,</b><b style="color:#01a650"> gift cards with a total value of $150</b> to one or more of the following Black-owned business: <a href="https://theblackhome.com/" target="_blank">The Black Home</a>, <a href="https://calabashtea.com/" target="_blank">Calabash Tea & Tonics</a>, and <a href="https://www.sankofa.com/">Sankofa Bookstore</a>.
-        <p><b style="color:rgb(189, 33, 33)">Approximate Value: $1,000</b></p>
-    </div>
-    <div class="vdiv"></div>
-    <div class="col s12 m4">
-        <p class="title">3rd Place<br>Nomination Challenge</p>
-        <p><b style="color:#01a650">ETV Premium Swag Basket - </b>custom wine glasses, coffee mug, t-shirt, membership pin, reusable shopping bag, and pens, <b style="text-decoration: underline; color:#bf1e2d;">PLUS</b> <b style="color:#01a650"> gift cards with a total value $100</b> to one or more of the following Black-owned businesses: <a href="https://theblackhome.com/" target="_blank">The Black Home</a>, <a href="https://calabashtea.com/" target="_blank">Calabash Tea & Tonics</a>, and <a href="https://www.sankofa.com/">Sankofa Bookstore</a>.</p>
-        <p><b style="color:rgb(189, 33, 33)">Approximate Value: $250</b></p>
-    </div>
-</div>
-<div class="row">
-    <div class="col s12 text-center" style="width:100%">
-        <p style="text-align: center; margin-top:0; margin-bottom: 30px"><b class="ways-to-play-title" style="width: 100%;font-weight: 400; text-align: center">Ways To Play</b></p>
-    </div>
-</div>
-<style>
-    .prizes p.title {
-        margin-top: 5px;
-        font-size: 28px; 
-        font-family: oskar;
-        font-weight: 400;
-        margin-bottom: 15px
-    }
-    .prizes {
-        display: flex;
-        align-items: center
-    }
-    .prizes p {
-        font-size: 18px;
-        padding-right: 5%;
-        padding-left: 5%
-    }
-    .background{
-        display: flex;
-        justify-content: center;
-        align-items:center
-    }
-</style>
 <ul class="tabs tabs-fixed-width ways-to-play-tabs">
-    <li class="tab"><a href='{{ readyss_url }}' style="color:rgb(67, 160, 27); cursor: pointer; font-weight: 500">- UPLOAD A RECEIPT! -</a></li>
-    <li class="tab"><a href='{{ readyss_url }}'style="color:rgb(67, 160, 27); cursor: pointer; font-weight: 500">- UPLOAD A RECEIPT! -</a></li>
-    <li class="tab"><a href='{{ nomination_url }}' style="color:rgb(67, 160, 27); cursor: pointer; font-weight: 500; margin-left: -20px">- NOMINATE A BUSINESS -</a></li>
-
-    <!--<li class="tab" width=25%><a id="nomination-mover"style="color:rgb(67, 160, 27); cursor: pointer; font-weight: 500">- POWER BINGO -</a></li>-->
+    <li class="tab" width=25%><a id="bingo-mover" style="color:rgb(67, 160, 27); cursor: pointer; font-weight: 500">- READY, SET, SHOP! -</a></li>
+    <li class="tab" width=25%><a id="rss-mover" style="color:rgb(67, 160, 27); cursor: pointer; font-weight: 500; margin-left: -20px">- NOMINATION CHALLENGE -</a></li>
+    <li class="tab" width=25%><a id="nomination-mover"style="color:rgb(67, 160, 27); cursor: pointer; font-weight: 500">- POWER BINGO -</a></li>
     <!--
     <li class="tab" width=25%><a id="stl-mover"style="color:rgb(67, 160, 27); cursor: pointer; font-weight: 500">- SPREAD THE LOVE CHALLENGE -</a></li>-->
 </ul>
-<div class="row challenge-row">
-    <div class="col s12 l4" style="background:url('{% static 'img/efbf_twenties_light2.webp' %}'); background-size: 60%">
-        <div class="bg-box">
-            <a class="link-title" href="{{ readyss_url }}">Ready, Set, Shop!<br> Challenge&nbsp;<span class="material-icons" style="font-size: 14px;">
+<div class="row col-container" style="margin-bottom: 0">
+    <div class="col s12 l4 row background valign-wrapper" id="rss-row" style="margin-bottom:0;background-image: url('{% static 'img/bags_cropped.png' %}'); background-repeat: repeat; background-size:50%">
+        <div class="col s10 offset-s1 m8 offset-m2 center-align instruction-box" style="padding: 20px;background-color: rgba(255, 255, 255, 0.884); border: solid 3px rgba(38, 38, 38, 0.927)">
+            <a href="{{ readyss_url }}" style="color: rgb(194, 45, 22)">Ready, Set, Shop! Challenge&nbsp;<span class="material-icons" style="font-size: 14px;">
                 open_in_new
-                </span>
-            </a>
+                </span></a>
+            <p style="margin:0; font-weight: 500;">Ways to Win</p>
             <div class="row">
-                <div class="prizes">
-                    <div>
-                        <p class="title">1st Place<br>Show Me The Money</p>
-                        
-                        <p>Player with the highest dollar amount spent at Black-owned businesses within the challenge period wins!</p>
-                        <p class="required" style="margin-bottom: 63px"></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col s12 l4" style="background:url('{% static 'img/bags_cropped.png' %}'); background-size: 40%">
-        <div class="bg-box">
-            <a class="link-title" href="{{ readyss_url }}">Ready, Set, Shop!<br>Challenge&nbsp;<span class="material-icons" style="font-size: 14px;">
-                open_in_new
-                </span>
-            </a>
-            <div class="row">
-                <div class="prizes">
-                    <div>
-                        <p class="title">2nd Place<br>Throw It In The Bag</p>
-                        
-                        <p>Player with the most transactions at Black-owned businesses within the challenge period wins!</p>
-                        <p class="required">Minimum 5 transactions</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col s12 l4" style="background:url('{% static 'img/nomination_challenge.jpg' %}'); background-size: 50%">
-        <div class="bg-box">
-            <a class="link-title" href="{{ nomination_url }}">VBP® Nomination<br>Challenge &nbsp;<span class="material-icons" style="font-size: 14px;">
-                open_in_new
-                </span>
-            </a>
-            <div class="row prizes" style="margin-bottom: 8px">
-                <div>
-                    <p class="title">3rd Place<br>Nomination Challenge</p>
+                <div class="">
+                    <ul class="bf-sublist" style="padding-left: 5%; padding-right: 5%">
+                        <li><b><u>Show Me The Money / Throw It In The Bag</u></b></li>
+                        <li>Team/player with the highest dollar amount spent (or the most transactions) at Black-owned businesses within the challenge period wins!</li>
+                    </ul>
                     
-                    <p style="margin-bottom: 30px">Player with the most nominations to the Village Black Pages® within the challenge period wins!</p>
-                    <p class="required">Minimum 5 nominations</p>
+                    <ul class="bf-sublist">
+                        <li><b><u>Every Friday Challenge - Individual Play</u></b></li>
+                        <li>Player with the most transactions within the challenge period wins!</li>
+                        <li class="challenge-period-text">(30-day individual challenge period starts on the 15th of each month!)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col s12 l4 row background valign-wrapper" id="nomination-row" style="margin-bottom:0;background-image:url('{% static 'img/nomination_challenge.jpg' %}'); background-repeat: repeat; background-size:40%">
+        <div class="col s10 offset-s1 m8 offset-m2 center-align instruction-box" style="padding-top:40px; padding-bottom: 40px;background-color: rgba(255, 255, 255, 0.884); border: solid 3px rgba(38, 38, 38, 0.927)">
+            <a href="{{ nomination_url }}" style="color: rgb(9, 106, 9)">VBP™ Nomination Challenge&nbsp;<span class="material-icons" style="font-size: 14px;">
+                open_in_new
+                </span></a>
+            <p style="margin:0; font-weight: 500;" >Ways to Win</p>
+            <div class="row">
+                <ul class="col bf-sublist" style="margin-left: 5%; margin-right: 5%">
+                    <li>Team/player to identify and submit the most, new Black-owned businesses for free listing in ETV’s Village Black Pages wins!</li>
+                    <li class="challenge-period-text">(30-day individual challenge period starts on the 15th of each month!)</li>
+                    <li class="challenge-period-text" style="color: rgb(154, 27, 27)">*Nominated businesses must operate within our 25-state* footprint or online and be submitted through ETV’s portal. Ownership status will be validated by ETV.</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col s12 l4 row background valign-wrapper" id="bingo-row" style="margin-bottom:0;padding:0; background-image: url('{% static 'img/bingo.jpg' %}'); background-repeat: repeat; background-size:75%">
+        <div class="col s10 offset-s1 m8 offset-m2 center-align instruction-box" style="padding: 20px;background-color: rgba(255, 255, 255, 0.884); border: solid 3px rgba(38, 38, 38, 0.927)">
+            <a href="{{ bingo_url }}" class="game-title" style="color: rgb(194, 45, 22)">ETV Power Bingo Challenge&nbsp;<span class="material-icons" style="font-size: 14px;">
+                open_in_new
+                </span></a>
+            <p style="margin:0; font-weight: 500;">Ways to Win</p>
+            <div class="row">
+                <div class="center-align">
+                    <ul class="bf-sublist">
+                        <li><b><u>Team Play</u></b></li>
+                        <li>The first team to blackout the board or fill the most spaces within the challenge period wins!</li>
+                        
+                    </ul>
+                    <ul class="bf-sublist">
+                        <li><b><u>Individual Play</u></b></li>
+                        <li>Be the first person to get Bingo in two directions (12 bingo combinations!)</li>
+                        <li class="challenge-period-text">(30-day individual challenge period starts on the 15th of each month!)</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<style>
-    .challenge-row .col {
-        background-size: 40%;
-        background-repeat: repeat;
-        padding: 40px 0px
-    }
-    .bg-box {
-        width: 90%;
-        margin-left: 5%;
-        text-align: center;
-        background: rgba(255, 255, 255, 0.8);
-        border: solid black 3px;
-        padding: 20px 5px;
-    }
-    .bg-box .link-title {
-        font-family: oskar;
-        font-size: 32px;
-        text-align: center;
-        font-weight: 400;
-        color: rgb(189, 33, 33)
-    }
-</style>
-<div class="row">
-        
-        <div class="col s10 offset-s1 m8 offset-m2" style="padding-top: 40px; padding-bottom: 40px;">
-            <img class="lazy" src="{% static 'img/gift-guide-cs.jpeg' %}" width="100%" style="border:3px solid black">
+<!--
+<div class="row background valign-wrapper" id="stl-row" style="margin-bottom:0;background-image:url('{% static 'img/hashtag.jpg' %}'); background-repeat: repeat; background-size:25%">
+    <div class="col s10 offset-s1 m8 offset-m2 center-align instruction-box" style="padding-top:20px; padding-bottom: 40px;background-color: rgba(255, 255, 255, 0.884); border: solid 3px rgba(38, 38, 38, 0.927)">
+        <a href="{{ stl_url }}" style="color: rgb(194, 45, 22)">Spread The Love Challenge&nbsp;<span class="material-icons" style="font-size: 14px;">
+            open_in_new
+            </span></a>
+        <p style="margin:0; font-weight: 500;">Ways to Win</p>
+        <div class="row">
+            <ul class="col bf-sublist" style="padding-left: 5%; padding-right: 5%">
+                <li>Tag ETV on Instagram to participate!</li>
+                <li>Highest number of <u>different</u> Black-owned businesses shared on social media within the challenge period wins!</li>
+                
+                <li class="challenge-period-text" style="margin-top: 15px; font-size: 14px">(30-day individual challenge period starts on the 15th of each month!)</li>
+            </ul>
         </div>
+    </div>
 </div>
-
+-->
     <style>
-        .instruction-box {
-            height: fit-content
-        }
+        
         @media only screen and (max-width: 420px){
             .create-account-btn {
                 padding-left: 10px;
@@ -268,12 +212,21 @@
         .background {
             height: 350px
             }
+        .instruction-box {
+            height: 300px;
+        }
         
         @media only screen and (max-width:600px){
             .bf-sublist li {
             font-size: 12px;
             font-weight: 400;
         }
+            #bingo-row .instruction-box {
+                height: 320px
+            }
+            #rss-row .instruction-box {
+                height: 330px
+            }
             .instruction-box a {
                 font-size: 17px;
                 font-weight: 500;
@@ -292,6 +245,7 @@
                 height: 400px
             }
             #bingo-row .instruction-box {
+                height: 350px;
                 width: 90%;
                 margin-left: 5%;
             }
@@ -299,6 +253,7 @@
                 height: 400px
             }
             #rss-row .instruction-box {
+                height: 350px;
                 width: 90%;
                 margin-left: 5%;
             }
@@ -341,6 +296,8 @@
                 width: 90%;
                 margin-left: 5%;
             }
+            #rss-row {
+            }
             #rss-row .instruction-box {
                 
                 width: 90%;
@@ -358,12 +315,66 @@
             .instruction-box p {
                 font-size: 20px
             }
+            .instruction-box {
+                height: 700px !important
+            }
             .challenge-period-text {
                 font-size: 16px !important;
                 color: rgb(92, 92, 92)
             }
         
         }
+        @media only screen and (min-width: 1200px) {
+            .background {
+                height: 650px !important;
+            }
+            .instruction-box {
+                height: 600px !important
+            }
+        }
+        @media only screen and (min-width: 1400px) {
+            .background {
+                height: 600px !important;
+            }
+            .instruction-box {
+                height: 550px !important
+            }
+        }
+        @media only screen and (min-width: 1600px) {
+            .background {
+                height: 500px !important;
+            }
+            .instruction-box {
+                height: 450px !important
+            }
+        }
+    </style>
+   <script>
+       $('#bingo-mover').click(function(){
+        $([document.documentElement, document.body]).animate({
+            scrollTop: $("#bingo-row").offset().top
+            }, 500);
+       })
+       $('#rss-mover').click(function(){
+        $([document.documentElement, document.body]).animate({
+            scrollTop: $("#rss-row").offset().top
+            }, 500);
+       })
+       $('#nomination-mover').click(function(){
+        $([document.documentElement, document.body]).animate({
+            scrollTop: $("#nomination-row").offset().top
+            }, 500);
+       })
+       $('#stl-mover').click(function(){
+        $([document.documentElement, document.body]).animate({
+            scrollTop: $("#stl-row").offset().top
+            }, 500);
+       })
+   </script>
+            
+        
+      
+<style>
     .collapsible-body {
         padding-left: 0;
         padding-right: 0;
@@ -374,6 +385,9 @@
             font-family: oskar-inline;
             text-decoration: underline;
         }
+    .tabs {
+       
+    }
     @media only screen and (max-width: 600px){
         #timemoney-top {
             display: none;
@@ -410,21 +424,4 @@
         }
     }
 </style>
-<script>
-    $(document).ready(function(){
-        $('#getStartedBtn').on("click", function(event){
-            var container = $('#wtpContainer');
-            var scrollTo = $('#wtpTitle');
-      
-            // Calculating new position of scrollbar
-            var position = scrollTo.offset().top 
-                    - container.offset().top 
-                    + container.scrollTop();
-      
-            // Setting the value of scrollbar
-            container.scrollTop(position);
-        })
-    })
-    
-</script>
 {% endblock %}
