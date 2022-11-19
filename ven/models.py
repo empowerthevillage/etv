@@ -256,3 +256,10 @@ def nomination_create_id(sender, instance, *args, **kwargs):
 
 pre_save.connect(nomination_create_id, sender=Nomination)
 pre_save.connect(nomination_create_id, sender=FamilyNomination)
+
+class sponsor_img(models.Model):
+    image = models.ImageField()
+    name = models.TextField(max_length=270)
+    
+    def __str__(self):
+        return str(self.name)

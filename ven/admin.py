@@ -1,6 +1,6 @@
 from django.contrib import admin
 from accounts.admin import admin_site
-from .models import Nomination, FamilyNomination
+from .models import Nomination, FamilyNomination, sponsor_img
 
 from dashboard.models import dashboardModel
 
@@ -11,6 +11,7 @@ class VENAdmin(admin.ModelAdmin):
 
 admin_site.register(Nomination, VENAdmin)
 admin_site.register(FamilyNomination)
+admin_site.register(sponsor_img)
 
 dashboardModel.objects.dash_register(Nomination)
 dashboardModel.objects.dash_register(FamilyNomination)

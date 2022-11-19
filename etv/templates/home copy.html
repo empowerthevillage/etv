@@ -8,11 +8,11 @@
 
 
 {% block content %}
-  <div class="marquee">
+<div class="marquee">
     It Takes A Village ... Empower The Village!&nbsp;&nbsp;   |&nbsp;&nbsp;   Explore ETV's Strategic Pillars&nbsp;&nbsp;  |  
-  </div>
+</div>
   
-  <div class="carousel carousel-slider center z-depth-2" id="home-carousel">
+<div class="carousel carousel-slider center z-depth-2" id="home-carousel">
     
     <style>
       .carousel-title {
@@ -197,13 +197,19 @@
       }
       }
     </style>
-    <div class="carousel-item" style="background: url('{% static 'img/policy-collage-final-min.jpg' %}'); background-size: 100% !important; display: flex; align-items: center">
-      <a href="{{ voting_url }}" style="width:100%">  
-        <div class="container z-depth-4 center-align parallax-banner" id="obb-banner">
-            <h4 style="padding: 1% 1% 3% 1%; font-family: oskar; font-weight: 800; font-size: 52px; letter-spacing: 1px; color:rgb(184, 23, 23)">Operation: <b style="font-weight:800; color: black">Ballot Box™</b></h4>
-        </div>
-        </a>
+   <div class="carousel-item" href="" style="background: url('{% static 'img/efbf_twenties_light2.webp' %}'); background-size: cover !important; background-position-y: -200px" id="panel-two">
+        
+    <div class="carousel-wash row valign-wrapper" style="background-color: transparent !important">
+
+      <div class="col s12 z-depth-4 center-align parallax-banner" style="width: 90%; margin-left:5%; padding-top: 2%; padding-bottom: 2%; background-color: rgba(255, 255, 255, 0.616)">
+          <a href="{{ efbf_url }}"><img src="{% static 'img/EFBF_new_r.png' %}" class="efbf-title"></a><br>
+          <a href="{{ efbf_url }}"><img src="{% static 'img/EFBF bag.png' %}" width=20% style="margin-top: 10px; margin-bottom: 10px"></a>
+          
+          <p style="margin-top: 5px; margin-bottom: 0; padding-bottom: 0; font-weight: 600" id="slide-two-text">Support Black-owned businesses at least 1 out of 7 days each week!</b></p>
+          <a class="btn" href="{{ efbf_url }}" id="slide-two-btn" style="margin-top: 10px; padding-top: 2px">VISIT</a>
       </div>
+    </div>
+  </div>
       <div class="carousel-item" href="" style="background: url('{% static 'img/pillar_vectorized2.svg' %}'); background-size: 40% !important;" id="panel-one">
         <div class="carousel-wash row">
           <div class="col s12">
@@ -220,19 +226,7 @@
           </div>
         </div>
       </div>
-      <div class="carousel-item" href="" style="background: url('{% static 'img/efbf_twenties_light2.webp' %}'); background-size: cover !important; background-position-y: -200px" id="panel-two">
-        
-        <div class="carousel-wash row valign-wrapper" style="background-color: transparent !important">
-  
-          <div class="col s12 z-depth-4 center-align parallax-banner" style="width: 90%; margin-left:5%; padding-top: 2%; padding-bottom: 2%; background-color: rgba(255, 255, 255, 0.616)">
-              <a href="{{ efbf_url }}"><img src="{% static 'img/EFBF_new_r.png' %}" class="efbf-title"></a><br>
-              <a href="{{ efbf_url }}"><img src="{% static 'img/EFBF bag.png' %}" width=20% style="margin-top: 10px; margin-bottom: 10px"></a>
-              
-              <p style="margin-top: 5px; margin-bottom: 0; padding-bottom: 0; font-weight: 600" id="slide-two-text">Support Black-owned businesses at least 1 out of 7 days each week!</b></p>
-              <a class="btn" href="{{ efbf_url }}" id="slide-two-btn" style="margin-top: 10px; padding-top: 2px">VISIT</a>
-          </div>
-        </div>
-      </div>
+      
       <div class="carousel-item" href="">
         
         <div class="carousel-wash"  style="background-color: black !important">
@@ -288,9 +282,13 @@
           }
         </style>
       </div>
-      
-        
-        </div>
+      <div class="carousel-item" style="background: url('{% static 'img/policy-collage-final-min.jpg' %}'); background-size: 100% !important; display: flex; align-items: center">
+        <a href="{{ voting_url }}" style="width:100%">  
+          <div class="container z-depth-4 center-align parallax-banner" id="obb-banner">
+              <h4 style="padding: 1% 1% 3% 1%; font-family: oskar; font-weight: 800; font-size: 52px; letter-spacing: 1px; color:rgb(184, 23, 23)">Operation: <b style="font-weight:800; color: black">Ballot Box™</b></h4>
+          </div>
+          </a>
+      </div>
 </div>
 <div class="nav-content z-depth-1" style="margin-top: 10px; margin-bottom: 10px">
   <ul class="tabs tabs-transparent tabs-fixed-width z-depth-2 tabs-navigation-menu">
@@ -301,7 +299,7 @@
   </ul>
 </div>
 
-  <div class="pillar-intro" style="margin-bottom: 70px;">
+<div class="pillar-intro" style="margin-bottom: 70px;">
     <h6 class="center-align home-heading" style="color: #149e0f; margin-bottom: 20px; margin-top: 15px">Explore ETV's Strategic Pillars</h6>
     <div class="row pillar-intro-row z-depth-2">
       <a href="{{ ep_url }}" class="pillar-intro-link">
@@ -365,19 +363,31 @@
         </div>
       </a>
     </div>
-  </div>
+</div>
 
+  
+<div>
+  <h6 class="center-align home-heading" style="color:#BF1E2D; margin-top: 15px; margin-bottom: 20px">Black Friday Holiday Challenge</h6>
+  <div class="center-align">
     <div>
-      <h6 class="center-align home-heading" style="color: #149e0f; margin-top: 15px; margin-bottom: 20px">ETV Mission & Vision Video!</h6>
-        <div class="center-align z-depth-3" style="background: url('{% static 'img/collage1.svg' %}'); background-size: 50%">
+      <iframe class="mission-video scale-up-center z-depth-3" width="80%" src="https://www.youtube.com/embed/zV9uJ2lHR-E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </div> 
+  <div class="divider" style="border-bottom: solid 1px rgb(233, 233, 233); margin-top: 30px; width: 80%; margin-left: 10%; margin-bottom: 30px"></div>
+  <h6 class="center-align home-heading" style="color: #149e0f; margin-top: 15px; margin-bottom: 20px">ETV Mission & Vision Video!</h6>
+  
+  
+
+  <div class="center-align z-depth-3" style="background: url('{% static 'img/collage1.svg' %}'); background-size: 50%">
           <div style="background-color: rgba(223, 223, 223, 0.632);">
             <iframe class="mission-video scale-up-center" width="80%" src="https://www.youtube.com/embed/7ypFvkUOtwo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
-        </div> 
-        <div class="divider" style="border-bottom: solid 1px rgb(233, 233, 233); margin-top: 30px; width: 80%; margin-left: 10%; margin-bottom: 30px"></div>
+  </div> 
+  
+  <div class="divider" style="border-bottom: solid 1px rgb(233, 233, 233); margin-top: 30px; width: 80%; margin-left: 10%; margin-bottom: 30px"></div>
         
               
-        <div class="z-depth-2 center-align" style="margin-top:-10px; margin-top: 20px;padding-bottom: 5%">
+  <div class="z-depth-2 center-align" style="margin-top:-10px; margin-top: 20px;padding-bottom: 5%">
           
           <div class="row" style="padding-top: 30px">
               <h6 class="home-heading">Check Out ETV’s 2021 Annual Report</h6>
@@ -385,27 +395,99 @@
           </div>
 
           <a href="https://issuu.com/empowerthevillage/docs/final_2021_annual_report?mode=window"><img class="lazy z-depth-3" src="{% static 'img/annual-report-21-22.jpg' %}" width="40%"></a>
-        </div>
-        <div class="row center-align z-depth-2">
+  </div>
+        
+  <div class="row center-align z-depth-2">
           <div class='col s12' style="padding-top: 5%; padding-bottom: 5%">
             <a href="{{ efbf_url }}"><h6 class="center-align home-page-sh6">Join The <b style="color:black; font-weight:400">#Make<b style="color: #01a650; font-weight:400">EveryFriday</b>BlackFriday</b> Movement <br>to Empower Black-Owned Businesses and Communities! <span class="material-icons">launch</span></h6></a>
             
           </div>
-        </div>
-        <div class="row center-align">
+  </div>
+        
+  <div class="row center-align">
           <div class="col s12 m8 offset-m2">
             <img class="lazy" style="margin-top: 40px; margin-bottom: 60px" src="{% static 'img/sponsors-mini.png' %}" width="100%">
           </div>
-        </div>
+  </div>
       
-    </div>     
+</div>     
     
-    <script>
-        $('#mailchimp-efbf-form').submit(event, function(){
+<script>
+    $('#mailchimp-efbf-form').submit(event, function(){
+        event.preventDefault();
+        var email = $('#mailchimp-email-efbf').val()
+        var token = '{{csrf_token}}'
+        var form = $('#mailchimp-efbf-form')
+        $.ajax({
+            data: form.serialize(),
+            dataType: 'json',
+            url: '/mailchimp-signup/',
+            method: "POST",
+            success: function(data) {
+                Swal.fire({
+                title:'Welcome to the Village!',
+                html: '',
+                showComfirmButton: false,
+                showCancelButton: false,
+                showCloseButton: false,
+                text:"You've been added to our mailing list",
+                })
+            },
+            error: function(){
+                Swal.fire({
+                title:"You're on the list!",
+                html: '',
+                showComfirmButton: false,
+                showCancelButton: false,
+                showCloseButton: false,
+                text:"You're on our mailing list, thank you for keeping up with ETV!",
+                })
+            }
+        })
+    }) 
+</script>
+<script>
+  $('.carousel.carousel-slider').carousel({
+  fullWidth: true,
+  indicators: true,
+
+});
+var intervalId = window.setInterval(function(){
+  $('.carousel.carousel-slider').carousel('next');
+}, 10000);
+  
+</script>
+<script>
+  $(function(){
+    $('.marquee').marquee({
+      duration: 10000,
+      pauseOnHover: true,
+      duplicated: true,
+      easing: 'linear',
+    });    
+  });
+  $('.dropdown-trigger').dropdown();
+  $('#join-village-topnav').click(function(){
+      Swal.fire({
+          html: '<h3 class="join-tv-title">Join The Village!</h3><p>Enter your email address to join the ETV mailing list.</p><form method="POST" action="/mailchimp-signup/" id="mailchimp-nav-form">{% csrf_token %}<div class="input-field"><input required id="mailchimp-email-nav" name="email" type="email"><label for="mailchimp-email-nav">Email</label></div><button type="submit" class="btn light-green darken-3 waves-effect" id="efbf-mailchimp">Add Me To The List!</button></form>',
+          showCancelButton: false,
+          showCloseButton: true,
+          showConfirmButton: false,
+      })     
+  })
+  $('#join-village-sidenav').click(function(){
+      Swal.fire({
+          html: '<h3 class="join-tv-title">Join The Village!</h3><p>Enter your email address to join the ETV mailing list.</p><form method="POST" action="/mailchimp-signup/" id="mailchimp-nav-form">{% csrf_token %}<div class="input-field"><input required id="mailchimp-email-nav" name="email" type="email"><label for="mailchimp-email-nav">Email</label></div><button type="submit" class="btn light-green darken-3 waves-effect" id="efbf-mailchimp">Add Me To The List!</button></form>',
+          showCancelButton: false,
+          showCloseButton: true,
+          showConfirmButton: false,
+      })     
+  })
+  $('#mailchimp-nav-form').submit(event, function(){
             event.preventDefault();
-            var email = $('#mailchimp-email-efbf').val()
+            var email = $('#mailchimp-email-nav').val()
             var token = '{{csrf_token}}'
-            var form = $('#mailchimp-efbf-form')
+            var form = $('#mailchimp-nav-form')
             $.ajax({
                 data: form.serialize(),
                 dataType: 'json',
@@ -433,459 +515,388 @@
                 }
             })
         }) 
-    </script>
-    <script>
-      $('.carousel.carousel-slider').carousel({
-      fullWidth: true,
-      indicators: true,
-
-    });
-    var intervalId = window.setInterval(function(){
-      $('.carousel.carousel-slider').carousel('next');
-    }, 10000);
-      
-    </script>
-    <script>
-      $(function(){
-        $('.marquee').marquee({
-          duration: 10000,
-          pauseOnHover: true,
-          duplicated: true,
-          easing: 'linear',
-        });    
-      });
-      $('.dropdown-trigger').dropdown();
-      $('#join-village-topnav').click(function(){
-          Swal.fire({
-              html: '<h3 class="join-tv-title">Join The Village!</h3><p>Enter your email address to join the ETV mailing list.</p><form method="POST" action="/mailchimp-signup/" id="mailchimp-nav-form">{% csrf_token %}<div class="input-field"><input required id="mailchimp-email-nav" name="email" type="email"><label for="mailchimp-email-nav">Email</label></div><button type="submit" class="btn light-green darken-3 waves-effect" id="efbf-mailchimp">Add Me To The List!</button></form>',
-              showCancelButton: false,
-              showCloseButton: true,
-              showConfirmButton: false,
-          })     
-      })
-      $('#join-village-sidenav').click(function(){
-          Swal.fire({
-              html: '<h3 class="join-tv-title">Join The Village!</h3><p>Enter your email address to join the ETV mailing list.</p><form method="POST" action="/mailchimp-signup/" id="mailchimp-nav-form">{% csrf_token %}<div class="input-field"><input required id="mailchimp-email-nav" name="email" type="email"><label for="mailchimp-email-nav">Email</label></div><button type="submit" class="btn light-green darken-3 waves-effect" id="efbf-mailchimp">Add Me To The List!</button></form>',
-              showCancelButton: false,
-              showCloseButton: true,
-              showConfirmButton: false,
-          })     
-      })
-      $('#mailchimp-nav-form').submit(event, function(){
-                event.preventDefault();
-                var email = $('#mailchimp-email-nav').val()
-                var token = '{{csrf_token}}'
-                var form = $('#mailchimp-nav-form')
-                $.ajax({
-                    data: form.serialize(),
-                    dataType: 'json',
-                    url: '/mailchimp-signup/',
-                    method: "POST",
-                    success: function(data) {
-                        Swal.fire({
-                        title:'Welcome to the Village!',
-                        html: '',
-                        showComfirmButton: false,
-                        showCancelButton: false,
-                        showCloseButton: false,
-                        text:"You've been added to our mailing list",
-                        })
-                    },
-                    error: function(){
-                        Swal.fire({
-                        title:"You're on the list!",
-                        html: '',
-                        showComfirmButton: false,
-                        showCancelButton: false,
-                        showCloseButton: false,
-                        text:"You're on our mailing list, thank you for keeping up with ETV!",
-                        })
-                    }
-                })
-            }) 
-    </script>
-    <style>
-      
-      @media only screen and (min-width:0px){
-        .efbf-title {
-          width: 100%;
+</script>
+<style>
+  
+  @media only screen and (min-width:0px){
+    .efbf-title {
+      width: 100%;
+    }
+    #slide-one-text {
+      font-size: 13px !important
+    }
+    .photo-caption {
+      color:rgb(4, 4, 4);
+      font-size: 14px;
+      line-height: 20px;
+      margin-bottom: 0;
+    }
+    .photo-credit {
+      margin-top: 0;
+      color: grey;
+      font-size: 12px
+    }
+    .marquee {
+      cursor: default;
+      width: 100%;
+      overflow: hidden;
+      background: black;
+      color: white;
+      font-family: oskar;
+      font-size: 22px;
+      padding: 8px 0px
+    }
+    #navbar {
+    height: 145px !important;
+  }
+  .nav-wrapper {
+    height: 130px !important
+  }
+  #body-container {
+    margin-top: 145px !important
+  }
+    .tabs-navigation-menu .nav-tab {
+      color: white !important
+    }
+    .mission-video {
+          height: 300
         }
-        #slide-one-text {
-          font-size: 13px !important
+        .anniversary-graphic {
+          height: 300
         }
-        .photo-caption {
-          color:rgb(4, 4, 4);
-          font-size: 14px;
-          line-height: 20px;
-          margin-bottom: 0;
-        }
-        .photo-credit {
-          margin-top: 0;
-          color: grey;
-          font-size: 12px
-        }
-        .marquee {
-          cursor: default;
-          width: 100%;
-          overflow: hidden;
-          background: black;
-          color: white;
-          font-family: oskar;
-          font-size: 22px;
-          padding: 8px 0px
-        }
-        #navbar {
-        height: 145px !important;
+    .nav-content {
+        background: rgb(4, 4, 4)
       }
-      .nav-wrapper {
-        height: 130px !important
-      }
-      #body-container {
-        margin-top: 145px !important
-      }
-        .tabs-navigation-menu .nav-tab {
-          color: white !important
+    .tabs-navigation-menu li a {
+          padding: 0px 5px !important
         }
-        .mission-video {
-              height: 300
-            }
-            .anniversary-graphic {
-              height: 300
-            }
-        .nav-content {
-            background: rgb(4, 4, 4)
-          }
-        .tabs-navigation-menu li a {
-              padding: 0px 5px !important
-            }
-        .join-tv-title {
-                    font-family: oskar-inline;
-              
-                }
-                .swal2-close:focus{
-                  box-shadow: none !important;
-                  background-color: transparent !important;
-              }
-        .home-heading {
-          margin-top: 20px; 
-          margin-bottom: 20px;
-          font-size: 28px;
-          padding: 0px 2%
-        }
-        .home-subheading {
-          font-weight: 600; 
-          font-size: 18px
-        }
-        .juneteenth-card {
-          display: flex;
-          align-items: center;
-          height: 415px;
-          padding: 2%; 
-          background: rgb(63,180,58);
-          background: linear-gradient(59deg, rgba(63,180,58,0.1) 0%, rgba(244,169,43,0.1) 48%, rgba(253,29,29,0.1) 100%);
-        }
-        .juneteenth-card h6{
-          font-size: 24px;
-        }
-        .juneteenth-card p{
-          font-size: 16px;
-          line-height: 24px;
-        }
-        .carousel .indicators .indicator-item {
-          background-color: rgba(131, 142, 131, 0.68);
-        }
-        .carousel .indicators .indicator-item.active {
-          background-color: rgba(36, 184, 36, 0.68);
-          margin-top: 10px;
-        }
-          .carousel-wash {
-            width: 100%;
-            height: 100%;
-            margin-top: 0 !important;
-            background-color: rgba(249, 249, 249, 0.906);
-          }
+    .join-tv-title {
+                font-family: oskar-inline;
           
-          #home-carousel .carousel-item {
-              margin-top:0;
-              padding-top: 0
-          }
-          p {
-              font-weight: 300;
-              letter-spacing: 1px;
-              transform: scale(1, 0.95);
-          }
-          .press-release-btn {
-              background-color: rgb(135, 182, 166);
-          }
-          .press-release-btn:hover {
-              background-color: rgb(111, 151, 138);
-              color: rgb(224, 224, 224);
-          }
-          .join-tv-title {
-            font-family: oskar-inline;
-
-        }
-        #panel-one {
-          padding-top: none
-        }
-        .swal2-close:focus{
-          box-shadow: none !important;
-          background-color: transparent !important;
-      }
-        .home-page-sh6 {
-          font-family: oskar; 
-          font-size: 20px;
-          line-height: 32px; 
-          margin-bottom: 20px; 
-          margin-top: 20px; 
-          color:  #bf1e2d
-        }
-        .home-page-sh7 {
-          font-family: oskar; 
-          font-size: 24px;
-          line-height: 32px; 
-          margin-bottom: 20px; 
-          padding-top: 50px; 
-          color:  #01a650
-        }
-        h6 {
-          font-size: 36px;
-          font-family: oskar-inline;
-          color: rgb(31, 171, 31);
-        }
-        h5 {
-            font-size: 16px
-        }
-        #home-carousel {
-            height: 310px !important
-          }
-        #panel-one {
-          background-size: 150% !important
-        }
-          #vbp-title {
-            max-height: 90px;
-            max-width: 90%
-          }
-          #vbp-carousel-pic {
-            max-height: 150px;
-            min-height: 80px;
-            max-width: 100%
-          }
-          #slide-one-btn {
-            background-color:rgba(68, 140, 32, 0.66); 
-            padding-top: 0px;
-            padding-bottom: 20px;
-            margin-top: 10px;
-            margin-bottom: 5px;
-          }
-          #slide-two-btn {
-            background-color:rgba(68, 140, 32, 0.66); 
-            padding-top: 0px;
-            padding-bottom: 20px;
-            margin-top: 10px;
-            margin-bottom: 5px;
-            font-size: 18px;
-          }
-          #slide-two-text {
-            font-size: 16px
-          }
-
-      }
-      @media only screen and (min-width:460px){
-        .home-heading {
-          margin-top: 30px; 
-          margin-bottom: 30px;
-          font-size: 36px;
-        }
-        .home-subheading {
-          font-size: 20px
-        }
-        .juneteenth-card h6{
-          font-size: 28px;
-        }
-        #home-carousel {
-            height: 340px !important
-          }
-      }
-      @media only screen and (min-width:530px){
-        .juneteenth-card h6{
-          font-size: 32px;
-        }
-        .juneteenth-card p{
-          font-size: 16px;
-        }
-        #home-carousel {
-            height: 360px !important
-          }
-      }
-      @media only screen and (min-width:601px){
-        .efbf-title {
-          width: 100%;
-        }
-        #slide-one-text {
-          font-size: 20px !important
-        }
-        .marquee {
-          width: 100%;
-          overflow: hidden;
-          background: black;
-          color: white;
-          font-family: oskar;
-          font-size: 26px;
-          padding: 10px 0px
-        }
-        .home-heading {
-          margin-top: 30px; 
-          margin-bottom: 30px;
-          font-size: 42px;
-        }
-        .home-subheading {
-          font-size: 24px
-        }
-        .juneteenth-card h6{
-          font-size: 36px;
-        }
-        .juneteenth-card p{
-          font-size: 16px;
-        }
-        p {
-          font-size: 16px;
-          line-height: 32px
-        }
-        .home-page-sh6 { 
-          font-size: 32px;
-          line-height: 42px; 
-          margin-bottom: 20px; 
-          margin-top: 30px; 
-        }
-        .home-page-sh7 {
-          font-size: 30px;
-          line-height: 38px; 
-          margin-bottom: 20px; 
-        }
-        h6 {
-          font-size: 56px;
-          font-family: oskar-inline;
-          color: rgb(31, 171, 31);
-        }
-        h5 {
-            font-size: 20px
-        }
-        #home-carousel {
-            height: 390px !important
-          }
-          #slide-two-text {
-            font-size: 20px !important
-          }
-          #slide-two-btn {
-            background-color:rgba(68, 140, 32, 0.66); 
-            padding-top: 0px;
-            padding-bottom: 20px;
-            margin-top: 10px;
-            margin-bottom: 5px;
-            font-size: 22px;
-          } 
-      }
-      @media only screen and (min-width: 663px) {
-              .mission-video {
-                height: 415
-              }
-              .anniversary-graphic {
-                height: 415
-              }
             }
-      @media only screen and (min-width:735px){
-        
-        #home-carousel {
-            height: 410px !important
+            .swal2-close:focus{
+              box-shadow: none !important;
+              background-color: transparent !important;
           }
+    .home-heading {
+      margin-top: 20px; 
+      margin-bottom: 20px;
+      font-size: 28px;
+      padding: 0px 2%
+    }
+    .home-subheading {
+      font-weight: 600; 
+      font-size: 18px
+    }
+    .juneteenth-card {
+      display: flex;
+      align-items: center;
+      height: 415px;
+      padding: 2%; 
+      background: rgb(63,180,58);
+      background: linear-gradient(59deg, rgba(63,180,58,0.1) 0%, rgba(244,169,43,0.1) 48%, rgba(253,29,29,0.1) 100%);
+    }
+    .juneteenth-card h6{
+      font-size: 24px;
+    }
+    .juneteenth-card p{
+      font-size: 16px;
+      line-height: 24px;
+    }
+    .carousel .indicators .indicator-item {
+      background-color: rgba(131, 142, 131, 0.68);
+    }
+    .carousel .indicators .indicator-item.active {
+      background-color: rgba(36, 184, 36, 0.68);
+      margin-top: 10px;
+    }
+      .carousel-wash {
+        width: 100%;
+        height: 100%;
+        margin-top: 0 !important;
+        background-color: rgba(249, 249, 249, 0.906);
       }
-      @media only screen and (min-width:993px){
-        .efbf-title {
-          width: 80%;
-          margin-bottom: 20px
-        }
-        .mission-video {
-                height: 515
-              }
-              .anniversary-graphic {
-                height: 515
-              }
-        .home-heading {
-          margin-top: 0px; 
-          margin-bottom: 40px;
-          font-size: 48px;
-        }
-        .home-subheading {
-          font-size: 26px
-        }
-        .juneteenth-card h6{
-          font-size: 42px;
-        }
-        p {
-          font-size: 16px;
-          line-height: 32px
-        }
-        .home-page-sh6 { 
-          font-size: 42px;
-          line-height: 54px; 
-          margin-bottom: 20px; 
-          margin-top: 30px; 
-        }
-        .home-page-sh7 {
-          font-size: 38px;
-          line-height: 48px; 
-          margin-bottom: 20px; 
-        }
-        #home-carousel {
-            height: 480px !important
-          }
-          #slide-one-text {
-            font-size: 28px !important
-          }
-          #slide-two-text {
-            font-size: 28px !important
-          }
+      
+      #home-carousel .carousel-item {
+          margin-top:0;
+          padding-top: 0
       }
-      @media only screen and (min-width:1225px){
-        .home-heading {
-          margin-top: 40px; 
-          margin-bottom: 40px;
-          font-size: 52px;
-          padding: 0 10%
-        }
-        .home-subheading {
-          font-size: 28px
-        }
-        p {
-          font-size: 20px;
-          line-height: 36px
-        }
-        #home-carousel {
-            height: 460px !important;
-          }
+      p {
+          font-weight: 300;
+          letter-spacing: 1px;
+          transform: scale(1, 0.95);
       }
-      @media only screen and (min-width:1400px){
-        #home-carousel {
-            height: 600px !important;
-          }
-          #vbp-title {
-            max-height: 140px;
-            max-width: 90%;
-            margin-top: 20px !important;
-          }
-          #vbp-carousel-pic {
-            max-height: 290px;
-            min-height: 100px;
-            max-width: 100%
-          }
-          
+      .press-release-btn {
+          background-color: rgb(135, 182, 166);
       }
-      @media only screen and (max-width:992px){
-                    .coming-soon-group {
-                        margin-bottom: -40%
-                    }
+      .press-release-btn:hover {
+          background-color: rgb(111, 151, 138);
+          color: rgb(224, 224, 224);
+      }
+      .join-tv-title {
+        font-family: oskar-inline;
+
+    }
+    #panel-one {
+      padding-top: none
+    }
+    .swal2-close:focus{
+      box-shadow: none !important;
+      background-color: transparent !important;
+  }
+    .home-page-sh6 {
+      font-family: oskar; 
+      font-size: 20px;
+      line-height: 32px; 
+      margin-bottom: 20px; 
+      margin-top: 20px; 
+      color:  #bf1e2d
+    }
+    .home-page-sh7 {
+      font-family: oskar; 
+      font-size: 24px;
+      line-height: 32px; 
+      margin-bottom: 20px; 
+      padding-top: 50px; 
+      color:  #01a650
+    }
+    h6 {
+      font-size: 36px;
+      font-family: oskar-inline;
+      color: rgb(31, 171, 31);
+    }
+    h5 {
+        font-size: 16px
+    }
+    #home-carousel {
+        height: 310px !important
+      }
+    #panel-one {
+      background-size: 150% !important
+    }
+      #vbp-title {
+        max-height: 90px;
+        max-width: 90%
+      }
+      #vbp-carousel-pic {
+        max-height: 150px;
+        min-height: 80px;
+        max-width: 100%
+      }
+      #slide-one-btn {
+        background-color:rgba(68, 140, 32, 0.66); 
+        padding-top: 0px;
+        padding-bottom: 20px;
+        margin-top: 10px;
+        margin-bottom: 5px;
+      }
+      #slide-two-btn {
+        background-color:rgba(68, 140, 32, 0.66); 
+        padding-top: 0px;
+        padding-bottom: 20px;
+        margin-top: 10px;
+        margin-bottom: 5px;
+        font-size: 18px;
+      }
+      #slide-two-text {
+        font-size: 16px
+      }
+
+  }
+  @media only screen and (min-width:460px){
+    .home-heading {
+      margin-top: 30px; 
+      margin-bottom: 30px;
+      font-size: 36px;
+    }
+    .home-subheading {
+      font-size: 20px
+    }
+    .juneteenth-card h6{
+      font-size: 28px;
+    }
+    #home-carousel {
+        height: 340px !important
+      }
+  }
+  @media only screen and (min-width:530px){
+    .juneteenth-card h6{
+      font-size: 32px;
+    }
+    .juneteenth-card p{
+      font-size: 16px;
+    }
+    #home-carousel {
+        height: 360px !important
+      }
+  }
+  @media only screen and (min-width:601px){
+    .efbf-title {
+      width: 100%;
+    }
+    #slide-one-text {
+      font-size: 20px !important
+    }
+    .marquee {
+      width: 100%;
+      overflow: hidden;
+      background: black;
+      color: white;
+      font-family: oskar;
+      font-size: 26px;
+      padding: 10px 0px
+    }
+    .home-heading {
+      margin-top: 30px; 
+      margin-bottom: 30px;
+      font-size: 42px;
+    }
+    .home-subheading {
+      font-size: 24px
+    }
+    .juneteenth-card h6{
+      font-size: 36px;
+    }
+    .juneteenth-card p{
+      font-size: 16px;
+    }
+    p {
+      font-size: 16px;
+      line-height: 32px
+    }
+    .home-page-sh6 { 
+      font-size: 32px;
+      line-height: 42px; 
+      margin-bottom: 20px; 
+      margin-top: 30px; 
+    }
+    .home-page-sh7 {
+      font-size: 30px;
+      line-height: 38px; 
+      margin-bottom: 20px; 
+    }
+    h6 {
+      font-size: 56px;
+      font-family: oskar-inline;
+      color: rgb(31, 171, 31);
+    }
+    h5 {
+        font-size: 20px
+    }
+    #home-carousel {
+        height: 390px !important
+      }
+      #slide-two-text {
+        font-size: 20px !important
+      }
+      #slide-two-btn {
+        background-color:rgba(68, 140, 32, 0.66); 
+        padding-top: 0px;
+        padding-bottom: 20px;
+        margin-top: 10px;
+        margin-bottom: 5px;
+        font-size: 22px;
+      } 
+  }
+  @media only screen and (min-width: 663px) {
+          .mission-video {
+            height: 415
+          }
+          .anniversary-graphic {
+            height: 415
+          }
+        }
+  @media only screen and (min-width:735px){
+    
+    #home-carousel {
+        height: 410px !important
+      }
+  }
+  @media only screen and (min-width:993px){
+    .efbf-title {
+      width: 80%;
+      margin-bottom: 20px
+    }
+    .mission-video {
+            height: 515
+          }
+          .anniversary-graphic {
+            height: 515
+          }
+    .home-heading {
+      margin-top: 0px; 
+      margin-bottom: 40px;
+      font-size: 48px;
+    }
+    .home-subheading {
+      font-size: 26px
+    }
+    .juneteenth-card h6{
+      font-size: 42px;
+    }
+    p {
+      font-size: 16px;
+      line-height: 32px
+    }
+    .home-page-sh6 { 
+      font-size: 42px;
+      line-height: 54px; 
+      margin-bottom: 20px; 
+      margin-top: 30px; 
+    }
+    .home-page-sh7 {
+      font-size: 38px;
+      line-height: 48px; 
+      margin-bottom: 20px; 
+    }
+    #home-carousel {
+        height: 480px !important
+      }
+      #slide-one-text {
+        font-size: 28px !important
+      }
+      #slide-two-text {
+        font-size: 28px !important
+      }
+  }
+  @media only screen and (min-width:1225px){
+    .home-heading {
+      margin-top: 40px; 
+      margin-bottom: 40px;
+      font-size: 52px;
+      padding: 0 10%
+    }
+    .home-subheading {
+      font-size: 28px
+    }
+    p {
+      font-size: 20px;
+      line-height: 36px
+    }
+    #home-carousel {
+        height: 460px !important;
+      }
+  }
+  @media only screen and (min-width:1400px){
+    #home-carousel {
+        height: 600px !important;
+      }
+      #vbp-title {
+        max-height: 140px;
+        max-width: 90%;
+        margin-top: 20px !important;
+      }
+      #vbp-carousel-pic {
+        max-height: 290px;
+        min-height: 100px;
+        max-width: 100%
+      }
+      
+  }
+  @media only screen and (max-width:992px){
+                .coming-soon-group {
+                    margin-bottom: -40%
                 }
-    </style>
-    </html>
+            }
+</style>
 {% endblock %}

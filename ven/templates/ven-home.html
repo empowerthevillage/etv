@@ -17,19 +17,18 @@
 <div class="parallax-container z-depth-3 box-shadow valign-wrapper">
     
     <div class="container z-depth-4 center-align parallax-banner">
-        <img src='{% static "img/ven-long.png" %}' style="width:100%; padding: 4%">
+        <img clas="lazy" src='{% static "img/ven-long.png" %}' style="width:100%; padding: 4%">
     </div>
     <div class="parallax">
-        <img src="{% static 'img/vbp-collage.svg' %}" style="opacity: 1; ">
+        <img class="lazy" src="{% static 'img/vbp-collage.svg' %}" style="opacity: 1; ">
     </div>
 
 </div>
-<div style="background: url('{% static 'img/ed_collage_big.svg' %}'); background-size: 180%; height: 100%">
+<div>
     <div class="row" style="height: 100%; background-color: rgba(255, 255, 255, 0.781); width:100%">
         <ul class="tabs tabs-fixed-width tab-demo z-depth-1 ven-tabs">
-            <li class="tab" style="width: 25%"><a class="active" href="#ven-home">Overview</a></li>
-            <li class="tab" style="width: 25%"><img src="{% static 'img/sbpro-logo-expanded.png' %}"></li>
-            <li class="tab" style="width: 25%"><img src="{% static 'img/mass-mutual-logo.svg' %}"></li>
+            <li class="tab"><a class="active" href="#ven-home">Overview</a></li>
+            <li class="tab"><img class="lazy" src="{% static 'img/sbpro-logo-expanded.png' %}"></li>
             
         </ul>
         <div id="ven-home" class="col s12">
@@ -46,13 +45,13 @@
                                 </p>
                             </div>
                             <div class="row valign-wrapper" style="padding: 0px 20px">
-                                <a href="/village-empowerment-network-nomination" class="col s6" style="margin-right: 10px; margin-top: 15px"><img width=100% src="{% static 'img/clipboard-business.png' %}"></a>
-                                <a href="/village-empowerment-network-nomination" class="col s6" style="margin-right: 10px; margin-top: 15px"><img width=100% src="{% static 'img/clipboard-fam.png' %}"></a>
+                                <a href="/village-empowerment-network-nomination" class="col s6" style="margin-right: 10px; margin-top: 15px"><img class="lazy" width=100% src="{% static 'img/clipboard-business.png' %}"></a>
+                                <a href="/village-empowerment-network-nomination" class="col s6" style="margin-right: 10px; margin-top: 15px"><img class="lazy" width=100% src="{% static 'img/clipboard-fam.png' %}"></a>
                             </div>
                         </div>
                         <div class="row hide-on-med-and-up" style="padding-top: 20px; margin-bottom: 0">
                             <div class="col s12 center-align">
-                                <a href="/village-empowerment-network-nomination"><img width=70% src="{% static 'img/clipboard-vertical2.png' %}"></a>
+                                <a href="/village-empowerment-network-nomination"><img width=70% class="lazy" src="{% static 'img/clipboard-vertical2.png' %}"></a>
                             </div>
                             <div class="col s12">
                                 <p style="padding-top: 0; padding-bottom: 0; margin-bottom: 0; text-align: center;"><b>Village Empowerment Network</b>™ provides the expertise Black entrepreneurs and families need to thrive. Black business owners can receive one-on-one strategy, planning, and technical counseling from experts to grow revenue, access funding, manage employees and expenses, protect assets, and expand their network. Individuals and families will receive financial planning and budgeting services. ETV will also offer access to online, on-demand trainings and workshops through its VEN Partners designed to ensure that entrepreneurs and families can learn and access the information they need at their own pace to build generational wealth.
@@ -68,28 +67,29 @@
                 <div class="divider" style="margin-top: 20px; margin-bottom: 20px"></div>
                 <div class="row center-align">
                     <h5 style="line-height: 40px; margin-bottom: 10px">ETV funds exclusive one-on-one counseling, workshops, and <br>on-demand training courses for VEN registrants offered by more than a dozen</h5>
-                    <h5 class="dyk" style="color:black; margin-bottom: 20px"><b style="color:rgb(18, 148, 18); font-weight: 300">VILLAGE </b><b style="color:black; font-weight: 300">EMPOWERMENT </b><b style="color:rgb(184, 34, 34); font-weight: 300">NETWORK</b> PARTNERS</h5>
-                    <h5 style="margin-bottom: 30px">Meet the Team Leaders!</h5>
+                    <h5 class="dyk" style="color:black; margin-bottom: 20px"><b style="color:rgb(18, 148, 18); font-weight: 300">VILLAGE </b><b style="color:black; font-weight: 300">EMPOWERMENT </b><b style="color:rgb(184, 34, 34); font-weight: 300">NETWORK</b></h5>
+                    <h5 style="margin-bottom: 30px">Meet the Team Leader!</h5>
                     <div class="row partner-logo-row">
-                        <div class="col s12 m6" style="height: 100%">
-                            <img width=250px height=250px class="z-depth-1" src="{% static 'img/andrew-frazier.jpg' %}" style="margin-top: 10px; border-radius: 50%;">
+                        <div class="col s12 m6 offset-m3" style="height: 100%">
+                            <img width=250px height=250px class="z-depth-1 lazy" src="{% static 'img/andrew-frazier.jpg' %}" style="margin-top: 10px; border-radius: 50%;">
                             <p style="margin: 0; margin-top: 20px; padding: 0; font-weight: 600; font-size: 1.64rem">Andrew Frazier</p>
-                            <p style="margin: 5px 0px; padding: 0; font-size: 22px">VEN Lead Business Strategist</p>
-                            <a href="#sbpro"><img class="partner-img" src="{% static 'img/sbpro-logo-expanded.png' %}" width=120% style="margin-top: 0px;"></a>
-                            
-                        </div>
-                        <div class="col s12 m6 " style="height: 100%">
-                            <img width=250px height=250px class="z-depth-1" src="{% static 'img/michelle-harlan.jpeg' %}" style="margin-top: 10px; border-radius: 50%;">
-                            <p style="margin: 0; margin-top: 20px; padding: 0; font-weight: 600; font-size: 1.64rem">Michelle Harlan</p>
-                            <p style="margin: 5px 0px; padding: 0; font-size: 22px">VEN Lead Business & Wealth Strategist</p>
-                            <a href="#massm"><img style="margin-top: 20px" class="partner-img" src="{% static 'img/mass-mutual-logo.svg' %}"></a>
+                            <p style="margin: 5px 0px; padding: 0; font-size: 22px">VEN Lead Strategist</p>
+                            <a href="#sbpro"><img class="partner-img class" src="{% static 'img/sbpro-logo-expanded.png' %}" width=120% style="margin-top: 0px;"></a>
                             
                         </div>
                         
                     </div>
                     
                 </div>
-                
+                <div class="divider" style="margin-top: 20px; margin-bottom: 20px"></div>
+                <div class="row center-align">
+                    <h5 style="line-height: 40px; margin-bottom: 30px">ETV’s Village Empowerment Network is supported by:</h5>
+                    <div class="row valign-wrapper">
+                        <div class="col s4"><img class="lazy" src='https://d1z669787inm16.cloudfront.net/media/first-energy-logo.png' width="70%" style="margin-left: 15%"></div>
+                        <div class="col s4"><img class="lazy" src='https://d1z669787inm16.cloudfront.net/media/cfnj-logo.png' width="100%"></div>
+                        <div class="col s4"><img class="lazy" src='https://d1z669787inm16.cloudfront.net/media/cap-one.png' width="70%"></div>
+                    </div>
+                </div>
                 <div class="divider" style="margin-top: 40px; margin-bottom: 20px"></div>
                 <div class="row center-align">
                     <h5 style="padding: 40px;"><a href="/village-empowerment-network-nomination">Register now to unlock 15 free courses!</a></h5>
@@ -112,7 +112,7 @@
                     </style>
                 </div>
                 <div class="divider" style="margin-bottom: 20px"></div>
-                <img class="z-depth-1" src="{% static 'img/ven-wealth-building.png' %}" width=80% style="margin-left: 10%; margin-bottom: 30px">
+                <img class="z-depth-1 lazy" src="{% static 'img/ven-wealth-building.png' %}" width=80% style="margin-left: 10%; margin-bottom: 30px">
              
                 
             </div>
