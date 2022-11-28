@@ -9,7 +9,7 @@
 
 <div class="parallax-container z-depth-3 box-shadow valign-wrapper">
     
-    <div class="container z-depth-4 center-align parallax-banner" style="background:rgba(255, 255, 255, 0.906); border: rgb(43, 43, 43) 3px solid; width: 60%; margin-top: 2%">
+    <div class="container z-depth-4 center-align parallax-banner" id="bf-parallax">
         <img src='{% static "img/bf_challenge_logo.png" %}' style="width:95%; padding: 10px">
     </div>
     <div class="parallax">
@@ -18,10 +18,10 @@
 
 </div>
 
-<div class="row valign-wrapper" style="padding-left: 5%; padding-right:5%">
+<div class="row" id="intro-row">
     <div class="col s12 m5 text-center">
         <img style="padding-top: 40px;width: 100%" src="{% static 'img/bf-holiday-23.jpg' %}">
-        <div class="btn" style="cursor: default; background-color:rgb(24, 144, 24); width: 100%; margin-top: 10px; height: fit-content; line-height: 42px; padding: 20px 10px; font-family: oskar;font-size: 28px;">November 25th-December 31st, 2022</div>
+        <div class="btn date-btn">November 25th - <br>December 31st, 2022</div>
         <img class="" id="timemoney-top" src="{% static 'img/timemoney.png' %}" width=110% height=100% style="margin-right:0px; margin-top:0px; margin-left:0%">
     </div>
     <div class="vbp-text col s12 m7" style="padding-top: 0px">
@@ -34,7 +34,7 @@
         <p style="margin-bottom:0; margin-top:10px"><b>The Real Winners are the businesses supported and communities that prosper as a result of the BF Challenge!</b></p>
         <div class="row center-align" style="padding-top: 10px; padding-bottom: 5px">
             <div class="col s12">
-                <div class="btn btn-large create-account-btn" id="getStartedBtn" style="background-color:rgb(24, 144, 24); width: 100%; margin-top: 10px; height: fit-content; line-height: 42px; padding: 20px 10px; font-family: oskar;font-size: 32px;">Click to Get Started!</div>
+                <div class="btn btn-large create-account-btn date-btn" id="getStartedBtn" style="background-color:rgb(24, 144, 24); width: 100%; margin-top: 10px; height: fit-content; line-height: 42px; padding: 20px 10px; font-family: oskar;font-size: 32px;">Click to Get Started!</div>
             </div>
         </div>
         <ul class="collapsible z-depth-0" style="border:none;">
@@ -146,10 +146,6 @@
         font-weight: 400;
         margin-bottom: 15px
     }
-    .prizes {
-        display: flex;
-        align-items: center
-    }
     .prizes p {
         font-size: 18px;
         padding-right: 5%;
@@ -254,6 +250,27 @@
 </div>
 
     <style>
+        .date-btn {
+            cursor: default; 
+            background-color:rgb(24, 144, 24); 
+            width: 100%; 
+            margin-top: 10px; 
+            height: fit-content; 
+            padding: 20px 10px; 
+            font-family: oskar;
+            font-size: 20px;
+            line-height: 24px; 
+        }
+        #bf-parallax {
+            background:rgba(255, 255, 255, 0.906); 
+            border: rgb(43, 43, 43) 3px solid; 
+            width: 90%; 
+            margin-top: 0%
+        }
+        #intro-row {
+            padding-left: 5%; 
+            padding-right:5%
+        }
         .instruction-box {
             height: fit-content
         }
@@ -288,6 +305,9 @@
             }
         }
         @media only screen and (min-width:601px){
+            #bf-parallax {
+                width: 70%; 
+            }
             #bingo-row {
                 height: 400px
             }
@@ -325,6 +345,13 @@
         
         }
         @media only screen and (min-width:992px){
+            #date-btn {
+                font-size: 28px;
+                line-height: 42px; 
+            }
+            #bf-parallax {
+                width: 60%; 
+            }
             .col-container {
             display: table; /* Make the container element behave like a table */
             width: 100%; /* Set full-width to expand the whole page */
@@ -398,6 +425,7 @@
         }
         #timemoney-top {
             display: block;
+            height: auto
         }
         .ways-to-play-title {
             font-size: 60px;
