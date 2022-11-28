@@ -38,8 +38,17 @@ ETV | About
         
     }
 </style>
-<div class="row" style="padding-top:0; padding-bottom: 0; margin-bottom: 0; background: url('{% static 'img/collage1.svg' %}'); background-size: 40%">
-    <div class="col s12 m10 offset-m1" style="padding-top: 5%;background-color: rgba(255, 255, 255, 0.947);">
+<div class="row" style="padding-top:2%; padding-bottom: 0; margin-bottom: 0;">
+    <div class="col s12">
+        <h6 class="center-align home-heading" style="color: #149e0f; margin-top: 15px; margin-bottom: 20px">ETV Mission & Vision Video!</h6>
+
+        <div class="center-align">
+                  <iframe class="mission-video scale-up-center z-depth-3" width="80%" src="https://www.youtube.com/embed/7ypFvkUOtwo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div> 
+        
+        <div class="divider" style="border-bottom: solid 1px rgb(233, 233, 233); margin-top: 30px; width: 80%; margin-left: 10%; margin-bottom: 30px"></div>
+    </div>
+    <div class="col s12 m10 offset-m1" style="padding-top: 1%;background-color: rgba(255, 255, 255, 0.947);">
         <ul class="collapsible popout about-popout">
             <li>
                 <div class="collapsible-header about-collapsible valign-wrapper"><i class="material-icons">outlined_flag</i>Mission</div>
@@ -158,6 +167,16 @@ ETV | About
 </div>
 
   <style>
+    .mission-video {
+          height: 300
+        }
+    .home-heading {
+        font-family: oskar-inline;
+      margin-top: 20px; 
+      margin-bottom: 20px;
+      font-size: 28px;
+      padding: 0px 2%
+    }
       li {
           margin-left: 0 !important;
           margin-right: 0 !important;
@@ -194,5 +213,42 @@ ETV | About
           margin: 0;
           padding: 0
       }
+      @media only screen and (min-width:460px){
+            .home-heading {
+            margin-top: 30px; 
+            margin-bottom: 30px;
+            font-size: 36px;
+            }
+        }
+        @media only screen and (min-width:601px){
+    .home-heading {
+      margin-top: 30px; 
+      margin-bottom: 30px;
+      font-size: 42px;
+    }
+}
+@media only screen and (min-width: 663px) {
+          .mission-video {
+            height: 415
+          }
+        }
+@media only screen and (min-width:993px){
+    .home-heading {
+      margin-top: 0px; 
+      margin-bottom: 40px;
+      font-size: 48px;
+    }
+    .mission-video {
+            height: 515
+          }
+}
+@media only screen and (min-width:1225px){
+    .home-heading {
+      margin-top: 40px; 
+      margin-bottom: 40px;
+      font-size: 52px;
+      padding: 0 10%
+    }
+}
  </style>
 {% endblock %}

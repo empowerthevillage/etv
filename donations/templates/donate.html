@@ -231,6 +231,12 @@ ETV | Donate
                       <input type="text" class="phone_us" id="phone">
                       <label for="phone">Phone (Optional)</label>
                     </div>
+                    <p id="opt-in" class="hidden">
+                      <label>
+                        <input type="checkbox" class="filled-in" checked="checked" />
+                        <span>I would like to receive news & SMS updates, opt out anytime. We respect your privacy and do not share or sell your contact information.</span>
+                      </label>
+                    </p>
                     <div class="input-field col s12" style="margin-top: 0">
                       {{ mailing_form.address_line_1 }}
                       <label for="id_address_line_1">Mailing Address</label>
@@ -897,6 +903,16 @@ function handleVenmoSuccess(payload) {
 })
 </script>
 <script>
+  $(document).ready(function(){
+    $('.phone_us').mask('(000) 000-0000');
+  })
+  $('#phone').on('keyup', function(){
+    if($(this).val() !== ''){
+      $('#opt-in').removeClass('hidden')
+    }else{
+      $('opt-in').addClass('hidden')
+    }
+  })
   $('#ven-select').on('change', function(){
     var quantity = $(this).val()
     var amount = 1500*quantity
@@ -1173,6 +1189,9 @@ function handleVenmoSuccess(payload) {
   })
 </script>
 <style>
+  #opt-in {
+    padding-bottom: 120px;
+  }
   #donation-form [type="radio"]:not(:checked)+span, [type="radio"]:checked+span {
     height: 30px !important
   }
@@ -1310,8 +1329,13 @@ function handleVenmoSuccess(payload) {
           height: 50px !important
         }
     }
-
+    @media only screen and (min-width:400px){
+      #opt-in {
+        padding-bottom: 70px;
+      }
+    }
     @media only screen and (min-width:601px){
+      
      
       .p-title {
           font-family: oskar;
@@ -1342,6 +1366,9 @@ function handleVenmoSuccess(payload) {
         }
     }
     @media only screen and (min-width:993px){
+      #opt-in {
+    padding-bottom: 50px;
+  }
       #donation-form [type="radio"]:not(:checked)+span, [type="radio"]:checked+span {
         height: 25px !important
       }
@@ -1383,6 +1410,9 @@ function handleVenmoSuccess(payload) {
         }
     }
     @media only screen and (min-width:1400px){
+      #opt-in {
+    padding-bottom: 30px;
+  }
         .donation-title {
             font-family: oskar-inline;
             font-size: 56px;
