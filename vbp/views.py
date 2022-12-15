@@ -545,68 +545,46 @@ def nj_new(request):
 def gift_guide_view(request):
     listings = gift_guide.objects.filter(approved=True)
     page1 = {
-        'object_list': listings[0:3],
-        'has_ad': True,
+        'object_list': listings[0:7],
+        'has_ad': False,
         'ad': 'https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/gift-guide-1.webp',
     }
     page2 = {
-        'object_list': listings[3:8],
-        'has_ad': True,
+        'object_list': listings[7:19],
+        'has_ad': False,
         'ad': 'https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/gift-guide-2.webp'
     }
     page3 = {
-        'object_list': listings[8:19],
+        'object_list': listings[19:29],
         'has_ad': False,
     }
     page4 = {
-        'object_list': listings[19:24],
-        'has_ad': True,
+        'object_list': listings[29:38],
+        'has_ad': False,
         'ad': 'https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/gift-guide-3.webp'
     }
-    page5 = {
-        'object_list': listings[24:35],
-        'has_ad': False,
-    }
-    page6 = {
-        'object_list': listings[35:37],
-        'has_ad': True,
-        'ad': 'https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/gift-guide-4.webp'
-    }
-    pages = [page1, page2, page3, page4, page5, page6]
+    pages = [page1, page2, page3, page4]
     
     mpage1 = {
-        'object_list': listings[0:3],
-        'has_ad': True,
+        'object_list': listings[0:9],
+        'has_ad': False,
         'ad': 'https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/gift-guide-1.webp',
     }
     mpage2 = {
-        'object_list': listings[3:8],
-        'has_ad': True,
+        'object_list': listings[9:18],
+        'has_ad': False,
         'ad': 'https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/gift-guide-2.webp'
     }
     mpage3 = {
-        'object_list': listings[8:17],
+        'object_list': listings[18:22],
         'has_ad': False,
     }
     mpage4 = {
-        'object_list': listings[17:20],
-        'has_ad': True,
+        'object_list': listings[22:36],
+        'has_ad': False,
         'ad': 'https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/gift-guide-3.webp'
     }
-    mpage5 = {
-        'object_list': listings[20:26],
-        'has_ad': False,
-    }
-    mpage6 = {
-        'object_list': listings[26:35],
-        'has_ad': False,
-    }
-    mpage7 = {
-        'object_list': listings[35:37],
-        'has_ad': True,
-        'ad': 'https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/gift-guide-4.webp'
-    }
-    mpages = [mpage1, mpage2, mpage3, mpage4, mpage5, mpage6, mpage7]
+    mpages = [mpage1, mpage2, mpage3, mpage4]
     
     
     context = {
