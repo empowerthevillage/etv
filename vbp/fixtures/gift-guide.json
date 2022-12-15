@@ -1,0 +1,362 @@
+[
+    {
+"model": "vbp.gift_guide",
+"fields": {
+      "business_name": "Bonbon-T",
+      "website": "https://bonbontonline.com/",
+      "city": "Edgartown, MA",
+      "phone": "",
+      "category": "clothing"
+    }
+},
+    {
+"model": "vbp.gift_guide",
+"fields": {
+      "business_name": "Lennox & Harvey",
+      "website": "https://lennoxandharvey.com/",
+      "city": "Vineyard Haven, MA",
+      "phone": "(508) 687-9372",
+      "category": "clothing"
+    }
+},
+    {
+"model": "vbp.gift_guide",
+"fields": {
+      "business_name": "Sideline Brand Studio",
+      "website": "www.sidelinebrand.com",
+      "city": "Vineyard Haven, MA",
+      "phone": "",
+      "category": "photography"
+    }
+},
+    {
+"model": "vbp.gift_guide",
+"fields": {
+      "business_name": "Home | Black Swan Espresso (bse.coffee)",
+      "website": "",
+      "city": "Newark, NJ",
+      "phone": "(862) 367-9266",
+      "category": "grocery"
+    }
+},
+    {
+"model": "vbp.gift_guide",
+"fields": {
+      "business_name": "ZENfully Made Candle Co.",
+      "website": "https://zenfullymadecandleco.com/",
+      "city": "Bayonne, NJ",
+      "phone": "(201) 479-3528",
+      "category": "home"
+    }
+},
+    {
+"model": "vbp.gift_guide",
+"fields": {
+      "business_name": "Akwaaba at Buttonwood Manor",
+      "website": "https://www.akwaaba.com/akwaaba-at-buttonwood-manor/",
+      "city": "Cape May, NJ",
+      "phone": "(609) 884-4070",
+      "category": "hotels"
+    }
+},
+    {
+"model": "vbp.gift_guide",
+"fields": {
+      "business_name": "Emmalyn Love",
+      "website": "https://shopemmalynlove.com/",
+      "city": "Cherry Hill, NJ",
+      "phone": "",
+      "category": "clothing"
+    }
+},
+    {
+"model": "vbp.gift_guide",
+"fields": {
+      "business_name": "The Tea Store",
+      "website": "https://www.teastorenj.com/",
+      "city": "Haddonfield, NJ",
+      "phone": "(856) 354-0015",
+      "category": "grocery"
+    }
+},
+    {
+"model": "vbp.gift_guide",
+"fields": {
+      "business_name": "Ikuzi Dolls",
+      "website": "https://www.ikuzidolls.com/",
+      "city": "Montclair, NJ",
+      "phone": "",
+      "category": "child"
+    }
+},
+    {
+"model": "vbp.gift_guide",
+"fields": {
+      "business_name": "Montclair Flowers and Gifts LLC",
+      "website": "http://www.mtcflowers.com/",
+      "city": "Montclair, NJ",
+      "phone": "(973) 746-1362",
+      "category": "Florists"
+    }
+},
+    {
+"model": "vbp.gift_guide",
+"fields": {
+      "business_name": "Bazodee",
+      "website": "https://bazodee.com/",
+      "city": "Morristown, NJ",
+      "phone": "(973) 727-1655",
+      "category": "grocery"
+    }
+},
+    {
+"model": "vbp.gift_guide",
+"fields": {
+      "business_name": "Source of Knowledge Bookstore",
+      "website": "http://www.sourceofknowledgebookstore.com/",
+      "city": "Newark, NJ",
+      "phone": "(973) 824-2556",
+      "category": "books"
+    }
+},
+    {
+"model": "vbp.gift_guide",
+"fields": {
+      "business_name": "The Black Home",
+      "website": "https://theblackhome.com/",
+      "city": "Newark, NJ",
+      "phone": "",
+      "category": "home"
+    }
+},
+    {
+"model": "vbp.gift_guide",
+"fields": {
+      "business_name": "Bougie Baby Boutique",
+      "website": "http://thebougiebabyboutique.com/",
+      "city": "Online",
+      "phone": "",
+      "category": "child"
+    }
+},
+    {
+"model": "vbp.gift_guide",
+"fields": {
+      "business_name": "Black Love Boutique",
+      "website": "http://www.blackloveboutique.com/",
+      "city": "Online",
+      "phone": "(800) 613-3549",
+      "category": "clothing"
+    }
+},
+    {
+"model": "vbp.gift_guide",
+"fields": {
+      "business_name": "Chez Bebe Children's Bedding",
+      "website": "https://chezbebeny.com/",
+      "city": "Online",
+      "phone": "",
+      "category": "child"
+    }
+},
+    {
+"model": "vbp.gift_guide",
+"fields": {
+      "business_name": "Symphony's Treasures, LLC",
+      "website": "https://www.symphonystreasures.com/",
+      "city": "Union City, NJ",
+      "phone": "(973) 592-5748",
+      "category": "jewelry"
+    }
+},
+    {
+"model": "vbp.gift_guide",
+"fields": {
+      "business_name": "Sofistafunk the Skirt Parlor",
+      "website": "https://sofistafunk.com/",
+      "city": "Verona, NJ",
+      "phone": "(917) 566-5900",
+      "category": "clothing"
+    }
+},
+    {
+"model": "vbp.gift_guide",
+"fields": {
+      "business_name": "Chip in a Bottle",
+      "website": "https://www.chipinabottle.com/shop-online/",
+      "city": "Woodbridge, CT",
+      "phone": "(203) 460-0665",
+      "category": "grocery"
+    }
+},
+    {
+"model": "vbp.gift_guide",
+"fields": {
+      "business_name": "The Glass Jar Natural Tea",
+      "website": "https://glassjarnaturaltea.com/",
+      "city": "New Haven, CT",
+      "phone": "",
+      "category": "grocery"
+    }
+},
+    {
+"model": "vbp.gift_guide",
+"fields": {
+      "business_name": "The Glass Jar Natural Skin",
+      "website": "http://www.glassjarnaturalskin.com/",
+      "city": "New Haven, CT",
+      "phone": "(203) 936-7736",
+      "category": "beauty"
+    }
+},
+    {
+"model": "vbp.gift_guide",
+"fields": {
+      "business_name": "Harlem Chocolate Factory⎟Harlem's only chocolate shop",
+      "website": "",
+      "city": "New York, NY",
+      "phone": "",
+      "category": "grocery"
+    }
+},
+    {
+"model": "vbp.gift_guide",
+"fields": {
+      "business_name": "Harlemcandlecompany.com",
+      "website": "",
+      "city": "New York, NY",
+      "phone": "212-457-4014",
+      "category": "home"
+    }
+},
+    {
+"model": "vbp.gift_guide",
+"fields": {
+      "business_name": "telfar.net",
+      "website": "",
+      "city": "New York, NY",
+      "phone": "",
+      "category": "Jewelry"
+    }
+},
+    {
+"model": "vbp.gift_guide",
+"fields": {
+      "business_name": "Mentedcosmetics.com",
+      "website": "",
+      "city": "New York, NY",
+      "phone": "347-768-7119",
+      "category": "beauty"
+    }
+},
+    {
+"model": "vbp.gift_guide",
+"fields": {
+      "business_name": "Brandonblackwood.com",
+      "website": "",
+      "city": "New York, NY",
+      "phone": "",
+      "category": "Clothing"
+    }
+},
+    {
+"model": "vbp.gift_guide",
+"fields": {
+      "business_name": "Baobab Clothing Inc",
+      "website": "https://baobabclothing.com",
+      "city": "Brooklyn, NY",
+      "phone": "(443) 980-0303",
+      "category": "clothing"
+    }
+},
+    {
+"model": "vbp.gift_guide",
+"fields": {
+      "business_name": "Mary's Hands Jewelry",
+      "website": "http://www.maryshandsjewelry.com",
+      "city": "Brooklyn, NY",
+      "phone": "",
+      "category": "jewelry"
+    }
+},
+    {
+"model": "vbp.gift_guide",
+"fields": {
+      "business_name": "Very Lovely Soles",
+      "website": "https://www.verylovelysoles.com/",
+      "city": "Brooklyn, NY",
+      "phone": "(914) 607-2985",
+      "category": "clothing"
+    }
+},
+    {
+"model": "vbp.gift_guide",
+"fields": {
+      "business_name": "The Brooklyn Circus",
+      "website": "shop.thebkcircus.com",
+      "city": "Brooklyn, NY",
+      "phone": "(718) 858-0919",
+      "category": "clothing"
+    }
+},
+    {
+"model": "vbp.gift_guide",
+"fields": {
+      "business_name": "IndigoStyle Vintage",
+      "website": "https://thecollectiveatindigostyle.com/shop",
+      "city": "Brooklyn, NY",
+      "phone": "(347) 240-5019",
+      "category": "clothing"
+    }
+},
+    {
+"model": "vbp.gift_guide",
+"fields": {
+      "business_name": "The Silk Tent",
+      "website": "https://www.thesilktent.com",
+      "city": "Philadelphia, PA",
+      "phone": "(215) 747-1277",
+      "category": "jewelry"
+    }
+},
+    {
+"model": "vbp.gift_guide",
+"fields": {
+      "business_name": "Philadelphia Diamond Company",
+      "website": "https://www.philadelphiadiamondco.com",
+      "city": "Philadelphia, PA",
+      "phone": "(215) 607-6700",
+      "category": "jewelry"
+    }
+},
+    {
+"model": "vbp.gift_guide",
+"fields": {
+      "business_name": "Bonafide Glam Statement Accessories",
+      "website": "https://bonafideglam.com",
+      "city": "Philadelphia, PA",
+      "phone": "",
+      "category": "jewelry"
+    }
+},
+    {
+"model": "vbp.gift_guide",
+"fields": {
+      "business_name": "Akwaaba Bed & Breakfast",
+      "website": "https://www.akwaaba.com",
+      "city": "Philadelphia, PA",
+      "phone": "(866) 466-3855",
+      "category": "hotels"
+    }
+},
+    {
+"model": "vbp.gift_guide",
+"fields": {
+      "business_name": "Blue Sole Shoe's",
+      "website": "https://bluesoleshoes.com",
+      "city": "Philadelphia, PA",
+      "phone": "(215) 496-9244",
+      "category": "clothing"
+    }
+  }
+  ]

@@ -1,0 +1,941 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}ETV | Village Black Pages®{% endblock %}
+{% block canonical %}https://www.empowerthevillage.org/village-black-pages/{% endblock %}
+{% block seo_description %}Village Black Pages® (VBP) is the critical resource Americans can rely on to locate Black-owned businesses to support when responding to our charge to Make Every Friday, Black Friday®!{% endblock %}
+
+
+{% block content %}
+
+<div class="content-container">
+    <div id="vbp-resources">
+        <div class="z-depth-4 row vbp-booklet-container" style="margin:0; background: white; padding-top: 20px" id="vbp-row">
+            <div class="col s12" id="book" style="padding: 0">
+                <div id="flipbook-mobile-container">
+                    <div class="" id="vbp-flipbook-mobile">
+                        <div class="row center-align">
+                            <i class="material-icons flipbook-arrows right-align" id="prev-mobile">arrow_back_ios</i>
+                            <i class="material-icons flipbook-arrows" id="next-mobile">arrow_forward_ios</i>
+                        </div>
+                        <div class="row valign-wrapper">
+                            <div class="col s10 offset-s1 flipbook-wrapper valign-wrapper" id="flipbook-content-wrapper" style="padding:0">
+                                <div class="aspect" id="aspect">
+                                    <div class="aspect-inner" id="aspect-inner">
+                                        <div id="flipbook-mobile" class="flipbook z-depth-1">
+                                            <div class="hard" id="cover-page-mobile"></div>
+                                            
+                                            {% for page in mpages %}
+                                            {% regroup page.object_list by category as vbp_list %}
+                                            <div class="data-pg">
+                                                <div class="data-table" style="padding: 7.5% 5% 5% 5%">
+                                                    {% for category in vbp_list %}
+                                                    <p class="category-title">{{ category.grouper }}</p>
+                                                    <table class="highlight">
+                                                        <colgroup>
+                                                            <col span="1" style="width: 45%;">
+                                                            <col span="1" style="width: 25%;">
+                                                            <col span="1" style="width: 35%;">
+                                                        </colgroup>
+                                                        <tbody>
+                                                            {% for vbp in category.list %}
+                                                            <tr>
+                                                                <td style="max-width: 35%; font-weight:500">
+                                                                    {% if vbp|length > 20%}
+                                                                        {% if vbp.website %}
+                                                                        <a href="{{ vbp.website }}" target="_blank" style="font-weight: 500;font-size: 0.35vw">{{ vbp }}</a>
+                                                                        {% else %}
+                                                                        <a style="font-size: 0.35vw; color:black">{{ vbp }}</a>
+                                                                        {% endif %}
+                                                                    {% else %}
+                                                                        {% if vbp.website %}
+                                                                        <a href="{{ vbp.website }}" target="_blank" style="font-weight: 500;">{{ vbp }}</a>
+                                                                        {% else %}
+                                                                        <a style="color:rgb(55, 55, 55); font-weight:400">{{ vbp }}</a>
+                                                                        {% endif %}
+                                                                    {% endif %}
+                                                                </td>
+                                                                <td>{{ vbp.city }}</td>
+                                                                {% if vbp.phone is not None %}<td style="text-align:right;min-width: 6vw">{{ vbp.phone }}</td>
+                                                                {% else %}<td style="text-align:right;min-width: 6vw"></td>
+                                                                {% endif %}
+                                                            </tr>
+                                                            {% endfor %}
+                                                        </tbody>
+                                                    </table>
+                                                    {% endfor %}
+                                                    {% if page.has_ad %}
+                                                    <img src="{{ page.ad }}" width="100%">
+                                                    {% endif %}
+                                                </div>
+                                            </div>
+                                            {% endfor %}
+                                            
+                                            <div class="hard" style="background: url({% static 'img/vbp final page.png' %});background-size: 100%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="flipbook-fullsize-container">
+                    <div id="vbp-flipbook">
+                        <div class="row valign-wrapper">
+                            <div class="col s1" style="margin-left: 2%">
+                            <i class="material-icons flipbook-arrows" id="prev">arrow_back_ios</i>
+                            </div>
+                            <div class="col s10 flipbook-wrapper valign-wrapper" id="flipbook-content-wrapper" style="padding:0">
+                                <div class="aspect" id="aspect">
+                                    <div class="aspect-inner" id="aspect-inner">
+                                        <div id="flipbook" class="flipbook">
+                                            <div class="hard" id="cover-page"></div>
+                                            <div class="" style="background: url('https://etv-empowerthevillage.s3.amazonaws.com/static/img/vbp-efbf-page.svg'); background-size: 102%"></div>
+                                            <div class="hard" id="intro-page1">
+                                                <div class="col 11" style="margin-top:15%;width:100%">
+                                                    <div class="center-align intro-page1">
+                                                        <img src="https://etv-empowerthevillage.s3.amazonaws.com/static/img/logo.webp" width=17% style="margin-top:10%">
+                                                        <div style="margin-top: 10%">
+                                                            <p>Copyright © {% now "Y" %} Empower The Village, Inc.</p>
+                                                            <p>All rights reserved.</p>
+                                                            <p>Empower The Village, Inc.</p>
+                                                            <p>178 E. Hanover Avenue, Suite 103-312</p>
+                                                            <p>Cedar Knolls, NJ 07927</p>
+                                                        </div>
+                                                        <div class="row" style="margin-top: 5%; margin-bottom:0">
+                                                            <a href="https://www.empowerthevillage.org"><img src="https://etv-empowerthevillage.s3.amazonaws.com/static/img/web-icon.svg" height=10vw style="margin-bottom:-2px"> &nbsp;empowerthevillage.org</a>
+                                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                            <a href="mailto: info@empowerthevillage.org"><img src="https://etv-empowerthevillage.s3.amazonaws.com/static/img/at-icon.svg" height=10vw style="margin-bottom:-2px"> &nbsp;info@empowerthevillage.org</a>
+                                                        </div>
+                                                        <div class="row" style="margin-bottom:0">
+                                                            <a href="https://www.facebook.com/empoweretv"><img src="https://etv-empowerthevillage.s3.amazonaws.com/static/img/fb-icon.svg" height=10vw style="margin-bottom:-2px"> &nbsp;@empoweretv</a>
+                                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                            <a href="https://twitter.com/empower_etv"><img src="https://etv-empowerthevillage.s3.amazonaws.com/static/img/ig-icon.svg" height=10vw style="margin-bottom:-2px"> <img src="https://etv-empowerthevillage.s3.amazonaws.com/static/img/twitter-icon.svg" height=10vw style="margin-bottom:-2px"> &nbsp;@empower_etv</a>
+                                                        </div>
+                                                        <div class="" style="margin-top:30%; margin-bottom:10%">
+                                                            <p class="">Photos via <a href="www.unsplash.com" style="text-decoration: underline;">Unsplash</a></p>
+                                                            <p class="">Graphic Design by Alexandra Stennett</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            {% for page in pages %}
+                                            {% regroup page.object_list by category as vbp_list %}
+                                            <div class="data-pg">
+                                                <div class="data-table" style="padding: 10% 10% 10% 5%">
+                                                    {% for category in vbp_list %}
+                                                    <p class="category-title">{{ category.grouper }}</p>
+                                                    <table class="highlight">
+                                                        <colgroup>
+                                                            <col span="1" style="width: 45%;">
+                                                            <col span="1" style="width: 25%;">
+                                                            <col span="1" style="width: 35%;">
+                                                        </colgroup>
+                                                        <tbody>
+                                                            {% for vbp in category.list %}
+                                                            <tr>
+                                                                <td style="max-width: 35%; font-weight:500">
+                                                                    {% if vbp|length > 20%}
+                                                                        {% if vbp.website %}
+                                                                        <a href="{{ vbp.website }}" target="_blank" style="font-weight: 500;font-size: 0.35vw">{{ vbp }}</a>
+                                                                        {% else %}
+                                                                        <a style="font-size: 0.35vw; color:black">{{ vbp }}</a>
+                                                                        {% endif %}
+                                                                    {% else %}
+                                                                        {% if vbp.website %}
+                                                                        <a href="{{ vbp.website }}" target="_blank" style="font-weight: 500;">{{ vbp }}</a>
+                                                                        {% else %}
+                                                                        <a style="color:rgb(55, 55, 55); font-weight:400">{{ vbp }}</a>
+                                                                        {% endif %}
+                                                                    {% endif %}
+                                                                </td>
+                                                                <td>{{ vbp.city }}</td>
+                                                                {% if vbp.phone is not None %}<td style="text-align:right;min-width: 6vw">{{ vbp.phone }}</td>
+                                                                {% else %}<td style="text-align:right;min-width: 6vw"></td>
+                                                                {% endif %}
+                                                            </tr>
+                                                            {% endfor %}
+                                                        </tbody>
+                                                    </table>
+                                                    {% endfor %}
+                                                    {% if page.has_ad %}
+                                                    <img src="{{ page.ad }}" width="100%">
+                                                    {% endif %}
+                                                </div>
+                                            </div>
+                                            {% endfor %}
+                                            <div class="hard" style="background: url({% static 'img/vbp final page.png' %});background-size: 100%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col s1">
+                                <i class="material-icons flipbook-arrows" id="next">arrow_forward_ios</i>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    
+    @media only screen and (min-width:0px) {
+        #intro-page1 {
+            background: url('https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/vbp-green-right.webp');
+            background-size: 101%
+        }
+        td {
+            font-weight:300;
+            letter-spacing: 0px;
+        }
+        #cover-page {
+            background-image: url('https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/gift-guide.webp');
+            background-size: 100%
+        }
+        #cover-page-mobile {
+            background-image: url('https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/gift-guide.webp');
+            background-size: 100%
+        }
+        .hidden {
+            display: none;
+        }
+        .flipbook-wrapper {
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            margin: 0%;
+            width: 90%;
+        }
+        #next {
+            padding:2%;
+            transition: all 0.3s ease-in-out;
+        }
+        #prev {
+            padding:2%;
+            transition: all 0.3s ease-in-out;
+        }
+        .aspect {
+            padding-bottom: 70%;
+            position: relative;
+            width: 100%;
+        }
+        .aspect-inner {
+            bottom: 0;
+            left: 0;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+        .page {
+            background-color: white;
+        }
+        #flipbook {
+            height:93%;
+            transition: margin-left 0.25s ease-out;
+            width: 100%;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        .data-table {
+            height: 100%;
+            padding-right: 10%;
+            padding-left: 10%;
+            padding-top: 10%;
+        }
+        #vbp-flipbook .p3 {
+            background: url('https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/vbp-green-right.webp');
+            background-size: 101%
+        }
+        #vbp-flipbook .p4 {
+            background: url('https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/vbp-red-left.webp');
+            background-size: 101%
+        }
+        #vbp-flipbook .p5 {
+            background: url('https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/vbp-red-right.webp');
+            background-size: 101%
+        }
+        #vbp-flipbook .p6 {
+            background: url('https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/vbp-green-left.webp');
+            background-size: 101%
+        }
+        #vbp-flipbook .p7 {
+            background: url('https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/vbp-green-right.webp');
+            background-size: 101%
+        }
+        #vbp-flipbook .p8 {
+            background: url('https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/vbp-red-left.webp');
+            background-size: 101%
+        }
+        #vbp-flipbook .p9 {
+            background: url('https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/vbp-red-right.webp');
+            background-size: 101%
+        }
+        #flipbook-mobile .p2 {
+            background: url('https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/vbp-green-right.webp');
+            background-size: 101%
+        }
+        #flipbook-mobile .p3 {
+            background: url('https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/vbp-red-right.webp');
+            background-size: 101%
+        }
+        #flipbook-mobile .p4 {
+            background: url('https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/vbp-green-right.webp');
+            background-size: 101%
+        }
+        #flipbook-mobile .p5 {
+            background: url('https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/vbp-red-right.webp');
+            background-size: 101%
+        }
+        #flipbook-mobile .p6 {
+            background: url('https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/vbp-green-right.webp');
+            background-size: 101%
+        }
+        #flipbook-mobile .p7 {
+            background: url('https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/vbp-red-right.webp');
+            background-size: 101%
+        }
+        #flipbook-mobile .p8 {
+            background: url('https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/vbp-green-right.webp');
+            background-size: 101%
+        }
+        .category-title {
+            text-align: center;
+            text-transform: uppercase;
+            font-family: oskar;
+            color:#bf1e2d;
+            text-decoration: underline;
+            font-size: 12px;
+            margin-top: 0;
+            margin-bottom: 5px;
+        }
+        table {
+            margin-bottom: 10px;
+        }
+        .flipbook-arrows {
+            outline: none !important;
+        }
+        input {
+            font-family: poppins !important;
+            font-weight: 200 !important;
+            letter-spacing: 1px !important;
+        }
+        .optgroup span {
+            color: black;
+            font-weight: 400
+        }
+        .beau {
+            font-size: 10px !important;
+        }
+        .vbp-grouper-title {
+            font-family: oskar;
+            color: #bf1e2d;
+            font-size: 16px;
+            text-align: center;
+            text-decoration: underline;
+        }
+        .vbp-subcategory-title {
+            font-family: oskar;
+            color: black;
+            font-size: 12px;
+            text-decoration: underline;
+        }
+        .subcategory-title {
+            font-family: oskar;
+            text-decoration: underline;
+            margin-bottom: 5px;
+            font-size: 1.2rem
+        }
+        .table-of-contents {
+            width: 42% !important;
+            margin-left: 4% !important;
+        }
+        .category-link {
+            font-size:14px; 
+            padding-top:2%;
+            padding-bottom: 2%; 
+            margin:0; 
+            text-transform: capitalize;
+            cursor: pointer;
+            color: white
+        }
+    }
+    @media only screen and (min-width:450px) {
+        .category-link {
+            font-size:8px; 
+            padding-top:0.2vw;
+            padding-bottom: 0.2vw; 
+            margin:0; 
+            text-transform: capitalize;
+        }
+        .category-title {
+            font-size: 14px;
+        }
+    }
+    @media only screen and (min-width:620px) {
+        .category-title {
+            font-size: 16px;
+        }
+    }
+    @media only screen and (min-width:760px) {
+        .category-title {
+            font-size: 20px;
+        }
+        .category-title {
+            font-size: 16px;
+        }
+    }
+    @media only screen and (min-width:801px) {
+        .category-title {
+            font-size: 22px;
+        }
+    }
+    @media only screen and (min-width: 992px) {
+        .category-title {
+            font-size: 14px;
+        }
+    }
+    @media only screen and (min-width:1190px) {
+        .category-title {
+            font-size: 20px;
+            margin-bottom: 12px;
+        }
+        table {
+            margin-bottom: 25px;
+        }
+        .beau {
+            font-size: 13px !important;
+        }
+        .vbp-grouper-title {
+            font-family: oskar;
+            color: #bf1e2d;
+            font-size: 26px;
+            text-align: center;
+            text-decoration: underline;
+        }
+        .vbp-subcategory-title {
+            font-family: oskar;
+            color: black;
+            font-size: 18px;
+            text-decoration: underline;
+        }
+    }
+    @media only screen and (min-width:1350px){
+        .category-link {
+            font-size:16px; 
+            padding-top:0.2vw;
+            padding-bottom: 0.2vw; 
+            margin:0; 
+            text-transform: capitalize;
+        }
+        .beau {
+            font-size: 16px !important;
+        }
+        .vbp-grouper-title {
+            font-family: oskar;
+            color: #bf1e2d;
+            font-size: 32px;
+            text-align: center;
+            text-decoration: underline;
+        }
+        .vbp-subcategory-title {
+            font-family: oskar;
+            color: black;
+            font-size: 20px;
+            text-decoration: underline;
+        }
+    }
+    
+</style>
+<script>
+    $(document).ready(function(){
+        $('#cat-filter').on('change', function(){
+            $('#cat-container').removeClass('offset-xl1');
+            var catList = []
+            var verboseList = []
+            $('#cat-filter option:selected').each(function(){
+                catList.push($(this).val())
+                verboseList.push($(this).text())
+            })
+            var data = {
+                csrfmiddlewaretoken: '{{ csrf_token }}',
+                'categories': String(catList),
+                'verboseList': String(verboseList)
+            }
+            $.ajax({
+                data: data,
+                url: '/village-black-pages/get-subcats/',
+                method: "POST",
+                success:function(response){
+                    if(response.status == 'success') {
+                        $('#subcat-container').removeClass('hidden');
+                        $('#subcat-container').html(response.html);
+                        $('#subcat-filter').formSelect();
+                    }
+                },
+            })
+        });
+        $('#filter-submit').on('click', function(){
+            var categories = []
+            $.each($("#cat-filter option:selected"), function(){
+                categories.push($(this).val());
+            })
+            var subcategories = []
+            $.each($("#subcat-filter option:selected"), function(){
+                subcategories.push($(this).val());
+            })
+            var cities = []
+            $.each($("#city-filter option:selected"), function(){
+                cities.push($(this).val());
+            })
+            var counties = []
+            $.each($("#county-filter option:selected"), function(){
+                counties.push($(this).val());
+            })
+            var data = {
+                csrfmiddlewaretoken: "{{ csrf_token }}",
+                "catList": String(categories),
+                "subcatList": String(subcategories),
+                "cityList": String(cities),
+                "countyList": String(counties),
+            }
+            $.ajax({
+                data: data,
+                url: '/village-black-pages/nj-filter-new/',
+                method: "POST",
+                success:function(result){
+                    if (result.status == 'success'){
+                        $('.content-container').html(result.html);
+                        $('select').formSelect();
+                    }else{
+                        alert('failure')
+                    }
+                    
+                },
+            })
+        });
+    })
+    var oTurn = $("#flipbook-mobile").turn(
+        {
+            autoCenter: true,
+            next: true,
+            display: 'single',
+        });
+                $("#prev-mobile").click(function(e){
+                e.preventDefault();
+                oTurn.turn("previous");
+                });
+                $("#next-mobile").click(function(e){
+                e.preventDefault();
+                oTurn.turn("next");
+                });
+                $('#flipbook-mobile .p1').ready(function(){
+                    $('#prev-mobile').hide();
+                });
+                $('#flipbook-mobile').bind("last", function(event){
+                    $('#next-mobile').hide()
+                });
+                $('#flipbook-mobile').bind("first", function(event){
+                    $('#prev-mobile').hide();
+                    $('#next-mobile').show();
+                });
+                $('#flipbook-mobile').bind("turned", function(event, page){
+                    if (page!=1){
+                        $('#prev-mobile').show();
+                    }
+                    else {
+                        $('#prev-mobile').hide();
+                    }
+                });
+                $('#go-btn-m').click(function(){
+                    pageNumber = $('#page-jump-m').val()
+                    oTurn.turn("page", pageNumber)
+                });
+    var book = $('#flipbook').turn({
+        display: 'double',
+        autoCenter: true,
+    });
+    $(document).on('click', '#next', function(){
+        $('#flipbook').turn('next')
+    });
+    $(document).on('click', '#prev', function(){
+        $('#flipbook').turn('previous')
+    });
+    $(document).on('click', '#view-tc', function(){
+        $('#flipbook').turn('page', 5)
+    });
+    $(document).on('click', '#go-btn', function(){
+        var page = $('#page-jump').val()
+        $('#flipbook').turn('page', page)
+    });
+    $(document).on('click', '.category-link', function(){
+        var page = $(this).attr('dataPage')
+        $('#flipbook').turn('page', page)
+    })
+    var elem = document.getElementById("flipbook");
+    function openFullscreen() {
+    if (elem.requestFullscreen) {
+        elem.requestFullscreen();
+    } else if (elem.webkitRequestFullscreen) { /* Safari */
+        elem.webkitRequestFullscreen();
+    } else if (elem.msRequestFullscreen) { /* IE11 */
+        elem.msRequestFullscreen();
+    }
+    };
+    var flipbookEL = document.getElementById('flipbook');
+    $(document).ready(function(){
+        flipbookEL.style.width = '';
+        flipbookEL.style.height = '';
+        $(flipbookEL).turn('size', flipbookEL.clientWidth, flipbookEL.clientHeight);
+    })
+    window.addEventListener('resize', function (e) {
+        flipbookEL.style.width = '';
+        flipbookEL.style.height = '';
+        $(flipbookEL).turn('size', flipbookEL.clientWidth, flipbookEL.clientHeight);
+        });
+    
+    var flipbookEL2 = document.getElementById('flipbook-mobile');
+
+    window.addEventListener('resize', function (e) {
+        flipbookEL2.style.width = '';
+        flipbookEL2.style.height = '';
+        $(flipbookEL2).turn('size', flipbookEL2.clientWidth, flipbookEL2.clientHeight);
+    });
+    $(document).ready(function(){
+        flipbookEL2.style.width = '';
+        flipbookEL2.style.height = '';
+        $(flipbookEL2).turn('size', flipbookEL2.clientWidth, flipbookEL2.clientHeight);
+    })
+</script>
+<script>
+    $('#category-select').on('change', function(){
+        var category = $(this).find(':selected').val()
+        $('#disabled-subcat').hide()
+        $('[cat="'+ category +'"]').removeClass('hidden')
+        $('.subcat-div[cat!="'+ category +'"]').addClass('hidden')
+    });
+    $('svg').resize(function(event){
+        event.preventDefault();
+    });
+</script>
+
+<style>
+    
+    @media only screen and (max-width: 992px){
+        #flipbook-mobile-container {
+            display: block;
+            height: 220vw
+        }
+        #flipbook-fullsize-container {
+            display: none
+        }
+    }
+    @media only screen and (min-width: 993px){
+        #flipbook-mobile-container {
+            display: none;
+            
+        }
+        #flipbook-fullsize-container {
+            display: block
+        }
+    }
+    #flipbook-mobile {
+        transition: margin-left 0.25s ease-out;
+        width: 100%;
+        height: 186%;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+    .flipbook .shadow {
+        box-shadow: 0 4px 10px #666;
+    }
+    .flipbook a {
+        transition: color 0.3s ease-in-out
+    }
+    .flipbook a:hover {
+        color: rgb(73, 113, 216);
+    }
+    @media only screen and (max-width:992px) {
+        .flipbook-arrows {
+        font-size: 28px;
+        cursor: crosshair;
+        color:rgb(113, 112, 112);
+        padding-left:0;
+    }
+    }
+    @media only screen and (min-width:993px) {
+        .flipbook-arrows {
+            font-size: 36px;
+            cursor: crosshair;
+            color:rgb(113, 112, 112);
+            padding-left:0;
+        }
+    }
+    .flipbook .page {
+        height: 100%;
+        width: 100%;
+    }
+    .intro-page1{
+        height:100%;
+        width:100%;
+    }
+    .intro-page1 p {
+        margin-bottom:0;
+        margin-top:0;
+        font-weight:200;
+        letter-spacing:0.25px;
+        font-size: 0.7vw;
+    }
+    .intro-page1 a {
+        font-weight:200;
+        letter-spacing:0.25px;
+        transform: scale(1,0.9);
+        font-size: 0.7vw;
+        color:rgb(176, 176, 176);
+    }
+    tr {
+        border-bottom: sollid rgb(136, 136, 136) 1px;
+    }
+    .td.sc-td {
+        font-size: 0.5vw
+    }
+  @media only screen and (max-width: 400px) {
+        td {
+            font-size: 10px;
+        }
+        td, th {
+        padding: 0;
+        }
+        #prev-mobile {
+            font-size: 16px !important
+        }
+        #next-mobile {
+            font-size: 16px !important
+        }
+        .roomformore p {
+            font-size: 8px
+        }
+        .tc-title{
+            font-size: 16px
+        }
+}
+    @media only screen and (min-width: 401px) {
+        td {
+            font-size: 12px;
+        }
+        td, th {
+            padding: 0;
+        }
+        .roomformore p {
+            font-size: 10px
+        }
+        .tc-title{
+            font-size: 18px
+        }
+    }
+    @media only screen and (min-width: 490px) {
+        td {
+            font-size: 13;
+        }
+        td, th {
+            padding: 1px;
+        }
+        .roomformore p {
+            font-size: 13
+        }
+        .tc-title{
+            font-size: 19px
+        }
+    }
+    @media only screen and (min-width: 540px) {
+        td {
+            font-size: 14;
+        }
+        td, th {
+            padding: 1.2px;
+        }
+        .roomformore p {
+            font-size: 14
+        }
+        .tc-title{
+            font-size: 20px
+        }
+    }
+    @media only screen and (min-width: 601px) {
+        td {
+            font-size: 15;
+        }
+        td, th {
+            padding: 2;
+        }
+        .tc-title{
+            font-size: 17px
+        }
+    }
+    @media only screen and (min-width: 660px) {
+        td {
+            font-size: 16;
+        }
+        td, th {
+            padding: 2px;
+        }
+        .roomformore p {
+            font-size: 15
+        }
+        .tc-title{
+            font-size: 22px
+        }
+    }
+    @media only screen and (min-width: 701px) {
+        td {
+            font-size: 18;
+        }
+        td, th {
+            padding: 3px;
+        }
+        .roomformore p {
+            font-size: 17
+        }
+        .tc-title{
+            font-size: 24px
+        }
+    }
+    @media only screen and (min-width: 800px) {
+        td {
+            font-size: 20;
+        }
+        td, th {
+            padding: 3px;
+        }
+        .roomformore p {
+            font-size: 18
+        }
+        .tc-title{
+            font-size: 26px
+        }
+    }
+    @media only screen and (min-width: 993px) {
+        td {
+            font-size: 12;
+        }
+        td, th {
+            padding: 1px;
+        }
+        .roomformore p {
+            font-size: 12
+        }
+        .tc-title{
+            font-size: 18px
+        }
+}
+    @media only screen and (min-width: 1125px) {
+        td {
+            font-size: 13;
+        }
+        td, th {
+            padding: 1.2px;
+        }
+        .roomformore p {
+            font-size: 12
+        }
+        .tc-title{
+            font-size: 20px
+        }
+    }
+    @media only screen and (min-width: 1300px) {
+        td {
+            font-size: 14;
+        }
+        td, th {
+            padding: 1.1px;
+        }
+        .roomformore p {
+            font-size: 12
+        }
+        .tc-title{
+            font-size: 21px
+        }
+    }
+    @media only screen and (min-width: 1400px) {
+        td {
+            font-size: 15;
+        }
+        td, th {
+            padding: 1.1px;
+        }
+        .roomformore p {
+            font-size: 13
+        }
+        .tc-title{
+            font-size: 22px
+        }
+    }
+    @media only screen and (min-width: 1500px) {
+        td {
+            font-size: 16;
+        }
+        td, th {
+            padding: 1.2px;
+        }
+        .roomformore p {
+            font-size: 16
+        }
+        .tc-title{
+            font-size: 23px
+        }
+    }
+    @media only screen and (min-width: 1600px) {
+        td {
+            font-size: 18;
+        }
+        td, th {
+            padding: 1.5px;
+        }
+        .roomformore p {
+            font-size: 16
+        }
+        .tc-title{
+            font-size: 24px
+        }
+    }
+    @media only screen and (min-width: 1700px) {
+        td {
+            font-size: 19;
+        }
+        td, th {
+            padding: 1.7px;
+        }
+        .roomformore p {
+            font-size: 17
+        }
+        .tc-title{
+            font-size: 25px
+        }
+    }
+    @media only screen and (min-width: 1800px) {
+        td {
+            font-size: 20;
+        }
+        td, th {
+            padding: 2px;
+        }
+        .roomformore p {
+            font-size: 17
+        }
+        .tc-title{
+            font-size: 26px
+        }
+    }
+    
+</style>
+{% endblock %}

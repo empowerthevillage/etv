@@ -285,28 +285,27 @@ class gift_guide(models.Model):
     facebook            = models.URLField(blank=True, null=True, max_length=200)
     city                = models.CharField(max_length=100, null=True, blank=True)
     county              = models.CharField(max_length=300, blank=True, null=True)
-    phone               = PhoneField(blank=True, help_text='Business Phone Number')
-    category            = models.CharField(max_length=100, choices=CATEGORY_CHOICES, null=True, blank=True)
+    state               = models.CharField(max_length=120, blank=True, null=True)
+    phone               = PhoneField(blank=True, null=True)
+    category            = models.CharField(max_length=200, null=True, blank=True)
     subcategory         = models.CharField(max_length=200, blank=True, null=True)
     owner_name          = models.CharField(max_length=300, blank=True, null=True)
     owner_email         = models.EmailField(blank=True, null=True)
     approved            = models.BooleanField(default=False, null=True, blank=True)
     created             = models.DateTimeField(auto_now_add=True, blank=True, null=True)
     updated             = models.DateTimeField(auto_now=True, null=True, blank=True)
-    cat_ordering        = models.IntegerField(blank=True, null=True)
-    is_grouped          = models.BooleanField(default=False)
-    group               = models.CharField(max_length=170, null=True, blank=True)
 
     objects         = vbpStateManager()
 
     def __str__(self):
         return str(self.business_name)
+    
     @property
     def is_approved(self):
          return self.approved
 
     class Meta:
-        ordering = ['category', 'city', 'business_name']
+        ordering = ['category', 'state', 'city', 'business_name']
         verbose_name = 'Gift Guide Listing'
         verbose_name_plural = 'Gift Guide Listings'
         

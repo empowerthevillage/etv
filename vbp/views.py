@@ -4,10 +4,9 @@ from django.shortcuts import render
 from django.template.loader import render_to_string
 from django.db.models import Q
 
-from .models import mv_private, vbp, vbp_book, vbp_al, vbp_az, vbp_az, vbp_ar, vbp_ca, vbp_co, vbp_ct, vbp_de, vbp_dc, vbp_fl, vbp_ga, vbp_hi, vbp_id, vbp_il, vbp_in, vbp_ia, vbp_ks, vbp_ky, vbp_la, vbp_me, vbp_md, vbp_ma, vbp_mi, vbp_mi, vbp_ms, vbp_mn, vbp_mo, vbp_mt, vbp_ne, vbp_nv, vbp_nh, vbp_nj, vbp_nm, vbp_ny, vbp_nc, vbp_nd, vbp_oh, vbp_ok, vbp_or, vbp_pa, vbp_ri, vbp_sc, vbp_sd, vbp_tn, vbp_tx, vbp_ut, vbp_vt, vbp_va, vbp_wa, vbp_wv, vbp_wi, vbp_wy  
+from .models import mv_private, vbp_book, vbp_nj, vbp_ct, gift_guide, StateFilter  
 from django.core.paginator import Paginator
 from django.conf import settings
-from .models import StateFilter
 
 import geocoder
 
@@ -543,6 +542,79 @@ def nj_new(request):
   print(cats)
   return render(request, 'vbp/nj_only.html')
   
+def gift_guide_view(request):
+    listings = gift_guide.objects.filter(approved=True)
+    page1 = {
+        'object_list': listings[0:3],
+        'has_ad': True,
+        'ad': 'https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/gift-guide-1.webp',
+    }
+    page2 = {
+        'object_list': listings[3:8],
+        'has_ad': True,
+        'ad': 'https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/gift-guide-2.webp'
+    }
+    page3 = {
+        'object_list': listings[8:19],
+        'has_ad': False,
+    }
+    page4 = {
+        'object_list': listings[19:24],
+        'has_ad': True,
+        'ad': 'https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/gift-guide-3.webp'
+    }
+    page5 = {
+        'object_list': listings[24:35],
+        'has_ad': False,
+    }
+    page6 = {
+        'object_list': listings[35:37],
+        'has_ad': True,
+        'ad': 'https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/gift-guide-4.webp'
+    }
+    pages = [page1, page2, page3, page4, page5, page6]
+    
+    mpage1 = {
+        'object_list': listings[0:3],
+        'has_ad': True,
+        'ad': 'https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/gift-guide-1.webp',
+    }
+    mpage2 = {
+        'object_list': listings[3:8],
+        'has_ad': True,
+        'ad': 'https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/gift-guide-2.webp'
+    }
+    mpage3 = {
+        'object_list': listings[8:17],
+        'has_ad': False,
+    }
+    mpage4 = {
+        'object_list': listings[17:20],
+        'has_ad': True,
+        'ad': 'https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/gift-guide-3.webp'
+    }
+    mpage5 = {
+        'object_list': listings[20:26],
+        'has_ad': False,
+    }
+    mpage6 = {
+        'object_list': listings[26:35],
+        'has_ad': False,
+    }
+    mpage7 = {
+        'object_list': listings[35:37],
+        'has_ad': True,
+        'ad': 'https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/gift-guide-4.webp'
+    }
+    mpages = [mpage1, mpage2, mpage3, mpage4, mpage5, mpage6, mpage7]
+    
+    
+    context = {
+        'pages': pages,
+        'mpages': mpages,
+    }
+    return render(request, 'gift-guide.html', context)
+
 def listing_filter(request, state):
     state_formatted = state.split("-")[1].lower()
     model = django.apps.apps.get_model('vbp', 'vbp_%s' %(state_formatted))

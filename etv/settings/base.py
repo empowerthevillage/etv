@@ -271,6 +271,7 @@ DEFAULT_FILE_STORAGE = 'etv.utils.MediaRootS3BotoStorage'
 STATICFILES_STORAGE = 'etv.utils.StaticRootS3BotoStorage'
 AWS_STORAGE_BUCKET_NAME = 'empowerthevillage'
 S3DIRECT_REGION = 'us-east-1'
+AWS_S3_REGION_NAME = 'us-east-1'
 S3_URL = '//%s.s3.amazonaws.com/' % AWS_STORAGE_BUCKET_NAME
 MEDIA_URL = 'https://d1z669787inm16.cloudfront.net/media/'
 MEDIA_ROOT = MEDIA_URL
