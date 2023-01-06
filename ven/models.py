@@ -173,7 +173,9 @@ class Nomination(models.Model):
     structure        = models.CharField(max_length=270, blank=True, null=True)
     created          = models.DateTimeField(auto_now_add=True, blank=True, null=True)
     updated          = models.DateTimeField(auto_now=True, blank=True, null=True)
-
+    expo_vendor      = models.BooleanField(default=False, null=True, blank=True, verbose_name="Interested in being Expo Vendor")
+    pitch_comp       = models.BooleanField(default=False, null=True, blank=True, verbose_name="Interested in Pitch Competition")
+    
     objects = NominationManager()
 
     def __str__(self):

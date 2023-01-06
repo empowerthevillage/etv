@@ -9,6 +9,8 @@ def venForm(request):
     if request.method == 'POST':
         if request.POST.get('submission-type') == 'business':
             nomination_form = BusinessForm(request.POST)
+            vendor = nomination_form.data['vendor_opp']
+            pitch = nomination_form.data['pitch_comp']
             obj = Nomination()
             obj.nominator_name = nomination_form.data['nominator-name']
             obj.nominator_email = nomination_form.data['nominator-email']
@@ -34,6 +36,14 @@ def venForm(request):
             obj.instagram = nomination_form.data['instagram']
             obj.facebook = nomination_form.data['facebook']
             obj.twitter = nomination_form.data['twitter']
+            if vendor == "true":
+                obj.expo_vendor = True
+            else:
+                obj.expo_vendor = False
+            if pitch == "true":
+                obj.pitch_comp = True
+            else:
+                obj.pitch_comp = False
             obj.save()
             sweetify.success(request, title='Thank you!', icon='success', text="Thank you for registering for the Village Empowerment Network!", button='OK', timer=6000)
             welcome_subject = "Welcome to ETV's Village Empowerment Network!"
