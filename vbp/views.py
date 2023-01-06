@@ -593,6 +593,275 @@ def gift_guide_view(request):
     }
     return render(request, 'gift-guide.html', context)
 
+def gift_guide_2_view(request):
+    listings = gift_guide.objects.filter(approved=True)
+    page1 = {
+        'object_list': listings[0:2],
+        'has_ads': True,
+        'ads': [
+                {
+                    'src': 'https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/gg7.webp',
+                    'link': 'http://www.glassjarnaturalskin.com/',
+                    'cols': 'col s7 offset-s1',
+                    'after': '<div class="col s4"></div>'
+                },
+                {
+                    'src': 'https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/gg14.webp',
+                    'link': 'http://mentedcosmetics.com/',
+                    'cols': 'col s7 offset-s4',
+                }
+            ],
+    }
+    page2 = {
+        'object_list': listings[2:4],
+        'has_ads': True,
+        'ads': [
+                {
+                    'src': 'https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/gg16.webp',
+                    'link': 'https://www.sankofa.com/',
+                    'cols': 'col s10 offset-s1',
+                    'after': '<div class="col s1"></div>'
+                },
+                {
+                    'src': 'https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/source-of-knowledge.webp',
+                    'link': 'http://www.sourceofknowledgebookstore.com/',
+                    'cols': 'col s10 offset-s1',
+                },
+            ],
+    }
+    page3 = {
+        'object_list': listings[4:7],
+        'has_ads': True,
+        'ads': [
+                {
+                    'src': 'https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/gg1.webp',
+                    'link': 'https://www.ikuzidolls.com/',
+                    'cols': 'col s4 offset-s1',
+                },
+                {
+                    'src': 'https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/gg17.webp',
+                    'link': 'http://thebougiebabyboutique.com/',
+                    'cols': 'col s7',
+                },
+                {
+                    'src': 'https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/chez-bebe.webp',
+                    'link': 'https://chezbebeny.com/',
+                    'cols': 'col s11 offset-s1',
+                },
+            ],
+    }
+    page4 = {
+        'object_list': listings[7:13],
+        'has_ads': True,
+        'ads': [
+                {
+                    'src': 'https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/baobab.webp',
+                    'link': 'https://baobabclothing.com/',
+                    'cols': 'col s4',
+                },
+                {
+                    'src': 'https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/indigo-style.webp',
+                    'link': 'https://thecollectiveatindigostyle.com/shop',
+                    'cols': 'col s4',
+                },
+                {
+                    'src': 'https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/bk.webp',
+                    'link': 'http://shop.thebkcircus.com/',
+                    'cols': 'col s4',
+                },
+                {
+                    'src': 'https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/very-lovely-soles.webp',
+                    'link': 'https://www.verylovelysoles.com/',
+                    'cols': 'col s4',
+                },
+                {
+                    'src': 'https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/gg4.webp',
+                    'link': 'https://shopemmalynlove.com/',
+                    'cols': 'col s4',
+                },
+                {
+                    'src': 'https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/bonbont.webp',
+                    'link': 'https://bonbontonline.com/',
+                    'cols': 'col s4',
+                }
+            ],
+    }
+    page5 = {
+        'object_list': listings[13:19],
+        'has_ads': True,
+        'ads': [
+                {
+                    'src': 'https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/brandon-blackwell.webp',
+                    'link': 'http://brandonblackwood.com/',
+                    'cols': 'col s4',
+                },
+                {
+                    'src': 'https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/blacklove-boutique.webp',
+                    'link': 'http://www.blackloveboutique.com/',
+                    'cols': 'col s4',
+                },
+                {
+                    'src': 'https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/bluesole-shoes.webp',
+                    'link': 'https://bluesoleshoes.com/',
+                    'cols': 'col s4',
+                },
+                {
+                    'src': 'https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/sofistafunk.webp',
+                    'link': 'https://sofistafunk.com/',
+                    'cols': 'col s4',
+                },
+                {
+                    'src': 'https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/gg3.webp',
+                    'link': 'https://lennoxandharvey.com/',
+                    'cols': 'col s4',
+                },
+                {
+                    'src': 'https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/gg13.webp',
+                    'link': 'http://www.sidelinebrand.com/',
+                    'cols': 'col s4',
+                },
+            ],
+    }
+    page6 = {
+        'object_list': listings[19:20],
+        'has_ads': True,
+        'ads': [
+                {
+                    'src': 'https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/mtcflowers.webp',
+                    'link': 'http://www.mtcflowers.com/',
+                    'cols': 'col s10 offset-s1',
+                },
+            ],
+    }
+    page7 = {
+        'object_list': listings[20:26],
+        'has_ads': True,
+        'ads': [
+                {
+                    'src': 'https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/gg6.webp',
+                    'link': 'https://www.teastorenj.com/',
+                    'cols': 'col s4',
+                },
+                {
+                    'src': 'https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/gg8.webp',
+                    'link': 'https://bazodee.com/',
+                    'cols': 'col s4',
+                },
+                {
+                    'src': 'https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/gg12.webp',
+                    'link': 'https://www.bse.coffee/',
+                    'cols': 'col s4',
+                },
+                {
+                    'src': 'https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/gg7.webp',
+                    'link': 'https://glassjarnaturaltea.com/',
+                    'cols': 'col s4',
+                },
+                {
+                    'src': 'https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/harlem-choc.webp',
+                    'link': 'https://harlemchocolatefactory.com/',
+                    'cols': 'col s4',
+                },
+                {
+                    'src': 'https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/chip-bottle.webp',
+                    'link': 'https://www.chipinabottle.com/shop-online/',
+                    'cols': 'col s4',
+                },
+            ],
+    }
+    page8 = {
+        'object_list': listings[26:29],
+        'has_ads': True,
+        'ads': [
+                {
+                    'src': 'https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/zenfully.webp',
+                    'link': 'https://zenfullymadecandleco.com/',
+                    'cols': 'col s6',
+                },
+                {
+                    'src': 'https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/gg2.webp',
+                    'link': 'https://theblackhome.com/',
+                    'cols': 'col s6',
+                },
+                {
+                    'src': 'https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/gg9.webp',
+                    'link': 'http://harlemcandlecompany.com/',
+                    'cols': 'col s6 ml25',
+                },
+            ],
+    }
+    page9 = {
+        'object_list': listings[29:31],
+        'has_ads': True,
+        'ads': [
+                {
+                    'src': 'https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/awkwaaba.webp',
+                    'link': 'https://www.akwaaba.com/',
+                    'cols': 'col s8 offset-s2',
+                },
+            ],
+    }
+    page10 = {
+        'object_list': listings[31:36],
+        'has_ads': True,
+        'ads': [
+                {
+                    'src': 'https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/gg15.webp',
+                    'link': 'http://www.maryshandsjewelry.com/',
+                    'cols': 'col s4',
+                },
+                {
+                    'src': 'https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/gg5.webp',
+                    'link': 'http://telfar.net/',
+                    'cols': 'col s4',
+                },
+                {
+                    'src': 'https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/bonafide-glam.webp',
+                    'link': 'https://bonafideglam.com/',
+                    'cols': 'col s4',
+                },
+                {
+                    'src': 'https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/phila-diamond.webp',
+                    'link': 'https://www.philadelphiadiamondco.com/',
+                    'cols': 'col s5 ml29',
+                },
+                {
+                    'src': 'https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/silk-tent.webp',
+                    'link': 'https://www.thesilktent.com/',
+                    'cols': 'col s5 ml5',
+                },
+            ],
+    }
+    pages = [page1, page2, page3, page4, page5, page6, page7, page8, page9, page10]
+    
+    mpage1 = {
+        'object_list': listings[0:9],
+        'has_ad': False,
+        'ad': 'https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/gift-guide-1.webp',
+    }
+    mpage2 = {
+        'object_list': listings[9:18],
+        'has_ad': False,
+        'ad': 'https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/gift-guide-2.webp'
+    }
+    mpage3 = {
+        'object_list': listings[18:22],
+        'has_ad': False,
+    }
+    mpage4 = {
+        'object_list': listings[22:36],
+        'has_ad': False,
+        'ad': 'https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/gift-guide-3.webp'
+    }
+    mpages = [mpage1, mpage2, mpage3, mpage4]
+    
+    
+    context = {
+        'pages': pages,
+        'mpages': mpages,
+    }
+    return render(request, 'gift-guide-2.html', context)
+
 def listing_filter(request, state):
     state_formatted = state.split("-")[1].lower()
     model = django.apps.apps.get_model('vbp', 'vbp_%s' %(state_formatted))
