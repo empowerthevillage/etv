@@ -69,6 +69,8 @@ class Event(models.Model):
     slug            = models.SlugField()
     checkout_image  = models.ImageField(blank=True, null=True)
     checkout_img_link = models.CharField(max_length=270, null=True, blank=True)
+    checkout_image_2  = models.ImageField(blank=True, null=True)
+    checkout_img_link_2 = models.CharField(max_length=270, null=True, blank=True)
     date            = models.DateTimeField(blank=True, null=True)
     start_date      = models.DateField(blank=True, null=True)
     end_date        = models.DateField(blank=True, null=True)
@@ -80,7 +82,7 @@ class Event(models.Model):
     checkout_video_html = HTMLField(null=True, blank=True)
     has_gallery     = models.BooleanField(default=False, null=True, blank=True)
     gallery_photos = models.ManyToManyField(PhotoGalleryItem, blank=True)
-    
+    sponsor_image   = models.ImageField(blank=True, null=True)
     objects         = EventManager()
 
     def get_absolute_url(self):
@@ -104,6 +106,14 @@ class Event(models.Model):
     @property
     def get_checkout_img_path(self):
         return 'https://d1z669787inm16.cloudfront.net/media/%s' %(self.checkout_image)
+    
+    @property
+    def get_checkout_img_path_2(self):
+        return 'https://d1z669787inm16.cloudfront.net/media/%s' %(self.checkout_image_2)
+    
+    @property
+    def get_sponsor_img_path(self):
+        return 'https://d1z669787inm16.cloudfront.net/media/%s' %(self.sponsor_image)
 
 def event_pre_save_receiver(sender, instance, *args, **kwargs):
     if not instance.slug:
