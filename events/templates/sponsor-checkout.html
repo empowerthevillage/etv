@@ -198,7 +198,8 @@
             <img class="z-depth-1" src="{{ event.get_checkout_img_path_2 }}" width=100% style="margin-top: 20px">
             {% endif %}
             {% if event.sponsor_image is not None %}
-            <img src="{{ event.get_sponsor_img_path }}" width=100% style="margin-top: 20px">
+            <p class="sponsor-text">ETV's Village Empowerment Network is supported by:</p>
+            <img src="{{ event.get_sponsor_img_path }}" width=100% style="margin-top: 0px">
             {% endif %}
             {% if event.checkout_video_html is not None %}
 <div style="margin-top: 20px">
@@ -292,7 +293,8 @@
             <img class="z-depth-1" src="{{ event.get_checkout_img_path_2 }}" width=100% style="margin-top: 20px">
             {% endif %}
             {% if event.sponsor_image is not None %}
-            <img src="{{ event.get_sponsor_img_path }}" width=100% style="margin-top: 20px">
+            <p class="sponsor-text">ETV's Village Empowerment Network is supported by:</p>
+            <img src="{{ event.get_sponsor_img_path }}" width=100% style="margin-top: 0px">
             {% endif %}
             {% if event.checkout_video_html is not None %}
 <div style="margin-top: 20px">
@@ -480,10 +482,11 @@
             <img class="z-depth-1" src="{{ event.get_checkout_img_path_2 }}" width=100% style="margin-top: 20px">
             {% endif %}
             {% if event.sponsor_image is not None %}
-            <img src="{{ event.get_sponsor_img_path }}" width=100% style="margin-top: 20px">
+            <p class="sponsor-text">ETV's Village Empowerment Network is supported by:</p>
+            <img src="{{ event.get_sponsor_img_path }}" width=100% style="margin-top: 0px">
             {% endif %}
             {% if event.checkout_video_html is not None %}
-<div style="margin-top: 20px">
+<div style="margin-top: 0px">
               {{ event.checkout_video_html|safe }}
 </div>            
 {% endif %}
@@ -493,6 +496,10 @@
 </div>
 
 <style>
+  .sponsor-text {
+    text-align: center;
+    margin-bottom: 0
+  }
   span.cartRemove {
       color: red;
       transition: all 0.2s ease-in-out;
