@@ -34,7 +34,7 @@
                       {% else %}
                       <p class="ticket-price">${{ x.type.price|floatformat:"0"|intcomma }} {% if x.type.price_description is not none %}- {{ x.type.price_description }}{% endif %}</p>
                       {% endif %}
-                      <p class="ticket-description">{{ x.type.description }}</p>
+                      <p class="ticket-description">{{ x.type.description }}{% if x.type.registration_url is not None %}<a href="{{ x.type.registration_url}}" target="_blank"> {{ x.type.registration_text }}{% endif %}</a></p>
                   </div>
                   <div class="col s12 m3">
                       <div class="input-field ticket-quantity-input" id="{{ x.type.pk }}-select">
