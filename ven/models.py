@@ -134,6 +134,7 @@ class NominationManager(models.Manager):
         {'field':'other3','type':'alt2'},
         {'field':'expo_vendor','type':'boolean'},
         {'field':'pitch_comp','type':'boolean'},
+        {'field':'created','type':'datetime'},
         {'field':'updated','type':'datetime'},]
         return fields
         
