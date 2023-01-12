@@ -9,8 +9,14 @@ def venForm(request):
     if request.method == 'POST':
         if request.POST.get('submission-type') == 'business':
             nomination_form = BusinessForm(request.POST)
-            vendor = nomination_form.data['vendor_opp']
-            pitch = nomination_form.data['pitch_comp']
+            try:
+                vendor = nomination_form.data['vendor_opp']
+            except:
+                vendor = "false"
+            try:
+                pitch = nomination_form.data['pitch_comp']
+            except:
+                pitch = "false"
             obj = Nomination()
             obj.nominator_name = nomination_form.data['nominator-name']
             obj.nominator_email = nomination_form.data['nominator-email']
