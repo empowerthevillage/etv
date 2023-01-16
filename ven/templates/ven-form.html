@@ -4,8 +4,12 @@
 {% block content %}
 <div class="" style="background:url('https://empowerthevillage.s3.amazonaws.com/static/img/VBP+collage.svg'); background-size: 100%; height:100%">
   <div style="background: rgba(255, 255, 255, 0.964); height: 100%; padding-top: 5%; min-height: 500px">
-      <div class="center-align col s12">
+      
+    <div class="center-align col s12">
           <h6 class="center-align" id="ven-nomination-form-title" style="color: #01a650; padding-bottom: 0;">Village Empowerment Network™<br><b style="font-weight:400; color: black">& Empowerment Expo </b><br>Registration Form</h6>
+          <div class="center-align col s12 z-depth-3" style="margin-top: 30px; margin-bottom: 40px;">
+            <img src="https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/ven-form-photo.webp" width="100%">
+          </div>
           <div class="divider" style="width: 80%; margin-left: 10%;margin-top: 30px; margin-bottom: 30px"></div>
           <h6 class="fieldset-title">I would like to register as:</h6>
           <div class="valign-600">
@@ -29,6 +33,7 @@
               </p>
           </div>
       </div>
+      
       <div id="vbp-business-nomination-form" class="row hidden">
             <form class="col s12 l10 offset-l1 xl8 offset-xl2" method="POST" action="/village-empowerment-network-nomination/" id="nomination-form">
               {% csrf_token %}
@@ -968,6 +973,21 @@
       <div id="vbp-both-nomination-form" class="row hidden">
         <form class="col s12 l10 offset-l1 xl8 offset-xl2" method="POST" action="/village-empowerment-network-nomination/" id="nomination-form">
           {% csrf_token %}
+          <div class="col s12 center-align">
+            <p>
+              <label>
+                <input type="checkbox" value="true" name="vendor_opp"/>
+                <span>I'm interested in Vendor Opportunities at ETV's 2023 Empowerment Expo</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input type="checkbox" value="true" name="pitch_comp"/>
+                <span>I would like to apply for ETV's Village Ventures Business Pitch Competition</span>
+              </label>
+            </p>
+            <p><a href="/events/empowerment-expo/buy-tickets/" target="_blank">Click here to pay Expo Vendor or Pitch Competition Fees</a></p>
+          </div>
           <input type="hidden" name="submission-type" value="both">
           
           <fieldset>
@@ -1888,9 +1908,7 @@
           </div>
         </form>
       </div>
-      <div class="center-align col s12 z-depth-3" style="margin-top: 30px; margin-bottom: 40px;">
-        <img src="https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/ven-form-photo.webp" width="100%">
-      </div>
+      
   </div>
 </div>
 
