@@ -1132,3 +1132,6 @@ def view_checkins(request):
         'checkins': checkins
     }
     return render(request, 'view-checkins.html', context)
+
+def pitch_registration(request):
+    return render(request, 'pitch-registration.html')
