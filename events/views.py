@@ -1135,3 +1135,14 @@ def view_checkins(request):
 
 def pitch_registration(request):
     return render(request, 'pitch-registration.html')
+
+def pitch_rules_agreement(request):
+    if request.method == 'POST':
+        obj = Signature()
+        obj.purpose = 'Agreed to 2023 Empowerment Expo Village Ventures Rules & Terms'
+        obj.first_name = request.POST['first-name']
+        obj.last_name = request.POST['last-name']
+        obj.email = request.POST['email']
+        obj.business_name = request.POST['business']
+        obj.save()
+    return HttpResponse('success')

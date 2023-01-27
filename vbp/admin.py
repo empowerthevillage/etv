@@ -66,6 +66,9 @@ class VBPAdmin(admin.ModelAdmin):
         ('Social Media', {
             'fields': ('instagram', 'facebook', 'twitter')
         }),
+        ('Owner Information', {
+            'fields': ('owner_name', 'owner_email')
+        }),
         ('Nominator Information', {
             'fields': ('nominator_name', 'nominator_email')
         }),
@@ -153,7 +156,7 @@ class VBPStateAdmin(admin.ModelAdmin):
     list_per_page = 500
     list_display = ['business_name','subcategory', 'approved', 'website', 'category', 'city', 'county','updated', 'nominator_name']
     list_filter = ['county', 'city','approved', 'online_only', 'category', 'subcategory', 'team', 'nominator_name','subcategory']
-    search_fields = ['business_name', 'city', 'category', 'subcategory', 'user', 'nominator_name']
+    search_fields = ['business_name', 'city', 'category', 'subcategory', 'nominator_name']
     ordering = ['-updated', 'business_name']
     actions = ['make_active', 'make_inactive', 'download_csv', 'mark_online']
     fieldsets = (
@@ -165,6 +168,9 @@ class VBPStateAdmin(admin.ModelAdmin):
         }),
         ('Social Media', {
             'fields': ('instagram', 'facebook', 'twitter')
+        }),
+        ('Owner Information', {
+            'fields': ('owner_name', 'owner_email')
         }),
         ('Nominator Information', {
             'fields': ('nominator_name', 'nominator_email', 'nominator_owner', 'nominator_recommended', 'user', 'team')

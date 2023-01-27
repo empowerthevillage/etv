@@ -91,7 +91,7 @@
                     <li>No slides, but props are allowed</li>
                     <li>Cash prizes for all 5 finalists</li>
                 </ul>
-                <p class="text-center"><b style="rgb(193, 22, 22)">Top 3 winners will be announced at the Expo!</b></p>
+                <p class="text-center"><b style="color:rgb(193, 22, 22)">Top 3 winners will be announced at the Expo!</b></p>
             </div>
         </div>
     </div>
@@ -180,9 +180,29 @@
                 <br>
                 Attention: Village Ventures Coordinator
             </p>
+            <div class="divider"></div>
         </div>
         <div class="modal-footer">
-          <a class="modal-close waves-effect waves-green btn-large" style="background:rgb(25, 146, 25); font-family: oskar; font-size: 24px; letter-spacing: 1px; margin-top: -20px; margin-bottom: 20px;">Accept</a>
+            <form class="row" method="POST" id="rules-form">
+                <div class="input-field col s12 l6">
+                  <input type="text" name="first_name" id="accept-first-name" required>
+                  <label for="accept-first-name">First Name<b class="required">*</b></label>
+                </div>
+                <div class="input-field col s12 l6">
+                    <input type="text" name="last_name" id="accept-last-name" required>
+                    <label for="accept-last-name">Last Name<b class="required">*</b></label>
+                </div>
+                <div class="input-field col s12 l6">
+                    <input type="email" name="email" id="accept-email" required>
+                    <label for="accept-email">Email<b class="required">*</b></label>
+                </div>
+                <div class="input-field col s12 l6">
+                    <input type="text" name="business_name" id="accept-business-name" required>
+                    <label for="accept-business-name">Business Name<b class="required">*</b></label>
+                </div>
+                <btn class="waves-effect waves-green btn-large" id="rules-accept-btn" style="background:rgb(25, 146, 25); font-family: oskar; font-size: 24px; letter-spacing: 1px; margin-top: 0px; margin-bottom: 20px;">Accept</btn>
+            </form>
+            
         </div>
     </div>
 </div>
@@ -272,4 +292,61 @@
         }
     }
 </style>
+<script>
+    $(document).ready(function(){
+        $('#rules-accept-btn').on('click', function(event){
+            event.preventDefault()
+            var firstName = $('#accept-first-name').val()
+            var lastName = $('#accept-last-name').val()
+            var email = $('#accept-email').val()
+            var businessName = $('#accept-business-name').val()
+            if(firstName == ''){
+                Swal.fire(
+                    'Missing Required Field',
+                    'First name is required. Please enter your first name and try again.',
+                    'error'
+                )
+            }else if(lastName == ''){
+                Swal.fire(
+                    'Missing Required Field',
+                    'Last name is required. Please enter your last name and try again.',
+                    'error'
+                )
+            }else if(email == ''){
+                Swal.fire(
+                    'Missing Required Field',
+                    'Email is required. Please enter your email address and try again.',
+                    'error'
+                )
+            }else if(businessName == ''){
+                Swal.fire(
+                    'Missing Required Field',
+                    'Business name is required. Please enter your business name and try again.',
+                    'error'
+                )
+            }else{
+                var data = {
+                    csrfmiddlewaretoken: '{{ csrf_token }}',
+                    'first-name': firstName,
+                    'last-name': lastName,
+                    'email': email,
+                    'business': businessName,
+                }
+                $.ajax({
+                    data: data,
+                    url: '/events/rules-agreement/',
+                    method: "POST",
+                    success:function(){
+                        $('.modal').modal('close'); 
+                        Swal.fire(
+                            'Thank You!',
+                            'Your response was recorded successfully',
+                            'success',
+                        )
+                    },
+                });
+            }
+        });
+    });
+</script>
 {% endblock %}

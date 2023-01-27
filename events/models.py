@@ -592,3 +592,14 @@ class CheckIn(models.Model):
     
     class Meta:
         ordering = ['-time']
+        
+class Signature(models.Model):
+    purpose         = models.CharField(max_length=270)
+    first_name      = models.CharField(max_length=270, null=True, blank=True)
+    last_name       = models.CharField(max_length=270, null=True, blank=True)
+    email           = models.EmailField()
+    business_name   = models.CharField(max_length=270, null=True, blank=True)
+    timestamp       = models.DateTimeField(auto_now_add=True)
+    
+    def __str__(self):
+        return 'Signature from %s %s' %(self.first_name, self.last_name)

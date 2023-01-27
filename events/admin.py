@@ -98,9 +98,10 @@ class CheckinAdmin(admin.ModelAdmin):
         ) % updated, messages.SUCCESS)
     mark_inactive.short_description = "Mark selected as inactive"
 
-
+class SignatureAdmin(admin.ModelAdmin):
+    readonly_fields = ('timestamp',)
     
-
+admin_site.register(Signature, SignatureAdmin)
 admin_site.register(tag)
 admin_site.register(Event, EventAdmin)
 admin_site.register(SingleTicket, TicketAdmin)
