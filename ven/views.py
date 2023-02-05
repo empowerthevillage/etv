@@ -9,14 +9,6 @@ def venForm(request):
     if request.method == 'POST':
         if request.POST.get('submission-type') == 'business':
             nomination_form = BusinessForm(request.POST)
-            try:
-                vendor = nomination_form.data['vendor_opp']
-            except:
-                vendor = "false"
-            try:
-                pitch = nomination_form.data['pitch_comp']
-            except:
-                pitch = "false"
             obj = Nomination()
             obj.nominator_name = nomination_form.data['nominator-name']
             obj.nominator_email = nomination_form.data['nominator-email']
@@ -42,18 +34,6 @@ def venForm(request):
             obj.instagram = nomination_form.data['instagram']
             obj.facebook = nomination_form.data['facebook']
             obj.twitter = nomination_form.data['twitter']
-            if vendor == "true":
-                obj.expo_vendor = True
-                is_vendor = "Yes"
-            else:
-                obj.expo_vendor = False
-                is_vendor = "No"
-            if pitch == "true":
-                obj.pitch_comp = True
-                is_pitch = "Yes"
-            else:
-                obj.pitch_comp = False
-                is_pitch = "No"
             obj.save()
             sweetify.success(request, title='Thank you!', icon='success', text="Thank you for registering for the Village Empowerment Network!", button='OK', timer=6000)
             welcome_subject = "Welcome to ETV's Village Empowerment Network!"
@@ -88,8 +68,6 @@ def venForm(request):
                 'bus_priority1': obj.priority1,
                 'bus_priority2': obj.priority2,
                 'bus_priority3': obj.priority3,
-                'pitch': is_pitch,
-                'vendor': is_vendor
             })
             confirmation_plain_text = 'View email in browser'      
             send_mail(confirmation_subject, confirmation_plain_text, from_email, ['chandler@eliftcreations.com', 'ayo@empowerthevillage.org', 'admin@empowerthevillage.org'], html_message=confirmation_content)

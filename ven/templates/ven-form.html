@@ -37,22 +37,7 @@
       <div id="vbp-business-nomination-form" class="row hidden">
             <form class="col s12 l10 offset-l1 xl8 offset-xl2" method="POST" action="/village-empowerment-network-nomination/" id="nomination-form">
               {% csrf_token %}
-              <input type="hidden" name="submission-type" value="business">
-              <div class="col s12 center-align">
-                <p>
-                  <label>
-                    <input type="checkbox" value="true" name="vendor_opp"/>
-                    <span>I'm interested in Vendor Opportunities at ETV's 2023 Empowerment Expo</span>
-                  </label>
-                </p>
-                <p>
-                  <label>
-                    <input type="checkbox" value="true" name="pitch_comp"/>
-                    <span>I would like to apply for ETV's Village Ventures Business Pitch Competition</span>
-                  </label>
-                </p>
-                <p><a href="/events/empowerment-expo/buy-tickets/" target="_blank">Click here to pay Expo Vendor or Pitch Competition Fees</a></p>
-              </div>
+              <input type="hidden" name="submission-type" value="business">    
               <div class="col s12 m6 l4">
                 <div class="input-field">
                   <input name="nominator-name" id="vbp-name" type="text" required>
@@ -973,21 +958,7 @@
       <div id="vbp-both-nomination-form" class="row hidden">
         <form class="col s12 l10 offset-l1 xl8 offset-xl2" method="POST" action="/village-empowerment-network-nomination/" id="nomination-form">
           {% csrf_token %}
-          <div class="col s12 center-align">
-            <p>
-              <label>
-                <input type="checkbox" value="true" name="vendor_opp"/>
-                <span>I'm interested in Vendor Opportunities at ETV's 2023 Empowerment Expo</span>
-              </label>
-            </p>
-            <p>
-              <label>
-                <input type="checkbox" value="true" name="pitch_comp"/>
-                <span>I would like to apply for ETV's Village Ventures Business Pitch Competition</span>
-              </label>
-            </p>
-            <p><a href="/events/empowerment-expo/buy-tickets/" target="_blank">Click here to pay Expo Vendor or Pitch Competition Fees</a></p>
-          </div>
+          
           <input type="hidden" name="submission-type" value="both">
           
           <fieldset>
