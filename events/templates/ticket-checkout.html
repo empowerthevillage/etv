@@ -197,16 +197,17 @@
             <img class="z-depth-1" src="{{ event.get_checkout_img_path }}" width=100% style="margin-top: 20px">
             {% endif %}
 
-            {% if event.checkout_img_link_2 is not None %}
+            {% if event.checkout_img_link_2.exists %}
             <a href="{{ event.checkout_img_link_2 }}" target="_blank"><img class="z-depth-1" src="{{ event.get_checkout_img_path_2 }}" width=100% style="margin-top: 20px"></a>
-            {% elif event.checkout_image_2 is not None %}
+            {% elif event.checkout_image_2.exists %}
+            {{ event.checkout_image_2 }}
             <img class="z-depth-1" src="{{ event.get_checkout_img_path_2 }}" width=100% style="margin-top: 20px">
             {% endif %}
-            {% if event.sponsor_image is not None %}
+            {% if event.sponsor_image.exists %}
             <p class="sponsor-text">ETV's Village Empowerment Network is supported by:</p>
             <img src="{{ event.get_sponsor_img_path }}" width=100% style="margin-top: 0px">
             {% endif %}
-            {% if event.checkout_video_html is not None %}
+            {% if event.checkout_video_html.exists %}
             <div style="margin-top: 20px">
                           {{ event.checkout_video_html|safe }}
             </div>            
@@ -287,21 +288,21 @@
                     <i class="secure"><i class="fas fa-lock"></i> Secure </i></p>
             </div>
             </div>
-            {% if event.checkout_img_link is not None %}
+            {% if event.checkout_img_link.exists %}
             <a href="{{ event.checkout_img_link }}"><img class="z-depth-1" src="{{ event.get_checkout_img_path }}" width=100% style="margin-top: 20px"></a>
             {% else %}
             <img class="z-depth-1" src="{{ event.get_checkout_img_path }}" width=100% style="margin-top: 20px">
             {% endif %}
-            {% if event.checkout_img_link_2 is not None %}
+            {% if event.checkout_img_link_2.exists %}
             <a href="{{ event.checkout_img_link_2 }}" target="_blank"><img class="z-depth-1" src="{{ event.get_checkout_img_path_2 }}" width=100% style="margin-top: 20px"></a>
             {% elif event.checkout_image_2 is not None %}
             <img class="z-depth-1" src="{{ event.get_checkout_img_path_2 }}" width=100% style="margin-top: 20px">
             {% endif %}
-            {% if event.sponsor_image is not None %}
+            {% if event.sponsor_image.exists %}
             <p class="sponsor-text">ETV's Village Empowerment Network is supported by:</p>
             <img src="{{ event.get_sponsor_img_path }}" width=100% style="margin-top: 0px">
             {% endif %}
-            {% if event.checkout_video_html is not None %}
+            {% if event.checkout_video_html.exists %}
 <div style="margin-top: 20px">
               {{ event.checkout_video_html|safe }}
 </div>            
@@ -476,21 +477,21 @@
                     <i class="secure"><i class="fas fa-lock"></i> Secure </i></p>
             </div>
             </div>
-            {% if event.checkout_img_link is not None %}
+            {% if event.checkout_img_link.exists %}
             <a href="{{ event.checkout_img_link }}"><img class="z-depth-1" src="{{ event.get_checkout_img_path }}" width=100% style="margin-top: 20px"></a>
             {% else %}
             <img class="z-depth-1" src="{{ event.get_checkout_img_path }}" width=100% style="margin-top: 20px">
             {% endif %}
-            {% if event.checkout_img_link_2 is not None %}
+            {% if event.checkout_img_link_2.exists %}
             <a href="{{ event.checkout_img_link_2 }}" target="_blank"><img class="z-depth-1" src="{{ event.get_checkout_img_path_2 }}" width=100% style="margin-top: 20px"></a>
-            {% elif event.checkout_image_2 is not None %}
+            {% elif event.checkout_image_2.exists %}
             <img class="z-depth-1" src="{{ event.get_checkout_img_path_2 }}" width=100% style="margin-top: 20px">
             {% endif %}
-            {% if event.sponsor_image is not None %}
+            {% if event.sponsor_image.exists %}
             <p class="sponsor-text">ETV's Village Empowerment Network is supported by:</p>
             <img src="{{ event.get_sponsor_img_path }}" width=100% style="margin-top: 0px">
             {% endif %}
-            {% if event.checkout_video_html is not None %}
+            {% if event.checkout_video_html.exists %}
 <div style="margin-top: 20px">
               {{ event.checkout_video_html|safe }}
 </div>            
