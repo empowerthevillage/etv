@@ -1,22 +1,17 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %}ETV | 2022 Holiday Gift Guide{% endblock %}
-{% block canonical %}https://www.empowerthevillage.org/village-black-pages/holiday-gift-guide/{% endblock %}
-{% block seo_description %}Village Black Pages® (VBP) is the critical resource Americans can rely on to locate Black-owned businesses to support when responding to our charge to Make Every Friday, Black Friday®!{% endblock %}
-
+{% block title %}{{ title }}{% endblock %}
 
 {% block content %}
-
 <div class="content-container">
     
     <div id="vbp-resources">
         
-        <div class="z-depth-4 row vbp-booklet-container" style="margin:0; background: white; padding-top: 0px" id="vbp-row">
-            <h4 class="rss" style="text-align:center; padding-top: 30px; margin-bottom: 0; color:#aa1625">EMPOWER THE VILLAGE AS YOU SHOP THIS HOLIDAY SEASON!</h4>
-            <img src="https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/holly-banner.png" style="min-width:100%; width: 102%; margin-left: -10px; max-height:200px">
+        <div class="z-depth-4 row vbp-booklet-container" style="margin:0; background: white; padding-top: 30px" id="vbp-row">
             
             <div class="col s12" id="book" style="padding: 0">
+                <a id="view-tc">View Table of Contents</a>
                 <div id="flipbook-mobile-container">
                     <div class="" id="vbp-flipbook-mobile">
                         <div class="row center-align">
@@ -29,32 +24,30 @@
                                     <div class="aspect-inner" id="aspect-inner">
                                         <div id="flipbook-mobile" class="flipbook z-depth-1">
                                             <div class="hard" id="cover-page-mobile"></div>
-                                            
-                                            {% for page in mpages %}
-                                            {% regroup page.object_list by category as vbp_list %}
-                                            <div class="data-pg">
-                                                <div class="data-table" style="padding: 7.5% 5% 5% 5%">
-                                                    {% for category in vbp_list %}
-                                                    <p class="category-title">{{ category.grouper }}</p>
+                                            {% for section in sections %}
+                                            <div class="section-cover" id="{{ section.category }}-cover" style="background: url('{{ section.cover }}'); background-size: 105%"></div>
+                                            {% for response in section.pages %}
+                                            <div class="data-pg" bgLeft="{{ section.left }}" bgRight="{{ section.right }}">
+                                                <div class="data-table" style="padding: 10%">
                                                     <table class="highlight">
                                                         <colgroup>
                                                             <col span="1" style="width: 45%;">
                                                             <col span="1" style="width: 25%;">
                                                             <col span="1" style="width: 35%;">
-                                                        </colgroup>
-                                                        <tbody>
-                                                            {% for vbp in category.list %}
+                                                         </colgroup>
+                                                         <tbody>
+                                                            {% for vbp in response %}
                                                             <tr>
                                                                 <td style="max-width: 35%; font-weight:500">
                                                                     {% if vbp|length > 20%}
                                                                         {% if vbp.website %}
-                                                                        <a target="_blank" href="{{ vbp.website }}" target="_blank" style="font-weight: 500;font-size: 0.35vw">{{ vbp }}</a>
+                                                                        <a href="{{ vbp.website }}" target="_blank" style="font-weight: 500;font-size: 0.35vw">{{ vbp }}</a>
                                                                         {% else %}
                                                                         <a style="font-size: 0.35vw; color:black">{{ vbp }}</a>
                                                                         {% endif %}
                                                                     {% else %}
                                                                         {% if vbp.website %}
-                                                                        <a target="_blank" href="{{ vbp.website }}" target="_blank" style="font-weight: 500;">{{ vbp }}</a>
+                                                                        <a href="{{ vbp.website }}" target="_blank" style="font-weight: 500;">{{ vbp }}</a>
                                                                         {% else %}
                                                                         <a style="color:rgb(55, 55, 55); font-weight:400">{{ vbp }}</a>
                                                                         {% endif %}
@@ -66,14 +59,18 @@
                                                                 {% endif %}
                                                             </tr>
                                                             {% endfor %}
-                                                        </tbody>
+                                                         </tbody>
                                                     </table>
-                                                    {% endfor %}
-                                                    {% if page.has_ad %}
-                                                    <img src="{{ page.ad }}" width="100%">
-                                                    {% endif %}
+                                                    {% if response.object_list|length > 6 %}
+                                                        {% else %}
+                                                        <div class="center-align roomformore" style="margin-top: 5%; background:rgb(29, 29, 29); padding: 1vw 2vw">
+                                                            <p style="color:white; ">There's always room for more!</p>
+                                                            <p style="color:white; text-align: justify">If you know of a great business we should include, or if you own a business and would like to be listed, please fill out the <a href="{{ nomination_url }}">Business Nomination Form</a> on our website. VBP is ever-evolving and we update our directories quarterly!</p>
+                                                        </div>
+                                                        {% endif %}
                                                 </div>
                                             </div>
+                                            {% endfor %}
                                             {% endfor %}
                                             
                                             <div class="hard" style="background: url({% static 'img/vbp final page.png' %});background-size: 100%"></div>
@@ -95,7 +92,7 @@
                                     <div class="aspect-inner" id="aspect-inner">
                                         <div id="flipbook" class="flipbook">
                                             <div class="hard" id="cover-page"></div>
-                                            <div class="" style='background: url("{{ cover }}"); background-size: 102%'></div>
+                                            <div class="" style="background: url('https://etv-empowerthevillage.s3.amazonaws.com/static/img/vbp-efbf-page.svg'); background-size: 102%"></div>
                                             <div class="hard" id="intro-page1">
                                                 <div class="col 11" style="margin-top:15%;width:100%">
                                                     <div class="center-align intro-page1">
@@ -124,31 +121,51 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            {% for page in pages %}
-                                            {% regroup page.object_list by category as vbp_list %}
-                                            <div class="data-pg">
-                                                <div class="data-table" style="padding: 10% 10% 10% 5%">
-                                                    {% for category in vbp_list %}
-                                                    <p class="category-title">{{ category.grouper }}</p>
+                                            <div class="" style="background: black; color: white; padding: 1%">
+                                                <h6 class="tc-title" style="font-family: 'oskar'; margin-bottom:10px; text-align: center">TABLE OF CONTENTS</h6>
+                                                <div style="border-top:dotted white 0.1px; padding: 1%"></div>
+                       
+                                                    <table class="col s6 table-of-contents">
+                                                        {% for category in col1 %}
+                                                        <tr>
+                                                            <td class="category-link" dataPage="{{ category.start_page }}">{{ category.verbose }}</td>
+                                                            <td class="category-link" dataPage="{{ category.start_page }}">{{ category.start_page }}</td>
+                                                        </tr>
+                                                        {% endfor %}
+                                                    </table>
+                                                    <table class="col s6 table-of-contents">
+                                                        {% for category in col2 %}
+                                                        <tr>
+                                                            <td class="category-link" dataPage="{{ category.start_page }}">{{ category.verbose }}</td>
+                                                            <td class="category-link" dataPage="{{ category.start_page }}">{{ category.start_page }}</td>
+                                                        </tr>
+                                                        {% endfor %}
+                                                    </table>
+                                            </div>
+                                            {% for section in sections %}
+                                            <div class="section-cover" id="{{ section.category }}-cover" style="background: url('{{ section.cover }}'); background-size: 105%"></div>
+                                            {% for response in section.pages %}
+                                            <div class="data-pg" bgLeft="{{ section.left }}" bgRight="{{ section.right }}">
+                                                <div class="data-table" style="padding: 10%">
                                                     <table class="highlight">
                                                         <colgroup>
                                                             <col span="1" style="width: 45%;">
                                                             <col span="1" style="width: 25%;">
                                                             <col span="1" style="width: 35%;">
-                                                        </colgroup>
-                                                        <tbody>
-                                                            {% for vbp in category.list %}
+                                                         </colgroup>
+                                                         <tbody>
+                                                            {% for vbp in response %}
                                                             <tr>
                                                                 <td style="max-width: 35%; font-weight:500">
                                                                     {% if vbp|length > 20%}
                                                                         {% if vbp.website %}
-                                                                        <a target="_blank" href="{{ vbp.website }}" target="_blank" style="font-weight: 500;font-size: 0.35vw">{{ vbp }}</a>
+                                                                        <a href="{{ vbp.website }}" target="_blank" style="font-weight: 500;font-size: 0.35vw">{{ vbp }}</a>
                                                                         {% else %}
                                                                         <a style="font-size: 0.35vw; color:black">{{ vbp }}</a>
                                                                         {% endif %}
                                                                     {% else %}
                                                                         {% if vbp.website %}
-                                                                        <a target="_blank" href="{{ vbp.website }}" target="_blank" style="font-weight: 500;">{{ vbp }}</a>
+                                                                        <a href="{{ vbp.website }}" target="_blank" style="font-weight: 500;">{{ vbp }}</a>
                                                                         {% else %}
                                                                         <a style="color:rgb(55, 55, 55); font-weight:400">{{ vbp }}</a>
                                                                         {% endif %}
@@ -160,15 +177,20 @@
                                                                 {% endif %}
                                                             </tr>
                                                             {% endfor %}
-                                                        </tbody>
+                                                         </tbody>
                                                     </table>
-                                                    {% endfor %}
-                                                    {% if page.has_ad %}
-                                                    <img src="{{ page.ad }}" width="100%">
-                                                    {% endif %}
+                                                    {% if response.object_list|length > 6 %}
+                                                        {% else %}
+                                                        <div class="center-align roomformore" style="margin-top: 5%; background:rgb(29, 29, 29); padding: 1vw 2vw">
+                                                            <p style="color:white; ">There's always room for more!</p>
+                                                            <p style="color:white; text-align: justify">If you know of a great business we should include, or if you own a business and would like to be listed, please fill out the <a href="{{ nomination_url }}">Business Nomination Form</a> on our website. VBP is ever-evolving and we update our directories quarterly!</p>
+                                                        </div>
+                                                        {% endif %}
                                                 </div>
                                             </div>
                                             {% endfor %}
+                                            {% endfor %}
+                                        
                                             <div class="hard" style="background: url({% static 'img/vbp final page.png' %});background-size: 100%"></div>
                                         </div>
                                     </div>
@@ -182,79 +204,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="divider"></div>
-    <div style="padding-top: 5%">
-        <div class="center-align">
-            <h4 class="rss">Ready, Set, Shop! Click Any Image Below To Start Your Holiday Gift Giving!</h4>
-            <a id="link-back" href="#book">Click Here To View The Full Holiday Gift Guide</a>
-            <div class="div-mini-dotted" style="border-bottom: 3px dotted black; width: 5%; margin-left: 45%; margin-top:10px; margin-bottom: 20px"></div>
-            <h5 style="color:#aa1625; text-transform:uppercase; letter-spacing: 1px; font-weight: 500">Empower The Village As You Shop This Holiday Season!</h5>
-            <div class="divider" style="width:80%; margin-left: 10%; margin-top: 20px"></div>
-        </div>
-        <div class="row" style="padding-top: 20px">
-            <div class="col s6 l2 offset-l1">
-                <a target="_blank" href="https://baobabclothing.com/"><img width=85% style="margin-left: 7.5%;"src="https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/gg11.webp"></a>
-            </div>
-            <div class="col s6 l2">
-                <a target="_blank" href="https://lennoxandharvey.com/"><img width=100% src="https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/gg3.webp"></a>
-            </div>
-            <div class="col s6 l2">
-                <a target="_blank" href="https://shopemmalynlove.com/"><img width=97% src="https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/gg4.webp"></a>
-            </div>
-            <div class="col s6 l2">
-                <a target="_blank" href="https://www.ikuzidolls.com/"><img width=90% src="https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/gg1.webp"></a>
-            </div>
-            <div class="col s6 l2">
-                <a target="_blank" href="http://www.sidelinebrand.com/"><img width=100% src="https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/gg13.webp"></a>
-            </div>
-        </div>
-        <div class="row" style="padding-top: 30px; padding-bottom: 30px">
-            <div class="col s6 l3">
-                <a target="_blank" href="https://www.teastorenj.com/"><img width=95% src="https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/gg6.webp"></a>
-            </div>
-            <div class="col s6 l3">
-                <a target="_blank" href="https://www.sankofa.com/"><img width=100% style="padding-top: 15px;" src="https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/gg16.webp"></a>
-            </div>
-            <div class="col s6 l3">
-                <a target="_blank" href="https://www.bse.coffee/"><img width=100% src="https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/gg12.webp"></a>
-            </div>
-            <div class="col s6 l3">
-                <a target="_blank" href="https://bazodee.com/"><img width=95% src="https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/gg8.webp"></a>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col s6 l2 offset-l1">
-                <a target="_blank" href="http://telfar.net/"><img width=90% src="https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/gg5.webp"></a>
-            </div>
-            <div class="col s6 l2">
-                <a target="_blank" href="http://harlemcandlecompany.com/"><img width=100% src="https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/gg9.webp"></a>
-            </div>
-            <div class="col s6 l2">
-                <a target="_blank" href="http://brandonblackwood.com/"><img width=90% src="https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/gg10.webp"></a>
-            </div>
-            <div class="col s6 m4 l2">
-                <a target="_blank" href="https://theblackhome.com/"><img width=100% src="https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/gg2.webp"></a>
-            </div>
-            <div class="col s6 l2">
-                <a target="_blank" href="http://www.glassjarnaturalskin.com/"><img width=100% src="https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/gg7.webp"></a>
-            </div>
-        </div>
-        <div class="row" style="padding-top: 30px">
-            <div class="col s6 l4">
-                <a target="_blank" href="http://mentedcosmetics.com/"><img width=60% style="margin-left: 30%" src="https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/gg14.webp"></a>
-            </div>
-            <div class="col s6 l3">
-                <a target="_blank" href="http://www.maryshandsjewelry.com/"><img width=100%  src="https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/gg15.webp"></a>
-            </div>
-            <div class="col s6 l4">
-                <a target="_blank" href="http://thebougiebabyboutique.com/"><img width=70% src="https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/gg17.webp"></a>
-            </div>
-        </div>
-        
-        
-        
-        
     </div>
 </div>
 
@@ -277,11 +226,11 @@
             letter-spacing: 0px;
         }
         #cover-page {
-            background-image: url('https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/22-gift-guide.webp');
+            background-image: url('{{ cover_url }}');
             background-size: 100%
         }
         #cover-page-mobile {
-            background-image: url('https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/22-gift-guide.webp');
+            background-image: url('{{ cover_url }}');
             background-size: 100%
         }
         .hidden {
@@ -659,6 +608,24 @@
     var book = $('#flipbook').turn({
         display: 'double',
         autoCenter: true,
+        when: {
+            turned: function(event, page, pageObj) {
+                $('.data-pg.odd').each(function(index){
+                    var link = $(this).attr('bgRight');
+                    var url = 'url("'+ link +'")';
+                    console.log(url);
+                    $(this).css('background-image', url);
+                    $(this).css('background-size', '101%');
+                });
+                $('.data-pg.even').each(function(index){
+                    var link = $(this).attr('bgLeft');
+                    var url = 'url("'+ link +'")';
+                    console.log(url);
+                    $(this).css('background-image', url);
+                    $(this).css('background-size', '101%');
+                })
+            }
+        }
     });
     $(document).on('click', '#next', function(){
         $('#flipbook').turn('next')
@@ -668,6 +635,7 @@
     });
     $(document).on('click', '#view-tc', function(){
         $('#flipbook').turn('page', 5)
+        $('#flipbook-mobile').turn('page', 5)
     });
     $(document).on('click', '#go-btn', function(){
         var page = $('#page-jump').val()
@@ -731,6 +699,9 @@
             display: block;
             height: 130vw
         }
+        #view-tc {
+            display: none;
+        }
         #flipbook-fullsize-container {
             display: none
         }
@@ -738,10 +709,18 @@
     @media only screen and (min-width: 993px){
         #flipbook-mobile-container {
             display: none;
-            
         }
         #flipbook-fullsize-container {
             display: block
+        }
+        #view-tc {
+            display: block;
+            text-align: center;
+            width: 100%;
+            margin-bottom: 15px;
+        }
+        #view-tc:hover {
+            cursor: pointer;
         }
     }
     #flipbook-mobile {

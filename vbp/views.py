@@ -539,8 +539,55 @@ def nj_new(request):
   for (category,verbose) in CATEGORY_CHOICES:
     listings = vbp_nj.objects.filter(Q(category__exact=category))
     cats.append({'category':category,'listings':listings})
-  print(cats)
   return render(request, 'vbp/nj_only.html')
+
+def essex_view(request):
+    county_listings = vbp_nj.objects.filter(county="Essex County")
+    cats = []
+    page_counter = 6
+    for (category,verbose) in CATEGORY_CHOICES:
+        listings = county_listings.filter(category=category)
+        pages = Paginator(listings, 12)
+        if len(listings)>0:
+            cats.append({'category':category, 'verbose':verbose, 'pages':pages, 'start_page':page_counter,"cover": "https://etv-empowerthevillage.s3.amazonaws.com/static/img/vbp/%s.svg" %(str(verbose)), "right": "https://etv-empowerthevillage.s3.amazonaws.com/static/img/vbp/%s_right.svg" %(str(verbose)),"left": "https://etv-empowerthevillage.s3.amazonaws.com/static/img/vbp/%s_left.svg" %(str(verbose))})
+            page_counter += pages.num_pages + 1
+            
+    n = int(len(cats)/2)
+    m = n+1
+    col1 = cats[0:n]
+    col2 = cats[m:None]
+    context = {
+        'title': 'Essex County Village Black Pages',
+        'cover_url': 'https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/essex-cover.webp',
+        'sections': cats,
+        'col1': col1,
+        'col2': col2,
+    }
+    return render(request, 'vbp/county_only.html', context)
+
+def morris_view(request):
+    county_listings = vbp_nj.objects.filter(county="Morris County")
+    cats = []
+    page_counter = 6
+    for (category,verbose) in CATEGORY_CHOICES:
+        listings = county_listings.filter(category=category)
+        pages = Paginator(listings, 12)
+        if len(listings)>0:
+            cats.append({'category':category, 'verbose':verbose, 'pages':pages, 'start_page':page_counter,"cover": "https://etv-empowerthevillage.s3.amazonaws.com/static/img/vbp/%s.svg" %(str(verbose)), "right": "https://etv-empowerthevillage.s3.amazonaws.com/static/img/vbp/%s_right.svg" %(str(verbose)),"left": "https://etv-empowerthevillage.s3.amazonaws.com/static/img/vbp/%s_left.svg" %(str(verbose))})
+            page_counter += pages.num_pages + 1
+            
+    n = int(len(cats)/2)
+    m = n+1
+    col1 = cats[0:n]
+    col2 = cats[m:None]
+    context = {
+        'title': 'Morris County Village Black Pages',
+        'cover_url': 'https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/morris-cover.webp',
+        'sections': cats,
+        'col1': col1,
+        'col2': col2,
+    }
+    return render(request, 'vbp/county_only.html', context)
   
 def gift_guide_view(request):
     listings = gift_guide.objects.filter(approved=True)
