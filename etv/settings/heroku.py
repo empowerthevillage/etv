@@ -4,17 +4,14 @@ Production Settings for Heroku
 
 import environ
 
-# If using in your own project, update the project namespace below
 from .production import *
 
 env = environ.Env(
-    # set casting, default value
     DEBUG=(bool, False)
 )
 
-# False if not in os.environ
 DEBUG = False
-# Raises django's ImproperlyConfigured exception if SECRET_KEY not in os.environ
+
 SECRET_KEY = env('SECRET_KEY')
 SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = env('SOCIAL_AUTH_GOOGLE_OAUTH2_KEY')
 SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = env('SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET')
@@ -36,8 +33,7 @@ GEOCODER_KEY=env('GEOCODER_KEY')
 BRAINTREE_TOKENIZATION_KEY = env('TOKENIZATION_KEY')
 EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
-# Parse database connection url strings like psql://user:pass@127.0.0.1:8458/db
+
 DATABASES = {
-    # read os.environ['DATABASE_URL'] and raises ImproperlyConfigured exception if not found
     'default': env.db(),
 }

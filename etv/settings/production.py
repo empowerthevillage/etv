@@ -208,11 +208,11 @@ WSGI_APPLICATION = 'etv.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2', 
-        'NAME': 'd1ttpvr346c994',                     
-        'USER': 'pwzmkrllbfxbqg',
-        'PASSWORD': '48ad1968c36fe63810a897061cb66a4d3976d01a167292a299def43feaf57b05',
-        'HOST': 'ec2-18-215-44-132.compute-1.amazonaws.com',
-        'PORT': '5432',                     
+        'NAME': env('DB_NAME'),                     
+        'USER': env('DB_USER'),
+        'PASSWORD': env('DB_PASSWORD'),
+        'HOST': env('DB_HOST'),
+        'PORT': env('DB_PORT'),                     
     }
 }
 # Password validation

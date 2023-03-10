@@ -162,7 +162,7 @@ class ticketItem(models.Model):
         return range(self.quantity)
 
 class ticketDonation(models.Model):
-    cart        = models.ForeignKey(TicketCart, on_delete=models.CASCADE, blank=True, null=True)
+    cart        = models.ForeignKey(TicketCart, on_delete=models.SET_NULL, blank=True, null=True)
     amount      = models.DecimalField(default=0.00, max_digits=8, decimal_places=2)
     event       = models.ForeignKey(Event, null=True, blank=True, on_delete=models.SET_NULL)
     
@@ -170,7 +170,7 @@ class ticketDonation(models.Model):
         return str(self.amount)
     
 class ticketAd(models.Model):
-    cart        = models.ForeignKey(TicketCart, on_delete=models.CASCADE, blank=True, null=True)
+    cart        = models.ForeignKey(TicketCart, on_delete=models.SET_NULL, blank=True, null=True)
     type        = models.ForeignKey(AdType, on_delete=models.SET_NULL, null=True, blank=True)
     
     def subtotal(self):

@@ -1494,3 +1494,2317 @@ def filterList(request):
     
     items = get.items()
     return HttpResponse(220)
+
+
+LINKS = [
+  {
+    "link": "https://14parishkitchen.com/",
+    "sessions": 64
+  },
+  {
+    "link": "https://issuu.com/empowerthevillage/docs/final_2021_annual_report?mode=window",
+    "sessions": 56
+  },
+  {
+    "link": "https://issuu.com/empowerthevillage/docs/tournament_information_3_",
+    "sessions": 59
+  },
+  {
+    "link": "https://www.facebook.com/Empower-The-Village-Nonprofit-Organization-105185814766521/",
+    "sessions": 29
+  },
+  {
+    "link": "https://www.instagram.com/empower_etv/",
+    "sessions": 37
+  },
+  {
+    "link": "https://empowerthevillage.s3.amazonaws.com/static/img/US-NJ-22.pdf?AWSAccessKeyId=AKIA6CEH7IPTHZENUK",
+    "sessions": 26
+  },
+  {
+    "link": "https://issuu.com/empowerthevillage/docs/etv_special_report_2020-2021_v2",
+    "sessions": 18
+  },
+  {
+    "link": "https://issuu.com/empowerthevillage/docs/press_release_empower_the_village_says_february_is?mode=win",
+    "sessions": 15
+  },
+  {
+    "link": "https://empowerthevillage.s3.amazonaws.com/static/img/obb-generic-2.jpg?AWSAccessKeyId=AKIA6CEH7IPTH",
+    "sessions": 16
+  },
+  {
+    "link": "https://youtu.be/ql8U8oy12wA",
+    "sessions": 14
+  },
+  {
+    "link": "https://baobabclothing.com/",
+    "sessions": 11
+  },
+  {
+    "link": "https://lennoxandharvey.com/",
+    "sessions": 10
+  },
+  {
+    "link": "https://www.youtube.com/channel/UCKMNMY8pqCId-PY4dCcKtaQ",
+    "sessions": 27
+  },
+  {
+    "link": "https://bazodee.com/",
+    "sessions": 9
+  },
+  {
+    "link": "http://telfar.net/",
+    "sessions": 8
+  },
+  {
+    "link": "http://www.maryshandsjewelry.com/",
+    "sessions": 8
+  },
+  {
+    "link": "https://goo.gl/maps/bnLBU2qJG81auBgg7",
+    "sessions": 11
+  },
+  {
+    "link": "https://shopemmalynlove.com/",
+    "sessions": 8
+  },
+  {
+    "link": "https://smile.amazon.com/ch/83-1330564",
+    "sessions": 8
+  },
+  {
+    "link": "https://theblackhome.com/",
+    "sessions": 10
+  },
+  {
+    "link": "https://www.facebook.com/Asahdas-Soulfood-Restaurant-104298064885687/",
+    "sessions": 8
+  },
+  {
+    "link": "http://brandonblackwood.com/",
+    "sessions": 8
+  },
+  {
+    "link": "http://www.sidelinebrand.com/",
+    "sessions": 8
+  },
+  {
+    "link": "http://www.sourceofknowledgebookstore.com/",
+    "sessions": 7
+  },
+  {
+    "link": "https://chezbebeny.com/",
+    "sessions": 7
+  },
+  {
+    "link": "https://empowerthevillage.s3.amazonaws.com/static/img/nj-22-print.pdf?AWSAccessKeyId=AKIA6CEH7IPTHZE",
+    "sessions": 13
+  },
+  {
+    "link": "https://www.sankofa.com/",
+    "sessions": 7
+  },
+  {
+    "link": "https://www.tapinto.net/towns/soma/articles/empower-the-village-celebrates-juneteenth-black-artists-",
+    "sessions": 9
+  },
+  {
+    "link": "http://www.glassjarnaturalskin.com/",
+    "sessions": 6
+  },
+  {
+    "link": "http://www.mtcflowers.com/",
+    "sessions": 6
+  },
+  {
+    "link": "https://twitter.com/empower_etv",
+    "sessions": 6
+  },
+  {
+    "link": "https://www.ikuzidolls.com/",
+    "sessions": 7
+  },
+  {
+    "link": "https://www.teastorenj.com/",
+    "sessions": 6
+  },
+  {
+    "link": "http://harlemcandlecompany.com/",
+    "sessions": 6
+  },
+  {
+    "link": "http://linkedin.com/company/empower-the-village",
+    "sessions": 5
+  },
+  {
+    "link": "http://mentedcosmetics.com/",
+    "sessions": 5
+  },
+  {
+    "link": "http://thebougiebabyboutique.com/",
+    "sessions": 7
+  },
+  {
+    "link": "https://www.bse.coffee/",
+    "sessions": 5
+  },
+  {
+    "link": "https://www.cleanjuice.com/",
+    "sessions": 6
+  },
+  {
+    "link": "https://www.devineplantery.com/",
+    "sessions": 5
+  },
+  {
+    "link": "https://www.sandissoulbites.com/",
+    "sessions": 5
+  },
+  {
+    "link": "https://empowerthevillage.s3.amazonaws.com/static/img/US-GA-22.pdf?AWSAccessKeyId=AKIA6CEH7IPTHZENUK",
+    "sessions": 4
+  },
+  {
+    "link": "https://empowerthevillage.s3.amazonaws.com/static/img/US-NJ-22-print.pdf?AWSAccessKeyId=AKIA6CEH7IPT",
+    "sessions": 4
+  },
+  {
+    "link": "https://empowerthevillage.s3.amazonaws.com/static/img/US-OH-2021.pdf?AWSAccessKeyId=AKIA6CEH7IPTHZEN",
+    "sessions": 4
+  },
+  {
+    "link": "https://issuu.com/empowerthevillage/docs/final_2021_annual_report_2_",
+    "sessions": 6
+  },
+  {
+    "link": "https://sofistafunk.com/",
+    "sessions": 5
+  },
+  {
+    "link": "https://www.gefkenflowers.net/",
+    "sessions": 4
+  },
+  {
+    "link": "https://www.willowandolivia.com/",
+    "sessions": 5
+  },
+  {
+    "link": "http://3stageschildcarecenter.com/",
+    "sessions": 3
+  },
+  {
+    "link": "http://anmlinstinct.com/",
+    "sessions": 3
+  },
+  {
+    "link": "http://popschickentogo.com/",
+    "sessions": 3
+  },
+  {
+    "link": "http://prudentia-grp.com/",
+    "sessions": 3
+  },
+  {
+    "link": "http://shop.thebkcircus.com/",
+    "sessions": 3
+  },
+  {
+    "link": "http://www.blackloveboutique.com/",
+    "sessions": 3
+  },
+  {
+    "link": "https://bonbontonline.com/",
+    "sessions": 3
+  },
+  {
+    "link": "https://certapro.com/morristown/",
+    "sessions": 3
+  },
+  {
+    "link": "https://cfnj.org/lindamurphy/",
+    "sessions": 3
+  },
+  {
+    "link": "https://cornbreadsoul.com/",
+    "sessions": 3
+  },
+  {
+    "link": "https://empowerthevillage.s3.amazonaws.com/static/img/US-NJ-2021.pdf?AWSAccessKeyId=AKIA6CEH7IPTHZEN",
+    "sessions": 4
+  },
+  {
+    "link": "https://empowerthevillage.s3.amazonaws.com/static/img/US-VA-2021.pdf?AWSAccessKeyId=AKIA6CEH7IPTHZEN",
+    "sessions": 4
+  },
+  {
+    "link": "https://goo.gl/maps/xQmezjMN8czG4eKj6",
+    "sessions": 3
+  },
+  {
+    "link": "https://issuu.com/empowerthevillage/docs/the_power_post_june_2021_issue",
+    "sessions": 4
+  },
+  {
+    "link": "https://issuu.com/empowerthevillage/docs/the_power_post_may_2021_inaugural_issue",
+    "sessions": 3
+  },
+  {
+    "link": "https://www.braintreegateway.com/merchants/tb3vd7jd2hynhxcn/verified",
+    "sessions": 3
+  },
+  {
+    "link": "https://www.diversityplus.com/",
+    "sessions": 3
+  },
+  {
+    "link": "https://www.facebook.com/A-Taste-Of-Royalty-LLC-2437980549788466/",
+    "sessions": 3
+  },
+  {
+    "link": "https://www.familyhealingcenternj.com/",
+    "sessions": 3
+  },
+  {
+    "link": "https://www.howdelishhd.com/",
+    "sessions": 3
+  },
+  {
+    "link": "https://www.janecartersolution.com/",
+    "sessions": 5
+  },
+  {
+    "link": "https://www.mopweezebakery.com/",
+    "sessions": 3
+  },
+  {
+    "link": "https://www.tapinto.net/towns/morristown/categories/press-releases/articles/empower-the-village-hono",
+    "sessions": 4
+  },
+  {
+    "link": "https://www.theteacompanycafe.com/",
+    "sessions": 3
+  },
+  {
+    "link": "https://www.wisengineering.com/",
+    "sessions": 3
+  },
+  {
+    "link": "http://alices-west-indian.edan.io/",
+    "sessions": 2
+  },
+  {
+    "link": "http://byteforbyte.net/",
+    "sessions": 2
+  },
+  {
+    "link": "http://cyclebar.com/location/livingston",
+    "sessions": 2
+  },
+  {
+    "link": "http://pinkluxurytoys.com/",
+    "sessions": 2
+  },
+  {
+    "link": "http://places.singleplatform.com/s--m-caribbean-cuisine/menu?ref=google",
+    "sessions": 2
+  },
+  {
+    "link": "http://sdesignset.com/",
+    "sessions": 2
+  },
+  {
+    "link": "http://www.athleticartsacademynj.com/",
+    "sessions": 2
+  },
+  {
+    "link": "http://www.atrstaffing.com/",
+    "sessions": 2
+  },
+  {
+    "link": "http://www.bgg-llc.com/",
+    "sessions": 2
+  },
+  {
+    "link": "http://www.blakesbeautypalace.com/",
+    "sessions": 2
+  },
+  {
+    "link": "http://www.diffvelopment.org/",
+    "sessions": 2
+  },
+  {
+    "link": "http://www.jaspice.com/",
+    "sessions": 2
+  },
+  {
+    "link": "http://www.masonfirmllc.com/",
+    "sessions": 2
+  },
+  {
+    "link": "http://www.michellegcameron.com/",
+    "sessions": 2
+  },
+  {
+    "link": "http://www.mitchelltitus.com/",
+    "sessions": 2
+  },
+  {
+    "link": "http://www.nrgcomics.com/",
+    "sessions": 2
+  },
+  {
+    "link": "http://www.tezroro.com/",
+    "sessions": 2
+  },
+  {
+    "link": "http://www.titleshotkennels.com/",
+    "sessions": 2
+  },
+  {
+    "link": "https://abbysconsulting.net/",
+    "sessions": 2
+  },
+  {
+    "link": "https://altechts.com/",
+    "sessions": 2
+  },
+  {
+    "link": "https://bluesoleshoes.com/",
+    "sessions": 2
+  },
+  {
+    "link": "https://diversityfoodbrands.com/",
+    "sessions": 2
+  },
+  {
+    "link": "https://edgartowndiner.com/",
+    "sessions": 2
+  },
+  {
+    "link": "https://empowerthevillage.s3.amazonaws.com/static/img/US-FL-2021.pdf?AWSAccessKeyId=AKIA6CEH7IPTHZEN",
+    "sessions": 3
+  },
+  {
+    "link": "https://firstclassofcolor.com/",
+    "sessions": 2
+  },
+  {
+    "link": "https://harlemchocolatefactory.com/",
+    "sessions": 2
+  },
+  {
+    "link": "https://jlexillc.com/",
+    "sessions": 2
+  },
+  {
+    "link": "https://joannewatkins.kw.com/",
+    "sessions": 2
+  },
+  {
+    "link": "https://joharionline.com/",
+    "sessions": 2
+  },
+  {
+    "link": "https://montclairdiner.com/",
+    "sessions": 2
+  },
+  {
+    "link": "https://nextdoor.com/pages/maleigha-marie-essentials-tinton-falls-nj/",
+    "sessions": 2
+  },
+  {
+    "link": "https://odabro-african-restaurant-lounge.business.site/",
+    "sessions": 2
+  },
+  {
+    "link": "https://shopcallmesparkle.com/",
+    "sessions": 3
+  },
+  {
+    "link": "https://sleemilaw.com/",
+    "sessions": 2
+  },
+  {
+    "link": "https://small-business-like-a-pro.thinkific.com/courses/how-did-i-get-here",
+    "sessions": 2
+  },
+  {
+    "link": "https://small-business-like-a-pro.thinkific.com/courses/overcome-your-fear-of-selling",
+    "sessions": 5
+  },
+  {
+    "link": "https://soulfoodlivingston.com/",
+    "sessions": 2
+  },
+  {
+    "link": "https://systahood.com/",
+    "sessions": 2
+  },
+  {
+    "link": "https://us02web.zoom.us/meeting/register/tZ0qc-mvqzgjEtX6q-qdVN6kHcXt-9IlWjNJ",
+    "sessions": 2
+  },
+  {
+    "link": "https://www.4chickscafeempanadas.com/",
+    "sessions": 2
+  },
+  {
+    "link": "https://www.akwaaba.com/akwaaba-at-buttonwood-manor/",
+    "sessions": 2
+  },
+  {
+    "link": "https://www.bctpartners.com/",
+    "sessions": 2
+  },
+  {
+    "link": "https://www.bledsoeinternational.com/",
+    "sessions": 2
+  },
+  {
+    "link": "https://www.cafemoso.com/",
+    "sessions": 2
+  },
+  {
+    "link": "https://www.charcutericatering.com/",
+    "sessions": 2
+  },
+  {
+    "link": "https://www.chefdeon.com/",
+    "sessions": 2
+  },
+  {
+    "link": "https://www.chipinabottle.com/shop-online/",
+    "sessions": 2
+  },
+  {
+    "link": "https://www.eimpactconsulting.com/",
+    "sessions": 2
+  },
+  {
+    "link": "https://www.elzarestaurant.com/",
+    "sessions": 2
+  },
+  {
+    "link": "https://www.facebook.com/CuppiedyCakes/",
+    "sessions": 2
+  },
+  {
+    "link": "https://www.facebook.com/GoldenKraftsShop/",
+    "sessions": 2
+  },
+  {
+    "link": "https://www.facebook.com/TPA1970",
+    "sessions": 2
+  },
+  {
+    "link": "https://www.facebook.com/Tasteysgailsouthernsoulfood",
+    "sessions": 2
+  },
+  {
+    "link": "https://www.facebook.com/hibiscus.restaurant.nj/",
+    "sessions": 2
+  },
+  {
+    "link": "https://www.facebook.com/royalte.slayz/",
+    "sessions": 2
+  },
+  {
+    "link": "https://www.goodworks4god.com/",
+    "sessions": 2
+  },
+  {
+    "link": "https://www.harperscafenj.com/",
+    "sessions": 2
+  },
+  {
+    "link": "https://www.heratij.com/pages/our-story",
+    "sessions": 2
+  },
+  {
+    "link": "https://www.home2skool.com/",
+    "sessions": 2
+  },
+  {
+    "link": "https://www.homesnap.com/Jennifer-DaSilva-1/gmb",
+    "sessions": 3
+  },
+  {
+    "link": "https://www.industrial-bank.com/",
+    "sessions": 2
+  },
+  {
+    "link": "https://www.instagram.com/blueberryvegancafe/?hl=en",
+    "sessions": 2
+  },
+  {
+    "link": "https://www.instagram.com/bradfordsbarrcatering/?hl=en",
+    "sessions": 2
+  },
+  {
+    "link": "https://www.instagram.com/colormecuteinsideandout/?hl=en",
+    "sessions": 2
+  },
+  {
+    "link": "https://www.jukejointsoulhouse.com/",
+    "sessions": 2
+  },
+  {
+    "link": "https://www.kumbahealth.com/",
+    "sessions": 2
+  },
+  {
+    "link": "https://www.loveandlonglaw.com/",
+    "sessions": 2
+  },
+  {
+    "link": "https://www.montclairbrewery.com/",
+    "sessions": 2
+  },
+  {
+    "link": "https://www.mvbiscuits.com/",
+    "sessions": 2
+  },
+  {
+    "link": "https://www.pimentogrill.biz/",
+    "sessions": 2
+  },
+  {
+    "link": "https://www.rentahelpermoving.com/",
+    "sessions": 2
+  },
+  {
+    "link": "https://www.tapinto.net/towns/denville/categories/press-releases/articles/empower-the-village-inc-an",
+    "sessions": 3
+  },
+  {
+    "link": "https://www.theglamemporium.com/?fbclid=IwAR1E_CLeoudun2dusSdcbvNnKi-fPLlR1jwulshadYk85i1oD-5kzLyASE",
+    "sessions": 2
+  },
+  {
+    "link": "https://www.thetrendyclutch.com/",
+    "sessions": 2
+  },
+  {
+    "link": "https://www.treasuresmade.com/",
+    "sessions": 2
+  },
+  {
+    "link": "https://www.womenwhowinnetwork.com/",
+    "sessions": 2
+  },
+  {
+    "link": "https://www.woulibamrestuarantnj.com/",
+    "sessions": 2
+  },
+  {
+    "link": "https://www.zenaestheticsspa.com/",
+    "sessions": 2
+  },
+  {
+    "link": "https://www.zmenu.com/jefferson-cafe-and-food-market-montclair-online-menu/",
+    "sessions": 2
+  },
+  {
+    "link": "https://www.zmenu.com/natural-start-east-orange-online-menu/",
+    "sessions": 2
+  },
+  {
+    "link": "tel:(862) 777-3193",
+    "sessions": 2
+  },
+  {
+    "link": "http://Jennifer.dasilva@compass.com/",
+    "sessions": 1
+  },
+  {
+    "link": "http://aaronallenmoving.com/",
+    "sessions": 1
+  },
+  {
+    "link": "http://amyruths.com/",
+    "sessions": 1
+  },
+  {
+    "link": "http://amzn.to/2QJxAve",
+    "sessions": 1
+  },
+  {
+    "link": "http://b2harlem.com/",
+    "sessions": 1
+  },
+  {
+    "link": "http://betterliferecovery.com/",
+    "sessions": 1
+  },
+  {
+    "link": "http://bitsycakes.godaddysites.com/",
+    "sessions": 1
+  },
+  {
+    "link": "http://bmwfhc10.wixsite.com/mysite-2",
+    "sessions": 1
+  },
+  {
+    "link": "http://cheapcarinsurancenewarknj.com/",
+    "sessions": 1
+  },
+  {
+    "link": "http://cmykolorgraphics.com/",
+    "sessions": 1
+  },
+  {
+    "link": "http://djs-digital.com/",
+    "sessions": 1
+  },
+  {
+    "link": "http://escapemts.com/",
+    "sessions": 1
+  },
+  {
+    "link": "http://hairbynedjetti.com/vnhop.htm",
+    "sessions": 1
+  },
+  {
+    "link": "http://hannahmonet.com/",
+    "sessions": 1
+  },
+  {
+    "link": "http://healinghandsmsg.com/",
+    "sessions": 1
+  },
+  {
+    "link": "http://healinghempreleaf.com/",
+    "sessions": 1
+  },
+  {
+    "link": "http://instagram.com/bloodsweatscienceAUTO",
+    "sessions": 1
+  },
+  {
+    "link": "http://is3sol.com/",
+    "sessions": 1
+  },
+  {
+    "link": "http://jjean-claude.com/",
+    "sessions": 1
+  },
+  {
+    "link": "http://johnsonlegalpc.com/",
+    "sessions": 1
+  },
+  {
+    "link": "http://jwbranding.co/",
+    "sessions": 1
+  },
+  {
+    "link": "http://komfort-zone.net/",
+    "sessions": 1
+  },
+  {
+    "link": "http://netpacintl.comm/",
+    "sessions": 1
+  },
+  {
+    "link": "http://reddz-bistro-grill.edan.io/",
+    "sessions": 1
+  },
+  {
+    "link": "http://sandrasnextgeneration.com/",
+    "sessions": 1
+  },
+  {
+    "link": "http://sandwichesunlimited.net/",
+    "sessions": 1
+  },
+  {
+    "link": "http://sbprou.com/",
+    "sessions": 1
+  },
+  {
+    "link": "http://shaescraftycorner.com/",
+    "sessions": 1
+  },
+  {
+    "link": "http://shellzthehookahchef.com/",
+    "sessions": 1
+  },
+  {
+    "link": "http://shopmymelanin.shop/",
+    "sessions": 1
+  },
+  {
+    "link": "http://smegsite.com/",
+    "sessions": 1
+  },
+  {
+    "link": "http://somlyfe.com/",
+    "sessions": 1
+  },
+  {
+    "link": "http://sunsplash.us/",
+    "sessions": 1
+  },
+  {
+    "link": "http://sylviasrestaurant.com/",
+    "sessions": 1
+  },
+  {
+    "link": "http://teesbetterbutters.com/",
+    "sessions": 1
+  },
+  {
+    "link": "http://thebkwgroup.com/",
+    "sessions": 1
+  },
+  {
+    "link": "http://tristatepropertydevelopers.com/",
+    "sessions": 1
+  },
+  {
+    "link": "http://ultrakosmic9.com/",
+    "sessions": 1
+  },
+  {
+    "link": "http://www.alishapean.com/",
+    "sessions": 1
+  },
+  {
+    "link": "http://www.allnaturalreset.com/",
+    "sessions": 1
+  },
+  {
+    "link": "http://www.amendabeauty.com/",
+    "sessions": 1
+  },
+  {
+    "link": "http://www.andersonpowerwash.com/",
+    "sessions": 1
+  },
+  {
+    "link": "http://www.angelabranch.com/",
+    "sessions": 1
+  },
+  {
+    "link": "http://www.aprettypennyfyt.com/",
+    "sessions": 1
+  },
+  {
+    "link": "http://www.ascent-group.com/",
+    "sessions": 1
+  },
+  {
+    "link": "http://www.ashehandmadedesigns.com/",
+    "sessions": 1
+  },
+  {
+    "link": "http://www.askmyhrguy.com/",
+    "sessions": 1
+  },
+  {
+    "link": "http://www.bakarr.com/",
+    "sessions": 1
+  },
+  {
+    "link": "http://www.blancblouse.com/",
+    "sessions": 1
+  },
+  {
+    "link": "http://www.bricks4kidz.com/essexcounty",
+    "sessions": 1
+  },
+  {
+    "link": "http://www.brosilybathandbody.com/",
+    "sessions": 1
+  },
+  {
+    "link": "http://www.brownsugarcollab.com/",
+    "sessions": 1
+  },
+  {
+    "link": "http://www.cjdfirstaidllc.com/",
+    "sessions": 1
+  },
+  {
+    "link": "http://www.cjkollective.com/",
+    "sessions": 1
+  },
+  {
+    "link": "http://www.cpacoombs.com/",
+    "sessions": 1
+  },
+  {
+    "link": "http://www.cynthiascaribbeanbakerynj.com/",
+    "sessions": 1
+  },
+  {
+    "link": "http://www.donebydbook.com/",
+    "sessions": 1
+  },
+  {
+    "link": "http://www.dontwaitcommunicate.com/",
+    "sessions": 1
+  },
+  {
+    "link": "http://www.dossagemassageandbodywork.com/",
+    "sessions": 1
+  },
+  {
+    "link": "http://www.dpc-books.com/home.html",
+    "sessions": 1
+  },
+  {
+    "link": "http://www.easttaylorinc.com/",
+    "sessions": 1
+  },
+  {
+    "link": "http://www.eliteitenterprisesolutions.com/",
+    "sessions": 1
+  },
+  {
+    "link": "http://www.enidbookscorp.com/",
+    "sessions": 1
+  },
+  {
+    "link": "http://www.estimescafe.com/",
+    "sessions": 1
+  },
+  {
+    "link": "http://www.excelsiorvas.com/",
+    "sessions": 1
+  },
+  {
+    "link": "http://www.faithinactioninc.com/",
+    "sessions": 1
+  },
+  {
+    "link": "http://www.familyfinancialmanagementpractice.com/",
+    "sessions": 1
+  },
+  {
+    "link": "http://www.freetownroadprojectnj.com/",
+    "sessions": 1
+  },
+  {
+    "link": "http://www.glowup395.com/",
+    "sessions": 1
+  },
+  {
+    "link": "http://www.highmaintenancehairco.com/",
+    "sessions": 1
+  },
+  {
+    "link": "http://www.hmhship.com/",
+    "sessions": 1
+  },
+  {
+    "link": "http://www.inkosicafe.com/",
+    "sessions": 1
+  },
+  {
+    "link": "http://www.instagram.com/TiffTheRealtor",
+    "sessions": 1
+  },
+  {
+    "link": "http://www.jacquiebirdspiritualwellness.com/",
+    "sessions": 1
+  },
+  {
+    "link": "http://www.jamagrille.com/",
+    "sessions": 1
+  },
+  {
+    "link": "http://www.lacyfoundation.org/",
+    "sessions": 1
+  },
+  {
+    "link": "http://www.liminscafe.com/",
+    "sessions": 1
+  },
+  {
+    "link": "http://www.morgan-contractors.com/",
+    "sessions": 1
+  },
+  {
+    "link": "http://www.natspinkcupcakes.com/",
+    "sessions": 1
+  },
+  {
+    "link": "http://www.nenrikitherapy.com/",
+    "sessions": 1
+  },
+  {
+    "link": "http://www.newarkspeaks2u.com/",
+    "sessions": 1
+  },
+  {
+    "link": "http://www.onestepaheadlearningcenter.com/",
+    "sessions": 1
+  },
+  {
+    "link": "http://www.partybusnewarknj.com/",
+    "sessions": 1
+  },
+  {
+    "link": "http://www.pocketbookhygieneshield.com/",
+    "sessions": 1
+  },
+  {
+    "link": "http://www.primeyourproperty.com/",
+    "sessions": 1
+  },
+  {
+    "link": "http://www.prisocklaw.com/",
+    "sessions": 1
+  },
+  {
+    "link": "http://www.realtalksessionseries.org/",
+    "sessions": 1
+  },
+  {
+    "link": "http://www.shaycosmetics.org/",
+    "sessions": 1
+  },
+  {
+    "link": "http://www.slayonbudgets.com/",
+    "sessions": 1
+  },
+  {
+    "link": "http://www.smittenkittenbeauty.com/",
+    "sessions": 1
+  },
+  {
+    "link": "http://www.sparklesweetkidsspa.com/",
+    "sessions": 1
+  },
+  {
+    "link": "http://www.stoneparkusa.com/",
+    "sessions": 1
+  },
+  {
+    "link": "http://www.sunrise-catering-unltd.com/",
+    "sessions": 1
+  },
+  {
+    "link": "http://www.sussexpressllc.com/",
+    "sessions": 1
+  },
+  {
+    "link": "http://www.thegirlyexperience.com/",
+    "sessions": 1
+  },
+  {
+    "link": "http://www.unitybrandhalal.com/",
+    "sessions": 1
+  },
+  {
+    "link": "http://www.urbanglobrand.com/",
+    "sessions": 1
+  },
+  {
+    "link": "http://www.valeriemorrisonphotography.com/",
+    "sessions": 1
+  },
+  {
+    "link": "http://www.waxandwonder.com/",
+    "sessions": 1
+  },
+  {
+    "link": "http://yallipop.wixsite.com/popjesus",
+    "sessions": 1
+  },
+  {
+    "link": "https://0.11.178.57/",
+    "sessions": 1
+  },
+  {
+    "link": "https://adamhelper.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://ahavafelicidad.wordpress.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://akuaba-fashions.business.site/",
+    "sessions": 1
+  },
+  {
+    "link": "https://alphaassembly.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://arrogantlyhumblebrand.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://atotalsolutioncpa.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://betterthanphilly.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://bffmakeupstudio.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://bombshellstudiosct.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://bonafideglam.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://breezycosmetics.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://brittneyscutsforkids.glossgenius.com/",
+    "sessions": 2
+  },
+  {
+    "link": "https://c-est-la-vie-oak-bluffs.edan.io/,",
+    "sessions": 1
+  },
+  {
+    "link": "https://cafemetronj.com/menu",
+    "sessions": 1
+  },
+  {
+    "link": "https://capitalicecream.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://carterfineartservices.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://chanelcreditsolutionsllc.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://devsjamaicancuisine.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://diasporaltd.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://donmullinsagency.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://dottiespetparlor.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://ecrservices.a-1sites.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://edtrust.org/wp-content/uploads/2014/09/Black-Degree-Attainment_FINAL.pdf",
+    "sessions": 1
+  },
+  {
+    "link": "https://elevenbyvenuswilliams.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://elitistcoffee.business.site/?utm_source=gmb&utm_medium=referral",
+    "sessions": 1
+  },
+  {
+    "link": "https://empowerthevillage.s3.amazonaws.com/static/img/US-AR-22.pdf?AWSAccessKeyId=AKIA6CEH7IPTHZENUK",
+    "sessions": 1
+  },
+  {
+    "link": "https://empowerthevillage.s3.amazonaws.com/static/img/US-AZ-22-print.pdf?AWSAccessKeyId=AKIA6CEH7IPT",
+    "sessions": 1
+  },
+  {
+    "link": "https://empowerthevillage.s3.amazonaws.com/static/img/US-AZ-22.pdf?AWSAccessKeyId=AKIA6CEH7IPTHZENUK",
+    "sessions": 1
+  },
+  {
+    "link": "https://empowerthevillage.s3.amazonaws.com/static/img/US-FL-22-print.pdf?AWSAccessKeyId=AKIA6CEH7IPT",
+    "sessions": 1
+  },
+  {
+    "link": "https://empowerthevillage.s3.amazonaws.com/static/img/US-NC-22-print.pdf?AWSAccessKeyId=AKIA6CEH7IPT",
+    "sessions": 1
+  },
+  {
+    "link": "https://empowerthevillage.s3.amazonaws.com/static/img/US-OH-22.pdf?AWSAccessKeyId=AKIA6CEH7IPTHZENUK",
+    "sessions": 1
+  },
+  {
+    "link": "https://empowerthevillage.s3.amazonaws.com/static/img/US-WI-22-print.pdf?AWSAccessKeyId=AKIA6CEH7IPT",
+    "sessions": 1
+  },
+  {
+    "link": "https://empowerthevillage.s3.amazonaws.com/static/img/nj-vote-22-min.jpg?AWSAccessKeyId=AKIA6CEH7IPT",
+    "sessions": 1
+  },
+  {
+    "link": "https://empowerthevillage.s3.amazonaws.com/static/img/obb-generic.jpeg?AWSAccessKeyId=AKIA6CEH7IPTHZ",
+    "sessions": 1
+  },
+  {
+    "link": "https://empowerthevillage.s3.amazonaws.com/static/img/obb-generic.jpg?AWSAccessKeyId=AKIA6CEH7IPTHZE",
+    "sessions": 1
+  },
+  {
+    "link": "https://etv-elift.s3.us-west-2.amazonaws.com/obb-ga.pdf",
+    "sessions": 1
+  },
+  {
+    "link": "https://fatus-kitchen.business.site/?utm_source=gmb&utm_medium=referral",
+    "sessions": 1
+  },
+  {
+    "link": "https://fitnessfastusa.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://goo.gl/maps/d4Sp5L5MyJiXtmSv9",
+    "sessions": 1
+  },
+  {
+    "link": "https://hlsjuicebarandgrill.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://homeawaychildcarecenter.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://hseymour.artspan.com/contact",
+    "sessions": 1
+  },
+  {
+    "link": "https://hunthamlinridley.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://instagram.com/hairraisingmv?igshid=YmMyMTA2M2Y=",
+    "sessions": 1
+  },
+  {
+    "link": "https://ipele.fitness/",
+    "sessions": 1
+  },
+  {
+    "link": "https://isayyessalonandspa.com/?fbclid=IwAR1hwa4buui_R-4aLmY29ntdW8VgsqiY2Yq9Yl6KjAa8pp-dpsyw6gw7ZfA",
+    "sessions": 1
+  },
+  {
+    "link": "https://issuu.com/empowerthevillage/docs/final_2021_annual_report_4_",
+    "sessions": 1
+  },
+  {
+    "link": "https://issuu.com/empowerthevillage/docs/the_power_post_june_2021_issue?mode=window",
+    "sessions": 1
+  },
+  {
+    "link": "https://itsteranga.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://jennelljones.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://justusbooks.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://kalimariwellness.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://karibecompany.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://kbbbqsmokehouse.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://kidcareconcierge.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://kidsincleats.org/",
+    "sessions": 1
+  },
+  {
+    "link": "https://knowhereart.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://kremeandkrumbs.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://kuumbamade.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://la-di.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://lagos-spot-nigerian-restaurant.business.site/",
+    "sessions": 1
+  },
+  {
+    "link": "https://laurenthestylist.net/",
+    "sessions": 1
+  },
+  {
+    "link": "https://leanbacksoulfood.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://lfcsupport.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://logropassaic.org/",
+    "sessions": 1
+  },
+  {
+    "link": "https://lovingarmsfoundation.org/",
+    "sessions": 1
+  },
+  {
+    "link": "https://m.facebook.com/Soul-Source-Counseling-105546724202673/",
+    "sessions": 1
+  },
+  {
+    "link": "https://maccakes.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://magiknsmellz.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://marksplaceaponline.com/order-now",
+    "sessions": 1
+  },
+  {
+    "link": "https://marshawoodruffe.kw.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://miraclebuttercream.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://mrhydeentertainment.wordpress.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://mvislandwiderealty.com/island-life-studio",
+    "sessions": 1
+  },
+  {
+    "link": "https://mwhitney.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://mybeautysite.com/vendor_shop/accessorizeyouhairboutique.html?fbclid=IwAR2tQsrUrFoU8NkJyiW6gP",
+    "sessions": 1
+  },
+  {
+    "link": "https://myonestoptaxes.com/Home/",
+    "sessions": 1
+  },
+  {
+    "link": "https://naijatechnews.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://napturalsbyreese.myshopify.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://newmethodrestoration.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://ninetwozero.square.site/",
+    "sessions": 1
+  },
+  {
+    "link": "https://oceanparkmv.com/realestate/agent/amy-goldson/",
+    "sessions": 1
+  },
+  {
+    "link": "https://owlabz.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://pitwebsite.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://qualicaremaids.wixsite.com/qualicare",
+    "sessions": 1
+  },
+  {
+    "link": "https://rccwsllc.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://recoverycenters.net/recovery-centers/new-jersey/sequoia-recovery/",
+    "sessions": 1
+  },
+  {
+    "link": "https://rhythmbrewingco.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://salaamicecreamparlor.business.site/",
+    "sessions": 1
+  },
+  {
+    "link": "https://santeresaw.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://saveurcreolerestaurant.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://sheimaginedsweets.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://silkwirejewelry.blogspot.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://simply-essence.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://sites.google.com/site/beautysecretshairandnails/?fbclid=IwAR13HOSVJvn_UQKGvu9dnSgT7sato6lSns",
+    "sessions": 1
+  },
+  {
+    "link": "https://small-business-like-a-pro.thinkific.com/courses/video-marketing-course",
+    "sessions": 1
+  },
+  {
+    "link": "https://somegoodfoodllc.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://southorangedentalcenter.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://spicenthing.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://static1.squarespace.com/static/5f539c4c68bd6f19d4743e52/t/60371d3945f2b47be0989dfa/161422469",
+    "sessions": 1
+  },
+  {
+    "link": "https://static1.squarespace.com/static/5f539c4c68bd6f19d4743e52/t/60784fec684d7f2b42043c23/161849751",
+    "sessions": 1
+  },
+  {
+    "link": "https://superarstrike.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://sweetgirldesserts.squarespace.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://technologyconcepts.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://tendernessherbsandteas.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://thecollectiveatindigostyle.com/shop",
+    "sessions": 1
+  },
+  {
+    "link": "https://thedancingblender.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://thesdbfirm.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://tonniesminis.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://unapologetically-healthy-llc.myshopify.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://urbantastenj.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://vector-international.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://worldofkitt.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.1blossom2bloom.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.4brothersbreakfasts.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.aboveartstudios.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.afrotaco.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.akwaaba.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.alliebscozykitchen.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.allmenus.com/nj/jersey-city/59019-vip-diner-restaurant/menu/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.alveyseducationprograms.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.annieleegifts.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.bedelinevents.com/home.html",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.bedroomkandi.com/11967",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.bellanaillounge.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.bestinclasseducation.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.bethdianasmith.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.bettyleejeans.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.bevskakekafe.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.blazetherapeutics.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.blueprintcafelounge.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.bluewellnesscenter.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.bodygarbagehandmade.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.burnettplasticsurgery.com/?utm_source=GMB&utm_medium=organic&utm_campaign=westfield",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.cafemobaynj.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.caleensdayspa.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.capecodlobsterrolls.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.chaotickoko.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.charlesmovingandstorage.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.chocolatharlem.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.compass.com/agents/jennifer-daSilva/?referrer=omnibox",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.coraltours.org/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.cousenrose.com/'",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.crockettsfishfry.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.cudgelworks.comm/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.culturedexpressions.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.culturenailbar.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.dandtllc.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.davrontours.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.dcenewark.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.deardiaryinfo.org/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.digitalwebsitedevelopment.com/",
+    "sessions": 2
+  },
+  {
+    "link": "https://www.dillystaqueria.com/",
+    "sessions": 2
+  },
+  {
+    "link": "https://www.diorsbeautylounge.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.diversant.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.dsslaw.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.enginfotech.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.enjoyinglifefully.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.etsy.com/shop/CreativeStitchNDiva",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.events.sankofa.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.facebook.com/2527cleaning/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.facebook.com/2muchsaucefoodtruck/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.facebook.com/Brick-Church-Pharmacy-103791134759103/reviews/?ref=page_internal",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.facebook.com/CaribbeanTouchMontclair/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.facebook.com/Carlis-Lounge-156093037761593/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.facebook.com/DandJcooking/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.facebook.com/DocsWaffleHouse/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.facebook.com/EdibleArtOfNewton/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.facebook.com/GOFSLLC//",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.facebook.com/Haitiancaribbeancuisine/about/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.facebook.com/HeadrestBarber",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.facebook.com/Jimmy-Has-It-Covered-358670644327013/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.facebook.com/JustJEUT/?ref=py_c&__xts__=-R",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.facebook.com/MadamsBeautySupply/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.facebook.com/NewarkBlackstone/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.facebook.com/SoCoCafenj/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.facebook.com/allN1BeautySupply/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.facebook.com/alonyavirtualvintage/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.facebook.com/cestlaviemv/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.facebook.com/cjbakerco",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.facebook.com/cksavoryscents/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.facebook.com/cryoutcave",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.facebook.com/ebonenviro/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.facebook.com/goodkarmaentinc/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.facebook.com/legenDerrygr88ness/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.facebook.com/levelonebakery/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.facebook.com/liteandsouleatery",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.facebook.com/mosalloccasioncateringllc/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.facebook.com/motherknows.org",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.facebook.com/pages/Nu%20Style%20Hair%20Cut%20Creators/134404429973102/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.facebook.com/pages/category/Day-Spa/Francines-Salon-Day-Spa-111561928885294/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.facebook.com/pages/category/Family-Style-Restaurant/Elmas-Kitchen-1564581303787359/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.facebook.com/pages/category/Grocery-Store/Lulus-Ice-Cream-Cafe-105263537493071/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.facebook.com/pages/category/Jamaican-Restaurant/Vineyard-Caribbean-Cuisine-2729748265140",
+    "sessions": 2
+  },
+  {
+    "link": "https://www.facebook.com/pages/category/Product-Service/Rashine-Divine-Dream-Cuisine-361392211026072",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.facebook.com/pages/category/Seafood-Restaurant/IM-FISH-N-GRILL-474681939388010/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.facebook.com/thelightdome/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.flavorsmvy.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.forsythseafood.com/home/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.freetownkitchen.com/menu",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.fritaille.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.funkyphotoboothsandvideo.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.fuzeddining.life/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.geekschip.com/services/digital-marketing-services-in-hyderabad.html",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.glamourgripsbynellie.com/?fbclid=IwAR0zes-RNKAdsPIM6MhlbxiomM6MgJQ9xmLJer7xuN43xEixXhktm",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.google.com/url?q=https://brittneyscutsforkids.glossgenius.com/?fbclid%3DIwAR3HFVfvByRGtB",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.google.com/url?q=https://freehaveneducationalfarms.com/&sa=D&ust=1607884075452000&usg=AF",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.google.com/url?q=https://www.tinapearsonsalon.com/&sa=D&ust=1607884075455000&usg=AFQjCNG",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.grubhub.com/restaurant/eatwell-african-cuisine-36-union-ave-irvington/2217405",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.grubhub.com/restaurant/erics-jamaican-cuisine-309-main-st-boonton/1506452",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.grubhub.com/restaurant/michelle-caribbean-american-cuisine-730-chancellor-avenue-irvingt",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.grubhub.com/restaurant/sonia-classic-caribbean-restaurant-449-william-street-east-orange",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.grubhub.com/restaurant/yardy-real-jamaican-food-1326-atlantic-ave-atlantic-city/1190838",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.haircoutureboutique.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.hardworknoexcuses.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.healthgrades.com/physician/dr-rudolph-willis-ytl73",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.hillerystreetgrill.net/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.honeyandvinylmusic.com/?utm_campaign=PartySlate&utm_medium=referral&utm_source=partyslat",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.honeydippednaildesigns.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.ihop.com/en/restaurants-irvington-nj/1212-springfield-ave-2055",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.imperialacq.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.instagram.com/beautyadourned/?hl=en",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.instagram.com/bonfunwine/?hl=en",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.instagram.com/cheesecakesbydiamond/?hl=en",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.instagram.com/conphidentmusic/?hl=en",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.instagram.com/crystalsista/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.instagram.com/deedeejerrys_sweettreats/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.instagram.com/foreveraudacious/?hl=en",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.instagram.com/greatfcknfood/?hl=en",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.instagram.com/harlynn.harris_productions/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.instagram.com/irvinjprod/?hl=en",
+    "sessions": 2
+  },
+  {
+    "link": "https://www.instagram.com/kaystayslayed/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.instagram.com/kreationsbykay__/?hl=en",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.instagram.com/loverosecouture/?hl=en",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.instagram.com/nzurigold/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.instagram.com/steakntake1/?hl=en",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.instagram.com/stikz_cigars/?hl=en",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.instagram.com/taste_of_flava/?hl=en",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.instagram.com/wingz_r_us/?hl=en",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.jameshhunt.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.jerelwashington.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.jnfsteam.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.joyfullzone.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.jusbnaturl.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.kheperasbluelotus.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.kinfolkfamilyhealth.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.kizkopop.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.labelleartgallery.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.linkedin.com/in/corriner/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.linkedin.com/in/daryl-scales-ii-928aa0a8/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.lisascott.org/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.luken.nyc/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.maids.com/44/?utm_source=GMB_listing&utm_medium=organic",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.maisonharlem.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.masseyagency.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.mesobrestaurant.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.mlcplus.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.ndbh.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.nettarius.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.nkboston.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.off-thehanger.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.ordercrabbae.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.philadelphiadiamondco.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.preciousbartending.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.primelinepackaging.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.productjunkienaturals.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.purelovepies.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.reidfinancialsolutions.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.sarrahcafenj.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.seamless.com/menu/plainfield-best-in-town-225-garfield-ave-plainfield/1028710",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.sequoiarecovery.com/locations/Hoboken/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.serenityskincare.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.sharmturals.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.shopefb.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.skipfinley.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.smapa.org/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.smartsparkmedia.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.soulfoodfactory.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.stellarsmilecenter.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.stephenreidphotography.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.sweetsavorypalmers.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.symphonystreasures.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.tasteofthetriad.com/about",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.thecafemetro.com/",
+    "sessions": 2
+  },
+  {
+    "link": "https://www.thedynasmiles.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.thelittlebohobookshop.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.therailsidecafe.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.thesilktent.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.thewalla.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.theyoniconnection.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.topknotchsoultrydelights.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.toptastecaribbean.com/online-ordering",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.tvisha.com/services/mobile-app-development-company-maintenance-support-android-ios.html",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.twofishfiveloaves.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.urbanairtrampolinepark.com/locations/new-jersey/south-hackensack",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.verylovelysoles.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.waterworkslaundry.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.watsonrice.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.wearejerseyent.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.winstonskitchenmv.com/menu",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.wwshippingco.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.ycinvited.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.yelp.com/biz/gealie-family-eatery-east-orange",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.yelp.com/biz/j-and-j-caribbean-restaurant-maplewood",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.yelp.com/biz/js-southern-style-cafe-city-of-orange",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.yelp.com/biz/marckys-restaurant-irvington-3",
+    "sessions": 2
+  },
+  {
+    "link": "https://www.yelp.com/biz/stage-5-restaurant-and-grill-east-orange",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.yelp.com/biz/surulere-suya-spot-union",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.zenitheventspace.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://www.zmenu.com/zesty-wings-and-tasty-things-east-orange-online-menu/",
+    "sessions": 1
+  },
+  {
+    "link": "https://yourdesignpartner.com/",
+    "sessions": 1
+  },
+  {
+    "link": "https://yourvacationresorts.com/home/",
+    "sessions": 1
+  },
+  {
+    "link": "https://zenfullymadecandleco.com/",
+    "sessions": 1
+  },
+  {
+    "link": "instagram: @NyamnzMV",
+    "sessions": 1
+  },
+  {
+    "link": "instagram:@genosbackyardbbq",
+    "sessions": 1
+  },
+  {
+    "link": "mailto:%20info@empowerthevillage.org",
+    "sessions": 1
+  },
+  {
+    "link": "mailto:info@empowerthevillage.org",
+    "sessions": 1
+  },
+  {
+    "link": "tel:(917) 566-5900",
+    "sessions": 1
+  },
+  {
+    "link": "http://sagetitle.com/",
+    "sessions": 1
+  }
+]
+
+from .models import vbp_va
+
+def analytics(request):
+    links = LINKS
+    businesses = []
+    for x in links:
+        try:
+            qs = vbp_va.objects.filter(website__contains=x["link"])
+            if len(qs) > 0:
+                businesses.append({'business': str(qs.first()), 'category': str(qs.first().category)})
+        except:
+            pass
+    return JsonResponse(businesses, safe=False)

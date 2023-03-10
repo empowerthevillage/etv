@@ -206,22 +206,16 @@ SOCIAL_AUTH_PIPELINE = (
 
 WSGI_APPLICATION = 'etv.wsgi.application'
 
-
-# Database
-# https://docs.djangoproject.com/en/3.2/ref/settings/#databases
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2', 
-        'NAME': 'd1ttpvr346c994',                     
-        'USER': 'pwzmkrllbfxbqg',
-        'PASSWORD': '48ad1968c36fe63810a897061cb66a4d3976d01a167292a299def43feaf57b05',
-        'HOST': 'ec2-18-215-44-132.compute-1.amazonaws.com',
-        'PORT': '5432',                     
+        'NAME': env('DB_NAME'),                     
+        'USER': env('DB_USER'),
+        'PASSWORD': env('DB_PASSWORD'),
+        'HOST': env('DB_HOST'),
+        'PORT': env('DB_PORT'),                     
     }
 }
-# Password validation
-# https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -238,10 +232,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
-# Internationalization
-# https://docs.djangoproject.com/en/3.2/topics/i18n/
-
 LANGUAGE_CODE = 'en-us'
 
 USE_I18N = True
@@ -250,14 +240,7 @@ USE_L10N = True
 
 USE_TZ = True
 
-
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/3.2/howto/static-files/
 BASE_DIR = (os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/1.9/howto/static-files/
-# Extra places for collectstatic to find static files.
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static_my_proj"),
@@ -283,8 +266,7 @@ import datetime
 two_months = datetime.timedelta(days=61)
 date_two_months_later = datetime.date.today() + two_months
 expires = date_two_months_later.strftime("%A, %d %B %Y 20:00:00 GMT")
-# Default primary key field type
-# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
+
 AWS_HEADERS = { 
 	'Expires': expires,
 	'Cache-Control': 'max-age=%d' % (int(two_months.total_seconds()), ),
