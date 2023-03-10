@@ -351,6 +351,7 @@ class AdType(models.Model):
     class Meta:
         verbose_name = 'Ad Type'
         verbose_name_plural = 'Ad Types'
+        ordering = ['price']
 
 class AdManager(models.Manager):
 
