@@ -21,6 +21,9 @@ mailchimp.set_config({
 User = settings.AUTH_USER_MODEL
 gateway = settings.GATEWAY
 
+def receipt_generator(request):
+    return render(request, 'email_test.html')
+
 def update_donors(request):
     donors = Donor.objects.all()
     for x in donors:

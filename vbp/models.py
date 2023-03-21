@@ -8,6 +8,7 @@ from django.db.models.fields import SlugField
 from django.conf import settings
 from accounts.models import Team
 from phone_field import PhoneField
+from etv.utils import unique_slug_generator
 
 import geocoder
 import django_filters
@@ -26,6 +27,10 @@ def upload_image_path(instance, filename):
     final_filename = '{new_filename}{ext}'.format(new_filename=new_filename, ext=ext)
     return "vbp/{new_filename}/{final_filename}".format(new_filename=new_filename, final_filename=final_filename)
 
+BOOK_TYPE_CHOICES = [
+    ('county', 'County'),
+    ('state', 'State'),
+]
 STATE_CHOICES = [
     ('AL', 'Alabama'),
     ('AK', 'Alaska'),
@@ -252,6 +257,22 @@ class vbp_book(models.Model):
         verbose_name = 'VBP Book'
         verbose_name_plural = 'Books'
         ordering = ['-published', 'state']
+
+class IndividualBook(models.Model):
+    title           = models.CharField(max_length=120)
+    slug            = models.SlugField(blank=True, null=True)
+    type            = models.CharField(max_length=120, choices=BOOK_TYPE_CHOICES)
+    state           = models.CharField(max_length=50, choices=STATE_CHOICES, null=True)
+    cover           = models.ImageField(null=True, blank=True)
+    
+    def __str__(self):
+        return str(self.title)
+
+def individual_book_pre_save_receiver(sender, instance, *args, **kwargs):
+    if not instance.slug:
+        instance.slug = unique_slug_generator(instance)
+
+pre_save.connect(individual_book_pre_save_receiver, sender=IndividualBook)
 
 class mv_private(models.Model):
     business_name    = models.CharField(max_length=200)

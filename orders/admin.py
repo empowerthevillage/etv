@@ -58,4 +58,5 @@ class LOAAdmin(admin.ModelAdmin):
 
 admin_site.register(Order, OrderAdmin)
 admin_site.register(LOAArtPurchase, LOAAdmin)
+admin_site.register(LOAPresalePurchase, LOAAdmin)
 dashboardModel.objects.dash_register(LOAPresalePurchase)

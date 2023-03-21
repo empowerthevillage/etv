@@ -1,10 +1,10 @@
 import django
 from django.http.response import HttpResponse, JsonResponse
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.template.loader import render_to_string
 from django.db.models import Q
 
-from .models import mv_private, vbp_book, vbp_nj, vbp_ct, gift_guide, StateFilter  
+from .models import mv_private, vbp_book, vbp_nj, vbp_ct, gift_guide, StateFilter, IndividualBook, vbp_ga, vbp_il, vbp_dc, vbp_md, vbp_mi, vbp_ny, vbp_nc, vbp_oh, vbp_pa, vbp_fl
 from django.core.paginator import Paginator
 from django.conf import settings
 
@@ -541,6 +541,112 @@ def nj_new(request):
     cats.append({'category':category,'listings':listings})
   return render(request, 'vbp/nj_only.html')
 
+def individual_state_view(request, slug):
+  book_pairs = {
+      'CT': vbp_ct,
+      'GA': vbp_ga,
+      'IL': vbp_il,
+      'MD': vbp_md,
+      'MI': vbp_mi,
+      'NY': vbp_ny,
+      'NJ': vbp_nj,
+      'NC': vbp_nc,
+      'OH': vbp_oh,
+      'PA': vbp_pa,
+      'DC': vbp_dc,
+      'FL': vbp_fl,
+    }
+  try:
+      book_obj = IndividualBook.objects.get(slug=slug)
+      state = book_obj.state
+      vbp_model = book_pairs[state]
+      county_listings = vbp_model.objects.filter(approved=True)
+      cats = []
+      page_counter = 6
+      for (category,verbose) in CATEGORY_CHOICES:
+          listings = county_listings.filter(category=category)
+          pages = Paginator(listings, 12)
+          if len(listings)>0:
+              cats.append({'category':category, 'verbose':verbose, 'pages':pages, 'start_page':page_counter,"cover": "https://etv-empowerthevillage.s3.amazonaws.com/static/img/vbp/%s.svg" %(str(verbose)), "right": "https://etv-empowerthevillage.s3.amazonaws.com/static/img/vbp/%s_right.svg" %(str(verbose)),"left": "https://etv-empowerthevillage.s3.amazonaws.com/static/img/vbp/%s_left.svg" %(str(verbose))})
+              page_counter += pages.num_pages + 1
+              
+      n = int(len(cats)/2)
+      m = n+1
+      col1 = cats[0:n]
+      col2 = cats[m:None]
+      context = {
+          'title': '%s Village Black Pages' %(book_obj.title),
+          'cover_url': str(book_obj.cover.url),
+          'sections': cats,
+          'col1': col1,
+          'col2': col2,
+      }
+      return render(request, 'vbp/county_only.html', context)
+  except:
+      return redirect('/village-black-pages/')
+  
+def individual_book_view(request, slug, state_slug):
+    state_pairs = {
+      'connecticut': 'CT',
+      'georgia': 'GA',
+      'illinois': 'IL',
+      'maryland': 'MD',
+      'michigan': 'MI',
+      'new-york': 'NY',
+      'new-jersey': 'NJ',
+      'north-carolina': 'NC',
+      'ohio': 'OH',
+      'pennsylvania': 'PA',
+      'dc': 'DC',
+      'florida': 'FL',
+    }
+    book_pairs = {
+      'CT': vbp_ct,
+      'GA': vbp_ga,
+      'IL': vbp_il,
+      'MD': vbp_md,
+      'MI': vbp_mi,
+      'NY': vbp_ny,
+      'NJ': vbp_nj,
+      'NC': vbp_nc,
+      'OH': vbp_oh,
+      'PA': vbp_pa,
+      'DC': vbp_dc,
+      'FL': vbp_fl,
+    }
+    try:
+      state_code = state_pairs[state_slug]
+      book_obj = IndividualBook.objects.get(slug=slug, state=state_code)
+      if book_obj.type == 'county':
+          county = book_obj.title
+          state = book_obj.state
+          vbp_model = book_pairs[state]
+          county_listings = vbp_model.objects.filter(county=county, approved=True)
+          cats = []
+          page_counter = 6
+          for (category,verbose) in CATEGORY_CHOICES:
+              listings = county_listings.filter(category=category)
+              pages = Paginator(listings, 12)
+              if len(listings)>0:
+                  cats.append({'category':category, 'verbose':verbose, 'pages':pages, 'start_page':page_counter,"cover": "https://etv-empowerthevillage.s3.amazonaws.com/static/img/vbp/%s.svg" %(str(verbose)), "right": "https://etv-empowerthevillage.s3.amazonaws.com/static/img/vbp/%s_right.svg" %(str(verbose)),"left": "https://etv-empowerthevillage.s3.amazonaws.com/static/img/vbp/%s_left.svg" %(str(verbose))})
+                  page_counter += pages.num_pages + 1
+          n = int(len(cats)/2)
+          m = n+1
+          col1 = cats[0:n]
+          col2 = cats[m:None]
+          context = {
+              'title': '%s Village Black Pages' %(book_obj.title),
+              'cover_url': str(book_obj.cover.url),
+              'sections': cats,
+              'col1': col1,
+              'col2': col2,
+          }
+          return render(request, 'vbp/county_only.html', context)
+      else:
+        return redirect('/village-black-pages/')
+    except:
+      return redirect('/village-black-pages/')
+      
 def essex_view(request):
     county_listings = vbp_nj.objects.filter(county="Essex County")
     cats = []

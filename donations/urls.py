@@ -10,5 +10,6 @@ urlpatterns = [
     path('express-review/', express_review, name="express-review"),
     path('email-test/', mail_test, name='test-mail'),
     path('send-mail/', send_test_email, name="send-mail"),
+    path('get-receipt/', receipt_generator),
     path('update-donors/', update_donors)
 ]

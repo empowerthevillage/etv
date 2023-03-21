@@ -12,6 +12,7 @@ import sweetify
 from carts.models import TicketCart, ticketItem, ticketDonation, ticketAd, FullGalleryCart
 from .models import *
 from django.conf import settings
+from orders.models import LOAArtPurchase, LOAPresalePurchase
 
 User = settings.AUTH_USER_MODEL
 gateway = settings.GATEWAY
@@ -75,12 +76,22 @@ STATE_CHOICES = (
     ('WI', 'Wisconsin'),
     ('WY', 'Wyoming'),
 )
+
 def email_view(request):
     context = {
-        'tickets':SingleTicket.objects.filter(last_name='Colon', first_name="Jessica"),
-        'event': Event.objects.filter(title='For the Love of Art Juneteenth Celebration'),
+        'tickets':SingleTicket.objects.filter(braintree_id="g5dywchd"),
+        'event': Event.objects.filter(title='Empowerment Expo'),
     }
     return render(request, 'ticket-email.html', context)
+
+def art_email_view(request):
+    order = LOAArtPurchase.objects.filter(braintree_id="n91d5jmg").first()
+    context = {
+        'items': order.items.all,
+        'shipped': False,
+        'order': order,
+    }
+    return render(request, "art-email.html", context)
 def event_home(request):
     context = {
         'title':'ETV | Events',
