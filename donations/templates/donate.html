@@ -16,7 +16,9 @@ ETV | Donate
         <div class="col s12 l7 right" style="padding-left: 2%; padding-right: 2%; padding-bottom: 3%">
           
           <h5 class="center-align donation-title">It Takes a Village to Restore Prosperity, Peace & Power to The Black Community!</h5>
+          <a href="https://mailchi.mp/empowerthevillage/giving-campaign-2023" target="_blank" id="mobile-double-campaign"><p style="margin-top: 10px; margin-bottom: 10px;padding-top:0px; padding-bottom: 0px;text-align: center;color: rgb(175, 27, 27); font-family: oskar; font-size: 20px; line-height: 22px;">Double Your Impact When You Donate By April 21st! Click here to learn more</p></a>
           <h6 class="donation-subtitle center-align">Unleash the Power of The Village by donating  $25, $50, $100, $500 or whatever you are inspired to invest in the community!</h6>
+
           <p class="center-align" style="color: rgb(164, 164, 164)">Having trouble completing your donation? <a target="_blank" href="https://www.paypal.com/donate/?hosted_button_id=YSB29RNTB3CKG">Click Here!</a></p>
           <div id="preloader" class="center-align" style="display:none; padding-top: 200px; height: 800px">
             <div class="preloader-wrapper big active" >
@@ -401,10 +403,10 @@ ETV | Donate
             </div>
           </div>
         </div>
-        <div class="col s12 l5 left center-align" style="border-right: dotted 1px rgba(182, 182, 182, 0.694); padding-left: 3%; padding-right: 3%;">
+        <div class="col s12 l5 left center-align" style="border-right: dotted 1px rgba(182, 182, 182, 0.694); padding-left: 3%; padding-right: 3%;" id="support-section">
           <h5 class="donation-title">Empower The Village Needs Your Support!</h5>
           <p style="margin-top: 10px; margin-bottom: 10px;padding-top:0px; padding-bottom: 0px;color: rgb(27, 175, 27); font-family: oskar; font-size: 24px; line-height: 28px;">Double Your Impact When You Donate By April 21st!</p>
-          <img width="70%" style="margin-bottom: 20px;" src="https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/giving-campaign.gif">
+          <a target="_blank" href="https://mailchi.mp/empowerthevillage/giving-campaign-2023"><img width="70%" style="margin-bottom: 20px;" src="https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/giving-campaign.gif"></a>
           <br>
           <h7 style="margin-top: 40px !important;">Our mission is to develop, guide and implement breakthrough, scalable strategies that <b>empower Black people, businesses and community organizations to realize their full potential.</b></h7>
           <iframe class="yt-video"  style="margin-bottom: 30px;" src="https://www.youtube.com/embed/tcUA8VA2-DA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -1192,6 +1194,9 @@ function handleVenmoSuccess(payload) {
   })
 </script>
 <style>
+  #mobile-double-campaign {
+    display: block;
+  }
   #opt-in {
     padding-bottom: 120px;
   }
@@ -1369,6 +1374,9 @@ function handleVenmoSuccess(payload) {
         }
     }
     @media only screen and (min-width:993px){
+      #mobile-double-campaign {
+      display: none;
+    }
       #opt-in {
     padding-bottom: 50px;
   }
