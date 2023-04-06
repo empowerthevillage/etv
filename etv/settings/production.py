@@ -122,6 +122,7 @@ INSTALLED_APPS = [
     'sweetify',
     'storages',
     'tinymce',
+    'walkathon',
     'whitenoise.runserver_nostatic',
     'vbp',
     'vbpus',

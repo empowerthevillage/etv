@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+<div class="parallax-container z-depth-3 box-shadow valign-wrapper">
+    <div class="container z-depth-4 center-align parallax-banner" style="padding-left: 40px; padding-right: 40px;">
+        <h1 style="font-family: oskar; font-size: 42px; color:black; font-weight: 800; padding-bottom: 15px;">Show your Support for {{ walker }}!</h1>
+    </div>
+    <div class="parallax">
+        <img class="lazy" src="{% static 'img/vbp-collage.svg' %}" style="opacity: 1;">
+    </div>
+</div>
+<div class="row" style="padding: 2% 10%;">
+    <div class="col s12" style="padding-bottom: 10px;">
+        <a href="/walkathon/"><i class="bi bi-arrow-left"></i> Back to Power Walk home page</a>
+    </div>
+    <div class="col s3 m6 l4">
+        <img src="{{ walker.image.url }}" width="100%" class="z-depth-4">
+        <div class="card">
+            <div class="card-body">
+                <h6>Power Walk Goal</h6>
+            </div>
+        </div>
+    </div>
+    <div class="col s9 m6 l8">
+        <h6 class="walker-name" style="color:rgb(9, 131, 9)">Power Walker</h6>
+        <h6 class="walker-name">{{ walker }}</h6>
+        <p>Empower The Village to improve community health and wellness now!</p>
+        <div class="row">
+            <div class="col s4">
+                <p>
+                    <label>
+                    <input class="with-gap" name="amount" type="radio" />
+                    <span>$10</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                    <input class="with-gap" name="amount" type="radio" />
+                    <span>$25</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                    <input class="with-gap" name="amount" type="radio" />
+                    <span>$50</span>
+                    </label>
+                </p>
+            </div>
+            <div class="col s6">
+            <p>
+                <label>
+                  <input class="with-gap" name="amount" type="radio" />
+                  <span>$100</span>
+                </label>
+            </p>
+            <p>
+                <label>
+                  <input class="with-gap" name="amount" type="radio" />
+                  <span>$250</span>
+                </label>
+            </p>
+            <p>
+                <label>
+                  <input class="with-gap" name="amount" type="radio" />
+                  <span>Custom Amount</span>
+                </label>
+            </p>
+            </div>
+        </div>
+        <div class="btn support-btn">Support Now!</div>
+    </div>
+</div>
+<style>
+    label span {
+        font-size: 18px;
+    }
+    .walker-name {
+        font-family: oskar; 
+        font-weight: 600; 
+        font-size: 36px;
+    }
+    .support-btn {
+        background: black;
+        color: white;
+        font-family: oskar;
+        font-size: 20px;
+        padding: 3px 40px;
+        height: fit-content;
+        width: fit-content;
+        border-radius: 30px;
+    }
+    .support-btn:hover {
+        background: rgb(14, 116, 14);
+    }
+</style>
+{% endblock %}

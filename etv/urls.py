@@ -154,7 +154,7 @@ urlpatterns = [
     path('health-and-wellness/', include(("health.urls", "health"), namespace='health')),
     path('policy-and-power/', include(("policy.urls", "policy"), namespace='policy')),
     path('education/', include(("education.urls", "education"), namespace='education')),
-    path('ed2CSwbdsV', ven_home, name='ven-home-test'),
+    path('walkathon/', include(("walkathon.urls", "walkathon"), namespace="walkathon")),
     path('village-empowerment-network/', include(("ven.urls", "ven"), namespace='ven')),
     path('village-empowerment-network-nomination/', venForm, name='ven-nomination'),
     path('tinymce/', include('tinymce.urls')),

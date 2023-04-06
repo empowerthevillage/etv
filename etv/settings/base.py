@@ -127,6 +127,7 @@ INSTALLED_APPS = [
     'storages',
     'tinymce',
     'tutorial',
+    'walkathon',
     'whitenoise.runserver_nostatic',
     'vbp',
     'vbpus',

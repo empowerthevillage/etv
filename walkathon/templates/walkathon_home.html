@@ -1,0 +1,172 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+<div class="parallax-container z-depth-3 box-shadow valign-wrapper" style=" height: fit-content !important;">
+    <div class="container z-depth-4 center-align parallax-banner" style="margin-top: 20px; margin-bottom: 20px;">
+        <img class="" src="https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/walkathon-cover-new.jpg" width="100%">
+    </div>
+    <div class="parallax">
+        <img class="lazy" src="{% static 'img/health-collage-min.jpg' %}" style="opacity: 1; padding-top: 40px; padding-bottom: 40px;">
+    </div>
+</div>
+<div class="row">
+    <div class="carousel carousel-slider center z-depth-2" id="health-carousel">
+        <div class="carousel-item">
+            <p>July is ... <br>National Minority Mental Health <br>Awareness Month!</p>
+        </div>
+      <div class="carousel-item">
+        <p><br>DID YOU KNOW?...</p>
+      </div>
+      <div class="carousel-item">
+        <p><br>Youth attempted suicide rates rose to 5.9% as of 2019, <br>and is highest among Black youth at 11.3%</p>
+      </div>
+      <div class="carousel-item">
+        <p><br>Black adults below the poverty line are 2x more likely <br>to report serious psychological distress than others</p>
+      </div>
+      <div class="carousel-item">
+        <p>Nearly 65% of Black youth report traumatic racial <br>experiences, contributing to higher rates of <br>PTSD, depression, and anxiety</p>
+      </div>
+      <div class="carousel-item">
+        <p><br>Unfortunately, 2 out of 3 Black adults with mental illness<br> do not receive treatment</p>
+      </div>
+    </div>
+    <div class="col s12">
+        <div class="row">
+            <div class="col s6 xl4 offset-xl2" style="padding-top: 20px;">
+                <a href=""><img class="" src="https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/registration-clipboard.jpg" width="100%"></a>
+            </div>
+            <div class="col s6 xl4" style="padding-top: 20px;">
+                <a href=""><img class="" src="https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/sponsor-clipboard.jpg" width="100%"></a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12 m10 l8 offset-m1 offset-l2" style="padding-top: 20px;">
+                <img class="z-depth-2" src="https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/walkathon-text.jpg" width="100%">
+            </div>
+        </div>
+        <div class="row">
+            <div class="center-align">
+                <h6 class="walker-name" style="color:rgb(195, 23, 23); font-size: 32px">Find Your Power Walker or Power Walk Team</h6>
+            </div>
+            <div class="input-field col s12 m6 offset-m3">
+                <select class="icons">
+                  <option value="" disabled selected>Choose your option</option>
+                  {% for walker in walkers %}
+                    {% if walker.image.url is not None %}
+                        <option value="" data-icon="{{ walker.image.url }}" class="left">{{ walker }}</option>
+                    {% else %}
+                        <option>{{ walker }}</option>
+                    {% endif %}
+                  {% endfor %}
+                </select>
+                
+                <label>Select A Walker</label>
+              </div>
+              
+        
+        </div>
+        <div class="divider"></div>
+        <div class="col-12 center-align">
+        <h6 class="walker-name" style="font-size: 32px; padding: 2% 5%;color: rgb(25, 118, 25)">Join The Village as we take steps to restore  <br>prosperity, peace and power to the Black community!</h6>
+        </div>
+        <div class="col-s12">
+            <img src="https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/walkathon-collage.png" width="100%">
+        </div>
+    </div>
+    
+</div>
+<style>
+    .carousel.carousel-slider .carousel-item {
+        height: 125px !important;
+        padding-left: 5px;
+        padding-right: 5px;
+        min-height: 0px;
+        background: black;
+        padding-bottom: 0
+    }
+    .carousel-item p {
+        color: white;
+        font-size: 14px !important;
+        font-family: poppins;
+        font-weight: 500
+    }
+    #health-carousel .indicator-item {
+        margin: 12px 4px;
+    }
+    #health-carousel {
+        height: fit-content
+    }
+    .walker-name {
+        font-family: oskar; 
+        font-weight: 600; 
+        font-size: 18px;
+    }
+    .support-btn {
+        background: black;
+        color: white;
+        font-family: oskar;
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        padding: 3px 20px;
+        height: fit-content;
+        width: fit-content;
+        border-radius: 20px;
+        margin-top: 5px;
+    }
+    .support-btn:hover {
+        background: rgb(14, 116, 14);
+    }
+    @media only screen and (min-width: 601px){
+        .parallax-banner {
+            width: 70%;
+        }
+        .marquee {
+            width: 100%;
+            overflow: hidden;
+            background: black;
+            color: white;
+            font-family: oskar;
+            font-size: 32px;
+            padding: 10px 0px
+        }
+    }
+    @media only screen and (min-width: 993px){
+        .carousel.carousel-slider .carousel-item {
+            height: 100px !important;
+        }
+        .parallax-banner {
+            width: 47%;
+        }
+        .carousel-item p {
+        font-size: 16px !important;
+    }
+    }
+</style>
+
+<script>
+    $('.carousel.carousel-slider').carousel({
+        fullWidth: true,
+        indicators: true,
+    });
+    $("#gallery").justifiedGallery({
+        rowHeight: 200,
+        maxRowHeight: null,
+        margins: 3,
+        border: 0,
+        captions: true,
+        randomize: false,
+    }).on('jg.complete jg.resize', function () {
+        var height = parseInt($('#gallery').css('height')) + 550
+        var contentHeight = height - 200
+        $('#page').css('height', height)
+        $('.content').css('height', contentHeight)
+        $('.swipebox').swipebox({
+            loopAtEnd: true,
+        });
+    });
+</script>
+{% endblock %}
