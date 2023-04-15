@@ -1,0 +1,21 @@
+<div class="row">
+    <div class="col-12 center-align">
+        <h4 style="font-family:oskar">Registration Details</h4>
+        <div class="divider"></div>
+    </div>
+    <div class="col-12 center-align">
+        <p><b>Walker:</b> {{ walker }}</p>
+        <p><a href="{{ walker.get_absolute_url }}">Click to view and share your unique page!</a></p>
+        <p><b>Email Address:</b> {{ walker.email }}</p>
+        {% if walker.phone is not None %}
+        <p><b>Phone:</b> {{ walker.phone }}</p>
+        {% endif %}
+        <p><b>Emergency Contact:</b> {{ walker.emergency_contact_name }}</p>
+        <p><b>Emergency Contact Phone:</b> {{ walker.emergency_contact_phone }}</p>
+        {% if shirt_ordered %}
+        <p><b>Shirt Size:</b> <b style="font-weight: normal; text-transform: uppercase;">{{ shirt.shirt_size }}</b></p>
+        {% endif %}
+        <p><b>Total Paid:</b> ${{ total }}</p>
+        <p><b>Payment Method:</b> {{ payment_method.card_type }} ending in {{ payment_method.last_4 }}</p>
+    </div>
+</div>

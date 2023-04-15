@@ -6,30 +6,27 @@
 {% block content %}
 <div class="parallax-container z-depth-3 box-shadow valign-wrapper">
     <div class="container z-depth-4 center-align parallax-banner" style="padding-left: 40px; padding-right: 40px;">
-        <h1 style="font-family: oskar; font-size: 42px; color:black; font-weight: 800; padding-bottom: 15px;">Show your Support for {{ walker }}!</h1>
+        <h1 style="font-family: oskar; color:black; font-weight: 800; padding-bottom: 15px;">Show your Support for {{ walker }}!</h1>
     </div>
     <div class="parallax">
         <img class="lazy" src="{% static 'img/vbp-collage.svg' %}" style="opacity: 1;">
     </div>
 </div>
-<div class="row" style="padding: 2% 10%;">
-    <div class="col s12" style="padding-bottom: 10px;">
+<div class="row" style="padding: 2% 0%">
+    <div class="col s12" style="padding-bottom: 10px;padding-top: 10px;">
         <a href="/walkathon/"><i class="bi bi-arrow-left"></i> Back to Power Walk home page</a>
     </div>
-    <div class="col s3 m6 l4">
+    {% if walker.image %}
+    <div class="col s4 offset-s4 m6 offset-m0 l4">
         <img src="{{ walker.image.url }}" width="100%" class="z-depth-4">
-        <div class="card">
-            <div class="card-body">
-                <h6>Power Walk Goal</h6>
-            </div>
-        </div>
     </div>
-    <div class="col s9 m6 l8">
+    {% endif %}
+    {% if walker.image %}<div class="col s12 m6 l8">{% else %}<div class="col s12">{% endif %}
         <h6 class="walker-name" style="color:rgb(9, 131, 9)">Power Walker</h6>
         <h6 class="walker-name">{{ walker }}</h6>
-        <p>Empower The Village to improve community health and wellness now!</p>
+        <p class="power-walk-slogan">Empower The Village to improve community health and wellness now!</p>
         <div class="row">
-            <div class="col s4">
+            <div class="col s4 offset-s2">
                 <p>
                     <label>
                     <input class="with-gap" name="amount" type="radio" />
@@ -70,17 +67,152 @@
             </p>
             </div>
         </div>
-        <div class="btn support-btn">Support Now!</div>
+        <div class="center-align">
+            <div class="btn support-btn">Support Now!</div>
+        </div>
     </div>
+    {% if walker.donation_goal > 0 %}
+    <div class="col s10 offset-s1">
+        <div class="card goal-card" style="width: 100%">
+            <div class="card-body" style="padding: 2% 5%; height: 425px;">
+                <div class="row">
+                    <div class="col-12 center-align">
+                        <h5 style="font-family: oskar; margin-bottom: 0; padding-bottom: 0; text-decoration: underline;">My Power Walk Goal</h5>
+                    </div>
+                </div>
+                
+                <div class="margin: 0">
+                    <div id="thermometer">
+                        <div class="track">
+                            <div class="valign-wrapper">
+                                <div class="amount" style="margin-left: -95px">$</div>
+                                <div class="goal">
+                                    <div class="amount" id="goalAmount">{{ walker.goal_truncated }}</div>
+                                </div>
+                            </div>
+                            
+                            <div class="progress">
+                                <div style="display: block;" class="amount" id="progessAmount">698</div>
+                            </div>
+                            <div class="bulb">
+                                <div class="inner-bulb"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    {% endif %}
 </div>
 <style>
+    .goal-card {
+        background: url('https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/walkathon-collage.png');
+        background-size: 100%
+    }
+    .goal-card .card-body {
+        background: rgba(255, 255, 255, 0.871);
+    }
+    .power-walk-slogan {
+        text-align: center
+    }
+    h1 {
+        font-size: 24px;
+    }
+    #thermometer .goal {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+#thermometer .amount {
+    border-top: 1px solid #006600;
+    color: black;
+    display: inline-block;
+    font-family: Trebuchet MS;
+    font-weight: bold;
+    padding: 0 75px 0 0;
+}
+#thermometer .progress .amount {
+    border-top: 1px solid #006600;
+    color: #006600;
+    left: 0;
+    padding: 0 0 0 75px;
+    position: absolute;
+}
+#thermometer {
+    border-radius: 12px;
+    position: relative;
+}
+#thermometer .track {
+    background: #9eb8a0 none repeat scroll 0 0;
+    border-radius: 8px;
+    height: 280px;
+    left: 10px;
+    margin: 0 auto;
+    position: relative;
+    top: 10px;
+    width: 30px;
+}
+#thermometer .progress {
+    background: green none repeat scroll 0 0;
+    border-radius: 23px 23px 0 0;
+    bottom: 0;
+    height: 0;
+    left: 5px;
+    margin-bottom: 0 !important;
+    position: absolute;
+    width: 69%;
+    z-index: 100;
+}
+#thermometer .goal {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+#thermometer .amount {
+    border-top: 1px solid #006600;
+    color: black;
+    display: inline-block;
+    font-family: Trebuchet MS;
+    font-weight: bold;
+    padding: 0 75px 0 0;
+}
+#thermometer .progress .amount {
+    border-top: 1px solid #006600;
+    color: #006600;
+    left: 0;
+    padding: 0 0 0 75px;
+    position: absolute;
+}
+.bulb {
+    background: #9eb8a0 none repeat scroll 0 0;
+    border-radius: 50%;
+    bottom: -37px;
+    display: block;
+    height: 65;
+    left: -17px;
+    padding: 10px;
+    position: absolute;
+    width: 65;
+}
+.inner-bulb {
+    background-color: green;
+    border-radius: 50%;
+    height: 45px;
+    left: 0;
+    position: relative;
+    top: 0;
+    width: 45px;
+}
     label span {
         font-size: 18px;
     }
     .walker-name {
         font-family: oskar; 
         font-weight: 600; 
-        font-size: 36px;
+        font-size: 24px;
+        text-align: center;
     }
     .support-btn {
         background: black;
@@ -91,9 +223,62 @@
         height: fit-content;
         width: fit-content;
         border-radius: 30px;
+        margin-bottom: 20px;
     }
     .support-btn:hover {
         background: rgb(14, 116, 14);
     }
+    @media only screen and (min-width: 601px) {
+        h1 {
+            font-size: 32px;
+        }
+        .walker-name {
+            font-size: 28px;
+        }
+    }
+    @media only screen and (min-width: 901px) {
+        h1 {
+            font-size: 42px;
+        }
+        .walker-name { 
+            font-size: 36px;
+        }
+    }
 </style>
+<script>
+    function thermometer(goalAmount, progressAmount, animate) {
+        "use strict";
+        var $thermo = $("#thermometer"),
+            $progress = $(".progress", $thermo),
+            $goal = $(".goal", $thermo),
+            percentageAmount;
+
+        goalAmount = goalAmount || parseFloat($goal.text()),
+        progressAmount = progressAmount || parseFloat($progress.text()),
+        percentageAmount = Math.min(Math.round(progressAmount / goalAmount * 1000) / 10, 100); //make sure we have 1 decimal point
+
+        $goal.find(".amount").text();
+        $progress.find(".amount").text();
+
+        $progress.find(".amount").hide();
+        if (animate !== false) {
+            $progress.animate({
+                "height": percentageAmount + "%"
+            }, 1200, function () {
+                $(this).find(".amount").fadeIn(200);
+            });
+        } else {
+            $progress.css({
+                "height": percentageAmount + "%"
+            });
+            $progress.find(".amount").fadeIn(200);
+        }
+    }
+
+    $(document).ready(function () {
+
+        thermometer();
+    
+    });
+</script>
 {% endblock %}

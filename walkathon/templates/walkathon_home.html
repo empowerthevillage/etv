@@ -13,33 +13,45 @@
     </div>
 </div>
 <div class="row">
-    <div class="carousel carousel-slider center z-depth-2" id="health-carousel">
+    <div class="carousel carousel-slider center z-depth-2" id="health-carousel-mobile">
         <div class="carousel-item">
-            <p>July is ... <br>National Minority Mental Health <br>Awareness Month!</p>
+            <div>
+                <p>July is ... <br>National Minority Mental Health <br>Awareness Month!</p>
+            </div>
         </div>
       <div class="carousel-item">
-        <p><br>DID YOU KNOW?...</p>
+        <div>
+            <p>DID YOU KNOW?...</p>
+        </div>
       </div>
       <div class="carousel-item">
-        <p><br>Youth attempted suicide rates rose to 5.9% as of 2019, <br>and is highest among Black youth at 11.3%</p>
+        <div>
+            <p>Youth attempted suicide rates rose to 5.9% as of 2019, <br>and is highest among Black youth at 11.3%</p>
+        </div>
       </div>
       <div class="carousel-item">
-        <p><br>Black adults below the poverty line are 2x more likely <br>to report serious psychological distress than others</p>
+        <div>
+            <p>Black adults below the poverty line are 2x more likely <br>to report serious psychological distress than others</p>
+        </div>
       </div>
       <div class="carousel-item">
-        <p>Nearly 65% of Black youth report traumatic racial <br>experiences, contributing to higher rates of <br>PTSD, depression, and anxiety</p>
+        <div>
+            <p>Nearly 65% of Black youth report traumatic racial <br>experiences, contributing to higher rates of <br>PTSD, depression, and anxiety</p>
+        </div>
       </div>
       <div class="carousel-item">
-        <p><br>Unfortunately, 2 out of 3 Black adults with mental illness<br> do not receive treatment</p>
+        <div>
+            <p>Unfortunately, 2 out of 3 Black adults with mental illness<br> do not receive treatment</p>
+        </div>
       </div>
     </div>
     <div class="col s12">
         <div class="row">
             <div class="col s6 xl4 offset-xl2" style="padding-top: 20px;">
-                <a href=""><img class="" src="https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/registration-clipboard.jpg" width="100%"></a>
+                <a href="/walkathon/register/"><img class="" src="https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/registration-clipboard.jpg" width="100%"></a>
             </div>
             <div class="col s6 xl4" style="padding-top: 20px;">
-                <a href=""><img class="" src="https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/sponsor-clipboard.jpg" width="100%"></a>
+                <a href="/walkathon/sponsor/"><img class="" src="https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/sponsor-clipboard.jpg" width="100%"></a>
             </div>
         </div>
         <div class="row">
@@ -52,13 +64,13 @@
                 <h6 class="walker-name" style="color:rgb(195, 23, 23); font-size: 32px">Find Your Power Walker or Power Walk Team</h6>
             </div>
             <div class="input-field col s12 m6 offset-m3">
-                <select class="icons">
+                <select class="icons" id="walker-select">
                   <option value="" disabled selected>Choose your option</option>
                   {% for walker in walkers %}
                     {% if walker.image.url is not None %}
-                        <option value="" data-icon="{{ walker.image.url }}" class="left">{{ walker }}</option>
+                        <option value="" data-icon="{{ walker.image.url }}" class="left" href="{{ walker.get_absolute_url }}">{{ walker }}</option>
                     {% else %}
-                        <option>{{ walker }}</option>
+                        <option href="{{ walker.get_absolute_url }}">{{ walker }}</option>
                     {% endif %}
                   {% endfor %}
                 </select>
@@ -79,25 +91,26 @@
     
 </div>
 <style>
-    .carousel.carousel-slider .carousel-item {
-        height: 125px !important;
-        padding-left: 5px;
-        padding-right: 5px;
-        min-height: 0px;
-        background: black;
-        padding-bottom: 0
-    }
     .carousel-item p {
         color: white;
         font-size: 14px !important;
         font-family: poppins;
         font-weight: 500
     }
-    #health-carousel .indicator-item {
-        margin: 12px 4px;
+    #health-carousel-mobile .indicator-item {
+        margin: 0px 4px;
     }
-    #health-carousel {
-        height: fit-content
+    #health-carousel-mobile {
+        height: fit-content;
+    }
+    #health-carousel-mobile .carousel-item{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 125px !important;
+        min-height: 0px;
+        background: black;
+        padding-bottom: 20px;
     }
     .walker-name {
         font-family: oskar; 
@@ -148,6 +161,11 @@
 </style>
 
 <script>
+    $('#walker-select').on('change', function(){
+        var selected = $(this).find(':selected')
+        window.location.replace($(selected).attr('href'))
+        
+    })
     $('.carousel.carousel-slider').carousel({
         fullWidth: true,
         indicators: true,

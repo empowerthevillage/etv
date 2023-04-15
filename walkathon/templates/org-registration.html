@@ -1,0 +1,591 @@
+{% extends 'base.html' %}
+{% block title %}
+Register | ETV 2023 Walkathon
+{% endblock %}
+{% block canonical %}https://www.empowerthevillage.org/walkathon/register/{% endblock %}
+{% block seo_description %}Join ETV as we take steps to improve the mental and physical health of the Black community!{% endblock %}
+{% load static %}
+
+{% block content %}
+  
+
+<div id="page">
+
+    <div class="content-container row" style="margin-bottom: 0">
+        <div class="col s12" style="padding-left: 2%; padding-right: 2%; padding-bottom: 3%">
+          <div class="col s12" style="padding-bottom: 10px;">
+              <a href="/walkathon/"><i class="bi bi-arrow-left"></i> Back to Power Walk home page</a>
+          </div>
+          <h5 class="center-align donation-title">ETV 2023 Power Walk Organization Registration</h5>
+          <div class="col-12 center-align">
+            <a href="/walkathon/register/">Click Here to Register an Individual Walker</a>
+          </div>
+          <div id="preloader" class="center-align" style="display:none; padding-top: 200px; height: 800px">
+            <div class="preloader-wrapper big active" >
+              <div class="spinner-layer spinner-blue">
+                <div class="circle-clipper left">
+                  <div class="circle"></div>
+                </div><div class="gap-patch">
+                  <div class="circle"></div>
+                </div><div class="circle-clipper right">
+                  <div class="circle"></div>
+                </div>
+              </div>
+            
+              <div class="spinner-layer spinner-red">
+                <div class="circle-clipper left">
+                  <div class="circle"></div>
+                </div><div class="gap-patch">
+                  <div class="circle"></div>
+                </div><div class="circle-clipper right">
+                  <div class="circle"></div>
+                </div>
+              </div>
+            
+              <div class="spinner-layer spinner-yellow">
+                <div class="circle-clipper left">
+                  <div class="circle"></div>
+                </div><div class="gap-patch">
+                  <div class="circle"></div>
+                </div><div class="circle-clipper right">
+                  <div class="circle"></div>
+                </div>
+              </div>
+            
+              <div class="spinner-layer spinner-green">
+                <div class="circle-clipper left">
+                  <div class="circle"></div>
+                </div><div class="gap-patch">
+                  <div class="circle"></div>
+                </div><div class="circle-clipper right">
+                  <div class="circle"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="form-container">
+              <div>
+                <form id="registration-form" enctype="multipart/form-data" method="POST" action="/walkathon/organization-registration/">
+                    {% csrf_token %}
+                    <input type="hidden" value="" id="device-data-input">
+                    <fieldset class="checkout-fieldset z-depth-1">
+                        <h5 class="fieldset-title" style="padding-bottom: 10px;">Organization Details</h5>
+                        <div class="row" style="margin-bottom: 0;">
+                            <div class="input-field col s12" style="margin-top: 0">
+                                <input type="text" name="organization" class="textfield" required id="organization">
+                                  <label for="organization">Organization Name<b class="required">*</b></label>
+                            </div>
+                            <div class="input-field col s12 m6" style="margin-top: 0">
+                              <input type="text" name="first_name" class="textfield" required id="id_first_name">
+                                <label for="id_first_name">Captain First Name<b class="required">*</b></label>
+                            </div>
+                            <div class="input-field col s12 m6" style="margin-top: 0">
+                              <input type="text" name="last_name" required id="last_name">
+                              <label for="id_last_name">Captian Last Name<b class="required">*</b></label>
+                            </div>
+                            <div class="input-field col s12 m8" style="margin-top: 0">
+                              <input type="text" name="email" required id="email">
+                              <label for="id_email">Email<b class="required">*</b></label>
+                            </div>
+                            <div class="input-field col s12 m4" style="margin-top: 0">
+                              <input type="text" name="phone" class="phone_us" id="phone">
+                              <label for="phone">Phone (Optional)</label>
+                            </div>
+                            
+                            <div class="file-field input-field col s12 m6" style="margin-top: 0;">
+                              <div class="btn">
+                                  <span class="material-icons" style="margin-top:8px">attach_file</span>
+                                  <input type="file" name="image" accept="image/png, image/jpeg, image/heic">
+                              </div>
+                              <div class="file-path-wrapper">
+                                <input class="file-path validate" name="image" type="text" placeholder="Upload organization image">
+                              </div>
+                            </div>
+                            <div class="input-field col s12 m6" style="margin-top: 0;">
+                              <i class="material-icons prefix">attach_money</i>
+                              <input type="text" class="money" name="fundraising-goal" id="fundraising-goal">
+                              <label for="fundraising-goal">Set Your Fundraising Goal</label>
+                            </div>
+                        </div>
+                        <div class="col s12 center-align">
+                            <input class="btn submit-btn" id="registration-submit" type="submit">
+                        </div>
+                    </fieldset>
+                </form>
+              </div>
+          </div>
+        </div>
+    </div> 
+</div>
+
+<script>
+  $(document).ready(function(){
+    $('.phone_us').mask('(000) 000-0000');
+    $('.money').mask('000,000,000,000,000.00', {reverse: true});
+  })
+  $('#phone').on('keyup', function(){
+    if($(this).val() !== ''){
+      $('#opt-in').removeClass('hidden')
+    }else{
+      $('opt-in').addClass('hidden')
+    }
+  })
+ $('#donor-detail-section input').on('change', function(){
+      var donor_first = $('#id_first_name').val()
+      var donor_last = $('#last_name').val()
+      var donor_email = $('#email').val()
+      if(donor_first != '' && donor_first != '' && donor_email != ''){
+        $('#creditcard-button').removeClass('disabled')
+        $('#express-pay-options').removeClass('hidden')
+      }
+    })
+    $('label').on('click', function(){
+      $(this).addClass('active')
+    });
+    $('#add-new-billing').hide()
+    $('[name="billing-address-group"]').on('change', function(){
+      $('#add-new-billing').show();
+      $('#billing-saved-or-new').attr('value', 'saved');
+      $('#saved-billing-id').attr('value', 'saved');
+      $('#new-billing-address-form').hide();
+      $('#new-billing-address-form input').val('');
+      
+    });
+    $('#new-billing-address-form input').on('keyup', function(){
+      $('#billing-saved-or-new').attr('value', 'new');
+    })
+    $('#add-new-billing').on('click', function(){
+    $('#new-billing-address-form').toggle();
+    $('[name="billing-address-group"]').prop('checked', false)
+  });
+  
+</script>
+{% if new_org_popup == True %}
+<script>
+  $(document).ready(function(){
+    Swal.fire({
+      title: 'Thank you!',
+      icon: 'success',
+      text: "You've successfully registered your organization!",
+    })
+  })
+</script>
+{% endif %}
+{% if already_registered_popup == True %}
+<script>
+  $(document).ready(function(){
+    Swal.fire({
+      title: "You're already on the list!",
+      icon: 'success',
+      text: "This organization has already been registered!",
+    })
+  });
+</script>
+{% endif %}
+<style>
+    .submit-btn {
+        background: green;
+        color: white;
+        font-family: oskar;
+        font-size: 22px;
+        margin-top: 10px;
+        width: fit-content;
+    }
+    #mobile-double-campaign {
+        display: block;
+    }
+    #opt-in {
+        padding-bottom: 120px;
+    }
+    #registration-form [type="radio"]:not(:checked)+span, [type="radio"]:checked+span {
+        height: 30px !important
+    }
+    .p-title {
+        font-family: oskar;
+        font-size: 18px;
+    }
+    .donation-review-item {
+        font-size: 18px;
+        font-family: oskar;
+    }
+    #add-new-billing {
+        background: rgb(41, 41, 41)
+    }
+    .address-label {
+        font-size: 14px
+    }
+    label span {
+        margin-bottom: -5px
+    }
+    .help-text{
+        margin: 0;
+        text-align: center;
+    }
+    .input-icon {
+        font-size: 18px;
+        color: rgb(160, 160, 160);
+        margin-right: 10px
+    }
+    .checkout-fieldset {
+        background: rgba(255, 255, 255, 0.845);
+        border: none;
+        border-radius: 15px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        padding-left: 7%;
+        padding-right: 7%;
+        padding-bottom: 40px
+    }
+    .checkout-fieldset p {
+        margin-bottom: 0;
+        margin-top: 0px;
+    }
+    .secure-checkout {
+        font-size: 14px;
+        font-weight: 300;
+        color: rgb(99, 99, 99);
+    }
+    .secure-checkout span {
+        font-size: 16px
+    }
+    label {
+        color: rgb(43, 43, 43) !important
+    }
+    .fieldset-title {
+        font-family: oskar;
+        font-size: 20px;
+        color: rgb(186, 37, 37);
+        text-decoration: underline;
+    }
+    .fieldset-subtitle {
+        font-family: oskar;
+        font-size: 18px;
+        font-weight: 300;
+        margin-top: 15px
+    }
+    .hidden {
+        display: none;
+    }
+    #page {
+        background-image: url("{% static 'img/health-collage-min.jpg' %}");
+        background-size: 80%;
+        background-repeat: repeat;
+    }
+    .content-container {
+        padding: 3% 1%;
+        background-color: rgba(255, 255, 255, 0.9);
+    }
+    .required {
+        color: red
+    }
+    .label-title {
+        font-size: 16px
+    }
+    .donate-buttons {
+        padding-bottom: 60px
+    }
+    .donate-buttons a {
+        width: 100%;
+        margin:5px;
+        font-size: 16px;
+        letter-spacing: 1.5px;
+        font-weight:400;
+        height: 50px;
+        padding-top:4px;
+        border-radius: 40px;
+    }
+    .donate-buttons a i {
+        font-size: 24px;
+    }
+    .donation-title {
+        font-family: oskar-inline;
+        font-size: 52px;
+    }
+    @media only screen and (min-width:0px){
+        .donate-text-small {
+          display: block;
+        }
+        .donate-text-large {
+          display: none;
+        }
+        .donation-title {
+            font-family: oskar-inline;
+            font-size: 32px;
+        }
+        .donation-subtitle {
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 20px
+        }
+        .venmo-button {
+          width: 100%;
+          margin-left: 0;
+        }
+        .creditcard-button {
+          width: 95%;
+          font-size: 18px;
+        }
+        .applepay-button {
+          width: 95%;
+        }
+        .paypal-button-row {
+          height: 50px !important
+        }
+    }
+    @media only screen and (min-width:400px){
+      #opt-in {
+        padding-bottom: 70px;
+      }
+    }
+    @media only screen and (min-width:601px){
+      .content-container {
+        padding: 3% 5%
+      }
+     
+      .p-title {
+          font-family: oskar;
+          font-size: 20px;
+        }
+        .donation-review-item {
+    font-size: 20px;
+    font-family: oskar;
+  }
+      .donate-text-small {
+          display: none;
+        }
+        .donate-text-large {
+          display: block;
+          letter-spacing: 2px;
+        }
+        .donation-title {
+            font-family: oskar-inline;
+            font-size: 42px;
+        }
+        .fieldset-title {
+          font-family: oskar;
+          font-size: 24px
+        }
+    }
+    @media only screen and (min-width:993px){
+      .submit-btn {
+        font-size: 26px;
+      }
+        .content-container {
+            padding: 3% 10%
+        }
+      #opt-in {
+        padding-bottom: 50px;
+        }
+      #registration-form [type="radio"]:not(:checked)+span, [type="radio"]:checked+span {
+        height: 25px !important
+      }
+      .p-title {
+          font-family: oskar;
+          font-size: 26px;
+        }
+        .donation-review-item {
+    font-size: 26px;
+    font-family: oskar;
+  }
+        .donation-title {
+            font-family: oskar-inline;
+            font-size: 48px;
+        }
+        .donation-subtitle {
+            font-size: 20px;
+            font-weight: 300;
+            line-height: 24px;
+        }
+        .venmo-button {
+          font-size: 16px;
+        }
+        .creditcard-button {
+          font-size: 20px;
+        }
+        .google-button {
+          font-size: 16px;
+        }
+        .applepay-button {
+          font-size: 16px;
+        }
+        .fieldset-title {
+          font-family: oskar;
+          font-size: 26px
+        }
+        .checkout-fieldset p {
+          margin-bottom: 15px !important
+        }
+    }
+    @media only screen and (min-width:1400px){
+      #opt-in {
+    padding-bottom: 30px;
+  }
+        .donation-title {
+            font-family: oskar-inline;
+            font-size: 56px;
+        }
+        .donation-subtitle {
+            font-size: 20px;
+            font-weight: 300;
+            line-height: 24px
+        }
+        .fieldset-title {
+          font-family: oskar;
+          font-size: 28px
+        }
+    }
+    .cc-button {
+        background-color: rgb(55, 54, 54)
+    }
+    .cc-button:hover {
+        background-color:rgb(101, 101, 101)
+    }
+    .pp-button {
+        background-color: #3b7bbf
+    }
+    .pp-button:hover {
+        background-color:#6799ce
+    }
+    .venmo-button {
+        background-color: #3d95ce;
+        color:white;
+        letter-spacing: 1.5px;
+        font-weight:500;
+        height: 50px;
+        line-height: 45px;
+        border-radius: 5px;
+        margin-top: 10px
+    }
+    .venmo-button:hover {
+        background-color:#739296
+    }
+    .creditcard-button {
+      background-color: #0f9a22;
+      color:rgb(255, 255, 255);
+        margin:5px;
+        letter-spacing: 1.5px;
+        font-weight:500;
+        height: 50px;
+        line-height: 40px;
+        border-radius: 40px;
+    }
+    .creditcard-button:hover {
+        background-color:#5e6a4b
+    }
+    .google-button {
+      background-color: #fcfcfc;
+      color:rgb(50, 50, 50);
+        margin:5px;
+        letter-spacing: 1.5px;
+        font-weight:500;
+        height: 50px;
+        line-height: 45px;
+        border-radius: 40px;
+    }
+    .google-button:hover {
+        background-color:#ded8d8
+    }
+    .applepay-button {
+      background-color: #181818;
+      color:rgb(50, 50, 50);
+        margin:5px;
+        letter-spacing: 1.5px;
+        font-weight:500;
+        height: 50px;
+        line-height: 45px;
+        border-radius: 40px;
+    }
+    .applepay-button:hover {
+        background-color:#5e5e5e
+    }
+    .paypal-button.paypal-button-color-white, .paypal-button-row.paypal-button-color-white .menu-button {
+      border: none !important;
+    }
+    body {
+  background-color: #fff;
+}
+
+.toast {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  z-index: 9999;
+}
+
+.bootstrap-basic {
+  background: white;
+}
+
+#or {
+  position: relative;
+  line-height: 50px;
+  text-align: center;
+  font-weight: 500;
+}
+
+#or::before,
+#or::after {
+  position: absolute;
+  width: 30%;
+  height: 1px;
+  
+  top: 25px;
+  
+  background-color: rgb(193, 193, 193);
+  
+  content: '';
+}
+
+#or::before {
+  left: 15%;
+}
+
+#or::after {
+  right: 15%;
+}
+.btn:focus {
+  background-color:rgb(160, 160, 160) !important;
+}
+#card-name {
+  height: 3rem;
+  border-bottom: 1px solid #9e9e9e;
+  margin-bottom: 10px !important;
+}
+#card-number {
+  height: 3rem;
+  border-bottom: 1px solid #9e9e9e;
+  margin-bottom: 10px !important;
+}
+#card-date {
+  height: 3rem;
+  border-bottom: 1px solid #9e9e9e;
+  margin-bottom: 10px !important;
+}
+#card-cvv {
+  height: 3rem;
+  border-bottom: 1px solid #9e9e9e;
+  margin-bottom: 10px !important;
+}
+#card-zip {
+  height: 3rem ;
+  border-bottom: 1px solid #9e9e9e;
+  margin-bottom: 10px !important;
+}
+::placeholder {
+  color: rgb(186, 186, 186) !important
+}
+</style>
+<script>
+  $('#shirt-boolean').on('change', function(){
+    $('#shirt-size-selector').toggleClass('hidden');
+    $('#shirt-price').toggleClass('hidden');
+    if($(this).is(':checked')){
+      $('#registration-total').text('30')
+      $('#registration-total').val('30')
+    }else{
+      $('#registration-total').text('10')
+      $('#registration-total').val('10')
+    }
+  })
+</script>
+{% endblock %}
