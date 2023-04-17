@@ -203,7 +203,7 @@ Register | ETV 2023 Walkathon
                     <div class="row">
                       <div class="col s12 center-align" style="margin-top: 0;">
                         <h6><b>Registration Fee:</b> $10</h6>
-                        <h6 class="hidden" id="shirt-price"><b>T-Shirt Pre-Order:</b> $20</h6>
+                        <h6 class="hidden" id="shirt-price"><b>T-Shirt Pre-Order:</b> $25</h6>
                         <h6><b>Total:</b> $<b style="font-weight: 400;" id="registration-total" val="10">10</b></h6>
                       </div>
                       <div class="col s12">
@@ -847,9 +847,9 @@ braintree.client.create({
     $('#shirt-size-selector').toggleClass('hidden');
     $('#shirt-price').toggleClass('hidden');
     if($(this).is(':checked')){
-      $('#registration-total').text('30')
-      $('#registration-total').val('30')
-      $('#order-total').val('30.00')
+      $('#registration-total').text('35')
+      $('#registration-total').val('35')
+      $('#order-total').val('35.00')
     }else{
       $('#registration-total').text('10')
       $('#registration-total').val('10')
