@@ -5,7 +5,7 @@
     </div>
     <div class="col-12 center-align">
         <p><b>Walker:</b> {{ walker }}</p>
-        <p><a href="{{ walker.get_absolute_url }}">Click to view and share your unique page!</a></p>
+        <p><a class="page-link" href="{{ walker.get_absolute_url }}">Click to view and share your unique page!</a></p>
         <p><b>Email Address:</b> {{ walker.email }}</p>
         {% if walker.phone is not None %}
         <p><b>Phone:</b> {{ walker.phone }}</p>
@@ -19,3 +19,18 @@
         <p><b>Payment Method:</b> {{ payment_method.card_type }} ending in {{ payment_method.last_4 }}</p>
     </div>
 </div>
+<style>
+.page-link {
+    font-size: 18px;
+}
+@media only screen and (min-width: 601px) {
+    .page-link {
+        font-size: 22px;
+    }
+}
+@media only screen and (min-width: 601px) {
+    .page-link {
+    font-size: 24px;
+}
+}
+</style>
