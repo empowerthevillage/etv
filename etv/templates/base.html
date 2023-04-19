@@ -64,6 +64,8 @@
         <link rel="shortcut icon" type="image/png" href="{% static 'img/favicon.png' %}" />
         <title>{% block title %}{% endblock %}</title>
         <meta name="description" content="{% block seo_description%}{% endblock %}" />
+        {% block meta_tags %}
+        {% endblock %}
         <link rel="canonical" href="{% block canonical %}{% endblock %}" />
         <!-- Google tag (gtag.js) -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-GFM7WGP9KD"></script>

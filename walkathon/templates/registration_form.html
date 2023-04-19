@@ -96,7 +96,25 @@ Register | ETV 2023 Walkathon
                                 <span>I would like to receive news & SMS updates, opt out anytime. We respect your privacy and do not share or sell your contact information.</span>
                               </label>
                             </p>
+                            <div class="col s12" style="padding-bottom: 5px;">
+                              <p style="font-weight: 600;">I would like to participate in the 2023 Power Walk:<b class="required">*</b></p>
+                              <div class="">
+                                <p style="margin-bottom: 25px;">
+                                  <label>
+                                    <input value="in-person" class="with-gap" name="virtual-selection" type="radio" />
+                                    <span>In-Person (South Mountain Reservation, West Orange, NJ)</span>
+                                  </label>
+                                </p>
+                                <p>
+                                  <label>
+                                    <input value="virtually" class="with-gap" name="virtual-selection" type="radio" />
+                                    <span>Virtually (Home, gym, or other)</span>
+                                  </label>
+                                </p>
+                              </div>
+                            </div>
                             <div class="input-field col s12" style="margin-bottom: 0">
+                              <p style="font-weight: 600;">Walking with an organization? Select your affiliation here!</p>
                               <select name="organization" id="organization">
                                 <option value="" disabled selected>Select A Registered Organization (optional)</option>
                                 {% for org in orgs %}
@@ -107,7 +125,6 @@ Register | ETV 2023 Walkathon
                                   {% endif %}
                                 {% endfor %}
                               </select>
-                              <label style="font-weight: 700; top: -35">Walking with an organization? Select your affiliation here!</label>
                             </div>
                             <div style="margin-bottom: 15px;">
                               <a href="/walkathon/organization-registration/" style="font-size: 12px; font-style: italic;">Don't see your organization? Click here to register your group with ETV!</a>
@@ -133,7 +150,7 @@ Register | ETV 2023 Walkathon
                                 <label for="zip">Zip Code</label>
                             </div>
                             
-                            <div class="file-field input-field col s12 m6" style="margin-top: 0;">
+                            <div class="file-field input-field col s12" style="margin-top: 0;">
                               <div class="btn">
                                   <span class="material-icons" style="margin-top:8px">attach_file</span>
                                   <input type="file" name="image" accept="image/png, image/jpeg, image/heic">
@@ -142,10 +159,52 @@ Register | ETV 2023 Walkathon
                                 <input class="file-path validate" type="text" placeholder="Upload your headshot">
                               </div>
                             </div>
-                            <div class="input-field col s12 m6" style="margin-top: 0;">
-                              <i class="material-icons prefix">attach_money</i>
-                              <input type="text" class="money" name="fundraising-goal" id="fundraising-goal">
-                              <label for="fundraising-goal">Set Your Fundraising Goal</label>
+                            <div class="col s12">
+                              <p style="font-weight: 600;">Select your pledge/fundraising goal ($100 minumum)<b class="required">*</b>:</p>
+                              <div class="col s12 m6">
+                                <p>
+                                  <label>
+                                    <input value="100" class="with-gap" name="fundraising-goal" type="radio" />
+                                    <span>$100</span>
+                                  </label>
+                                </p>
+                                <p>
+                                  <label>
+                                    <input value="250" class="with-gap" name="fundraising-goal" type="radio" />
+                                    <span>$250</span>
+                                  </label>
+                                </p>
+                                <p>
+                                  <label>
+                                    <input value="500" class="with-gap" name="fundraising-goal" type="radio" />
+                                    <span>$500</span>
+                                  </label>
+                                </p>
+                              </div>
+                              <div class="col s12 m6">
+                                <p>
+                                  <label>
+                                    <input value="750" class="with-gap" name="fundraising-goal" type="radio" />
+                                    <span>$750</span>
+                                  </label>
+                                </p>
+                                <p>
+                                  <label>
+                                    <input value="1000" class="with-gap" name="fundraising-goal" type="radio" />
+                                    <span>$1,000</span>
+                                  </label>
+                                </p>
+                                <p>
+                                  <label>
+                                    <input value="other" class="with-gap" name="fundraising-goal" type="radio" id="other-goal"/>
+                                    <span>Other</span>
+                                  </label>
+                                </p>
+                                <div class="other-input hidden text-field" id="other-input-wrapper">
+                                  <div class="valign-wrapper">$<input type="number" id="other-input" style="width: 50%; padding-left: 10px"></div>
+                                  <label>Enter a Custom Amount</label>
+                                </div>
+                              </div>
                             </div>
                         </div>
                     </fieldset>
@@ -202,9 +261,7 @@ Register | ETV 2023 Walkathon
                     </div>
                     <div class="row">
                       <div class="col s12 center-align" style="margin-top: 0;">
-                        <h6><b>Registration Fee:</b> $10</h6>
-                        <h6 class="hidden" id="shirt-price"><b>T-Shirt Pre-Order:</b> $25</h6>
-                        <h6><b>Total:</b> $<b style="font-weight: 400;" id="registration-total" val="10">10</b></h6>
+                        <h6><b>Registration Fee:</b> $<b style="font-weight: 400;" id="registration-total">10</b></h6>
                       </div>
                       <div class="col s12">
                         <label for="card-name">Cardholder Name</label>
@@ -321,6 +378,13 @@ braintree.client.create({
           'text': 'Email address is required'
         })
         return;
+      }else if($('[name="virtual-selection"]:checked').val()==undefined){
+        Swal.fire({
+          'title': 'Required field missing',
+          'icon': 'error',
+          'text': "Please select if you'd like to participate virtually or in-person"
+        })
+        return;
       }else if($('#emergency-contact-name').val()==''){
         Swal.fire({
           'title': 'Required field missing',
@@ -406,13 +470,23 @@ braintree.client.create({
     $('.phone_us').mask('(000) 000-0000');
     $('.money').mask('000,000,000,000,000.00', {reverse: true});
   })
+  $('[name="fundraising-goal"]').on('change', function(){
+    if($('[name="fundraising-goal"]:checked').attr('id')=='other-goal'){
+      $('#other-input-wrapper').removeClass('hidden')
+    }else{
+      $('#other-input-wrapper').addClass('hidden')
+    }
+  })
   $('#phone').on('keyup', function(){
     if($(this).val() !== ''){
       $('#opt-in').removeClass('hidden')
     }else{
       $('opt-in').addClass('hidden')
     }
-  })
+  });
+  $('#other-input').on('keyup', function(){
+    $('#other-goal').val($('#other-input').val())
+  });
  $('#donor-detail-section input').on('change', function(){
       var donor_first = $('#id_first_name').val()
       var donor_last = $('#last_name').val()
@@ -847,12 +921,10 @@ braintree.client.create({
     $('#shirt-size-selector').toggleClass('hidden');
     $('#shirt-price').toggleClass('hidden');
     if($(this).is(':checked')){
-      $('#registration-total').text('35')
-      $('#registration-total').val('35')
-      $('#order-total').val('35.00')
+      $('#registration-total').text('25')
+      $('#order-total').val('25.00')
     }else{
       $('#registration-total').text('10')
-      $('#registration-total').val('10')
       $('#order-total').val('10.00')
     }
   })

@@ -1,0 +1,20 @@
+<div class="row">
+    <div class="col-12 center-align">
+        <h4 style="font-family:oskar">Donation Details</h4>
+        <div class="divider"></div>
+    </div>
+    <div class="col-12 center-align">
+        {% if walker_type == 'individual' %}
+        <p><b>Power Walker:</b> {{ donation.walker }}</p>
+        {% else %}
+        <p><b>Power Walk Group:</b> {{ donation.organization }}</p>
+        {% endif %}
+        <p><b>Amount:</b> ${{ donation.amount }}</p>
+        <p><b>Donor Name:</b> {{ donation.first_name }} {{ donation.last_name }}</p>
+        <p><b>Email Address:</b> {{ donation.email }}</p>
+        {% if donation.phone %}
+        <p><b>Phone:</b> {{ donation.phone }}</p>
+        {% endif %}
+        <p><b>Payment Method:</b> {{ payment_method.card_type }} ending in {{ payment_method.last_4 }}</p>
+    </div>
+</div>

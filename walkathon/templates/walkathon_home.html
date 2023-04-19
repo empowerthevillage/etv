@@ -6,7 +6,7 @@
 {% block content %}
 <div class="parallax-container z-depth-3 box-shadow valign-wrapper" style=" height: fit-content !important;">
     <div class="container z-depth-4 center-align parallax-banner" style="margin-top: 20px; margin-bottom: 20px;">
-        <img class="" src="https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/walkathon-cover-new.jpg" width="100%">
+        <img class="" src="https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/power-walk-cover-new.jpg" width="100%">
     </div>
     <div class="parallax">
         <img class="lazy" src="{% static 'img/health-collage-min.jpg' %}" style="opacity: 1; padding-top: 40px; padding-bottom: 40px;">
@@ -26,7 +26,7 @@
       </div>
       <div class="carousel-item">
         <div>
-            <p>Youth attempted suicide rates rose to 5.9% as of 2019, <br>and is highest among Black youth at 11.3%</p>
+            <p>Youth attempted suicide rates in New Jersey rose to 5.9%<br>as of 2019,and is highest among Black youth at 11.3%</p>
         </div>
       </div>
       <div class="carousel-item">
@@ -47,16 +47,58 @@
     </div>
     <div class="col s12">
         <div class="row">
+            
             <div class="col s6 xl4 offset-xl2" style="padding-top: 20px;">
                 <a href="/walkathon/register/"><img class="" src="https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/registration-clipboard.jpg" width="100%"></a>
             </div>
             <div class="col s6 xl4" style="padding-top: 20px;">
                 <a href="/walkathon/sponsor/"><img class="" src="https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/sponsor-clipboard.jpg" width="100%"></a>
             </div>
+            
         </div>
         <div class="row">
+            <a href="/walkathon/register/">
+                <div class="col s12 m8 offset-m2 z-depth-2" style="border: solid green 4px; padding: 15px 10px 25px 10px; border-radius: 10px;">
+                    <div class="center-align">
+                        <h6 class="walker-name" style="color:rgb(195, 23, 23);">Register today for $10 <b style="color: black">or</b> $25<br>to get the custom 2023 Power Walk t-shirt!</h6>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="row">
+                <div class="col s12 m10 offset-m1">
+                    <div class="center-align">
+                        <h6 class="walker-name" style="color:black; font-weight:400;">Join us on a scenic 1.8 mile walk around the Orange Reservoir Loop (or 2 loops for those who want an extra cardio boost)!</h6>
+                        <h6 class="walker-name" style="color:rgb(45, 124, 17); font-weight:400;">Or participate virtually from anywhere by walking 1.8 miles on your home/gym treadmill or at your local park and tag ETV on <a target="_blank" href="https://www.instagram.com/empower_etv/">Instagram</a> or <a target="_blank" href="https://www.facebook.com/Empower-The-Village-Nonprofit-Organization-105185814766521/">Facebook</a> to join the fun virtually!</h6>
+                    </div>
+                </div>
+        </div>
+        <div class="row" style="padding: 0px 15px;">
             <div class="col s12 m10 l8 offset-m1 offset-l2" style="padding-top: 20px;">
-                <img class="z-depth-2" src="https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/walkathon-text.jpg" width="100%">
+                <img src="https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/power-walk-event-details-3.jpg" width="100%">
+            </div>
+            <div class="col s12 m10 l8 offset-m1 offset-l2" style="padding-top: 20px;">
+                <a href="/health-and-wellness/" id="peace-pillar-link"><img class="z-depth-2" src="https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/power-walk-detail-slide-3.jpg" width="100%"></a>
+            </div>
+            <div class="col s12 m10 offset-m1 center-align" style="padding-top: 20px;">
+                <h4 style="font-family: oskar; font-weight: 600;">How Can you Support This Initiative?</h4>
+                <div class="row">
+                    <a href="/walkathon/register/" style="color: black">
+                    <ul class="col s12 z-depth-3 support-row" style="border-radius: 15px; padding: 15px 10px">
+                        <li style="font-weight: 600"><b style="color:rgb(23, 141, 23)">Pledge and Recruit</b> friends, family, or colleagues to support your in-person <br>or virtual power walk at various donation levels.</li>
+                        <li style="padding-top: 15px; padding-bottom: 15px;"><b style="font-weight: 800">For example:</b></li>
+                        <li>10 supporters at $10 = $100 </li>
+                        <li>10 supporters at $25 = $250</li>
+                        <li>10 supporters at $50 = $500</li>
+                        <li>10 supporters at $100 = $1,000</li>
+                    </ul>
+                    </a>
+                    <a href="/walkathon/organization-registration/" style="color: black">
+                    <ul class="col s12 z-depth-3 support-row" style="border-radius: 15px; padding: 15px 10px;">
+                        <li style="font-weight: 600"><b style="color:rgb(195, 23, 23)">Form a Team and Set a Goal</b> with multiple walkers in your family, church, civic organization, or company. <br>Register individually but track your fundraising goal as a team! <br><b style="color:rgb(23, 141, 23)">Upload a group photo or logo</b> and share your group link on social media</li>
+                    </ul>
+                    </a>
+                </div>
             </div>
         </div>
         <div class="row">
@@ -66,7 +108,7 @@
             <div class="input-field col s12 m6 offset-m3">
                 <select class="icons" id="walker-select">
                   <option value="" disabled selected>Choose your option</option>
-                  {% for walker in walkers %}
+                  {% for walker in dropdown_list %}
                     {% if walker.image.url is not None %}
                         <option value="" data-icon="{{ walker.image.url }}" class="left" href="{{ walker.get_absolute_url }}">{{ walker }}</option>
                     {% else %}
@@ -77,8 +119,6 @@
                 
                 <label>Select A Walker</label>
               </div>
-              
-        
         </div>
         <div class="divider"></div>
         <div class="col-12 center-align">
@@ -91,6 +131,10 @@
     
 </div>
 <style>
+
+    #peace-pillar-link:hover {
+        filter: brightness(1)
+    }
     .carousel-item p {
         color: white;
         font-size: 14px !important;
@@ -102,6 +146,9 @@
     }
     #health-carousel-mobile {
         height: fit-content;
+    }
+    #health-carousel-mobile .indicators {
+        bottom: 5px !important;
     }
     #health-carousel-mobile .carousel-item{
         display: flex;
@@ -115,7 +162,7 @@
     .walker-name {
         font-family: oskar; 
         font-weight: 600; 
-        font-size: 18px;
+        font-size: 20px;
     }
     .support-btn {
         background: black;
@@ -134,6 +181,12 @@
         background: rgb(14, 116, 14);
     }
     @media only screen and (min-width: 601px){
+        .walker-name {
+            font-size: 24px
+        }
+        .support-row li {
+            font-size: 18px
+        }
         .parallax-banner {
             width: 70%;
         }
@@ -148,6 +201,12 @@
         }
     }
     @media only screen and (min-width: 993px){
+        .walker-name {
+            font-size: 32px;
+        }
+        .support-row li {
+            font-size: 22px
+        }
         .carousel.carousel-slider .carousel-item {
             height: 100px !important;
         }

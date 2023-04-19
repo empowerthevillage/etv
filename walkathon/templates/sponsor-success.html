@@ -1,0 +1,15 @@
+<div class="row">
+    <div class="col-12 center-align">
+        <h4 style="font-family:oskar">Sponsorship Details</h4>
+        <div class="divider"></div>
+    </div>
+    <div class="col-12 center-align">
+        <p><b>Amount:</b> ${{ sponsorship.amount }}</p>
+        <p><b>Sponsor Name:</b> {{ sponsorship.first_name }} {{ sponsorship.last_name }}</p>
+        <p><b>Email Address:</b> {{ sponsorship.email }}</p>
+        {% if sponsorship.phone is not None %}
+        <p><b>Phone:</b> {{ sponsorship.phone }}</p>
+        {% endif %}
+        <p><b>Payment Method:</b> {{ payment_method.card_type }} ending in {{ payment_method.last_4 }}</p>
+    </div>
+</div>

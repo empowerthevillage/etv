@@ -3,45 +3,76 @@
 
 {% block title %}{{ title }}{% endblock %}
 
+{% block meta_tags %}
+<meta property="og:url"           content="{{ walker.get_absolute_url }}" />
+<meta property="og:type"          content="website" />
+<meta property="og:title"         content="Empower The Village" />
+<meta property="og:description"   content="I'm taking steps to restore prosperity, peace and power to the Black community with Empower The Village! Learn how you can support my walk" />
+<meta property="og:image"         content="https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/etv-logo-r.jpg" />
+{% endblock %}
 {% block content %}
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+var js, fjs = d.getElementsByTagName(s)[0];
+if (d.getElementById(id)) return;
+js = d.createElement(s); js.id = id;
+js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<script src="https://platform.linkedin.com/in.js" type="text/javascript">lang: en_US</script>
+
+
 <div class="parallax-container z-depth-3 box-shadow valign-wrapper">
     <div class="container z-depth-4 center-align parallax-banner" style="padding-left: 40px; padding-right: 40px;">
         <h1 style="font-family: oskar; color:black; font-weight: 800; padding-bottom: 15px;">Show your Support for {{ walker }}!</h1>
     </div>
     <div class="parallax">
-        <img class="lazy" src="{% static 'img/vbp-collage.svg' %}" style="opacity: 1;">
+        <img class="lazy" src="{% static 'img/health-collage-min.jpg' %}" style="opacity: 1;">
     </div>
 </div>
-<div class="row" style="padding: 2% 0%">
-    <div class="col s12" style="padding-bottom: 10px;padding-top: 10px;">
-        <a href="/walkathon/"><i class="bi bi-arrow-left"></i> Back to Power Walk home page</a>
+<div class="row hidden" style="padding: 1%" id="donate-window">
+</div>
+<div class="row" style="padding: 1%" id="walker-content">
+    <div class="col s12" style="padding-bottom: 20px;padding-top: 0px;">
+        <a href="/walkathon/" class="back-link"><i class="bi bi-arrow-left"></i> Back to Power Walk home page</a>
+        <div class="right valign-wrapper" style="padding-right: 20px;">
+            <div class="fb-share-button" data-href="{{ walker.get_absolute_url }}" data-layout="button" style="margin-right: 5px;"></div>
+            <script type="IN/Share" data-url="{{ waler.get_absolute_url }}"></script>
+        </div>
     </div>
-    {% if walker.image %}
-    <div class="col s4 offset-s4 m6 offset-m0 l4">
+    
+    <div class="col s4 offset-s4 offset-m1 l3 offset-l2">
+        {% if walker.image %}
         <img src="{{ walker.image.url }}" width="100%" class="z-depth-4">
+        {% else %}
+        <img src="https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/power-walk-avatar.png" width="100%" class="z-depth-4">
+        {% endif %}
     </div>
-    {% endif %}
-    {% if walker.image %}<div class="col s12 m6 l8">{% else %}<div class="col s12">{% endif %}
-        <h6 class="walker-name" style="color:rgb(9, 131, 9)">Power Walker</h6>
+    
+    <div class="col s12 m6">
+        <h6 class="walker-name" style="color:rgb(9, 131, 9)">{% if walker_type == 'individual' %}Power Walker{% elif walker_type == 'org' %}Power Walk Group{% endif %}</h6>
         <h6 class="walker-name">{{ walker }}</h6>
+        {% if org_walker %}
+        <h6 class="walker-name mini">I'm walking with <a href="{{ walker.organization.get_absolute_url }}">{{ walker.organization }}</a></h6>
+        {% endif %}
         <p class="power-walk-slogan">Empower The Village to improve community health and wellness now!</p>
         <div class="row">
             <div class="col s4 offset-s2">
                 <p>
                     <label>
-                    <input class="with-gap" name="amount" type="radio" />
+                    <input value="10" class="with-gap" name="amount" type="radio" />
                     <span>$10</span>
                     </label>
                 </p>
                 <p>
                     <label>
-                    <input class="with-gap" name="amount" type="radio" />
+                    <input value="25" class="with-gap" name="amount" type="radio" />
                     <span>$25</span>
                     </label>
                 </p>
                 <p>
                     <label>
-                    <input class="with-gap" name="amount" type="radio" />
+                    <input value="50" class="with-gap" name="amount" type="radio" />
                     <span>$50</span>
                     </label>
                 </p>
@@ -49,35 +80,42 @@
             <div class="col s6">
             <p>
                 <label>
-                  <input class="with-gap" name="amount" type="radio" />
+                  <input value="100" class="with-gap" name="amount" type="radio" />
                   <span>$100</span>
                 </label>
             </p>
             <p>
                 <label>
-                  <input class="with-gap" name="amount" type="radio" />
+                  <input value="250" class="with-gap" name="amount" type="radio" />
                   <span>$250</span>
                 </label>
             </p>
             <p>
                 <label>
-                  <input class="with-gap" name="amount" type="radio" />
+                  <input value="" class="with-gap" name="amount" type="radio"  id="other-amount"/>
                   <span>Custom Amount</span>
                 </label>
             </p>
+            <div class="other-input hidden text-field" id="other-input-wrapper">
+                <div class="valign-wrapper">$<input type="number" id="other-input" style="width: 50%; padding-left: 10px"></div>
+                <label>Enter a Custom Amount</label>
+              </div>
             </div>
         </div>
         <div class="center-align">
-            <div class="btn support-btn">Support Now!</div>
+            <a href="" class="btn support-btn disabled" id="support-btn">Support Now!</a>
         </div>
     </div>
-    {% if walker.donation_goal > 0 %}
     <div class="col s10 offset-s1">
+        <div class="divider"></div>
+    </div>
+    
+    <div class="col s10 offset-s1 m4 offset-m0 l3 offset-l1">
         <div class="card goal-card" style="width: 100%">
             <div class="card-body" style="padding: 2% 5%; height: 425px;">
                 <div class="row">
                     <div class="col-12 center-align">
-                        <h5 style="font-family: oskar; margin-bottom: 0; padding-bottom: 0; text-decoration: underline;">My Power Walk Goal</h5>
+                        <h5 style="font-family: oskar; margin-bottom: 0; padding-bottom: 0; text-decoration: underline;">{% if walker_type == 'individual' %}My Power Walk Goal{% elif walker_type == 'org' %}Our Power Walk Goal{% endif %}</h5>
                     </div>
                 </div>
                 
@@ -85,14 +123,14 @@
                     <div id="thermometer">
                         <div class="track">
                             <div class="valign-wrapper">
-                                <div class="amount" style="margin-left: -95px">$</div>
+                                <div class="amount" style="margin-left: -105px">$</div>
                                 <div class="goal">
                                     <div class="amount" id="goalAmount">{{ walker.goal_truncated }}</div>
                                 </div>
                             </div>
                             
                             <div class="progress">
-                                <div style="display: block;" class="amount" id="progessAmount">698</div>
+                                <div style="display: block;" class="amount" id="progessAmount">{{ walker.donation_total_truncated }}</div>
                             </div>
                             <div class="bulb">
                                 <div class="inner-bulb"></div>
@@ -104,9 +142,97 @@
             </div>
         </div>
     </div>
+    <div class="col s10 offset-s1 m7">
+        <div class="card" style="height: 425px;">
+            <div class="header" style="border-bottom: 1px solid rgb(233, 233, 233);background: url('https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/walkathon-collage.png');background-size:40%">
+                <div style="width: 100%; background: rgba(255, 255, 255, 0.884); padding: 1px 0px 8px 0px;">
+                    <h6 class="walker-name" style="color:rgb(187, 37, 27); margin-bottom: 0">Donations</h6>
+                </div>
+            </div>
+            <div class="card-body" style="overflow: scroll; height: 365px">
+            {% if donation_list|length > 0 %}
+                {% for donation in donation_list %}
+                <div class="donation">
+                    <div class="row">
+                        <div class="col s12">
+                            <div class="left">
+                                <h6><i class="bi bi-cash-coin" style="color:#44c444"></i> ${{ donation.amount }} from {{ donation.first_name }} {{ donation.last_name }}</h6>
+                            </div>
+                            <div class="right">
+                                <h6>{{ donation.created }}</h6>
+                            </div>
+                        </div>
+                        {% if donation.message != '' %}
+                        <div class="col s12">
+                            <h6 class="donation-message"><i class="bi bi-chat-heart" style="color:#bc1515"></i> {{ donation.message }}</h6>
+                        </div>
+                        {% endif %}
+                    </div>
+                </div>
+                {% endfor %}
+            {% else %}
+            <div style="display: flex; align-items: center; justify-content: center; height: 100%">
+                <h6 style="margin-top: -20px; text-align: center">Be the first to support {{ walker }}!</h6>
+            </div>
+            {% endif %}
+            </div>
+        </div>
+    </div>
+    
+    {% if walker_type == 'org' %}
+    <div class="col s10 offset-s1">
+        <div class="divider"></div>
+    </div>
+    <div class="col s12">
+        <div class="row center-align">
+            <h6 class="walker-name" style="color:rgb(9, 131, 9)">Our Walkers</h6>
+            <div class="div-mini-dotted" style="border-bottom: 3px dotted black; width: 5%; margin-left: 48%; margin-top:10px; margin-bottom: 20px"></div>
+            {% for x in walker_list %}
+            <div class="col s4 m3 l2">
+                <a href="{{ x.get_absolute_url }}">
+                    <div class="card">
+                        <div class="card-image">
+                            {% if x.image %}
+                            <img src="{{ x.image.url }}">
+                            {% else %}
+                            <img src="https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/power-walk-avatar.png">
+                            {% endif %}
+                        </div>
+                        <div class="card-body" style="height: 60px; display: flex; align-items: center; justify-content: center;">
+                            <h6 style="font-size: 16px; font-weight: 600">{{ x }}</h6>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
     {% endif %}
 </div>
 <style>
+    .back-link {
+        font-size: 12px;
+    }
+    .donation {
+        height: fit-content;
+        font-family: oskar;
+        padding: 5px 20px 0px 20px;
+        border-bottom: 1px solid rgb(235, 235, 235);
+        font-size: 22px;
+    }
+    .donation-message {
+        font-weight: 300;
+        font-size: 16px;
+        color:rgb(118, 118, 118);
+        font-style: italic;
+        padding-left: 30px;
+    }
+    .divider {
+        border-bottom: 1px rgb(199, 199, 199) solid;
+        width: 100%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
     .goal-card {
         background: url('https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/walkathon-collage.png');
         background-size: 100%
@@ -214,6 +340,12 @@
         font-size: 24px;
         text-align: center;
     }
+    .walker-name.mini {
+        font-size: 16px;
+        font-weight: 400;
+        font-style: italic;
+        color:rgb(89, 89, 89)
+    }
     .support-btn {
         background: black;
         color: white;
@@ -235,6 +367,9 @@
         .walker-name {
             font-size: 28px;
         }
+        .walker-name.mini {
+            font-size: 18px;
+        }
     }
     @media only screen and (min-width: 901px) {
         h1 {
@@ -242,6 +377,15 @@
         }
         .walker-name { 
             font-size: 36px;
+        }
+        .walker-name.mini {
+            font-size: 22px;
+        }
+        .donation h6{
+            font-size: 22px;
+        }
+        .donation-message {
+            font-size: 18px !important;
         }
     }
 </style>
@@ -278,7 +422,40 @@
     $(document).ready(function () {
 
         thermometer();
-    
+        $('[name="amount"]').on('change', function(){
+            $('#support-btn').removeClass('disabled')
+            if($('[name="amount"]:checked').attr('id')=='other-amount'){
+            $('#other-input-wrapper').removeClass('hidden')
+            }else{
+            $('#other-input-wrapper').addClass('hidden')
+            }
+        })
+        $('#other-input').on('keyup', function(){
+            $('#other-amount').val($('#other-input').val())
+        });
     });
+    $('#support-btn').on('click', function(event){
+        event.preventDefault()
+        var data = {
+            csrfmiddlewaretoken: '{{ csrf_token }}',
+            'walker-type': '{{ walker_type }}',
+            'walker-pk': '{{ walker.pk }}',
+            'support-amount': $('[name="amount"]:checked').val()
+        }
+        $.ajax({
+          data: data,
+          method: 'POST',
+          url: '/walkathon/support-a-walker/',
+          success: function(data){
+            window.location.replace('/walkathon/walker-donation/')
+            //$('#donate-window').removeClass('hidden');
+            //$('#donate-window').html(data.html);
+            //$('#walker-content').addClass('hidden')
+          },
+          error: function(){
+            
+          },
+        });
+    })
 </script>
 {% endblock %}

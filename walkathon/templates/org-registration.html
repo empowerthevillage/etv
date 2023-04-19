@@ -2,7 +2,7 @@
 {% block title %}
 Register | ETV 2023 Walkathon
 {% endblock %}
-{% block canonical %}https://www.empowerthevillage.org/walkathon/register/{% endblock %}
+{% block canonical %}https://www.empowerthevillage.org/power-walk-2023/register/{% endblock %}
 {% block seo_description %}Join ETV as we take steps to improve the mental and physical health of the Black community!{% endblock %}
 {% load static %}
 
@@ -81,7 +81,7 @@ Register | ETV 2023 Walkathon
                             </div>
                             <div class="input-field col s12 m6" style="margin-top: 0">
                               <input type="text" name="last_name" required id="last_name">
-                              <label for="id_last_name">Captian Last Name<b class="required">*</b></label>
+                              <label for="last_name">Captain Last Name<b class="required">*</b></label>
                             </div>
                             <div class="input-field col s12 m8" style="margin-top: 0">
                               <input type="text" name="email" required id="email">
@@ -92,7 +92,7 @@ Register | ETV 2023 Walkathon
                               <label for="phone">Phone (Optional)</label>
                             </div>
                             
-                            <div class="file-field input-field col s12 m6" style="margin-top: 0;">
+                            <div class="file-field input-field col s12" style="margin-top: 0;">
                               <div class="btn">
                                   <span class="material-icons" style="margin-top:8px">attach_file</span>
                                   <input type="file" name="image" accept="image/png, image/jpeg, image/heic">
@@ -101,10 +101,52 @@ Register | ETV 2023 Walkathon
                                 <input class="file-path validate" name="image" type="text" placeholder="Upload organization image">
                               </div>
                             </div>
-                            <div class="input-field col s12 m6" style="margin-top: 0;">
-                              <i class="material-icons prefix">attach_money</i>
-                              <input type="text" class="money" name="fundraising-goal" id="fundraising-goal">
-                              <label for="fundraising-goal">Set Your Fundraising Goal</label>
+                            <div class="col s12">
+                              <p style="font-weight: 600;">Select your pledge/fundraising goal ($250 minumum)<b class="required">*</b>:</p>
+                              <div class="col s12 m6">
+                                <p>
+                                  <label>
+                                    <input value="250" class="with-gap" name="fundraising-goal" type="radio" />
+                                    <span>$250</span>
+                                  </label>
+                                </p>
+                                <p>
+                                  <label>
+                                    <input value="500" class="with-gap" name="fundraising-goal" type="radio" />
+                                    <span>$500</span>
+                                  </label>
+                                </p>
+                                <p>
+                                  <label>
+                                    <input value="750" class="with-gap" name="fundraising-goal" type="radio" />
+                                    <span>$750</span>
+                                  </label>
+                                </p>
+                              </div>
+                              <div class="col s12 m6">
+                                <p>
+                                  <label>
+                                    <input value="1000" class="with-gap" name="fundraising-goal" type="radio" />
+                                    <span>$1000</span>
+                                  </label>
+                                </p>
+                                <p>
+                                  <label>
+                                    <input value="2000" class="with-gap" name="fundraising-goal" type="radio" />
+                                    <span>$2,000</span>
+                                  </label>
+                                </p>
+                                <p>
+                                  <label>
+                                    <input value="other" class="with-gap" name="fundraising-goal" type="radio" id="other-goal"/>
+                                    <span>Other</span>
+                                  </label>
+                                </p>
+                                <div class="other-input hidden text-field" id="other-input-wrapper">
+                                  <div class="valign-wrapper">$<input type="number" id="other-input" style="width: 50%; padding-left: 10px"></div>
+                                  <label>Enter a Custom Amount</label>
+                                </div>
+                              </div>
                             </div>
                         </div>
                         <div class="col s12 center-align">
@@ -168,7 +210,7 @@ Register | ETV 2023 Walkathon
       icon: 'success',
       text: "You've successfully registered your organization!",
     })
-  })
+  });
 </script>
 {% endif %}
 {% if already_registered_popup == True %}
@@ -576,16 +618,15 @@ Register | ETV 2023 Walkathon
 }
 </style>
 <script>
-  $('#shirt-boolean').on('change', function(){
-    $('#shirt-size-selector').toggleClass('hidden');
-    $('#shirt-price').toggleClass('hidden');
-    if($(this).is(':checked')){
-      $('#registration-total').text('30')
-      $('#registration-total').val('30')
+  $('[name="fundraising-goal"]').on('change', function(){
+    if($('[name="fundraising-goal"]:checked').attr('id')=='other-goal'){
+      $('#other-input-wrapper').removeClass('hidden')
     }else{
-      $('#registration-total').text('10')
-      $('#registration-total').val('10')
+      $('#other-input-wrapper').addClass('hidden')
     }
-  })
+  });
+  $('#other-input').on('keyup', function(){
+    $('#other-goal').val($('#other-input').val())
+  });
 </script>
 {% endblock %}
