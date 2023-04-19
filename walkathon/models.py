@@ -21,7 +21,7 @@ class Organization(models.Model):
         return str(self.title)
 
     def get_absolute_url(self):
-        return reverse("walkathon:walker-detail", kwargs={"walker": self.slug})
+        return reverse("power-walk:walker-detail", kwargs={"walker": self.slug})
 
     @property
     def goal_truncated(self):
@@ -89,9 +89,9 @@ class Walker(models.Model):
 
     def get_absolute_url(self):
         if self.organization is not None:
-            return reverse("walkathon:group-walker-detail", kwargs={"org": self.organization.slug, "walker": self.slug})
+            return reverse("power-walk:group-walker-detail", kwargs={"org": self.organization.slug, "walker": self.slug})
         else:
-            return reverse("walkathon:walker-detail", kwargs={"walker": self.slug})
+            return reverse("power-walk:walker-detail", kwargs={"walker": self.slug})
     
     @property
     def goal_truncated(self):

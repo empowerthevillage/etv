@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% block title %}
-Register | ETV 2023 Walkathon
+Register | ETV Power Walk 2023
 {% endblock %}
 {% block canonical %}https://www.empowerthevillage.org/power-walk-2023/register/{% endblock %}
 {% block seo_description %}Join ETV as we take steps to improve the mental and physical health of the Black community!{% endblock %}
@@ -14,11 +14,11 @@ Register | ETV 2023 Walkathon
     <div class="content-container row" style="margin-bottom: 0">
         <div class="col s12" style="padding-left: 2%; padding-right: 2%; padding-bottom: 3%">
           <div class="col s12" style="padding-bottom: 10px;">
-              <a href="/walkathon/"><i class="bi bi-arrow-left"></i> Back to Power Walk home page</a>
+              <a href="/power-walk-2023/"><i class="bi bi-arrow-left"></i> Back to Power Walk home page</a>
           </div>
           <h5 class="center-align donation-title">ETV 2023 Power Walk Organization Registration</h5>
           <div class="col-12 center-align">
-            <a href="/walkathon/register/">Click Here to Register an Individual Walker</a>
+            <a href="/power-walk-2023/register/">Click Here to Register an Individual Walker</a>
           </div>
           <div id="preloader" class="center-align" style="display:none; padding-top: 200px; height: 800px">
             <div class="preloader-wrapper big active" >
@@ -65,7 +65,7 @@ Register | ETV 2023 Walkathon
           </div>
           <div id="form-container">
               <div>
-                <form id="registration-form" enctype="multipart/form-data" method="POST" action="/walkathon/organization-registration/">
+                <form id="registration-form" enctype="multipart/form-data" method="POST" action="/power-walk-2023/organization-registration/">
                     {% csrf_token %}
                     <input type="hidden" value="" id="device-data-input">
                     <fieldset class="checkout-fieldset z-depth-1">

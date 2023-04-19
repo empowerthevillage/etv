@@ -34,7 +34,7 @@ fjs.parentNode.insertBefore(js, fjs);
 </div>
 <div class="row" style="padding: 1%" id="walker-content">
     <div class="col s12" style="padding-bottom: 20px;padding-top: 0px;">
-        <a href="/walkathon/" class="back-link"><i class="bi bi-arrow-left"></i> Back to Power Walk home page</a>
+        <a href="/power-walk-2023/" class="back-link"><i class="bi bi-arrow-left"></i> Back to Power Walk home page</a>
         <div class="right valign-wrapper" style="padding-right: 20px;">
             <div class="fb-share-button" data-href="{{ walker.get_absolute_url }}" data-layout="button" style="margin-right: 5px;"></div>
             <script type="IN/Share" data-url="{{ waler.get_absolute_url }}"></script>
@@ -144,7 +144,7 @@ fjs.parentNode.insertBefore(js, fjs);
     </div>
     <div class="col s10 offset-s1 m7">
         <div class="card" style="height: 425px;">
-            <div class="header" style="border-bottom: 1px solid rgb(233, 233, 233);background: url('https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/walkathon-collage.png');background-size:40%">
+            <div class="header" style="border-bottom: 1px solid rgb(233, 233, 233);background: url('https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/power-walk-2023-collage.png');background-size:40%">
                 <div style="width: 100%; background: rgba(255, 255, 255, 0.884); padding: 1px 0px 8px 0px;">
                     <h6 class="walker-name" style="color:rgb(187, 37, 27); margin-bottom: 0">Donations</h6>
                 </div>
@@ -234,7 +234,7 @@ fjs.parentNode.insertBefore(js, fjs);
         margin-bottom: 20px;
     }
     .goal-card {
-        background: url('https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/walkathon-collage.png');
+        background: url('https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/power-walk-2023-collage.png');
         background-size: 100%
     }
     .goal-card .card-body {
@@ -445,9 +445,9 @@ fjs.parentNode.insertBefore(js, fjs);
         $.ajax({
           data: data,
           method: 'POST',
-          url: '/walkathon/support-a-walker/',
+          url: '/power-walk-2023/support-a-walker/',
           success: function(data){
-            window.location.replace('/walkathon/walker-donation/')
+            window.location.replace('/power-walk-2023/walker-donation/')
             //$('#donate-window').removeClass('hidden');
             //$('#donate-window').html(data.html);
             //$('#walker-content').addClass('hidden')

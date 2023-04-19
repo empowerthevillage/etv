@@ -28,7 +28,7 @@ def walker_home(request):
     for x in orgs:
         dropdown_list.append(x)
     context = {
-        'title': 'ETV 2023 Walkathon',
+        'title': 'ETV 2023 Power Walk ',
         'photos': HomeGalleryImage.objects.all(),
         'dropdown_list': sorted(dropdown_list, key=lambda x: x.title)
     }
@@ -55,7 +55,7 @@ def walker_detail(request, walker):
         }
         return render(request, 'walker_detail.html', context)
     #except:
-    #   return redirect('/walkathon/')
+    #   return redirect('/power-walk-2023/')
 
 def org_walker_detail(request, org, walker):
     walker_obj = Walker.objects.get(slug=walker)
