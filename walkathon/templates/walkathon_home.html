@@ -26,7 +26,7 @@
       </div>
       <div class="carousel-item">
         <div>
-            <p>Youth attempted suicide rates in New Jersey rose to 5.9%<br>as of 2019,and is highest among Black youth at 11.3%</p>
+            <p>Youth attempted suicide rates in New Jersey rose to 5.9%<br>as of 2019, and is highest among Black youth at 11.3%</p>
         </div>
       </div>
       <div class="carousel-item">
@@ -267,6 +267,9 @@
         fullWidth: true,
         indicators: true,
     });
+    var intervalId = window.setInterval(function(){
+    $('.carousel.carousel-slider').carousel('next');
+    }, 4000);
     $("#gallery").justifiedGallery({
         rowHeight: 200,
         maxRowHeight: null,

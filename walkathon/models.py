@@ -220,3 +220,14 @@ class ShirtOrder(models.Model):
     
     def __str__(self):
         return 'Size %s for %s' %(self.shirt_size.upper(), self.walker)
+
+class WalkerPledgePayment(models.Model):
+    braintree_id            = models.CharField(max_length=200, blank=True)
+    complete                = models.BooleanField(default=False)
+    amount                  = models.DecimalField(max_digits=20, decimal_places=2)
+    walker                  = models.ForeignKey(Walker, on_delete=models.SET_NULL, null=True)
+    created                 = models.DateTimeField(auto_now_add=True)
+    updated                 = models.DateTimeField(auto_now=True)
+    
+    def __str__(self):
+        return '%s - $%s' %(self.walker, self.amount)
