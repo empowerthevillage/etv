@@ -103,8 +103,8 @@ def walker_registration(request):
                 'New Power Walk Registration!',
                 str('A new $%s power walk registration has been processed for %s %s through www.empowerthevillage.org!' %(total, first_name, last_name)),
                 'etvnotifications@gmail.com',
-                #['admin@empowerthevillage.org', 'chandler@eliftcreations.com', 'ayo@empowerthevillage.org'],
-                ['chandler@eliftcreations.com'],
+                ['admin@empowerthevillage.org', 'chandler@eliftcreations.com', 'ayo@empowerthevillage.org'],
+                #['chandler@eliftcreations.com'],
                 fail_silently=True
             )
             try:
