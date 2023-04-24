@@ -17,9 +17,7 @@ Register | ETV 2023 Power Walk
               <a href="/power-walk-2023/"><i class="bi bi-arrow-left"></i> Back to Power Walk home page</a>
           </div>
           <h5 class="center-align donation-title">ETV 2023 Power Walk Registration</h5>
-          <div class="col-12 center-align">
-            <a href="/power-walk-2023/organization-registration/">Click Here to Register an Organization</a>
-          </div>
+          
           <div id="preloader" class="center-align" style="display:none; padding-top: 200px; height: 800px">
             <div class="preloader-wrapper big active" >
               <div class="spinner-layer spinner-blue">
@@ -72,6 +70,28 @@ Register | ETV 2023 Power Walk
                     <input type="hidden" name="nonce" id="nonce">
                     <input type="hidden" value="10.00" name="order-total" id="order-total">
                     <fieldset class="checkout-fieldset z-depth-1">
+                      <div class="input-field col s12" style="margin-bottom: 0">
+                        <p style="font-weight: 600;" id="org-question">Walking with an team/organization? Select a registered group here!</p>
+                        <div style="padding: 0px 10px;">
+                        <select name="organization" id="organization">
+                          {% if new_org_popup %}
+                          <option value="{{ org_created }}" selected>{{ org_created }}</option>
+                          {% else %}
+                          <option value="" disabled selected>Select A Registered Group (optional)</option>
+                          {% endif %}
+                          {% for org in orgs %}
+                            {% if org.image.url is not None %}
+                                <option value="{{ org }}" data-icon="{{ org.image.url }}" class="left">{{ org }}</option>
+                            {% else %}
+                                <option value="{{ org }}">{{ org }}</option>
+                            {% endif %}
+                          {% endfor %}
+                        </select>
+                        </div>
+                        <div style="margin-bottom: 15px;">
+                          <a href="/power-walk-2023/organization-registration/" style="font-size: 12px; font-style: italic;">Don't see your organization? Click here to register your group with ETV!</a>
+                        </div>
+                      </div>
                         <h5 class="fieldset-title" style="padding-bottom: 10px;">Walker Details</h5>
                         <div class="row" style="margin-bottom: 0;">
                             <div class="input-field col s12 m6" style="margin-top: 0">
@@ -113,22 +133,8 @@ Register | ETV 2023 Power Walk
                                 </p>
                               </div>
                             </div>
-                            <div class="input-field col s12" style="margin-bottom: 0">
-                              <p style="font-weight: 600;">Walking with an organization? Select your affiliation here!</p>
-                              <select name="organization" id="organization">
-                                <option value="" disabled selected>Select A Registered Organization (optional)</option>
-                                {% for org in orgs %}
-                                  {% if org.image.url is not None %}
-                                      <option value="{{ org }}" data-icon="{{ org.image.url }}" class="left">{{ org }}</option>
-                                  {% else %}
-                                      <option value="{{ org }}">{{ org }}</option>
-                                  {% endif %}
-                                {% endfor %}
-                              </select>
-                            </div>
-                            <div style="margin-bottom: 15px;">
-                              <a href="/power-walk-2023/organization-registration/" style="font-size: 12px; font-style: italic;">Don't see your organization? Click here to register your group with ETV!</a>
-                            </div>
+                            
+                            
                             <div class="input-field col s12" style="margin-top: 0">
                               {{ mailing_form.address_line_1 }}
                               <label for="id_address_line_1">Mailing Address</label>
@@ -160,49 +166,66 @@ Register | ETV 2023 Power Walk
                               </div>
                             </div>
                             <div class="col s12">
-                              <p style="font-weight: 600;">Select your pledge/fundraising goal ($100 minumum)<b class="required">*</b>:</p>
-                              <div class="col s12 m6">
+                              <p style="font-weight: 600;">I would like to<b class="required">*</b>:</p>
+                              <div class="col s12">
                                 <p>
                                   <label>
-                                    <input value="100" class="with-gap" name="fundraising-goal" type="radio" />
-                                    <span>$100</span>
+                                    <input value="true" class="with-gap" name="pledge" type="radio"/>
+                                    <span>Select a pledge amount and pay now ($100 minimum)</span>
                                   </label>
                                 </p>
                                 <p>
                                   <label>
-                                    <input value="250" class="with-gap" name="fundraising-goal" type="radio" />
-                                    <span>$250</span>
-                                  </label>
-                                </p>
-                                <p>
-                                  <label>
-                                    <input value="500" class="with-gap" name="fundraising-goal" type="radio" />
-                                    <span>$500</span>
+                                    <input value="false" class="with-gap" name="pledge" type="radio" />
+                                    <span>Select a fundraising amount ($100 minimum)</span>
                                   </label>
                                 </p>
                               </div>
-                              <div class="col s12 m6">
-                                <p>
-                                  <label>
-                                    <input value="750" class="with-gap" name="fundraising-goal" type="radio" />
-                                    <span>$750</span>
-                                  </label>
-                                </p>
-                                <p>
-                                  <label>
-                                    <input value="1000" class="with-gap" name="fundraising-goal" type="radio" />
-                                    <span>$1,000</span>
-                                  </label>
-                                </p>
-                                <p>
-                                  <label>
-                                    <input value="other" class="with-gap" name="fundraising-goal" type="radio" id="other-goal"/>
-                                    <span>Other</span>
-                                  </label>
-                                </p>
-                                <div class="other-input hidden text-field" id="other-input-wrapper">
-                                  <div class="valign-wrapper">$<input type="number" id="other-input" style="width: 50%; padding-left: 10px"></div>
-                                  <label>Enter a Custom Amount</label>
+                              <div class="hidden" id="fundraising-options">
+                              <p style="font-weight: 600;">Select Amount<b class="required">*</b>:</p>
+                                <div class="col s12 m6">
+                                  <p>
+                                    <label>
+                                      <input value="100" class="with-gap" name="fundraising-goal" type="radio" />
+                                      <span>$100</span>
+                                    </label>
+                                  </p>
+                                  <p>
+                                    <label>
+                                      <input value="250" class="with-gap" name="fundraising-goal" type="radio" />
+                                      <span>$250</span>
+                                    </label>
+                                  </p>
+                                  <p>
+                                    <label>
+                                      <input value="500" class="with-gap" name="fundraising-goal" type="radio" />
+                                      <span>$500</span>
+                                    </label>
+                                  </p>
+                                </div>
+                                <div class="col s12 m6">
+                                  <p>
+                                    <label>
+                                      <input value="750" class="with-gap" name="fundraising-goal" type="radio" />
+                                      <span>$750</span>
+                                    </label>
+                                  </p>
+                                  <p>
+                                    <label>
+                                      <input value="1000" class="with-gap" name="fundraising-goal" type="radio" />
+                                      <span>$1,000</span>
+                                    </label>
+                                  </p>
+                                  <p>
+                                    <label>
+                                      <input value="other" class="with-gap" name="fundraising-goal" type="radio" id="other-goal"/>
+                                      <span>Other</span>
+                                    </label>
+                                  </p>
+                                  <div class="other-input hidden text-field" id="other-input-wrapper">
+                                    <div class="valign-wrapper">$<input type="number" id="other-input" style="width: 50%; padding-left: 10px"></div>
+                                    <label>Enter a Custom Amount</label>
+                                  </div>
                                 </div>
                               </div>
                             </div>
@@ -262,6 +285,10 @@ Register | ETV 2023 Power Walk
                     <div class="row">
                       <div class="col s12 center-align" style="margin-top: 0;">
                         <h6><b>Registration Fee:</b> $<b style="font-weight: 400;" id="registration-total">10</b></h6>
+                        <div class="hidden" id="pledge-fees">
+                          <h6><b>Pledge:</b> $<b style="font-weight: 400;" id="pledge-total"></b></h6>
+                          <h6><b>Total:</b> $<b style="font-weight: 400;" id="registration-pledge-total"></b></h6>
+                        </div>
                       </div>
                       <div class="col s12">
                         <label for="card-name">Cardholder Name</label>
@@ -300,7 +327,19 @@ Register | ETV 2023 Power Walk
         </div>
     </div> 
 </div>
-
+{% if new_org_popup == True %}
+<script>
+  $(document).ready(function(){
+    $('')
+    $('select').formSelect();
+    Swal.fire({
+      title: "Success!",
+      icon: 'success',
+      text: "{{ org_created }} has been been registered! Continue to walker details",
+    })
+  });
+</script>
+{% endif %}
 <script src="https://js.braintreegateway.com/web/3.82.0/js/client.min.js"></script>
 <script src="https://js.braintreegateway.com/web/3.82.0/js/venmo.min.js"></script>
 <script src="https://js.braintreegateway.com/web/3.82.0/js/data-collector.min.js"></script>
@@ -476,6 +515,14 @@ braintree.client.create({
     }else{
       $('#other-input-wrapper').addClass('hidden')
     }
+    if($('[name="pledge"]:checked').val()=='true'){
+      $('#pledge-fees').removeClass('hidden')
+      $('#pledge-total').text($(this).val())
+      UpdateTotal()
+    }
+  });
+  $('[name="pledge"]').on('change', function(){
+    $('#fundraising-options').removeClass('hidden')
   })
   $('#phone').on('keyup', function(){
     if($(this).val() !== ''){
@@ -485,8 +532,33 @@ braintree.client.create({
     }
   });
   $('#other-input').on('keyup', function(){
-    $('#other-goal').val($('#other-input').val())
+    $('#other-goal').val($('#other-input').val());
+    $('#pledge-total').text($(this).val())
+    UpdateTotal()
   });
+  $('#shirt-boolean').on('change', function(){
+    $('#shirt-size-selector').toggleClass('hidden');
+    $('#shirt-price').toggleClass('hidden');
+    UpdateTotal()
+  });
+  function UpdateTotal(){
+    var registrationFee = 10
+    if($('#shirt-boolean').is(':checked')){
+      var registrationFee = 25
+      $('#registration-total').text('25')
+    }else{
+      var registrationFee = 10
+      $('#registration-total').text('10')
+    }
+    if($('[name="pledge"]:checked').val()=='true'){
+      var pledge = parseInt($('[name="fundraising-goal"]:checked').val())
+    }else{
+      var pledge = 0
+    }
+    var total = registrationFee + pledge
+    $('#order-total').val(total)
+    $('#registration-pledge-total').text(total)
+  }
  $('#donor-detail-section input').on('change', function(){
       var donor_first = $('#id_first_name').val()
       var donor_last = $('#last_name').val()
@@ -518,7 +590,9 @@ braintree.client.create({
   
 </script>
 <style>
-
+  #org-question {
+    padding-bottom: 10px;
+  }
   .submit-btn {
     background: green;
     color: white;
@@ -676,6 +750,7 @@ braintree.client.create({
       }
     }
     @media only screen and (min-width:601px){
+      
       .content-container {
         padding: 3% 5%
       }
@@ -705,6 +780,10 @@ braintree.client.create({
         }
     }
     @media only screen and (min-width:993px){
+      #org-question {
+        padding-bottom: 0px;
+        margin-bottom: 0px !important;
+      }
       .submit-btn {
         font-size: 26px;
       }
@@ -916,17 +995,4 @@ braintree.client.create({
   color: rgb(186, 186, 186) !important
 }
 </style>
-<script>
-  $('#shirt-boolean').on('change', function(){
-    $('#shirt-size-selector').toggleClass('hidden');
-    $('#shirt-price').toggleClass('hidden');
-    if($(this).is(':checked')){
-      $('#registration-total').text('25')
-      $('#order-total').val('25.00')
-    }else{
-      $('#registration-total').text('10')
-      $('#order-total').val('10.00')
-    }
-  })
-</script>
 {% endblock %}

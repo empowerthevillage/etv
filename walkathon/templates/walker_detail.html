@@ -52,7 +52,7 @@ fjs.parentNode.insertBefore(js, fjs);
     <div class="col s12 m6">
         <h6 class="walker-name" style="color:rgb(9, 131, 9)">{% if walker_type == 'individual' %}Power Walker{% elif walker_type == 'org' %}Power Walk Group{% endif %}</h6>
         <h6 class="walker-name">{{ walker }}</h6>
-        {% if org_walker %}
+        {% if walker.organization %}
         <h6 class="walker-name mini">I'm walking with <a href="{{ walker.organization.get_absolute_url }}">{{ walker.organization }}</a></h6>
         {% endif %}
         <p class="power-walk-slogan">Empower The Village to improve community health and wellness now!</p>

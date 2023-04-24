@@ -15,6 +15,9 @@
         {% if shirt_ordered %}
         <p><b>Shirt Size:</b> <b style="font-weight: normal; text-transform: uppercase;">{{ shirt.shirt_size }}</b></p>
         {% endif %}
+        {% if pledge_paid %}
+        <p><b>Pledge Paid:</b> <b style="font-weight: normal;">${{ pledge.amount }}</b></p>
+        {% endif %}
         <p><b>Total Paid:</b> ${{ total }}</p>
         <p><b>Payment Method:</b> {{ payment_method.card_type }} ending in {{ payment_method.last_4 }}</p>
     </div>

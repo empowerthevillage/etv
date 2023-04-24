@@ -16,7 +16,7 @@ Register | ETV Power Walk 2023
           <div class="col s12" style="padding-bottom: 10px;">
               <a href="/power-walk-2023/"><i class="bi bi-arrow-left"></i> Back to Power Walk home page</a>
           </div>
-          <h5 class="center-align donation-title">ETV 2023 Power Walk Organization Registration</h5>
+          <h5 class="center-align donation-title">ETV 2023 Power Walk Team Registration</h5>
           <div class="col-12 center-align">
             <a href="/power-walk-2023/register/">Click Here to Register an Individual Walker</a>
           </div>
@@ -69,84 +69,37 @@ Register | ETV Power Walk 2023
                     {% csrf_token %}
                     <input type="hidden" value="" id="device-data-input">
                     <fieldset class="checkout-fieldset z-depth-1">
-                        <h5 class="fieldset-title" style="padding-bottom: 10px;">Organization Details</h5>
+                        <h5 class="fieldset-title" style="padding-bottom: 10px;">Team Details</h5>
                         <div class="row" style="margin-bottom: 0;">
                             <div class="input-field col s12" style="margin-top: 0">
                                 <input type="text" name="organization" class="textfield" required id="organization">
-                                  <label for="organization">Organization Name<b class="required">*</b></label>
+                                  <label for="organization">Team Name<b class="required">*</b></label>
                             </div>
-                            <div class="input-field col s12 m6" style="margin-top: 0">
-                              <input type="text" name="first_name" class="textfield" required id="id_first_name">
-                                <label for="id_first_name">Captain First Name<b class="required">*</b></label>
-                            </div>
-                            <div class="input-field col s12 m6" style="margin-top: 0">
-                              <input type="text" name="last_name" required id="last_name">
-                              <label for="last_name">Captain Last Name<b class="required">*</b></label>
-                            </div>
-                            <div class="input-field col s12 m8" style="margin-top: 0">
-                              <input type="text" name="email" required id="email">
-                              <label for="id_email">Email<b class="required">*</b></label>
-                            </div>
-                            <div class="input-field col s12 m4" style="margin-top: 0">
-                              <input type="text" name="phone" class="phone_us" id="phone">
-                              <label for="phone">Phone (Optional)</label>
-                            </div>
-                            
                             <div class="file-field input-field col s12" style="margin-top: 0;">
                               <div class="btn">
                                   <span class="material-icons" style="margin-top:8px">attach_file</span>
                                   <input type="file" name="image" accept="image/png, image/jpeg, image/heic">
                               </div>
                               <div class="file-path-wrapper">
-                                <input class="file-path validate" name="image" type="text" placeholder="Upload organization image">
+                                <input class="file-path validate" name="image" type="text" placeholder="Upload team image">
                               </div>
                             </div>
-                            <div class="col s12">
-                              <p style="font-weight: 600;">Select your pledge/fundraising goal ($250 minumum)<b class="required">*</b>:</p>
-                              <div class="col s12 m6">
-                                <p>
-                                  <label>
-                                    <input value="250" class="with-gap" name="fundraising-goal" type="radio" />
-                                    <span>$250</span>
-                                  </label>
-                                </p>
-                                <p>
-                                  <label>
-                                    <input value="500" class="with-gap" name="fundraising-goal" type="radio" />
-                                    <span>$500</span>
-                                  </label>
-                                </p>
-                                <p>
-                                  <label>
-                                    <input value="750" class="with-gap" name="fundraising-goal" type="radio" />
-                                    <span>$750</span>
-                                  </label>
-                                </p>
-                              </div>
-                              <div class="col s12 m6">
-                                <p>
-                                  <label>
-                                    <input value="1000" class="with-gap" name="fundraising-goal" type="radio" />
-                                    <span>$1000</span>
-                                  </label>
-                                </p>
-                                <p>
-                                  <label>
-                                    <input value="2000" class="with-gap" name="fundraising-goal" type="radio" />
-                                    <span>$2,000</span>
-                                  </label>
-                                </p>
-                                <p>
-                                  <label>
-                                    <input value="other" class="with-gap" name="fundraising-goal" type="radio" id="other-goal"/>
-                                    <span>Other</span>
-                                  </label>
-                                </p>
-                                <div class="other-input hidden text-field" id="other-input-wrapper">
-                                  <div class="valign-wrapper">$<input type="number" id="other-input" style="width: 50%; padding-left: 10px"></div>
-                                  <label>Enter a Custom Amount</label>
-                                </div>
-                              </div>
+                            <p><b>Team Captain Details (optional)</b></p>
+                            <div class="input-field col s12 m6" style="margin-top: 0">
+                              <input type="text" name="first_name" class="textfield" id="id_first_name">
+                                <label for="id_first_name">Captain First Name</label>
+                            </div>
+                            <div class="input-field col s12 m6" style="margin-top: 0">
+                              <input type="text" name="last_name" id="last_name">
+                              <label for="last_name">Captain Last Name</label>
+                            </div>
+                            <div class="input-field col s12 m8" style="margin-top: 0">
+                              <input type="text" name="email" id="email">
+                              <label for="id_email">Email</label>
+                            </div>
+                            <div class="input-field col s12 m4" style="margin-top: 0">
+                              <input type="text" name="phone" class="phone_us" id="phone">
+                              <label for="phone">Phone (Optional)</label>
                             </div>
                         </div>
                         <div class="col s12 center-align">

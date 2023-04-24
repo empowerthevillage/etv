@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .models import Walker, HomeGalleryImage, Organization, ShirtOrder, WalkerRegistrationPayment, Sponsorship, WalkerDonation, OrgDonation
+from .models import Walker, HomeGalleryImage, Organization, ShirtOrder, WalkerRegistrationPayment, Sponsorship, WalkerDonation, OrgDonation, WalkerPledgePayment
 from addresses.forms import BillingAddressForm
 from django.conf import settings
 from django.http import JsonResponse
@@ -20,22 +20,24 @@ mailchimp.set_config({
 gateway = settings.GATEWAY
 
 def walker_home(request):
-    individuals = Walker.objects.filter(organization=None)
+    individuals = Walker.objects.all()
     orgs = Organization.objects.all()
     dropdown_list = []
     for x in individuals:
         dropdown_list.append(x)
     for x in orgs:
-        dropdown_list.append(x)
+        paid_count = Walker.objects.filter(organization=x)
+        if len(paid_count) > 0:
+            dropdown_list.append(x)
     context = {
-        'title': 'ETV 2023 Power Walk ',
+        'title': 'ETV 2023 Power Walk',
         'photos': HomeGalleryImage.objects.all(),
         'dropdown_list': sorted(dropdown_list, key=lambda x: x.title)
     }
     return render(request, 'walkathon_home.html', context)
 
 def walker_detail(request, walker):
-    #try:
+    try:
         try:
             walker_obj = Walker.objects.get(slug=walker)
             walker_type = 'individual'
@@ -54,8 +56,8 @@ def walker_detail(request, walker):
             'donation_list': donation_list,
         }
         return render(request, 'walker_detail.html', context)
-    #except:
-    #   return redirect('/power-walk-2023/')
+    except:
+       return redirect('/power-walk-2023/')
 
 def org_walker_detail(request, org, walker):
     walker_obj = Walker.objects.get(slug=walker)
@@ -147,6 +149,21 @@ def walker_registration(request):
             payment.walker = walker_obj
             payment.save()
             try:
+                if data['pledge'] == 'true':
+                    pledge_obj = WalkerPledgePayment()
+                    pledge_obj.braintree_id = result.transaction.id
+                    pledge_obj.complete = True
+                    pledge_obj.amount = request.POST['fundraising-goal']
+                    pledge_obj.walker = walker_obj
+                    pledge_obj.save()
+                    pledge_paid = True
+                else:
+                    pledge_paid = False
+                    pledge_obj = None
+            except:
+                pledge_paid = False
+                pledge_obj = None
+            try:
                 if data['shirt-boolean'] == 'on':
                     shirt_obj = ShirtOrder()
                     shirt_obj.braintree_id = result.transaction.id
@@ -166,7 +183,9 @@ def walker_registration(request):
                 'status': 'success',
                 'html': render_to_string('registration-details.html', context={'walker': walker_obj,
                     'shirt_ordered': shirt_ordered,
+                    'pledge_paid': pledge_paid,
                     'shirt': shirt_obj,
+                    'pledge': pledge_obj,
                     'payment_method': result.transaction.credit_card_details,
                     'total': total,
                 })
@@ -202,16 +221,23 @@ def org_registration(request):
             if request.POST['image'] != '':
                 org.image = request.FILES['image']
             org.save()
+            orgs = Organization.objects.exclude(pk=org.pk)
+            tokenization_key = settings.BRAINTREE_TOKENIZATION_KEY
             context = {
                 'new_org_popup': True,
+                'org_created': org,
+                'orgs': orgs,
+                'tokenization_key': tokenization_key,
+                'mailing_form': BillingAddressForm(),
             }
-            return render(request, 'org-registration.html', context)
+            return render(request, 'registration_form.html', context)
         else:
             context = {
                 'already_registered_popup': True
             }
             return render(request, 'org-registration.html', context)
     else:
+        
         return render(request, 'org-registration.html')
     
 def sponsor(request):

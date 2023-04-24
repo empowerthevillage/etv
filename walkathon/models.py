@@ -88,10 +88,7 @@ class Walker(models.Model):
         return '%s %s' %(self.first_name, self.last_name)
 
     def get_absolute_url(self):
-        if self.organization is not None:
-            return reverse("power-walk:group-walker-detail", kwargs={"org": self.organization.slug, "walker": self.slug})
-        else:
-            return reverse("power-walk:walker-detail", kwargs={"walker": self.slug})
+        return reverse("power-walk:walker-detail", kwargs={"walker": self.slug})
     
     @property
     def goal_truncated(self):
@@ -100,15 +97,21 @@ class Walker(models.Model):
     @property
     def donation_total(self):
         donations = WalkerDonation.objects.filter(walker=self)
+        pledges = WalkerPledgePayment.objects.filter(walker=self)
         total = 0
         for x in donations:
+            total += x.amount
+        for x in pledges:
             total += x.amount
         return total
     
     @property
     def donation_total_truncated(self):
         donations = WalkerDonation.objects.filter(walker=self)
+        pledges = WalkerPledgePayment.objects.filter(walker=self)
         total = 0
+        for x in pledges:
+            total += x.amount
         for x in donations:
             total += x.amount
         return math.trunc(total)
