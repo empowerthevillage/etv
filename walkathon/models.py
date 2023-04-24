@@ -34,7 +34,10 @@ class Organization(models.Model):
         individuals = Walker.objects.filter(organization=self)
         for x in individuals:
             donos = WalkerDonation.objects.filter(walker=x)
+            pledges = WalkerPledgePayment.objects.filter(walker=x)
             for x in donos:
+                total += x.amount
+            for x in pledges:
                 total += x.amount
         for x in org_donations:
             total += x.amount
@@ -47,8 +50,11 @@ class Organization(models.Model):
         individuals = Walker.objects.filter(organization=self)
         for x in individuals:
             donos = WalkerDonation.objects.filter(walker=x)
+            pledges = WalkerPledgePayment.objects.filter(walker=x)
             for x in donos:
                 dono_total += x.amount
+            for x in pledges:
+                total += x.amount
         for x in org_donations:
             dono_total += x.amount
         return math.trunc(dono_total)
