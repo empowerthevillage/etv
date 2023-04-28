@@ -8,8 +8,8 @@ import math
 from etv.utils import unique_slug_generator
 
 class Organization(models.Model):
-    title                   = models.CharField(max_length=270)
-    slug                    = models.SlugField(blank=True, unique=True)
+    title                   = models.CharField(max_length=500)
+    slug                    = models.SlugField(blank=True, unique=True, max_length=500)
     email                   = models.EmailField(blank=True, null=True)
     bio                     = models.TextField(blank=True)
     image                   = models.ImageField(blank=True, null=True)
