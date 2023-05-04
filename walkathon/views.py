@@ -5,6 +5,8 @@ from django.conf import settings
 from django.http import JsonResponse
 from django.template.loader import render_to_string
 
+from datetime import datetime
+
 import time
 import sweetify
 from django.core.mail import send_mail
@@ -83,6 +85,8 @@ def walker_registration(request):
         last_name = data['walker_last_name']
         email = data['email']
         total = data['order-total']
+        waiver_agreed = data['waiver']
+        print(waiver_agreed)
         result = gateway.transaction.sale({
             "amount": total,
             "payment_method_nonce": nonce_id,
@@ -129,6 +133,10 @@ def walker_registration(request):
             walker_obj.city = data['city']
             walker_obj.state = data['state']
             walker_obj.zip = data['zip']
+            if waiver_agreed == 'True':
+                walker_obj.waiver_timestamp = datetime.now()
+            else:
+                pass
             if data['virtual-selection'] == 'virtually':
                 walker_obj.virtual = True
             elif data['virtual-selection'] == 'in-person':

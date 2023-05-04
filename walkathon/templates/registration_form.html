@@ -170,11 +170,11 @@ Register | ETV 2023 Power Walk
                               <div class="col s12">
                                 <p>
                                   <label>
-                                    <input value="false" class="with-gap" name="pledge" type="radio" />
+                                    <input value="false" class="with-gap" name="pledge" type="radio" id="fundraising-amount"/>
                                     <span>Select a fundraising amount ($100 recommended minimum)</span>
                                   </label>
                                 </p>
-                                <p>
+                                <p id="pledge-p">
                                   <label>
                                     <input value="true" class="with-gap" name="pledge" type="radio"/>
                                     <span>Select a pledge amount and pay now</span>
@@ -228,6 +228,15 @@ Register | ETV 2023 Power Walk
                                   </div>
                                 </div>
                               </div>
+                            </div>
+                            <div class="col s12" id="waiver-col">
+                              <p style="font-weight: 600;">Waiver:<b class="required">*</b>:</p>
+                              <p style="margin-bottom: 20px;">
+                                <label>
+                                  <input type="checkbox" name="waiver" id="waiver-boolean" value="True" required/>
+                                  <span>I accept the 2023 ETV Power Walk for Mental Health <a href="#waiver-modal" class="waves-effect waves-light modal-trigger" href="#waiver-modal">Waiver</a></span>
+                                </label>
+                              </p>
                             </div>
                         </div>
                     </fieldset>
@@ -327,6 +336,16 @@ Register | ETV 2023 Power Walk
         </div>
     </div> 
 </div>
+<div id="waiver-modal" class="modal">
+  <div class="modal-content">
+    <h4>ETV 2023 Power Walk Waiver</h4>
+    <p>I acknowledge that my participation in the Power Walk may involve a risk of injury, including bodily injury, and assume the risk for same. On my own behalf and on behalf of my heirs and legal representatives and to the fullest extent permitted by law, I hereby release and discharge Empower The Village and their respective directors, officers, board of trustees, members, agent and representatives, of and from any and all liability for injury, death, or damages and/or any other claims, demands, losses or damages, incurred by me in connection with any aspect of the walk.</p>
+    <p>I also agree to the use of any photo, film, video of the event, in which I may be included, for any legitimate purpose, including advertisting and promotion.</p>
+  </div>
+  <div class="modal-footer">
+    <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+  </div>
+</div>
 {% if new_org_popup == True %}
 <script>
   $(document).ready(function(){
@@ -396,6 +415,7 @@ braintree.client.create({
     }
     $('#registration-submit').on('click', function(event){
       event.preventDefault();
+      console.log($('[name="waiver"]:checked').val())
       if($('#id_first_name').val()==''){
         Swal.fire({
           'title': 'Required field missing',
@@ -436,6 +456,13 @@ braintree.client.create({
           'title': 'Required field missing',
           'icon': 'error',
           'text': 'Emergency contact phone number is required'
+        });
+        return;
+      }else if($('[name="waiver"]:checked').val()!='True'){
+        Swal.fire({
+          'title': 'Required field missing',
+          'icon': 'error',
+          'text': 'Please review and accept the 2023 Power Walk Waiver'
         });
         return;
       }
@@ -590,6 +617,15 @@ braintree.client.create({
   
 </script>
 <style>
+  #pledge-p {
+    margin-top: 50px
+  }
+  #fundraising-amount {
+    margin-bottom: 40px;
+  }
+  #waiver-col {
+    margin-top: 50px;
+  }
   #org-question {
     padding-bottom: 10px;
   }
@@ -748,9 +784,17 @@ braintree.client.create({
       #opt-in {
         padding-bottom: 70px;
       }
+      #pledge-p {
+        margin-top: 30px
+      }
+      #waiver-col {
+        margin-top: 20px;
+      }
     }
     @media only screen and (min-width:601px){
-      
+      #pledge-p {
+        margin-top: 20px
+      }
       .content-container {
         padding: 3% 5%
       }
@@ -759,27 +803,30 @@ braintree.client.create({
           font-family: oskar;
           font-size: 20px;
         }
-        .donation-review-item {
-    font-size: 20px;
-    font-family: oskar;
-  }
+      .donation-review-item {
+        font-size: 20px;
+        font-family: oskar;
+      }
       .donate-text-small {
-          display: none;
-        }
-        .donate-text-large {
-          display: block;
-          letter-spacing: 2px;
-        }
-        .donation-title {
-            font-family: oskar-inline;
-            font-size: 42px;
-        }
-        .fieldset-title {
-          font-family: oskar;
-          font-size: 24px
-        }
+        display: none;
+      }
+      .donate-text-large {
+        display: block;
+        letter-spacing: 2px;
+      }
+      .donation-title {
+          font-family: oskar-inline;
+          font-size: 42px;
+      }
+      .fieldset-title {
+        font-family: oskar;
+        font-size: 24px
+      }
     }
     @media only screen and (min-width:993px){
+      #pledge-p {
+        margin-top: 0px;
+      }
       #org-question {
         padding-bottom: 0px;
         margin-bottom: 0px !important;
