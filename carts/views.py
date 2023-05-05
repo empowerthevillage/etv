@@ -372,9 +372,14 @@ def checkout_done(request):
 def ticket_nb(request):
     billing_profile, billing_profile_created = BillingProfile.objects.new_or_get(request)
     if billing_profile is None:
-        email = request.POST.get('guestList[email]')
-        request.session['guest_email'] = email
-        billing_profile, billing_profile_created = BillingProfile.objects.new_or_get(request)
+        try:
+            email = request.POST.get('guestList[email]')
+            request.session['guest_email'] = email
+            billing_profile, billing_profile_created = BillingProfile.objects.new_or_get(request)
+        except:
+            email = request.POST.get('email')
+            request.session['guest_email'] = email
+            billing_profile, billing_profile_created = BillingProfile.objects.new_or_get(request)
     else:
         email = billing_profile.email
     email = request.POST.get('email')
@@ -399,6 +404,7 @@ def ticket_nb(request):
             "submit_for_settlement": True
         }
     })
+    print(result)
     if result.is_success:
         tickets = ticketItem.objects.filter(cart=cart_obj)
         ticket_list = []
@@ -483,9 +489,11 @@ def ticket_nb(request):
             'event': event
         })
         if event.title == 'Power Swing Classic Fundraiser':
-            recipients = ['chandler@eliftcreations.com', 'admin@empowerthevillage.org', 'ayo@empowerthevillage.org', 'powerswing@empowerthevillage.org']
+            #recipients = ['chandler@eliftcreations.com', 'admin@empowerthevillage.org', 'ayo@empowerthevillage.org', 'powerswing@empowerthevillage.org']
+            recipients = ['chandler@eliftcreations.com']
         else:
-            recipients = ['chandler@eliftcreations.com', 'admin@empowerthevillage.org', 'ayo@empowerthevillage.org']
+            recipients = ['chandler@eliftcreations.com']
+            #recipients = ['chandler@eliftcreations.com', 'admin@empowerthevillage.org', 'ayo@empowerthevillage.org']
         send_mail(
             'New %s Ticket Purchase' %(event),
             str('A ticket purchase has been successfully processed! Purchaser: '+ str(email)),

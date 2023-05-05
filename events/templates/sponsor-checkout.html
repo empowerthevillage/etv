@@ -146,7 +146,7 @@
                        
                         <thead id="summary-thead">
                             <tr id="total-tr">
-                                <td>Ticket Type</td>
+                                <td>Sponsor Type</td>
                                 <td>Price</td>
                                 <td class="center-align">Qty</td>
                                 <td class="center-align"></td>
@@ -210,11 +210,11 @@
     </div>
     <div class="row" id="ticket-checkout-p2" style="display:none">
         <div class="col s12 l6 scrollspy">
-            <a class="valign-wrapper" href="" id="step2-back"><i class="material-icons" style="font-size: 16px">arrow_back</i>Back To Ticket Selection</a>
+            <a class="valign-wrapper" href="" id="step2-back"><i class="material-icons" style="font-size: 16px">arrow_back</i>Back To Sponsorship Selection</a>
             
             <div>
-                    <h6 class="modal-summary-title">Ticketholder List</h6>
-                    <p class="ticket-description">Let us know who's coming for speedier check-in!</p>
+                    <h6 class="modal-summary-title">Sponsor Details</h6>
+                    
                     <div class="divider"></div>
                     <form id="guest-form">
                       <div class="input-field col s6">
@@ -226,13 +226,12 @@
                         <label for="ticketholder_last_name">Your Last Name<b class="required">*</b></label>
                       </div>
                       <div class="input-field col s12">
-                        <input id="ticketholder_email" name="email" type="email" required>
-                        <label for="ticketholder_email">Your Email<b class="required">*</b></label>
+                        <input id="ticketholder_company" name="company" type="text">
+                        <label for="ticketholder_company">Company</label>
                       </div>
                       <div class="input-field col s12">
-                        <i class="material-icons prefix">mode_edit</i>
-                        <textarea id="ticket-guest-list" class="materialize-textarea" rows="4"></textarea>
-                        <label for="ticket-guest-list">My Guest List</label>
+                        <input id="ticketholder_email" name="email" type="email" required>
+                        <label for="ticketholder_email">Your Email<b class="required">*</b></label>
                       </div>
                     </form>
 
@@ -244,7 +243,7 @@
                 <table class="summary-table" id="summary-table-2">
                   <thead id="summary-thead">
                       <tr id="total-tr">
-                          <td>Ticket Type</td>
+                          <td>Sponsor Type</td>
                           <td>Price</td>
                           <td class="center-align">Qty</td>
                       </tr>
@@ -349,7 +348,7 @@
     </div>
     <div class="row" id="ticket-checkout-p3" style="display:none">
         <div class="left col s12 l6 checkout-container section scrollspy">
-            <a href="" class="valign-wrapper" id="step3-back"><i class="material-icons" style="font-size: 16px">arrow_back</i>&nbspBack To Guest List</a>
+            <a href="" class="valign-wrapper" id="step3-back"><i class="material-icons" style="font-size: 16px">arrow_back</i>&nbspBack Sponsor Details</a>
                 <div class="center-align">
                     <h5 class="section-title " style="padding-right: 15px">Payment Method</h5>
                     <i class="fas fa-lock center-align"></i> Secure </i>
@@ -386,25 +385,6 @@
                 <input type="hidden" id="billing-saved-or-new">
                     <fieldset class=checkout-fieldset  style="margin-top: 0">
                     
-                    <div class="express-checkout center-align row z-depth-1">
-                        
-                        <div class="col s12">
-                        <h6>Express Checkout</h6>
-                        <div class="col s6 m6 l4" style="padding-left:0; padding-right: 0">
-                            <button class="btn waves-effect google-button valign-wrapper z-depth-0" id="google-pay-button" style="border: solid 1px rgb(211, 211, 211)">
-                            <img src="{% static 'img/googlepay-full.svg' %}" style="width: 60px; margin-left: 3px">
-                            </button>
-                        </div>
-                        <div class="col s6 m6 l4" style="padding-left:0; padding-right: 0">
-                            <div id="paypal-button" style="margin:5px; letter-spacing: 1.5px"></div>
-                        </div>
-                        <div class="col s6 m6 offset-m3 l4" style="padding-left:0; padding-right: 0">
-                            <button class="valign-wrapper btn waves-effect venmo-button z-depth-0" id="venmo-button" style="display:none;">
-                            <img src="{% static 'img/venmo-white.svg' %}" style="width: 80px; margin-left: 2px">
-                            </button>
-                        </div>
-                        </div>
-                    </div>
                   
                         <input type="hidden" value="{{ event.pk }}" id="event-hidden-input-sponsor">
                         <div class="col s12 m10 offset-m1 xl6 offset-xl3" style="padding-left:0; padding-right: 0">
@@ -432,7 +412,7 @@
                 <table class="summary-table" id="summary-table-sponsor-1">
                   <thead id="summary-thead">
                       <tr id="total-tr">
-                          <td>Ticket Type</td>
+                          <td>Sponsor Type</td>
                           <td>Price</td>
                           <td class="center-align">Qty</td>
                       </tr>
@@ -1674,9 +1654,8 @@
     ticketNB();
   }
   function ticketNB(){
-    $('#ticket-checkout-p3').hide()
+      $('#ticket-checkout-p3').hide()
       $('#p3-preloader').show()
-      var guestList = $('#ticket-guest-list').val()
       var first_name = $('#ticketholder_first_name').val()
       var last_name = $('#ticketholder_last_name').val()
       var email = $('#ticketholder_email').val()
@@ -1686,7 +1665,7 @@
       var event = $('#event-hidden-input-sponsor').val()
       data = {
         csrfmiddlewaretoken: csrf_token,
-        'guestList': guestList,
+        'guestList': '',
         'nonce': nonce,
         'deviceData': deviceData,
         'email': email,
@@ -1714,7 +1693,9 @@
                 icon: 'error',
                 title: 'Oops...',
                 text: 'Something went wrong! Please try again',
-              })
+              });
+              $('#ticket-checkout-p3').show()
+              $('#p3-preloader').hide()
             } 
           },
       })
