@@ -84,6 +84,24 @@
             
         </div>
         <div class="row">
+            <div class="center-align">
+                <h6 class="walker-name" style="color:rgb(195, 23, 23); font-size: 32px">Find & Support Your Power Walker or Power Walk Team</h6>
+            </div>
+            <div class="input-field col s12 m6 offset-m3">
+                <select class="icons" id="walker-select">
+                  <option value="" disabled selected>Choose a Walker/Team</option>
+                  {% for walker in dropdown_list %}
+                    {% if walker.image.url is not None %}
+                        <option value="" data-icon="{{ walker.image.url }}" class="left" href="{{ walker.get_absolute_url }}">{{ walker }}</option>
+                    {% else %}
+                        <option href="{{ walker.get_absolute_url }}">{{ walker }}</option>
+                    {% endif %}
+                  {% endfor %}
+                </select>
+                <label>Select A Walker/Team</label>
+            </div>
+        </div>
+        <div class="row">
             <div class="col s12">
                 <img src="https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/power-walk-collage-row-3.png" width="100%"> 
             </div>
@@ -139,24 +157,7 @@
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="center-align">
-                <h6 class="walker-name" style="color:rgb(195, 23, 23); font-size: 32px">Find Your Power Walker or Power Walk Team</h6>
-            </div>
-            <div class="input-field col s12 m6 offset-m3">
-                <select class="icons" id="walker-select">
-                  <option value="" disabled selected>Choose your option</option>
-                  {% for walker in dropdown_list %}
-                    {% if walker.image.url is not None %}
-                        <option value="" data-icon="{{ walker.image.url }}" class="left" href="{{ walker.get_absolute_url }}">{{ walker }}</option>
-                    {% else %}
-                        <option href="{{ walker.get_absolute_url }}">{{ walker }}</option>
-                    {% endif %}
-                  {% endfor %}
-                </select>
-                <label>Select A Walker</label>
-            </div>
-        </div>
+        
         <div class="divider"></div>
         <div class="col-12 center-align">
             <h6 class="walker-name" style="font-size: 32px; padding: 2% 5%;color: rgb(25, 118, 25)">Join The Village as we take steps to restore  <br>prosperity, peace and power to the Black community!</h6>

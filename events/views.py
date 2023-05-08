@@ -92,6 +92,7 @@ def art_email_view(request):
         'order': order,
     }
     return render(request, "art-email.html", context)
+
 def event_home(request):
     context = {
         'title':'ETV | Events',
@@ -169,7 +170,9 @@ def event_ticket_checkout(request, slug):
             card_qs = customer.credit_cards
         else:
             default_card = None
+    ticket_qty = len(ad_items) + len(cart_items) + len(cart_sponsor_items)
     context = {
+        'ticket_qty': ticket_qty,
         'title':'ETV | %s' %(event.title),
         'event': event,
         'ads': ads,

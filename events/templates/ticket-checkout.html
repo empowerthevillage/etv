@@ -187,9 +187,10 @@
                     </table>
                 </div>
                 <div class="valign-wrapper" style="padding-top: 10px;">
-                    <p style="margin-top:0" class="summary-total" id="total-container-1">Total - <div class="total-line">${{ cart.total|intcomma }}</div> <a style="margin-bottom: 5px" href="" class="btn checkout" id="step1-continue" style="background-color: rgb(29, 154, 29) !important; font-size: 32px !important">Continue</a>
-                        <i class="secure"><i class="fas fa-lock"></i> Secure </i></p>
+                    <p style="margin-top:0" class="summary-total" id="total-container-1">Total - <div class="total-line">${{ cart.total|intcomma }}</div> <a style="margin-bottom: 5px" href="" class="btn  {% if %" id="step1-continue" style="background-color: rgb(29, 154, 29) !important; font-size: 32px !important">Continue</a>
+                        <p class="secure secure-lg"><i class="fas fa-lock"></i> Secure </p></p>
                 </div>
+                <p class="secure-mobile"><i class="fas fa-lock"></i> Secure</p>
             </div>
             {% if event.checkout_img_link is not None %}
             <a href="{{ event.checkout_img_link }}"><img class="z-depth-1" src="{{ event.get_checkout_img_path }}" width=100% style="margin-top: 20px"></a>
@@ -502,6 +503,13 @@
 </div>
 
 <style>
+  .secure-mobile {
+    display: block;
+    color: grey
+  }
+  .secure-lg {
+    display: none
+  }
   .sponsor-text {
     text-align: center;
     margin-bottom: 0
@@ -687,6 +695,12 @@
         }
     }
     @media only screen and (min-width: 601px){
+      .secure-mobile {
+        display: none
+      }
+      .secure-lg {
+        display: block
+      }
       .modal-date {
         font-family: oskar, sans-serif;
         font-size: 32px
