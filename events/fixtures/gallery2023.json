@@ -1,0 +1,1668 @@
+[
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "Aleathia Brown",
+      "title": "Dancers (L/E)",
+      "width": 26,
+      "height": 36,
+      "pre_sale": true,
+      "active": true,
+      "description": "L/E Enhanced Giclee",
+      "price": 3705,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "Aleathia Brown",
+      "title": "Soft Echoes",
+      "width": 20,
+      "height": 24,
+      "pre_sale": true,
+      "active": true,
+      "description": "L/E Enhanced Giclee",
+      "price": 3380,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "Aleathia Brown",
+      "title": "Gold Tones",
+      "width": 26,
+      "height": 26,
+      "pre_sale": true,
+      "active": true,
+      "description": "L/E Enhanced Giclee",
+      "price": 2340,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "Anthony Boone",
+      "title": "A Good Hand",
+      "width": 30,
+      "height": 30,
+      "pre_sale": true,
+      "active": true,
+      "description": "Acrylic mixed media and fabric on canvas",
+      "price": 3200,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "Anthony Boone",
+      "title": "Untitled",
+      "width": 48,
+      "height": 36,
+      "pre_sale": true,
+      "active": true,
+      "description": "Acrylic mixed media and organic materials on canvas",
+      "price": 6480,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "Anthony Boone",
+      "title": "Mystery of the Nebula",
+      "width": 36,
+      "height": 36,
+      "pre_sale": true,
+      "active": true,
+      "description": "Acrylic mixed media on canvas",
+      "price": 3700,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "Anthony Gartmond",
+      "title": "James Baldwin",
+      "width": 20,
+      "height": 24,
+      "pre_sale": true,
+      "active": true,
+      "description": "Graphite pencil",
+      "price": 1200,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "Anthony Gartmond",
+      "title": "Thelonious Monk",
+      "width": 20,
+      "height": 24,
+      "pre_sale": true,
+      "active": true,
+      "description": "Graphite pencil",
+      "price": 1200,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "Anthony Gartmond",
+      "title": "Cicely Tyson",
+      "width": 20,
+      "height": 24,
+      "pre_sale": true,
+      "active": true,
+      "description": "Graphite pencil",
+      "price": 1200,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "Anthony Gartmond",
+      "title": "Mother Eartha",
+      "width": 20,
+      "height": 24,
+      "pre_sale": true,
+      "active": true,
+      "description": "Graphite pencil",
+      "price": 100,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "Anthony Gartmond",
+      "title": "Odetta",
+      "width": 20,
+      "height": 24,
+      "pre_sale": true,
+      "active": true,
+      "description": "Graphite pencil",
+      "price": 1200,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "Anthony Gartmond",
+      "title": "Morning Angel",
+      "width": 20,
+      "height": 24,
+      "pre_sale": true,
+      "active": true,
+      "description": "Graphite pencil",
+      "price": 1000,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "Anthony Gartmond",
+      "title": "A Rose In Harlem",
+      "width": 20,
+      "height": 24,
+      "pre_sale": true,
+      "active": true,
+      "description": "Graphite pencil",
+      "price": 900,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "BAi",
+      "title": "The Gathering of Spirits with Two Hummingbirds",
+      "width": 11,
+      "height": 14,
+      "pre_sale": true,
+      "active": true,
+      "description": "Acrylic with ballpoint pen on stretched canvas",
+      "price": 1200,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "BAi",
+      "title": "The Kiss",
+      "width": 18,
+      "height": 24,
+      "pre_sale": true,
+      "active": true,
+      "description": "Acrylic and Oil Stick Gallery Stretched Canvas",
+      "price": 4000,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "BAi",
+      "title": "The Drummer",
+      "width": 32,
+      "height": 48,
+      "pre_sale": true,
+      "active": true,
+      "description": "Acrylic and Oil Stick on Formica Board",
+      "price": 3000,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "BAi",
+      "title": "The Bride",
+      "width": 16.5,
+      "height": 19,
+      "pre_sale": true,
+      "active": true,
+      "description": "Hand embellished Print - #1 of 7",
+      "price": 300,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "BAi",
+      "title": "The Peacemaker",
+      "width": 21,
+      "height": 23,
+      "pre_sale": true,
+      "active": true,
+      "description": "Hand embellished Print - #1 of 6",
+      "price": 500,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "Ben Jones",
+      "title": "Connected",
+      "width": 11,
+      "height": 14,
+      "pre_sale": true,
+      "active": true,
+      "description": "Acrylic on paper",
+      "price": 500,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "Beverly McCutcheon",
+      "title": "Beloved",
+      "width": 34,
+      "height": 39,
+      "pre_sale": true,
+      "active": true,
+      "description": "Mixed media collage",
+      "price": 3500,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "Cassandra Martin",
+      "title": "Strong Medicine",
+      "width": 22,
+      "height": 25.5,
+      "pre_sale": true,
+      "active": true,
+      "description": "Nigerian Aso Oke cloth & misc. materials",
+      "price": 800,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "Cassandra Martin",
+      "title": "Asoake Dreams",
+      "width": 31,
+      "height": 73,
+      "pre_sale": true,
+      "active": true,
+      "description": "Nigerian Aso Oke strips, leather, etc.",
+      "price": 750,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "Danielle Scott",
+      "title": "You Are The Chosen One",
+      "width": 24,
+      "height": 36,
+      "pre_sale": true,
+      "active": true,
+      "description": "Mixed Medium Collage",
+      "price": 4250,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "Danielle Scott",
+      "title": "The Way You Shine, Makes You A Star",
+      "width": 24,
+      "height": 40,
+      "pre_sale": true,
+      "active": true,
+      "description": "Mixed Medium Collage",
+      "price": 4250,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "Danielle Scott",
+      "title": "Give Him Flowers",
+      "width": 26,
+      "height": 40,
+      "pre_sale": true,
+      "active": true,
+      "description": "Mixed Medium Collage",
+      "price": 4250,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "Danielle Scott",
+      "title": "Hermosa",
+      "width": 18,
+      "height": 14,
+      "pre_sale": true,
+      "active": true,
+      "description": "Mixed Medium Collage",
+      "price": 800,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "Demarcus",
+      "title": "Talking to the Mooon",
+      "width": 58,
+      "height": 38,
+      "pre_sale": true,
+      "active": true,
+      "description": "Acrylic on canvas",
+      "price": 10000,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "Demarcus",
+      "title": "What Freedom Looks Like",
+      "width": 40,
+      "height": 30,
+      "pre_sale": true,
+      "active": true,
+      "description": "Mixed media acrylic and inherited fabric",
+      "price": 3210,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "Demarcus",
+      "title": "Spirited Thinker",
+      "width": 60,
+      "height": 40,
+      "pre_sale": true,
+      "active": true,
+      "description": "Mixed media acrylic and inherited fabric",
+      "price": 15000,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "Demarcus",
+      "title": "The Deacon",
+      "width": 11,
+      "height": 14,
+      "pre_sale": true,
+      "active": true,
+      "description": "Mixed media",
+      "price": 700,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "Demarcus",
+      "title": "Goddess of Faith",
+      "width": 8,
+      "height": 10,
+      "pre_sale": true,
+      "active": true,
+      "description": "Mixed media",
+      "price": 450,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "Demarcus",
+      "title": "Pride & Dignity",
+      "width": 8,
+      "height": 10,
+      "pre_sale": true,
+      "active": true,
+      "description": "Mixed media",
+      "price": 450,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "Demarcus",
+      "title": "Big Mama and Papa",
+      "width": 11,
+      "height": 14,
+      "pre_sale": true,
+      "active": true,
+      "description": "Mixed media",
+      "price": 700,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "Demarcus",
+      "title": "Spring in the Country",
+      "width": 8,
+      "height": 10,
+      "pre_sale": true,
+      "active": true,
+      "description": "Mixed media",
+      "price": 450,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "Demarcus",
+      "title": "Little Rascal",
+      "width": 11,
+      "height": 14,
+      "pre_sale": true,
+      "active": true,
+      "description": "Mixed media",
+      "price": 700,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "Demetric Denmark",
+      "title": "Young Guitarist",
+      "width": 32,
+      "height": 26,
+      "pre_sale": true,
+      "active": true,
+      "description": "Acrylic and Collage",
+      "price": 1200,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "Demetric Denmark",
+      "title": "Secret Garden of Love",
+      "width": 31,
+      "height": 27.5,
+      "pre_sale": true,
+      "active": true,
+      "description": "Acrylic and Collage",
+      "price": 1400,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "Dodji Gbedemah",
+      "title": "Dreaming of Better Days",
+      "width": 22,
+      "height": 28,
+      "pre_sale": true,
+      "active": true,
+      "description": "Acrylic on canvas",
+      "price": 600,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "Dodji Gbedemah",
+      "title": "Reflections",
+      "width": 22,
+      "height": 28,
+      "pre_sale": true,
+      "active": true,
+      "description": "Acrylic on canvas",
+      "price": 600,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "Dodji Gbedemah",
+      "title": "Until We Meet Again",
+      "width": 22,
+      "height": 28,
+      "pre_sale": true,
+      "active": true,
+      "description": "Acrylic on canvas",
+      "price": 600,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "Dodji Gbedemah",
+      "title": "Rose Turbulence",
+      "width": 22,
+      "height": 28,
+      "pre_sale": true,
+      "active": true,
+      "description": "Acrylic on canvas",
+      "price": 600,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "Dodji Gbedemah",
+      "title": "Solace",
+      "width": 22,
+      "height": 28,
+      "pre_sale": true,
+      "active": true,
+      "description": "Acrylic on canvas",
+      "price": 600,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "Dodji Gbedemah",
+      "title": "Passion",
+      "width": 22,
+      "height": 28,
+      "pre_sale": true,
+      "active": true,
+      "description": "Acrylic on canvas",
+      "price": 600,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "Earlene Hardie Cox",
+      "title": "Aphrodite's Tribute",
+      "width": "",
+      "height": "",
+      "pre_sale": true,
+      "active": true,
+      "description": "Fired clay",
+      "price": 1000,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "Earlene Hardie Cox",
+      "title": "Le Femme",
+      "width": "",
+      "height": "",
+      "pre_sale": true,
+      "active": true,
+      "description": "Fired clay",
+      "price": 1200,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "Earlene Hardie Cox",
+      "title": "Retrospective",
+      "width": "",
+      "height": "",
+      "pre_sale": true,
+      "active": true,
+      "description": "Clay with cold bronze",
+      "price": 3000,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "Earlene Hardie Cox",
+      "title": "The Look",
+      "width": 7,
+      "height": "8 x 7",
+      "pre_sale": true,
+      "active": true,
+      "description": "Clay with cold bronze",
+      "price": 1000,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "Earlene Hardie Cox",
+      "title": "To Sir",
+      "width": 7,
+      "height": "5.4 x 4.5",
+      "pre_sale": true,
+      "active": true,
+      "description": "Clay with cold bronze",
+      "price": 1000,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "Gabrielle Baker",
+      "title": "Gold in Quartz",
+      "width": 20,
+      "height": 20,
+      "pre_sale": true,
+      "active": true,
+      "description": "Acrylic on canvas",
+      "price": 800,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "Gabrielle Baker",
+      "title": "Gold in Quartz with Gold Leaf",
+      "width": 30,
+      "height": 30,
+      "pre_sale": true,
+      "active": true,
+      "description": "Acrylic on canvas",
+      "price": 3000,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "Gabrielle Baker",
+      "title": "Metallurgy 12 - Titanium",
+      "width": 36,
+      "height": 48,
+      "pre_sale": true,
+      "active": true,
+      "description": "Acrylic on canvas",
+      "price": 4500,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "Heather Williams",
+      "title": "Warrior",
+      "width": 30,
+      "height": 40,
+      "pre_sale": true,
+      "active": true,
+      "description": "Acrylic on canvas",
+      "price": 3000,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "Heather Williams",
+      "title": "Majestic Robes",
+      "width": 22,
+      "height": 30,
+      "pre_sale": true,
+      "active": true,
+      "description": "Acrylic on paper",
+      "price": 2000,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "Heather Williams",
+      "title": "Magic is About to Happen",
+      "width": 20,
+      "height": 20,
+      "pre_sale": true,
+      "active": true,
+      "description": "Acrylic on canvas",
+      "price": 1000,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "Jerome China",
+      "title": "El Matador",
+      "width": 27,
+      "height": "8 x 4",
+      "pre_sale": true,
+      "active": true,
+      "description": "Cut steel and tool parts",
+      "price": 3500,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "Jerome China",
+      "title": "When Things Go Sideways",
+      "width": 34,
+      "height": "8 x 7",
+      "pre_sale": true,
+      "active": true,
+      "description": "Welded found metal objects",
+      "price": 3500,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "Jerome China",
+      "title": "Ideogram",
+      "width": 34,
+      "height": "8 x 7",
+      "pre_sale": true,
+      "active": true,
+      "description": "Welded found metal objects",
+      "price": 3500,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "Jimmy James Greene",
+      "title": "Sweet Grass Revisited",
+      "width": 18,
+      "height": 22,
+      "pre_sale": true,
+      "active": true,
+      "description": "Watercolor & Colored Pencil",
+      "price": 550,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "Jimmy James Greene",
+      "title": "Into the Light",
+      "width": 18,
+      "height": 22,
+      "pre_sale": true,
+      "active": true,
+      "description": "Watercolor & Colored Pencil",
+      "price": 550,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "Jimmy James Greene",
+      "title": "Orange Aura",
+      "width": 18,
+      "height": 22,
+      "pre_sale": true,
+      "active": true,
+      "description": "Watercolor, Colored Pencil, Acrylic and Golden Thread",
+      "price": 650,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "Jimmy James Greene",
+      "title": "Milestones (Portrait of Miles Davis)",
+      "width": 28,
+      "height": 43,
+      "pre_sale": true,
+      "active": true,
+      "description": "Acrylic on Canvas",
+      "price": 1500,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "Jimmy James Greene",
+      "title": "Ornithology (Portrait of Charlie Parker)",
+      "width": 25,
+      "height": 42,
+      "pre_sale": true,
+      "active": true,
+      "description": "Acrylic on Canvas",
+      "price": 1500,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "Jimmy James Greene",
+      "title": "Afrobeats",
+      "width": 24,
+      "height": 36,
+      "pre_sale": true,
+      "active": true,
+      "description": "Acrylic on Canvas",
+      "price": 3000,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "Jimmy James Greene",
+      "title": "Sankofa",
+      "width": 32,
+      "height": 20,
+      "pre_sale": true,
+      "active": true,
+      "description": "Acrylic on Canvas",
+      "price": 2500,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "Jimmy James Greene",
+      "title": "Dara's Garden",
+      "width": 18,
+      "height": 22,
+      "pre_sale": true,
+      "active": true,
+      "description": "Acrylic, Colored Pencil, Collage",
+      "price": 600,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "Jimmy James Greene",
+      "title": "Gill Scott Heron (The Poet)",
+      "width": 16,
+      "height": 20,
+      "pre_sale": true,
+      "active": true,
+      "description": "Watercolor & Colored Pencil",
+      "price": 550,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "Jimmy James Greene",
+      "title": "Smart Phone",
+      "width": 16,
+      "height": 20,
+      "pre_sale": true,
+      "active": true,
+      "description": "Acrylic on Canvas",
+      "price": 550,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "Jimmy James Greene",
+      "title": "Love in the Crosshairs",
+      "width": 27,
+      "height": 32,
+      "pre_sale": true,
+      "active": true,
+      "description": "Acrylic on Canvas",
+      "price": 1700,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "Jimmy James Greene",
+      "title": "Poker Face Aloof",
+      "width": 23,
+      "height": 29,
+      "pre_sale": true,
+      "active": true,
+      "description": "Acrylic on Fabric",
+      "price": 2800,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "Jimmy James Greene",
+      "title": "Interconnected",
+      "width": 27,
+      "height": 32,
+      "pre_sale": true,
+      "active": true,
+      "description": "Acrylic on Canvas",
+      "price": 2800,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "K. Scott Cosme",
+      "title": "Diddy Bop Is",
+      "width": 40,
+      "height": 30,
+      "pre_sale": true,
+      "active": true,
+      "description": "Acrylic on Canvas",
+      "price": 2750,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "K. Scott Cosme",
+      "title": "Love Is",
+      "width": 48,
+      "height": 36,
+      "pre_sale": true,
+      "active": true,
+      "description": "Acrylic on Canvas",
+      "price": 3250,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "Kortez",
+      "title": "Retro Joy",
+      "width": 12,
+      "height": 36,
+      "pre_sale": true,
+      "active": true,
+      "description": "Mixed media collage",
+      "price": 1200,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "Kortez",
+      "title": "Revolutionary Freestyle",
+      "width": 12,
+      "height": 36,
+      "pre_sale": true,
+      "active": true,
+      "description": "Mixed media collage",
+      "price": 1200,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "Maria Estrela",
+      "title": "Unenslave Yourself",
+      "width": 24,
+      "height": 32,
+      "pre_sale": true,
+      "active": true,
+      "description": "Mixed media collage",
+      "price": 1200,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "Maria Estrela",
+      "title": "I Am Africa",
+      "width": 30,
+      "height": 15,
+      "pre_sale": true,
+      "active": true,
+      "description": "Mixed media collage",
+      "price": 450,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "Martryce Roach",
+      "title": "Chicago",
+      "width": 42,
+      "height": 36,
+      "pre_sale": true,
+      "active": true,
+      "description": "Pastel",
+      "price": 3500,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "Martryce Roach",
+      "title": "Liberation Night",
+      "width": 16,
+      "height": 20,
+      "pre_sale": true,
+      "active": true,
+      "description": "Pastel",
+      "price": 1200,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "Martryce Roach",
+      "title": "Solo Traveler",
+      "width": 11,
+      "height": 14,
+      "pre_sale": true,
+      "active": true,
+      "description": "Pastel",
+      "price": 500,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "Martryce Roach",
+      "title": "Road Trip",
+      "width": 16,
+      "height": 28,
+      "pre_sale": true,
+      "active": true,
+      "description": "Pastel",
+      "price": 1350,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "Martryce Roach",
+      "title": "In A Sentimental Mood",
+      "width": 48,
+      "height": 36,
+      "pre_sale": true,
+      "active": true,
+      "description": "Pastel",
+      "price": 2500,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "Martryce Roach",
+      "title": "Enough",
+      "width": 48,
+      "height": 36,
+      "pre_sale": true,
+      "active": true,
+      "description": "Pastel",
+      "price": 5000,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "Melanie McAllister",
+      "title": "Alex Undone",
+      "width": 16,
+      "height": 20,
+      "pre_sale": true,
+      "active": true,
+      "description": "oil on stretched canvas",
+      "price": 1200,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "Melanie McAllister",
+      "title": "Solano",
+      "width": 16,
+      "height": 20,
+      "pre_sale": true,
+      "active": true,
+      "description": "oil on stretched canvas",
+      "price": 1800,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "Melanie McAllister",
+      "title": "Sun Kissed Moon (1 of 2)",
+      "width": 16,
+      "height": 20,
+      "pre_sale": true,
+      "active": true,
+      "description": "oil on stretched canvas",
+      "price": 1250,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "N. Carlos J.",
+      "title": "Boys in the Hood, Part 2",
+      "width": 30,
+      "height": 30,
+      "pre_sale": true,
+      "active": true,
+      "description": "Acrylic on Canvas",
+      "price": 3000,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "N. Carlos J.",
+      "title": "Salvation from the Night",
+      "width": 30,
+      "height": 30,
+      "pre_sale": true,
+      "active": true,
+      "description": "Acrylic on Canvas",
+      "price": 3000,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "Robin Holder",
+      "title": "112 Street & Lennox",
+      "width": 27,
+      "height": 35,
+      "pre_sale": true,
+      "active": true,
+      "description": "Printed handmade stencils each shape is a distinct stencil",
+      "price": 3300,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "Robin Holder",
+      "title": "Louisiana Jumpstart the Night",
+      "width": 27,
+      "height": 35.5,
+      "pre_sale": true,
+      "active": true,
+      "description": "Printed handmade stencils each shape is a distinct stencil",
+      "price": 3300,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "Robin Holder",
+      "title": "Discovery",
+      "width": 25,
+      "height": 32,
+      "pre_sale": true,
+      "active": true,
+      "description": "Linoleum with handmade stencils print",
+      "price": 2400,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "Robin Holder",
+      "title": "ESSENTIAL WORKERS FIRST RESPONDERS WE'RE IN IT TOGETHER XRAY TECHNICIAN",
+      "width": 24.25,
+      "height": 18.5,
+      "pre_sale": true,
+      "active": true,
+      "description": "Handcolored archival inkjet print",
+      "price": 1200,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "Robin Holder",
+      "title": "Negotiating a Complex World II",
+      "width": 28,
+      "height": 36,
+      "pre_sale": true,
+      "active": true,
+      "description": "Linoleum with handmade stencils print",
+      "price": 3300,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "Robin Holder",
+      "title": "Show Me How III",
+      "width": 39,
+      "height": 33,
+      "pre_sale": true,
+      "active": true,
+      "description": "",
+      "price": 4000,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "Robin Holder",
+      "title": "Jamming For New Orleans",
+      "width": 27,
+      "height": 35.5,
+      "pre_sale": true,
+      "active": true,
+      "description": "Printed handmade stencils each shape is a distinct stencil",
+      "price": 3300,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "Robin Holder",
+      "title": "Wonder",
+      "width": 26,
+      "height": 33,
+      "pre_sale": true,
+      "active": true,
+      "description": "Linoleum with handmade stencils print",
+      "price": 2400,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "Sandra White",
+      "title": "Mending Fences",
+      "width": 24,
+      "height": 24,
+      "pre_sale": true,
+      "active": true,
+      "description": "Acrylic/Canvas",
+      "price": 1200,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "Sandra White",
+      "title": "Wandering Garden",
+      "width": 24,
+      "height": 24,
+      "pre_sale": true,
+      "active": true,
+      "description": "Acrylic/Canvas",
+      "price": 1200,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "Sandra White",
+      "title": "Bridges Over Spring",
+      "width": 24,
+      "height": 24,
+      "pre_sale": true,
+      "active": true,
+      "description": "Acrylic/Canvas",
+      "price": 1200,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "Sandra White",
+      "title": "Kelly Street Garden",
+      "width": 36,
+      "height": 36,
+      "pre_sale": true,
+      "active": true,
+      "description": "Acrylic/Canvas",
+      "price": 1450,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "Sandra White",
+      "title": "Summertime",
+      "width": 24,
+      "height": 24,
+      "pre_sale": true,
+      "active": true,
+      "description": "Acrylic/Canvas",
+      "price": 950,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "Stanley Cadet",
+      "title": "Aviator",
+      "width": 17,
+      "height": 22,
+      "pre_sale": true,
+      "active": true,
+      "description": "Photography",
+      "price": 1800,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "Susan Ragland",
+      "title": "Today",
+      "width": 13.5,
+      "height": 11,
+      "pre_sale": true,
+      "active": true,
+      "description": "Gouache on wood",
+      "price": 900,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "Susan Ragland",
+      "title": "Face 32",
+      "width": 20,
+      "height": 18,
+      "pre_sale": true,
+      "active": true,
+      "description": "Acrylic on canvas",
+      "price": 1000,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "Susan Ragland",
+      "title": "So Fresh",
+      "width": 18,
+      "height": 20,
+      "pre_sale": true,
+      "active": true,
+      "description": "Gouache on paper",
+      "price": 2000,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "Taiwo Duvall",
+      "title": "In His Image",
+      "width": 18,
+      "height": 24,
+      "pre_sale": true,
+      "active": true,
+      "description": "Oil",
+      "price": 1700,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "Taiwo Duvall",
+      "title": "Li'l Jimmy",
+      "width": 14,
+      "height": 18,
+      "pre_sale": true,
+      "active": true,
+      "description": "Oil",
+      "price": 700,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "Taiwo Duvall",
+      "title": "Hot Licks",
+      "width": 24,
+      "height": 30,
+      "pre_sale": true,
+      "active": true,
+      "description": "Oil",
+      "price": 1000,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "Thomas Heath",
+      "title": "Heart of Hard Places",
+      "width": 24,
+      "height": 24,
+      "pre_sale": true,
+      "active": true,
+      "description": "Acrylic on wood",
+      "price": 8000,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "Thomas Heath",
+      "title": "The Chosen One",
+      "width": 24,
+      "height": 24,
+      "pre_sale": true,
+      "active": true,
+      "description": "Acrylic on wood",
+      "price": 8000,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "Wilhelmina Grant Cooper",
+      "title": "Boogie Down",
+      "width": 12,
+      "height": 14,
+      "pre_sale": true,
+      "active": true,
+      "description": "assemblage",
+      "price": 500,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "Wilhelmina Grant Cooper",
+      "title": "Long Tall Sally",
+      "width": 8,
+      "height": 32,
+      "pre_sale": true,
+      "active": true,
+      "description": "assemblage",
+      "price": 750,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "Wilhelmina Grant Cooper",
+      "title": "She's Handling It",
+      "width": 10,
+      "height": 48,
+      "pre_sale": true,
+      "active": true,
+      "description": "assemblage",
+      "price": 1500,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "Will Porter",
+      "title": "Bigger Fish to Free",
+      "width": 72,
+      "height": 31,
+      "pre_sale": true,
+      "active": true,
+      "description": "Mixed media on Canvas",
+      "price": 8000,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "Will Porter",
+      "title": "Escaped Prism-R",
+      "width": 20,
+      "height": 34,
+      "pre_sale": true,
+      "active": true,
+      "description": "Mixed media on Canvas",
+      "price": 2300,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "William Daniels",
+      "title": "Basquiat",
+      "width": 30,
+      "height": 30,
+      "pre_sale": true,
+      "active": true,
+      "description": "Textile",
+      "price": 2500,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "William Daniels",
+      "title": "White Owl (v2)",
+      "width": 36,
+      "height": 48,
+      "pre_sale": true,
+      "active": true,
+      "description": "Textile",
+      "price": 2500,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "William Daniels",
+      "title": "Black Code",
+      "width": 34,
+      "height": 34,
+      "pre_sale": true,
+      "active": true,
+      "description": "Textile",
+      "price": 1200,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "William Daniels",
+      "title": "Variation X",
+      "width": 36,
+      "height": 36,
+      "pre_sale": true,
+      "active": true,
+      "description": "Textile",
+      "price": 800,
+"year": 2023
+    }
+},
+    {
+      "model": "events.FullGalleryItem",
+"fields": {
+      "artist": "Mark Anthony McLeod",
+      "title": "PWR in Thy Voice",
+      "width": 36,
+      "height": 48,
+      "pre_sale": true,
+      "active": true,
+      "description": "Mixed media on Wood, Canvas",
+      "price": 7500,
+"year": 2023
+    }
+}
+  ]

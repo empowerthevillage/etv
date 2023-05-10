@@ -15,9 +15,20 @@ class EventAdmin(admin.ModelAdmin):
     list_display = ['title', 'date']
     search_fields = ['title', 'date']
     ordering = ['-date', 'title']
+    
 
 class ArtistAdmin(admin.ModelAdmin):
     list_display = ['pk', 'name', 'image']
+    actions = ['mark_inactive']
+    
+    def mark_inactive(self, request, queryset):
+        updated = queryset.update(active=False)
+        self.message_user(request, ngettext(
+            '%d artist successfully marked as inactive.', 
+            '%d artists successfully marked as inactive.', 
+            updated,
+        ) % updated, messages.SUCCESS)
+    mark_inactive.short_description = "Mark selected as inactive"
     
 class TicketAdmin(admin.ModelAdmin):
     list_display = ['last_name', 'first_name', 'event']
@@ -63,7 +74,7 @@ class TicketTypeAdmin(admin.ModelAdmin):
     set_inactive.short_description = "Mark selected as inactive"
 
 class ArtAdmin(admin.ModelAdmin):
-    list_display = ['title', 'artist', 'price', 'image', 'sold', 'pre_sale']
+    list_display = ['title', 'artist', 'price', 'image', 'active', 'sold', 'pre_sale']
     actions = ['make_presale', 'mark_inactive']
     def make_presale(self, request, queryset):
         updated = queryset.update(pre_sale=True)
@@ -112,7 +123,7 @@ admin_site.register(AdType)
 admin_site.register(Ad)
 admin_site.register(CheckIn, CheckinAdmin)
 admin_site.register(CompleteDonation)
-admin_site.register(GalleryItem, ArtAdmin)
+admin_site.register(GalleryItem)
 admin_site.register(FullGalleryItem, ArtAdmin)
 admin_site.register(AuctionItem, AuctionAdmin)
 admin_site.register(Artist, ArtistAdmin)

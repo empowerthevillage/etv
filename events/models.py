@@ -539,13 +539,14 @@ class FullGalleryItem(models.Model):
     order           = models.IntegerField(null=True, blank=True)
     pre_sale        = models.BooleanField(default=False)
     active          = models.BooleanField(default=True)
+    year            = models.BigIntegerField(default=2022)
 
     objects         = GalleryManager()
     
     class Meta:
         verbose_name = 'Juneteenth Art Show Item'
         verbose_name_plural = 'Juneteenth Art Show Items'
-        ordering = ['artist', 'price']
+        ordering = ['-year', '-active', 'artist', 'title']
 
     def __str__(self):
         return str(self.title)

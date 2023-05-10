@@ -4,65 +4,66 @@
 {% block content %}
 
 <div id="page">
-    <div class="event-container">
-        <div class="row">
-            <div class="cart right">
-                <div class="valign-wrapper">
-                    <div id="cart-counter">
-                        <span class="badge" data-badge-caption="">{{ cart.items.all|length }}</span>
+        <div class="event-container">
+            <div class="row">
+                <div class="cart right">
+                    <div class="valign-wrapper">
+                        <div id="cart-counter">
+                            <span class="badge" data-badge-caption="">{{ cart.items.all|length }}</span>
+                        </div>
+                        <a href="/events/loa-gallery-cart/">
+                            <i class="bi bi-cart4"></i>
+                            My Cart
+                        </a>
                     </div>
-                    <a href="/events/loa-gallery-cart/">
-                        <i class="bi bi-cart4"></i>
-                        My Cart
-                    </a>
                 </div>
             </div>
+            <div class="center-align event-page-title" style="background: rgb(226, 10, 32);
+            background: linear-gradient(135deg, rgb(226, 10, 32) 0%, rgba(1,166,80,1) 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;">For the Love of Art <br>2023 Juneteenth Celebration</div>
+            <!--<div class="center-align event-page-title" style="color:black">Full Art Collection & Artist Bios</div>-->
+            <div class="divider-dotted"></div>
+            
+            <p class="subtitle" style="margin-top: 20px">Shop the Online Gallery & view Artist Bios below!</p>
         </div>
-        <div class="row">
-            <div class="col s10 offset-s1 m4 offset-m4"><img src="{% static 'img/nmf-logo.png' %}" width=100%></div>
-        </div>
-        <div class="center-align event-page-title" style="background: rgb(226, 10, 32);
-        background: linear-gradient(135deg, rgb(226, 10, 32) 0%, rgba(1,166,80,1) 100%);
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;">National Medical Fellowships <br>Gala Gallery</div>
-        <!--<div class="center-align event-page-title" style="color:black">Full Art Collection & Artist Bios</div>-->
-        <div class="divider-dotted"></div>
-         
-         <p class="subtitle" style="margin-top: 20px">Shop the Online Gallery & view Artist Bios below!</p>
-         <p class="subtitle" style="margin-top: 20px">Generous portion of proceeds will benefit National Medical Fellowships and Empower The Village</p>
-         <p class="subtitle" style="margin-top: 20px">2 nonprofit partners empowering the BIPOC community</p>
-    </div>
 
-    <div class="divider"></div>
+        <div class="divider"></div>
 
-    <div class="row gallery-grid" id="gallery-grid" style="margin-bottom: 0; padding-bottom: 20px">
-        <div class="row">
-            <form class="col s12 l6 offset-l3" id="gallery-search">
-                <div class="input-field valign-wrapper col s12 m6" style="margin-top: 0">
-                    <i class="material-icons prefix">search</i>
-                    {{ filter.form.title }}
-                    <label>Title</label>
+        <div class="row gallery-grid" id="gallery-grid" style="margin-bottom: 0; padding-bottom: 20px">
+                <div class="row">
+                    <form class="col s12 l6 offset-l3" id="gallery-search">
+                        <div class="input-field valign-wrapper col s12 m6" style="margin-top: 0">
+                            <i class="material-icons prefix">search</i>
+                            {{ filter.form.title }}
+                            <label>Title</label>
+                        </div>
+                        <div class="input-field valign-wrapper col s12 m6" style="margin-top: 0">
+                            <i class="material-icons prefix">search</i>
+                            {{ filter.form.artist }}
+                            <label>Artist</label>
+                            <div class="btn" type="submit" id="search-title-go" style="margin-left: 10px"><i class="material-icons">arrow_forward_ios</i></div>
+                        </div>
+                        <div class="col s12 valign-wrapper" style="color: rgb(59, 95, 252); cursor: pointer; display: none" id="filter-blank"><span class="material-icons">
+                            visibility
+                            </span> &nbsp; View Full Gallery</div>
+                    </form>
                 </div>
-                <div class="input-field valign-wrapper col s12 m6" style="margin-top: 0">
-                    <i class="material-icons prefix">search</i>
-                    {{ filter.form.artist }}
-                    <label>Artist</label>
-                    <div class="btn" type="submit" id="search-title-go" style="margin-left: 10px"><i class="material-icons">arrow_forward_ios</i></div>
-                </div>
-                <div class="col s12 valign-wrapper" style="color: rgb(59, 95, 252); cursor: pointer; display: none" id="filter-blank"><span class="material-icons">
-                    visibility
-                    </span> &nbsp; View Full Gallery</div>
-            </form>
-        </div>
-        <p class="subtitle" style="margin-top: 0px">*All artwork comes framed or on hangable canvas with the exception of textiles</p>
-        <div id="gallery-container">
-        {% for page in p %}
-                {% for x in page.object_list %}
+                <div id="gallery-container">
+                    {% for x in items %}
                     <div class="col s12 m4 center-align grid-col" style="padding: 1%;">
+                        {% if x.image %}
                         <div class="" style="width: 100%">
                             {% if x.get_availability == True %}<div class="sold-out z-index-2">Sold</div>{% endif %}<img class="{% if x.get_availability == True %}sold-img{% endif %} z-depth-2 grid-item-mini materialboxed-sm lazy" data-src="{{ x.image.url }}" id="item-sm-{{ x.pk }}" item-title="{{ x.title }}" item-artist="{{ x.artist }}" item-price="{{ x.price }}" item-description="{{ x.description }}" item-dimensions='{{ x.width }}" x {{ x.height }}"' style="cursor:pointer">
                         </div>
+                        {% else %}
+                        <div style="display: flex; align-items: center; justify-content: center">
+                            <div class="z-depth-2" style="width: fit-content; height: 200px; padding-left: 20px; padding-right: 20px; display: flex; align-items: center; justify-content: center;">
+                                <p class="item-title-sm" style="font-weight: 700; font-style:italic;" >Image coming soon!</p>
+                            </div>
+                        </div>
+                        {% endif %}
                         <div class="gallery-item-details-min center">
                             <p id="item-title-sm"></p>
                             <div class="divider-dotted"></div>
@@ -85,70 +86,37 @@
                             
                         </div>
                     </div>
-                {% endfor %}
-            
-        {% endfor %}
+                    {% endfor %}
+                </div>
+                <div class="col s12 center-align">
+                    <div class="btn" id="load-more-btn" page=1>Load More</div>
+                </div>
         </div>
-       
-    </div>
-    <div class="divider"></div>
-    <!--
-    <div class="row" style="background: rgba(255, 255, 255, 0.921); width: 100%; margin-bottom: 0; padding: 3% 1%;">
-        <div class="col s12">
-            <div class="center-align event-page-title" style="color:black">Raffle Collection</div>
-            <div class="divider-dotted"></div>
-            <h6 style="text-align: center; font-size: 18px;">Congratulations to the winners of our raffle!</h6>
-            <p class="subtitle" style="margin-bottom: 3%; color: grey">100% of Sales Proceeds Benefit ETV</p>
-            {% for x in auction_items %}
-                    <div class="col s12 m4 center-align auction-grid-col" >
-                        
-                        <div class="" style="display: flex; justify-content: center; width: 100%">
-                            <img class="z-depth-2 grid-item-mini materialboxed-sm lazy" data-src="{{ x.image.url }}" id="item-sm-{{ x.pk }}" item-title="{{ x.title }}" item-artist="{{ x.artist }}" item-description="{{ x.description }}" item-dimensions='{{ x.width }}" x {{ x.height }}"' style="cursor:pointer">
+        <div class="divider"></div>
+        <div class="row" style="background: rgba(255, 255, 255, 0.989); width: 100%; margin-bottom: 0">
+            <div class="col s12 xl10 offset-xl1" style="padding: 3%">
+                <div class="center-align event-page-title" style="background: rgb(226, 10, 32);
+                background: linear-gradient(135deg, rgb(226, 10, 32) 0%, rgba(1,166,80,1) 100%);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent; margin-bottom: 3%">Meet The Artists</div>
+                {% for x in artists %}
+                        <div class="col s12 m6 artist-col">
+                            {% if x.image.url is not None %}
+                            <div class="left">
+                                <img class="z-depth-2 artist-grid-item-mini materialboxed-sm lazy" data-src="{{ x.image.url }}" style="cursor:pointer">
+                            </div>
+                            {% endif %}
+                            <div class="artist-details">
+                                <p id="item-title-sm" style="margin-top: 0">{{ x.name }}</p>
+                                <p id="item-description-sm" id="{{ x.pk }}-bio">{{ x.bio }}</p>
+                                
+                            </div>
+                            <p class="artist-read-more right" target="{{ x.pk }}-bio">Read Full Bio ></p>
                         </div>
-                        <div class="gallery-item-details-min center">
-                            <p id="item-title-sm"></p>
-                            <div class="divider-dotted"></div>
-                            <p id="item-title-sm">{{ x.title }}</p>
-                            <p id="item-artist-sm"><b>Artist: </b>{{ x.artist }}</p>
-                            <p id="item-description-sm"><b>Medium: </b>{{ x.description }}</p>
-                            <p id="item-dimensions-sm"><b>Dimensions: </b>{{ x.width}}" x {{ x.height }}"</p>
-                        </div>
-                    </div>
                 {% endfor %}
+            </div>
         </div>
-        
-    </div>
-
-    <div class="divider"></div>
--->
-    <div class="row" style="background: rgba(255, 255, 255, 0.989); width: 100%; margin-bottom: 0">
-        <div class="col s12 xl10 offset-xl1" style="padding: 3%">
-            <div class="center-align event-page-title" style="background: rgb(226, 10, 32);
-            background: linear-gradient(135deg, rgb(226, 10, 32) 0%, rgba(1,166,80,1) 100%);
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent; margin-bottom: 3%">Meet The Artists</div>
-            {% for x in artists %}
-                    <div class="col s12 m6 artist-col">
-                        {% if x.image.url is not None %}
-                        <div class="left">
-                            <img class="z-depth-2 artist-grid-item-mini materialboxed-sm lazy" data-src="{{ x.image.url }}" style="cursor:pointer">
-                        </div>
-                        {% endif %}
-                        <div class="artist-details">
-                            <p id="item-title-sm" style="margin-top: 0">{{ x.name }}</p>
-                            <p id="item-description-sm" id="{{ x.pk }}-bio">{{ x.bio }}</p>
-                            
-                        </div>
-                        <p class="artist-read-more right" target="{{ x.pk }}-bio">Read Full Bio ></p>
-                    </div>
-                {% endfor %}
-        </div>
-        
-    </div>
-    
-    
-    </div>
 </div>
 
 <style>
@@ -231,6 +199,7 @@
     }
     #gallery-grid img{
         max-width: 100%;
+        max-height: 240px;
     }
     #cart-counter span {
         width: fit-content;
