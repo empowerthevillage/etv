@@ -35,12 +35,15 @@ fjs.parentNode.insertBefore(js, fjs);
 <div class="row" style="padding: 1%" id="walker-content">
     <div class="col s12" style="padding-bottom: 20px;padding-top: 0px;">
         <a href="/power-walk-2023/" class="back-link"><i class="bi bi-arrow-left"></i> Back to Power Walk home page</a>
+        
+        
         <div class="right valign-wrapper" style="padding-right: 20px;">
             <div class="fb-share-button" data-href="{{ walker.get_absolute_url }}" data-layout="button" style="margin-right: 5px;"></div>
             <script type="IN/Share" data-url="{{ waler.get_absolute_url }}"></script>
         </div>
+        <br>
+        <a href="/power-walk-2023/register/" class="btn" style="font-size: 12px; font-weight: 600; margin-top: 5px; background: rgb(27, 154, 27);">Register for the Power Walk Today!</a>
     </div>
-    
     <div class="col s4 offset-s4 offset-m1 l3 offset-l2">
         {% if walker.image %}
         <img src="{{ walker.image.url }}" width="100%" class="z-depth-4">

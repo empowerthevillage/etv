@@ -80,13 +80,13 @@ def walker_registration(request):
     if request.method == 'POST':
         data = request.POST
         files = request.FILES
+        print(data['pledge'])
         nonce_id = data['nonce']
         first_name = data['walker_first_name']
         last_name = data['walker_last_name']
         email = data['email']
         total = data['order-total']
         waiver_agreed = data['waiver']
-        print(waiver_agreed)
         result = gateway.transaction.sale({
             "amount": total,
             "payment_method_nonce": nonce_id,
@@ -107,8 +107,8 @@ def walker_registration(request):
                 'New Power Walk Registration!',
                 str('A new $%s power walk registration has been processed for %s %s through www.empowerthevillage.org!' %(total, first_name, last_name)),
                 'etvnotifications@gmail.com',
-                ['admin@empowerthevillage.org', 'chandler@eliftcreations.com', 'ayo@empowerthevillage.org'],
-                #['chandler@eliftcreations.com'],
+                #['admin@empowerthevillage.org', 'chandler@eliftcreations.com', 'ayo@empowerthevillage.org'],
+                ['chandler@eliftcreations.com'],
                 fail_silently=True
             )
             try:
@@ -157,11 +157,11 @@ def walker_registration(request):
             payment.walker = walker_obj
             payment.save()
             try:
-                if data['pledge'] == 'true':
+                if data['pledge'] == 'on':
                     pledge_obj = WalkerPledgePayment()
                     pledge_obj.braintree_id = result.transaction.id
                     pledge_obj.complete = True
-                    pledge_obj.amount = request.POST['fundraising-goal']
+                    pledge_obj.amount = request.POST['pledge-amount']
                     pledge_obj.walker = walker_obj
                     pledge_obj.save()
                     pledge_paid = True

@@ -166,67 +166,92 @@ Register | ETV 2023 Power Walk
                               </div>
                             </div>
                             <div class="col s12">
-                              <p style="font-weight: 600;">I would like to<b class="required">*</b>:</p>
-                              <div class="col s12">
-                                <p>
-                                  <label>
-                                    <input value="false" class="with-gap" name="pledge" type="radio" id="fundraising-amount"/>
-                                    <span>Select a fundraising amount ($100 recommended minimum)</span>
-                                  </label>
-                                </p>
+                              <p style="font-weight: 600;">Select a fundraising goal for you and/or your team<b class="required">*</b>:</p>
+                              <div id="fundraising-options">
+                                  <div class="col s12 m6">
+                                    <p>
+                                      <label>
+                                        <input value="100" class="with-gap" name="fundraising-goal" type="radio" />
+                                        <span>$100</span>
+                                      </label>
+                                    </p>
+                                    <p>
+                                      <label>
+                                        <input value="250" class="with-gap" name="fundraising-goal" type="radio" />
+                                        <span>$250</span>
+                                      </label>
+                                    </p>
+                                    <p>
+                                      <label>
+                                        <input value="500" class="with-gap" name="fundraising-goal" type="radio" />
+                                        <span>$500</span>
+                                      </label>
+                                    </p>
+                                  </div>
+                                  <div class="col s12 m6">
+                                    <p>
+                                      <label>
+                                        <input value="750" class="with-gap" name="fundraising-goal" type="radio" />
+                                        <span>$750</span>
+                                      </label>
+                                    </p>
+                                    <p>
+                                      <label>
+                                        <input value="1000" class="with-gap" name="fundraising-goal" type="radio" />
+                                        <span>$1,000</span>
+                                      </label>
+                                    </p>
+                                    <p>
+                                      <label>
+                                        <input value="other" class="with-gap" name="fundraising-goal" type="radio" id="other-goal"/>
+                                        <span>Other</span>
+                                      </label>
+                                    </p>
+                                    <div class="other-input hidden text-field" id="other-input-wrapper">
+                                      <div class="valign-wrapper">$<input type="number" id="other-input" style="width: 50%; padding-left: 10px"></div>
+                                      <label>Enter a Custom Amount</label>
+                                    </div>
+                                  </div>
+                              </div>
                                 <p id="pledge-p">
                                   <label>
-                                    <input value="true" class="with-gap" name="pledge" type="radio"/>
-                                    <span>Select a pledge amount and pay now</span>
+                                    <input name="pledge" type="checkbox" id="pledge-toggle"/>
+                                    <span><b style="font-weight: 600;">Select a pledge amount and pay now (optional)</b></span>
                                   </label>
                                 </p>
-                              </div>
-                              <div class="hidden" id="fundraising-options">
-                              <p style="font-weight: 600;">Select Amount<b class="required">*</b>:</p>
-                                <div class="col s12 m6">
-                                  <p>
-                                    <label>
-                                      <input value="100" class="with-gap" name="fundraising-goal" type="radio" />
-                                      <span>$100</span>
-                                    </label>
-                                  </p>
-                                  <p>
-                                    <label>
-                                      <input value="250" class="with-gap" name="fundraising-goal" type="radio" />
-                                      <span>$250</span>
-                                    </label>
-                                  </p>
-                                  <p>
-                                    <label>
-                                      <input value="500" class="with-gap" name="fundraising-goal" type="radio" />
-                                      <span>$500</span>
-                                    </label>
-                                  </p>
-                                </div>
-                                <div class="col s12 m6">
-                                  <p>
-                                    <label>
-                                      <input value="750" class="with-gap" name="fundraising-goal" type="radio" />
-                                      <span>$750</span>
-                                    </label>
-                                  </p>
-                                  <p>
-                                    <label>
-                                      <input value="1000" class="with-gap" name="fundraising-goal" type="radio" />
-                                      <span>$1,000</span>
-                                    </label>
-                                  </p>
-                                  <p>
-                                    <label>
-                                      <input value="other" class="with-gap" name="fundraising-goal" type="radio" id="other-goal"/>
-                                      <span>Other</span>
-                                    </label>
-                                  </p>
-                                  <div class="other-input hidden text-field" id="other-input-wrapper">
-                                    <div class="valign-wrapper">$<input type="number" id="other-input" style="width: 50%; padding-left: 10px"></div>
-                                    <label>Enter a Custom Amount</label>
+                                <div class="hidden" id="pledge-options">
+                                  <div class="col s12 m6">
+                                    <p>
+                                      <label>
+                                        <input value="50" class="with-gap" name="pledge-amount" type="radio" />
+                                        <span>$50</span>
+                                      </label>
+                                    </p>
+                                    <p>
+                                      <label>
+                                        <input value="100" class="with-gap" name="pledge-amount" type="radio" />
+                                        <span>$100</span>
+                                      </label>
+                                    </p>
                                   </div>
-                                </div>
+                                  <div class="col s12 m6">
+                                    <p>
+                                      <label>
+                                        <input value="150" class="with-gap" name="pledge-amount" type="radio" />
+                                        <span>$150</span>
+                                      </label>
+                                    </p>
+                                    <p>
+                                      <label>
+                                        <input value="other" class="with-gap" name="pledge-amount" type="radio" id="other-pledge"/>
+                                        <span>Other</span>
+                                      </label>
+                                    </p>
+                                    <div class="other-input hidden text-field" id="other-pledge-input-wrapper">
+                                      <div class="valign-wrapper">$<input type="number" id="other-pledge-input" style="width: 50%; padding-left: 10px"></div>
+                                      <label>Enter a Custom Amount</label>
+                                    </div>
+                                  </div>
                               </div>
                             </div>
                             <div class="col s12" id="waiver-col">
@@ -340,7 +365,7 @@ Register | ETV 2023 Power Walk
   <div class="modal-content" style="padding-bottom: 0">
     <h4>ETV 2023 Power Walk Waiver</h4>
     <p>I acknowledge that my participation in the Power Walk may involve a risk of injury, including bodily injury, and assume the risk for same. On my own behalf and on behalf of my heirs and legal representatives and to the fullest extent permitted by law, I hereby release and discharge Empower The Village and their respective directors, officers, board of trustees, members, agent and representatives, of and from any and all liability for injury, death, or damages and/or any other claims, demands, losses or damages, incurred by me in connection with any aspect of the walk.</p>
-    <p>I also agree to the use of any photo, film, video of the event, in which I may be included, for any legitimate purpose, including advertisting and promotion.</p>
+    <p>I also agree to the use of any photo, film, video of the event, in which I may be included, for any legitimate purpose, including advertising and promotion.</p>
   </div>
 </div>
 {% if new_org_popup == True %}
@@ -533,13 +558,29 @@ braintree.client.create({
     $('.phone_us').mask('(000) 000-0000');
     $('.money').mask('000,000,000,000,000.00', {reverse: true});
   })
+  $('[name="pledge"]').on('change', function(){
+    $('#pledge-options').toggleClass('hidden');
+    UpdateTotal()
+  });
+  $('[name="pledge-amount"]').on('change', function(){
+    if($('[name="pledge-amount"]:checked').attr('id')=='other-pledge'){
+      $('#other-pledge-input-wrapper').removeClass('hidden')
+    }else{
+      $('#other-pledge-input-wrapper').addClass('hidden')
+    }
+    if($('[name="pledge"]').is(':checked')){
+      $('#pledge-fees').removeClass('hidden')
+      $('#pledge-total').text($(this).val())
+      UpdateTotal()
+    }
+  })
   $('[name="fundraising-goal"]').on('change', function(){
     if($('[name="fundraising-goal"]:checked').attr('id')=='other-goal'){
       $('#other-input-wrapper').removeClass('hidden')
     }else{
       $('#other-input-wrapper').addClass('hidden')
     }
-    if($('[name="pledge"]:checked').val()=='true'){
+    if($('[name="pledge"]').is(':checked')==true){
       $('#pledge-fees').removeClass('hidden')
       $('#pledge-total').text($(this).val())
       UpdateTotal()
@@ -560,6 +601,11 @@ braintree.client.create({
     $('#pledge-total').text($(this).val())
     UpdateTotal()
   });
+  $('#other-pledge-input').on('keyup', function(){
+    $('#other-pledge').val($('#other-pledge-input').val());
+    $('#pledge-total').text($(this).val())
+    UpdateTotal()
+  });
   $('#shirt-boolean').on('change', function(){
     $('#shirt-size-selector').toggleClass('hidden');
     $('#shirt-price').toggleClass('hidden');
@@ -574,9 +620,12 @@ braintree.client.create({
       var registrationFee = 10
       $('#registration-total').text('10')
     }
-    if($('[name="pledge"]:checked').val()=='true'){
-      var pledge = parseInt($('[name="fundraising-goal"]:checked').val())
+    if($('[name="pledge"]').is(':checked')==true){
+      $('#pledge-fees').removeClass('hidden')
+      var pledge = parseInt($('[name="pledge-amount"]:checked').val())
+      console.log(pledge)
     }else{
+      $('#pledge-fees').addClass('hidden')
       var pledge = 0
     }
     var total = registrationFee + pledge

@@ -3,7 +3,7 @@ from django.utils.translation import ngettext
 
 from accounts.admin import admin_site
 
-from .models import Walker, WalkerDonation, HomeGalleryImage, Organization, ShirtOrder, WalkerRegistrationPayment, OrgDonation
+from .models import Walker, WalkerDonation, HomeGalleryImage, Organization, ShirtOrder, WalkerRegistrationPayment, WalkerPledgePayment, OrgDonation
 
 class WalkathonAdmin(admin.ModelAdmin):
     actions = ['set_500',]
@@ -23,3 +23,4 @@ admin_site.register(HomeGalleryImage)
 admin_site.register(Organization)
 admin_site.register(ShirtOrder)
 admin_site.register(WalkerRegistrationPayment)
+admin_site.register(WalkerPledgePayment)
