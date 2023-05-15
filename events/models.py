@@ -546,7 +546,7 @@ class FullGalleryItem(models.Model):
     class Meta:
         verbose_name = 'Juneteenth Art Show Item'
         verbose_name_plural = 'Juneteenth Art Show Items'
-        ordering = ['-year', '-active', 'artist', 'title']
+        ordering = ['artist', 'title']
 
     def __str__(self):
         return str(self.title)
