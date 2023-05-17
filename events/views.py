@@ -1,5 +1,6 @@
 
 from django.core.paginator import Paginator
+from django.db.models import Q
 from django.http.response import JsonResponse
 from django.shortcuts import render, redirect
 from addresses.forms import BillingAddressForm
@@ -1025,15 +1026,13 @@ def art_sponsor_checkout(request):
 
 def gallery_home(request):
     cart_obj, created = FullGalleryCart.objects.new_or_get(request)
-    items = FullGalleryItem.objects.filter(active=True).order_by('order', 'artist', 'price')[:12]
-    print(items)
+    items = FullGalleryItem.objects.filter(active=True)[:12]
     artists = Artist.objects.filter(active=True).order_by('name')
     auction_items = AuctionItem.objects.all()
     p = Paginator(items, 6)
     filter = GalleryFilter(request.GET, queryset=items)
     context = {
         'items': items,
-        #'p': p,
         'cart': cart_obj,
         'filter': filter,
         'auction_items': auction_items,
@@ -1075,27 +1074,43 @@ def full_gallery_home(request):
     return render(request, 'full_gallery_home.html', context)
 
 def gallery_get_next(request):
-    requested_page = request.GET['page']
+    requested_page = request.GET['next_page']
     items = FullGalleryItem.objects.filter(active=True).order_by('artist', 'title')
     p = Paginator(items, 12)
     page = p.get_page(requested_page)
-    if page.has_next:
-        html = render_to_string('gallery-next.html', {'page': page})
-        return HttpResponse(html)
+    print(page.object_list)
+    if page.number in p.page_range:
+        html = render_to_string('gallery-next.html', {'page': page, 'error_msg': None})
+    else:
+        html = render_to_string('gallery-next.html', {'error_msg': True, 'message': 'End of Gallery'})
+    return HttpResponse(html)
     
 def gallery_search(request):
-    f = GalleryFilter(request.GET, queryset=FullGalleryItem.objects.filter(active=True).order_by('artist', 'title'))
-    items = f.qs
+    try:
+        title = request.GET['title']
+    except:
+        title = None
+    try:
+        artist = request.GET['artist']
+    except:
+        artist = None
+    if title and artist:
+        items = FullGalleryItem.objects.filter(Q(title__icontains=title) & Q(artist__icontains=artist) & Q(active=True))
+    elif title:
+        items = FullGalleryItem.objects.filter(Q(title__icontains=title) & Q(active=True))
+    elif artist:
+        items = FullGalleryItem.objects.filter(Q(artist__icontains=artist) & Q(active=True))
+
     if len(items) > 0:
         p = Paginator(items, 12)
-        html = render_to_string('gallery-next.html', {'page': p})
+        html = render_to_string('gallery-next.html', {'page': p.get_page(1), 'error_msg': None})
         return HttpResponse(html)
     else:
-        return HttpResponse('No Matching Pieces')
-
+        html = render_to_string('gallery-next.html', {'error_msg': True, 'message': 'No Matching Pieces Found', 'page': None})
+        return HttpResponse(html)
+    
 def checkin(request):
     if request.method == 'POST':
-        print(request.POST)
         tickets = request.POST.getlist('ticket')
         first = SingleTicket.objects.get(ticket_id=tickets[0])
         checkin = CheckIn()

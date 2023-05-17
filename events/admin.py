@@ -74,7 +74,8 @@ class TicketTypeAdmin(admin.ModelAdmin):
     set_inactive.short_description = "Mark selected as inactive"
 
 class ArtAdmin(admin.ModelAdmin):
-    list_display = ['title', 'artist', 'price', 'image', 'active', 'sold', 'pre_sale']
+    list_display = ['title', 'artist', 'price', 'description', 'width', 'height','active', 'sold', 'pre_sale']
+    list_filter = ['artist', 'active']
     actions = ['make_presale', 'mark_inactive']
     def make_presale(self, request, queryset):
         updated = queryset.update(pre_sale=True)

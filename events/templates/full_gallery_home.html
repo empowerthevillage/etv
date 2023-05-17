@@ -25,7 +25,6 @@
             background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;">For the Love of Art <br>2023 Juneteenth Celebration</div>
-            <!--<div class="center-align event-page-title" style="color:black">Full Art Collection & Artist Bios</div>-->
             <div class="divider-dotted"></div>
             
             <p class="subtitle" style="margin-top: 20px">Shop the Online Gallery & view Artist Bios below!</p>
@@ -36,16 +35,23 @@
         <div class="row gallery-grid" id="gallery-grid" style="margin-bottom: 0; padding-bottom: 20px">
                 <div class="row">
                     <form class="col s12 l6 offset-l3" id="gallery-search">
+                        <div class="valign-wrapper">
                         <div class="input-field valign-wrapper col s12 m6" style="margin-top: 0">
                             <i class="material-icons prefix">search</i>
-                            {{ filter.form.title }}
+                            <input name="title" id="title-search" type="text">
                             <label>Title</label>
                         </div>
-                        <div class="input-field valign-wrapper col s12 m6" style="margin-top: 0">
-                            <i class="material-icons prefix">search</i>
-                            {{ filter.form.artist }}
+                        <div class="input-field col s12 m6" style="margin-top: 0">
+                            <select name="artist" id="artist-search">
+                                <option value="" selected>Select Artist</option>
+                                {% for x in artists %}
+                                <option value="{{ x }}">{{ x }}</option>
+                                {% endfor %}
+                            </select>
                             <label>Artist</label>
-                            <div class="btn" type="submit" id="search-title-go" style="margin-left: 10px"><i class="material-icons">arrow_forward_ios</i></div>
+                            
+                        </div>
+                        <div class="btn" type="submit" id="search-title-go" style="margin-left: 10px">Search</div>
                         </div>
                         <div class="col s12 valign-wrapper" style="color: rgb(59, 95, 252); cursor: pointer; display: none" id="filter-blank"><span class="material-icons">
                             visibility
@@ -642,7 +648,7 @@
         var current_page = btn.attr('page')
         var next_page = parseInt(current_page) + 1
         var data = {
-            'page': next_page,
+            'next_page': next_page,
         }
         btn.attr('page', next_page)
         $.ajax({
@@ -651,12 +657,10 @@
             method: 'GET',
             success: function(data){
                 $('#gallery-container').append(data)
-                    
                 $('#load-preloader').hide();
                 btn.show();
             },
             error: function(data){
-                btn.hide();
             }
           })
     });
