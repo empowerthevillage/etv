@@ -1061,11 +1061,9 @@ def full_gallery_home(request):
     items = FullGalleryItem.objects.filter(active=True).order_by('artist', 'title')[:12]
     artists = Artist.objects.filter(active=True).order_by('name')
     auction_items = AuctionItem.objects.all()
-    p = Paginator(items, 6)
     filter = GalleryFilter(request.GET, queryset=items)
     context = {
         'items': items,
-        #'p': p,
         'cart': cart_obj,
         'filter': filter,
         'auction_items': auction_items,
@@ -1077,9 +1075,11 @@ def gallery_get_next(request):
     requested_page = request.GET['next_page']
     items = FullGalleryItem.objects.filter(active=True).order_by('artist', 'title')
     p = Paginator(items, 12)
+    next_page = int(requested_page) + 1
     page = p.get_page(requested_page)
-    print(page.object_list)
-    if page.number in p.page_range:
+    if page.has_next():
+        html = render_to_string('gallery-next.html', {'page': page, 'error_msg': None})
+    elif next_page == p.num_pages + 1:
         html = render_to_string('gallery-next.html', {'page': page, 'error_msg': None})
     else:
         html = render_to_string('gallery-next.html', {'error_msg': True, 'message': 'End of Gallery'})
