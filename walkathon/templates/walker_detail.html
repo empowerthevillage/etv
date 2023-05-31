@@ -23,8 +23,8 @@ fjs.parentNode.insertBefore(js, fjs);
 
 
 <div class="parallax-container z-depth-3 box-shadow valign-wrapper">
-    <div class="container z-depth-4 center-align parallax-banner" style="padding-left: 40px; padding-right: 40px;">
-        <h1 style="font-family: oskar; color:black; font-weight: 800; padding-bottom: 15px;">Show your Support for {{ walker }}!</h1>
+    <div class="container z-depth-4 center-align parallax-banner" style="padding-left: 20px; padding-right: 20px;">
+        <h1 style="font-family: oskar; color:black; font-weight: 800; padding-bottom: 15px;">Show your Support for {{ walker }} & Community Mental Health!</h1>
     </div>
     <div class="parallax">
         <img class="lazy" src="{% static 'img/health-collage-min.jpg' %}" style="opacity: 1;">
@@ -50,6 +50,7 @@ fjs.parentNode.insertBefore(js, fjs);
         {% else %}
         <img src="https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/power-walk-avatar.png" width="100%" class="z-depth-4">
         {% endif %}
+        
     </div>
     
     <div class="col s12 m6">
@@ -58,7 +59,9 @@ fjs.parentNode.insertBefore(js, fjs);
         {% if walker.organization %}
         <h6 class="walker-name mini">I'm walking with <a href="{{ walker.organization.get_absolute_url }}">{{ walker.organization }}</a></h6>
         {% endif %}
-        <p class="power-walk-slogan">Empower The Village to improve community health and wellness now!</p>
+        <p class="power-walk-slogan" style="font-weight:600;">Empower The Village to improve community health and wellness now!</p>
+        <p class="power-walk-slogan" style="color:rgb(9, 131, 9)">Reports of the Mental Health Crisis affecting our children and people of all ages is all over the news. ETV's solutions-focused work is more urgent and important than ever! The US Surgeon General recently issued a warning and declared that immediate action must be taken.</p>
+        <p class="power-walk-slogan" style="color: black; font-weight: 600;">Support us ... We are making a difference where it counts!</p>
         <div class="row">
             <div class="col s4 offset-s2">
                 <p>
@@ -112,7 +115,9 @@ fjs.parentNode.insertBefore(js, fjs);
     <div class="col s10 offset-s1">
         <div class="divider"></div>
     </div>
-    
+    <div class="col s12" style="display:flex; justify-content: center">
+        <a href="/power-walk-2023/" class="btn" style="font-size: 18px; font-weight: 600; margin-top: 0px; margin-bottom: 15px; height: fit-content; line-height: 24px; padding-top: 8px; padding-bottom: 5px;background: rgb(27, 154, 27); width: fit-content;">Click to Learn More About ETV's Mental Health Initiative!</a>
+    </div>
     <div class="col s10 offset-s1 m4 offset-m0 l3 offset-l1">
         <div class="card goal-card" style="width: 100%">
             <div class="card-body" style="padding: 2% 5%; height: 425px;">
@@ -145,7 +150,7 @@ fjs.parentNode.insertBefore(js, fjs);
             </div>
         </div>
     </div>
-    <div class="col s10 offset-s1 m7">
+    <div class="col s10 offset-s1 m8 l7">
         <div class="card" style="height: 425px;">
             <div class="header" style="border-bottom: 1px solid rgb(233, 233, 233);background: url('https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/power-walk-2023-collage.png');background-size:40%">
                 <div style="width: 100%; background: rgba(255, 255, 255, 0.884); padding: 1px 0px 8px 0px;">
@@ -389,6 +394,9 @@ fjs.parentNode.insertBefore(js, fjs);
         }
         .donation-message {
             font-size: 18px !important;
+        }
+        .parallax-banner {
+            width: 60%;
         }
     }
 </style>

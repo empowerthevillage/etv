@@ -196,7 +196,10 @@ class Sponsorship(models.Model):
     updated                 = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return '$%s for %s' %(self.amount, self.organization)
+        if self.organization:
+            return '$%s from %s' %(self.amount, self.organization)
+        else:
+            return '$%s from %s %s' %(self.amount, self.first_name, self.last_name)
     
 class HomeGalleryImage(models.Model):
     image_id        = models.CharField(max_length=32, blank=True, null=True)

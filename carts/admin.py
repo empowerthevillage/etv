@@ -9,13 +9,17 @@ class ArtCartAdmin(admin.ModelAdmin):
     
 class TicketAdmin(admin.ModelAdmin):
     list_display = ['pk','timestamp','get_items','active']
+    list_filter = ['active']
     actions = ['set_inactive']
     list_per_page = 500
     
-    @admin.display(ordering='book__author', description='Author')
+    @admin.display(description='Cart Items')
     def get_items(self, obj):
         items = ticketItem.objects.filter(cart=obj)
-        return str(items)
+        string = ''
+        for x in items:
+            string += ('%s %s - %s' %(x.quantity, x.event, x.ticket))
+        return str(string)
     
     def set_inactive(self, request, queryset):
         updated = queryset.update(active=False)
