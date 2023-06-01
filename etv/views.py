@@ -1,10 +1,13 @@
 from django.shortcuts import render
 from ven.forms import BusinessForm
 from django.conf import settings
+from django.http import HttpResponse
 
 gateway = settings.GATEWAY_PUBLIC
-  
-    
+
+def sitemap(request):
+    return HttpResponse(open('etv/sitemap.xml').read(), content_type='text/xml')
+
 def home_page(request):
     form = BusinessForm()
     context = {
@@ -57,4 +60,4 @@ def shop(request):
     return render(request, "shop.html", context)
 
 def robots(request):
-    return render(request, "robots.txt")
+    return HttpResponse(open('etv/robots.txt').read(), content_type='text/txt')

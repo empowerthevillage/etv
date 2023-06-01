@@ -1,14 +1,14 @@
 from django.conf import settings
 from django.conf.urls.static import static
-from django.contrib import admin
 from django.contrib.auth.views import LogoutView
+
 from django.urls import path, include
-from django.views.generic import TemplateView, RedirectView
+from django.views.generic import RedirectView
 from accounts.admin import admin_site
 
 from .views import *
 from accounts.views import LoginView, RegisterView, GuestRegisterView
-from content.views import efbf, efbf_subscribed, contact, mailchimp_signup
+from content.views import efbf, contact, mailchimp_signup
 
 from policy.views import obb_flyer
 from vbp.models import *
@@ -136,7 +136,8 @@ urlpatterns = [
     path('events/', include(("events.urls", "events"), namespace='events')),
     path('news/', news, name='news'),
     path('news-and-events/', news, name='news'),
-    path('robots.txt/', robots, name="robots"),
+    path('sitemap.xml/', sitemap),
+    path('robots.txt/', robots),
     path('shop/', shop, name='shop'),
     path('login/', LoginView.as_view(), name='login'),
     path('logout/', LogoutView.as_view(next_page=settings.LOUGOUT_REDIRECT_URL), name='logout'),
@@ -159,6 +160,7 @@ urlpatterns = [
     path('village-empowerment-network/', include(("ven.urls", "ven"), namespace='ven')),
     path('village-empowerment-network-nomination/', venForm, name='ven-nomination'),
     path('tinymce/', include('tinymce.urls')),
+    
 ]
 
 if settings.DEBUG:
