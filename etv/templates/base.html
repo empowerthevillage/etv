@@ -151,7 +151,7 @@
                     <div class="navbar-slash"> | </div>
                     
                   {% if request.user.is_authenticated %}
-                  <a class="main-nav-link ul-effect valign-wrapper {% if request.path == events_url %}active{% endif %}" href="{{ events_url }}">Events</a>
+                  <a class="main-nav-link dropdown-trigger ul-effect valign-wrapper {% if request.path == events_url %}active{% endif %}" data-target='events-dropdown' href="{{ events_url }}">Events</a>
                   <div class="navbar-slash"> | </div>
                   <a class="main-nav-link ul-effect valign-wrapper {% if request.path == news_url %}active{% endif %}" href="{{ news_url }}">News</a>
                   <div class="navbar-slash"> | </div>
@@ -162,7 +162,7 @@
                   <a href="{{ logout_url }}" class="main-nav-link ul-effect valign-wrapper"> Logout</a>
                    
                   {% else %}
-                  <a class="main-nav-link ul-effect valign-wrapper {% if request.path == events_url %}active{% endif %}" href="{{ events_url }}">Events</a>
+                  <a class="main-nav-link dropdown-trigger ul-effect valign-wrapper {% if request.path == events_url %}active{% endif %}" data-target='events-dropdown' href="{{ events_url }}">Events</a>
                   <div class="navbar-slash"> | </div>
                   <a class="main-nav-link ul-effect valign-wrapper {% if request.path == news_url %}active{% endif %}" href="{{ news_url }}">News</a>
                   <div class="navbar-slash"> | </div>
@@ -360,6 +360,14 @@
                 <li><a class="center-align valign-wrapper {% if request.path == vbp_url %}active{% endif %}" href="{{ vbp_url }}" style="padding-left:10px">Village Black Pages®</a></li>
                 <li><a class="center-align valign-wrapper {% if request.path == bf_home_url %}active{% endif %}" data-target="nav-dropdown-bf" href="{{ bf_home_url }}">BLACK FRIDAY CHALLENGE™</a></li>
                 <li><a class="center-align valign-wrapper {% if request.path == voting_url %}active{% endif %}" data-target="nav-dropdown-pp" href="{{ voting_url }}">OPERATION: BALLOT BOX™</a></li>
+            </ul>
+          </div>
+          <div class="dropdown-container">
+            <ul id="events-dropdown" class="dropdown-content dd-base">
+                <li><a class="center-align valign-wrapper" href="/events/">Overview</a></li>
+                <li><a class="center-align valign-wrapper" href="/events/love-of-art-fundraiser/">For the Love of Art Juneteenth Celebration</a></li>
+                <li><a class="center-align valign-wrapper" href="/power-walk-2023/">2023 Power Walk</a></li>
+                <li><a class="center-align valign-wrapper" href="/events/power-swing-classic/">Power Swing Classic</a></li>
             </ul>
           </div>
         <div style="z-index: -1; margin-top: 120px" id="body-container">
