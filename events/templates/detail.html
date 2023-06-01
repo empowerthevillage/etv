@@ -4,12 +4,49 @@
 {% block canonical %}{{ cannonical }}{% endblock %}
 {% block seo_description %}{{ seo_description }}{% endblock %}
 
+{% if event.title == 'Juneteenth Celebration - Montclair, NJ' %}
+  {% block headtags %}
+      <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Event",
+        "name": "ETV Juneteenth Celebration - Montclair, NJ",
+        "startDate": "2023-06-16",
+        "endDate": "2023-06-17",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+        "eventStatus": "https://schema.org/EventScheduled",
+        "location": {
+          "@type": "Place",
+          "name": "Montclair Art Museum",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "3 S Mountain Ave",
+            "addressLocality": "Montclair",
+            "postalCode": "07042",
+            "addressRegion": "NJ",
+            "addressCountry": "US"
+          }
+        },
+        "image": [
+          "https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/juneteenth-graphic-0323.webp"
+        ],
+        "description": "Enjoy & purchase exquisite art from dozens of local & nationally renowned Black artists! Great food, open bar, music and fun for all! PLUS a new "Afterglow" Party until 11PM",
+        "organizer": {
+          "@type": "Organization",
+          "name": "Empower The Vilalge",
+          "url": "https://www.empowerthevillage.org/"
+        }
+      }
+      </script>
+  {% endblock %}
+{% endif %}
+
 {% block content %}
 <div id="page">
     <div id="overlay">
         
         <a class="valign-wrapper" href="/events/" style="margin-bottom: 30px"><i class="material-icons" style="font-size: 16px">arrow_back</i>&nbsp; All Events</a>
-        <h6 class="modal-title scale-up-center">ETV {{ event.title }}</h6>
+        <h1 class="modal-title scale-up-center">ETV {{ event.title }}</h1>
         {% if event.is_multiday %}
         <h6 class="modal-date scale-up-center" style="width: 100%">{{ event.start_date|date:"F jS" }} & {{ event.end_date|date:"jS" }}, {{ event.end_date|date:"Y"}}</h6>
         {% else %}
