@@ -39,7 +39,7 @@ def walker_home(request):
     return render(request, 'walkathon_home.html', context)
 
 def walker_detail(request, walker):
-    try:
+    #try:
         try:
             walker_obj = Walker.objects.get(slug=walker)
             walker_type = 'individual'
@@ -47,9 +47,12 @@ def walker_detail(request, walker):
             donation_list = WalkerDonation.objects.filter(walker=walker_obj)
         except:
             walker_obj = Organization.objects.get(slug=walker)
+            print(walker_obj)
             walker_list = Walker.objects.filter(organization=walker_obj)
+            print(walker_list)
             walker_type = 'org'
             donation_list = OrgDonation.objects.filter(organization=walker_obj)
+            print(donation_list)
         context = {
             'title': 'Support %s' %(walker_obj),
             'walker': walker_obj,
@@ -58,8 +61,8 @@ def walker_detail(request, walker):
             'donation_list': donation_list,
         }
         return render(request, 'walker_detail.html', context)
-    except:
-       return redirect('/power-walk-2023/')
+    #except:
+       #return redirect('/power-walk-2023/')
 
 def org_walker_detail(request, org, walker):
     walker_obj = Walker.objects.get(slug=walker)

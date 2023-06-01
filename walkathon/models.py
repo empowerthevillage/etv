@@ -54,7 +54,7 @@ class Organization(models.Model):
             for x in donos:
                 dono_total += x.amount
             for x in pledges:
-                total += x.amount
+                dono_total += x.amount
         for x in org_donations:
             dono_total += x.amount
         return math.trunc(dono_total)
