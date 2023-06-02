@@ -711,7 +711,7 @@ def montclair_view(request):
     col1 = cats[0:n]
     col2 = cats[m:None]
     context = {
-        'title': 'Montclair County Village Black Pages',
+        'title': 'Montclair Village Black Pages',
         'cover_url': 'https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/montclair-min.jpg',
         'sections': cats,
         'col1': col1,
