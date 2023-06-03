@@ -6,6 +6,27 @@
 {% block canonical %}https://www.empowerthevillage.org/{% endblock %}
 {% block seo_description %}{{ seo_description }}{% endblock %}
 
+{% block head_js %}
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Empower The Village",
+    "alternateName": "ETV",
+    "keywords": "empower the village, etv, nonprofit, black nonprofit, best black nonprofit, 501c3",
+    "description": "Empower The Village, Inc. is a data-driven 501(c)(3) non-profit organization working to restore Prosperity, Peace and Power to the Black community.",
+    "nonprofitStatus" : "Nonprofit501c3",
+    "url": "https://empowerthevillage.org/",
+    "logo": "https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/etv-logo-r.jpg",
+    "sameAs": [
+      "https://empowerthevillage.org",
+      "https://www.youtube.com/@empower-the-village",
+      "https://www.instagram.com/empower_etv/",
+      "https://www.facebook.com/empoweretv"
+    ]
+  }
+  </script>
+{% endblock %}
 
 {% block content %}
 <a href="/events/">

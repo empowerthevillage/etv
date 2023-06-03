@@ -31,7 +31,7 @@ class ArtistAdmin(admin.ModelAdmin):
     mark_inactive.short_description = "Mark selected as inactive"
     
 class TicketAdmin(admin.ModelAdmin):
-    list_display = ['last_name', 'first_name', 'event']
+    list_display = ['last_name', 'first_name', 'event','created', 'purchase_price']
     actions = ['download_csv', 'mark_checkedin']
     search_fields = ['event', 'last_name']
     
