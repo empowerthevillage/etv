@@ -816,13 +816,14 @@
     $('#billing-saved-or-new').attr('value', 'new');
   })
 </script>
-<script src="https://js.braintreegateway.com/web/3.82.0/js/client.min.js"></script>
-<script src="https://js.braintreegateway.com/web/3.82.0/js/venmo.min.js"></script>
-<script src="https://js.braintreegateway.com/web/3.82.0/js/data-collector.min.js"></script>
+<script src="https://js.braintreegateway.com/web/3.94.0/js/client.min.js"></script>
+<script src="https://js.braintreegateway.com/web/3.94.0/js/venmo.min.js"></script>
+<script src="https://js.braintreegateway.com/web/3.94.0/js/data-collector.min.js"></script>
 <script src="https://pay.google.com/gp/p/js/pay.js"></script>
-<script src="https://js.braintreegateway.com/web/3.82.0/js/google-payment.min.js"></script>
-<script src="https://js.braintreegateway.com/web/3.82.0/js/paypal-checkout.min.js"></script>
-<script src="https://js.braintreegateway.com/web/3.82.0/js/hosted-fields.min.js"></script>
+<script src="https://js.braintreegateway.com/web/3.94.0/js/google-payment.min.js"></script>
+<script src="https://js.braintreegateway.com/web/3.94.0/js/client.min.js"></script>
+<script src="https://js.braintreegateway.com/web/3.94.0/js/paypal-checkout.min.js"></script>
+
 <script>
 var venmoButton = document.getElementById('venmo-button');
 
@@ -1034,9 +1035,7 @@ braintree.client.create({
         onError: function (err) {
           console.error('PayPal error', err);
         },
-      }).render('#paypal-button').then(function(){
-        
-      });
+      }).render('#paypal-button')
     });
   });
 
