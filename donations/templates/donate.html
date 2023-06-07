@@ -71,7 +71,7 @@ ETV | Donate
                 <fieldset class="checkout-fieldset z-depth-1">
                     <div class="row" style="margin-bottom: 0">
                         <div class="col s12 valign-wrapper" style="padding-left: 0; padding-right: 0">
-                          <h5 class="fieldset-title">Donate Now</h5><h6 class="valign-wrapper secure-checkout align" style="margin-bottom:0; margin-left: 10px"><span class="material-icons">
+                          <h5 class="fieldset-title">Donate</h5><h6 class="valign-wrapper secure-checkout align" style="margin-bottom:0; margin-left: 10px"><span class="material-icons">
                             lock
                             </span>&nbsp;SECURE
                           </h6>
@@ -233,12 +233,7 @@ ETV | Donate
                       <input type="text" class="phone_us" id="phone">
                       <label for="phone">Phone (Optional)</label>
                     </div>
-                    <p id="opt-in" class="hidden">
-                      <label>
-                        <input type="checkbox" class="filled-in" checked="checked" />
-                        <span>I would like to receive news & SMS updates, opt out anytime. We respect your privacy and do not share or sell your contact information.</span>
-                      </label>
-                    </p>
+                    
                     <div class="input-field col s12" style="margin-top: 0">
                       {{ mailing_form.address_line_1 }}
                       <label for="id_address_line_1">Mailing Address</label>
@@ -266,7 +261,14 @@ ETV | Donate
                         <span>I'd like to cover all transaction fees so 100% of my donation goes to Empower The Village</span>
                         </label>
                       </p>
+                      <p id="opt-in" class="hidden" style="margin-top: 40px;">
+                        <label>
+                          <input type="checkbox" class="filled-in" checked="checked" />
+                          <span>I would like to receive news & SMS updates, opt out anytime. We respect your privacy and do not share or sell your contact information.</span>
+                        </label>
+                      </p>
                     </div>
+                    
                   </div>
                 </fieldset>
                 <div class="row">
@@ -274,10 +276,10 @@ ETV | Donate
                     <p style="font-family: oskar; font-size: 18px; margin-top: 0; margin-bottom: 0;">Total:</p>
                     <p id="donationTotal" style="font-family: oskar; font-size: 26px; margin-top: 5px; margin-bottom: 10px;font-weight:700"></p>
                   </div>
-                  <div class="col s10 offset-s1 m6 offset-m3" style="padding-left:0; padding-right: 0">
+                  <div class="col s12" style="padding-left:0; padding-right: 0; display: flex; align-items: center; flex-direction: column;">
                     
                     <button class="valign-wrapper btn waves-effect creditcard-button step1-create z-depth-0 disabled" id="creditcard-button">
-                      <div class="donate-text-small"><i class="fas fa-credit-card"></i> DONATE</div><div class="donate-text-large"><i class="fas fa-credit-card"></i> DONATE</div>
+                      <div class="donate-text-small"><i class="fas fa-credit-card"></i> PAY W/ CREDIT CARD</div><div class="donate-text-large"><i class="fas fa-credit-card"></i> PAY W/ CREDIT CARD</div>
                     </button>
                     <div class="valign-wrapper" style="display: flex; justify-content: center;">
                       <i class="fab fa-cc-visa" style="font-size: 32px; padding: 5px"></i>
@@ -291,16 +293,17 @@ ETV | Donate
                       <div class="col s12">
                         <div id="or">OR</div>
                       </div>
-                      <div class="col s10 offset-s1 m6 offset-m3" style="padding-left:0; padding-right: 0">
-                        <button id="google-pay-button">
-                        </button>
-                      </div>
+                      
                       <div class="col s10 offset-s1 m6 offset-m3" style="padding-left:0; padding-right: 0">
                         <div id="paypal-button"></div>
                       </div>
                       <div class="col s10 offset-s1 m6 offset-m3" style="padding-left:0; padding-right: 0">
                         <button class="valign-wrapper btn waves-effect venmo-button z-depth-0" id="venmo-button" style="display:none;">
                           <img src="{% static 'img/venmo-white.svg' %}" style="width: 80px; margin-left: 2px">
+                        </button>
+                      </div>
+                      <div class="col s10 offset-s1 m6 offset-m3" style="padding-left:0; padding-right: 0; padding-top: 10px;">
+                        <button id="google-pay-button">
                         </button>
                       </div>
                   </div>
@@ -348,8 +351,8 @@ ETV | Donate
                   </div>
                   <div class="col s10 offset-s1 m8 offset-m2 xl6 offset-xl3" style="padding-left:0; padding-right: 0">
                     <button class="valign-wrapper btn waves-effect creditcard-button  z-depth-0" id="cc-review-button">
-                      <div class="donate-text-small"><i class="fas fa-search"></i> REVIEW</div>
-                      <div class="donate-text-large"><i class="fas fa-search"></i> REVIEW</div>
+                      <div class="donate-text-small"><i class="fas fa-search"></i> FINALIZE PAYMENT</div>
+                      <div class="donate-text-large"><i class="fas fa-search"></i> FINALIZE PAYMENT</div>
                     </button>
                   </div>
                 </div>
@@ -377,7 +380,7 @@ ETV | Donate
                   
                 <div class="col s10 offset-s1 m8 offset-m2" style="padding-left:0; padding-right: 0">
                 <button class="valign-wrapper btn waves-effect creditcard-button z-depth-0" id="donation-submit-button">
-                  <div class="donate-text-small"><i class="fas fa-check-circle"></i> Donate Now</div><div class="donate-text-large"><i class="fas fa-check-circle"></i> Donate Now</div>
+                  <div class="donate-text-small"><i class="fas fa-check-circle"></i> Complete Donation</div><div class="donate-text-large"><i class="fas fa-check-circle"></i> Donate Now</div>
                 </button>
                 </div>
               </fieldset>
@@ -1327,7 +1330,7 @@ function handleVenmoSuccess(payload) {
           margin-left: 0;
         }
         .creditcard-button {
-          width: 95%;
+          width: fit-content !important;
           font-size: 18px;
         }
         .applepay-button {
@@ -1524,9 +1527,10 @@ function handleVenmoSuccess(payload) {
   position: relative;
   line-height: 50px;
   text-align: center;
-  font-weight: 500;
+  font-size: larger;
+  color: green;
+  font-weight: 800;
 }
-
 #or::before,
 #or::after {
   position: absolute;

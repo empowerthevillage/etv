@@ -187,6 +187,7 @@ class Nomination(models.Model):
     class Meta:
         verbose_name = 'VEN Business Nomination'
         verbose_name_plural = 'VEN Business Nominations'
+        ordering = ['-created']
 
 class FamilyNominationManager(models.Manager):
     def filter_objs(self):
@@ -254,6 +255,7 @@ class FamilyNomination(models.Model):
     class Meta:
         verbose_name = 'VEN Family Nomination'
         verbose_name_plural = 'VEN Family Nominations'
+        ordering = ['-created']
 
 def nomination_create_id(sender, instance, *args, **kwargs):
     if not instance.ven_id:
