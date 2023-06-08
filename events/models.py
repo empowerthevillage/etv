@@ -511,6 +511,7 @@ class GalleryItem(models.Model):
     sold            = models.BooleanField(default=False)
     order           = models.IntegerField(null=True, blank=True)
     pre_sale        = models.BooleanField(default=False)
+    donated         = models.BooleanField(default=False)
 
     objects         = GalleryManager()
     
@@ -540,6 +541,7 @@ class FullGalleryItem(models.Model):
     pre_sale        = models.BooleanField(default=False)
     active          = models.BooleanField(default=True)
     year            = models.BigIntegerField(default=2022)
+    donated         = models.BooleanField(default=False)
 
     objects         = GalleryManager()
     

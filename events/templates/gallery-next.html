@@ -24,6 +24,9 @@
                 <p id="item-price-sm">${{ x.price|intcomma }}</p>
                 <p id="item-description-sm"><b>Medium: </b>{{ x.description }}</p>
                 <p id="item-dimensions-sm"><b>Dimensions: </b>{{ x.width}}" x {{ x.height }}"</p>
+                {% if x.donated %}
+                    <p id="item-dimensions-sm"><b style="color:#cb1010">100% Donated to ETV!</b></p>
+                {% endif %}
                 {% if x.get_availability == True %}
                 <div id="sold-btn" class="btn disabled">Sold</div>
                 {% else %}
