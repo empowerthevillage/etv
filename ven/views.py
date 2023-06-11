@@ -10,14 +10,18 @@ def venForm(request):
         if request.POST.get('submission-type') == 'business':
             nomination_form = BusinessForm(request.POST)
             obj = Nomination()
-            if len(nomination_form.data['vendor_opp']) > 1:
-                print(nomination_form.data['vendor_opp'])
-                if nomination_form.data['vendor_opp'][:1] == 'true':
-                    obj.expo_vendor = True
-            if len(nomination_form.data['pitch_comp']) > 1:
-                print(nomination_form.data['pitch_comp'])
-                if nomination_form.data['pitch_comp'][:1] == 'true':
-                    obj.pitch_comp = True
+            try:
+                if len(nomination_form.data['vendor_opp']) > 1:
+                    if nomination_form.data['vendor_opp'][:1] == 'true':
+                        obj.expo_vendor = True
+            except:
+                pass
+            try:
+                if len(nomination_form.data['pitch_comp']) > 1:
+                    if nomination_form.data['pitch_comp'][:1] == 'true':
+                        obj.pitch_comp = True
+            except:
+                pass
             obj.nominator_name = nomination_form.data['nominator-name']
             obj.nominator_email = nomination_form.data['nominator-email']
             obj.owner_name = nomination_form.data['owner-name']
@@ -27,7 +31,10 @@ def venForm(request):
             obj.state = nomination_form.data['state']
             obj.phone = nomination_form.data['phone']
             obj.category = nomination_form.data['category']
-            obj.subcategory = nomination_form.data['subcategory']
+            try:
+                obj.subcategory = nomination_form.data['subcategory']
+            except:
+                pass
             obj.nominator_owner = nomination_form.data['owned']
             obj.years_in_business = nomination_form.data['years-active']
             obj.employees = nomination_form.data['employees']

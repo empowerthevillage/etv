@@ -19,6 +19,9 @@ from donations.models import donation
 import shippo
 from django.core.mail import send_mail
 
+from django.core import mail
+from django.core.mail import EmailMultiAlternatives
+
 shippo.config.api_key = settings.SHIPPO_KEY
 User = settings.AUTH_USER_MODEL
 gateway = settings.GATEWAY
@@ -368,7 +371,35 @@ def checkout_done(request):
         "billing_profile": billing_profile,
     }
     return render(request, "carts/checkout-done.html", context)
+      
+      
+def ticket_receipt(request):
+    ticket_obj = SingleTicket.objects.filter(ticket_id='9cvronsq').first()
+    print(ticket_obj)
+    event = ticket_obj.event
+    ticket_list = [ticket_obj]
+    to = 'genesisphotoart@aol.com'
+    confirmation_subject = 'ETV Ticket Purchase Confirmation'
+    from_email = 'etvnotifications@gmail.com'
+    confirmation_content = render_to_string('ticket-email.html',
+    {
+        'tickets': ticket_list,
+        'ads': [],
+        'donations': [],
+        'event': event
+    })
+    confirmation_plain_text = 'View email in browser'      
+    
+    msg = EmailMultiAlternatives(confirmation_subject, confirmation_plain_text, from_email, [to], cc=['admin@empowerthevillage.org','ayo@empowerthevillage.org'])
+    msg.attach_alternative(confirmation_content, "text/html")
+    
+    connection = mail.get_connection()
+    connection.open()
+    msg.send()
+    
+    return HttpResponse('receipt sent successfully!')
         
+    
 def ticket_nb(request):
     billing_profile, billing_profile_created = BillingProfile.objects.new_or_get(request)
     if billing_profile is None:
@@ -404,7 +435,6 @@ def ticket_nb(request):
             "submit_for_settlement": True
         }
     })
-    print(result)
     if result.is_success:
         tickets = ticketItem.objects.filter(cart=cart_obj)
         ticket_list = []
