@@ -46,12 +46,21 @@
 <div id="page">
     <div id="overlay">
         
-        <a class="valign-wrapper" href="/events/" style="margin-bottom: 30px"><i class="material-icons" style="font-size: 16px">arrow_back</i>&nbsp; All Events</a>
-        <h1 class="modal-title scale-up-center">ETV {{ event.title }}</h1>
+        <a class="valign-wrapper" href="/events/" style="margin-bottom: 10px"><i class="material-icons" style="font-size: 16px">arrow_back</i>&nbsp; All Events</a>
+        {% if event.title == 'Friends of the Village' %}
+        <h1 class="modal-title scale-up-center" style="color: black">{{ event.title }}</h1>
+        {% else %}
+        <h1 class="modal-title scale-up-center" >{{ event.title }}</h1>
+        {% endif %}
+        
+        {% if event.subtitle %}
+        <h3 class="modal-subtitle scale-up-center">{{ event.subtitle }}</h3>
+        {% endif %}
         {% if event.is_multiday %}
         <h6 class="modal-date scale-up-center" style="width: 100%">{{ event.start_date|date:"F jS" }} & {{ event.end_date|date:"jS" }}, {{ event.end_date|date:"Y"}}</h6>
         {% else %}
-        <h6 class="modal-date scale-up-center" style="width: 100%">{{ event.start_date|date:"F jS, Y" }}{% if event.start_time is not None %}, {{ event.start_time|date:"P" }}{% endif %}{% if event.end_time is not None %} - {{ event.end_time|date:"P" }}{% endif %}</h6>
+        <h6 class="modal-date scale-up-center" style="width: 100%">{{ event.start_date|date:"F jS, Y" }}</h6>
+        {% if event.start_time is not None %}<h6 class="modal-date sm scale-up-center" style="width: 100%">{{ event.start_time|date:"P" }}{% endif %}{% if event.end_time is not None %} - {{ event.end_time|date:"P" }}</h6>{% endif %}
         {% endif %}
         <div class="divider-dotted"></div>
         {{ event.content|safe }}
@@ -70,6 +79,22 @@
     </div>
 </div>
 <style>
+    .event-h6 {
+      text-align: center;
+      font-family: oskar;
+      font-size: 20px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+    .event-h4 {
+      text-align: center;
+      font-family: oskar;
+      font-size: 22px;
+      font-weight: 400;
+      color:#01a650;
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
     .event-text {
         margin-top: 30px
     }
@@ -78,12 +103,13 @@
         border-width: 3px;
         width: 50%;
         margin-left: 25%;
-        margin-bottom: 40px
+        margin-bottom: 10px;
+        margin-top: 0px;
     }
     .divider {
-    margin-bottom: 40px;
-    margin-top: 40px
-  }
+      margin-bottom: 10px;
+      margin-top: 10px
+    }
     .secure {
         font-size: 14px;
         color: grey;
@@ -189,17 +215,30 @@
     #ticket-form svg {
         stroke: none !important
     }
-    .modal-title {
+    h1.modal-title {
         text-align: center;
-        font-family: oskar-inline, sans-serif;
-        font-size: 28px;
+        font-family: oskar, sans-serif;
+        font-size: 32px;
         color:#bf1e2d;
+        margin-bottom: 5px;
+        margin-top: 10px;
+    }
+    h3.modal-subtitle {
+      text-align: center;
+      font-family: oskar, sans-serif;
+      font-size: 28px;
+      color: rgb(33, 117, 33);
+      margin-top: 5px;
     }
     .modal-date {
         text-align: center;
-        font-family: oskar-inline, sans-serif;
-        font-size: 18px;
-        margin-bottom: 40px
+        font-family: oskar, sans-serif;
+        font-size: 22px;
+        margin-bottom: 25px
+    }
+    .modal-date.sm {
+      font-size: 18px;
+      margin-top: -20px;
     }
     .ticket-description{
         font-size: 12px
@@ -231,18 +270,31 @@
         }
     }
     @media only screen and (min-width: 601px){
+      .event-h6 {
+        font-size: 26px;
+      }
+      .event-h4 {
+        font-size: 32px;
+      }
         .event-text {
-            font-size: 24px
-    }
-        .modal-title {
-        font-family: oskar-inline, sans-serif;
-        font-size: 42px;
-        color:#bf1e2d;
-    }
-    .modal-date {
-        font-family: oskar, sans-serif;
-        font-size: 28px
-    }
+            font-size: 18px
+        }
+        h1.modal-title {
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+        h3.modal-subtitle {
+          font-size: 36px;
+          margin-top: 10px;
+        }
+        .modal-date {
+            font-family: oskar, sans-serif;
+            font-size: 32px
+        }
+        .modal-date.sm {
+          font-size: 26px;
+          margin-top: -15px;
+        }
         .btn-ticket {
             font-size: 20px;
             line-height: 50px;
@@ -269,21 +321,28 @@
         }
     }
     @media only screen and (min-width: 992px){
-        
+        .event-h6 {
+          font-size: 32px;
+        }
+        .event-h4 {
+          font-size: 44px;
+          margin-top: 15px;
+          margin-bottom: 15px;
+        }
         .event-text {
-            font-size: 26px;
-            margin-bottom: 40px;
-            margin-top: 0
-    }
-        .modal-title {
-        font-family: oskar-inline, sans-serif;
-        font-size: 56px;
-        color:#bf1e2d;
-    }
-    .modal-date {
-        font-family: oskar, sans-serif;
-        font-size:38px
-    }
+              font-size: 22px;
+              margin-bottom: 40px;
+              margin-top: 0;
+              font-weight: 300
+        }
+        h1.modal-title {
+            font-size: 56px;
+            margin-bottom: 10px;
+        }
+        h3.modal-subtitle {
+          font-size: 48px;
+          margin-top: 10px;
+        }
         .btn-ticket {
             margin-top: 0px;
             font-size: 20px;
