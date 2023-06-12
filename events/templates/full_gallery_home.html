@@ -63,7 +63,7 @@
                     <div class="col s12 m4 center-align grid-col" style="padding: 1%;">
                         {% if x.image %}
                         <div class="" style="width: 100%">
-                            {% if x.get_availability == True %}<div class="sold-out z-index-2">Sold</div>{% endif %}<img class="{% if x.get_availability == True %}sold-img{% endif %} z-depth-2 grid-item-mini materialboxed-sm lazy" data-src="{{ x.image.url }}" id="item-sm-{{ x.pk }}" item-title="{{ x.title }}" item-artist="{{ x.artist }}" item-price="{{ x.price }}" item-description="{{ x.description }}" item-dimensions='{{ x.width }}" x {{ x.height }}"' style="cursor:pointer">
+                            {% if x.sold %}<div class="sold-out z-index-2">Sold</div>{% endif %}<img class="{% if x.sold %}sold-img{% endif %} z-depth-2 grid-item-mini materialboxed-sm lazy" data-src="{{ x.image.url }}" id="item-sm-{{ x.pk }}" item-title="{{ x.title }}" item-artist="{{ x.artist }}" item-price="{{ x.price }}" item-description="{{ x.description }}" item-dimensions='{{ x.width }}" x {{ x.height }}"' style="cursor:pointer">
                         </div>
                         {% else %}
                         <div style="display: flex; align-items: center; justify-content: center">
@@ -686,51 +686,7 @@
     });
     $(document).ready(function(){
         
-        $('.materialboxed').materialbox({
-            onCloseStart: function(){
-            $('.gallery-item-details').show()
-            $('.subtitle').show()
-        },
-        onOpenStart: function(){
-            $('.gallery-item-details').hide()
-            $('.subtitle').hide()
-        }});
-        $('.materialboxed-sm').materialbox({});
-        $('.carousel').carousel(
-            {indicators: false, 
-            numVisible: 20, 
-            onCycleTo: function(){
-                var artist = $('.carousel-item.active').attr('item-artist')
-                var title = $('.carousel-item.active').attr('item-title')
-                var price = $('.carousel-item.active').attr('item-price')
-                var dimensions = $('.carousel-item.active').attr('item-dimensions')
-                var priceFormatted = Intl.NumberFormat('en-US', {style: 'currency', currency: 'USD'}).format(price);
-                var description = $('.carousel-item.active').attr('item-description')
-                var availability = $('.carousel-item.active').attr('status')
-                var id = $('.carousel-item.active').attr('item-id')
-                var inCart = $('.carousel-item.active').attr('inCart')
-                $('#item-title').text(title)
-                $('#item-artist').html('<b>Artist</b>: '+artist)
-                $('#item-price').text(priceFormatted)
-                $('#item-description').text(description)
-                $('#item-dimensions').html('<b>Dimensions</b>: '+dimensions)
-                $('#add-to-cart').attr('itemID', id)
-                $('#remove-from-cart').attr('itemID', id)
-                if(availability=='sold'){
-                    $('#sold-btn').show()
-                    $('#add-to-cart').hide()
-                    $('#remove-from-cart').hide()
-                }else if(inCart=='true'){
-                    $('#sold-btn').hide()
-                    $('#add-to-cart').hide()
-                    $('#remove-from-cart').show()
-                }else{
-                    $('#sold-btn').hide()
-                    $('#add-to-cart').show()
-                    $('#remove-from-cart').hide()
-                }
-            }
-        });
+        $('.materialboxed-sm').materialbox();
         $(document).on('click', '#add-to-cart', function(){
             btn = $(this)
             data = {
