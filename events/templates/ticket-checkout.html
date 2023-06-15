@@ -1500,35 +1500,40 @@
       }
     }, function(hostedFieldsErr, hostedFieldsInstance){
       if (hostedFieldsErr){
-        alert(hostedFieldsErr);
+        Swal.fire({
+          title: 'Oops!',
+          text: "Something went wrong. Please refresh the page and try again",
+        })
         return;
       }
       $('.place-order-btn').on('click', function(event){
         event.preventDefault();
-        console.log($('#credit-card-number').val())
-        if($('#credit-card-number').val() == undefined){
-          window.scroll(0,0)
-          Swal.fire({
-            title: 'Payment Method Required',
-            text: "Please enter your card details",
-            showConfirmButton: false,
-          })
-          return
-        }
-        Swal.fire({
-          title: 'Order Processing',
-          text: "Please wait while we complete your order, do not refresh your browser or use the back button",
-          showConfirmButton: false,
-        })
+        
         hostedFieldsInstance.tokenize(function (tokenizeErr, payload) {
           if (tokenizeErr) {
-            console.error(tokenizeErr);
+            if(tokenizeErr.code == 'HOSTED_FIELDS_FIELDS_EMPTY'){
+                window.scroll(0,0)
+                Swal.fire({
+                  title: 'Payment Method Required',
+                  text: "Please enter your card details",
+                  showConfirmButton: false,
+                })
+            }else{
+              Swal.fire({
+                title: 'Oops!',
+                text: "Something went wrong. Please refresh the page and try again",
+              })
+            };
             return;
           }
           var billing_type= $('#billing-saved-or-new').val();
           $('#nonce-input').attr('value', payload.nonce);
+          Swal.fire({
+            title: 'Order Processing',
+            text: "Please wait while we complete your order, do not refresh your browser or use the back button",
+            showConfirmButton: false,
+          })
           ticketNB();
-          
         });
       });
     
@@ -1746,7 +1751,9 @@
                 icon: 'error',
                 title: 'Oops...',
                 text: 'Something went wrong! Please try again',
-              })
+              });
+              $('#ticket-checkout-p3').show()
+              $('#p3-preloader').hide()
             } 
           },
       })
