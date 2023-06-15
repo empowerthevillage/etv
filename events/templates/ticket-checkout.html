@@ -397,19 +397,18 @@
                         
                         <div class="col s12">
                         <h6>Express Checkout</h6>
-                        <div class="col s6 m6 l4" style="padding-left:0; padding-right: 0">
+                        </div>
+                        <div class="col s12 m6 l4" style="padding-left:0; padding-right: 0">
                             <button class="btn waves-effect google-button valign-wrapper z-depth-0" id="google-pay-button" style="border: solid 1px rgb(211, 211, 211)">
-                            <img src="{% static 'img/googlepay-full.svg' %}" style="width: 60px; margin-left: 3px">
                             </button>
                         </div>
-                        <div class="col s6 m6 l4" style="padding-left:0; padding-right: 0">
+                        <div class="col s12 m6 l4" style="padding-left:0; padding-right: 0">
                             <div id="paypal-button" style="margin:5px; letter-spacing: 1.5px"></div>
                         </div>
-                        <div class="col s6 m6 offset-m3 l4" style="padding-left:0; padding-right: 0">
+                        <div class="col s12 m6 offset-m3 l4" style="padding-left:0; padding-right: 0">
                             <button class="valign-wrapper btn waves-effect venmo-button z-depth-0" id="venmo-button" style="display:none;">
                             <img src="{% static 'img/venmo-white.svg' %}" style="width: 80px; margin-left: 2px">
                             </button>
-                        </div>
                         </div>
                     </div>
    
@@ -887,13 +886,15 @@
         })
     $('#step1-continue').on('click', function(event){
         event.preventDefault()
-        $('#ticket-checkout-p1').hide()
-        $('#ticket-checkout-p2').show()
+        $('#ticket-checkout-p1').hide();
+        $('#ticket-checkout-p2').show();
+        window.scrollTo(0,0);
     })
     $('#step2-back').on('click', function(event){
         event.preventDefault()
         $('#ticket-checkout-p2').hide();
         $('#ticket-checkout-p1').show();
+        window.scrollTo(0,0);
         
     })
     $('#step-2-billing').on('click', function(event){
@@ -911,42 +912,49 @@
           $('#ticketholder_email').parent('.input-field').append('<p class="required-message">This field is required</p>')
         }
         else{
-          $('#ticket-checkout-p2').hide()
-          $('#ticket-checkout-p3').show()
+          $('#ticket-checkout-p2').hide();
+          $('#ticket-checkout-p3').show();
+          window.scrollTo(0,0);
         }
     })
     $('#step3-back').on('click', function(event){
         event.preventDefault()
         $('#ticket-checkout-p3').hide();
         $('#ticket-checkout-p2').show();
+        window.scrollTo(0,0);
         
     })
     $('#sponsor-step3-back').on('click', function(event){
         event.preventDefault()
         $('#sponsor-checkout-p3').hide();
         $('#sponsor-checkout-p2').show();
+        window.scrollTo(0,0);
         
     })
     $('#sponsor-step1-continue').on('click', function(event){
         event.preventDefault()
-        $('#sponsor-checkout-p1').hide()
-        $('#sponsor-checkout-p2').show()
+        $('#sponsor-checkout-p1').hide();
+        $('#sponsor-checkout-p2').show();
+        window.scrollTo(0,0);
     })
     $('#sponsor-step2-back').on('click', function(event){
         event.preventDefault()
         $('#sponsor-checkout-p2').hide();
         $('#sponsor-checkout-p1').show();
+        window.scrollTo(0,0);
         
     })
     $('#sponsor-step-2-billing').on('click', function(event){
         event.preventDefault()
-        $('#sponsor-checkout-p2').hide()
-        $('#sponsor-checkout-p3').show()
+        $('#sponsor-checkout-p2').hide();
+        $('#sponsor-checkout-p3').show();
+        window.scrollTo(0,0);
     })
     $('#sponsor-step3-back').on('click', function(event){
         event.preventDefault()
         $('#sponsor-checkout-p3').hide();
         $('#sponsor-checkout-p2').show();
+        window.scrollTo(0,0);
         
     })
     $(document).on('click', '.cartRemove', function(){
