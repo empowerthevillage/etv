@@ -187,7 +187,7 @@
                     </table>
                 </div>
                 <div class="valign-wrapper" style="padding-top: 10px;">
-                    <p style="margin-top:0" class="summary-total" id="total-container-1">Total - <div class="total-line">${{ cart.total|intcomma }}</div> <a style="margin-bottom: 5px" href="" class="btn  {% if %" id="step1-continue" style="background-color: rgb(29, 154, 29) !important; font-size: 32px !important">Continue</a>
+                    <p style="margin-top:0" class="summary-total" id="total-container-1">Total - <div class="total-line">${{ cart.total|intcomma }}</div> <a style="margin-bottom: 5px" href="" class="btn checkout" id="step1-continue" style="background-color: rgb(29, 154, 29) !important; font-size: 32px !important">Continue</a>
                         <p class="secure secure-lg"><i class="fas fa-lock"></i> Secure </p></p>
                 </div>
                 <p class="secure-mobile"><i class="fas fa-lock"></i> Secure</p>
@@ -1505,6 +1505,16 @@
       }
       $('.place-order-btn').on('click', function(event){
         event.preventDefault();
+        console.log($('#credit-card-number').val())
+        if($('#credit-card-number').val() == undefined){
+          window.scroll(0,0)
+          Swal.fire({
+            title: 'Payment Method Required',
+            text: "Please enter your card details",
+            showConfirmButton: false,
+          })
+          return
+        }
         Swal.fire({
           title: 'Order Processing',
           text: "Please wait while we complete your order, do not refresh your browser or use the back button",
