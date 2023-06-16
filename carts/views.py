@@ -374,11 +374,11 @@ def checkout_done(request):
       
       
 def ticket_receipt(request):
-    ticket_obj = SingleTicket.objects.filter(ticket_id='9cvronsq').first()
+    ticket_obj = SingleTicket.objects.filter(ticket_id='btgdbwc').first()
     print(ticket_obj)
     event = ticket_obj.event
     ticket_list = [ticket_obj]
-    to = 'genesisphotoart@aol.com'
+    to = 'ayanacuevas@yahoo.com'
     confirmation_subject = 'ETV Ticket Purchase Confirmation'
     from_email = 'etvnotifications@gmail.com'
     confirmation_content = render_to_string('ticket-email.html',
@@ -769,7 +769,7 @@ def full_gallery_sale(request):
             'order': order_obj
         })
         
-        recipients = ['chandler@eliftcreations.com', 'shannon@empowerthevillage.org', 'admin@empowerthevillage.org', 'ayo@empowerthevillage.org','heathercarter1017@gmail.com','ccolon@nmfonline.org']
+        recipients = ['chandler@eliftcreations.com', 'shannon@empowerthevillage.org', 'admin@empowerthevillage.org', 'ayo@empowerthevillage.org']
         #recipients = ['chandler@eliftcreations.com']
         item_string = ''
         try:
