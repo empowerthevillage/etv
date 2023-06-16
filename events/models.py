@@ -464,6 +464,7 @@ class CompleteDonation(models.Model):
     class Meta:
         verbose_name = 'Event Donation'
         verbose_name_plural = 'Event Donations'
+        ordering = ['-created']
 
 class Artist(models.Model):
     name            = models.CharField(max_length=270)
