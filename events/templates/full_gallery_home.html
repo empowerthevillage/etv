@@ -83,6 +83,9 @@
                             {% if x.donated %}
                             <p id="item-dimensions-sm"><b style="color:#cb1010">100% Donated to ETV!</b></p>
                             {% endif %}
+                            {% if x.note %}
+                            <p id="item-dimensions-sm"><b style="color:#cb1010">{{ x.note }}</b></p>
+                            {% endif %}
                             {% if x.get_availability == True %}
                             <div id="sold-btn" class="btn disabled">Sold</div>
                             {% else %}
