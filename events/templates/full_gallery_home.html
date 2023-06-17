@@ -124,9 +124,10 @@
                             <div class="artist-details">
                                 <p id="item-title-sm" style="margin-top: 0">{{ x.name }}</p>
                                 <p id="item-description-sm" id="{{ x.pk }}-bio">{{ x.bio }}</p>
-                                
                             </div>
+                            {% if x.bio %}
                             <p class="artist-read-more right" target="{{ x.pk }}-bio">Read Full Bio ></p>
+                            {% endif %}
                         </div>
                 {% endfor %}
             </div>

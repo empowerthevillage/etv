@@ -1102,7 +1102,7 @@ def gallery_search(request):
         items = FullGalleryItem.objects.filter(Q(artist__icontains=artist) & Q(active=True))
 
     if len(items) > 0:
-        p = Paginator(items, 12)
+        p = Paginator(items, 24)
         html = render_to_string('gallery-next.html', {'page': p.get_page(1), 'error_msg': None})
         return HttpResponse(html)
     else:
