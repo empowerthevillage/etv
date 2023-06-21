@@ -164,7 +164,7 @@
                     <div style="width:100%; display: flex; justify-content: center"><div style="display:flex; align-items: center"><i class="material-icons">lock</i> Secure </div></div>
                 </div>
                 <form id="address-form">
-                  <fieldset class="checkout-fieldset z-depth-1" style="padding: 3% 10% 0% 10%">
+                  <fieldset class="checkout-fieldset z-depth-1" style="padding: 3% 10% 0% 10%; height: fit-">
                     <div class="row">
                       <div class="col s12 center-align">
                         <h6 class="fieldset-title" style="margin-bottom: 15px">Shipping Information (optional)</h6>
@@ -172,10 +172,11 @@
                       <p style="margin-bottom: 0;">
                         <label>
                           <input type="checkbox" name="shipped" id="shipped"/>
-                          <span>I would like my order to be shipped</span>
+                          <span>I would like my art shipped</span>
                         </label>
                       </p>
-                      <div class="hidden" id="shipping-details">
+                      <div class="hidden" id="shipping-details"  style="padding-top: 10px;">
+                        <div class="col s12"><b class="required">*Additional charge applies, ETV will contact you separately to coordinate shipping</b></div>
                           <div class="col s12 input-field">
                               <label for="shipping-name">Recipient Name</label>
                               <input type="text" name="name" id="shipping-name">
@@ -555,17 +556,20 @@
   })
     $('#step1-continue').on('click', function(event){
         event.preventDefault()
+        window.scroll(0,0)
         $('#ticket-checkout-p1').hide()
         $('#ticket-checkout-p2').show()
     })
     $('#step2-back').on('click', function(event){
         event.preventDefault()
+        window.scroll(0,0)
         $('#ticket-checkout-p2').hide();
         $('#ticket-checkout-p1').show();
         
     })
     $('#step-2-billing').on('click', function(event){
         event.preventDefault()
+        window.scroll(0,0)
         if ($('#ticketholder_first_name').val()==''){
           $('#ticketholder_first_name').focus()
           $('#ticketholder_first_name').parent('.input-field').append('<p class="required-message">This field is required</p>')
@@ -598,6 +602,7 @@
     })
     $('#step3-back').on('click', function(event){
         event.preventDefault()
+        window.scroll(0,0)
         $('#ticket-checkout-p3').hide();
         $('#ticket-checkout-p2').show();
         
@@ -1135,12 +1140,14 @@
         })
         hostedFieldsInstance.tokenize(function (tokenizeErr, payload) {
           if (tokenizeErr) {
-            console.error(tokenizeErr);
+            Swal.fire({
+              title: 'Verify Card Details',
+              text: "Invalid card details. Please double check your card details and try again.",
+            })
             return;
           }
           $('#nonce-input').attr('value', payload.nonce);
           galleryCheckout();
-          
         });
       });
       $('#step3-continue').on('click', function(event){
@@ -1152,7 +1159,10 @@
         })
         hostedFieldsInstance.tokenize(function (tokenizeErr, payload) {
           if (tokenizeErr) {
-            console.error(tokenizeErr);
+            Swal.fire({
+              title: 'Verify Card Details',
+              text: "Invalid card details. Please double check your card details and try again.",
+            })
             return;
           }
           $('#nonce-input').attr('value', payload.nonce);

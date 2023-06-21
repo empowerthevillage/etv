@@ -198,7 +198,6 @@ def nsnb_update(request):
         email = request.POST.get('email')
         request.session['guest_email'] = email
         billing_profile, billing_profile_created = BillingProfile.objects.new_or_get(request)
-        print(billing_profile)
     cart_obj, cart_created = Cart.objects.new_or_get(request)
     order_obj, order_obj_created = Order.objects.new_or_get(billing_profile, cart_obj)
     shipping_address_tuple = Address.objects.get_or_create(
@@ -375,7 +374,6 @@ def checkout_done(request):
       
 def ticket_receipt(request):
     ticket_obj = SingleTicket.objects.filter(ticket_id='btgdbwc').first()
-    print(ticket_obj)
     event = ticket_obj.event
     ticket_list = [ticket_obj]
     to = 'ayanacuevas@yahoo.com'
@@ -683,7 +681,6 @@ def full_gallery_cart_remove(request):
     return JsonResponse(response)
 
 def full_gallery_sale(request):
-    print(request.POST)
     billing_profile, billing_profile_created = BillingProfile.objects.new_or_get(request)
     if billing_profile is None:
         email = request.POST.get('email')
