@@ -371,7 +371,36 @@ def checkout_done(request):
     }
     return render(request, "carts/checkout-done.html", context)
       
-      
+def art_receipt(request):
+    items = [FullGalleryItem.objects.filter(title='Passion').first()]
+    confirmation_subject = 'ETV Love of Art Pre-Sale Purchase Confirmation'
+    from_email = 'etvnotifications@gmail.com'
+    email = 'rweaver@socialenterprisedirectory.com'
+    confirmation_content = render_to_string('presale-email.html',
+    {
+        'items': items,
+    })
+    confirmation_plain_text = 'View email in browser'      
+    
+    send_mail(confirmation_subject, confirmation_plain_text, from_email, [str(email)], html_message=confirmation_content)
+    detail_content = render_to_string('presale-admin-email.html',
+    {
+        'purchaser': 'Rasheda Weaver',
+        'items': items,
+    })
+    
+    recipients = ['chandler@eliftcreations.com', 'admin@empowerthevillage.org', 'ayo@empowerthevillage.org']
+    #recipients = ['chandler@eliftcreations.com']
+    send_mail(
+        'New Art Show Pre-Sale Purchase!',
+        str('A ticket purchase has been successfully processed! Purchaser: '+ str(email)),
+        'etvnotifications@gmail.com',
+        recipients,
+        html_message=detail_content,
+        fail_silently=True
+    )
+    return HttpResponse('receipt sent successfully!')
+        
 def ticket_receipt(request):
     ticket_obj = SingleTicket.objects.filter(ticket_id='btgdbwc').first()
     event = ticket_obj.event

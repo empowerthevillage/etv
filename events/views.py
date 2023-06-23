@@ -1084,6 +1084,37 @@ def gallery_get_next(request):
     else:
         html = render_to_string('gallery-next.html', {'error_msg': True, 'message': 'End of Gallery'})
     return HttpResponse(html)
+
+def gallery_search_available(request):
+    try:
+        availability = request.GET['availability']
+        if availability == 'available':
+            availability = False
+        elif availability == 'sold':
+            availability = True
+    except:
+        availability = None
+    try:
+        title = request.GET['title']
+    except:
+        title = None
+        
+    if title and availability is not None:
+        items = FullGalleryItem.objects.filter(Q(title__icontains=title) & Q(sold=availability) & Q(active=True))
+    
+    elif title:
+        items = FullGalleryItem.objects.filter(Q(title__icontains=title) & Q(active=True))
+        
+    elif availability is not None:
+        items = FullGalleryItem.objects.filter(Q(sold=availability) & Q(active=True))
+    
+    if len(items) > 0:
+        p = Paginator(items, 24)
+        html = render_to_string('gallery-next.html', {'page': p.get_page(1), 'error_msg': None})
+        return HttpResponse(html)
+    else:
+        html = render_to_string('gallery-next.html', {'error_msg': True, 'message': 'No Matching Pieces Found', 'page': None})
+        return HttpResponse(html)
     
 def gallery_search(request):
     try:

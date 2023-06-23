@@ -41,6 +41,7 @@
                             <input name="title" id="title-search" type="text">
                             <label>Title</label>
                         </div>
+                        <!--
                         <div class="input-field col s12 m6" style="margin-top: 0">
                             <select name="artist" id="artist-search">
                                 <option value="" selected>Select Artist</option>
@@ -49,13 +50,22 @@
                                 {% endfor %}
                             </select>
                             <label>Artist</label>
-                            
+                        </div>
+                        -->
+                        <div class="input-field col s12 m6" style="margin-top: 0">
+                            <select name="availability" id="availability-search">
+                                <option value="" selected>Select Availability</option>
+                                <option value="available">Available</option>
+                                <option value="sold">Sold</option>
+                            </select>
+                            <label>Search by Availablity</label>
                         </div>
                         <div class="btn" type="submit" id="search-title-go" style="margin-left: 10px">Search</div>
                         </div>
                         <div class="col s12 valign-wrapper" style="color: rgb(59, 95, 252); cursor: pointer; display: none" id="filter-blank"><span class="material-icons">
                             visibility
-                            </span> &nbsp; View Full Gallery</div>
+                            </span> &nbsp; View Full Gallery
+                        </div>
                     </form>
                 </div>
                 <div id="gallery-container">
@@ -616,7 +626,7 @@
         var data = $('#gallery-search').serialize()
         $.ajax({
             data: data,
-            url: '/events/gallery-search/',
+            url: '/events/gallery-search-available/',
             method: 'GET',
             success: function(data){
                 $('#filter-blank').show()
@@ -632,7 +642,10 @@
     });
     $('#filter-blank').on('click', function(){
         var btn = $('#load-more-btn')
-        var data = {'page': 1}
+        var data = {
+            'page': 0,
+            'next_page': 1,
+        }
         $.ajax({
             data: data,
             url: '/events/gallery-get-next/',

@@ -47,12 +47,9 @@ def walker_detail(request, walker):
             donation_list = WalkerDonation.objects.filter(walker=walker_obj)
         except:
             walker_obj = Organization.objects.get(slug=walker)
-            print(walker_obj)
             walker_list = Walker.objects.filter(organization=walker_obj)
-            print(walker_list)
             walker_type = 'org'
             donation_list = OrgDonation.objects.filter(organization=walker_obj)
-            print(donation_list)
         context = {
             'title': 'Support %s' %(walker_obj),
             'walker': walker_obj,
@@ -83,7 +80,6 @@ def walker_registration(request):
     if request.method == 'POST':
         data = request.POST
         files = request.FILES
-        print(data['pledge'])
         nonce_id = data['nonce']
         first_name = data['walker_first_name']
         last_name = data['walker_last_name']
