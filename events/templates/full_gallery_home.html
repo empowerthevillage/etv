@@ -41,7 +41,6 @@
                             <input name="title" id="title-search" type="text">
                             <label>Title</label>
                         </div>
-                        <!--
                         <div class="input-field col s12 m6" style="margin-top: 0">
                             <select name="artist" id="artist-search">
                                 <option value="" selected>Select Artist</option>
@@ -50,15 +49,6 @@
                                 {% endfor %}
                             </select>
                             <label>Artist</label>
-                        </div>
-                        -->
-                        <div class="input-field col s12 m6" style="margin-top: 0">
-                            <select name="availability" id="availability-search">
-                                <option value="" selected>Select Availability</option>
-                                <option value="available">Available</option>
-                                <option value="sold">Sold</option>
-                            </select>
-                            <label>Search by Availablity</label>
                         </div>
                         <div class="btn" type="submit" id="search-title-go" style="margin-left: 10px">Search</div>
                         </div>
@@ -626,11 +616,12 @@
         var data = $('#gallery-search').serialize()
         $.ajax({
             data: data,
-            url: '/events/gallery-search-available/',
+            url: '/events/gallery-search/',
             method: 'GET',
             success: function(data){
                 $('#filter-blank').show()
                 $('#gallery-container').html(data)
+                $('#load-more-btn').hide()
                 $('#load-preloader').hide();
                 btn.show();
             },

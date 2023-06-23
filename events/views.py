@@ -1058,7 +1058,7 @@ def full_gallery_cart_home(request):
 
 def full_gallery_home(request):
     cart_obj, created = FullGalleryCart.objects.new_or_get(request)
-    items = FullGalleryItem.objects.filter(active=True).order_by('artist', 'title')[:12]
+    items = FullGalleryItem.objects.filter(active=True).order_by('sold', 'artist', 'title')[:12]
     artists = Artist.objects.filter(active=True).order_by('name')
     auction_items = AuctionItem.objects.all()
     filter = GalleryFilter(request.GET, queryset=items)
@@ -1073,7 +1073,7 @@ def full_gallery_home(request):
 
 def gallery_get_next(request):
     requested_page = request.GET['next_page']
-    items = FullGalleryItem.objects.filter(active=True).order_by('artist', 'title')
+    items = FullGalleryItem.objects.filter(active=True).order_by('sold', 'artist', 'title')
     p = Paginator(items, 12)
     next_page = int(requested_page) + 1
     page = p.get_page(requested_page)
