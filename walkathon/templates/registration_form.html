@@ -488,8 +488,8 @@ braintree.client.create({
         });
         return;
       }else if($('#shirt-boolean').is(':checked')){
-        if ($('[name="shirt-size"]:selected').val() != undefined){
-          alert($('[name="shirt-size"]:selected').val())
+        if ($('#shirt-size-selector').find(':selected').val() != ''){
+          
         }else{
           Swal.fire({
             'title': 'Required field missing',
