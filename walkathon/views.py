@@ -2,13 +2,11 @@ from django.shortcuts import render, redirect
 from .models import Walker, HomeGalleryImage, Organization, ShirtOrder, WalkerRegistrationPayment, Sponsorship, WalkerDonation, OrgDonation, WalkerPledgePayment
 from addresses.forms import BillingAddressForm
 from django.conf import settings
-from django.http import JsonResponse
+from django.http import JsonResponse, HttpResponse
 from django.template.loader import render_to_string
 
 from datetime import datetime
 
-import time
-import sweetify
 from django.core.mail import send_mail
 
 from mailchimp_marketing import Client
@@ -20,6 +18,7 @@ mailchimp.set_config({
 })
 
 gateway = settings.GATEWAY
+gateway_public = settings.GATEWAY_PUBLIC
 
 def walker_home(request):
     individuals = Walker.objects.all()
@@ -434,3 +433,16 @@ def process_walker_donation(request):
                 'message': 'There was an issue processing your payment method. Please verify your card details and try again'
             }
             return JsonResponse(data)
+        
+def populate_emails(request):
+
+    walker_donations = WalkerDonation.objects.all()
+    for x in walker_donations:
+        try:
+            transaction = gateway_public.transaction.find(str(x.braintree_id))
+            email = transaction.customer_details.email
+            x.email = email
+            x.save()
+        except:
+            print('email not found - %s' %(x.braintree_id))
+    return HttpResponse('success')

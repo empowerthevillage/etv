@@ -487,6 +487,17 @@ braintree.client.create({
           'text': 'Please review and accept the 2023 Power Walk Waiver'
         });
         return;
+      }else if($('#shirt-boolean').is(':checked')){
+        if ($('[name="shirt-size"]:selected').val() != undefined){
+          alert($('[name="shirt-size"]:selected').val())
+        }else{
+          Swal.fire({
+            'title': 'Required field missing',
+            'icon': 'error',
+            'text': 'Please select your shirt size'
+          });
+          return;
+        }
       }
       hostedFieldsInstance.tokenize(function (tokenizeErr, payload) {
         if (tokenizeErr) {
@@ -525,15 +536,25 @@ braintree.client.create({
           method: 'POST',
           url: '/power-walk-2023/register/',
           success: function(data){
-            Swal.fire(
-              'Registration successful!',
-              "You're all set! We'll see you at the Power Walk on Saturday, July 15th",
-              "success",
-            )
-            $('#preloader').hide();
-            $('#form-container').remove();
-            $('#success-container').show();
-            $('#success-container').html(data.html);
+            if(data.status == 'success'){
+              Swal.fire(
+                'Registration successful!',
+                "You're all set! We'll see you at the Power Walk on Saturday, July 15th",
+                "success",
+              )
+              $('#preloader').hide();
+              $('#form-container').remove();
+              $('#success-container').show();
+              $('#success-container').html(data.html);
+            }else{
+              Swal.fire(
+                "Payment Unsuccessful",
+                "We weren't able to charge your payment method. Please verify your card details and try again",
+                "success",
+              )
+              $('#preloader').hide();
+              $('#form-container').removeClass('hidden');
+            }
           },
           error: function(){
             Swal.fire(
