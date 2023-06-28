@@ -550,7 +550,7 @@ braintree.client.create({
               Swal.fire(
                 "Payment Unsuccessful",
                 "We weren't able to charge your payment method. Please verify your card details and try again",
-                "success",
+                "error",
               )
               $('#preloader').hide();
               $('#form-container').removeClass('hidden');
