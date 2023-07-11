@@ -774,7 +774,7 @@ def full_gallery_sale(request):
         
         cart_obj.active = False
         cart_obj.save()
-        confirmation_subject = 'ETV Love of Art Art Purchase Confirmation'
+        confirmation_subject = "ETV Martha's Vineyard Friends of the Village Art Gallery Purchase Confirmation"
         from_email = 'etvnotifications@gmail.com'
         confirmation_content = render_to_string('art-email.html',
         {
@@ -805,7 +805,7 @@ def full_gallery_sale(request):
             pass
         send_mail(
             'New Art Show Purchase!',
-            str('An art piece has been successfully processed! Purchaser: '+ str(email)+' Items: '+ str(item_string)),
+            str('An art piece purchase has been successfully processed! Purchaser: '+ str(email)+' Items: '+ str(item_string)),
             'etvnotifications@gmail.com',
             recipients,
             html_message=detail_content,

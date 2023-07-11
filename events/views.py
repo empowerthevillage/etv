@@ -1054,22 +1054,20 @@ def full_gallery_cart_home(request):
         'cart': cart_obj,
         'state_options': STATE_CHOICES,
     }
-    return render(request, 'full_gallery_cart.html', context)
+    return render(request, 'mv_full_gallery_cart.html', context)
 
 def full_gallery_home(request):
     cart_obj, created = FullGalleryCart.objects.new_or_get(request)
     items = FullGalleryItem.objects.filter(active=True).order_by('sold', 'artist', 'title')[:12]
     artists = Artist.objects.filter(active=True).order_by('name')
-    auction_items = AuctionItem.objects.all()
     filter = GalleryFilter(request.GET, queryset=items)
     context = {
         'items': items,
         'cart': cart_obj,
         'filter': filter,
-        'auction_items': auction_items,
         'artists': artists,
     }
-    return render(request, 'full_gallery_home.html', context)
+    return render(request, 'mv_gallery_home.html', context)
 
 def gallery_get_next(request):
     requested_page = request.GET['next_page']
