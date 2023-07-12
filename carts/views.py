@@ -795,8 +795,8 @@ def full_gallery_sale(request):
             'order': order_obj
         })
         
-        recipients = ['chandler@eliftcreations.com', 'shannon@empowerthevillage.org', 'admin@empowerthevillage.org', 'ayo@empowerthevillage.org']
-        #recipients = ['chandler@eliftcreations.com']
+        #recipients = ['chandler@eliftcreations.com', 'shannon@empowerthevillage.org', 'admin@empowerthevillage.org', 'ayo@empowerthevillage.org']
+        recipients = ['chandler@eliftcreations.com']
         item_string = ''
         try:
             for x in items:
