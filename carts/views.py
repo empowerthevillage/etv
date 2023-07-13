@@ -546,11 +546,11 @@ def ticket_nb(request):
             'event': event
         })
         if event.title == 'Power Swing Classic Fundraiser':
-            #recipients = ['chandler@eliftcreations.com', 'admin@empowerthevillage.org', 'ayo@empowerthevillage.org', 'powerswing@empowerthevillage.org']
-            recipients = ['chandler@eliftcreations.com']
+            recipients = ['chandler@eliftcreations.com', 'admin@empowerthevillage.org', 'ayo@empowerthevillage.org', 'powerswing@empowerthevillage.org']
+            #recipients = ['chandler@eliftcreations.com']
         else:
-            recipients = ['chandler@eliftcreations.com']
-            #recipients = ['chandler@eliftcreations.com', 'admin@empowerthevillage.org', 'ayo@empowerthevillage.org']
+            #recipients = ['chandler@eliftcreations.com']
+            recipients = ['chandler@eliftcreations.com', 'admin@empowerthevillage.org', 'ayo@empowerthevillage.org']
         send_mail(
             'New %s Ticket Purchase' %(event),
             str('A ticket purchase has been successfully processed! Purchaser: '+ str(email)),
@@ -795,8 +795,8 @@ def full_gallery_sale(request):
             'order': order_obj
         })
         
-        #recipients = ['chandler@eliftcreations.com', 'shannon@empowerthevillage.org', 'admin@empowerthevillage.org', 'ayo@empowerthevillage.org']
-        recipients = ['chandler@eliftcreations.com']
+        recipients = ['chandler@eliftcreations.com', 'shannon@empowerthevillage.org', 'admin@empowerthevillage.org', 'ayo@empowerthevillage.org']
+        #recipients = ['chandler@eliftcreations.com']
         item_string = ''
         try:
             for x in items:
