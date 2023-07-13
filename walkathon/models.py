@@ -121,6 +121,7 @@ class Walker(models.Model):
             total += x.amount
         for x in donations:
             total += x.amount
+        print(total)
         return math.trunc(total)
     
     @property

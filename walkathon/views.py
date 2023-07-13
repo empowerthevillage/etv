@@ -434,15 +434,3 @@ def process_walker_donation(request):
             }
             return JsonResponse(data)
         
-def populate_emails(request):
-
-    walker_donations = WalkerDonation.objects.all()
-    for x in walker_donations:
-        try:
-            transaction = gateway_public.transaction.find(str(x.braintree_id))
-            email = transaction.customer_details.email
-            x.email = email
-            x.save()
-        except:
-            print('email not found - %s' %(x.braintree_id))
-    return HttpResponse('success')
