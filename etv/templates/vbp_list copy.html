@@ -44,7 +44,7 @@
                     <div class="carousel" id="carousel-sm">
                         
                         {% for vbp_book in covers_qs %}
-                            <div class="carousel-item c1" id="carousel{{ vbp_book.state }}" name="US-{{ vbp_book.state }}" style="background-image:url({{ vbp_book.cover.url }}); background-size: 100%; cursor: pointer;"></div>
+                            <div class="carousel-item c1" id="carousel{{ vbp_book.state }}" name="US-{{ vbp_book.state }}" style="background-image:url({{ vbp_book.cover_url }}); background-size: 100%; cursor: pointer;"></div>
                         {% endfor %}
                     </div>
                 </div>
@@ -52,9 +52,9 @@
                 <div style="text-align: justify; width: 100%;">
                     <h4 class="center-align strategy-title"><a id="state-strategy-title" style="color:#bf1e2d; filter: brightness(0.8)">Phase One Agenda:</a> 25-State* Targeted Strategy</h4>
                     <div class="row center-align" style="margin-top:15px">
-                        <img src="{% static 'img/90percent.png' %}" width=15%>
+                        <img src="https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/90-percent.png" width=15%>
                         
-                        <img src="{% static 'img/people graphic.png' %}" width=15% style="margin-left:2%">
+                        <img src="https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/43-million.png" width=15% style="margin-left:2%">
                     </div>
                     <div class="vbp-text" style="margin-top: 30px">
                         <p class="center-align" style="margin-bottom:0"><b>90+% of Black Americans (~43M+) live, work</b></p>
@@ -322,7 +322,7 @@
         
             <div class="carousel" id="carousel-cr">
                 {% for vbp_book in covers_qs %}
-                    <div class="carousel-item c2" id="carousel{{ vbp_book.state }}-2" name="US-{{ vbp_book.state }}" style="background-image:url({{ vbp_book.cover.url }}); background-size: 100%; cursor: pointer;"></div>
+                    <div class="carousel-item c2" id="carousel{{ vbp_book.state }}-2" name="US-{{ vbp_book.state }}" style="background-image:url({{ vbp_book.cover_url }}); background-size: 100%; cursor: pointer;"></div>
                 {% endfor %}
             </div>
                 
@@ -332,7 +332,7 @@
             </div>     
             {% for vbp_book in covers_qs %}
             <div class="col s6 m3"  style="padding: 1%">
-                <img class="z-depth-2 grid-item" src="{{ vbp_book.cover.url }}" id="grid-{{ vbp_book.state }}" name="US-{{ vbp_book.state }}" width="100%" style="cursor:pointer">
+                <img class="z-depth-2 grid-item" src="{{ vbp_book.cover_url }}" id="grid-{{ vbp_book.state }}" name="US-{{ vbp_book.state }}" width="100%" style="cursor:pointer">
             </div>
             {% endfor %}
         </div>
@@ -515,10 +515,7 @@
         }
     </style>
 </div>
-<script src="{% static 'js/raphael.js' %}"></script>
-<script src="{% static 'js/jquery.usmap.js' %}"></script>
-<script src="{% static 'js/jquery-jvectormap-2.0.5.min.js' %}"></script>
-<script src="{% static 'js/jquery-jvectormap-us-aea.js' %}"></script>
+
 <script>
     
     $(function(){
@@ -1639,7 +1636,7 @@ $('svg').resize(function(event){
       padding-top: 10px
     }
     #page {
-      background-image: url("https://empowerthevillage.s3.amazonaws.com/static/img/login-collage.svg");
+      background-image: url("https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/vbp-collage.webp");
       background-size: 50%;
       background-repeat: repeat;
     }
@@ -1715,11 +1712,11 @@ $('svg').resize(function(event){
   
   {% for vbp_book in covers_qs %}
   #cover-page[value~='US-{{ vbp_book.state }}']{
-      background-image: url('https://empowerthevillage.s3.amazonaws.com/media/VBP-covers/{{ vbp_book.state }}-updated.png');
+      background-image: url('{{ vbp_book.cover_url }}');
         background-size: 100%
     }
     #cover-page-mobile[value~='US-{{ vbp_book.state }}']{
-      background-image: url('https://empowerthevillage.s3.amazonaws.com/media/VBP-covers/{{ vbp_book.state }}-updated.png');
+      background-image: url('{{ vbp_book.cover_url }}');
         background-size: 100%
     }
   {% endfor %}
