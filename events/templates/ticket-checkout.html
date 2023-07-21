@@ -407,7 +407,7 @@
                         </div>
                         <div class="col s12 m6 offset-m3 l4" style="padding-left:0; padding-right: 0">
                             <button class="valign-wrapper btn waves-effect venmo-button z-depth-0" id="venmo-button" style="display:none;">
-                            <img src="{% static 'img/venmo-white.svg' %}" style="width: 80px; margin-left: 2px">
+                            <img src="https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/Venmo_Logo_White.png" style="width: 80px; margin-left: 2px">
                             </button>
                         </div>
                     </div>
@@ -669,7 +669,7 @@
         font-size: 12px
     }
     #page {
-        background: url('{% static "img/VBP collage.svg" %}');
+        background: url('https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/vbp-collage.webp');
     }
     #overlay {
         background: rgba(255, 255, 255, 0.959);
@@ -845,6 +845,7 @@
             })
     })
     $('.qty-counter').on('change', function(){
+        alert('sanity')
         var qty = $(this).val()
         var tid = $(this).attr('tid')
         var data = {

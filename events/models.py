@@ -68,6 +68,7 @@ class Event(models.Model):
     page_content    = RichTextField(null=True, blank=True)
     slug            = models.SlugField()
     checkout_image  = models.ImageField(blank=True, null=True)
+    checkout_img_url = models.URLField(blank=True, null=True)
     checkout_img_link = models.CharField(max_length=270, null=True, blank=True)
     checkout_image_2  = models.ImageField(blank=True, null=True)
     checkout_img_link_2 = models.CharField(max_length=270, null=True, blank=True)

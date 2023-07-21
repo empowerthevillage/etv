@@ -299,11 +299,7 @@ ETV | Donate
                       </div>
                       <div class="col s10 offset-s1 m6 offset-m3" style="padding-left:0; padding-right: 0">
                         <button class="valign-wrapper btn waves-effect venmo-button z-depth-0" id="venmo-button" style="display:none;">
-                          <img src="{% static 'img/venmo-white.svg' %}" style="width: 80px; margin-left: 2px">
-                        </button>
-                      </div>
-                      <div class="col s10 offset-s1 m6 offset-m3" style="padding-left:0; padding-right: 0; padding-top: 10px;">
-                        <button id="google-pay-button">
+                          <img src="https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/Venmo_Logo_White.png" style="width: 80px; margin-left: 2px">
                         </button>
                       </div>
                   </div>
@@ -600,118 +596,6 @@ braintree.client.create({
       });
       return;
     }
-  });
-  
-  var googleButton = document.querySelector('#google-pay-button');
-  var paymentsClient = new google.payments.api.PaymentsClient({
-    environment: 'PRODUCTION'
-  });
-  braintree.googlePayment.create({
-    client: clientInstance,
-    googlePayVersion: 2,
-    googleMerchantId: 'BCR2DN6TQ6A4P4CS'
-    
-  }, function (err, googlePaymentInstance) {
-    paymentsClient.isReadyToPay({
-      // see https://developers.google.com/pay/api/web/reference/object#IsReadyToPayRequest for all options
-      apiVersion: 2,
-      apiVersionMinor: 0,
-      allowedPaymentMethods: googlePaymentInstance.createPaymentDataRequest().allowedPaymentMethods,
-      existingPaymentMethodRequired: true
-    }).then(function (isReadyToPay) {
-      if (isReadyToPay.result) {
-        googleButton.addEventListener('click', function(event){
-          event.preventDefault();
-          var totalPrice = $('#donation-level-input').val()
-          var paymentDataRequest = googlePaymentInstance.createPaymentDataRequest({
-            transactionInfo: {
-              currencyCode: 'USD',
-              totalPriceStatus: 'FINAL',
-              totalPrice: totalPrice,
-            }
-          });
-          var cardPaymentMethod = paymentDataRequest.allowedPaymentMethods[0];
-          cardPaymentMethod.parameters.billingAddressRequired = false;
-          paymentsClient.loadPaymentData(paymentDataRequest).then(function(paymentData){
-            googlePaymentInstance.parseResponse(paymentData, function(err, result){
-              if (err) {
-                Swal.fire({
-                  icon: 'error',
-                  title: 'Oops...',
-                  text: err,
-                })
-              }
-              $('.step-1').addClass('hidden');
-              window.scrollTo(0, 0);
-              $('#preloader').show();
-              $('#nonce-input').attr('value', result.nonce);
-              var amount = $('#donation-level-input').val()
-              var frequency = $('#frequency-input').val()
-              var donor_first = $('#id_first_name').val()
-              var donor_last = $('#last_name').val()
-              var donor_email = $('#email').val()
-              var donor_phone = $('#phone').val()
-              var name = String(donor_first + donor_last)
-              var mailing_1 = $('#id_address_line_1').val()
-              var mailing_2 = $('#id_address_line_2').val()
-              var mailing_city = $('#id_city').val()
-              var mailing_state = $('#id_state').val()
-              var mailing_zip = $('#id_zip').val()
-              var csrf_token = $('[name="csrfmiddlewaretoken"]').val()
-              contact_info = {
-                csrfmiddlewaretoken: csrf_token,
-                'amount': amount,
-                'frequency': frequency,
-                'donor_first': donor_first,
-                'donor_last': donor_last,
-                'donor_email': donor_email,
-                'donor_phone': donor_phone,
-                'name': name,
-                'mailing_1': mailing_1,
-                'mailing_2': mailing_2,
-                'mailing_city': mailing_city,
-                'mailing_state': mailing_state,
-                'mailing_zip': mailing_zip,
-              }
-              var nonce_id = result.nonce
-              var frequencyVerbose = $('#frequency-verbose-input').val()
-              var csrf_token = $('[name="csrfmiddlewaretoken"]', '#creditcard-form').val()
-              var data = {
-                csrfmiddlewaretoken: csrf_token,
-                'nonce': nonce_id,
-                'contact_info': contact_info
-              }
-              $.ajax({
-                data: data,
-                method: 'POST',
-                url: '/donation/express-review/',
-                success: function(data){
-                  $('#review-amount').html('<b>Donation Amount:</b> $'+ amount)
-                  $('#review-frequency').html('<b>Donation Frequency:</b> '+frequencyVerbose)
-                  $('#review-nonce').html('<b>Payment Method:</b> Google Pay')
-                  $('#preloader').hide()
-                  $('.step-3').removeClass('hidden')
-              },
-              error: function(data){
-                
-              }
-            });
-            
-            })
-          }).catch(function(err){
-            console.error(err)
-            
-            Swal.fire({
-              icon: 'error',
-              title: 'Oops...',
-              text: 'Something went wrong, please try again!',
-            });
-            $('#preloader').hide()
-            $('.step-1').removeClass('hidden');
-          })
-        })
-      }
-    });
   });
   braintree.paypalCheckout.create({
     client: clientInstance
@@ -1275,12 +1159,12 @@ function handleVenmoSuccess(payload) {
     }
     
     #page {
-        background-image: url("https://empowerthevillage.s3.amazonaws.com/static/img/VBP+collage.svg");
+        background-image: url("https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/vbp-collage.webp");
         background-size: 100%;
         background-repeat: repeat;
     }
     .content-container {
-    padding-top: 5%;
+    padding-top: 2%;
     background-color: rgba(255, 255, 255, 0.954);
     }
     .required {
@@ -1370,10 +1254,6 @@ function handleVenmoSuccess(payload) {
         .fieldset-title {
           font-family: oskar;
           font-size: 24px
-        }
-        .content-container {
-          margin-left: 3%;
-          margin-right: 3%;
         }
     }
     @media only screen and (min-width:993px){
