@@ -61,9 +61,9 @@
                 <div id="gallery-container">
                     {% for x in items %}
                     <div class="col s12 m4 center-align grid-col" style="padding: 1%;">
-                        {% if x.image %}
+                        {% if x.image_url %}
                         <div class="" style="width: 100%">
-                            {% if x.sold %}<div class="sold-out z-index-2">Sold</div>{% endif %}<img class="{% if x.sold %}sold-img{% endif %} z-depth-2 grid-item-mini materialboxed-sm lazy" data-src="{{ x.image.url }}" id="item-sm-{{ x.pk }}" item-title="{{ x.title }}" item-artist="{{ x.artist }}" item-price="{{ x.price }}" item-description="{{ x.description }}" item-dimensions='{{ x.width }}" x {{ x.height }}"' style="cursor:pointer">
+                            {% if x.sold %}<div class="sold-out z-index-2">Sold</div>{% endif %}<img class="{% if x.sold %}sold-img{% endif %} z-depth-2 grid-item-mini materialboxed-sm lazy" data-src="{{ x.image_url }}" id="item-sm-{{ x.pk }}" item-title="{{ x.title }}" item-artist="{{ x.artist }}" item-price="{{ x.price }}" item-description="{{ x.description }}" item-dimensions='{{ x.width }}" x {{ x.height }}"' style="cursor:pointer">
                         </div>
                         {% else %}
                         <div style="display: flex; align-items: center; justify-content: center">
