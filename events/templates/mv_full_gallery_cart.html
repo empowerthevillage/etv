@@ -19,7 +19,7 @@
               {% for x in cart.items.all %}
                 <div class="row z-depth-3 row-{{ x.pk }}" style="padding: 1%">
                     <div class="col s4 l2">
-                        <img src="{{ x.image.url }}" class="z-depth-1" width=100%>
+                        <img src="{{ x.image_url }}" class="z-depth-1" width=100%>
                     </div>
                     <div class="col s8 l10">
                         <p class="ticket-title">{{ x.title }}</p>

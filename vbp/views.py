@@ -567,7 +567,7 @@ def individual_state_view(request, slug):
           listings = county_listings.filter(category=category)
           pages = Paginator(listings, 12)
           if len(listings)>0:
-              cats.append({'category':category, 'verbose':verbose, 'pages':pages, 'start_page':page_counter,"cover": "https://etv-empowerthevillage.s3.amazonaws.com/static/img/vbp/%s.svg" %(str(verbose)), "right": "https://etv-empowerthevillage.s3.amazonaws.com/static/img/vbp/%s_right.svg" %(str(verbose)),"left": "https://etv-empowerthevillage.s3.amazonaws.com/static/img/vbp/%s_left.svg" %(str(verbose))})
+              cats.append({'category':category, 'verbose':verbose, 'pages':pages, 'start_page':page_counter,"cover": "https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/vbp-%s-section-cover.webp" %(category), "right": "https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/vbp-%s-section-right.webp" %(category),"left": "https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/vbp-%s-section-left.webp" %(category)})
               page_counter += pages.num_pages + 1
               
       n = int(len(cats)/2)
@@ -576,7 +576,7 @@ def individual_state_view(request, slug):
       col2 = cats[m:None]
       context = {
           'title': '%s Village Black Pages' %(book_obj.title),
-          'cover_url': str(book_obj.cover.url),
+          'cover_url': str(book_obj.cover_url),
           'sections': cats,
           'col1': col1,
           'col2': col2,
@@ -628,7 +628,7 @@ def individual_book_view(request, slug, state_slug):
               listings = county_listings.filter(category=category)
               pages = Paginator(listings, 12)
               if len(listings)>0:
-                  cats.append({'category':category, 'verbose':verbose, 'pages':pages, 'start_page':page_counter,"cover": "https://etv-empowerthevillage.s3.amazonaws.com/static/img/vbp/%s.svg" %(str(verbose)), "right": "https://etv-empowerthevillage.s3.amazonaws.com/static/img/vbp/%s_right.svg" %(str(verbose)),"left": "https://etv-empowerthevillage.s3.amazonaws.com/static/img/vbp/%s_left.svg" %(str(verbose))})
+                  cats.append({'category':category, 'verbose':verbose, 'pages':pages, 'start_page':page_counter,"cover": "https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/vbp-%s-section-cover.webp" %(category), "right": "https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/vbp-%s-section-right.webp" %(category),"left": "https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/vbp-%s-section-left.webp" %(category)})
                   page_counter += pages.num_pages + 1
           n = int(len(cats)/2)
           m = n+1
@@ -636,7 +636,7 @@ def individual_book_view(request, slug, state_slug):
           col2 = cats[m:None]
           context = {
               'title': '%s Village Black Pages' %(book_obj.title),
-              'cover_url': str(book_obj.cover.url),
+              'cover_url': str(book_obj.cover_url),
               'sections': cats,
               'col1': col1,
               'col2': col2,

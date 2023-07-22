@@ -9,18 +9,18 @@
 
 <div class="parallax-container z-depth-3 box-shadow valign-wrapper">
     
-    <div class="container z-depth-4 center-align parallax-banner" id="bf-parallax">
-        <img src='{% static "img/bf_challenge_logo.png" %}' style="width:95%; padding: 10px">
+    <div class="container z-depth-4 center-align parallax-banner" id="bf-parallax" style="padding-left: 3%; padding-right: 3%; width: fit-content">
+        <h1 class="title"><b>BLACK</b><b style="color:#01a650">FRIDAY</b><b style="color:#bf1e2d">CHALLENGE</b></h1>
     </div>
     <div class="parallax">
-        <img src='{% static "img/bf-challenge-final.png" %}' style="height: 250%;">
+        <img src='https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/bf-challenge-collage.webp' style="width: 100%;">
     </div>
 
 </div>
 
 <div class="row" id="intro-row">
     <div class="col s12 m5 text-center">
-        <img class="" id="timemoney-top" src="{% static 'img/timemoney.png' %}" width=110% height=100% style="margin-right:0px; margin-top:0px; margin-left:0%">
+        <img class="" id="timemoney-top" src="https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/time-money-graphic.png" width=100% height=100% style="margin-right:0px; margin-top:0px; margin-left:0%">
     </div>
     <div class="vbp-text col s12 m7" style="padding-top: 0px">
         <p style="margin-bottom:0; padding-bottom:10px"><b>ETV’s Black Friday (BF) Challenges</b>
@@ -30,11 +30,7 @@
         <p></p>
                         
         <p style="margin-bottom:0; margin-top:10px"><b>The Real Winners are the businesses supported and communities that prosper as a result of the BF Challenge!</b></p>
-        <div class="row center-align" style="padding-top: 10px; padding-bottom: 5px">
-            <div class="col s12">
-                <div class="btn btn-large create-account-btn date-btn" id="getStartedBtn" style="background-color:rgb(24, 144, 24); width: 100%; margin-top: 10px; height: fit-content; line-height: 42px; padding: 20px 10px; font-family: oskar;font-size: 32px;">Click to Get Started!</div>
-            </div>
-        </div>
+        
         <ul class="collapsible z-depth-0" style="border:none;">
         <li>
             <div class="collapsible-header" style="padding:0.75rem">
@@ -106,7 +102,7 @@
     
     </div>
 </div>
-<img class="col s12 timemoney-bottom" src="{% static 'img/timemoney.png' %}" width=90% style="margin-right:0px; margin-top:0px; margin-left:5%">
+<img class="col s12 timemoney-bottom" src="https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/time-money-graphic.png" width=90% style="margin-right:0px; margin-top:0px; margin-left:5%">
 
 <div class="row">
     <div class="col s12 text-center" style="width:100%">
@@ -160,7 +156,7 @@
             </div>
         </div>
     </div>
-    <div class="col s12 l4" style="background:url('{% static 'img/bags_cropped.png' %}'); background-size: 40%">
+    <div class="col s12 l4" style="background:url('https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/shopper.jpg'); background-size: 40%">
         <div class="bg-box">
             <a class="link-title" href="{{ readyss_url }}">Ready, Set, Shop!<br>Challenge&nbsp;<span class="material-icons" style="font-size: 14px;">
                 open_in_new
@@ -178,7 +174,7 @@
             </div>
         </div>
     </div>
-    <div class="col s12 l4" style="background:url('{% static 'img/nomination_challenge.jpg' %}'); background-size: 50%">
+    <div class="col s12 l4" style="background:url('https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/nomination-challenge.jpg'); background-size: 50%">
         <div class="bg-box">
             <a class="link-title" href="{{ nomination_url }}">VBP® Nomination<br>Challenge &nbsp;<span class="material-icons" style="font-size: 14px;">
                 open_in_new
@@ -219,6 +215,12 @@
 </style>
 
     <style>
+        h1 {
+            font-size:24px;
+            margin-top: 15px;
+            margin-bottom: 10px;
+
+        }
         .date-btn {
             cursor: default; 
             background-color:rgb(24, 144, 24); 
@@ -274,6 +276,11 @@
             }
         }
         @media only screen and (min-width:601px){
+            h1 {
+                font-size:42px;
+                margin-top: 15px;
+                margin-bottom: 10px;
+            }
             #bf-parallax {
                 width: 70%; 
             }
@@ -314,6 +321,11 @@
         
         }
         @media only screen and (min-width:992px){
+            h1 {
+                font-size:64px;
+                margin-top: 25px;
+                margin-bottom: 15px;
+            }
             #date-btn {
                 font-size: 28px;
                 line-height: 42px; 

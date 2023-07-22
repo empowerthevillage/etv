@@ -116,9 +116,9 @@
                 -webkit-text-fill-color: transparent; margin-bottom: 3%">Meet The Artists</div>
                 {% for x in artists %}
                         <div class="col s12 m6 artist-col">
-                            {% if x.image.url is not None %}
+                            {% if x.image_url is not None %}
                             <div class="left">
-                                <img class="z-depth-2 artist-grid-item-mini materialboxed-sm lazy" data-src="{{ x.image.url }}" style="cursor:pointer">
+                                <img class="z-depth-2 artist-grid-item-mini materialboxed-sm lazy" data-src="{{ x.image_url }}" style="cursor:pointer">
                             </div>
                             {% endif %}
                             <div class="artist-details">

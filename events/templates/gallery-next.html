@@ -3,13 +3,13 @@
 {% if page is not None%}
     {% for x in page.object_list %}
         <div class="col s12 m4 center-align grid-col" style="padding: 1%;">
-            {% if x.image %}
+            {% if x.image_url %}
             <div class="" style="width: 100%">
                 {% if x.sold %}<div class="sold-out z-index-2">Sold</div>{% endif %}
-                <img class="{% if x.sold %}sold-img{% endif %} z-depth-2 materialboxed-sm lazy" data-src="{{ x.image.url }}" id="item-sm-{{ x.pk }}" item-title="{{ x.title }}" src="{{ x.image.url }}" style="max-height: 240px; cursor: pointer"> 
+                <img class="{% if x.sold %}sold-img{% endif %} z-depth-2 materialboxed-sm lazy" data-src="{{ x.image_url }}" id="item-sm-{{ x.pk }}" item-title="{{ x.title }}" src="{{ x.image_url }}" style="max-height: 240px; cursor: pointer"> 
             <!--
                 {% if x.get_availability == True %}<div class="sold-out z-index-2">Sold</div>{% endif %}
-                <img width="100%" class="{% if x.get_availability == True %}sold-img{% endif %} z-depth-2 grid-item-mini materialboxed-sm lazy" data-src="{{ x.image.url }}" id="item-sm-{{ x.pk }}" item-title="{{ x.title }}" item-artist="{{ x.artist }}" item-price="{{ x.price }}" item-description="{{ x.description }}" item-dimensions='{{ x.width }}" x {{ x.height }}"' style="cursor:pointer">
+                <img width="100%" class="{% if x.get_availability == True %}sold-img{% endif %} z-depth-2 grid-item-mini materialboxed-sm lazy" data-src="{{ x.image_url }}" id="item-sm-{{ x.pk }}" item-title="{{ x.title }}" item-artist="{{ x.artist }}" item-price="{{ x.price }}" item-description="{{ x.description }}" item-dimensions='{{ x.width }}" x {{ x.height }}"' style="cursor:pointer">
                 -->
             </div>
             {% else %}
@@ -46,7 +46,11 @@
             </div>
         </div>
     {% endfor %}
-    
+    <script>
+        $(document).ready(function(){
+            $('.materialboxed-sm').materialbox();
+        })
+    </script>
 {% endif %}
 {% if error_msg is not None %}
 <script>

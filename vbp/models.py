@@ -265,6 +265,7 @@ class IndividualBook(models.Model):
     type            = models.CharField(max_length=120, choices=BOOK_TYPE_CHOICES)
     state           = models.CharField(max_length=50, choices=STATE_CHOICES, null=True)
     cover           = models.ImageField(null=True, blank=True)
+    cover_url       = models.URLField(blank=True, null=True)
     
     def __str__(self):
         return str(self.title)

@@ -106,7 +106,7 @@ class Event(models.Model):
 
     @property
     def get_checkout_img_path(self):
-        return 'https://d1z669787inm16.cloudfront.net/media/%s' %(self.checkout_image)
+        return str(self.checkout_img_url)
     
     @property
     def get_checkout_img_path_2(self):
@@ -470,6 +470,7 @@ class CompleteDonation(models.Model):
 class Artist(models.Model):
     name            = models.CharField(max_length=270)
     image           = models.FileField(blank=True, null=True)
+    image_url       = models.URLField(blank=True, null=True)
     bio             = models.TextField(null=True, blank=True)
     active          = models.BooleanField(default=False)
     

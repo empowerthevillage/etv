@@ -9,22 +9,20 @@
 {% block content %}
 <div class="parallax-container z-depth-3 box-shadow valign-wrapper">
     
-    <div class="container z-depth-4 center-align parallax-banner" style="padding: 2%">
-        <div class="row valign-wrapper">
-        <img src="{% static 'img/pillar-logo-single.png' %}" width=100% style="margin-bottom: -20px;">
-    </div>
+    <div class="container z-depth-4 center-align parallax-banner" style="padding: 2%; width: fit-content">
+        <h1><b style="color:#01a650">ETV</b><b>STRATEGIC</b><b style="color:#BF1E2D">PILLARS</b></h1>
     </div>
     <div class="parallax">
-        <img src='{% static "img/pillar-collage-min.jpg" %}'>
+        <img src='https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/vbp-collage.webp'>
     </div>
 
 </div>
-<div class="center-align" style="background: url('{% static 'img/pillar-collage-min.jpg' %}');">
+<div class="center-align" style="background: url('https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/bf-challenge-collage.webp');">
     <div style="padding-top: 40px; padding-bottom: 20px; background-color: rgba(255, 255, 255, 0.884);">
         <div class="pillar-intro" style="margin-bottom: 70px;">
             <div class="row pillar-intro-row z-depth-2">
               <a href="{{ ep_url }}" class="pillar-intro-link">
-                <div class="col s12 l4 pillar-intro-col fade-in" style="background-image: url('{% static 'img/prosperity.svg' %}')">
+                <div class="col s12 l4 pillar-intro-col fade-in" style="background-image: url('https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/prosp-bg.webp')">
                   <div class="pillar-intro-overlay" style="background: #01a650; opacity: 0.55;">
                   </div>
                   <div class="pillar-text-container scale-in-center-2">
@@ -45,7 +43,7 @@
                 </div>
               </a>
               <a href="{{ health_url }}" class="pillar-intro-link">
-                <div class="col s12 l4 pillar-intro-col fade-in" style="background-image: url('{% static 'img/health-wellness.svg' %}');">
+                <div class="col s12 l4 pillar-intro-col fade-in" style="background-image: url('https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/peace-bg.webp');">
                   <div class="pillar-intro-overlay" style="background: #FFDE59; opacity: 0.4;">
                   </div>
                   <div class="pillar-text-container scale-in-center-3">
@@ -64,7 +62,7 @@
                 </div>
               </a>
               <a href="{{ policy_url }}" class="pillar-intro-link">
-                <div class="col s12 l4 pillar-intro-col fade-in" style="background-image: url('{% static 'img/policy-power.svg' %}');">
+                <div class="col s12 l4 pillar-intro-col fade-in" style="background-image: url('https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/power-bg.webp');">
                   <div class="pillar-intro-overlay" style="background: #BF1E2D; opacity: 0.55;">
                   </div>
                   <div class="pillar-text-container scale-in-center-4">
@@ -120,6 +118,12 @@
         font-weight: 300;
     }
     @media only screen and (min-width: 0px) {
+      h1 {
+            font-size:24px;
+            margin-top: 15px;
+            margin-bottom: 10px;
+
+        }
         .power-collapse {
         width: 100%;
         
@@ -169,33 +173,20 @@
         }
     }
     @media only screen and (min-width: 601px) {
-        .power-collapse {
-        width: 100%;
-        
-    }
-    .power-collapse li {
-        
-    }
-    .power-collapse li div{
-        font-size: 16px;
-        padding: 2% 10%
-    }
-        blockquote {
-            font-size: 20px;
-            margin-top: 5% !important;
-            margin-bottom: 5% !important;
-        }
-        .statistic-title {
-            font-size: 38px;
-            width: 50% !important;
-            margin-left: 25%;
-            margin-top: 5%;
-            margin-bottom: 5%;
-        }
+      h1 {
+          font-size:42px;
+          margin-top: 15px;
+          margin-bottom: 10px;
+      }
         
       
     }
     @media only screen and (min-width: 993px) {
+      h1 {
+                font-size:64px;
+                margin-top: 25px;
+                margin-bottom: 15px;
+            }
         blockquote {
             font-size: 22px;
         }

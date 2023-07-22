@@ -198,19 +198,15 @@
             <img class="z-depth-1" src="{{ event.get_checkout_img_path }}" width=100% style="margin-top: 20px">
             {% endif %}
 
-            {% if event.checkout_img_link_2.exists %}
+            {% if event.checkout_img_link_2 %}
             <a href="{{ event.checkout_img_link_2 }}" target="_blank"><img class="z-depth-1" src="{{ event.get_checkout_img_path_2 }}" width=100% style="margin-top: 20px"></a>
-            {% elif event.checkout_image_2.exists %}
+            {% elif event.checkout_image_2 %}
             {{ event.checkout_image_2 }}
             <img class="z-depth-1" src="{{ event.get_checkout_img_path_2 }}" width=100% style="margin-top: 20px">
             {% endif %}
-            {% if event.sponsor_image.exists %}
-            <p class="sponsor-text">ETV's Village Empowerment Network is supported by:</p>
-            <img src="{{ event.get_sponsor_img_path }}" width=100% style="margin-top: 0px">
-            {% endif %}
-            {% if event.checkout_video_html.exists %}
+            {% if event.checkout_video_html %}
             <div style="margin-top: 20px">
-                          {{ event.checkout_video_html|safe }}
+                {{ event.checkout_video_html|safe }}
             </div>            
             {% endif %}
         </div>
@@ -398,14 +394,10 @@
                         <div class="col s12">
                         <h6>Express Checkout</h6>
                         </div>
-                        <div class="col s12 m6 l4" style="padding-left:0; padding-right: 0">
-                            <button class="btn waves-effect google-button valign-wrapper z-depth-0" id="google-pay-button" style="border: solid 1px rgb(211, 211, 211)">
-                            </button>
-                        </div>
-                        <div class="col s12 m6 l4" style="padding-left:0; padding-right: 0">
+                        <div class="col s12 m6" style="padding-left:0; padding-right: 0">
                             <div id="paypal-button" style="margin:5px; letter-spacing: 1.5px"></div>
                         </div>
-                        <div class="col s12 m6 offset-m3 l4" style="padding-left:0; padding-right: 0">
+                        <div class="col s12 m6" style="padding-left:0; padding-right: 0">
                             <button class="valign-wrapper btn waves-effect venmo-button z-depth-0" id="venmo-button" style="display:none;">
                             <img src="https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/Venmo_Logo_White.png" style="width: 80px; margin-left: 2px">
                             </button>
