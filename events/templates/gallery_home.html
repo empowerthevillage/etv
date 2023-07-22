@@ -33,7 +33,7 @@
             {% for x in items %}
                 {% if x.get_availability == True %}
                 <div class="carousel-item" id="item-{{ x.pk }}" item-title="{{ x.title }}" item-artist="{{ x.artist }}" item-price="{{ x.price }}" item-description="{{ x.description }}" item-dimensions='{{ x.width }}" x {{ x.height }}"' status="sold" style="overflow:hidden">
-                    <div class="sold-out z-index-2">Sold</div><img src="{{ x.image.url }}">
+                    <div class="sold-out z-index-2">Sold</div><img src="{{ x.image_url }}">
                 </div>
                 {% else %}
                     {% if x in cart.items.all %}
@@ -41,7 +41,7 @@
                     {% else %}
                     <div class="carousel-item" inCart='false' id="item-{{ x.pk }}" item-id="{{ x.pk }}" item-title="{{ x.title }}" item-artist="{{ x.artist }}" item-price="{{ x.price }}"item-dimensions='{{ x.width }}" x {{ x.height }}"' status="available" item-description="{{ x.description }}">
                     {% endif %}   
-                        <img class="materialboxed" src="{{ x.image.url }}">
+                        <img class="materialboxed" src="{{ x.image_url }}">
                     </div>
                 {% endif %}
             {% endfor %}
@@ -72,7 +72,7 @@
     {% for x in items %}
     <div class="col s12 m6 l3 center-align grid-col" style="padding: 1%;">
         <div class="" style="display: flex; justify-content: center; width: 100%">
-            <img class="z-depth-2 grid-item-mini materialboxed-sm" src="{{ x.image.url }}" id="item-sm-{{ x.pk }}" item-title="{{ x.title }}" item-artist="{{ x.artist }}" item-price="{{ x.price }}" item-description="{{ x.description }}" item-dimensions='{{ x.width }}" x {{ x.height }}"' style="cursor:pointer">
+            <img class="z-depth-2 grid-item-mini materialboxed-sm" src="{{ x.image_url }}" id="item-sm-{{ x.pk }}" item-title="{{ x.title }}" item-artist="{{ x.artist }}" item-price="{{ x.price }}" item-description="{{ x.description }}" item-dimensions='{{ x.width }}" x {{ x.height }}"' style="cursor:pointer">
         </div>
         <div class="gallery-item-details-min center">
             <p id="item-title-sm"></p>

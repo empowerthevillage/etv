@@ -16,12 +16,6 @@
         {% csrf_token %}
          {{ form }}
         <button type="submit" class='btn login-btn' style="margin-top:24; padding:22px; line-height:0px; margin-bottom:15px">Login</button>
-        <div class="center">
-          <a class="btn google-btn" href="{% url 'social:begin' 'google-oauth2' %}?next={{ home_url }}" style="margin-bottom:15px;" id="google-btn">
-            <img src="{% static 'img/etv-google-icon.png' %}" height=18px style="margin-bottom:-6px">&nbsp Continue with Google
-          </a>
-          
-        </div>
       </form>
       
     </div>
@@ -30,8 +24,8 @@
 
 <style>
   #page {
-    background-image: url("https://empowerthevillage.s3.amazonaws.com/static/img/login-collage.svg");
-    background-size: 50%;
+    background-image: url("https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/vbp-collage.webp");
+    background-size: 80%;
     background-repeat: repeat;
   }
   #id_email {

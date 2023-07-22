@@ -41,9 +41,6 @@
         
         <button type="submit" class='btn register-btn' style="margin-top:24; padding:22px; line-height:0px; margin-bottom:15px">Register</button>
         <div class="center">
-          <a class="btn google-btn" href="{% url 'social:begin' 'google-oauth2' %}?next={{ request.path }}" style="margin-bottom:15px;" id="google-btn">
-            <img src="{% static 'img/etv-google-icon.png' %}" height=18px style="margin-bottom:-6px">&nbsp Continue with Google
-          </a>
           <div class="separator" style="margin-top:25px">- OR -</div>
     <p class='' style="color:grey">Already a member of the village?</p>
     <a href='{% url "login" %}' class="btn login-btn2">Login</a>
@@ -64,7 +61,7 @@
     display: none;
   }
   #page {
-    background-image: url("https://empowerthevillage.s3.amazonaws.com/static/img/login-collage.svg");
+    background-image: url("https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/vbp-collage.webp");
     background-size: 50%;
     background-repeat: repeat;
   }
