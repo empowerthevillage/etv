@@ -253,15 +253,16 @@ AWS_FILE_EXPIRE = 200
 AWS_PRELOAD_METADATA = True
 AWS_QUERYSTRING_AUTH = True
 
+AWS_S3_CUSTOM_DOMAIN = 'elift.s3.amazonaws.com'
+AWS_LOCATION = 'static'
+
 DEFAULT_FILE_STORAGE = 'etv.utils.MediaRootS3BotoStorage'
 STATICFILES_STORAGE = 'etv.utils.StaticRootS3BotoStorage'
-AWS_STORAGE_BUCKET_NAME = 'empowerthevillage'
-S3DIRECT_REGION = 'us-east-1'
-AWS_S3_REGION_NAME = 'us-east-1'
+AWS_STORAGE_BUCKET_NAME = 'elift'
 S3_URL = '//%s.s3.amazonaws.com/' % AWS_STORAGE_BUCKET_NAME
-MEDIA_URL = 'https://d1z669787inm16.cloudfront.net/media/'
-MEDIA_ROOT = MEDIA_URL
-STATIC_URL = 'https://d1z669787inm16.cloudfront.net/static/'
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static-cdn", "media_root")
+STATIC_URL = 'https://%s/%s/' % (AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
 ADMIN_MEDIA_PREFIX = STATIC_URL + 'admin/'
 import datetime
 
