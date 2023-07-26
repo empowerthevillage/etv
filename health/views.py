@@ -16,3 +16,9 @@ def health_initiatives(request):
         'title': 'ETV | Health & Wellness Phase One Initiatives',
     }
     return render(request, "phase_one_initiatives.html", context)
+
+def village_assist(request):
+    context = {
+        'title': 'ETV | Village Assist Program',
+    }
+    return render(request, 'village_assist.html', context)

@@ -2,14 +2,14 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %}ETV | Peace{% endblock %}
-{% block canonical %}https://www.empowerthevillage.org/health-and-wellness/{% endblock %}
-{% block seo_description %}ETV Strategic Pillars: Peace{% endblock %}
+{% block title %}{{ title }}{% endblock %}
+{% block canonical %}https://www.empowerthevillage.org/health-and-wellness/village-assist-program/{% endblock %}
+{% block seo_description %}ETV Village Assist Program{% endblock %}
 {% block content %}
 <div class="parallax-container z-depth-3 box-shadow valign-wrapper">
     
     <div class="container z-depth-4 center-align parallax-banner">
-        <h4 style="padding: 1% 0%; font-family: poppins; font-weight: 800; font-size: 62px; letter-spacing: 2px; color:rgb(0, 0, 0)">PEACE</h4>
+        <img src="https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/vap-0216-new.png" width="80%">
     </div>
     <div class="parallax">
         <img src='https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/vbp-collage.webp'>
@@ -18,76 +18,61 @@
 </div>
 <div style="background: url('https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/vbp-collage.webp'); background-size: 120%; height: 100%">
     <div class="row" style="height: 100%; background-color: rgba(255, 255, 255, 0.781); width:100%">
-        
-        <div class="col s12 l10 offset-l1  pillar-body" style="padding-top: 0 !important;">
-            <div class="col s12">
-                <div class="col s12">
-                    <img src="https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/power-walk-title.png" width="100%" style="margin-bottom: 20px;">
-                </div>
-            </div>
-                <div class="row center-align" style="margin-left: 0; margin-right: 0px;">
-                    <p class="pillar-tagline" style="padding-left: 5%; padding-right: 5%; padding-bottom: 0;">
-                        ETV's Peace pillar has a regional footprint focused on improving the mental and physical health of the Black community. It addresses the lack of affordable access to quality healthcare and other health-related concerns plaguing the Black community.
-                        <br><br>In addition, ETV champions and executes programs that foster cultural pride, self-confidence and self-respect, promote a growth mindset and provide critical information.
-                    </p>
+        <div class="col s12 l10 offset-l1  pillar-body">
+                <div class="row center-align" style="margin-left: 0; margin-right: 0">
+                    <h6 class="pillar-tagline" style="padding: 0% 12% 1% 12%; font-size: 22px; font-weight: 600;">
+                        July is National Minority Mental Health Awareness Month!
+                    </h6>
                     <div class="divider" style="margin-bottom: 15px; margin-top: 15px;width: 50%; margin-left: 25%; border-bottom: dotted 3px rgb(222, 222, 222); background-color: transparent"></div>
-              
-                    <div class="row valign-wrapper mi-row" style="margin-left: 0; margin-right: 0">
-                        <img class="col s3" src="https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/peace-rise.png" width="100%">
-                        <div class="col s9 dyk-quote quote-1 z-depth-3" style="background: black; border-radius: 30px;color: white; padding: 10px;">
-                            The number of reported cases of diagnosed mental illness, especially anxiety and depression, as well as the rate of suicide in the Black community, continues to climb in recent years. The racial disparity between Black Americans and other races with respect to physical health challenges also continues to rise. 
+                    <p class="dyk" style="color: rgb(184, 23, 23); margin:0; padding:0; padding-top: 2%; padding-bottom: 0px; margin-top: -10px">Did You Know...?</p>
+                    <div class="row">
+                        <div class="col s12 m9" style="padding-top: 2%;">
+                            <div class="z-depth-3" style="background: black; border-radius: 20px; color: white; padding: 10px; width: 90%; margin-left: 5%; font-size: 20px;">
+                            2 out of 3 Black adults suffering from mental illness did not receive treatment
+                            </div>
+                        </div>
+                        <div class="col s4 offset-s4 m3 offset-m0" style="padding: 10px; display: flex; justify-content: start;">
+                            <img src="https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/vap-dyk-icon-1.png" style="max-height: 150px; width: auto">
                         </div>
                     </div>
-                    <style>
-                        .quote-1 {
-                            font-size: 18px
-                        }
-                        @media only screen and (min-width: 663px){
-                            .quote-1 {
-                                font-size: 24px
-                            }
-                        }
-                        @media only screen and (min-width: 992px){
-                            .quote-1 {
-                                font-size: 28px
-                            }
-                        }
-                    </style>
+                    <div class="row">
+                        <div class="col s4 offset-s4 m2 offset-m0" style="display: flex; justify-content: end">
+                            <img src="https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/vap-65-icon.png" style="max-height: 150px; width: auto">
+                        </div>
+                        <div class="col s12 m10" style="padding-top: 2%;">
+                            <div class="z-depth-3" style="background: black; border-radius: 20px; color: white; padding: 10px; width: 90%; margin-left: 5%; font-size: 20px;">
+                            Nearly 65% of Black youth report traumatic racial experiences, contributing to higher rates of PTSD, depression, and anxiety. In recent years, the rate of suicide in the Black community has also continued to climb
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s12 m9" style="padding-top: 2%;">
+                            <div class="z-depth-3" style="background: black; border-radius: 20px; color: white; padding: 10px; width: 90%; margin-left: 5%; font-size: 20px;">
+                                Black adults below the poverty line are 2X more likely to report serious psychological distress than others.
+                            </div>
+                        </div>
+                        <div class="col s4 offset-s4 m3 offset-m0">
+                            <h2 style="font-family: poppins; font-size: 85px; font-weight: 800; color:#b8261c;text-align: left;">2x</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s4 offset-s4 m3 offset-m0" style="display: flex; justify-content: end">
+                            <img src="https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/vap-1in6.png" style="width: 100%;">
+                        </div>
+                        <div class="col s12 m9" style="padding-top: 2%;">
+                            <div class="z-depth-3" style="background: black; border-radius: 20px; color: white; padding: 10px; width: 90%; margin-left: 5%; font-size: 20px;">
+                                1 in 6 US youth aged 6-17 experience mental health disorder each year.
+                            </div>
+                        </div>
+                    </div>
+                    <p style="color: grey; font-size: 14px; text-align: left; margin: 0; padding: 0; margin-top: 20px; padding-left: 5%">Sources: US Dept. of Health & Human Services, National Institute of Health, NAMI</p>
                     <div class="divider" style="margin-bottom: 30px"></div>
                     <div class="row popout-row" style="margin-left: 0; margin-right: 0">
-                        <ul class="col s12 xl6 pillar-collapsible goals-collapsible">
-                            <li class="goals-li z-depth-2" style="margin: 0">
-                                <div class="collapsible-header valign-wrapper pillar-header goals-header">
-                                    <img src="https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/etv-goals.png" width="60px;" style="margin-right: 5px;margin-left: 2%;">
-                                    <div class="pillar-title">ETV Goals</div>
-                                    
-                                </div>
-                                <div class="collapsible-body-pillar">
-                                    <ul>
-                                        <li class="pillar-h5">
-                                            <table>
-                                                <tr class="pillar-tr">
-                                                    <td class="pillar-target-td">
-                                                        <i class="material-icons pillar-target">track_changes</i> 
-                                                    </td>
-                                                    <td class="pillar-h5">
-                                                        Healthier, more peaceful, longer lives for Black individuals and families
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                        </li>
-                                    </ul>
-                                    
-                                </div>
-                            </li>
-                        </ul> 
-                    
-                        <ul class="col s12 xl6 pillar-collapsible" style="margin-bottom: 2%;">
+                        <ul class="col s12 pillar-collapsible" style="margin-bottom: 2%;">
                             
                             <li class="solutions-li z-depth-2" style="margin:0">
-                                <div class="collapsible-header valign-wrapper pillar-header solutions-header">
-                                    <img src="https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/etv-solutions.png" width="60px;" style="margin-right: 5px;margin-left: 2%;">
-                                    <div class="pillar-title">ETV Solutions</div>
+                                <div class="collapsible-header pillar-header solutions-header" style="display: flex; justify-content: center;">
+                                    <div class="pillar-title"><img src="https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/vap-0216-new.png" height="75px;" style="padding-top: 5px; padding-bottom: 5px;"></div>
                 
                                 </div>
                                 <div class="collapsible-body-pillar">
@@ -97,16 +82,7 @@
                                                 <i class="material-icons pillar-target">check</i> 
                                             </td>
                                             <td class="pillar-h5">
-                                                <b><a href="/health-and-wellness/village-assist-program/">Village Assist Program™</a> - </b>Mental Healthcare Access 
-                                            </td>
-                                        </tr>
-
-                                        <tr class="pillar-tr">
-                                            <td class="pillar-target-td">
-                                                <i class="material-icons pillar-target">check</i> 
-                                            </td>
-                                            <td class="pillar-h5">
-                                                <a href="/events/love-of-art-fundraiser/"><b>Juneteenth For the Love of Art Fundraiser</b></a>
+                                                <b>Help eradicate the stigma associated with seeking mental health services.
                                             </td>
                                         </tr>
                                         <tr class="pillar-tr">
@@ -114,77 +90,58 @@
                                                 <i class="material-icons pillar-target">check</i> 
                                             </td>
                                             <td class="pillar-h5">
-                                                <b>Knowledge is Power!™ - </b>Health & Wellness Programs
+                                                <b>Educate the community about how to the identify the signs of mental health distress and address them.</b>
                                             </td>
                                         </tr>
-                                        
+                                        <tr class="pillar-tr">
+                                            <td class="pillar-target-td">
+                                                <i class="material-icons pillar-target">check</i> 
+                                            </td>
+                                            <td class="pillar-h5">
+                                                <b>Provide the Black community with access to quality, free and affordable mental health services.</b>
+                                            </td>
+                                        </tr>
+                                        <tr class="pillar-tr">
+                                            <td class="pillar-target-td">
+                                                <i class="material-icons pillar-target">check</i> 
+                                            </td>
+                                            <td class="pillar-h5">
+                                                <b>Connect the community to licensed Black psychiatrists, psychologists and other wellness professionals.</b>
+                                            </td>
+                                        </tr>
                                     </table>
-                                   
+                                    <p style="color:rgb(197, 34, 34); margin-top: 0px; font-weight: 600; font-size: 22px;">Culturally competent professionals are critical to ensuring successful outcomes for Black youth and adults seeking to improve their emotional health and well-being.</p>
                                 </div>
                             </li>
                         </ul> 
                     </div>
-            
-            
-            <div class="divider" style="margin-bottom: 30px"></div>
-            <div class="row center-align" style="margin-left: 0; margin-right: 0">
-                <h5 class="dyk">Health & Wellness Initiatives</h5>
-                    <div class="divider" style="margin-bottom: 20px"></div>
-                    <div class="row" style="margin-left: 0; margin-right: 0">
-                        <div class="col s8 offset-s2 l3 ee-image">
-                            <img class="z-depth-2" src="https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/knowledge-is-power.jpg" style="width: 100%;">
-                        </div>
-                        <div class="col s10 offset-s1 l9" style="padding-left: 2%; padding-right: 3%;">
-                            
-                            <h6 class="health-main-title">Knowledge is Power!™</h6>
-                            <h6 class="pillar-h5 health-main-text">Fitness, physical and mental health programs, including COVID-19 education, testing and vaccination support, are executed in partnership with The Village - churches, community organizations and healthcare providers.</h6>
-        
-                            
-                        </div>
-                    </div>
                     <div class="divider" style="margin-bottom: 30px"></div>
-                    <div class="row" style="margin-left: 0 !important; margin-right: 0 !important">
-                        <div class="col s12 m6">
-                            <iframe class="z-depth-1" width=100% height="315" src="https://www.youtube.com/embed/pILCWjsAksQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
-                        <div class="col s12 m6">
-                            <iframe class="z-depth-1" width=100% height="315" src="https://www.youtube.com/embed/yYewqf6GRVs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
-                    </div>
-                    <div class="divider" style="margin-bottom: 20px; margin-top: 30px"></div>
-                     
-                    <ul class="col s12 center-align collapsible popout pillar-collapsible" style="text-align: center;">
-                            
-                        <li class="center-align active" style="margin: 5px; text-align: center;">
-                            <div class="collapsible-header center-align pillar-header" style="justify-content: center; background-color: white; text-align: center;">
-                                
-                                <div class="pillar-title center-align cs-title vap-line1">
-                                    <a href="/health-and-wellness/village-assist-program/"><img src='https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/vap-0216-new.png' style="width:60%; padding: 2%"></a>
-                                </div>
-                            </div>
-                            <div class="collapsible-body collapsible-body-pillar" style="background-color: 01a650">
-                                <h5 class="pillar-h5 health-main-text" style="padding-left: 5%;padding-right: 3%; padding-bottom: 15px; color: white; font-weight: 400;">ETV is developing this platform to give the Black community free and affordable access to mental health professionals, especially Black psychiatrists, psychologists, social workers and other wellness professionals to improve emotional health and wellness in the Black youth and adult communities. This "VAP" program will mirror the offerings of large corporations through their "EAP" - Employee Assistance Programs - but will primarily enlist practitioners of color with the cultural competence and personal experience to fully support and connect with their patients.</h5>
-                                <h4 style="font-family: oskar; color:black; margin-bottom: 0;">Empower Healthy Minds and Bodies</h4>
-                                <h4 style="font-family: oskar; margin-top: 5px"><a href="/donation/" style="color: white" target="_blank">Donate Today!</a></h4>
-                            </div>
-                            
-                            <!--<h4>Invest in the mental health of the nation, <a href="">become a sponsor today!</h4>-->
-                        </li>
-                    </ul> 
-            </div>
-            <div class="divider" style="margin-bottom: 20px"></div>
-            <div class="row center-align">
-               
-                <div class="col s12 m6">
-                    <a href="/events/love-of-art-fundraiser/"><h6 class="event-title">ETV For the Love of Art Juneteenth Celebration</h6></a>
-                    <h6 class="event-date">June 16th & 17th, 2023</h6>
-                    <p class="event-description">ETV is once again proud to partner with Kente Royal Gallery, Montclair Art Museum & African American Cultural Committee @MAM and dozens of established and emerging artists!</p>
-                    <div class="row" style="display:flex; justify-content: center">
-                        <a class="btn btn-large learn-more-btn" href="/events/love-of-art-fundraiser/" style="background-color:#b8261c">Learn More</a>
+            <div class="row">
+                <div class="col s12 l6">
+                    <img src="https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/vap-power-walk-graphic.png" width="100%">
+                </div>
+                <div class="col s12 l6">
+                    <div">
+                        <h5 style="color:rgb(197, 24, 24); font-weight:700; line-height: 40px;">ETV 2023 Power Walk proceeds benefitted ETV's health and wellness initiatives!</h5>
+                        <div class="btn btn-large waves-effect waves-light donate-btn-navbar green darken-1" style="font-size: 28px; font-family: oskar;">DONATE</div>
                     </div>
                 </div>
-                <div class="col s12 m6">
-                    <iframe class="z-depth-1" width="100%" height="400" src="https://www.youtube.com/embed/-JaP0OkWUoQ" title="Juneteenth 2021 Art Festival & Fundraiser" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="divider" style="margin-bottom: 30px"></div>
+            <div class="row">
+                <div class="col 12" style="width: 100%;">
+                    <div">
+                        <h5 style="color: #D19C50; font-weight: 700; text-align: center; padding-bottom: 10px;">Gold Sponsor</h5>
+                        <img class="sm-50 lg-20" src="https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/cap-one.png">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col 12" style="width: 100%;">
+                    <div">
+                        <h5 style="color:#01A650; font-weight: 700; text-align: center; padding-bottom: 10px;">Village Sponsors</h5>
+                        <img src="https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/vap-village-sponsors.png" style="width: 70%; margin-left: 15%;">
+                    </div>
                 </div>
             </div>
         </div>
@@ -196,6 +153,7 @@
 <style>
     .dyk-quote {
         text-align: left;
+        border-left: dotted rgb(184, 34, 34) 2px;
         padding-left: 3% !important;
         margin-left: 2% !important
     }
@@ -242,6 +200,9 @@
         color: black
     }
     @media only screen and (min-width: 0px) {
+        .sm-50 {
+            width: 50%;
+        }
         .event-title {
             font-family: oskar;
             font-size: 28px;
@@ -561,6 +522,9 @@
       
     }
     @media only screen and (min-width: 993px) {
+        .lg-20 {
+            width: 20%;
+        }
         .event-title {
             font-family: oskar;
             font-size: 36px;
