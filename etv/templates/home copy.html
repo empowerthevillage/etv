@@ -37,16 +37,16 @@
 <div class="pillar-intro">
   <div  style="margin-bottom: 0px;background: url('https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/vbp-collage.webp'); background-size: 60% !important; padding: 0;">
     <div style="background: rgba(255, 255, 255, 0.875); ">
-      <p style="color: black; font-family: oskar; text-transform: none; line-height: 32px; letter-spacing: 0.5px; padding: 0px 20px; font-size: 28px; padding-top: 30px;">Empower The Village (ETV) is a Black-led, data-driven, nonprofit 501(c)(3) organization.</p> 
-      <p style="color: #BF1E2D; font-family: oskar; text-transform: none; line-height: 32px; letter-spacing: 0.5px; padding: 0px 20px; font-size: 28px; font-weight: 400;">ETV prioritizes the Health, Wealth and Empowerment</b> of the Black community.</p>
-      <p style="color: black; font-family: oskar; text-transform: none; line-height: 32px; letter-spacing: 0.5px; padding: 0px 20px; font-size: 28px; padding-top: 15px;">We empower Black people, business owners and community organizations to realize their full potential by strategically partnering with "Village" leaders and allies committed to the advancement of our people.</p>
-      <p style="color: #BF1E2D; font-weight: 400; font-family: oskar; text-transform: none; line-height: 32px; letter-spacing: 0.5px; padding: 0px 20px; font-size: 32px; padding-top: 15px;">Together, we will restore Prosperity, Peace and Power to the Black community!</p>
+      <p class="home-page-intro-text" style="color: black;">Empower The Village (ETV) is a Black-led, data-driven, nonprofit 501(c)(3) organization.</p> 
+      <p class="home-page-intro-text" style="color: #BF1E2D;">ETV prioritizes the Health, Wealth and Empowerment</b> of the Black community.</p>
+      <p class="home-page-intro-text" style="color: black;">We empower Black people, business owners and community organizations to realize their full potential by strategically partnering with "Village" leaders and allies committed to the advancement of our people.</p>
+      <p class="home-page-intro-text larger" style="color: #BF1E2D;">Together, we will restore Prosperity, Peace and Power to the Black community!</p>
       <div class="divider" style="border-bottom: solid 1px rgb(204, 204, 204); margin-top: 30px; width: 80%; margin-left: 10%; margin-bottom: 0px"></div>
     </div>
   <div class="row pillar-intro-row">
     <h6 class="center-align home-heading" style="color: #149e0f; padding-bottom: 10px; padding-top: 5px; background: rgba(255, 255, 255, 0.875); margin-top: 120 !important; margin-bottom: 0 !important">Explore ETV's Strategic Pillars</h6>
     <a href="{{ ep_url }}" class="pillar-intro-link">
-      <div class="col s12 l4 pillar-intro-col fade-in" style="background-image: url('https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/prosp-bg.webp')">
+      <div class="col s12 l4 pillar-intro-col fade-in" style="background-image: url('https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/prosp-bg.webp'); background-size: cover;">
         <div class="pillar-intro-overlay" style="background: #01a650; opacity: 0.55;">
         </div>
         <div class="pillar-text-container scale-in-center-2">
@@ -69,7 +69,7 @@
       </div>
     </a>
     <a href="{{ health_url }}" class="pillar-intro-link">
-      <div class="col s12 l4 pillar-intro-col fade-in" style="background-image: url('https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/peace-bg.webp');">
+      <div class="col s12 l4 pillar-intro-col fade-in" style="background-image: url('https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/peace-bg.webp'); background-size: cover;">
         <div class="pillar-intro-overlay" style="background: #FFDE59; opacity: 0.4;">
         </div>
         <div class="pillar-text-container scale-in-center-3">
@@ -88,7 +88,7 @@
       </div>
     </a>
     <a href="{{ policy_url }}" class="pillar-intro-link">
-      <div class="col s12 l4 pillar-intro-col fade-in" style="background-image: url('https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/power-bg.webp');">
+      <div class="col s12 l4 pillar-intro-col fade-in" style="background-image: url('https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/power-bg.webp'); background-size: cover;">
         <div class="pillar-intro-overlay" style="background: #BF1E2D; opacity: 0.55;">
         </div>
         <div class="pillar-text-container scale-in-center-4">
@@ -382,9 +382,8 @@
         </style>
       </div>
       <div class="carousel-item" href="" style="background: url('https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/vbp-collage.webp'); background-size: 40% !important;">
-        <div class="carousel-wash row">
-          <div class="col s12">
-        </div>
+        <div class="carousel-wash row" style="display: flex; align-items:center;">
+          
           <div class="col s12">
             <a href="/events/power-swing-classic/"><img class="z-depth-3" src="https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/golf23-banner.webp" style="width: 75%;"></a>
           </div>
@@ -568,6 +567,20 @@ var intervalId = window.setInterval(function(){
 </script>
 <style>
   @media only screen and (min-width:0px){
+    .home-page-intro-text {
+      font-family: oskar !important; 
+      text-transform: none !important; 
+      line-height: 24px !important; 
+      letter-spacing: 0.5px !important; 
+      padding: 0px 10px !important; 
+      font-size: 20px !important; 
+      padding-top: 10px !important;
+    }
+    .home-page-intro-text.larger {
+      font-size: 24px !important;
+      line-height: 28px !important;
+      font-weight: 400 !important;
+    }
     .banner-title {
       font-family: oskar; 
       font-weight: 500; 
@@ -901,6 +914,16 @@ var intervalId = window.setInterval(function(){
       }
   }
   @media only screen and (min-width:993px){
+    .home-page-intro-text {
+      line-height: 32px !important; 
+      letter-spacing: 0.5px !important; 
+      padding: 0px 20px !important; 
+      font-size: 28px !important; 
+      padding-top: 30px !important;
+    }
+    .home-page-intro-text.larger {
+      font-size: 32px !important;
+    }
     .banner-title {
         margin-top: 10px;
         margin-bottom: 15px;
