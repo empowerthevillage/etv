@@ -2,6 +2,7 @@
 from django.core.paginator import Paginator
 from django.db.models import Q
 from django.http.response import JsonResponse
+from django.http import HttpResponseNotFound
 from django.shortcuts import render, redirect
 from addresses.forms import BillingAddressForm
 from addresses.models import Address
@@ -101,12 +102,15 @@ def event_home(request):
     return render(request, "events-home.html", context)
 
 def event_detail(request, slug):
-    event = Event.objects.get(slug=slug)
-    context = {
-        'title':'ETV | %s' %(event.title),
-        'event': event,
-    }
-    return render(request, "detail.html", context)
+    if slug == 'friends-of-the-village-art-exhibition':
+        return HttpResponseNotFound("Oops! The event you're looking for is no longer available")
+    else:
+        event = Event.objects.get(slug=slug)
+        context = {
+            'title':'ETV | %s' %(event.title),
+            'event': event,
+        }
+        return render(request, "detail.html", context)
 
 def event_ticket_checkout(request, slug):
     event = Event.objects.get(slug=slug)
@@ -1057,17 +1061,18 @@ def full_gallery_cart_home(request):
     return render(request, 'mv_full_gallery_cart.html', context)
 
 def full_gallery_home(request):
-    cart_obj, created = FullGalleryCart.objects.new_or_get(request)
-    items = FullGalleryItem.objects.filter(active=True).order_by('sold', 'artist', 'title')[:12]
-    artists = Artist.objects.filter(active=True).order_by('name')
-    filter = GalleryFilter(request.GET, queryset=items)
-    context = {
-        'items': items,
-        'cart': cart_obj,
-        'filter': filter,
-        'artists': artists,
-    }
-    return render(request, 'mv_gallery_home.html', context)
+    #cart_obj, created = FullGalleryCart.objects.new_or_get(request)
+    #items = FullGalleryItem.objects.filter(active=True).order_by('sold', 'artist', 'title')[:12]
+    #artists = Artist.objects.filter(active=True).order_by('name')
+    #filter = GalleryFilter(request.GET, queryset=items)
+    #context = {
+    #    'items': items,
+    #    'cart': cart_obj,
+    #    'filter': filter,
+    #    'artists': artists,
+    #}
+    #return render(request, 'mv_gallery_home.html', context)
+    return HttpResponseNotFound("Oops! The event you're looking for is no longer available")
 
 def gallery_get_next(request):
     requested_page = request.GET['next_page']
