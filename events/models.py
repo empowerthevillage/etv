@@ -565,12 +565,14 @@ class FullGalleryItem(models.Model):
         return self.sold
 
 class AuctionItem(models.Model):
+    event           = models.ForeignKey(Event, null=True, blank=True, on_delete=models.SET_NULL)
     title           = models.CharField(max_length=270)
-    artist          = models.CharField(max_length=270)
-    image           = models.ImageField(blank=True)
+    type            = models.CharField(max_length=270)
+    artist          = models.CharField(max_length=270, null=True, blank=True)
+    image_link      = models.URLField(blank=True, null=True)
     description     = models.TextField(blank=True)
-    width           = models.CharField(max_length=20, blank=True)
-    height          = models.CharField(max_length=20, blank=True)
+    width           = models.CharField(max_length=20, blank=True, null=True)
+    height          = models.CharField(max_length=20, blank=True, null=True)
     
     def __str__(self):
         return str(self.title)
@@ -614,3 +616,4 @@ class Signature(models.Model):
     
     def __str__(self):
         return 'Signature from %s %s' %(self.first_name, self.last_name)
+    
