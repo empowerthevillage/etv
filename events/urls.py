@@ -8,6 +8,7 @@ urlpatterns = [
     path('gallery-get-next/', gallery_get_next, name="gallery-next"),
     path('gallery-search-available/', gallery_search_available, name="gallery-search-available"),
     path('gallery-search/', gallery_search, name="gallery-search"),
+    path('gallery/<slug>/', custom_gallery, name='custom-gallery'),
     path('art-presale/', gallery_home, name="gallery-home"),
     path('loa-presale-cart/', gallery_cart_home, name="presale-cart-home"),
     path('loa-gallery-cart/', full_gallery_cart_home, name="gallery-cart-home"),

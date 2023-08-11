@@ -96,7 +96,7 @@ class ArtAdmin(admin.ModelAdmin):
     mark_inactive.short_description = "Mark selected as inactive"
 
 class AuctionAdmin(admin.ModelAdmin):
-    list_display = ['title', 'artist', 'image']
+    list_display = ['title', 'artist']
     
 class CheckinAdmin(admin.ModelAdmin):
     list_display = ['time']
@@ -135,3 +135,4 @@ dashboardModel.objects.dash_register(SingleTicket)
 dashboardModel.objects.dash_register(GalleryItem)
 dashboardModel.objects.dash_register(Ad)
 dashboardModel.objects.dash_register(CompleteDonation)
+admin_site.register(ArtGallery)

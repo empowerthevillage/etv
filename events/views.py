@@ -1210,3 +1210,18 @@ def pitch_rules_agreement(request):
         obj.business_name = request.POST['business']
         obj.save()
     return HttpResponse('success')
+
+def custom_gallery(request, slug):
+    cart_obj, created = FullGalleryCart.objects.new_or_get(request)
+    #try:
+    gallery_obj = ArtGallery.objects.get(slug=slug)
+    gallery_items = gallery_obj.items.filter(active=True)
+    context = {
+        'items': gallery_items,
+        'cart': cart_obj,
+        'gallery': gallery_obj,
+    }
+    return render(request, 'custom-gallery.html', context)
+    #except:
+    #    return redirect('/events/')
+        
