@@ -1,5 +1,6 @@
 
 from django.core.paginator import Paginator
+from django.core.mail import send_mail
 from django.db.models import Q
 from django.http.response import JsonResponse
 from django.http import HttpResponseNotFound
@@ -14,7 +15,15 @@ import sweetify
 from carts.models import TicketCart, ticketItem, ticketDonation, ticketAd, FullGalleryCart
 from .models import *
 from django.conf import settings
-from orders.models import LOAArtPurchase, LOAPresalePurchase
+from orders.models import LOAArtPurchase, SilentAuctionPurchase
+
+from mailchimp_marketing import Client
+
+mailchimp = Client()
+mailchimp.set_config({
+    "api_key": settings.MAILCHIMP_API_KEY,
+    "server": "us7"
+})
 
 User = settings.AUTH_USER_MODEL
 gateway = settings.GATEWAY
@@ -1224,4 +1233,88 @@ def custom_gallery(request, slug):
     return render(request, 'custom-gallery.html', context)
     #except:
     #    return redirect('/events/')
+
+def silent_auction(request):
+    items = AuctionItem.objects.filter(active=True)
+    context = {
+        'items': items,
+    }
+    return render(request, 'power-swing-silent-auction.html', context)
+
+def silent_auction_buy_now(request, item_id):
+    item = AuctionItem.objects.get(item_id=item_id)
+    tokenization_key = settings.BRAINTREE_TOKENIZATION_KEY
+    context = {
+        'item': item,
+        'tokenization_key': tokenization_key,
+        'mailing_form': BillingAddressForm(),
+    }
+    return render(request, 'silent-auction-checkout.html', context)
+
+def process_silent_auction_purchase(request):
+    if request.method == 'POST':
+        data = request.POST
+        nonce_id = data['nonce']
+        first_name = data['first_name']
+        last_name = data['last_name']
+        item_pk = data['item_pk']
+        item_obj = AuctionItem.objects.get(pk=item_pk)
+        email = data['email']
+        total = data['amount']
+        result = gateway.transaction.sale({
+            "amount": total,
+            "payment_method_nonce": nonce_id,
+            "customer": {
+                "first_name": first_name,
+                "last_name": last_name,
+                "email": email
+            },
+            "custom_fields": {
+                "memo": 'Power Swing Silent Auction Purchase - %s' %(item_obj)
+            },
+            "options": {
+                "submit_for_settlement": True,
+            },
+        })
+        if result.is_success:
+            merge_fields = {
+                "FNAME": str(first_name),
+                "ETVAMOUNT": str(total)
+            }
+            mailchimp.lists.set_list_member("bfb104d810", email, {"email_address": email, "status_if_new": "subscribed", "merge_fields": merge_fields})
+            mailchimp.customerJourneys.trigger(2794, 15013, {"email_address": str(email)})
+            send_mail(
+                'New Silent Auction Purchase!',
+                str('A new silent auction for %s has been received from %s %s through www.empowerthevillage.org!' %(item_obj, first_name, last_name)),
+                'etvnotifications@gmail.com',
+                ['admin@empowerthevillage.org', 'chandler@eliftcreations.com', 'ayo@empowerthevillage.org'],
+                #['chandler@eliftcreations.com'],
+                fail_silently=True
+            )
+            order_obj = SilentAuctionPurchase()
+            order_obj.first_name = first_name
+            order_obj.last_name = last_name
+            order_obj.item = item_obj
+            order_obj.email = email
+            order_obj.phone = data['phone']
+            order_obj.braintree_id = result.transaction.id
+            order_obj.amount = total
+            order_obj.save()
+            item_obj.sold = True
+            item_obj.save()
+            
+            data = {
+                    'status': 'success',
+                    'html': render_to_string('silent-auction-buy-now-success.html', context={'purchase': order_obj,
+                        'payment_method': result.transaction.credit_card_details,
+                        'item': item_obj,
+                    })
+            }
+            return JsonResponse(data)
+        else:
+            data = {
+                'status': 'error',
+                'message': 'There was an issue processing your payment method. Please verify your card details and try again'
+            }
+            return JsonResponse(data)
         

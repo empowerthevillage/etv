@@ -96,7 +96,7 @@ class ArtAdmin(admin.ModelAdmin):
     mark_inactive.short_description = "Mark selected as inactive"
 
 class AuctionAdmin(admin.ModelAdmin):
-    list_display = ['title', 'artist']
+    list_display = ['title', 'buy_now_price']
     
 class CheckinAdmin(admin.ModelAdmin):
     list_display = ['time']

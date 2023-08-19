@@ -566,16 +566,25 @@ class FullGalleryItem(models.Model):
 
 class AuctionItem(models.Model):
     event           = models.ForeignKey(Event, null=True, blank=True, on_delete=models.SET_NULL)
+    item_id         = models.CharField(max_length=32, null=True, blank=True)
     title           = models.CharField(max_length=270)
-    type            = models.CharField(max_length=270, blank=True, null=True)
-    artist          = models.CharField(max_length=270, null=True, blank=True)
+    donor           = models.CharField(max_length=270, null=True, blank=True)
     image_link      = models.URLField(blank=True, null=True)
     description     = models.TextField(blank=True)
-    width           = models.CharField(max_length=20, blank=True, null=True)
-    height          = models.CharField(max_length=20, blank=True, null=True)
+    active          = models.BooleanField(default=True)
+    sold            = models.BooleanField(default=False)
+    buy_now_price   = models.DecimalField(decimal_places=2, max_digits=30, default=0.00)
+    minimum_bid     = models.DecimalField(decimal_places=2, max_digits=30, default=0.00)
+    order           = models.PositiveIntegerField(default=1)
     
     def __str__(self):
         return str(self.title)
+    
+    def get_buy_now_url(self):
+        return str('/events/2023-power-swing-silent-auction/buy-now/%s' %(self.item_id))
+    
+    class Meta:
+        ordering = ['order']
     
 class GalleryFilter(django_filters.FilterSet):
     title = django_filters.CharFilter(lookup_expr='icontains')

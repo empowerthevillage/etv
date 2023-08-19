@@ -1,0 +1,16 @@
+<div class="row">
+    <div class="col-12 center-align">
+        <h4 style="font-family:oskar">Purchase Details</h4>
+        <div class="divider"></div>
+    </div>
+    <div class="col-12 center-align">
+        <p><b>Item:</b> {{ item }}</p>
+        <p><b>Amount:</b> ${{ purchase.amount }}</p>
+        <p><b>Donor Name:</b> {{ purchase.first_name }} {{ purchase.last_name }}</p>
+        <p><b>Email Address:</b> {{ purchase.email }}</p>
+        {% if purchase.phone %}
+        <p><b>Phone:</b> {{ purchase.phone }}</p>
+        {% endif %}
+        <p><b>Payment Method:</b> {{ payment_method.card_type }} ending in {{ payment_method.last_4 }}</p>
+    </div>
+</div>

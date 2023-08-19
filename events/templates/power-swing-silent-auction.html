@@ -1,0 +1,578 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load humanize %}
+{% block title %}ETV | 2023 Power Swing Classic Silent Auction{% endblock %}
+
+
+{% block content %}
+<div id="page">
+        <div class="event-container">
+            <div class="center-align event-page-title" style="background: rgb(226, 10, 32);
+            background: linear-gradient(135deg, rgb(226, 10, 32) 0%, rgba(1,166,80,1) 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;">2023 Power Swing Classic <br>Silent Auction</div>
+            <div class="divider-dotted"></div>
+            
+            <p class="subtitle" style="margin-top: 20px;font-weight: 600;">Welcome to the Silent Auction! Purchase items now to win instantly, or bid in-person at ETV's 2023 Power Swing Classic on August 29th, 2023.</p>
+                <p class="subtitle" style="margin: 0;">In-person bidding starts at the minimum bid listed for each prize below.</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="row gallery-grid" id="gallery-grid" style="margin-bottom: 0; padding-bottom: 20px">
+                <div id="gallery-container">
+                    {% for x in items %}
+                    <div class="col s12 m4 center-align grid-col" style="padding: 1%;">
+                        {% if x.image_link %}
+                        <div class="" style="width: 100%">
+                            {% if x.sold %}<div class="sold-out z-index-2">Sold</div>{% endif %}<img class="{% if x.sold %}sold-img{% endif %} z-depth-2 grid-item-mini materialboxed-sm lazy" data-src="{{ x.image_link }}" id="item-sm-{{ x.pk }}" item-title="{{ x.title }}" item-artist="{{ x.artist }}" item-price="{{ x.price }}" item-description="{{ x.description }}" item-dimensions='{{ x.width }}" x {{ x.height }}"' style="cursor:pointer">
+                        </div>
+                        {% else %}
+                        <div style="display: flex; align-items: center; justify-content: center">
+                            <div class="z-depth-2" style="width: fit-content; height: 200px; padding-left: 20px; padding-right: 20px; display: flex; align-items: center; justify-content: center;">
+                                <p class="item-title-sm" style="font-weight: 700; font-style:italic;" >Image coming soon!</p>
+                            </div>
+                        </div>
+                        {% endif %}
+                        <div class="gallery-item-details-min center">
+                            <p id="item-title-sm"></p>
+                            <div class="divider-dotted"></div>
+                            <p id="item-title-sm">{{ x.title }}</p>
+                            {% if x.description %}
+                            <p id="item-artist-sm">{{ x.description }}</p>
+                            {% endif %}
+                            {% if x.donor %}
+                            <p id="item-artist-sm"><b>Donated to ETV by: </b>{{ x.donor }}</p>
+                            {% endif %}
+                            
+                            {% if x.sold %}
+                            <div class="btn sold-btn disabled">Sold</div>
+                            {% else %}
+                            <p class="item-price"><b>Buy Now Price:</b> <b>${{ x.buy_now_price|intcomma }}</b></p>
+                            <a href="{{ x.get_buy_now_url }}" class="btn add-to-cart add-grid"><i class="bi bi-credit-card-2-front"></i> Buy Now</a>
+                            <p id="item-description-sm">Minimum Bid: ${{ x.minimum_bid|intcomma }}</p>
+                            {% endif %}
+                            
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+        </div>
+</div>
+
+<style>
+    .sold-btn {
+        background-color: rgb(176, 28, 28) !important;
+        margin-top: 10px;
+    }
+    .artist-read-more {
+        color: rgb(70, 70, 248);
+        transition: all 0.3s ease-in-out;
+        cursor: pointer;
+    }
+    .artist-read-more:hover {
+        color: rgb(131, 131, 206);
+    }
+    .artist-col {
+        height: fit-content;
+        margin-top: 3%;
+    }
+    .artist-details {
+        height: 150px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .artist-details.open {
+        height: fit-content;
+    }
+    #load-more-btn {
+        color: white;
+        background:rgb(195, 16, 16);
+        width: fit-content;
+        font-size: 22px;
+        margin-top: 3%;
+        margin-bottom: 5%;
+        line-height: 5px;
+        letter-spacing: 2px;
+        padding: 20px 30px;
+        transition: all 0.3s ease-in-out
+    }
+    #load-more-btn:hover {
+        background:rgb(235, 79, 79);
+        transform: scale(1.05)
+    }
+    .gradient-border {
+        background-image: radial-gradient(circle at 100% 100%, transparent -7px, #cb1010 -7px, #cb1010 1px, transparent 1px), linear-gradient(to right, #cb1010, #2caf2e), radial-gradient(circle at 0% 100%, transparent -7px, #2caf2e -7px, #2caf2e 1px, transparent 1px), linear-gradient(to bottom, #2caf2e, #098143), radial-gradient(circle at 0% 0%, transparent -7px, #098143 -7px, #098143 1px, transparent 1px), linear-gradient(to left, #098143, #dc1818), radial-gradient(circle at 100% 0%, transparent -7px, #dc1818 -7px, #dc1818 1px, transparent 1px), linear-gradient(to top, #dc1818, #cb1010);
+        background-size: 1px 1px, calc(100% - 2px) 8px, 1px 1px, 8px calc(100% - 2px);
+        background-position: top left,top center,top right,center right, bottom right,bottom center,bottom left,center left;
+        background-repeat: no-repeat;
+    }
+    .subtitle {
+        text-align: center;
+        font-size: 14px;
+        z-index: 800;
+        position: relative;
+    }
+    .gallery-grid {
+        background: rgba(255, 255, 255, 0.994);
+        padding-top: 50px
+    }
+    .gallery-grid p {
+        margin: 0;
+        padding: 3px
+    }
+    .grid-col {
+        height: fit-content;
+    }
+    .auction-grid-col {
+        height: 525px
+    }
+    .grid-item-mini {
+        height: 250px;
+        width: auto;
+        margin-top: 2%;
+    }
+    .artist-grid-item-mini {
+        height: 100px;
+        width: auto;
+        margin-right: 10px;
+        margin-bottom: 10px
+    }
+    #gallery-grid img{
+        max-width: 100%;
+        max-height: 240px;
+    }
+    #cart-counter span {
+        width: fit-content;
+        background: rgb(52, 52, 52);
+        color: white;
+        padding: 5px 10px;
+        height: 30px;
+        min-width:0;
+        margin-right: 10px;
+        border-radius:10px;
+        font-size: 14px
+    }
+    .cart{
+        font-size: 18px
+    }
+    .sold-img {
+        position: relative
+    }
+    .sold-out {
+        left: 30%;
+        width: 150px;
+        height: fit-content;
+        margin-bottom: -30px;
+        color: #fff;
+        display: block;
+        position:relative;
+        text-align: center;
+        text-decoration: none;
+        letter-spacing: 1px;
+        background-color: #A00;
+        padding: 0.5em 5em 0.4em 3.5em;
+        text-shadow: 0 0 0.75em #444;
+        box-shadow: 0 0 0.5em rgba(0,0,0,0.5);
+        font: bold 16px/1.2em Arial, Sans-Serif;
+        -webkit-text-shadow: 0 0 0.75em #444;
+        -webkit-box-shadow: 0 0 0.5em rgba(0,0,0,0.5);
+        z-index:10;
+    }
+    .sold-out::before {
+        width: 210px;
+        content: '';
+        top: 0;
+        left: 50px;
+        right: 0;
+        bottom: 0;
+        position: absolute;
+        margin: -0.3em -5em;
+        transform: scale(0.7);
+        -webkit-transform: scale(0.7);
+        border: 3px rgba(255,255,255,0.7) dotted;
+    }
+    .add-to-cart {
+        font-size: 16px;
+        letter-spacing: 1px;
+        margin-top: 10px;
+        line-height: 40px;
+        margin-bottom: 15px;
+        background:#01a650;
+    }
+    .add-to-cart:hover {
+        background: #058443
+    }
+    .remove-from-cart {
+        font-size: 16px;
+        letter-spacing: 1px;
+        margin-top: 10px
+    }
+    .divider-dotted {
+        border-top: 2px dotted rgb(194, 194, 194);
+        width: 60%;
+        margin-top: 10px;
+        margin-left: 20%
+    }
+    .gallery-item-details {
+        width: 100%;
+        margin-top: -120px
+    }
+    #item-title {
+        font-family: oskar;
+        font-size: 32px;
+        margin: 10px 0px 0px 0px;
+        background: rgb(226, 10, 32);
+        background: linear-gradient(135deg, rgb(226, 10, 32) 0%, rgba(1,166,80,1) 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        line-height: 40px;
+        cursor: default
+    }
+    #item-title-sm {
+        font-family: oskar;
+        font-size: 26px;
+        margin: 10px 0px 10px 0px;
+        background: rgb(226, 10, 32);
+        background: linear-gradient(135deg, rgb(226, 10, 32) 0%, rgba(1,166,80,1) 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        line-height: 28px;
+        cursor: default
+    }
+    #item-artist {
+        font-family: oskar;
+        font-size: 22px;
+        margin: 15px 0px 10px 0px;
+        cursor: default
+    }
+    .item-price {
+        color: #0c7b00;
+        font-size: 20px;
+        font-family: oskar;
+        margin: 5px 0px;
+        cursor: default
+    }
+    .item-price-sm {
+        color: #0c7b00;
+        font-size: 18px;
+        font-family: oskar;
+        cursor: default
+    }
+    #item-description {
+        color: #5f5f5f;
+        font-size: 16px;
+        margin: 10px 0px;
+        font-style:italic;
+        cursor: default
+    }
+    #item-dimensions {
+        color: #5f5f5f;
+        font-size: 16px;
+        margin: 10px 0px;
+        font-style:italic;
+        cursor: default
+    }
+    .carousel .indicators .indicator-item {
+        margin: 10px 4px !important
+    }
+    .carousel {
+        height: 600px !important;
+        margin-top: -150px
+    }
+    .carousel-item {
+        display: flex;
+        justify-content: center;
+        
+    }
+    .carousel-item img {
+        width: auto;
+        max-width: 280px;
+        height: 100%;
+        overflow: hidden;
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+    #page {
+        background: url("https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/vbp-collage.webp");
+        background-size: 100%;
+        height: fit-content
+    }
+    .event-page-title {
+        font-family: oskar-inline;
+        font-size: 28px;
+        line-height: 32px;
+        margin-bottom: 10px
+    }
+    .carousel {
+        height: 600px;
+        overflow: visible;
+    }
+    .event-text {
+        padding: 3% !important;
+        text-align: center;
+    }
+    .event-container {
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.957);
+        padding: 5%;
+        height: 100%
+    }
+    .event-title {
+        font-family: oskar-inline;
+        font-size: 21px;
+        color: #01a650;
+        transition: color 0.2s ease-in-out
+    }
+    .event-title:hover {
+        color: #068845
+    }
+    .event-date {
+        font-family: oskar;
+        font-size: 16px;
+        font-weight: 400
+    }
+    .event-location {
+        font-family: oskar;
+        margin-top: 5px;
+        margin-bottom: 0;
+        font-size: 18px
+    }
+    .event-description {
+        font-size: 12px;
+        font-weight: 200
+    }
+    .learn-more-btn {
+        margin-top: 10px
+    }
+    @media only screen and (min-width: 601px) {
+        .grid-col {
+            height: 590px
+        }
+        .carousel-item img {
+            width: auto;
+            max-width:fit-content;
+            height: 100%;
+            overflow: visible;
+            overflow-x: visible;
+            overflow-y: visible;
+        }
+        .gallery-item-details {
+            width: 100%;
+        }
+        .add-to-cart {
+            font-size: 18px;
+        }
+        .remove-from-cart {
+            font-size: 18px;
+            margin-bottom: 30px
+        }
+        #item-title {
+            font-size: 40px;
+            margin: 20px 0px 0px 0px;
+            line-height: 40px;
+        }
+        #item-artist {
+            font-family: oskar;
+            font-size: 28px;
+            margin: 15px 0px 10px 0px;
+        }
+        .item-price {
+            color: #0c7b00;
+            font-size: 24px;
+            font-family: oskar;
+            margin: 10px 0px;
+        }
+        #item-description {
+            color: #5f5f5f;
+            font-size: 18px;
+            margin: 10px 0px;
+            font-style:italic;
+        }
+        #item-dimensions {
+            color: #5f5f5f;
+            font-size: 18px;
+            margin: 10px 0px;
+            font-style:italic;
+        }
+        #page {
+            height: fit-content
+        }
+        .event-container {
+            padding: 2% 3%
+        }
+        .event-page-title {
+            font-family: oskar-inline;
+            font-size: 42px;
+            margin-bottom: 1%;
+            margin-top: 10px;
+            line-height: 48px
+        }
+        .event-title {
+            font-size: 28px;
+        }
+        .event-date {
+            font-size: 20px;
+        }
+        .event-location {
+            font-family: oskar;
+            margin-top: 3px;
+            margin-bottom: 0;
+            font-size: 20px
+        }
+        .event-description {
+            font-size: 14px;
+            
+        }
+    }
+    @media only screen and (min-width: 993px) {
+        .divider-dotted {
+        border-top: 2px dotted rgb(194, 194, 194);
+        width: 30%;
+        margin-top: 20px;
+        margin-left: 35%
+    }
+        .gallery-item-details {
+            bottom: -200px
+        }
+        .carousel {
+            height: 700px !important;
+            overflow: visible;
+        }
+        #page {
+            height: fit-content
+        }
+        .event-text {
+            text-align: left;
+            padding: 2% !important
+        }
+        .event-title {
+            font-size: 26px;
+        }
+        .event-date {
+            font-size: 18px;
+        }
+        .event-location {
+            font-family: oskar;
+            margin-top: 3px;
+            margin-bottom: 0;
+            font-size: 20px
+        }
+        .event-description {
+            font-size: 14px;
+            
+        }
+    }
+    @media only screen and (min-width: 1226px) {
+        #page {
+            height: fit-content
+        }
+        .event-container {
+            padding: 3%
+        }
+        .event-page-title {
+            font-size: 49px;
+        }
+        .event-title {
+            font-size: 30px;
+        }
+        .event-date {
+            font-size: 22px;
+        }
+        .event-location {
+            font-family: oskar;
+            margin-top: 3px;
+            margin-bottom: 0;
+            font-size: 24px
+        }
+        .event-description {
+            font-size: 14px;
+            
+        }
+    }
+    @media only screen and (min-width: 1400px) {
+        #page {
+            height: fit-content
+        }
+        .event-page-title {
+            font-size: 56px;
+        }
+        .event-title {
+            font-size: 40px;
+        }
+        .event-date {
+            font-size: 24px;
+        }
+        .event-location {
+            font-family: oskar;
+            margin-top: 3px;
+            margin-bottom: 0;
+            font-size: 26px
+        }
+        .event-description {
+            font-size: 16px;
+            
+        }
+    }
+    .carousel .indicators .indicator-item {
+        background-color: rgba(158, 158, 158, 0.5);
+    }
+    .carousel .indicators .indicator-item.active {
+        background-color: rgba(22, 186, 7, 0.5);
+    }
+    .success-toast.swal2-icon-success {
+        background-color: #a5dc86 !important;
+    }
+    .success-toast .swal2-title {
+        color: white;
+    }
+
+    .success-toast .swal2-close {
+        color: white;
+    }
+
+    .success-toast .swal2-html-container {
+        color: white;
+    }
+</style>
+<script>
+    $(document).ready(function(){
+        $('.materialboxed-sm').materialbox();
+    });
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var lazyloadImages = document.querySelectorAll("img.lazy");    
+        var lazyloadThrottleTimeout;
+        
+        function lazyload () {
+          if(lazyloadThrottleTimeout) {
+            clearTimeout(lazyloadThrottleTimeout);
+          }    
+          
+          lazyloadThrottleTimeout = setTimeout(function() {
+              var scrollTop = window.pageYOffset;
+              lazyloadImages.forEach(function(img) {
+                  if(img.offsetTop < (window.innerHeight + scrollTop)) {
+                    img.src = img.dataset.src;
+                    img.classList.remove('lazy');
+                  }
+              });
+              if(lazyloadImages.length == 0) { 
+                document.removeEventListener("scroll", lazyload);
+                window.removeEventListener("resize", lazyload);
+                window.removeEventListener("orientationChange", lazyload);
+              }
+          }, 20);
+        }
+        
+        document.addEventListener("scroll", lazyload);
+        window.addEventListener("resize", lazyload);
+        window.addEventListener("orientationChange", lazyload);
+      });
+</script>
+
+{% endblock %}

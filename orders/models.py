@@ -7,7 +7,7 @@ from django.db import models
 from django.db.models.signals import pre_save
 from etv.utils import unique_order_id_generator
 from carts.models import Cart, cartItem
-from events.models import GalleryItem, FullGalleryItem
+from events.models import GalleryItem, FullGalleryItem, AuctionItem
 from phonenumber_field.modelfields import PhoneNumberField
 
 import braintree
@@ -448,3 +448,18 @@ class LOAArtPurchase(models.Model):
         ordering = ['-timestamp', '-updated']
         verbose_name = "Juneteenth Art Purchase"
         verbose_name_plural = "Juneteenth Art Purchase"
+
+class SilentAuctionPurchase(models.Model):
+    status          = models.CharField(max_length=120, choices=ORDER_STATUS_CHOICES, default="created")
+    braintree_id    = models.CharField(max_length=120, null=True, blank=True)
+    item            = models.ForeignKey(AuctionItem, null=True, blank=True, on_delete=models.SET_NULL)
+    amount          = models.DecimalField(default=0.00, max_digits=12, decimal_places=2)
+    timestamp       = models.DateTimeField(auto_now_add=True)
+    updated         = models.DateTimeField(auto_now=True)
+    first_name      = models.CharField(max_length=100, blank=True, null=True)
+    last_name       = models.CharField(max_length=100, blank=True, null=True)
+    email           = models.EmailField(blank=True, null=True)
+    phone           = PhoneNumberField(blank=True, null=True)
+    
+    class Meta:
+        ordering = ['-timestamp', '-updated']

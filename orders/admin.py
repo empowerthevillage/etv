@@ -55,8 +55,18 @@ class LOAAdmin(admin.ModelAdmin):
             writer.writerow([getattr(obj, field) for field in field_names])
         return response
     download_csv.short_description = "Download selected as csv"
+    
+class AuctionOrderAdmin(admin.ModelAdmin):
+    list_display = ['braintree_id', 'item', 'formatted_total', 'updated']
+    ordering = ['-updated']
+    
+    def formatted_total(self, obj):
+        string = str(obj.amount)
+        formatted_total = str("$"+string)
+        return formatted_total
 
 admin_site.register(Order, OrderAdmin)
 admin_site.register(LOAArtPurchase, LOAAdmin)
 admin_site.register(LOAPresalePurchase, LOAAdmin)
+admin_site.register(SilentAuctionPurchase, AuctionOrderAdmin)
 dashboardModel.objects.dash_register(LOAPresalePurchase)
