@@ -70,7 +70,7 @@
                           <h6 class="walker-name mini"><b>Item:</b> {{ item }}</h6>
                           <input class="hidden" name="amount" value="{{ item.buy_now_price }}">
                           {% if item.description %}
-                          <h6 class="walker-name mini">${{ item.description }}</h6>
+                          <h6 class="walker-name mini">{{ item.description }}</h6>
                           {% endif %}
                           <h6 class="walker-name mini"><b>Amount:</b> ${{ item.buy_now_price|intcomma }}</h6>
                           {% if item.image_link %}
