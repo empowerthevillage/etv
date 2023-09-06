@@ -241,34 +241,34 @@ def donation_complete(request):
             "payment_method_nonce": nonce,
         })
         if vault_result.is_success:
-            token = vault_result.token
+            token = vault_result.payment_method.token
             result = gateway.subscription.create({
             "payment_method_token": token,
             "plan_id": plan_id
             })
-        if result.is_success:
-            donation_obj.status = 'complete'
-            donation_obj.payment_method = token
-            donation_obj.subscription_id = result.subscription.id
-            donation_obj.braintree_id = ''
-            donation_obj.save()
-            first_name = donation_obj.first_name
-            amount = donation_obj.amount
-            merge_fields = {
-                "FNAME": str(first_name),
-                "ETVAMOUNT": str(amount)
-            }
-            mailchimp.lists.set_list_member("bfb104d810", email, {"email_address": email, "status_if_new": "subscribed", "merge_fields": merge_fields})
-            mailchimp.customerJourneys.trigger(2794, 15013, {"email_address": str(email)})
-            send_mail(
-                'New Donation!',
-                str('A new $'+ amount +' donation has been received from '+ donation_obj.get_full_name +' through www.empowerthevillage.org!'),
-                'etvnotifications@gmail.com',
-                ['admin@empowerthevillage.org', 'chandler@eliftcreations.com', 'ayo@empowerthevillage.org'],
-                #['chandler@eliftcreations.com'],
-                fail_silently=True
-            )
-            data = 'success'
+            if result.is_success:
+                donation_obj.status = 'complete'
+                donation_obj.payment_method = token
+                donation_obj.subscription_id = result.subscription.id
+                donation_obj.braintree_id = ''
+                donation_obj.save()
+                first_name = donation_obj.first_name
+                amount = donation_obj.amount
+                merge_fields = {
+                    "FNAME": str(first_name),
+                    "ETVAMOUNT": str(amount)
+                }
+                mailchimp.lists.set_list_member("bfb104d810", email, {"email_address": email, "status_if_new": "subscribed", "merge_fields": merge_fields})
+                mailchimp.customerJourneys.trigger(2794, 15013, {"email_address": str(email)})
+                send_mail(
+                    'New Donation!',
+                    str('A new recurring $'+ str(amount) +' donation has been received from '+ donation_obj.get_full_name +' through www.empowerthevillage.org!'),
+                    'etvnotifications@gmail.com',
+                    ['admin@empowerthevillage.org', 'chandler@eliftcreations.com', 'ayo@empowerthevillage.org'],
+                    #['chandler@eliftcreations.com'],
+                    fail_silently=True
+                )
+                data = 'success'
         else:
             data = 'error'
         return HttpResponse(data)
