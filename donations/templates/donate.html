@@ -161,34 +161,19 @@ ETV | Donate
                       <div class="col s12" style="padding-left: 0; padding-right: 0">
                         <h6 class="fieldset-subtitle" style="margin-top: 10px">Village Empowerment Network™ Sponsor</h6>
                       </div>
-                      <div class="col s12" style="padding-left: 0; padding-right: 0">
-                        
-                        <p style="margin-bottom: 0 !important">
+                      <div class="col s12" style="padding-left: 0; padding-right: 0">                 
+                        <p style="padding-bottom: 5px; padding-top: 5px;">
                           <label>
                             <input id="ven-sponsor" class="with-gap" name="donation_level" type="radio" value="1500" plan-id='hkm6'>
-                            <span id="ven-sponsor-amount">$1,500</span>
+                            <span id="ven-sponsor-amount" style="height: fit-content !important;">$1,500 - Sponsors 10 business coaching sessions for entrepreneurs or 10 financial planning sessions for individuals or families PLUS unlimited access to online courses</span>
                           </label>
                         </p>
-                        <div class="col s12 hidden" style="padding: 0" id="ven-quantity">
-                          <div class="valign-wrapper" style="color: rgb(145, 145, 145)">
-                            I'd like to sponsor 
-                            <div class="input-field col s2" style="padding-left: 0; margin-bottom: 0; margin-top: 0px; margin-left: 10px; margin-right: 5px">
-                              <select id="ven-select">
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                                <option value="6">6</option>
-                                <option value="7">7</option>
-                                <option value="8">8</option>
-                                <option value="9">9</option>
-                                <option value="10">10</option>
-                              </select>
-                            </div>
-                            <div id="ven-label-end"> registrant</div>
-                          </div>
-                        </div>
+                        <p>
+                          <label>
+                            <input id="vap-sponsor" class="with-gap" name="donation_level" type="radio" value="1200" plan-id='s8cm'>
+                            <span id="vap-sponsor-amount" style="height: fit-content !important;">$1,200 - Pays for 12 sessions for community members in need to have one-on-one wellness sessions with a qualified, licensed and culturally competent therapist.</span>
+                          </label>
+                        </p> 
                       </div>
                   </div>
                     <div id="make-my-donation">
@@ -805,26 +790,6 @@ function handleVenmoSuccess(payload) {
       $('opt-in').addClass('hidden')
     }
   })
-  $('#ven-select').on('change', function(){
-    var quantity = $(this).val()
-    var amount = 1500*quantity
-    $('#ven-sponsor-amount').text('$'+amount.toLocaleString())
-    $('#ven-sponsor').attr('value', amount)
-    if($('#cover-fee').is(':checked')){
-      var fee = parseInt(amount * 0.0199 + 0.49)
-      var total = amount + fee
-      $('#donation-level-input').attr('value', total.toFixed(2))
-      $('#donationTotal').text('$' + parseFloat(total, 10).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString())
-    }else{
-      $('#donation-level-input').attr('value', amount)
-      $('#donationTotal').text('$' + parseFloat(amount, 10).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString())
-    }
-    if(quantity != 1){
-      $('#ven-label-end').text('registrants')
-    }else{
-      $('#ven-label-end').text('registrant')
-    }
-  })
   $('[name="donation_level"]').on('change', function(){
       var level = parseInt($(this).val())
       
@@ -836,16 +801,6 @@ function handleVenmoSuccess(payload) {
       }else{
         $('#donation-level-input').attr('value', level)
         $('#donationTotal').text('$' + parseFloat(level, 10).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString())
-      }
-      
-      if($('#ven-sponsor').is(':checked')){
-        $('#ven-quantity').removeClass('hidden')
-      }else{
-        $('#ven-quantity').addClass('hidden')
-        $('#ven-sponsor-amount').text('$1,500')
-        $('#ven-sponsor').attr('value', 1500)
-        $('#ven-label-end').text('registrant')
-        $('#ven-quantity .select-dropdown.dropdown-trigger').val(1)
       }
     });
     $('#other-donation').on('keyup', function(){
@@ -948,7 +903,16 @@ function handleVenmoSuccess(payload) {
       $('.step-3').addClass('hidden')
       $('.step-2').removeClass('hidden')
     });
-    
+    $(":radio[value=1500]").change(function() {
+        $('#other-donation').val('');
+        $('.other-input').addClass('hidden');
+        $('#make-my-donation').show()
+    });
+    $(":radio[value=1200]").change(function() {
+        $('#other-donation').val('');
+        $('.other-input').addClass('hidden');
+        $('#make-my-donation').show()
+    });
     $(":radio[value=25]").change(function() {
         
         $('#other-donation').val('');
