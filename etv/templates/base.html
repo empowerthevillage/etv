@@ -129,52 +129,49 @@
               
             <i class="left sidenav-trigger material-icons" data-target="side-nav" id="sidenav-menu-trigger" style="z-index: 2;">menu</i>
             <a href="{{ home_url }}" class="brand-logo"><img src="https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/etv-logo-r.jpg" height=110></a>
-              <div class="left nav-row-left valign-wrapper" id="nav-top-left"> 
-                
-              </div>
-              <div class="center-align nav-tagline">
-                  <h7 style="color:black; text-align: center; font-family: oskar;"><b style="color:#bf1e2d; font-weight: 300">Restoring</b></h7><br>
-                    <h7 style="color:black; text-align: center; font-family: oskar;">Prosperity, Peace & Power</h7><br>
-                      <h7 style="color:black; text-align: center; font-family: oskar;"><b style="color:#01a650; font-weight: 300">To The Black Community</b></h7>
-
-              </div>
+              
+            <div class="center-align nav-tagline">
+                <h7 style="color:black; text-align: center; font-family: oskar;"><b style="color:#bf1e2d; font-weight: 300">Restoring</b></h7><br>
+                <h7 style="color:black; text-align: center; font-family: oskar;">Prosperity, Peace & Power</h7><br>
+                <h7 style="color:black; text-align: center; font-family: oskar;"><b style="color:#01a650; font-weight: 300">To The Black Community</b></h7>
+            </div>
        
-              <div class="right valign-wrapper" style="height:100%; position: absolute; right: 10px">
-                <a class="main-nav-link ul-effect valign-wrapper {% if request.path == home_url %}active{% endif %}" href="{{ home_url }}">Home</a>
-                    <div class="navbar-slash"> | </div>
-                  <a class="main-nav-link ul-effect valign-wrapper {% if request.path == about_url %}active{% endif %}" href="{{ about_url }}">About</a>
-                    <div class="navbar-slash"> | </div>
-                  
-                  <a class="main-nav-link dropdown-trigger ul-effect valign-wrapper" data-target='top-dropdown-sp'>Programs</a>
-                    <div class="navbar-slash"> | </div>
-                  <a class="main-nav-link dropdown-trigger ul-effect valign-wrapper" data-target='top-dropdown-pillars'>Pillars</a>
-                    <div class="navbar-slash"> | </div>
-                    
-                  {% if request.user.is_authenticated %}
-                  <a class="main-nav-link dropdown-trigger ul-effect valign-wrapper {% if request.path == events_url %}active{% endif %}" data-target='events-dropdown' href="{{ events_url }}">Events</a>
+            <div class="right valign-wrapper" style="height:100%; position: absolute; right: 10px">
+              <a class="main-nav-link ul-effect valign-wrapper {% if request.path == home_url %}active{% endif %}" href="{{ home_url }}">Home</a>
                   <div class="navbar-slash"> | </div>
-                  <a class="main-nav-link ul-effect valign-wrapper {% if request.path == news_url %}active{% endif %}" href="{{ news_url }}">News</a>
+                <a class="main-nav-link ul-effect valign-wrapper {% if request.path == about_url %}active{% endif %}" href="{{ about_url }}">About</a>
                   <div class="navbar-slash"> | </div>
-                  {% if request.user.is_admin %}
-                  <a class="main-nav-link ul-effect valign-wrapper {% if request.path == dashboard_url %}active{% endif %}" href="/dashboard/">Dashboard</a>
-                    <div class="navbar-slash"> | </div>
-                  {% endif %}
-                  <a href="{{ logout_url }}" class="main-nav-link ul-effect valign-wrapper"> Logout</a>
-                   
-                  {% else %}
-                  <a class="main-nav-link dropdown-trigger ul-effect valign-wrapper {% if request.path == events_url %}active{% endif %}" data-target='events-dropdown' href="{{ events_url }}">Events</a>
+                
+                <a class="main-nav-link dropdown-trigger ul-effect valign-wrapper" data-target='top-dropdown-sp'>Programs</a>
                   <div class="navbar-slash"> | </div>
-                  <a class="main-nav-link ul-effect valign-wrapper {% if request.path == news_url %}active{% endif %}" href="{{ news_url }}">News</a>
-                  <div class="navbar-slash"> | </div>
-                  <a class="main-nav-link valign-wrapper ul-effect modal-trigger" href="#join-the-village-modal" style="cursor: pointer">Join</a>
+                <a class="main-nav-link dropdown-trigger ul-effect valign-wrapper" data-target='top-dropdown-pillars'>Pillars</a>
                   <div class="navbar-slash"> | </div>
                   
-                  <a class="main-nav-link valign-wrapper ul-effect {% if request.path == login_url %}active{% endif %}" href="{{ login_url }}">Login</a>
+                {% if request.user.is_authenticated %}
+                <a class="main-nav-link dropdown-trigger ul-effect valign-wrapper {% if request.path == events_url %}active{% endif %}" data-target='events-dropdown' href="{{ events_url }}">Events</a>
+                <div class="navbar-slash"> | </div>
+                <a class="main-nav-link ul-effect valign-wrapper {% if request.path == news_url %}active{% endif %}" href="{{ news_url }}">News</a>
+                <div class="navbar-slash"> | </div>
+                {% if request.user.is_admin %}
+                <a class="main-nav-link ul-effect valign-wrapper {% if request.path == dashboard_url %}active{% endif %}" href="/dashboard/">Dashboard</a>
                   <div class="navbar-slash"> | </div>
-                  <a class="main-nav-link ul-effect valign-wrapper {% if request.path == contact_url %}active{% endif %}" href="{{ contact_url }}">Contact</a>
-                  {% endif %}
-                <a class="btn btn-large waves-effect waves-light donate-btn-navbar" href="{{ donate_url }}" id="donate-btn-navbar">DONATE</a>
-              </div>
+                {% endif %}
+                <a href="{{ logout_url }}" class="main-nav-link ul-effect valign-wrapper"> Logout</a>
+                  
+                {% else %}
+                <a class="main-nav-link dropdown-trigger ul-effect valign-wrapper {% if request.path == events_url %}active{% endif %}" data-target='events-dropdown' href="{{ events_url }}">Events</a>
+                <div class="navbar-slash"> | </div>
+                <a class="main-nav-link ul-effect valign-wrapper {% if request.path == news_url %}active{% endif %}" href="{{ news_url }}">News</a>
+                <div class="navbar-slash"> | </div>
+                <a class="main-nav-link valign-wrapper ul-effect modal-trigger" href="#join-the-village-modal" style="cursor: pointer">Join</a>
+                <div class="navbar-slash"> | </div>
+                
+                <a class="main-nav-link valign-wrapper ul-effect {% if request.path == login_url %}active{% endif %}" href="{{ login_url }}">Login</a>
+                <div class="navbar-slash"> | </div>
+                <a class="main-nav-link ul-effect valign-wrapper {% if request.path == contact_url %}active{% endif %}" href="{{ contact_url }}">Contact</a>
+                {% endif %}
+              <a class="btn btn-large waves-effect waves-light donate-btn-navbar" href="{{ donate_url }}" id="donate-btn-navbar">DONATE</a>
+            </div>
           </div>
           <div class="dropdown-container">
             <ul id="top-dropdown-sp" class="dropdown-content dd-base">
@@ -187,9 +184,6 @@
                 <li><a class="center-align valign-wrapper" href="{{ voting_url }}">OPERATION: BALLOT BOX™</a></li>
             </ul>
           </div>
-          
-        </div>
-        
         </nav>
         <div class="dropdown-container">
           <ul id="top-dropdown-pillars" class="dropdown-content dd-base collapsible">
@@ -202,6 +196,7 @@
                   <li><a href="{{ efbf_url }}">Make Every Friday, Black Friday!</a></li>
                   <li><a href="{{ vbp_url }}">Village Black Pages®</a></li>
                   <li><a href="{{ ven_url }}">Village Empowerment Network™</a></li>
+                  <li><a href="{{ vap_url }}">Village Assist Program™</a></li>
                   <li><a href="{{ vaw_url }}">Village@Work™</a></li>
                   <li><a href="{{ bf_home_url }}">Black Friday Challenge</a></li>
                 </ul>
@@ -240,6 +235,7 @@
                     <li><a href="{{ efbf_url }}">MAKE EVERY FRIDAY, BLACK FRIDAY!®</a></li>
                     <li><a href="{{ vbp_url }}">Village Black Pages®</a></li>
                     <li><a href="{{ ven_url }}">Village Empowerment Network™</a></li>
+                    <li><a href="{{ vap_url }}">Village Assist Program™</a></li>
                     <li><a href="{{ vaw_url }}">Village@Work™</a></li>
                     <li><a href="{{ bf_home_url }}">Black Friday Challenge™</a></li>
                     <li><a href="{{ voting_url }}">Operation: Ballot Box™</a></li>
@@ -259,6 +255,7 @@
                     <li><a href="{{ efbf_url }}">Make Every Friday, Black Friday!</a></li>
                     <li><a href="{{ vbp_url }}">Village Black Pages</a></li>
                     <li><a href="{{ ven_url }}">Village Empowerment Network™</a></li>
+                    <li><a href="{{ vap_url }}">Village Assist Program™</a></li>
                     <li><a href="{{ vaw_url }}">Village@Work™</a></li>
                     <li><a href="{{ bf_home_url }}">Black Friday Challenge</a></li>
                   </ul>
@@ -373,7 +370,7 @@
         
         {% endblock %}
         </div>
-    </main>
+      </main>
     {% load sweetify %}
     {% sweetify %}
     </body>
