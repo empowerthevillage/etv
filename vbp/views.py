@@ -368,7 +368,7 @@ def mv_view(request):
         "col2":  col2,
         "filter": f,
     }
-    return redirect('/events/')
+    return redirect('/village-black-pages/')
 
 def get_subcats(request):
   if request.method == 'POST':
