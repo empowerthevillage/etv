@@ -368,7 +368,7 @@ def mv_view(request):
         "col2":  col2,
         "filter": f,
     }
-    return render(request, 'vbp/mv.html', context)
+    return redirect('/events/')
 
 def get_subcats(request):
   if request.method == 'POST':
