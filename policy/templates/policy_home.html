@@ -1,9 +1,9 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %}ETV | Policy & Power{% endblock %}
+{% block title %}ETV | Power{% endblock %}
 {% block canonical %}https://www.empowerthevillage.org/policy-and-power/{% endblock %}
-{% block seo_description %}ETV Strategic Pillars: Policy & Power{% endblock %}
+{% block seo_description %}ETV Strategic Pillars: Power{% endblock %}
 
 {% block content %}
 <div class="parallax-container z-depth-3 box-shadow valign-wrapper">
@@ -20,22 +20,24 @@
     <div class="row" style="background-color: rgba(255, 255, 255, 0.865);">
         <ul class="tabs subnav-tabs tabs-fixed-width pillar-nav z-depth-2">
             <li class="tab"  class="subnav-link"><a href="{{ voting_url }}" class="subnav-link">Operation: Ballot Box™</a></li>
-            <li class="tab disabled subnav-link">Coming Soon! - Community Resources</li>
+            <li class="tab"  class="subnav-link"><a href="/education/village-strivers/" class="subnav-link">Village Strivers™</a></li>
+
         </ul>
         <style>
             @media only screen and (min-width:663px){
                 .subnav-link {
-                font-size: 20px !important
+                font-size: 28px !important;
             }
             }
             .subnav-link {
-                font-size: 14px
+                font-size: 18px !important;
+                font-weight: 600 !important;
             }
         </style>
         <div class="col s12 l10 offset-l1 pillar-body">
             <div class="center-align">
                 <p class="pillar-tagline">
-                    The Power pillar was designed to increase Black voter engagement, encourage leadership, and address policy-related issues in the areas of economic empowerment, health, and education nationally impacting the Black community.
+                    The Power pillar was designed to increase civic engagement, facilitate affordable access to education and career-readiness, and encourage community leaders to address challenges in the areas of economic empowerment, health, <wbr>and education impacting the Black community.
                 </p>
                 <div class="divider" style="margin-bottom: 15px; margin-top: 15px;width: 50%; margin-left: 25%; border-bottom: dotted 3px rgb(222, 222, 222); background-color: transparent"></div>
                 <p class="dyk" style="color: rgb(184, 23, 23); margin:0; padding:0; padding-top: 2%; padding-bottom: 20px; margin-top: -10px">State Of The Village: <a style="color:rgba(38, 38, 38, 0.947); font-family: oskar">Did You Know...?</a></p>
@@ -97,7 +99,7 @@
                                                     <i class="material-icons pillar-target">track_changes</i> 
                                                 </td>
                                                 <td class="pillar-h5">
-                                                    Cultivate & empower leadership that advances our strategic agenda
+                                                    Cultivate & empower community leaders that advance our strategic agenda
                                                 </td>
                                             </tr>
                                             
@@ -162,10 +164,15 @@
                 </div>
             
                 <div class="divider" style="margin-bottom: 30px"></div>
-                <h5 class="dyk" style="text-align: center">Cultural Education & Pride</h5>
+                <h5 class="dyk" style="text-align: center">Education & Cultural Pride</h5>
                 <div class="divider" style="margin-bottom: 20px"></div>
                 <div class="col s12" style="padding-left: 10%; padding-right: 10%;">
-                        
+                    <div class="row center-align">
+                        <div class="col s12 m6 offset-m3">
+                            <a href="/education/village-strivers/"><img src="https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/strivers-logo.png" width="100%"></a>
+                        </div>
+                    </div>
+                    <div class="divider" style="margin-bottom: 20px; margin-top: 10px"></div>
                     <h6 class="health-main-title">Know Thyself!™</h6>
                     <h6 class="pillar-h5 health-main-text" style="text-align: center">ETV is tackling Post Traumatic Slave Disorder (our PTSD) through customized age-appropriate education fostering cultural pride. We are also developing a curriculum and championing programs that promote a growth mindset of possibilities, self-confidence, self-respect and self-esteem.</h6>
                     </div>
@@ -638,11 +645,11 @@
         font-weight: 300;
     }
     .pillar-nav {
-        background-color: rgba(0, 0, 0, 0.728);
+        background-color: rgba(0, 0, 0, 0.882);
     }
     .pillar-nav li a {
         color: rgb(255, 255, 255) !important;
-        font-size: 16px !important;
+        font-size: 20px !important;
         font-weight: 300
     }
     .dyk {
