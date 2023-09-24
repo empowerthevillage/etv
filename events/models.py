@@ -73,6 +73,7 @@ class Event(models.Model):
     checkout_image_2  = models.ImageField(blank=True, null=True)
     checkout_img_link_2 = models.CharField(max_length=270, null=True, blank=True)
     date            = models.DateTimeField(blank=True, null=True)
+    date_tbd                = models.BooleanField(default=False)
     start_date      = models.DateField(blank=True, null=True)
     end_date        = models.DateField(blank=True, null=True)
     start_time      = models.TimeField(blank=True, null=True)

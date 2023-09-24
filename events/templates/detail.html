@@ -56,11 +56,15 @@
         {% if event.subtitle %}
         <h3 class="modal-subtitle scale-up-center">{{ event.subtitle }}</h3>
         {% endif %}
-        {% if event.is_multiday %}
-        <h6 class="modal-date scale-up-center" style="width: 100%">{{ event.start_date|date:"F jS" }} & {{ event.end_date|date:"jS" }}, {{ event.end_date|date:"Y"}}</h6>
+        {% if not event.date_tbd %}
+          {% if event.is_multiday %}
+          <h6 class="modal-date scale-up-center" style="width: 100%">{{ event.start_date|date:"F jS" }} & {{ event.end_date|date:"jS" }}, {{ event.end_date|date:"Y"}}</h6>
+          {% else %}
+          <h6 class="modal-date scale-up-center" style="width: 100%">{{ event.start_date|date:"F jS, Y" }}</h6>
+          {% if event.start_time is not None %}<h6 class="modal-date sm scale-up-center" style="width: 100%">{{ event.start_time|date:"P" }}{% endif %}{% if event.end_time is not None %} - {{ event.end_time|date:"P" }}</h6>{% endif %}
+          {% endif %}
         {% else %}
-        <h6 class="modal-date scale-up-center" style="width: 100%">{{ event.start_date|date:"F jS, Y" }}</h6>
-        {% if event.start_time is not None %}<h6 class="modal-date sm scale-up-center" style="width: 100%">{{ event.start_time|date:"P" }}{% endif %}{% if event.end_time is not None %} - {{ event.end_time|date:"P" }}</h6>{% endif %}
+        <h6 class="modal-date scale-up-center" style="width: 100%">Dates TBD</h6>
         {% endif %}
         <div class="divider-dotted"></div>
         {{ event.content|safe }}

@@ -14,10 +14,14 @@
         {% if event.subtitle is not None %}
         <h6 class="modal-title scale-up-center" style="color: black">{{ event.subtitle }}</h6>
         {% endif %}
-        {% if event.is_multiday %}
-        <h6 class="modal-date scale-up-center" style="width: 100%">{{ event.start_date|date:"F jS" }} & {{ event.end_date|date:"jS" }}, {{ event.end_date|date:"Y"}}</h6>
+        {% if not event.date_tbd %}
+          {% if event.is_multiday %}
+          <h6 class="modal-date scale-up-center" style="width: 100%">{{ event.start_date|date:"F jS" }} & {{ event.end_date|date:"jS" }}, {{ event.end_date|date:"Y"}}</h6>
+          {% else %}
+          <h6 class="modal-date scale-up-center" style="width: 100%">{{ event.start_date|date:"F jS, Y" }}{% if event.start_time is not None %}, {{ event.start_time|date:"P" }}{% endif %}{% if event.end_time is not None %} - {{ event.end_time|date:"P" }}{% endif %}</h6>
+          {% endif %}
         {% else %}
-        <h6 class="modal-date scale-up-center" style="width: 100%">{{ event.start_date|date:"F jS, Y" }}{% if event.start_time is not None %}, {{ event.start_time|date:"P" }}{% endif %}{% if event.end_time is not None %} - {{ event.end_time|date:"P" }}{% endif %}</h6>
+        <h6 class="modal-date scale-up-center" style="width: 100%">Dates TBD</h6>
         {% endif %}
     </div>
     <div class="row" id="ticket-checkout-p1">
