@@ -191,6 +191,7 @@ class TicketType(models.Model):
     active          = models.BooleanField(default=True)
     registration_url = models.CharField(max_length=370, blank=True, null=True)
     registration_text = models.TextField(blank=True, null=True)
+    qty_limit       = models.PositiveIntegerField(default=0)
     
     objects         = TicketTypeManager()
 

@@ -131,14 +131,20 @@ def event_ticket_checkout(request, slug):
     donations = ticketDonation.objects.filter(cart=cart_obj)
     ads = ticketAd.objects.filter(cart=cart_obj)
     ad_types  = AdType.objects.filter(event=event)
+    quantity_list = range(0,11)
     cart_items = list()
     for x in ticket_types:
         ticketType = x
+        if x.qty_limit > 0:
+            upper_lim = x.qty_limit + 1
+            quantity_list = range(0, upper_lim)
+        else:
+            quantity_list = range(0,11)
         cartItem = ticketItem.objects.filter(cart=cart_obj).filter(ticket=x).first()
         dictionary = {
             "type": ticketType,
             "cartItem": cartItem,
-            "quantity_list": range(0,11)
+            "quantity_list": quantity_list
         }
         cart_items.append(dictionary)
     ad_items = list()
