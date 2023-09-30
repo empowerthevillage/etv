@@ -1,3 +1,5 @@
 from django.contrib import admin
+from accounts.admin import admin_site
+from .models import Flyer
 
-# Register your models here.
+admin_site.register(Flyer)

@@ -1,9 +1,7 @@
 from django.shortcuts import render
-from django.http.response import HttpResponse, JsonResponse
 from django.shortcuts import render, redirect
-from django.conf import settings
+from .models import Flyer
 
-import sweetify
 
 def policy_home(request):
     context = {
@@ -14,6 +12,7 @@ def policy_home(request):
 def voting(request):
     context = {
         'title': 'ETV | Operation Ballot Box',
+        'flyers': Flyer.objects.filter(active=True)
     }
     return render(request, "voting.html", context)
 

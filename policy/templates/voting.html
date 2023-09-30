@@ -10,7 +10,7 @@
 <div class="parallax-container z-depth-3 box-shadow valign-wrapper">
     
     <div class="container z-depth-4 center-align parallax-banner" id="obb-banner">
-        <h4 style="padding: 1% 1% 3% 1%; font-family: oskar; font-weight: 800; font-size: 52px; letter-spacing: 1px; color:rgb(184, 23, 23)">Operation: <b style="font-weight:800; color: black">Ballot Box™</b></h4>
+        <h4 class="obb-title" style="font-family: oskar; font-weight: 800; letter-spacing: 1px; color:rgb(184, 23, 23)">Operation: <b style="font-weight:800; color: black">Ballot Box™</b></h4>
     </div>
     <div class="parallax">
         <img src='https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/policy-collage.webp'>
@@ -19,49 +19,30 @@
 </div>
 
 <div style="background: url('https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/policy-collage.webp');">
-    <div class="row" style="background-color: rgba(255, 255, 255, 0.781);">
+    <div class="row" style="background-color: rgba(255, 255, 255, 0.781); padding-top: 10px;">
         <div class="col s12 l10 offset-l1  pillar-body center-align">
             <h6 class="voting-subtitle">How and Where to Vote Safely and Reliably</h6>
-            <div class="divider" style="margin-top: 20px; margin-bottom: 30px"></div>
+            <div class="divider" style="margin-top: 10px; margin-bottom: 20px"></div>
             <div class="row">
                 <div class="col s12 l8 offset-l2">
                     <a href="https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/obb-flyer-overview-23.webp" target="_blank"><img class="z-depth-1" src="https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/obb-flyer-overview-23.webp" width="100%"></a>
                 </div>
             </div>
-        <!--<div class="col s12 l10 offset-l1  pillar-body center-align">
-            <h5 class="phase-one-title" style="margin-bottom: 10px">Operation: Ballot Box™</h5>
-            <h6 class="voting-subtitle">How and Where to Vote Safely and Reliably</h6>
-            <div class="divider" style="margin-top: 20px; margin-bottom: 30px"></div>
-            <div class="row">
-                <div class="col s12 l10 xl8 offset-l1 offset-xl2">
-                    <a href="{% static 'img/obb-generic-2.jpg' %}" target="_blank"><img class="z-depth-1" src="{% static 'img/obb-slide-min.jpg' %}" width="100%"></a>
-                </div>
-            </div>
-            
-            <div class="divider" style="margin-top: 40px; margin-bottom: 40px"></div>
-            <div class="row center-align">
-                <div class="col s6 l5 offset-l1 center-align">
-                    <a href="{% static 'img/US-NJ-22.pdf' %}" target="_blank"><img class="z-depth-2" src="{% static 'img/nj-vote-22-min.jpg' %}" width=100%></a>
-                    
-                </div>
-                <div class="col s6 l5 center-align">
-                <a href="{% static 'img/US-NJ-22.pdf' %}" target="_blank"><img class="z-depth-2" src="{% static 'img/US-NJ-22-pg2.jpg' %}" width=100%></a>
-                
-                </div>
-            </div>
-            <div class="row center-align">
-                <div class="col s12 m10 offset-m1 l8 offset-l2">
-                    <a class="print-btn modal-trigger" href="#state-modal" id="print-btn"><p>Download print version with QR codes to distribute flyers!</p></a>
-                </div>
-            </div>
-            <div class="divider" style="margin-top: 40px; margin-bottom: 40px"></div>
+            <div class="divider" style="margin-top: 10px; margin-bottom: 10px"></div>
             <p class="voting-subtitle" style="text-align: center;margin-top:0">Click your state to download and share key voting info with friends, family and your network!</p>
-
-            <div class="map-container">
-                    <div id="map" style="height: 600px">
-                            
-                    </div>     
+            <div class="row">
+                {% for flyer in flyers %}
+                <div class="col s12 m6 l4">
+                    <a href="{{ flyer.pdf_link }}" target="_blank"><img class="lazy z-depth-1" src="{{ flyer.thumbnail_link }}" width="100%" style="margin-top: 10px"></a>
+                </div>
+                {% endfor %}
             </div>
+            <!--<div class="col s12 l10 offset-l1  pillar-body center-align">
+        
+            
+            
+
+            
             <div class="divider" style="margin-top: 40px; margin-bottom: 40px"></div>
             <div class="row">
                 <div class="col s12 m6 l4">
@@ -132,6 +113,10 @@
 </div>-->
 
 <style>
+    .obb-title {
+        font-size: 32px;
+        padding: 0% 2% 3% 2%;
+    }
     #state-modal {
         padding: 2%;
         height: 80%
@@ -217,9 +202,10 @@
             line-height: 48px;
         }
         .voting-subtitle {
-            font-size: 24px; 
-            font-weight: 300; 
-            margin-bottom: 30px
+            font-size: 16px; 
+            margin-bottom: 0px;
+            padding-top: 10px;
+            line-height: 22px;
         }
         .coming-soon-text {
             font-size: 28px;
@@ -243,6 +229,10 @@
         #obb-banner {
             width: 60%;
         }
+        .obb-title {
+        font-size: 42px;
+            padding: 0% 2% 2% 2%;
+        }
         .health-main-title {
         font-family: oskar-inline;
         font-size: 48px;
@@ -260,8 +250,9 @@
             margin-left: 10%
         }
         .voting-subtitle {
-            font-size: 28px; 
-            font-weight: 300; 
+            font-size: 24px; 
+            line-height: 28px;
+            margin-bottom: 10px;
         }
         .coming-soon-text {
             font-size: 32px;
@@ -291,7 +282,10 @@
         #obb-banner {
             width: 60%;
         }
-        
+        .obb-title {
+            font-size: 56px;
+            padding: 0% 2% 2% 2%;
+        }
         .health-main-title {
         font-size: 48px;
         text-align: left;
@@ -315,6 +309,11 @@
         }
         .coming-soon-text {
             font-size: 38px;
+        }
+        .voting-subtitle {
+            font-size: 28px; 
+            line-height: 36px;
+            margin-bottom: 15px;
         }
 }
     @media only screen and (min-width:1201px){
