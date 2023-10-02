@@ -1,6 +1,8 @@
 from django.db import models
 from datetime import date
 
+from phonenumber_field.modelfields import PhoneNumberField
+
 STATE_CHOICES = (
     ('AL', 'Alabama'),
     ('AK', 'Alaska'),
@@ -69,3 +71,18 @@ class Flyer(models.Model):
 
     class Meta:
         ordering = ['order', 'state']
+        
+class VillageStriversApplication(models.Model):
+    first_name              = models.CharField(blank=True, null=True, max_length=120)
+    last_name               = models.CharField(blank=True, null=True, max_length=120)
+    email                   = models.EmailField(blank=True, null=True)
+    phone                   = PhoneNumberField(blank=True, null=True)
+    school_classification   = models.CharField(blank=True, null=True, max_length=120)
+    resume                  = models.FileField(blank=True, null=True)
+    interest                = models.CharField(blank=True, null=True, max_length=120)
+    category                = models.CharField(blank=True, null=True, max_length=120)
+    open_to_unpaid          = models.CharField(blank=True, null=True, max_length=120, verbose_name='Open to unpaid internships/apprenticeships')
+    submitted               = models.DateTimeField(auto_now_add=True, blank=True, null=True)
+    
+    def __str__(self):
+        return 'Village Strivers Application - %s %s' %(self.first_name, self.last_name)

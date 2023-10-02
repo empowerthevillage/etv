@@ -253,12 +253,12 @@ AWS_FILE_EXPIRE = 200
 AWS_PRELOAD_METADATA = True
 AWS_QUERYSTRING_AUTH = True
 
-AWS_S3_CUSTOM_DOMAIN = 'elift.s3.amazonaws.com'
+AWS_S3_CUSTOM_DOMAIN = 'etv-static.s3.amazonaws.com'
 AWS_LOCATION = 'static'
 
 DEFAULT_FILE_STORAGE = 'etv.utils.MediaRootS3BotoStorage'
 STATICFILES_STORAGE = 'etv.utils.StaticRootS3BotoStorage'
-AWS_STORAGE_BUCKET_NAME = 'elift'
+AWS_STORAGE_BUCKET_NAME = 'etv-static'
 S3_URL = '//%s.s3.amazonaws.com/' % AWS_STORAGE_BUCKET_NAME
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static-cdn", "media_root")
