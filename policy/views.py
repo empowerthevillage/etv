@@ -104,8 +104,8 @@ def strivers_application(request):
         {
             'application': app_obj,
         })
-        #recipients = ['chandler@eliftcreations.com', 'admin@empowerthevillage.org', 'ayo@empowerthevillage.org']
-        recipients = ['chandler@eliftcreations.com']
+        recipients = ['chandler@eliftcreations.com', 'admin@empowerthevillage.org', 'ayo@empowerthevillage.org']
+        #recipients = ['chandler@eliftcreations.com']
         send_mail(
             'New Village Strivers Application!',
             str('A new village Strivers Application has been received! '+ str(app_obj)),
