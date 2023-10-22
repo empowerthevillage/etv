@@ -35,7 +35,7 @@
       </div>
       
       <div id="vbp-business-nomination-form" class="row hidden">
-            <form class="col s12 l10 offset-l1 xl8 offset-xl2" method="POST" action="/village-empowerment-network-nomination/" id="nomination-form">
+            <form class="col s12 l10 offset-l1 xl8 offset-xl2" method="POST" action="/village-empowerment-network-nomination/" id="business-nomination-form">
               {% csrf_token %}
               <div class="col s12 center-align">
                 <p>
@@ -708,14 +708,16 @@
               </div>
               
               <div class="col s12 center-align">
-                <button class="btn btn-large submit-btn nomination-submit" type="submit">
+                <button class="btn btn-large submit-btn nomination-submit g-recaptcha" data-sitekey="6Lf2Ov0iAAAAACkudkPwl0VtX4g3VSUBnNxK3VJy" 
+                data-callback='onBusinessSubmit' 
+                data-action='submit'>
                   SUBMIT
               </button>
               </div>
             </form>
       </div>
       <div id="vbp-family-nomination-form" class="row hidden container">
-            <form class="col s12 l10 offset-l1 xl8 offset-xl2" method="POST" action="/village-empowerment-network-nomination/" id="nomination-form">
+            <form class="col s12 l10 offset-l1 xl8 offset-xl2" method="POST" action="/village-empowerment-network-nomination/" id="family-nomination-form">
                 {% csrf_token %}
                 <input type="hidden" name="submission-type" value="family">
 
@@ -966,14 +968,16 @@
                 </div>
             
                 <div class="col s12 center-align">
-                  <button class="btn btn-large submit-btn nomination-submit" type="submit">
+                  <button class="btn btn-large submit-btn nomination-submit g-recaptcha" data-sitekey="6Lf2Ov0iAAAAACkudkPwl0VtX4g3VSUBnNxK3VJy" 
+                  data-callback='onFamilySubmit' 
+                  data-action='submit'>
                     SUBMIT
                 </button>
                 </div>
             </form>
       </div>
       <div id="vbp-both-nomination-form" class="row hidden">
-        <form class="col s12 l10 offset-l1 xl8 offset-xl2" method="POST" action="/village-empowerment-network-nomination/" id="nomination-form">
+        <form class="col s12 l10 offset-l1 xl8 offset-xl2" method="POST" action="/village-empowerment-network-nomination/" id="both-nomination-form">
           {% csrf_token %}
           
           <input type="hidden" name="submission-type" value="both">
@@ -1890,7 +1894,9 @@
           </fieldset>
           
           <div class="col s12 center-align">
-            <button class="btn btn-large submit-btn nomination-submit" type="submit">
+            <button class="btn btn-large submit-btn nomination-submit g-recaptcha" data-sitekey="6Lf2Ov0iAAAAACkudkPwl0VtX4g3VSUBnNxK3VJy" 
+            data-callback='onBothSubmit' 
+            data-action='submit'>
               SUBMIT
           </button>
           </div>
@@ -2027,7 +2033,20 @@
     }
   }
 </style>
+<script src="https://www.google.com/recaptcha/api.js"></script>
 <script>
+  function onBusinessSubmit(token) {
+    document.getElementById("business-nomination-form").submit();
+  };
+  function onFamilySubmit(token) {
+    document.getElementById("family-nomination-form").submit();
+  };
+  function onBothSubmit(token) {
+    document.getElementById("both-nomination-form").submit();
+  };
+</script>
+<script>
+  
   $('#category-select-both').on('change', function(){
         var category = $(this).find(':selected').val()
         $('#disabled-subcat-both').hide()

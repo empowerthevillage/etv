@@ -5,7 +5,7 @@ from .models import Nomination, FamilyNomination, sponsor_img
 from dashboard.models import dashboardModel
 
 class VENAdmin(admin.ModelAdmin):
-    list_display = ['business_name', 'city', 'state']
+    list_display = ['business_name', 'city', 'state', 'created']
     search_fields = ['business_name', 'owner_name', 'nominator_name', 'state', 'city', 'category', 'subcategory']
     ordering = ['business_name', 'city']
 
