@@ -42,7 +42,7 @@
                             <div class="hard">
                                 <div class="col 11" style="margin-top:15%;width:100%">
                                     <div class="center-align intro-page1">
-                                        <img src="{% static 'img/logo.jpeg' %}" height=17% style="margin-top:10%">
+                                        <img src="https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/etv-logo-r.jpg" height=17% style="margin-top:10%">
                                         <div style="margin-top: 10%">
                                             <p>Copyright © {% now "Y" %} Empower The Village, Inc.</p>
                                             <p>All rights reserved.</p>
@@ -51,14 +51,14 @@
                                             <p>Cedar Knolls, NJ 07927</p>
                                         </div>
                                         <div class="row" style="margin-top: 5%; margin-bottom:0">
-                                            <a href="https://www.empowerthevillage.org"><img src="{% static 'img/web icon.jpg' %}" height=10vw style="margin-bottom:-2px"> &nbsp;empowerthevillage.org</a>
+                                            <a href="https://www.empowerthevillage.org"><img src="https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/vbp-web-icon.png" height=10vw style="margin-bottom:-2px"> &nbsp;empowerthevillage.org</a>
                                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                            <a href="mailto: info@empowerthevillage.org"><img src="{% static 'img/at icon.jpg' %}" height=10vw style="margin-bottom:-2px"> &nbsp;info@empowerthevillage.org</a>
+                                            <a href="mailto: info@empowerthevillage.org"><img src="https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/vbp-at-icon.png" height=10vw style="margin-bottom:-2px"> &nbsp;info@empowerthevillage.org</a>
                                         </div>
                                         <div class="row" style="margin-bottom:0">
-                                            <a href="https://www.facebook.com/empoweretv"><img src="{% static 'img/fb logo.jpg' %}" height=10vw style="margin-bottom:-2px"> &nbsp;@empoweretv</a>
+                                            <a href="https://www.facebook.com/empoweretv"><img src="https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/vbp-fb-icon.png" height=10vw style="margin-bottom:-2px"> &nbsp;@empoweretv</a>
                                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                            <a href="https://twitter.com/empower_etv"><img src="{% static 'img/ig icon.jpg' %}" height=10vw style="margin-bottom:-2px"> <img src="{% static 'img/twitter icon.jpg' %}" height=10vw style="margin-bottom:-2px"> &nbsp;@empower_etv</a>
+                                            <a href="https://twitter.com/empower_etv"><img src="https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/vbp-ig-icon.png" height=10vw style="margin-bottom:-2px"> <img src="https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/vbp-twitter-icon.png" height=10vw style="margin-bottom:-2px"> &nbsp;@empower_etv</a>
                                         </div>
                                         <div class="" style="margin-top:30%; margin-bottom:10%">
                                             <p class="">Photos via <a href="www.unsplash.com" style="text-decoration: underline;">Unsplash</a></p>
@@ -67,10 +67,10 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="" style="background: url({% static 'img/vbp_efbf_page.png' %}); background-size: 102%"></div>
-                            <div class="" style="background: url({% static 'img/vbp welcome page.png' %});background-size: 105%"></div>
+                            <div class="" style="background: url('https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/vbp-efbf-page.webp'); background-size: 102%"></div>
+                            <div class="" style="background: url('https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/vbp-welcome-page.webp');background-size: 105%"></div>
                             {% if paginator_beauty.object_list|length > 0 %}
-                            <div class="beauty beauty-cover" id="beauty-image" style="background: url({% static 'img/beauty.png' %});background-size: 105%"></div>
+                            <div class="beauty beauty-cover" id="beauty-image" style="background: url('https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/vbp-beauty-section-cover.webp');background-size: 105%"></div>
                             {% for response in paginator_beauty %}
                                 <div class="beauty-section beauty">
                                     <div class="data-table">
@@ -120,7 +120,7 @@
                             {% endfor %}
                             {% endif %}
                             {% if paginator_books.object_list|length > 0 %}
-                            <div class="books books-cover" id="books-large" style="background: url({% static 'img/books.png' %});background-size: 105%"></div>
+                            <div class="books books-cover" id="books-large" style="background: url('https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/vbp-books-section-cover.webp');background-size: 105%"></div>
                             {% for response in paginator_books %}
                                 <div class="books-section books">
                                     <div class="data-table">
@@ -162,7 +162,7 @@
                             {% endfor %}
                             {% endif %}
                             {% if paginator_cars.object_list|length > 0 %}
-                            <div class="cars" style="background: url({% static 'img/cars.png' %});background-size: 105%"></div>
+                            <div class="cars" style="background: url('https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/vbp-cars-section-cover.webp');background-size: 105%"></div>
                             {% for response in paginator_cars %}
                                 <div class="cars-section cars">
                                     <div class="data-table">
@@ -202,7 +202,7 @@
                             {% endfor %}
                             {% endif %}
                             {% if paginator_child.object_list|length > 0 %}
-                            <div class="child" style="background: url({% static 'img/child.png' %});background-size: 105%"></div>
+                            <div class="child" style="background: url('https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/vbp-child-section-cover.webp');background-size: 105%"></div>
                             {% for response in paginator_child %}
                                 <div class="child-section child">
                                     <div class="data-table">
@@ -242,7 +242,7 @@
                             {% endfor %}
                             {% endif %}
                             {% if paginator_cleaning.object_list|length > 0 %}
-                            <div class="cleaning" style="background: url({% static 'img/cleaning.png' %});background-size: 105%"></div>
+                            <div class="cleaning" style="background: url('https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/vbp-cleaning-section-cover.webp');background-size: 105%"></div>
                             {% for response in paginator_cleaning %}
                                 <div class="cleaning-section cleaning">
                                     <div class="data-table">
@@ -282,7 +282,7 @@
                             {% endfor %}
                             {% endif %}
                             {% if paginator_clothing.object_list|length > 0 %}
-                            <div class="clothing" style="background: url({% static 'img/clothing.png' %});background-size: 105%"></div>
+                            <div class="clothing" style="background: url('https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/vbp-clothing-section-cover.webp');background-size: 105%"></div>
                             {% for response in paginator_clothing %}
                                 <div class="clothing-section clothing">
                                     <div class="data-table">
@@ -322,7 +322,7 @@
                             {% endfor %}
                             {% endif %}
                             {% if paginator_construction.object_list|length > 0 %}
-                            <div class="construction" style="background: url({% static 'img/construction.png' %});background-size: 105%"></div>
+                            <div class="construction" style="background: url('https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/vbp-construction-section-cover.webp');background-size: 105%"></div>
                             {% for response in paginator_construction %}
                                 <div class="construction-section construction">
                                     <div class="data-table">
@@ -362,7 +362,7 @@
                             {% endfor %}
                             {% endif %}
                             {% if paginator_education.object_list|length > 0 %}
-                            <div class="education" style="background: url({% static 'img/education.png' %});background-size: 105%"></div>
+                            <div class="education" style="background: url('https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/vbp-education-section-cover.webp');background-size: 105%"></div>
                             {% for response in paginator_education %}
                                 <div class="education-section education">
                                     <div class="data-table">
@@ -402,7 +402,7 @@
                             {% endfor %}
                             {% endif %}
                             {% if paginator_eldercare.object_list|length > 0 %}
-                            <div class="eldercare" style="background: url({% static 'img/eldercare.png' %});background-size: 105%"></div>
+                            <div class="eldercare" style="background: url('https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/vbp-elder-section-cover.webp');background-size: 105%"></div>
                             {% for response in paginator_eldercare %}
                                 <div class="eldercare-section eldercare">
                                     <div class="data-table">
@@ -442,7 +442,7 @@
                             {% endfor %}
                             {% endif %}
                             {% if paginator_electronics.object_list|length > 0 %}
-                            <div class="electronics" style="background: url({% static 'img/electronics.png' %});background-size: 105%"></div>
+                            <div class="electronics" style="background: url('https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/vbp-electronics-section-cover.webp');background-size: 105%"></div>
                             {% for response in paginator_electronics %}
                                 <div class="electronics-section electronics">
                                     <div class="data-table">
@@ -482,7 +482,7 @@
                             {% endfor %}
                             {% endif %}
                             {% if paginator_entertainment.object_list|length > 0 %}
-                            <div class="entertainment" style="background: url({% static 'img/entertainment.png' %});background-size: 105%"></div>
+                            <div class="entertainment" style="background: url('https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/vbp-entertainment-section-cover.webp');background-size: 105%"></div>
                             {% for response in paginator_entertainment %}
                                 <div class="electronics-section entertainment">
                                     <div class="data-table">
@@ -522,7 +522,7 @@
                             {% endfor %}
                             {% endif %}
                             {% if paginator_farming.object_list|length > 0 %}
-                            <div class="farming" style="background: url({% static 'img/farming.png' %});background-size: 105%"></div>
+                            <div class="farming" style="background: url('https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/vbp-farming-section-cover.webp');background-size: 105%"></div>
                             {% for response in paginator_farming %}
                                 <div class="farming-section farming">
                                     <div class="data-table">
@@ -562,7 +562,7 @@
                             {% endfor %}
                             {% endif %}
                             {% if paginator_florists.object_list|length > 0 %}
-                            <div class="florists" style="background: url({% static 'img/florists.png' %});background-size: 105%"></div>
+                            <div class="florists" style="background: url('https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/vbp-florists-section-cover.webp');background-size: 105%"></div>
                             {% for response in paginator_florists %}
                                 <div class="florists-section florists">
                                     <div class="data-table">
@@ -602,7 +602,7 @@
                             {% endfor %}
                             {% endif %}
                             {% if paginator_grocery.object_list|length > 0 %}
-                            <div class="grocery" style="background: url({% static 'img/grocery.png' %});background-size: 105%"></div>
+                            <div class="grocery" style="background: url('https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/vbp-grocery-section-cover.webp');background-size: 105%"></div>
                             {% for response in paginator_grocery %}
                                 <div class="grocery-section grocery">
                                     <div class="data-table">
@@ -642,7 +642,7 @@
                             {% endfor %}
                             {% endif %}
                             {% if paginator_health.object_list|length > 0 %}
-                            <div class="health" style="background: url({% static 'img/health.png' %});background-size: 105%"></div>
+                            <div class="health" style="background: url('https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/vbp-health-section-cover.webp');background-size: 105%"></div>
                             {% for response in paginator_health %}
                                 <div class="health-section health">
                                     <div class="data-table">
@@ -682,7 +682,7 @@
                             {% endfor %}
                             {% endif %}
                             {% if paginator_home.object_list|length > 0 %}
-                            <div class="home" style="background: url({% static 'img/home.png' %});background-size: 105%"></div>
+                            <div class="home" style="background: url('https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/vbp-home-section-cover.webp');background-size: 105%"></div>
                             {% for response in paginator_home %}
                                 <div class="home-section home">
                                     <div class="data-table">
@@ -722,7 +722,7 @@
                             {% endfor %}
                             {% endif %}
                             {% if paginator_hotels.object_list|length > 0 %}
-                            <div class="hotels" style="background: url({% static 'img/hotels.png' %});background-size: 105%"></div>
+                            <div class="hotels" style="background: url('https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/vbp-hotels-section-cover.webp');background-size: 105%"></div>
                             {% for response in paginator_hotels %}
                                 <div class="hotels-section hotels">
                                     <div class="data-table">
@@ -762,7 +762,7 @@
                             {% endfor %}
                             {% endif %}
                             {% if paginator_jewelry.object_list|length > 0 %}
-                            <div class="jewelry" style="background: url({% static 'img/jewelry.png' %});background-size: 105%"></div>
+                            <div class="jewelry" style="background: url('https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/vbp-jewelry-section-cover.webp');background-size: 105%"></div>
                             {% for response in paginator_jewelry %}
                                 <div class="jewelry-section jewelry">
                                     <div class="data-table">
@@ -802,7 +802,7 @@
                             {% endfor %}
                             {% endif %}
                             {% if paginator_legal.object_list|length > 0 %}
-                            <div class="legal" style="background: url({% static 'img/legal.png' %});background-size: 105%"></div>
+                            <div class="legal" style="background: url('https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/vbp-legal-section-cover.webp');background-size: 105%"></div>
                             {% for response in paginator_legal %}
                                 <div class="legal-section legal">
                                     <div class="data-table">
@@ -842,7 +842,7 @@
                             {% endfor %}
                             {% endif %}
                             {% if paginator_lifestyle.object_list|length > 0 %}
-                            <div class="lifestyle" style="background: url({% static 'img/lifestyle.png' %});background-size: 105%"></div>
+                            <div class="lifestyle" style="background: url('https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/vbp-lifestyle-section-cover.webp');background-size: 105%"></div>
                             {% for response in paginator_lifestyle %}
                                 <div class="lifestyle-section lifestyle">
                                     <div class="data-table">
@@ -882,7 +882,7 @@
                             {% endfor %}
                             {% endif %}
                             {% if paginator_marketing.object_list|length > 0 %}
-                            <div class="marketing" style="background: url({% static 'img/marketing.png' %});background-size: 105%"></div>
+                            <div class="marketing" style="background: url('https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/vbp-marketing-section-cover.webp');background-size: 105%"></div>
                             {% for response in paginator_marketing %}
                                 <div class="marketing-section marketing">
                                     <div class="data-table">
@@ -922,7 +922,7 @@
                             {% endfor %}
                             {% endif %}
                             {% if paginator_medical.object_list|length > 0 %}
-                            <div class="medical" style="background: url({% static 'img/medical.png' %});background-size: 105%"></div>
+                            <div class="medical" style="background: url('https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/vbp-medical-section-cover.webp');background-size: 105%"></div>
                             {% for response in paginator_medical %}
                                 <div class="medical-section medical">
                                     <div class="data-table">
@@ -962,7 +962,7 @@
                             {% endfor %}
                             {% endif %}
                             {% if paginator_packaging.object_list|length > 0 %}
-                            <div class="packaging" style="background: url({% static 'img/packaging.png' %});background-size: 105%"></div>
+                            <div class="packaging" style="background: url('https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/vbp-packaging-section-cover.webp');background-size: 105%"></div>
                             {% for response in paginator_packaging %}
                                 <div class="packaging-section packaging">
                                     <div class="data-table">
@@ -1002,7 +1002,7 @@
                             {% endfor %}
                             {% endif %}
                             {% if paginator_pets.object_list|length > 0 %}
-                            <div class="pets" style="background: url({% static 'img/pets.png' %});background-size: 105%"></div>
+                            <div class="pets" style="background: url('https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/vbp-pets-section-cover.webp'});background-size: 105%"></div>
                             {% for response in paginator_pets %}
                                 <div class="pets-section pets">
                                     <div class="data-table">
@@ -1042,7 +1042,7 @@
                             {% endfor %}
                             {% endif %}
                             {% if paginator_photography.object_list|length > 0 %}
-                            <div class="photography" style="background: url({% static 'img/photography.png' %});background-size: 105%"></div>
+                            <div class="photography" style="background: url('https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/vbp-photography-section-cover.webp');background-size: 105%"></div>
                             {% for response in paginator_photography %}
                                 <div class="photography-section photography">
                                     <div class="data-table">
@@ -1082,7 +1082,7 @@
                             {% endfor %}
                             {% endif %}
                             {% if paginator_professional.object_list|length > 0 %}
-                            <div class="professional" style="background: url({% static 'img/professional.png' %});background-size: 105%"></div>
+                            <div class="professional" style="background: url('https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/vbp-professional-section-cover.webp');background-size: 105%"></div>
                             {% for response in paginator_professional %}
                                 <div class="professional-section professional">
                                     <div class="data-table">
@@ -1122,7 +1122,7 @@
                             {% endfor %}
                             {% endif %}
                             {% if paginator_realestate.object_list|length > 0 %}
-                            <div class="realestate" style="background: url({% static 'img/realestate.png' %});background-size: 105%"></div>
+                            <div class="realestate" style="background: url('https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/vbp-real-estate-section-cover.webp');background-size: 105%"></div>
                             {% for response in paginator_realestate %}
                                 <div class="realestate-section realestate">
                                     <div class="data-table">
@@ -1162,7 +1162,7 @@
                             {% endfor %}
                             {% endif %}
                             {% if paginator_receation.object_list|length > 0 %}
-                            <div class="recreation" style="background: url({% static 'img/recreation.png' %});background-size: 105%"></div>
+                            <div class="recreation" style="background: url('https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/vbp-recreation-section-cover.webp');background-size: 105%"></div>
                             {% for response in paginator_recreation %}
                                 <div class="recreation-section recreation">
                                     <div class="data-table">
@@ -1203,7 +1203,7 @@
                             {% endfor %}
                             {% endif %}
                             {% if paginator_restaurants.object_list|length > 0 %}
-                            <div class="restaurants" style="background: url({% static 'img/restaurants.png' %});background-size: 105%"></div>
+                            <div class="restaurants" style="background: url('https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/vbp-restaurants-section-cover.webp');background-size: 105%"></div>
                             {% for response in paginator_restaurants %}
                                 <div class="restaurants-section restaurants">
                                     <div class="data-table">
@@ -1243,7 +1243,7 @@
                             {% endfor %}
                             {% endif %}
                             {% if paginator_security.object_list|length > 0 %}
-                            <div class="security" style="background: url({% static 'img/security.png' %});background-size: 105%"></div>
+                            <div class="security" style="background: url('https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/vbp-security-section-cover.webp');background-size: 105%"></div>
                             {% for response in paginator_security %}
                                 <div class="security-section security">
                                     <div class="data-table">
@@ -1283,7 +1283,7 @@
                             {% endfor %}
                             {% endif %}
                             {% if paginator_transportation.object_list|length > 0 %}
-                            <div class="transportation" style="background: url({% static 'img/transportation.png' %});background-size: 105%"></div>
+                            <div class="transportation" style="background: url('https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/vbp-transportation-section-cover.webp');background-size: 105%"></div>
                             {% for response in paginator_transportation %}
                                 <div class="transportation-section transportation">
                                     <div class="data-table">
@@ -1323,7 +1323,7 @@
                             {% endfor %}
                             {% endif %}
                             {% if paginator_visual.object_list|length > 0 %}
-                            <div class="visual" style="background: url({% static 'img/visual.png' %});background-size: 105%"></div>
+                            <div class="visual" style="background: url('https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/vbp-visual-section-cover.webp');background-size: 105%"></div>
                             {% for response in paginator_visual %}
                                 <div class="visual-section visual">
                                     <div class="data-table">
@@ -1363,7 +1363,7 @@
                             {% endfor %}
                             {% endif %}
                             {% if paginator_other.object_list|length > 0 %}
-                            <div class="other" style="background: url('https://empowerthevillage.s3.amazonaws.com/static/img/other.png');background-size: 105%"></div>
+                            <div class="other" style="background: url('https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/vbp-other-section-cover.webp');background-size: 105%"></div>
                             {% for response in paginator_other %}
                                 <div class="other-section other">
                                     <div class="data-table">
@@ -1402,7 +1402,7 @@
                                 </div>
                             {% endfor %}
                             {% endif %}
-                            <div class="hard" style="background: url({% static 'img/vbp final page.png' %});background-size: 500px 650px"></div>
+                            <div class="hard" style="background: url('https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/vbp-back-cover.webp');background-size: 500px 650px"></div>
                         
                     
                         </div>
