@@ -62,7 +62,8 @@ class TicketAdmin(admin.ModelAdmin):
     download_csv.short_description = "Download selected as csv"
 
 class TicketTypeAdmin(admin.ModelAdmin):
-    list_display = ['id', 'title', 'price', 'event']
+    list_display = ['id', 'title', 'price', 'event', 'active']
+    list_filter = ['event', 'active']
     actions = ['set_inactive']
     def set_inactive(self, request, queryset):
         updated = queryset.update(active=False)
