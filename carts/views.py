@@ -370,62 +370,6 @@ def checkout_done(request):
         "billing_profile": billing_profile,
     }
     return render(request, "carts/checkout-done.html", context)
-      
-def art_receipt(request):
-    items = [FullGalleryItem.objects.filter(title='Passion').first()]
-    confirmation_subject = 'ETV Love of Art Pre-Sale Purchase Confirmation'
-    from_email = 'etvnotifications@gmail.com'
-    email = 'rweaver@socialenterprisedirectory.com'
-    confirmation_content = render_to_string('presale-email.html',
-    {
-        'items': items,
-    })
-    confirmation_plain_text = 'View email in browser'      
-    
-    send_mail(confirmation_subject, confirmation_plain_text, from_email, [str(email)], html_message=confirmation_content)
-    detail_content = render_to_string('presale-admin-email.html',
-    {
-        'purchaser': 'Rasheda Weaver',
-        'items': items,
-    })
-    
-    recipients = ['chandler@eliftcreations.com', 'admin@empowerthevillage.org', 'ayo@empowerthevillage.org']
-    #recipients = ['chandler@eliftcreations.com']
-    send_mail(
-        'New Art Show Pre-Sale Purchase!',
-        str('A ticket purchase has been successfully processed! Purchaser: '+ str(email)),
-        'etvnotifications@gmail.com',
-        recipients,
-        html_message=detail_content,
-        fail_silently=True
-    )
-    return HttpResponse('receipt sent successfully!')
-        
-def ticket_receipt(request):
-    ticket_obj = SingleTicket.objects.filter(ticket_id='btgdbwc').first()
-    event = ticket_obj.event
-    ticket_list = [ticket_obj]
-    to = 'ayanacuevas@yahoo.com'
-    confirmation_subject = 'ETV Ticket Purchase Confirmation'
-    from_email = 'etvnotifications@gmail.com'
-    confirmation_content = render_to_string('ticket-email.html',
-    {
-        'tickets': ticket_list,
-        'ads': [],
-        'donations': [],
-        'event': event
-    })
-    confirmation_plain_text = 'View email in browser'      
-    
-    msg = EmailMultiAlternatives(confirmation_subject, confirmation_plain_text, from_email, [to], cc=['admin@empowerthevillage.org','ayo@empowerthevillage.org'])
-    msg.attach_alternative(confirmation_content, "text/html")
-    
-    connection = mail.get_connection()
-    connection.open()
-    msg.send()
-    
-    return HttpResponse('receipt sent successfully!')
-        
     
 def ticket_nb(request):
     billing_profile, billing_profile_created = BillingProfile.objects.new_or_get(request)
@@ -641,7 +585,7 @@ def gallery_sale(request):
         
         cart_obj.active = False
         cart_obj.save()
-        confirmation_subject = 'ETV Love of Art Pre-Sale Purchase Confirmation'
+        confirmation_subject = 'ETV Art Purchase Confirmation'
         from_email = 'etvnotifications@gmail.com'
         confirmation_content = render_to_string('presale-email.html',
         {
@@ -659,8 +603,8 @@ def gallery_sale(request):
         recipients = ['chandler@eliftcreations.com', 'admin@empowerthevillage.org', 'ayo@empowerthevillage.org']
         #recipients = ['chandler@eliftcreations.com']
         send_mail(
-            'New Art Show Pre-Sale Purchase!',
-            str('A ticket purchase has been successfully processed! Purchaser: '+ str(email)),
+            'New Art Purchase!',
+            str('A new artwork purchase has been successfully processed! Purchaser: '+ str(email)),
             'etvnotifications@gmail.com',
             recipients,
             html_message=detail_content,
@@ -748,6 +692,7 @@ def full_gallery_sale(request):
             "submit_for_settlement": True
         }
     })
+    print(result)
     if result.is_success:
         items = cart_obj.items.all()
         order_obj = LOAArtPurchase()
@@ -774,7 +719,7 @@ def full_gallery_sale(request):
         
         cart_obj.active = False
         cart_obj.save()
-        confirmation_subject = "ETV Martha's Vineyard Friends of the Village Art Gallery Purchase Confirmation"
+        confirmation_subject = "ETV Art Gallery Purchase Confirmation"
         from_email = 'etvnotifications@gmail.com'
         confirmation_content = render_to_string('art-email.html',
         {
@@ -795,8 +740,8 @@ def full_gallery_sale(request):
             'order': order_obj
         })
         
-        recipients = ['chandler@eliftcreations.com', 'shannon@empowerthevillage.org', 'admin@empowerthevillage.org', 'ayo@empowerthevillage.org']
-        #recipients = ['chandler@eliftcreations.com']
+        #recipients = ['chandler@eliftcreations.com', 'shannon@empowerthevillage.org', 'admin@empowerthevillage.org', 'ayo@empowerthevillage.org']
+        recipients = ['chandler@eliftcreations.com']
         item_string = ''
         try:
             for x in items:

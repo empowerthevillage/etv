@@ -7,7 +7,7 @@
 {% block content %}
 <div id="page">
         <div class="event-container">
-            <!--
+            
             <div class="row">
                 <div class="cart right">
                     <div class="valign-wrapper">
@@ -20,12 +20,12 @@
                         </a>
                     </div>
                 </div>
-            </div>-->
+            </div>
             <div class="center-align event-page-title" style="background: rgb(226, 10, 32);
             background: linear-gradient(135deg, rgb(226, 10, 32) 0%, rgba(1,166,80,1) 100%);
             background-clip: text;
             -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;">Carter Fine Art Services <br>Martha's Vineyard Friends of The Village<br>Art Exhibition</div>
+            -webkit-text-fill-color: transparent;">Empower The Village &<br />Carter Fine Art Services Gallery</div>
             <div class="divider-dotted"></div>
             
             <p class="subtitle" style="margin-top: 20px">Browse the Online Gallery & view Artist Bios below!</p>
@@ -87,7 +87,7 @@
                             {% if x.note %}
                             <p id="item-dimensions-sm"><b style="color:#cb1010">{{ x.note }}</b></p>
                             {% endif %}
-                            <!--
+                            
                             {% if x.get_availability == True %}
                             <div id="sold-btn" class="btn disabled">Sold</div>
                             {% else %}
@@ -99,14 +99,16 @@
                                 <div id="remove-from-cart-{{ x.pk }}" class="btn red darken-2 remove-from-cart remove-grid" itemID="{{ x.pk }}" style="display: none"><i class="bi bi-cart-x"></i> Remove from Cart</div>
                                 {% endif %}
                             {% endif %}
-                            -->
+                            
                         </div>
                     </div>
                     {% endfor %}
                 </div>
+                {% if items|length > 12 %}
                 <div class="col s12 center-align">
                     <div class="btn" id="load-more-btn" page=1>Load More</div>
                 </div>
+                {% endif %}
         </div>
         <div class="divider"></div>
         <div class="row" style="background: rgba(255, 255, 255, 0.989); width: 100%; margin-bottom: 0">

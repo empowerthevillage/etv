@@ -1072,22 +1072,23 @@ def full_gallery_cart_home(request):
     context = {
         'cart': cart_obj,
         'state_options': STATE_CHOICES,
+        'tokenization_key': settings.BRAINTREE_TOKENIZATION_KEY
     }
     return render(request, 'mv_full_gallery_cart.html', context)
 
 def full_gallery_home(request):
-    #cart_obj, created = FullGalleryCart.objects.new_or_get(request)
-    #items = FullGalleryItem.objects.filter(active=True).order_by('sold', 'artist', 'title')[:12]
-    #artists = Artist.objects.filter(active=True).order_by('name')
-    #filter = GalleryFilter(request.GET, queryset=items)
-    #context = {
-    #    'items': items,
-    #    'cart': cart_obj,
-    #    'filter': filter,
-    #    'artists': artists,
-    #}
-    #return render(request, 'mv_gallery_home.html', context)
-    return HttpResponseNotFound("Oops! The event you're looking for is no longer available")
+    cart_obj, created = FullGalleryCart.objects.new_or_get(request)
+    items = FullGalleryItem.objects.filter(active=True).order_by('sold', 'artist', 'title')[:12]
+    artists = Artist.objects.filter(active=True).order_by('name')
+    filter = GalleryFilter(request.GET, queryset=items)
+    context = {
+        'items': items,
+        'cart': cart_obj,
+        'filter': filter,
+        'artists': artists,
+    }
+    return render(request, 'mv_gallery_home.html', context)
+    #return HttpResponseNotFound("Oops! The event you're looking for is no longer available")
 
 def gallery_get_next(request):
     requested_page = request.GET['next_page']
