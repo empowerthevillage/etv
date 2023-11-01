@@ -88,7 +88,6 @@ class SponsorAdmin(admin.ModelAdmin):
 class RegistrationAdmin(admin.ModelAdmin):
     list_display = ['amount', 'walker', 'created']
     
-    
 admin_site.register(Walker, WalkathonAdmin)
 admin_site.register(WalkerDonation, WalkerDonationAdmin)
 admin_site.register(OrgDonation, OrgDonationAdmin)

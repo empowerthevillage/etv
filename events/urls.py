@@ -5,6 +5,7 @@ urlpatterns = [
     path('', event_home, name='home'),
     path('art-gallery/', full_gallery_home, name="full-gallery-home"),
     path('art-email/', art_email_view),
+    path('berg-marketplace/', berg_marketplace),
     path('gallery-get-next/', gallery_get_next, name="gallery-next"),
     path('gallery-search-available/', gallery_search_available, name="gallery-search-available"),
     path('gallery-search/', gallery_search, name="gallery-search"),

@@ -1325,3 +1325,5 @@ def process_silent_auction_purchase(request):
             }
             return JsonResponse(data)
         
+def berg_marketplace(request):
+    return render(request, 'berg-marketplace.html')

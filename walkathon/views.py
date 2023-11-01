@@ -22,7 +22,7 @@ gateway_public = settings.GATEWAY_PUBLIC
 
 def walker_home(request):
     individuals = Walker.objects.all()
-    orgs = Organization.objects.all()
+    orgs = Organization.objects.filter(active=True)
     dropdown_list = []
     for x in individuals:
         dropdown_list.append(x)
@@ -31,7 +31,7 @@ def walker_home(request):
         if len(paid_count) > 0:
             dropdown_list.append(x)
     context = {
-        'title': 'ETV 2023 Power Walk',
+        'title': 'ETV 2024 Power Walk',
         'photos': HomeGalleryImage.objects.all(),
         'dropdown_list': sorted(dropdown_list, key=lambda x: x.title)
     }

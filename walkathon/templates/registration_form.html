@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% block title %}
-Register | ETV 2023 Power Walk
+Register | ETV 2024 Power Walk
 {% endblock %}
 {% block canonical %}https://www.empowerthevillage.org/power-walk-2023/register/{% endblock %}
 {% block seo_description %}Join ETV as we take steps to improve the mental and physical health of the Black community!{% endblock %}
@@ -16,7 +16,7 @@ Register | ETV 2023 Power Walk
           <div class="col s12" style="padding-bottom: 10px;">
               <a href="/power-walk-2023/"><i class="bi bi-arrow-left"></i> Back to Power Walk home page</a>
           </div>
-          <h5 class="center-align donation-title">ETV 2023 Power Walk Registration</h5>
+          <h5 class="center-align donation-title">ETV 2024 Power Walk Registration</h5>
           
           <div id="preloader" class="center-align" style="display:none; padding-top: 200px; height: 800px">
             <div class="preloader-wrapper big active" >
@@ -117,7 +117,7 @@ Register | ETV 2023 Power Walk
                               </label>
                             </p>
                             <div class="col s12" style="padding-bottom: 5px;">
-                              <p style="font-weight: 600;">I would like to participate in the 2023 Power Walk:<b class="required">*</b></p>
+                              <p style="font-weight: 600;">I would like to participate in the 2024 Power Walk:<b class="required">*</b></p>
                               <div class="">
                                 <p style="margin-bottom: 25px;">
                                   <label>
@@ -259,7 +259,7 @@ Register | ETV 2023 Power Walk
                               <p style="margin-bottom: 20px;">
                                 <label>
                                   <input type="checkbox" name="waiver" id="waiver-boolean" value="True" required/>
-                                  <span>I agree and accept the terms of the ETV 2023 Power Walk <a href="#waiver-modal" class="waves-effect waves-light modal-trigger" href="#waiver-modal">Waiver</a></span>
+                                  <span>I agree and accept the terms of the ETV 2024 Power Walk <a href="#waiver-modal" class="waves-effect waves-light modal-trigger" href="#waiver-modal">Waiver</a></span>
                                 </label>
                               </p>
                             </div>
@@ -285,7 +285,7 @@ Register | ETV 2023 Power Walk
                           <p style="margin-bottom: 30px;">
                             <label>
                               <input type="checkbox" name="shirt-boolean" id="shirt-boolean"/>
-                              <span>I'd like to pre-order an exclusive ETV 2023 Power Walk T-Shirt for $25 (includes registration)</span>
+                              <span>I'd like to pre-order an exclusive ETV 2024 Power Walk T-Shirt for $25 (includes registration)</span>
                             </label>
                           </p>
                           <div class="hidden" id="shirt-size-selector">
@@ -363,7 +363,7 @@ Register | ETV 2023 Power Walk
 </div>
 <div id="waiver-modal" class="modal">
   <div class="modal-content" style="padding-bottom: 0">
-    <h4>ETV 2023 Power Walk Waiver</h4>
+    <h4>ETV 2024 Power Walk Waiver</h4>
     <p>I acknowledge that my participation in the Power Walk may involve a risk of injury, including bodily injury, and assume the risk for same. On my own behalf and on behalf of my heirs and legal representatives and to the fullest extent permitted by law, I hereby release and discharge Empower The Village and their respective directors, officers, board of trustees, members, agent and representatives, of and from any and all liability for injury, death, or damages and/or any other claims, demands, losses or damages, incurred by me in connection with any aspect of the walk.</p>
     <p>I also agree to the use of any photo, film, video of the event, in which I may be included, for any legitimate purpose, including advertising and promotion.</p>
   </div>
@@ -484,7 +484,7 @@ braintree.client.create({
         Swal.fire({
           'title': 'Required field missing',
           'icon': 'error',
-          'text': 'Please review and accept the 2023 Power Walk Waiver'
+          'text': 'Please review and accept the 2024 Power Walk Waiver'
         });
         return;
       }else if($('#shirt-boolean').is(':checked')){

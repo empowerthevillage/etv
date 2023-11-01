@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 {% load humanize %}
-{% block title %}Empower The Village & Carter Fine Art Services Gallery{% endblock %}
+{% block title %}Carter Fine Art Services & Empower The Village Gallery{% endblock %}
 
 
 {% block content %}
@@ -25,10 +25,11 @@
             background: linear-gradient(135deg, rgb(226, 10, 32) 0%, rgba(1,166,80,1) 100%);
             background-clip: text;
             -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;">Empower The Village &<br />Carter Fine Art Services Gallery</div>
+            -webkit-text-fill-color: transparent;">Carter Fine Art Services &<br /> Empower The Village Gallery</div>
             <div class="divider-dotted"></div>
             
             <p class="subtitle" style="margin-top: 20px">Browse the Online Gallery & view Artist Bios below!</p>
+            <p class="subtitle" style="margin-top: 10px; font-weight: 600;"><i>A generous portion of proceeds will be donated to ETV to support its mission and programs</i></p>
         </div>
 
         <div class="divider"></div>
@@ -36,28 +37,25 @@
         <div class="row gallery-grid" id="gallery-grid" style="margin-bottom: 0; padding-bottom: 20px">
                 <div class="row">
                     <form class="col s12 l6 offset-l3" id="gallery-search">
-                        <div class="valign-wrapper">
-                        <div class="input-field valign-wrapper col s12 m6" style="margin-top: 0">
-                            <i class="material-icons prefix">search</i>
-                            <input name="title" id="title-search" type="text">
-                            <label>Title</label>
-                        </div>
-                        <div class="input-field col s12 m6" style="margin-top: 0">
-                            <select name="artist" id="artist-search">
-                                <option value="" selected>Select Artist</option>
-                                {% for x in artists %}
-                                <option value="{{ x }}">{{ x }}</option>
-                                {% endfor %}
-                            </select>
-                            <label>Artist</label>
-                        </div>
-                        <div class="btn" type="submit" id="search-title-go" style="margin-left: 10px">Search</div>
-                        </div>
-                        <div class="col s12 valign-wrapper" style="color: rgb(59, 95, 252); cursor: pointer; display: none" id="filter-blank"><span class="material-icons">
-                            visibility
-                            </span> &nbsp; View Full Gallery
-                        </div>
+                            <div class="input-field valign-wrapper col s12 m6" style="margin-top: 0">
+                                <i class="material-icons prefix">search</i>
+                                <input name="title" id="title-search" type="text">
+                                <label>Title</label>
+                            </div>
+                            <div class="input-field col s12 m6" style="margin-top: 0">
+                                <select name="artist" id="artist-search">
+                                    <option value="" selected>Select Artist</option>
+                                    {% for x in artists %}
+                                    <option value="{{ x }}">{{ x }}</option>
+                                    {% endfor %}
+                                </select>
+                                <label>Artist</label>
+                            </div>
+                            <div class="btn" type="submit" id="search-title-go" style="margin-left: 10px">Search</div>
                     </form>
+                    <div class="col s12 valign-wrapper" style="color: rgb(59, 95, 252); cursor: pointer; display: none" id="filter-blank"><span class="material-icons">
+                        visibility </span> &nbsp; View Full Gallery
+                    </div>
                 </div>
                 <div id="gallery-container">
                     {% for x in items %}
@@ -139,6 +137,9 @@
 </div>
 
 <style>
+    #gallery-search {
+        text-align: center;
+    }
     #sold-btn {
         background-color: rgb(176, 28, 28) !important;
 
@@ -424,6 +425,10 @@
         margin-top: 10px
     }
     @media only screen and (min-width: 601px) {
+        #gallery-search {
+            display: flex;
+            align-items: center;
+        }
         .carousel-item img {
             width: auto;
             max-width:fit-content;
