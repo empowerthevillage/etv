@@ -9,16 +9,65 @@ from accounts.admin import admin_site
 from .models import Walker, WalkerDonation, HomeGalleryImage, Organization, ShirtOrder, WalkerRegistrationPayment, WalkerPledgePayment, Sponsorship, OrgDonation
 
 class WalkathonAdmin(admin.ModelAdmin):
-    actions = ['set_500', 'download_csv']
+    actions = ['set_active', 'set_inactive', 'download_csv']
+    list_display = ['first_name', 'last_name', 'active', 'created']
     
-    def set_500(self, request, queryset):
-        updated = queryset.update(donation_goal=500)
+    def set_active(self, request, queryset):
+        updated = queryset.update(active=True)
         self.message_user(request, ngettext(
-            '%d goal changed.', 
-            '%d goals changed.', 
+            '%d activated.', 
+            '%d activated.', 
             updated,
         ) % updated, messages.SUCCESS)
-    set_500.short_description = "Set goal to $500"
+    set_active.short_description = "Activate"
+        
+    def set_inactive(self, request, queryset):
+        updated = queryset.update(active=False)
+        self.message_user(request, ngettext(
+            '%d deactivated.', 
+            '%d deactivated.', 
+            updated,
+        ) % updated, messages.SUCCESS)
+    set_inactive.short_description = "Deactivate"
+    
+    def download_csv(self, request, queryset):
+        opts = queryset.model._meta
+        model = queryset.model
+        response = HttpResponse(content_type='text/csv')
+        # force download.
+        response['Content-Disposition'] = 'attachment;filename=export.csv'
+        # the csv writer
+        writer = csv.writer(response)
+        field_names = [field.name for field in opts.fields]
+        # Write a first row with header information
+        writer.writerow(field_names)
+        # Write data rows
+        for obj in queryset:
+            writer.writerow([getattr(obj, field) for field in field_names])
+        return response
+    download_csv.short_description = "Download selected as csv"
+    
+class OrgAdmin(admin.ModelAdmin):
+    actions = ['set_active', 'set_inactive', 'download_csv']
+    list_display = ['title', 'active', 'created']
+    
+    def set_active(self, request, queryset):
+        updated = queryset.update(active=True)
+        self.message_user(request, ngettext(
+            '%d activated.', 
+            '%d activated.', 
+            updated,
+        ) % updated, messages.SUCCESS)
+    set_active.short_description = "Activate"
+        
+    def set_inactive(self, request, queryset):
+        updated = queryset.update(active=False)
+        self.message_user(request, ngettext(
+            '%d deactivated.', 
+            '%d deactivated.', 
+            updated,
+        ) % updated, messages.SUCCESS)
+    set_inactive.short_description = "Deactivate"
     
     def download_csv(self, request, queryset):
         opts = queryset.model._meta

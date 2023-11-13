@@ -17,12 +17,14 @@ class Organization(models.Model):
     captain_last_name       = models.CharField(max_length=120, null=True, blank=True)
     donation_goal           = models.DecimalField(max_digits=20, decimal_places=2, default=0.00)
     active                  = models.BooleanField(default=False)
+    created                 = models.DateTimeField(auto_now_add=True)
+    updated                 = models.DateTimeField(auto_now=True)
     
     def __str__(self):
         return str(self.title)
 
     def get_absolute_url(self):
-        return reverse("power-walk:walker-detail", kwargs={"walker": self.slug})
+        return reverse("power-walk-24:walker-detail", kwargs={"walker": self.slug})
 
     @property
     def goal_truncated(self):
@@ -91,12 +93,15 @@ class Walker(models.Model):
     donation_goal           = models.DecimalField(max_digits=20, decimal_places=2, default=0.00)
     virtual                 = models.BooleanField(default=False)
     waiver_timestamp        = models.DateTimeField(null=True, blank=True)
+    active                  = models.BooleanField(default=False)
+    created                 = models.DateTimeField(auto_now_add=True)
+    updated                 = models.DateTimeField(auto_now=True)
     
     def __str__(self):
         return '%s %s' %(self.first_name, self.last_name)
 
     def get_absolute_url(self):
-        return reverse("power-walk:walker-detail", kwargs={"walker": self.slug})
+        return reverse("power-walk-24:walker-detail", kwargs={"walker": self.slug})
     
     @property
     def goal_truncated(self):
@@ -156,6 +161,7 @@ class WalkerDonation(models.Model):
     amount                  = models.DecimalField(max_digits=20, decimal_places=2)
     created                 = models.DateTimeField(auto_now_add=True)
     updated                 = models.DateTimeField(auto_now=True)
+    displayed               = models.BooleanField(default=False)
 
     def __str__(self):
         return '$%s for %s' %(self.amount, self.walker)
@@ -180,6 +186,7 @@ class OrgDonation(models.Model):
     amount                  = models.DecimalField(max_digits=20, decimal_places=2)
     created                 = models.DateTimeField(auto_now_add=True)
     updated                 = models.DateTimeField(auto_now=True)
+    displayed               = models.BooleanField(default=False)
 
     def __str__(self):
         return '$%s for %s' %(self.amount, self.organization)

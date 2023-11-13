@@ -27,14 +27,14 @@ fjs.parentNode.insertBefore(js, fjs);
         <h1 style="font-family: oskar; color:black; font-weight: 800; padding-bottom: 15px;">Show your Support for {{ walker }} & Community Mental Health!</h1>
     </div>
     <div class="parallax">
-        <img class="lazy" src="{% static 'img/health-collage-min.jpg' %}" style="opacity: 1;">
+        <img class="lazy" src="https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/health-collage-4.webp" style="opacity: 1;">
     </div>
 </div>
 <div class="row hidden" style="padding: 1%" id="donate-window">
 </div>
 <div class="row" style="padding: 1%" id="walker-content">
     <div class="col s12" style="padding-bottom: 20px;padding-top: 0px;">
-        <a href="/power-walk-2023/" class="back-link"><i class="bi bi-arrow-left"></i> Back to Power Walk home page</a>
+        <a href="/power-walk-2024/" class="back-link"><i class="bi bi-arrow-left"></i> Back to Power Walk home page</a>
         
         
         <div class="right valign-wrapper" style="padding-right: 20px;">
@@ -42,7 +42,7 @@ fjs.parentNode.insertBefore(js, fjs);
             <script type="IN/Share" data-url="{{ waler.get_absolute_url }}"></script>
         </div>
         <br>
-        <a href="/power-walk-2023/register/" class="btn" style="font-size: 12px; font-weight: 600; margin-top: 5px; background: rgb(27, 154, 27);">Register for the Power Walk Today!</a>
+        <a href="/power-walk-2024/register/" class="btn" style="font-size: 12px; font-weight: 600; margin-top: 5px; background: rgb(27, 154, 27);">Register for the Power Walk Today!</a>
     </div>
     <div class="col s4 offset-s4 offset-m1 l3 offset-l2">
         {% if walker.image %}
@@ -116,7 +116,7 @@ fjs.parentNode.insertBefore(js, fjs);
         <div class="divider"></div>
     </div>
     <div class="col s12" style="display:flex; justify-content: center">
-        <a href="/power-walk-2023/" class="btn" style="font-size: 18px; font-weight: 600; margin-top: 0px; margin-bottom: 15px; height: fit-content; line-height: 24px; padding-top: 8px; padding-bottom: 5px;background: rgb(27, 154, 27); width: fit-content;">Click to Learn More About ETV's Mental Health Initiative!</a>
+        <a href="/power-walk-2024/" class="btn" style="font-size: 18px; font-weight: 600; margin-top: 0px; margin-bottom: 15px; height: fit-content; line-height: 24px; padding-top: 8px; padding-bottom: 5px;background: rgb(27, 154, 27); width: fit-content;">Click to Learn More About ETV's Mental Health Initiative!</a>
     </div>
     <div class="col s10 offset-s1 m4 offset-m0 l3 offset-l1">
         <div class="card goal-card" style="width: 100%">
@@ -152,7 +152,7 @@ fjs.parentNode.insertBefore(js, fjs);
     </div>
     <div class="col s10 offset-s1 m8 l7">
         <div class="card" style="height: 425px;">
-            <div class="header" style="border-bottom: 1px solid rgb(233, 233, 233);background: url('https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/power-walk-2023-collage.png');background-size:40%">
+            <div class="header" style="border-bottom: 1px solid rgb(233, 233, 233);background: url('https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/power-walk-2024-collage.png');background-size:40%">
                 <div style="width: 100%; background: rgba(255, 255, 255, 0.884); padding: 1px 0px 8px 0px;">
                     <h6 class="walker-name" style="color:rgb(187, 37, 27); margin-bottom: 0">Donations</h6>
                 </div>
@@ -242,7 +242,7 @@ fjs.parentNode.insertBefore(js, fjs);
         margin-bottom: 20px;
     }
     .goal-card {
-        background: url('https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/power-walk-2023-collage.png');
+        background: url('https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/power-walk-2024-collage.png');
         background-size: 100%
     }
     .goal-card .card-body {
@@ -456,9 +456,9 @@ fjs.parentNode.insertBefore(js, fjs);
         $.ajax({
           data: data,
           method: 'POST',
-          url: '/power-walk-2023/support-a-walker/',
+          url: '/power-walk-2024/support-a-walker/',
           success: function(data){
-            window.location.replace('/power-walk-2023/walker-donation/')
+            window.location.replace('/power-walk-2024/walker-donation/')
             //$('#donate-window').removeClass('hidden');
             //$('#donate-window').html(data.html);
             //$('#walker-content').addClass('hidden')

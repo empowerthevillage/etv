@@ -597,10 +597,10 @@ def ready_set_shop(request):
         obj.amount = rss_form.data['amount']
         obj.date = rss_form.data['date']
         obj.industry = rss_form.data['category']
-        if rss_form.data['receipt'] != '':
-            obj.receipt_aws = request.FILES['receipt']
-        else:
-            obj.receipt_aws = None
+        #if rss_form.data['receipt'] != '':
+        #    obj.receipt_aws = request.FILES['receipt']
+        #else:
+        #    obj.receipt_aws = None
         obj.save()
         
         send_mail(
@@ -627,10 +627,10 @@ def ready_set_shop(request):
         obj.amount = rss_form.data['amount']
         obj.date = rss_form.data['date']
         obj.industry = rss_form.data['category']
-        if rss_form.data['receipt'] != '':
-            obj.receipt_aws = request.FILES['receipt']
-        else:
-            obj.receipt_aws = None
+        #if rss_form.data['receipt'] != '':
+        #    obj.receipt_aws = request.FILES['receipt']
+        #else:
+        #    obj.receipt_aws = None
         obj.save()
         send_mail(
             'New Ready, Set, Shop Submission',
@@ -660,7 +660,7 @@ def everyfriday(request):
         obj.amount = rss_form.data['amount']
         obj.date = rss_form.data['date']
         obj.industry = rss_form.data['industry']
-        obj.receipt_aws = rss_form.data['receipt']
+        #obj.receipt_aws = rss_form.data['receipt']
         sweetify.success(request, title='Thank you!', icon='success', text='Thank you for supporting a Black-owned business!', button='Add Another Transaction', timer=4000)
         obj.save()
         return redirect('/black-friday-challenge/ready-set-shop')

@@ -157,6 +157,7 @@ urlpatterns = [
     path('education/', include(("education.urls", "education"), namespace='education')),
     path('walkathon/', include(("walkathon.urls", "walkathon"), namespace="walkathon")),
     path('power-walk-2023/', include(("walkathon.urls", "walkathon"), namespace="power-walk")),
+    path('power-walk-2024/', include(("walkathon.urls", "walkathon"), namespace="power-walk-24")),
     path('village-empowerment-network/', include(("ven.urls", "ven"), namespace='ven')),
     path('village-empowerment-network-nomination/', venForm, name='ven-nomination'),
     path('tinymce/', include('tinymce.urls')),

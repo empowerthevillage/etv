@@ -2,7 +2,7 @@
 {% block title %}
 Register | ETV 2024 Power Walk
 {% endblock %}
-{% block canonical %}https://www.empowerthevillage.org/power-walk-2023/register/{% endblock %}
+{% block canonical %}https://www.empowerthevillage.org/power-walk-2024/register/{% endblock %}
 {% block seo_description %}Join ETV as we take steps to improve the mental and physical health of the Black community!{% endblock %}
 {% load static %}
 
@@ -14,7 +14,7 @@ Register | ETV 2024 Power Walk
     <div class="content-container row" style="margin-bottom: 0">
         <div class="col s12" style="padding-left: 2%; padding-right: 2%; padding-bottom: 3%">
           <div class="col s12" style="padding-bottom: 10px;">
-              <a href="/power-walk-2023/"><i class="bi bi-arrow-left"></i> Back to Power Walk home page</a>
+              <a href="/power-walk-2024/"><i class="bi bi-arrow-left"></i> Back to Power Walk home page</a>
           </div>
           <h5 class="center-align donation-title">ETV 2024 Power Walk Registration</h5>
           
@@ -89,7 +89,7 @@ Register | ETV 2024 Power Walk
                         </select>
                         </div>
                         <div style="margin-bottom: 15px;">
-                          <a href="/power-walk-2023/organization-registration/" style="font-size: 12px; font-style: italic;">Don't see your organization? Click here to register your group with ETV!</a>
+                          <a href="/power-walk-2024/organization-registration/" style="font-size: 12px; font-style: italic;">Don't see your organization? Click here to register your group with ETV!</a>
                         </div>
                       </div>
                         <h5 class="fieldset-title" style="padding-bottom: 10px;">Walker Details</h5>
@@ -534,7 +534,7 @@ braintree.client.create({
               "X-CSRFToken": '{{ csrf_token }}'
           },
           method: 'POST',
-          url: '/power-walk-2023/register/',
+          url: '/power-walk-2024/register/',
           success: function(data){
             if(data.status == 'success'){
               Swal.fire(
@@ -782,7 +782,7 @@ braintree.client.create({
     }
     
     #page {
-        background-image: url("{% static 'img/health-collage-min.jpg' %}");
+        background-image: url("https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/health-collage-4.webp");
         background-size: 80%;
         background-repeat: repeat;
     }

@@ -21,7 +21,7 @@ gateway = settings.GATEWAY
 gateway_public = settings.GATEWAY_PUBLIC
 
 def walker_home(request):
-    individuals = Walker.objects.all()
+    individuals = Walker.objects.filter(active=True)
     orgs = Organization.objects.filter(active=True)
     dropdown_list = []
     for x in individuals:
@@ -43,12 +43,12 @@ def walker_detail(request, walker):
             walker_obj = Walker.objects.get(slug=walker)
             walker_type = 'individual'
             walker_list = ''
-            donation_list = WalkerDonation.objects.filter(walker=walker_obj)
+            donation_list = WalkerDonation.objects.filter(walker=walker_obj).filter(displayed=True)
         except:
             walker_obj = Organization.objects.get(slug=walker)
             walker_list = Walker.objects.filter(organization=walker_obj)
             walker_type = 'org'
-            donation_list = OrgDonation.objects.filter(organization=walker_obj)
+            donation_list = OrgDonation.objects.filter(organization=walker_obj).filter(displayed=True)
         context = {
             'title': 'Support %s' %(walker_obj),
             'walker': walker_obj,
@@ -131,6 +131,7 @@ def walker_registration(request):
             walker_obj.city = data['city']
             walker_obj.state = data['state']
             walker_obj.zip = data['zip']
+            walker_obj.active = True
             if waiver_agreed == 'True':
                 walker_obj.waiver_timestamp = datetime.now()
             else:

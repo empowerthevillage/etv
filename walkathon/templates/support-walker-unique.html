@@ -6,7 +6,7 @@
       <h1 style="font-family: oskar; color:black; font-weight: 800; padding-bottom: 15px;">Show your Support for {{ walker }}!</h1>
   </div>
   <div class="parallax">
-      <img class="lazy" src="{% static 'img/health-collage-min.jpg' %}" style="opacity: 1;">
+      <img class="lazy" src="https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/health-collage-4.webp" style="opacity: 1;">
   </div>
 </div>
 <div class="content-container row" style="margin-bottom: 0">
@@ -764,7 +764,7 @@ braintree.client.create({
               "X-CSRFToken": '{{ csrf_token }}'
           },
           method: 'POST',
-          url: '/power-walk-2023/process-walker-donation/',
+          url: '/power-walk-2024/process-walker-donation/',
           success: function(data){
             Swal.fire(
               'Payment successful!',
