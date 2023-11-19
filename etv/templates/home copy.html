@@ -454,6 +454,14 @@
 </div>     
     
 <script>
+  $(document).ready(function(){
+    Swal.fire({
+      html: '<a href="/donation/"><img src="https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/giving-2x-11192023.webp" width=100%></a>',
+      showCloseButton: true,
+      showConfirmButton: false,
+      padding: 0,
+    })
+  })
     $('#mailchimp-efbf-form').submit(event, function(){
         event.preventDefault();
         var email = $('#mailchimp-email-efbf').val()
@@ -559,6 +567,9 @@ var intervalId = window.setInterval(function(){
 </script>
 <style>
   @media only screen and (min-width:0px){
+    div:where(.swal2-container) .swal2-html-container {
+      margin: 0;
+    }
     .home-page-intro-text {
       font-family: oskar !important; 
       text-transform: none !important; 
