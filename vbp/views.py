@@ -336,12 +336,12 @@ CATEGORY_JSON = [
   {'other':"Other"},
 ]
 
-def gift_guide_2024(request):
+def gift_guide_2023(request):
     context = {
-      'title': 'ETV 2024 Holiday Gift Guide',
-      'seo_description': "Explore ETV's 2024 Holiday Gift Guide!",
+      'title': 'ETV 2023 Holiday Gift Guide',
+      'seo_description': "Explore ETV's 2023 Holiday Gift Guide!",
     }
-    return render(request, 'gift-guide-2024.html', context)
+    return render(request, 'gift-guide-2023.html', context)
   
 def mv_view(request):
     f = mv_private.objects.all()
