@@ -336,6 +336,13 @@ CATEGORY_JSON = [
   {'other':"Other"},
 ]
 
+def gift_guide_2024(request):
+    context = {
+      'title': 'ETV 2024 Holiday Gift Guide',
+      'seo_description': "Explore ETV's 2024 Holiday Gift Guide!",
+    }
+    return render(request, 'gift-guide-2024.html', context)
+  
 def mv_view(request):
     f = mv_private.objects.all()
     listings_full = f.exclude(city='').order_by('category', 'cat_ordering', 'city', 'business_name')
