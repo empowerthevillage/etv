@@ -73,11 +73,12 @@ class OrderManager(models.Manager):
 
 class Order(models.Model):
     first_name = models.CharField(max_length=120, null=True)
-    last_name = models.CharField(max_length=120, null=True)
+    last_name = models.CharField(max_length=120, null=True, blank=True)
+    full_name = models.CharField(max_length=240, null=True, blank=True)
+    email       = models.EmailField(blank=True, null=True)
     order_id = models.CharField(max_length=120, blank=True)
     braintree_id = models.CharField(max_length=270, blank=True, null=True, verbose_name='ID')
     billing_profile = models.ForeignKey(BillingProfile, models.SET_NULL, null=True, blank=True)
-    billing_address = models.ForeignKey(Address, on_delete=models.SET_NULL, related_name="billing_address", null=True, blank=True)
     shipping_address = models.ForeignKey(Address, on_delete=models.SET_NULL, related_name="shipping_address", null=True, blank=True)
     payment_method = models.CharField(max_length=270, blank=True)
     cart = models.ForeignKey(Cart, on_delete=models.SET_NULL, null=True, blank=True)
@@ -88,7 +89,7 @@ class Order(models.Model):
     timestamp = models.DateTimeField(auto_now_add=True, null=True, blank=True)
     updated = models.DateTimeField(auto_now=True, null=True, blank=True)
     device_data = models.CharField(max_length=270, null=True, blank=True)
-    shippo_obj = models.CharField(max_length=270, null=True, blank=True, verbose_name="Shippo ID")
+    
     label = models.URLField(null=True, blank=True, verbose_name="Shipping Label", max_length=1000)
 
     def __str__(self):
@@ -114,90 +115,13 @@ class Order(models.Model):
     def check_done(self):
         billing_profile = self.billing_profile
         nonce = self.payment_method
-        billing_address = self.billing_address
         shipping_address = self.shipping_address
         total = self.total
-        if billing_profile and shipping_address and billing_address and nonce and total > 0:
+        if billing_profile and shipping_address and nonce and total > 0:
             return True
         return False
 
-    @property
-    def charge(self):
-        amount = str(self.total)
-        nonce = self.payment_method
-        result = gateway.transaction.sale({
-            "amount": amount,
-            "payment_method_nonce": nonce,
-            "device_data": self.device_data,
-            "options": {
-                "submit_for_settlement": True
-            }
-        })
-        if result.is_success:
-            self.status = 'submitted_for_settlement'
-        return result
 
-    @property
-    def new_label(self):
-        shippo.config.api_key = settings.SHIPPO_KEY
-        address_from = {
-            "name": "Empower The Village",
-            "street1": "178 E. Hanover Avenue",
-            "street2": "Suite 103-312",
-            "city": "Cedar Knolls",
-            "state": "NJ",
-            "zip": "07927",
-            "country": "US"
-        }
-        
-        address_to = {
-            "name": self.shipping_address.name,
-            "street1": self.shipping_address.address_line_1,
-            "street2": self.shipping_address.address_line_2,
-            "city": self.shipping_address.city,
-            "state": self.shipping_address.state,
-            "zip": self.shipping_address.zip_code,
-            "country": "US"
-        }
-        
-        parcel = {
-            "length": "15.5",
-            "width": "12",
-            "height": "1",
-            "distance_unit": "in",
-            "weight": "1",
-            "mass_unit": "lb"
-        }
-
-        shipment = shippo.Shipment.create(
-            address_from = address_from,
-            address_to = address_to,
-            parcels = [parcel],
-        )
-        transaction = shippo.Transaction.create(
-            shipment = shipment,
-            carrier_account = 'de759a0809f44e25bf42756b2ef35685',
-            servicelevel_token="usps_parcel_select",
-            label_file_type='PDF',
-        )
-        if transaction.status == "SUCCESS":
-            return transaction
-        else:
-            sweetify.error(self.request, 'Address could not be confirmed! Please update shipping address and try again')
-            return redirect('/cart')
-
-    @property
-    def shipping_details(self):
-        shippo.config.api_key = settings.SHIPPO_KEY
-        obj = self.shippo_obj
-        label = shippo.Transaction.retrieve(obj)
-        return label
-
-    def mark_paid(self):
-        if self.check_done():
-            self.status = "paid"
-            self.save()
-        return self.status
 
 def pre_save_create_order_id(sender, instance, *args, **kwargs):
     if not instance.order_id:

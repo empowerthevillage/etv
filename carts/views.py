@@ -36,7 +36,7 @@ def cart_detail_api_view(request):
         "image": x.get_images.first(),
         }
         for x in items_list.all()]
-    cart_data = {"products": products, "total": cart_obj.total}
+    cart_data = {"products": products, "total": cart_obj.get_total}
     return JsonResponse(cart_data)
 
 def cart_home(request):
@@ -102,7 +102,8 @@ def checkout_home(request):
         "card": card,
         "card_qs": card_qs,
         "cart": cart_obj,
-        'items_list': item_list
+        'items_list': item_list,
+        'tokenization_key': settings.BRAINTREE_TOKENIZATION_KEY,
     }
     
     return render(request, "carts/checkout.html", context)
@@ -120,14 +121,14 @@ def ajaxUpdateItems(request):
         item_obj.delete()
         data = {
             'itemQuantity': 0,
-            'cartTotal': cart_obj.total,
+            'cartTotal': cart_obj.get_total,
         }
         return JsonResponse(data)
     else:
         itemTotal = itemPrice * int(item_obj.quantity)
         data = {
             'itemQuantity': item_obj.quantity,
-            'cartTotal': cart_obj.total,
+            'cartTotal': cart_obj.get_total,
             'itemTotal': itemTotal,
         }
         return JsonResponse(data)
@@ -141,14 +142,14 @@ def ajaxRemoveItems(request):
     item_obj.save()
     item_obj.delete()
     data = {
-        'cartTotal': cart_obj.total
+        'cartTotal': cart_obj.get_total
     }
     return JsonResponse(data)
 
 def checkout_new_update(request):
     billing_profile, billing_profile_created = BillingProfile.objects.new_or_get(request)
+    email = request.POST.get('email')
     if billing_profile is None:
-        email = request.POST.get('email')
         request.session['guest_email']=email
         billing_profile, billing_profile_created = BillingProfile.objects.new_or_get(request)
     cart_obj, cart_created = Cart.objects.new_or_get(request)
@@ -169,6 +170,7 @@ def checkout_new_update(request):
     order_obj.device_data = device_data
     order_obj.shipping_address = shipping_address
     order_obj.payment_method = nonce
+    order_obj.email = email
     order_obj.save()
     
     request.session["shipping_address_id"] = shipping_address.id
@@ -178,7 +180,7 @@ def checkout_saved_update(request):
     billing_profile, billing_profile_created = BillingProfile.objects.new_or_get(request)
     cart_obj, cart_created = Cart.objects.new_or_get(request)
     order_obj, order_obj_created = Order.objects.new_or_get(billing_profile, cart_obj)
-    
+    email = request.POST.get('email')
     shipping_address_id = request.POST.get('shipping_address_id')
     nonce = request.POST.get('nonce')
     device_data = request.POST.get('deviceData')
@@ -186,11 +188,44 @@ def checkout_saved_update(request):
     shipping_address_obj = Address.objects.filter(id=shipping_address_id).first()
     order_obj.shipping_address = shipping_address_obj
     order_obj.payment_method = nonce
+    order_obj.email = email
     order_obj.save()
     
     request.session["shipping_address_id"] = order_obj.shipping_address.id
     return redirect("carts:checkout-confirm")
 
+def add_nonce_to_merch(request):
+    billing_profile, billing_profile_created = BillingProfile.objects.new_or_get(request)
+    email = request.POST.get('email')
+    if billing_profile is None:
+        request.session['guest_email'] = email
+        billing_profile, billing_profile_created = BillingProfile.objects.new_or_get(request)
+    cart_obj, cart_created = Cart.objects.new_or_get(request)
+    order_obj, order_obj_created = Order.objects.new_or_get(billing_profile, cart_obj)
+    shipping_address, created = Address.objects.get_or_create(
+        billing_profile = billing_profile,
+        address_type = 'shipping',
+        name = request.POST.get('name'),
+        address_line_1 = request.POST.get('address_line_1'),
+        address_line_2 = request.POST.get('address_line_2'),
+        city = request.POST.get('city'),
+        state = request.POST.get('state'),
+        zip_code = request.POST.get('zip'),
+    )
+    nonce = request.POST.get('nonce')
+    device_data = request.POST.get('deviceData')
+    order_obj.device_data = device_data
+    order_obj.full_name = request.POST.get('name')
+    order_obj.shipping_address = shipping_address
+    order_obj.payment_method = nonce
+    order_obj.total = cart_obj.get_total
+    order_obj.email = email
+    order_obj.save()
+    if order_obj.check_done:
+        return JsonResponse({'status':'success'})
+    else:
+        return JsonResponse({'status':'error'})
+    
 def nsnb_update(request):
     billing_profile, billing_profile_created = BillingProfile.objects.new_or_get(request)
     guest_email = request.session.get('guest_email')
@@ -313,63 +348,112 @@ def sssb_update(request):
     return redirect("carts:checkout-confirm")
 
 def checkout_confirm(request):
-    billing_profile, billing_profile_created = BillingProfile.objects.new_or_get(request)
-    cart_obj, cart_created = Cart.objects.new_or_get(request)
-    cart_items        = cartItem.objects.filter(cart=cart_obj)
-    order_obj, order_obj_created = Order.objects.new_or_get(billing_profile, cart_obj)
-    for x in cart_items:
-        order_obj.items.add(x)
-    order_obj.total = cart_obj.total
-    order_obj.save()
-    context = {
-        "billing_profile": billing_profile,
-        'items_list': cart_items,
-        "nonce": gateway.payment_method_nonce.find(order_obj.payment_method),
-        "order": order_obj,
-        'cart': cart_obj,
-    }
-    return render(request, "carts/checkout-confirm.html", context)
+    try:
+        billing_profile, billing_profile_created = BillingProfile.objects.new_or_get(request)
+        cart_obj, cart_created = Cart.objects.new_or_get(request)
+        cart_items        = cartItem.objects.filter(cart=cart_obj)
+        order_obj, order_obj_created = Order.objects.new_or_get(billing_profile, cart_obj)
+        for x in cart_items:
+            order_obj.items.add(x)
+        order_obj.total = cart_obj.get_total
+        order_obj.save()
+        context = {
+            "billing_profile": billing_profile,
+            'items_list': cart_items,
+            "nonce": gateway.payment_method_nonce.find(order_obj.payment_method),
+            "order": order_obj,
+            'cart': cart_obj,
+            'tokenization_key': settings.BRAINTREE_TOKENIZATION_KEY,
+        }
+        return render(request, "carts/checkout-confirm.html", context)
+    except:
+        return redirect('/shop')
 
 def new_charge(request):
-    billing_profile, billing_profile_created = BillingProfile.objects.new_or_get(request)
-    cart_obj, cart_created = Cart.objects.new_or_get(request)
-    order_obj, order_obj_created = Order.objects.new_or_get(billing_profile, cart_obj)
-    if not billing_profile:
-        email = request.POST.get('email')
-        request.session['guest_email'] = email
+    if request.method == 'POST':
         billing_profile, billing_profile_created = BillingProfile.objects.new_or_get(request)
-    charge = order_obj.charge
-    order_obj.braintree_id = charge.transaction.id
-    label = order_obj.new_label
-    order_obj.shippo_obj = label.object_id
-    order_obj.label = label.label_url
-    order_obj.save()
-    send_mail(
-            'New Merchandise Purchase',
-            str('A merchandise purchase has been successfully processed! Purchaser: '+ str(billing_profile.email)),
-            'etvnotifications@gmail.com',
-            #recipients,
-            ['chandler@eliftcreations.com','admin@empowerthevillage.org'],
-            fail_silently=True
-        )
-    return redirect('carts:checkout-done')
+        cart_obj, cart_created = Cart.objects.new_or_get(request)
+        order_obj, order_obj_created = Order.objects.new_or_get(billing_profile, cart_obj)
+        email = order_obj.email
+        if not billing_profile:
+            request.session['guest_email'] = email
+            billing_profile, billing_profile_created = BillingProfile.objects.new_or_get(request)
+        #try:
+        amount = str(cart_obj.get_total)
+        nonce = str(order_obj.payment_method)
+        result = gateway.transaction.sale({
+            "amount": amount,
+            "payment_method_nonce": nonce,
+            "device_data": request.POST.get('device_data'),
+            "customer": {
+                "email": email
+            },
+            "options": {
+                "submit_for_settlement": True
+            }
+        })
+        if result.is_success:
+            print(order_obj.items.all())
+            order_obj.status = 'submitted_for_settlement'
+            order_obj.braintree_id = result.transaction.id
+            order_obj.save()
+            confirmation_subject = 'ETV Merchandise Purchase Confirmation'
+            from_email = 'etvnotifications@gmail.com'
+            confirmation_content = render_to_string('merchandise-email.html',
+            {
+                'items': order_obj.items.all(),
+            })
+            confirmation_plain_text = 'View email in browser'      
+            
+            send_mail(confirmation_subject, confirmation_plain_text, from_email, [str(email)], html_message=confirmation_content)
+            detail_content = render_to_string('merchandise-admin-email.html',
+            {
+                'purchaser': str(order_obj.full_name),
+                'email': order_obj.email,
+                'items': order_obj.items.all(),
+            })
+            
+            #recipients = ['chandler@eliftcreations.com', 'admin@empowerthevillage.org', 'ayo@empowerthevillage.org']
+            recipients = ['chandler@eliftcreations.com']
+            send_mail(
+                'New Swag Purchase!',
+                str('A new swag purchase has been successfully processed! Purchaser: '+ str(email)),
+                'etvnotifications@gmail.com',
+                recipients,
+                html_message=detail_content,
+                fail_silently=True
+            )
+            status = 'success'
+        else:
+            status = 'failure'
+        data = {
+            'status': status,
+        }
+        return JsonResponse(data)
+        #except:
+        #    status = 'failure'
+        #    data = {
+        #        'status': status,
+        #        'message': 'Could not create charge'
+        #    }
+        #    return JsonResponse(data)
 
 def checkout_done(request):
-    shippo.config.api_key = settings.SHIPPO_KEY
-    billing_profile, billing_profile_created = BillingProfile.objects.new_or_get(request)
-    cart_obj, cart_created = Cart.objects.new_or_get(request)
-    order_obj, order_obj_created = Order.objects.new_or_get(billing_profile, cart_obj)
-    shippo_obj = order_obj.shippo_obj
-    del request.session['cart_id']
-    if not billing_profile:
-        return HttpResponse({"message": "Please login or continue as a guest"}, status=401)
-    context = {
-        "cart": cart_obj,
-        "order": order_obj,
-        "shippo": shippo_obj,
-        "billing_profile": billing_profile,
-    }
-    return render(request, "carts/checkout-done.html", context)
+    try:
+        billing_profile, billing_profile_created = BillingProfile.objects.new_or_get(request)
+        cart_obj, cart_created = Cart.objects.new_or_get(request)
+        order_obj = Order.objects.filter(billing_profile=billing_profile, cart=cart_obj).first()
+        if order_obj is not None:
+            del request.session['cart_id']
+            context = {
+                "order": order_obj,
+            }
+            return render(request, "carts/checkout-done.html", context)
+        else:
+            return redirect('/shop')
+    except:
+        return redirect('/shop')
+    
     
 def ticket_nb(request):
     billing_profile, billing_profile_created = BillingProfile.objects.new_or_get(request)
@@ -692,7 +776,6 @@ def full_gallery_sale(request):
             "submit_for_settlement": True
         }
     })
-    print(result)
     if result.is_success:
         items = cart_obj.items.all()
         order_obj = LOAArtPurchase()

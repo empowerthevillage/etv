@@ -14,6 +14,8 @@ from policy.views import obb_flyer
 from vbp.models import *
 from ven.views import *
 
+from merchandise.views import ProductList
+
 Alabama = vbp_al.objects.filter(approved=False).count()
 Alaska = vbp_ak.objects.filter(approved=False).count()
 Arizona = vbp_az.objects.filter(approved=False).count()
@@ -138,7 +140,7 @@ urlpatterns = [
     path('news-and-events/', news, name='news'),
     path('sitemap.xml/', sitemap),
     path('robots.txt/', robots),
-    path('shop/', shop, name='shop'),
+    path('shop/', ProductList, name='shop'),
     path('login/', LoginView.as_view(), name='login'),
     path('logout/', LogoutView.as_view(next_page=settings.LOUGOUT_REDIRECT_URL), name='logout'),
     path('make-every-friday-black-friday/', efbf, name='efbf'),

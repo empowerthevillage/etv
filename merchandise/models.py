@@ -54,6 +54,11 @@ def pre_save_create_image_id(sender, instance, *args, **kwargs):
 
 pre_save.connect(pre_save_create_image_id, sender=image)
 
+class CloudflareImage(models.Model):
+    image_url               = models.CharField(max_length=320)
+    
+    def __str__(self):
+        return str(self.image_url)
 
 class Variation(models.Model):
     size = models.ForeignKey(size, on_delete=models.CASCADE, null=True, blank=True)
@@ -65,22 +70,23 @@ class Variation(models.Model):
 class newProduct(models.Model):
     title       = models.CharField(max_length=250)
     slug        = models.SlugField(blank=True, unique=True)
-    description = models.TextField()
-    card_description = models.TextField()
+    description = models.TextField(blank=True, null=True)
+    card_description = models.TextField(blank=True, null=True)
     price       = models.DecimalField(decimal_places=2, max_digits=10, default=0.00)
     featured    = models.BooleanField(default=False)
     active      = models.BooleanField(default=True)
     shipping_weight = models.IntegerField(null=True, blank=True)
     sale_active = models.BooleanField(default=False)
     sale_price  = models.DecimalField(decimal_places=2, max_digits=10, default=0.00, blank=True)
-    images = models.ManyToManyField(image)
+    images = models.ManyToManyField(CloudflareImage, blank=True)
     inventory   = models.ManyToManyField(Variation, through='newInventory')
+    display_order       = models.PositiveIntegerField(default=0)
 
     def __str__(self):
         return self.title
 
     class Meta:
-        ordering = ['price']
+        ordering = ['display_order', 'price']
         verbose_name = 'Product'
         verbose_name_plural = 'Products'
 

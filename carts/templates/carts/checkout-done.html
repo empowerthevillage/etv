@@ -7,17 +7,7 @@
     <div class="col s10 offset-s1 m8 offset-m2 l6 offset-l3 card thankyou-card center-align">
       <h5 class="thankyou-title">Thank You For Your Support!</h5>
       <h6 class="thankyou-subtitle">Your purchase helps support the work we do to bring prosperity, peace and power back to our community</h6>
-      <p class="thankyou-p">An email confirmation will be sent to {{ billing_profile.email }}</p>
-      <!--<h6><a href="{{ shippo.tracking_url_provider }}" target="_blank">Click Here To Track Your Order</a></h6>
-      <p class="thankyou-p"><b>Order ID:</b> {{ order.braintree_id }}</p>
-      <p class="thankyou-p">Shipping via <b>USPS</b></p>
-      <p class="thankyou-p"><b>Tracking Number:</b> {{ shippo.tracking_number }}</p>-->
-      {% if request.user.is_authenticated %}
-      <a href="{{ account_url }}">Visit Your Order Dashboard for Tracking</a>
-      {% else %}
-      <a href="{{ register_url }}">Create A Free Account Today To View Your Order Details!</a>
-      {% endif %}
-
+      <p class="thankyou-p">An email confirmation will be sent to {{ order.email }}</p>
     </div>
 
   </div>
@@ -30,7 +20,7 @@
 </script>
 <style>
   #page {
-    background: url('{% static "img/pillar_collage.png" %}');
+    background: url('https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/vbp-collage.webp');
     height: 100%;
   }
   .thankyou-title {

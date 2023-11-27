@@ -52,7 +52,7 @@ class Cart(models.Model):
         return  str(self.id)
 
     @property
-    def total(self):
+    def get_total(self):
         cart_id = self.id
         qs = list(cartItem.objects.filter(cart=cart_id).all())
         items = qs
@@ -61,6 +61,11 @@ class Cart(models.Model):
             line_total = x.item.product.price * x.quantity
             total += line_total
         return total
+    
+def cart_pre_save_receiver(sender, instance, *args, **kwargs):
+    instance.total = instance.get_total
+
+pre_save.connect(cart_pre_save_receiver, sender=Cart)
 
 class cartItem(models.Model):
     item        = models.ForeignKey(newInventory, on_delete=models.CASCADE, blank=True, null=True)

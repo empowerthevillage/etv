@@ -13,6 +13,7 @@ class newInventoryAdmin(admin.ModelAdmin):
 admin_site.register(size)
 admin_site.register(color)
 admin_site.register(image)
+admin_site.register(CloudflareImage)
 admin_site.register(Variation)
 admin_site.register(newProduct)
 admin_site.register(newInventory, newInventoryAdmin)

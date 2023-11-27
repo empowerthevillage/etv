@@ -3,6 +3,7 @@ from .views import *
 
 urlpatterns = [
     path('', cart_home, name='home'),
+    path('add-nonce-merch', add_nonce_to_merch, name='add-nonce-merch'),
     path('checkout', checkout_home, name='checkout'),
     path('checkout-confirm', checkout_confirm, name='checkout-confirm'),
     path('checkout-done', checkout_done, name="checkout-done"),

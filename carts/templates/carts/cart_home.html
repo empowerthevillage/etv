@@ -3,13 +3,16 @@
 {% block title %}{{ title }}{% endblock %}
 
 {% block content %}
-<div class="row cart-page">
-  <div class="cart-container col s12 m7 l8 section scrollspy">
-    <a href="{{ merchandise_url }}" class="valign-wrapper"><i class="material-icons" style="font-size: 16px">arrow_back</i>&nbspContinue Shopping</a>
+<div class="row cart-page" style="background: url('https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/vbp-collage.webp')">
+  <div class="cart-container col s12 m7 l8 section scrollspy" style="padding-bottom: 5%;">
+    <a href="/shop" class="valign-wrapper"><i class="material-icons" style="font-size: 16px">arrow_back</i>&nbspContinue Shopping</a>
     <h5>My Cart</h5>
     {% csrf_token %}
     <div class="cart-row row" style="margin-bottom:0">
         <div class="col s12">
+          {% if items_list|length == 0 %}
+          <p>There's no swag in your cart, <a href="/shop">start shopping</a>!</p>
+          {% else %}
             <table class="cart-table">
               <thead>
                 <tr>
@@ -26,13 +29,12 @@
                       <td>
                         <b>{{ item.item.product }}</b>
                         <input class="product-price" type="hidden" value="{{ item.item.product.price }}">
-                        <p>Color: {{ item.item.variation.color }}</p>
-                        <p>Size: {{ item.item.variation.size }}</p>
+                        <p><b style="color:black">Color:</b> {{ item.item.variation.color }}</p>
+                        <p><b style="color:black">Size:</b> {{ item.item.variation.size }}</p>
                       </td>
                       <td class="qty-td"><input class="qty-counter" type="number" min='0' style="margin:0" value='{{ item.quantity }}'></td>
                       <td class="line-price" value="{% widthratio item.item.product.price 1 item.quantity %}">
                         <div class="price-text">${% widthratio item.item.product.price 1 item.quantity %}.00</div>
-                        <div class="preloader hidden"><img src="{% static 'img/sun-preloader.gif' %}" width=40px></div>
                       </td>
                     </tr>
                     {% endif %}
@@ -41,7 +43,7 @@
                       <td></td>
                       <td><b>Total</b>
                       </td>
-                      <td class="cart-panetotal" style="font-weight: 500" value="{{ cart.total }}" id="cart-panetotal">${{ cart.total }}</td>
+                      <td class="cart-panetotal" style="font-weight: 500" value="{{ cart.get_total }}" id="cart-panetotal">${{ cart.get_total }}</td>
 
                     </tr>
                     <script>
@@ -54,7 +56,6 @@
                         var priceText = linePrice.find('.price-text')
                         var preloader = linePrice.find('.preloader')
                         priceText.hide()
-                        preloader.removeClass('hidden')
                         var cartTD = $('.cart-panetotal')
                         var cartTotal = cartTD.attr('value')
                         var data = {
@@ -95,10 +96,12 @@
                     </script>
                   </tbody>
                 </table>
+
+        {% endif %}
         </div>
     </div>
   </div>
-  <div class="cart-summary center-align col s12 m5 l4 z-depth-2">
+  <div class="cart-summary center-align col s12 m5 l4 z-depth-5">
     <h5>Summary</h5>
     {% regroup items_list by product as product_summary %}
     <h6 class="items-title">Items</h6>
@@ -107,9 +110,9 @@
       {% endfor %}
     <div style="padding-top: 10px; padding-bottom: 10px">
     <h6>Total</h6>
-    <p style="margin-top:0" class="summary-total">${{ cart.total }}</p>
+    <p style="margin-top:0" class="summary-total">${{ cart.get_total }}</p>
     </div>
-    <a  style="margin-bottom: 10px" href="/cart/checkout" class="btn checkout">Proceed To Checkout</a>
+    <a  style="margin-bottom: 10px" href="/cart/checkout" class="btn checkout {% if items_list|length == 0 %}disabled{% endif %}">Proceed To Checkout</a>
     <br>
     <i ><i class="fas fa-lock"></i> Secure </i>
   </div>

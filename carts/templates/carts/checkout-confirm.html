@@ -43,8 +43,8 @@
     </div>
   </div>
 </div>
-<div id="page">
-    <div class="row content-row" style="background-color: rgba(255, 255, 255, 0.968);margin-bottom: 0">
+<div id="page" style="background: url('https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/vbp-collage.webp');">
+    <div class="row content-row" style="background-color: rgba(255, 255, 255, 0.95);margin-bottom: 0">
       <div class="right col s12 m5 l4 summary-container" style="padding-left: 5%; padding-right: 5%">
         <h5 class="section-title" style="color:rgb(186, 37, 37)">Summary</h5>
         {% regroup items_list by item.product as product_summary %}
@@ -64,13 +64,13 @@
               <div style="border-top: rgb(133, 133, 133) 1px solid; border-bottom:rgb(133, 133, 133) 1px solid; padding-top: 10px; padding-bottom: 10px;">
                 <div class="valign-wrapper" style="justify-content: space-between;">
                   <h6 class="p-title">Total</h6>
-                  <h6 class="p-title">${{ cart.total }}</h6>
+                  <h6 class="p-title">${{ cart.get_total }}</h6>
                 </div>
               </div>
             
       </div>
-      <div class="left col s12 m7 l8 checkout-container section scrollspy z-depth-2" style="background-color: white;">
-        <a href="{{ checkout_url }}" class="valign-wrapper"><i class="material-icons" style="font-size: 16px">arrow_back</i>&nbspBack</a>
+      <div class="left col s12 m7 l8 checkout-container section scrollspy z-depth-5" style="background-color: rgba(255, 255, 255, 0.854);">
+        <a href="/cart/checkout" class="valign-wrapper"><i class="material-icons" style="font-size: 16px">arrow_back</i>&nbspBack</a>
         <h5 class="section-title">Review Your Order</h5>
         <div class="center-align">
         <p class="review-item" style="margin-bottom: 15px"><b>Shipping Address:</b></p>
@@ -79,42 +79,37 @@
           <li>{{ order.shipping_address.address_line_1 }}</li>
           <li>{{ order.shipping_address.address_line_2 }}</li>
           <li>{{ order.shipping_address.city }}, {{ order.shipping_address.state }} {{ order.shipping_address.zip_code }}</li>
-          <li><a href="{{ checkout_url }}">Change</a></li>
+          <li><a href="/cart/checkout">Change</a></li>
         </ul> 
-        {% if nonce.type == 'VenmoAccount' %}
-        <p class="review-item" style="margin-bottom: 15px"><b>Payment Method:</b>
-          <ul class="review-list">
-            <li>Venmo - @{{ nonce.details.username }} <a href="{{ checkout_url }}">Change</a></li>
-          </ul>
+          {% if nonce.type == 'VenmoAccount' %}
+          <p class="review-item" style="margin-bottom: 15px"><b>Payment Method:</b>
+            <ul class="review-list">
+              <li>Venmo - @{{ nonce.details.username }} <a href="/cart/checkout">Change</a></li>
+            </ul>
+          </p>
           {% elif nonce.type == 'PayPalAccount' %}
           <p class="review-item" style="margin-bottom: 15px"><b>Payment Method:</b>
-          <ul class="review-list">
-            <li>PayPal - @{{ nonce.details.email }} <a href="{{ checkout_url }}">Change</a></li>
-          </ul>
+            <ul class="review-list">
+              <li>PayPal - @{{ nonce.details.email }} <a href="/cart/checkout">Change</a></li>
+            </ul>
+          </p>
           {% elif nonce.type == 'AndroidPayCard' %}
           <p class="review-item" style="margin-bottom: 15px"><b>Payment Method:</b>
             <ul class="review-list">
-              <li>GooglePay - {{ nonce.details.card_type }} ending in {{ nonce.details.last_four }} <a href="{{ checkout_url }}">Change</a></li>
+              <li>GooglePay - {{ nonce.details.card_type }} ending in {{ nonce.details.last_four }} <a href="/cart/checkout">Change</a></li>
             </ul>
+          </p>
           {% else %}
           
-          <p class="review-item" style="margin-bottom: 15px"><b>Billing Address:</b>
-            <ul class="review-list">
-              <li>{{ order.billing_address.name }}</li>
-              <li>{{ order.billing_address.address_line_1 }}</li>
-              <li>{{ order.billing_address.address_line_2 }}</li>
-              <li>{{ order.billing_address.city }}, {{ order.billing_address.state }} {{ order.billing_address.zip_code }}</li>
-              <li><a href="{{ checkout_url }}">Change</a></li>
-            </ul> 
           <p class="review-item" style="margin-bottom: 15px"><b>Payment Method:</b>
             <ul class="review-list">
               <li><i class="fas fa-credit-card"></i> {{ nonce.details.card_type }} ending in {{ nonce.details.last_four }}</li>
-              <li><a href="{{ checkout_url }}">Change</a></li>
+              <li><a href="/cart/checkout">Change</a></li>
             </ul>
           </p>
           {% endif %}
         
-        <p class="review-item" style="margin-bottom: 15px"><b>Order Total: ${{ cart.total }}</b></p>
+        <p class="review-item" style="margin-bottom: 15px"><b>Order Total: ${{ cart.get_total }}</b></p>
       </div>
         <button class="valign-wrapper btn waves-effect creditcard-button z-depth-1" id="creditcard-button">
           <div class="donate-text-small"><i class="fas fa-check-circle"></i> PLACE ORDER</div>
@@ -577,7 +572,7 @@
 <script src="https://js.braintreegateway.com/web/3.82.0/js/hosted-fields.min.js"></script>
 <script>  
 braintree.client.create({
-    authorization: 'production_pgz5pm7q_tb3vd7jd2hynhxcn'
+    authorization: '{{ tokenization_key }}'
   }, function (clientErr, clientInstance) {
   if (clientErr) {
     console.error('Error creating client:', clientErr);
@@ -587,7 +582,35 @@ braintree.client.create({
 });
 $('#creditcard-button').on('click', function(event){
   event.preventDefault();
-  window.location.replace('/cart/charge')
+  data = {
+      csrfmiddlewaretoken: '{{ csrf_token }}',
+  }
+  $.ajax({
+      url: '/cart/charge',
+      method: 'POST',
+      data: data,
+      success: function(data){
+        $('#page').fadeOut(1000, function(){
+        $('.preloader').show()
+        if(data.status == 'success'){
+          window.location.replace('/cart/checkout-done')
+        }
+        else{
+          $('#page').show()
+          $('.preloader').hide()
+          Swal.fire(
+            'There was an error creating your order',
+            'Please refresh the page and try again',
+            'error'
+          )
+        }
+        
+      })
+      },
+      error: function(data){
+        alert('an error occurred:', data)
+      } 
+    })
 })
 </script>
 {% endblock %}

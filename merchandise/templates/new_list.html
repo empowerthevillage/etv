@@ -3,15 +3,14 @@
 {% block title %}{{ title }}{% endblock %}
 
 {% block content %}
-<div style="background: url('{% static 'img/pillar-collage-min.jpg' %}');">
-    <div class="merchandise-container" style="background-color: rgba(255, 255, 255, 0.666);">
-        <div class="row title-row" style="margin-bottom: 0; background: rgba(255, 255, 255, 0.733)">
+<div style="background: url('https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/vbp-collage.webp');">
+    <div class="merchandise-container" style="background-color: rgba(255, 255, 255, 0.93);">
+        <div class="row title-row" style="margin-bottom: 0;">
             <div class="col s12 row cart-row">
                 <div class="col s12 right-align">
                         <a href="/cart/">
                         <div class="col s12">
-                            <img class="cart-count-image" src="{% static 'images/cart.svg' %}">
-                            
+                            <img class="cart-count-image" src="https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/shopping-cart-icon.png">
                         </div>
                         </a>
                         <a href="/cart/">
@@ -33,16 +32,18 @@
         </div>
         <div class="row merch-row1" style="margin-bottom: 0">
             {% for object in object_list %}
-            <div class="col s12 m6 l4 card-column">
+            <div class="col s12 m6 l4">
                 <div class="card z-depth-3">
-                    <div class="card-image z-depth-1">
+                    <div class="card-image z-depth-2">
+                        {% if object.images.all|length > 1 %}
                         <div class="carousel carousel-slider" id="product-carousel">
-                            {% for image in object.get_images %}
-                            <div class="carousel-item">
-                                <a class="" style="display: flex" data-lightbox="{{ object.slug }}" href="{{ image.get_path }}"><img class="carousel-image-item" src="{{ image.get_path }}"></a>
-                            </div>
+                            {% for image in object.images.all %}
+                                <a class="carousel-item"><img src="{{ image }}" width="100%"></a>
                             {% endfor %}
                         </div>
+                        {% else %}
+                        <img src="{{ object.get_images.first.image_url }}" width="100%">
+                        {% endif %}
                     </div>
                     <div class="card-content center-align">
                         <div class="card-title">{{ object.title }}</div>
@@ -68,17 +69,15 @@
                                             </style>
                                         {% endfor %}
                                     </div>
-                                    {% if object.get_sizes|length > 1 %}
+                                    {% if object.get_sizes|length >= 1 %}
                                    
-                                    <div class="row size-row" style="margin-bottom: 20;">
-                                        {% for size in object.get_sizes %}
-                                            <p style="margin-right: 10px">
-                                                <label>
-                                                  <input name="size" type="radio" value="{{ size.size }}"/>
-                                                  <span>{{ size.size }}</span>
-                                                </label>
-                                            </p>
-                                        {% endfor %}
+                                    <div class="row size-row">
+                                        <select>
+                                            <option value="" selected name="size">Select A Size</option>
+                                            {% for size in object.get_sizes %}
+                                            <option value="{{ size.size }}" name="size">{{ size.size }}</option>
+                                            {% endfor %}
+                                        </select>
                                     </div>
                                     {% else %}
                                     <div class="size-select" style="display:none">
@@ -87,7 +86,7 @@
                                         {% endfor %}
                                     </div>
                                     {% endif %}
-                                    <div class="row" style="margin:0">
+                                    <div class="row" style="margin-top: 20px;">
                                         <span class="submit-span">
                                         <button class="btn add-to-cart" type="submit">Add To Cart</button>
                                         </span>
@@ -107,10 +106,14 @@
 <style>
     
     @media only screen and (min-width:0px){
+        .carousel.carousel-slider .carousel-item {
+            transition: none !important;
+        }
         .cart-count-image {
             width: 30px;
             height: 30px;
-            margin-right: 5px
+            margin-right: 10px;
+            margin-bottom: 5px;
         }
         .cart-count {
             font-size: 16px;
@@ -142,8 +145,7 @@
             margin-left: 5%
         }
         .card-content {
-            padding-top: 3%;
-            padding-bottom: 3%;
+            padding: 3% 2%;
         }
         .card-info p {
             font-size: 14px
@@ -283,7 +285,6 @@
         .cart-count-image {
             width: 40px;
             height: 40px;
-            margin-right: 5px
         }
         .cart-count {
             font-size: 14px;
@@ -328,8 +329,8 @@
             margin-left: 0;
         }
         .card-content {
-            padding-left: 0 !important;
-            padding-right: 0 !important
+            padding: 3% 2%;
+            height: 380px;
         }
         .card-image img {
             padding:0;
@@ -401,6 +402,9 @@
     @media only screen and (min-width:992px){
         .add-to-cart {
             font-size: 20px
+        }
+        .card-title {
+            line-height: 42px !important;
         }
         .cart-row {
             padding-right: 3% !important
@@ -503,11 +507,13 @@
 
 <script>
     $(document).ready(function(){
-        
         $('.carousel.carousel-slider').carousel({
             fullWidth: true,
+            duration: 200,
+            noWrap: true,
             indicators: true,
         });
+        $('.slider').slider();
         $('.materialboxed').materialbox();
         lightbox.option({
             'maxWidth': '300px',
@@ -518,7 +524,7 @@
         productForm.submit(function(event){
             event.preventDefault();
             var thisForm = $(this);
-            var size = $(thisForm).find("input[name=size]:checked").val()
+            var size = $(thisForm).find("select").find(":selected").val()
             var color = $(thisForm).find("input[class=select-color]:checked").val()
             var type = $(thisForm).children('.product-id-hidden').val()
 
@@ -542,17 +548,13 @@
             },
             error: function(errorData){
                 Swal.fire(
-                    'An Error Occured',
+                    'The color/size combination you selected is unavailable',
                     errorData,
                     'error'
                 );
             }
         })
         });
-    });
-    $( window ).on( "load", function() {
-        var finalHeight = $('.carousel-image-item').first().innerHeight()
-        $('.carousel').css('height', finalHeight)
     });
 </script>
 {% endblock %}

@@ -73,10 +73,9 @@ def cart_update(request):
     if type is not None:
         
         try:
-            item_obj = item.objects.get(type=type, color=color, size=size)
-        
-        except item.DoesNotExist:
-            return redirect("merchandise:list")
+            item_obj = newInventory.objects.get(type=type, color=color, size=size)
+        except:
+            added = False
         cart_obj, new_obj = Cart.objects.new_or_get(request)
         if item_obj in cart_obj.products.all():
             cart_obj.products.remove(item_obj)
