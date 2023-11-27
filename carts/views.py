@@ -413,8 +413,8 @@ def new_charge(request):
                 'items': order_obj.items.all(),
             })
             
-            #recipients = ['chandler@eliftcreations.com', 'admin@empowerthevillage.org', 'ayo@empowerthevillage.org']
-            recipients = ['chandler@eliftcreations.com']
+            recipients = ['chandler@eliftcreations.com', 'admin@empowerthevillage.org', 'ayo@empowerthevillage.org']
+            #recipients = ['chandler@eliftcreations.com']
             send_mail(
                 'New Swag Purchase!',
                 str('A new swag purchase has been successfully processed! Purchaser: '+ str(email)),
