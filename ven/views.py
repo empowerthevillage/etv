@@ -22,34 +22,37 @@ def venForm(request):
                         obj.pitch_comp = True
             except:
                 pass
-            obj.nominator_name = nomination_form.data['nominator-name']
-            obj.nominator_email = nomination_form.data['nominator-email']
-            obj.owner_name = nomination_form.data['owner-name']
-            obj.business_name = nomination_form.data['business_name']
-            obj.website = nomination_form.data['website']
-            obj.city = nomination_form.data['city']
-            obj.state = nomination_form.data['state']
-            obj.phone = nomination_form.data['phone']
-            obj.category = nomination_form.data['category']
             try:
-                obj.subcategory = nomination_form.data['subcategory']
+                obj.nominator_name = nomination_form.data['nominator-name']
+                obj.nominator_email = nomination_form.data['nominator-email']
+                obj.owner_name = nomination_form.data['owner-name']
+                obj.business_name = nomination_form.data['business_name']
+                obj.website = nomination_form.data['website']
+                obj.city = nomination_form.data['city']
+                obj.state = nomination_form.data['state']
+                obj.phone = nomination_form.data['phone']
+                obj.category = nomination_form.data['category']
+                try:
+                    obj.subcategory = nomination_form.data['subcategory']
+                except:
+                    pass
+                obj.nominator_owner = nomination_form.data['owned']
+                obj.years_in_business = nomination_form.data['years-active']
+                obj.employees = nomination_form.data['employees']
+                obj.revenue = nomination_form.data['revenue']
+                obj.structure = nomination_form.data['structure']
+                obj.priority1 = nomination_form.data['priority1']
+                obj.other1 = nomination_form.data['other1-custom']
+                obj.priority2 = nomination_form.data['priority2']
+                obj.other2 = nomination_form.data['other2-custom']
+                obj.priority3 = nomination_form.data['priority3']
+                obj.other3 = nomination_form.data['other3-custom']
+                obj.instagram = nomination_form.data['instagram']
+                obj.facebook = nomination_form.data['facebook']
+                obj.twitter = nomination_form.data['twitter']
+                obj.save()
             except:
-                pass
-            obj.nominator_owner = nomination_form.data['owned']
-            obj.years_in_business = nomination_form.data['years-active']
-            obj.employees = nomination_form.data['employees']
-            obj.revenue = nomination_form.data['revenue']
-            obj.structure = nomination_form.data['structure']
-            obj.priority1 = nomination_form.data['priority1']
-            obj.other1 = nomination_form.data['other1-custom']
-            obj.priority2 = nomination_form.data['priority2']
-            obj.other2 = nomination_form.data['other2-custom']
-            obj.priority3 = nomination_form.data['priority3']
-            obj.other3 = nomination_form.data['other3-custom']
-            obj.instagram = nomination_form.data['instagram']
-            obj.facebook = nomination_form.data['facebook']
-            obj.twitter = nomination_form.data['twitter']
-            obj.save()
+                sweetify.error(request, title='Oops!', icon='error', text="Something went wrong, please verify that all fields are valid and try again", button='OK', timer=6000)
             sweetify.success(request, title='Thank you!', icon='success', text="Thank you for registering for the Village Empowerment Network!", button='OK', timer=6000)
             welcome_subject = "Welcome to ETV's Village Empowerment Network!"
             welcome_from_email = 'etvnotifications@gmail.com'
