@@ -169,14 +169,20 @@ ETV | Donate
                           </label>
                         </p>
                         <div class="col s12" style="padding-left: 0; padding-right: 0">
-                          <h6 class="fieldset-subtitle" style="margin-top: 10px">Village Assist Program™ Sponsor</h6>
+                          <h6 class="fieldset-subtitle" style="margin-top: 10px">Village Assist™ Healing Circle Donation</h6>
                         </div>
                         <p>
                           <label>
-                            <input id="vap-sponsor" class="with-gap" name="donation_level" type="radio" value="1200" plan-id='s8cm'>
-                            <span id="vap-sponsor-amount" style="height: fit-content !important;">$1,200 - Pays for 12 sessions for community members in need to have one-on-one wellness sessions with a qualified, licensed and culturally-competent mental health professional.</span>
+                            <input id="vap-sponsor-counseling" class="with-gap" name="donation_level" type="radio" value="20" plan-id='6wbg'>
+                            <span id="vap-sponsor-counseling-amount" style="height: fit-content !important;">$20 - Counseling Session</span>
                           </label>
                         </p> 
+                        <p>
+                          <label>
+                            <input id="vap-sponsor-counseling" class="with-gap" name="donation_level" type="radio" value="200" plan-id='mtpr'>
+                            <span id="vap-sponsor-counseling-amount" style="height: fit-content !important;">$200 - Program Donation (12 Sessions)</span>
+                          </label>
+                        </p>
                       </div>
                   </div>
                     <div id="make-my-donation">
@@ -906,6 +912,16 @@ function handleVenmoSuccess(payload) {
     $('#step3-back').click(function(){
       $('.step-3').addClass('hidden')
       $('.step-2').removeClass('hidden')
+    });
+    $(":radio[value=20]").change(function() {
+        $('#other-donation').val('');
+        $('.other-input').addClass('hidden');
+        $('#make-my-donation').show()
+    });
+    $(":radio[value=200]").change(function() {
+        $('#other-donation').val('');
+        $('.other-input').addClass('hidden');
+        $('#make-my-donation').show()
     });
     $(":radio[value=1500]").change(function() {
         $('#other-donation').val('');
