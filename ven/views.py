@@ -1,4 +1,5 @@
 from django.core.mail import send_mail
+from django.core.validators import validate_email
 from django.shortcuts import render, redirect
 from django.template.loader import render_to_string
 from .forms import BusinessForm
@@ -9,86 +10,91 @@ def venForm(request):
     if request.method == 'POST':
         if request.POST.get('submission-type') == 'business':
             nomination_form = BusinessForm(request.POST)
-            obj = Nomination()
             try:
-                if len(nomination_form.data['vendor_opp']) > 1:
-                    if nomination_form.data['vendor_opp'][:1] == 'true':
-                        obj.expo_vendor = True
+                validate_email(nomination_form.data['nominator-email'])
             except:
-                pass
-            try:
-                if len(nomination_form.data['pitch_comp']) > 1:
-                    if nomination_form.data['pitch_comp'][:1] == 'true':
-                        obj.pitch_comp = True
-            except:
-                pass
-            try:
-                obj.nominator_name = nomination_form.data['nominator-name']
-                obj.nominator_email = nomination_form.data['nominator-email']
-                obj.owner_name = nomination_form.data['owner-name']
-                obj.business_name = nomination_form.data['business_name']
-                obj.website = nomination_form.data['website']
-                obj.city = nomination_form.data['city']
-                obj.state = nomination_form.data['state']
-                obj.phone = nomination_form.data['phone']
-                obj.category = nomination_form.data['category']
+                sweetify.error(request, title='Oops!', icon='error', text="Please enter a valid email address", button='OK', timer=6000)
+            else:
+                obj = Nomination()
                 try:
-                    obj.subcategory = nomination_form.data['subcategory']
+                    if len(nomination_form.data['vendor_opp']) > 1:
+                        if nomination_form.data['vendor_opp'][:1] == 'true':
+                            obj.expo_vendor = True
                 except:
                     pass
-                obj.nominator_owner = nomination_form.data['owned']
-                obj.years_in_business = nomination_form.data['years-active']
-                obj.employees = nomination_form.data['employees']
-                obj.revenue = nomination_form.data['revenue']
-                obj.structure = nomination_form.data['structure']
-                obj.priority1 = nomination_form.data['priority1']
-                obj.other1 = nomination_form.data['other1-custom']
-                obj.priority2 = nomination_form.data['priority2']
-                obj.other2 = nomination_form.data['other2-custom']
-                obj.priority3 = nomination_form.data['priority3']
-                obj.other3 = nomination_form.data['other3-custom']
-                obj.instagram = nomination_form.data['instagram']
-                obj.facebook = nomination_form.data['facebook']
-                obj.twitter = nomination_form.data['twitter']
-                obj.save()
-            except:
-                sweetify.error(request, title='Oops!', icon='error', text="Something went wrong, please verify that all fields are valid and try again", button='OK', timer=6000)
-            sweetify.success(request, title='Thank you!', icon='success', text="Thank you for registering for the Village Empowerment Network!", button='OK', timer=6000)
-            welcome_subject = "Welcome to ETV's Village Empowerment Network!"
-            welcome_from_email = 'etvnotifications@gmail.com'
-            welcome_content = render_to_string('welcome-email.html',{'name':obj.nominator_name})
-            welcome_plain_text = 'View email in browser'
-            send_mail(welcome_subject, welcome_plain_text, welcome_from_email, [str(obj.nominator_email)], html_message=welcome_content)
-            confirmation_subject = 'New VEN Submission!'
-            from_email = 'etvnotifications@gmail.com'
-            confirmation_content = render_to_string('new-submission.html',
-            {
-                'business_nomination': True,
-                'pk': obj.pk,
-                'name': obj.nominator_name,
-                'email': obj.nominator_email,
-                'business_name': obj.business_name,
-                'owner_name': obj.owner_name,
-                'website': obj.website,
-                'city': obj.city,
-                'state': obj.state,
-                'phone': obj.phone,
-                'category': obj.category,
-                'subcategory': obj.subcategory,
-                'instagram': obj.instagram,
-                'facebook': obj.facebook,
-                'twitter': obj.twitter,
-                'owned': obj.nominator_owner,
-                'years_in_bus': obj.years_in_business,
-                'employees': obj.employees,
-                'revenue': obj.revenue,
-                'structure': obj.structure,
-                'bus_priority1': obj.priority1,
-                'bus_priority2': obj.priority2,
-                'bus_priority3': obj.priority3,
-            })
-            confirmation_plain_text = 'View email in browser'      
-            send_mail(confirmation_subject, confirmation_plain_text, from_email, ['chandler@eliftcreations.com', 'ayo@empowerthevillage.org', 'admin@empowerthevillage.org'], html_message=confirmation_content)
+                try:
+                    if len(nomination_form.data['pitch_comp']) > 1:
+                        if nomination_form.data['pitch_comp'][:1] == 'true':
+                            obj.pitch_comp = True
+                except:
+                    pass
+                try:
+                    obj.nominator_name = nomination_form.data['nominator-name']
+                    obj.nominator_email = nomination_form.data['nominator-email']
+                    obj.owner_name = nomination_form.data['owner-name']
+                    obj.business_name = nomination_form.data['business_name']
+                    obj.website = nomination_form.data['website']
+                    obj.city = nomination_form.data['city']
+                    obj.state = nomination_form.data['state']
+                    obj.phone = nomination_form.data['phone']
+                    obj.category = nomination_form.data['category']
+                    try:
+                        obj.subcategory = nomination_form.data['subcategory']
+                    except:
+                        pass
+                    obj.nominator_owner = nomination_form.data['owned']
+                    obj.years_in_business = nomination_form.data['years-active']
+                    obj.employees = nomination_form.data['employees']
+                    obj.revenue = nomination_form.data['revenue']
+                    obj.structure = nomination_form.data['structure']
+                    obj.priority1 = nomination_form.data['priority1']
+                    obj.other1 = nomination_form.data['other1-custom']
+                    obj.priority2 = nomination_form.data['priority2']
+                    obj.other2 = nomination_form.data['other2-custom']
+                    obj.priority3 = nomination_form.data['priority3']
+                    obj.other3 = nomination_form.data['other3-custom']
+                    obj.instagram = nomination_form.data['instagram']
+                    obj.facebook = nomination_form.data['facebook']
+                    obj.twitter = nomination_form.data['twitter']
+                    obj.save()
+                except:
+                    sweetify.error(request, title='Oops!', icon='error', text="Something went wrong, please verify that all fields are valid and try again", button='OK', timer=6000)
+                sweetify.success(request, title='Thank you!', icon='success', text="Thank you for registering for the Village Empowerment Network!", button='OK', timer=6000)
+                welcome_subject = "Welcome to ETV's Village Empowerment Network!"
+                welcome_from_email = 'etvnotifications@gmail.com'
+                welcome_content = render_to_string('welcome-email.html',{'name':obj.nominator_name})
+                welcome_plain_text = 'View email in browser'
+                send_mail(welcome_subject, welcome_plain_text, welcome_from_email, [str(obj.nominator_email)], html_message=welcome_content)
+                confirmation_subject = 'New VEN Submission!'
+                from_email = 'etvnotifications@gmail.com'
+                confirmation_content = render_to_string('new-submission.html',
+                {
+                    'business_nomination': True,
+                    'pk': obj.pk,
+                    'name': obj.nominator_name,
+                    'email': obj.nominator_email,
+                    'business_name': obj.business_name,
+                    'owner_name': obj.owner_name,
+                    'website': obj.website,
+                    'city': obj.city,
+                    'state': obj.state,
+                    'phone': obj.phone,
+                    'category': obj.category,
+                    'subcategory': obj.subcategory,
+                    'instagram': obj.instagram,
+                    'facebook': obj.facebook,
+                    'twitter': obj.twitter,
+                    'owned': obj.nominator_owner,
+                    'years_in_bus': obj.years_in_business,
+                    'employees': obj.employees,
+                    'revenue': obj.revenue,
+                    'structure': obj.structure,
+                    'bus_priority1': obj.priority1,
+                    'bus_priority2': obj.priority2,
+                    'bus_priority3': obj.priority3,
+                })
+                confirmation_plain_text = 'View email in browser'      
+                send_mail(confirmation_subject, confirmation_plain_text, from_email, ['chandler@eliftcreations.com', 'ayo@empowerthevillage.org', 'admin@empowerthevillage.org'], html_message=confirmation_content)
   
         elif request.POST.get('submission-type') == 'family':
             form = request.POST

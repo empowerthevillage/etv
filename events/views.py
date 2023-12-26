@@ -1214,12 +1214,12 @@ def view_checkins(request):
     return render(request, 'view-checkins.html', context)
 
 def pitch_registration(request):
-    return render(request, 'pitch-registration.html')
+    return render(request, 'pitch-registration-2024.html')
 
 def pitch_rules_agreement(request):
     if request.method == 'POST':
         obj = Signature()
-        obj.purpose = 'Agreed to 2023 Empowerment Expo Village Ventures Rules & Terms'
+        obj.purpose = 'Agreed to 2024 Empowerment Expo Village Ventures Rules & Terms'
         obj.first_name = request.POST['first-name']
         obj.last_name = request.POST['last-name']
         obj.email = request.POST['email']
