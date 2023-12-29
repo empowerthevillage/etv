@@ -637,3 +637,16 @@ class ArtGallery(models.Model):
     def __str__(self):
         return str(self.title)
     
+class FreeRegistration(models.Model):
+    event           = models.ForeignKey(Event, null=True, blank=True, on_delete=models.SET_NULL)
+    guest           = models.ForeignKey(Guest, on_delete=models.SET_NULL, null=True, blank=True)
+    email           = models.EmailField(blank=True, null=True)
+    group           = models.CharField(max_length=270, null=True, blank=True)
+    guest_list      = models.TextField(null=True, blank=True)
+    first_name      = models.CharField(max_length=100, null=True, blank=True)
+    last_name       = models.CharField(max_length=100, null=True, blank=True)
+    created         = models.DateTimeField(auto_now_add=True, null=True, blank=True)
+    updated         = models.DateTimeField(auto_now=True, null=True, blank=True)
+    
+    def __str__(self):
+        return '%s - %s %s'
