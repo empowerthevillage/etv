@@ -1341,7 +1341,7 @@ def free_registration(request, slug):
             reg_obj.email = data['email']
             reg_obj.guest_list = data['guest-list']
             reg_obj.save()
-            sweetify.success(request, title='Thank you!', icon='success', text="Thank you for registering for the Village Empowerment Network!", button='OK', timer=6000)
+            mailchimp.customerJourneys.trigger(6190, 54790, {"email_address": str(reg_obj.email)})
             confirmation_subject = 'New %s Free Registration!' %(reg_obj_temp)
             from_email = 'etvnotifications@gmail.com'
             confirmation_content = render_to_string('new-free-reg.html',
@@ -1352,7 +1352,7 @@ def free_registration(request, slug):
             confirmation_plain_text = 'View email in browser'      
             send_mail(confirmation_subject, confirmation_plain_text, from_email, ['chandler@eliftcreations.com', 'ayo@empowerthevillage.org', 'admin@empowerthevillage.org'], html_message=confirmation_content)
             #send_mail(confirmation_subject, confirmation_plain_text, from_email, ['chandler@eliftcreations.com'], html_message=confirmation_content)
-            sweetify.success(request, title='Success!', icon='success', text="Free registration successful!", button='OK', timer=10000)
+            sweetify.success(request, title='Success!', icon='success', text="You're registered for the event! You'll receive a confirmation email shortly", button='OK', timer=20000)
             return redirect(event.get_absolute_url())
         except:
             sweetify.error('Please make sure all required fields are valid and try again')
