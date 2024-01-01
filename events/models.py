@@ -85,6 +85,7 @@ class Event(models.Model):
     has_gallery     = models.BooleanField(default=False, null=True, blank=True)
     gallery_photos = models.ManyToManyField(PhotoGalleryItem, blank=True)
     sponsor_image   = models.ImageField(blank=True, null=True)
+    free_reg        = models.BooleanField(default=False)
     objects         = EventManager()
 
     def get_absolute_url(self):
@@ -637,16 +638,28 @@ class ArtGallery(models.Model):
     def __str__(self):
         return str(self.title)
     
-class FreeRegistration(models.Model):
-    event           = models.ForeignKey(Event, null=True, blank=True, on_delete=models.SET_NULL)
-    guest           = models.ForeignKey(Guest, on_delete=models.SET_NULL, null=True, blank=True)
-    email           = models.EmailField(blank=True, null=True)
-    group           = models.CharField(max_length=270, null=True, blank=True)
-    guest_list      = models.TextField(null=True, blank=True)
-    first_name      = models.CharField(max_length=100, null=True, blank=True)
-    last_name       = models.CharField(max_length=100, null=True, blank=True)
-    created         = models.DateTimeField(auto_now_add=True, null=True, blank=True)
-    updated         = models.DateTimeField(auto_now=True, null=True, blank=True)
+class FreeRegistrationTemplate(models.Model):
+    event                       = models.ForeignKey(Event, null=True, blank=True, on_delete=models.SET_NULL)
+    custom_event_title          = models.CharField(max_length=270, null=True, blank=True)
+    description                 = models.TextField(blank=True, null=True)
+    mailchimp_journey_id        = models.CharField(max_length=120, null=True, blank=True)
     
     def __str__(self):
-        return '%s - %s %s'
+        if self.custom_event_title:
+            return str(self.custom_event_title)
+        else:
+            return str(self.event)
+    
+class FreeRegistration(models.Model):
+    event                       = models.ForeignKey(FreeRegistrationTemplate, null=True, blank=True, on_delete=models.SET_NULL)
+    guest                       = models.ForeignKey(Guest, on_delete=models.SET_NULL, null=True, blank=True)
+    email                       = models.EmailField(blank=True, null=True)
+    group                       = models.CharField(max_length=270, null=True, blank=True)
+    guest_list                  = models.TextField(null=True, blank=True)
+    first_name                  = models.CharField(max_length=100, null=True, blank=True)
+    last_name                   = models.CharField(max_length=100, null=True, blank=True)
+    created                     = models.DateTimeField(auto_now_add=True, null=True, blank=True)
+    updated                     = models.DateTimeField(auto_now=True, null=True, blank=True)
+    
+    def __str__(self):
+        return '%s - %s %s' %(self.event, self.first_name, self.last_name)

@@ -1,0 +1,396 @@
+{% extends 'base.html' %}
+{% block title %}
+{{ title }}
+{% endblock %}
+{% load static %}
+
+{% block content %}
+  
+<div id="page">
+
+    <div class="content-container row" style="margin-bottom: 0">
+        <div class="col s12" style="padding-left: 2%; padding-right: 2%; padding-bottom: 3%">
+          <div class="col s12" style="padding-bottom: 10px;">
+              <a href="{{ event.get_absolute_url }}"><i class="bi bi-arrow-left"></i> Back to Event Details</a>
+          </div>
+          <h5 class="center-align donation-title">ETV {% if reg_obj.custom_event_title %}{{ reg_obj.custom_event_title }}{% else %}{{ event }}{% endif %} Free Registration</h5>
+          
+          <div id="preloader" class="center-align" style="display:none; padding-top: 200px; height: 800px">
+            <div class="preloader-wrapper big active" >
+              <div class="spinner-layer spinner-blue">
+                <div class="circle-clipper left">
+                  <div class="circle"></div>
+                </div><div class="gap-patch">
+                  <div class="circle"></div>
+                </div><div class="circle-clipper right">
+                  <div class="circle"></div>
+                </div>
+              </div>
+            
+              <div class="spinner-layer spinner-red">
+                <div class="circle-clipper left">
+                  <div class="circle"></div>
+                </div><div class="gap-patch">
+                  <div class="circle"></div>
+                </div><div class="circle-clipper right">
+                  <div class="circle"></div>
+                </div>
+              </div>
+            
+              <div class="spinner-layer spinner-yellow">
+                <div class="circle-clipper left">
+                  <div class="circle"></div>
+                </div><div class="gap-patch">
+                  <div class="circle"></div>
+                </div><div class="circle-clipper right">
+                  <div class="circle"></div>
+                </div>
+              </div>
+            
+              <div class="spinner-layer spinner-green">
+                <div class="circle-clipper left">
+                  <div class="circle"></div>
+                </div><div class="gap-patch">
+                  <div class="circle"></div>
+                </div><div class="circle-clipper right">
+                  <div class="circle"></div>
+                </div>
+              </div>
+            </div>
+            <h4 style="font-family:oskar;">Processing your registration, please do not refresh or navigate away from this page</h4>
+          </div>
+          <div id="success-container" style="display: none; padding-top: 20px;"></div>
+          <div class="col s12 m10 offset-m1" id="form-container">
+              <div>
+                <form id="registration-form" method="POST" action="">
+                  {% csrf_token %}
+                    <fieldset class="checkout-fieldset z-depth-1">
+                        <h5 class="fieldset-title" style="padding-bottom: 10px;">Registration Details</h5>
+                        <div class="row" style="margin-bottom: 0;">
+                            <div class="input-field col s12 m6 l4" style="margin-top: 0">
+                              <input type="text" name="fname" class="textfield" required id="id_first_name">
+                                <label for="id_first_name">First Name<b class="required">*</b></label>
+                            </div>
+                            <div class="input-field col s12 m6 l4" style="margin-top: 0">
+                              <input type="text" required name="lname" id="last_name">
+                              <label for="id_last_name">Last Name<b class="required">*</b></label>
+                            </div>
+                            <div class="input-field col s12 l4" style="margin-top: 0">
+                              <input type="text" name="email" required id="email">
+                              <label for="id_email">Email<b class="required">*</b></label>
+                            </div>
+                            <div class="input-field col s12" style="margin-top: 0">
+                                <i class="material-icons prefix">person</i>
+                                <textarea class="materialize-textarea" name="guest-list" id="guest-list"></textarea>
+                                <label for="guest-list">Guest List</label>
+                            </div>
+                            <div class="col s12 center-align">
+                                <button class="btn submit-btn" role="submit" id="registration-submit">Complete Registration</button>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+              </div>
+          </div>
+        </div>
+    </div> 
+</div>
+
+<script>
+    $('label').on('click', function(){
+        $(this).addClass('active')
+    });
+</script>
+<style>
+  #pledge-p {
+    margin-top: 50px
+  }
+  #fundraising-amount {
+    margin-bottom: 40px;
+  }
+  #waiver-col {
+    margin-top: 50px;
+  }
+  .submit-btn {
+    background: green;
+    color: white;
+    font-family: oskar;
+    font-size: 22px;
+    margin-top: 10px;
+    width: fit-content;
+  }
+  #mobile-double-campaign {
+    display: block;
+  }
+  #registration-form [type="radio"]:not(:checked)+span, [type="radio"]:checked+span {
+    height: 30px !important
+  }
+  .p-title {
+    font-family: oskar;
+    font-size: 18px;
+  }
+  .donation-review-item {
+    font-size: 18px;
+    font-family: oskar;
+  }
+  #add-new-billing {
+    background: rgb(41, 41, 41)
+  }
+  .address-label {
+      font-size: 14px
+    }
+    label span {
+      margin-bottom: -5px
+    }
+  .help-text{
+    margin: 0;
+    text-align: center;
+  }
+  .input-icon {
+    font-size: 18px;
+    color: rgb(160, 160, 160);
+    margin-right: 10px
+  }
+  .checkout-fieldset {
+    background: rgba(255, 255, 255, 0.845);
+    border: none;
+    border-radius: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-left: 7%;
+    padding-right: 7%;
+    padding-bottom: 40px
+
+  }
+  .checkout-fieldset p {
+    margin-bottom: 0;
+    margin-top: 0px;
+  }
+  .secure-checkout {
+    font-size: 14px;
+    font-weight: 300;
+    color: rgb(99, 99, 99);
+  }
+  .secure-checkout span {
+    font-size: 16px
+  }
+  label {
+    color: rgb(43, 43, 43) !important
+  }
+  .fieldset-title {
+    font-family: oskar;
+    font-size: 20px;
+    color: rgb(186, 37, 37);
+    text-decoration: underline;
+  }
+  .fieldset-subtitle {
+    font-family: oskar;
+    font-size: 18px;
+    font-weight: 300;
+    margin-top: 15px
+  }
+    .hidden {
+        display: none;
+    }
+    
+    #page {
+        background-image: url("https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/health-collage-4.webp");
+        background-size: 80%;
+        background-repeat: repeat;
+    }
+    .content-container {
+    padding: 3% 1%;
+    background-color: rgba(255, 255, 255, 0.9);
+    }
+    .required {
+        color: red
+    }
+    .label-title {
+        font-size: 16px
+    }
+    .donate-buttons {
+        padding-bottom: 60px
+    }
+    .donate-buttons a {
+        width: 100%;
+        margin:5px;
+        font-size: 16px;
+        letter-spacing: 1.5px;
+        font-weight:400;
+        height: 50px;
+        padding-top:4px;
+        border-radius: 40px;
+    }
+    .donate-buttons a i {
+        font-size: 24px;
+    }
+    .donation-title {
+        font-family: oskar;
+        font-size: 52px;
+    }
+    @media only screen and (min-width:0px){
+        .donate-text-small {
+          display: block;
+        }
+        .donate-text-large {
+          display: none;
+        }
+        .donation-title {
+            font-size: 32px;
+        }
+        .donation-subtitle {
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 20px
+        }
+    }
+    @media only screen and (min-width:601px){
+      #pledge-p {
+        margin-top: 20px
+      }
+      .content-container {
+        padding: 3% 5%
+      }
+     
+      .p-title {
+          font-family: oskar;
+          font-size: 20px;
+        }
+      .donation-review-item {
+        font-size: 20px;
+        font-family: oskar;
+      }
+      .donate-text-small {
+        display: none;
+      }
+      .donate-text-large {
+        display: block;
+        letter-spacing: 2px;
+      }
+      .donation-title {
+          font-size: 42px;
+      }
+      .fieldset-title {
+        font-family: oskar;
+        font-size: 24px
+      }
+    }
+    @media only screen and (min-width:993px){
+        .submit-btn {
+            font-size: 26px;
+        }
+        .content-container {
+            padding: 3% 10%
+        }
+      #registration-form [type="radio"]:not(:checked)+span, [type="radio"]:checked+span {
+        height: 25px !important
+      }
+      .p-title {
+          font-family: oskar;
+          font-size: 26px;
+        }
+        .donation-title {
+            font-size: 48px;
+        }
+        .donation-subtitle {
+            font-size: 20px;
+            font-weight: 300;
+            line-height: 24px;
+        }
+        .fieldset-title {
+          font-family: oskar;
+          font-size: 26px
+        }
+        .checkout-fieldset p {
+          margin-bottom: 15px !important
+        }
+    }
+    @media only screen and (min-width:1400px){
+        #opt-in {
+            padding-bottom: 30px;
+        }
+        .donation-title {
+            font-size: 56px;
+        }
+        .donation-subtitle {
+            font-size: 20px;
+            font-weight: 300;
+            line-height: 24px
+        }
+        .fieldset-title {
+          font-family: oskar;
+          font-size: 28px
+        }
+    }
+
+.toast {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  z-index: 9999;
+}
+
+.bootstrap-basic {
+  background: white;
+}
+
+#or {
+  position: relative;
+  line-height: 50px;
+  text-align: center;
+  font-weight: 500;
+}
+
+#or::before,
+#or::after {
+  position: absolute;
+  width: 30%;
+  height: 1px;
+  
+  top: 25px;
+  
+  background-color: rgb(193, 193, 193);
+  
+  content: '';
+}
+
+#or::before {
+  left: 15%;
+}
+
+#or::after {
+  right: 15%;
+}
+.btn:focus {
+  background-color:rgb(160, 160, 160) !important;
+}
+#card-name {
+  height: 3rem;
+  border-bottom: 1px solid #9e9e9e;
+  margin-bottom: 10px !important;
+}
+#card-number {
+  height: 3rem;
+  border-bottom: 1px solid #9e9e9e;
+  margin-bottom: 10px !important;
+}
+#card-date {
+  height: 3rem;
+  border-bottom: 1px solid #9e9e9e;
+  margin-bottom: 10px !important;
+}
+#card-cvv {
+  height: 3rem;
+  border-bottom: 1px solid #9e9e9e;
+  margin-bottom: 10px !important;
+}
+#card-zip {
+  height: 3rem ;
+  border-bottom: 1px solid #9e9e9e;
+  margin-bottom: 10px !important;
+}
+::placeholder {
+  color: rgb(186, 186, 186) !important
+}
+</style>
+{% endblock %}

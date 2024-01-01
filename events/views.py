@@ -1327,3 +1327,41 @@ def process_silent_auction_purchase(request):
         
 def berg_marketplace(request):
     return render(request, 'berg-marketplace.html')
+
+def free_registration(request, slug):
+    if request.method == 'POST':
+        try:
+            event = Event.objects.filter(slug=slug).first()
+            reg_obj_temp = FreeRegistrationTemplate.objects.filter(event=event).first()
+            data = request.POST
+            reg_obj = FreeRegistration()
+            reg_obj.event = reg_obj_temp
+            reg_obj.first_name = data['fname']
+            reg_obj.last_name = data['lname']
+            reg_obj.email = data['email']
+            reg_obj.guest_list = data['guest-list']
+            reg_obj.save()
+            sweetify.success(request, title='Thank you!', icon='success', text="Thank you for registering for the Village Empowerment Network!", button='OK', timer=6000)
+            confirmation_subject = 'New %s Free Registration!' %(reg_obj_temp)
+            from_email = 'etvnotifications@gmail.com'
+            confirmation_content = render_to_string('new-free-reg.html',
+            {
+                'obj': reg_obj,
+                'template': reg_obj_temp
+            })
+            confirmation_plain_text = 'View email in browser'      
+            #send_mail(confirmation_subject, confirmation_plain_text, from_email, ['chandler@eliftcreations.com', 'ayo@empowerthevillage.org', 'admin@empowerthevillage.org'], html_message=confirmation_content)
+            send_mail(confirmation_subject, confirmation_plain_text, from_email, ['chandler@eliftcreations.com'], html_message=confirmation_content)
+            sweetify.success(request, title='Success!', icon='success', text="Free registration successful!", button='OK', timer=10000)
+            return redirect(event.get_absolute_url())
+        except:
+            sweetify.error('Please make sure all required fields are valid and try again')
+            
+    else:
+        event = Event.objects.filter(slug=slug).first()
+        reg_obj = FreeRegistrationTemplate.objects.filter(event=event).first()
+        context = {
+            'event': event,
+            'reg_obj': reg_obj,
+        }
+        return render(request, 'free-registration.html', context)

@@ -31,5 +31,6 @@ urlpatterns = [
     path('ticket/<ticket_id>/', ticket, name="ticket-detail"),
     path('<slug>/', event_detail, name='detail'),
     path('<slug>/buy-tickets/', event_ticket_checkout, name='ticket-checkout'),
+    path('<slug>/free-registration/', free_registration, name='free-registration'),
     path('<slug>/sponsor/', event_sponsor_checkout, name='sponsor-checkout'),
     ]
