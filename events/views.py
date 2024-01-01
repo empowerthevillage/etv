@@ -1350,8 +1350,8 @@ def free_registration(request, slug):
                 'template': reg_obj_temp
             })
             confirmation_plain_text = 'View email in browser'      
-            #send_mail(confirmation_subject, confirmation_plain_text, from_email, ['chandler@eliftcreations.com', 'ayo@empowerthevillage.org', 'admin@empowerthevillage.org'], html_message=confirmation_content)
-            send_mail(confirmation_subject, confirmation_plain_text, from_email, ['chandler@eliftcreations.com'], html_message=confirmation_content)
+            send_mail(confirmation_subject, confirmation_plain_text, from_email, ['chandler@eliftcreations.com', 'ayo@empowerthevillage.org', 'admin@empowerthevillage.org'], html_message=confirmation_content)
+            #send_mail(confirmation_subject, confirmation_plain_text, from_email, ['chandler@eliftcreations.com'], html_message=confirmation_content)
             sweetify.success(request, title='Success!', icon='success', text="Free registration successful!", button='OK', timer=10000)
             return redirect(event.get_absolute_url())
         except:
