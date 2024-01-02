@@ -1340,6 +1340,7 @@ def free_registration(request, slug):
             reg_obj.last_name = data['lname']
             reg_obj.email = data['email']
             reg_obj.guest_list = data['guest-list']
+            reg_obj.affiliation = data['affiliation']
             reg_obj.save()
             mailchimp.customerJourneys.trigger(6190, 54790, {"email_address": str(reg_obj.email)})
             confirmation_subject = 'New %s Free Registration!' %(reg_obj_temp)

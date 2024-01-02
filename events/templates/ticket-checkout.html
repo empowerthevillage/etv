@@ -204,22 +204,8 @@
                 </div>
                 <p class="secure-mobile"><i class="fas fa-lock"></i> Secure</p>
             </div>
-            {% if event.checkout_img_link is not None %}
-            <a href="{{ event.checkout_img_link }}"><img class="z-depth-1" src="{{ event.get_checkout_img_path }}" width=100% style="margin-top: 20px"></a>
-            {% else %}
-            <img class="z-depth-1" src="{{ event.get_checkout_img_path }}" width=100% style="margin-top: 20px">
-            {% endif %}
-
-            {% if event.checkout_img_link_2 %}
-            <a href="{{ event.checkout_img_link_2 }}" target="_blank"><img class="z-depth-1" src="{{ event.get_checkout_img_path_2 }}" width=100% style="margin-top: 20px"></a>
-            {% elif event.checkout_image_2 %}
-            {{ event.checkout_image_2 }}
-            <img class="z-depth-1" src="{{ event.get_checkout_img_path_2 }}" width=100% style="margin-top: 20px">
-            {% endif %}
-            {% if event.checkout_video_html %}
-            <div style="margin-top: 20px">
-                {{ event.checkout_video_html|safe }}
-            </div>            
+            {% if event.checkout_img_url %}
+            <img class="z-depth-2" src="{{ event.checkout_img_url }}" width="100%" style="margin-top: 20px;">
             {% endif %}
         </div>
     </div>
@@ -295,27 +281,11 @@
               <div class="valign-wrapper" style="padding-top: 10px;">
                 <p style="margin-top:0" class="summary-total" id="total-container-1">Total - <div class="total-line">${{ cart.total|intcomma }}</div> <a  style="margin-bottom: 5px" href="" class="btn checkout" id="step-2-billing" style="background-color: rgb(29, 154, 29) !important; font-size: 32px !important">Continue</a>
                     <i class="secure"><i class="fas fa-lock"></i> Secure </i></p>
+              </div>
             </div>
-            </div>
-            {% if event.checkout_img_link.exists %}
-            <a href="{{ event.checkout_img_link }}"><img class="z-depth-1" src="{{ event.get_checkout_img_path }}" width=100% style="margin-top: 20px"></a>
-            {% else %}
-            <img class="z-depth-1" src="{{ event.get_checkout_img_path }}" width=100% style="margin-top: 20px">
+            {% if event.checkout_img_url %}
+            <img class="z-depth-2" src="{{ event.checkout_img_url }}" width="100%" style="margin-top: 20px;">
             {% endif %}
-            {% if event.checkout_img_link_2.exists %}
-            <a href="{{ event.checkout_img_link_2 }}" target="_blank"><img class="z-depth-1" src="{{ event.get_checkout_img_path_2 }}" width=100% style="margin-top: 20px"></a>
-            {% elif event.checkout_image_2 is not None %}
-            <img class="z-depth-1" src="{{ event.get_checkout_img_path_2 }}" width=100% style="margin-top: 20px">
-            {% endif %}
-            {% if event.sponsor_image.exists %}
-            <p class="sponsor-text">ETV's Village Empowerment Network is supported by:</p>
-            <img src="{{ event.get_sponsor_img_path }}" width=100% style="margin-top: 0px">
-            {% endif %}
-            {% if event.checkout_video_html.exists %}
-<div style="margin-top: 20px">
-              {{ event.checkout_video_html|safe }}
-</div>            
-{% endif %}
         </div>
     </div>
     <div class="center-align" id="p3-preloader" style="display:none">
@@ -479,27 +449,11 @@
               <div class="valign-wrapper" style="padding-top: 10px;">
                 <p style="margin-top:0" class="summary-total">Total - <div class="total-line" id="final-total" value="{{ cart.total }}">${{ cart.total|intcomma }}</div> <a  style="margin-bottom: 5px" href="" class="btn checkout place-order-btn" id="step3-continue" style="background-color: rgb(29, 154, 29) !important; font-size: 32px !important">Complete Order</a>
                     <i class="secure"><i class="fas fa-lock"></i> Secure </i></p>
+              </div>
             </div>
-            </div>
-            {% if event.checkout_img_link.exists %}
-            <a href="{{ event.checkout_img_link }}"><img class="z-depth-1" src="{{ event.get_checkout_img_path }}" width=100% style="margin-top: 20px"></a>
-            {% else %}
-            <img class="z-depth-1" src="{{ event.get_checkout_img_path }}" width=100% style="margin-top: 20px">
+            {% if event.checkout_img_url %}
+            <img class="z-depth-2" src="{{ event.checkout_img_url }}" width="100%" style="margin-top: 20px;">
             {% endif %}
-            {% if event.checkout_img_link_2.exists %}
-            <a href="{{ event.checkout_img_link_2 }}" target="_blank"><img class="z-depth-1" src="{{ event.get_checkout_img_path_2 }}" width=100% style="margin-top: 20px"></a>
-            {% elif event.checkout_image_2.exists %}
-            <img class="z-depth-1" src="{{ event.get_checkout_img_path_2 }}" width=100% style="margin-top: 20px">
-            {% endif %}
-            {% if event.sponsor_image.exists %}
-            <p class="sponsor-text">ETV's Village Empowerment Network is supported by:</p>
-            <img src="{{ event.get_sponsor_img_path }}" width=100% style="margin-top: 0px">
-            {% endif %}
-            {% if event.checkout_video_html.exists %}
-<div style="margin-top: 20px">
-              {{ event.checkout_video_html|safe }}
-</div>            
-{% endif %}
         </div>
     </div>
     </div>

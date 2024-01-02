@@ -658,6 +658,7 @@ class FreeRegistration(models.Model):
     guest_list                  = models.TextField(null=True, blank=True)
     first_name                  = models.CharField(max_length=100, null=True, blank=True)
     last_name                   = models.CharField(max_length=100, null=True, blank=True)
+    affiliation                 = models.CharField(max_length=270, null=True, blank=True)
     created                     = models.DateTimeField(auto_now_add=True, null=True, blank=True)
     updated                     = models.DateTimeField(auto_now=True, null=True, blank=True)
     
