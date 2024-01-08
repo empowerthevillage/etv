@@ -1342,22 +1342,24 @@ def free_registration(request, slug):
             reg_obj.guest_list = data['guest-list']
             reg_obj.affiliation = data['affiliation']
             reg_obj.save()
-            mailchimp.customerJourneys.trigger(6190, 54790, {"email_address": str(reg_obj.email)})
-            confirmation_subject = 'New %s Free Registration!' %(reg_obj_temp)
-            from_email = 'etvnotifications@gmail.com'
-            confirmation_content = render_to_string('new-free-reg.html',
-            {
-                'obj': reg_obj,
-                'template': reg_obj_temp
-            })
-            confirmation_plain_text = 'View email in browser'      
-            send_mail(confirmation_subject, confirmation_plain_text, from_email, ['chandler@eliftcreations.com', 'ayo@empowerthevillage.org', 'admin@empowerthevillage.org'], html_message=confirmation_content)
-            #send_mail(confirmation_subject, confirmation_plain_text, from_email, ['chandler@eliftcreations.com'], html_message=confirmation_content)
+            try:
+                mailchimp.customerJourneys.trigger(6190, 54790, {"email_address": str(reg_obj.email)})
+                confirmation_subject = 'New %s Free Registration!' %(reg_obj_temp)
+                from_email = 'etvnotifications@gmail.com'
+                confirmation_content = render_to_string('new-free-reg.html',
+                {
+                    'obj': reg_obj,
+                    'template': reg_obj_temp
+                })
+                confirmation_plain_text = 'View email in browser'      
+                #send_mail(confirmation_subject, confirmation_plain_text, from_email, ['chandler@eliftcreations.com', 'ayo@empowerthevillage.org', 'admin@empowerthevillage.org'], html_message=confirmation_content)
+                send_mail(confirmation_subject, confirmation_plain_text, from_email, ['chandler@eliftcreations.com'], html_message=confirmation_content)
+            except:
+                pass
             sweetify.success(request, title='Success!', icon='success', text="You're registered for the event! You'll receive a confirmation email shortly", button='OK', timer=20000)
             return redirect(event.get_absolute_url())
         except:
             sweetify.error('Please make sure all required fields are valid and try again')
-            
     else:
         event = Event.objects.filter(slug=slug).first()
         reg_obj = FreeRegistrationTemplate.objects.filter(event=event).first()
