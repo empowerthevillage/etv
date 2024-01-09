@@ -114,6 +114,28 @@ class CheckinAdmin(admin.ModelAdmin):
 class SignatureAdmin(admin.ModelAdmin):
     readonly_fields = ('timestamp',)
     
+class FreeRegAdmin(admin.ModelAdmin):
+    list_display = ['first_name', 'last_name', 'email','event','created']
+    actions = ['download_csv']
+    search_fields = ['event', 'last_name', 'first_name', 'email']
+    
+    def download_csv(self, request, queryset):
+        opts = queryset.model._meta
+        model = queryset.model
+        response = HttpResponse(content_type='text/csv')
+        # force download.
+        response['Content-Disposition'] = 'attachment;filename=export.csv'
+        # the csv writer
+        writer = csv.writer(response)
+        field_names = [field.name for field in opts.fields]
+        # Write a first row with header information
+        writer.writerow(field_names)
+        # Write data rows
+        for obj in queryset:
+            writer.writerow([getattr(obj, field) for field in field_names])
+        return response
+    download_csv.short_description = "Download selected as csv"
+    
 admin_site.register(Signature, SignatureAdmin)
 admin_site.register(tag)
 admin_site.register(Event, EventAdmin)
@@ -130,7 +152,7 @@ admin_site.register(FullGalleryItem, ArtAdmin)
 admin_site.register(AuctionItem, AuctionAdmin)
 admin_site.register(Artist, ArtistAdmin)
 admin_site.register(PhotoGalleryItem)
-admin_site.register(FreeRegistration)
+admin_site.register(FreeRegistration, FreeRegAdmin)
 admin_site.register(FreeRegistrationTemplate)
 dashboardModel.objects.dash_register(Event)
 dashboardModel.objects.dash_register(TicketType)

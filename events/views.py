@@ -1343,7 +1343,7 @@ def free_registration(request, slug):
             reg_obj.affiliation = data['affiliation']
             reg_obj.save()
             try:
-                mailchimp.customerJourneys.trigger(6190, 54790, {"email_address": str(reg_obj.email)})
+                mailchimp.customerJourneys.trigger(6190, 54790, {"email_address": str(data['email'])})
                 confirmation_subject = 'New %s Free Registration!' %(reg_obj_temp)
                 from_email = 'etvnotifications@gmail.com'
                 confirmation_content = render_to_string('new-free-reg.html',
