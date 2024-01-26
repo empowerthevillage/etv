@@ -643,6 +643,7 @@ class FreeRegistrationTemplate(models.Model):
     custom_event_title          = models.CharField(max_length=270, null=True, blank=True)
     description                 = models.TextField(blank=True, null=True)
     mailchimp_journey_id        = models.CharField(max_length=120, null=True, blank=True)
+    end_date                    = models.DateField(blank=True, null=True)
     
     def __str__(self):
         if self.custom_event_title:
@@ -661,6 +662,7 @@ class FreeRegistration(models.Model):
     affiliation                 = models.CharField(max_length=270, null=True, blank=True)
     created                     = models.DateTimeField(auto_now_add=True, null=True, blank=True)
     updated                     = models.DateTimeField(auto_now=True, null=True, blank=True)
+    
     
     def __str__(self):
         return '%s - %s %s' %(self.event, self.first_name, self.last_name)
