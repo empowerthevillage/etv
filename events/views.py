@@ -1356,7 +1356,7 @@ def free_registration(request, slug):
                 #send_mail(confirmation_subject, confirmation_plain_text, from_email, ['chandler@eliftcreations.com'], html_message=confirmation_content)
             except:
                 pass
-            sweetify.success(request, title='Success!', icon='success', text="You're registered for the event! You'll receive a confirmation email shortly", button='OK', timer=20000)
+            sweetify.success(request, title='Success!', icon='success', text="You're registered for the Expo!", button='OK', timer=20000)
             return redirect(event.get_absolute_url())
         except:
             sweetify.error('Please make sure all required fields are valid and try again')
