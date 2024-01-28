@@ -1343,9 +1343,16 @@ def free_registration(request, slug):
             reg_obj.affiliation = data['affiliation']
             reg_obj.save()
             try:
-                mailchimp.customerJourneys.trigger(6190, 54790, {"email_address": str(data['email'])})
-                confirmation_subject = 'New %s Free Registration!' %(reg_obj_temp)
                 from_email = 'etvnotifications@gmail.com'
+                registrant_subject = "Free Registration for ETV's %s Confirmed!" %(event)
+                registrant_content = render_to_string('free-reg-email.html',
+                {
+                })
+                registrant_plain_text = 'View email in browser'      
+                send_mail(registrant_subject, registrant_plain_text, from_email, [str(reg_obj.email)], html_message=registrant_content)
+                
+                confirmation_subject = 'New %s Free Registration!' %(reg_obj_temp)
+                
                 confirmation_content = render_to_string('new-free-reg.html',
                 {
                     'obj': reg_obj,
@@ -1353,9 +1360,10 @@ def free_registration(request, slug):
                 })
                 confirmation_plain_text = 'View email in browser'      
                 send_mail(confirmation_subject, confirmation_plain_text, from_email, ['chandler@eliftcreations.com', 'ayo@empowerthevillage.org', 'admin@empowerthevillage.org'], html_message=confirmation_content)
-                #send_mail(confirmation_subject, confirmation_plain_text, from_email, ['chandler@eliftcreations.com'], html_message=confirmation_content)
             except:
                 pass
+            #send_mail(confirmation_subject, confirmation_plain_text, from_email, ['chandler@eliftcreations.com'], html_message=confirmation_content)
+
             sweetify.success(request, title='Success!', icon='success', text="You're registered for the Expo!", button='OK', timer=20000)
             return redirect(event.get_absolute_url())
         except:
