@@ -211,7 +211,8 @@ def event_ticket_checkout(request, slug):
         "shipping_addresses":shipping_addresses,
         "shipping_id": shipping_address_id,
         "billing_addresses":billing_addresses,
-        "states": STATE_CHOICES
+        "states": STATE_CHOICES,
+        'tokenization_key': settings.BRAINTREE_TOKENIZATION_KEY,
     }
     return render(request, "ticket-checkout.html", context)
 
@@ -307,7 +308,8 @@ def event_sponsor_checkout(request, slug):
         "shipping_addresses":shipping_addresses,
         "shipping_id": shipping_address_id,
         "billing_addresses":billing_addresses,
-        "states": STATE_CHOICES
+        "states": STATE_CHOICES,
+        'tokenization_key': settings.BRAINTREE_TOKENIZATION_KEY
     }
     return render(request, "sponsor-checkout.html", context)
 
