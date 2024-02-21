@@ -18,7 +18,9 @@ class EventAdmin(admin.ModelAdmin):
     
 
 class ArtistAdmin(admin.ModelAdmin):
-    list_display = ['pk', 'name', 'image']
+    list_display = ['pk', 'name', 'active']
+    search_fields = ['name']
+    list_filter = ['active']
     actions = ['mark_inactive']
     
     def mark_inactive(self, request, queryset):
