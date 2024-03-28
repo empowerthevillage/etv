@@ -30,11 +30,11 @@
 
 {% block content %}
 
-<!--<a href="/events/empowerment-expo/">
+<a href="/donation/">
   <div class="marquee">
-    Join us for ETV's 2024 Empowerment Expo & North Star Celebration &nbsp;&nbsp;   | &nbsp;&nbsp;&nbsp; Join us for ETV's 2024 Empowerment Expo & North Star Celebration &nbsp;&nbsp;    |
+    Support ETV’s 2024 Spring Giving Campaign ~ 100% DONATION MATCH (March 15 - April 30, 2024) Double Your Impact Today! &nbsp;&nbsp;   | &nbsp;&nbsp;&nbsp; Support ETV’s 2024 Spring Giving Campaign ~ 100% DONATION MATCH (March 15 - April 30, 2024) Double Your Impact Today! &nbsp;&nbsp;    |
   </div>
-</a>-->
+</a>
 <div class="pillar-intro">
   <div  style="margin-bottom: 0px;background: url('https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/vbp-collage.webp'); background-size: 60% !important; padding: 0; padding-top: 120px !important;">
     <div style="background: rgb(255, 255, 255); padding: 0 !important">
@@ -444,14 +444,14 @@
 </div> 
     
 <script>
-  //$(document).ready(function(){
-  //  Swal.fire({
-  //    html: '<a href="/events/empowerment-expo/" style="overflow: hidden; "><img src="https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/expo-popup-2024.webp" width=100%></a>',
-  //    showCloseButton: true,
-  //    showConfirmButton: false,
-  //    padding: 0,
-  //  })
-  //})
+  $(document).ready(function(){
+    Swal.fire({
+      html: '<a href="/donation/" style="overflow: hidden; " id="spring-giving-campaign-popup"><img src="https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/spring-giving-graphic-20240317.webp" width=100%></a>',
+      showCloseButton: true,
+      showConfirmButton: false,
+      padding: 0,
+    })
+  })
     $('#mailchimp-efbf-form').submit(event, function(){
         event.preventDefault();
         var email = $('#mailchimp-email-efbf').val()
