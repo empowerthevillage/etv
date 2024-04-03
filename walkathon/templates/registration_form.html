@@ -318,7 +318,7 @@ Register | ETV 2024 Power Walk
                     </div>
                     <div class="row">
                       <div class="col s12 center-align" style="margin-top: 0;">
-                        <h6><b>Registration Fee:</b> $<b style="font-weight: 400;" id="registration-total">10</b></h6>
+                        <h6><b>Registration Fee:</b> $<b style="font-weight: 400;" id="registration-total">15</b></h6>
                         <div class="hidden" id="pledge-fees">
                           <h6><b>Pledge:</b> $<b style="font-weight: 400;" id="pledge-total"></b></h6>
                           <h6><b>Total:</b> $<b style="font-weight: 400;" id="registration-pledge-total"></b></h6>
@@ -633,13 +633,13 @@ braintree.client.create({
     UpdateTotal()
   });
   function UpdateTotal(){
-    var registrationFee = 10
+    var registrationFee = 15
     if($('#shirt-boolean').is(':checked')){
       var registrationFee = 25
       $('#registration-total').text('25')
     }else{
-      var registrationFee = 10
-      $('#registration-total').text('10')
+      var registrationFee = 15
+      $('#registration-total').text('15')
     }
     if($('[name="pledge"]').is(':checked')==true){
       $('#pledge-fees').removeClass('hidden')
