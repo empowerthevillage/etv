@@ -152,7 +152,10 @@ def express_review(request):
         zip_code = request.POST.get('contact_info[mailing_zip]'),
     )
     donation_obj = donation.objects.new(email=email)
-    donor_obj, created = Donor.objects.new_or_get(request)
+    try:
+        donor_obj, created = Donor.objects.new_or_get(request)
+    except:
+        donor_obj = Donor()
     donation_obj.status = 'incomplete'
     donation_obj.billing_profile = billing_profile
     donation_obj.first_name = first_name
