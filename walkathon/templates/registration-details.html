@@ -12,9 +12,7 @@
         {% endif %}
         <p><b>Emergency Contact:</b> {{ walker.emergency_contact_name }}</p>
         <p><b>Emergency Contact Phone:</b> {{ walker.emergency_contact_phone }}</p>
-        {% if shirt_ordered %}
-        <p><b>Shirt Size:</b> <b style="font-weight: normal; text-transform: uppercase;">{{ shirt.shirt_size }}</b></p>
-        {% endif %}
+        <p><b>Shirt Size:</b> <b style="font-weight: normal; text-transform: uppercase;">{{ walker.shirt_size }}</b></p>
         {% if pledge_paid %}
         <p><b>Pledge Paid:</b> <b style="font-weight: normal;">${{ pledge.amount }}</b></p>
         {% endif %}

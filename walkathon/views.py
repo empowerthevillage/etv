@@ -124,6 +124,7 @@ def walker_registration(request):
             walker_obj.email = email
             walker_obj.phone = data['phone']
             walker_obj.organization = org
+            walker_obj.shirt_size = data['shirt-size']
             walker_obj.emergency_contact_name = data['emergency-contact-name']
             walker_obj.emergency_contact_phone = data['emergency-contact-phone']
             walker_obj.address_line_1 = data['address_line_1']
@@ -140,6 +141,8 @@ def walker_registration(request):
                 walker_obj.virtual = True
             elif data['virtual-selection'] == 'in-person':
                 walker_obj.virtual = False
+            if data['5k-selection'] == 'yes':
+                walker_obj.fivek = True
             try:
                 walker_obj.image = files['image']
             except:
@@ -170,28 +173,27 @@ def walker_registration(request):
             except:
                 pledge_paid = False
                 pledge_obj = None
-            try:
-                if data['shirt-boolean'] == 'on':
-                    shirt_obj = ShirtOrder()
-                    shirt_obj.braintree_id = result.transaction.id
-                    shirt_obj.complete = True
-                    shirt_obj.amount = 20.00
-                    shirt_obj.shirt_size = data['shirt-size']
-                    shirt_obj.walker = walker_obj
-                    shirt_obj.save()
-                    shirt_ordered = True
-                else:
-                    shirt_ordered = False
-                    shirt_obj = None
-            except:
-                shirt_ordered = False
-                shirt_obj = None
+            #try:
+            #    if data['shirt-boolean'] == 'on':
+            #        shirt_obj = ShirtOrder()
+            #        shirt_obj.braintree_id = result.transaction.id
+            #        shirt_obj.complete = True
+            #        shirt_obj.amount = 20.00
+            #        shirt_obj.shirt_size = data['shirt-size']
+            #        shirt_obj.walker = walker_obj
+            #        shirt_obj.save()
+            #        shirt_ordered = True
+            #    else:
+            #        shirt_ordered = False
+            #        shirt_obj = None
+            #except:
+            #    shirt_ordered = False
+            #    shirt_obj = None
             data = {
                 'status': 'success',
                 'html': render_to_string('registration-details.html', context={'walker': walker_obj,
-                    'shirt_ordered': shirt_ordered,
                     'pledge_paid': pledge_paid,
-                    'shirt': shirt_obj,
+                    'shirt': walker_obj.shirt_size,
                     'pledge': pledge_obj,
                     'payment_method': result.transaction.credit_card_details,
                     'total': total,

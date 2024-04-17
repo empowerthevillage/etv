@@ -92,6 +92,8 @@ class Walker(models.Model):
     zip                     = models.CharField(max_length=20, null=True, blank=True)
     donation_goal           = models.DecimalField(max_digits=20, decimal_places=2, default=0.00)
     virtual                 = models.BooleanField(default=False)
+    fivek                   = models.BooleanField(default=False)
+    shirt_size              = models.CharField(max_length=270)
     waiver_timestamp        = models.DateTimeField(null=True, blank=True)
     active                  = models.BooleanField(default=False)
     created                 = models.DateTimeField(auto_now_add=True)

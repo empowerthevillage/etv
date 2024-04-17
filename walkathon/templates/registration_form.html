@@ -68,7 +68,7 @@ Register | ETV 2024 Power Walk
                 <form id="registration-form" enctype="multipart/form-data" method="POST" >
                   {% csrf_token %}
                     <input type="hidden" name="nonce" id="nonce">
-                    <input type="hidden" value="10.00" name="order-total" id="order-total">
+                    <input type="hidden" value="25.00" name="order-total" id="order-total">
                     <fieldset class="checkout-fieldset z-depth-1">
                       <div class="input-field col s12" style="margin-bottom: 0">
                         <p style="font-weight: 600;" id="org-question">Walking with an team/organization? Select a registered group here!</p>
@@ -133,7 +133,23 @@ Register | ETV 2024 Power Walk
                                 </p>
                               </div>
                             </div>
-                            
+                            <div class="col s12" style="padding-bottom: 5px;">
+                              <p style="font-weight: 600;">Would you like to participate in the 5k? (Details will be emailed before event day)<b class="required">*</b></p>
+                              <div class="">
+                                <p>
+                                  <label>
+                                    <input value="yes" class="with-gap" name="5k-selection" type="radio" />
+                                    <span>Yes</span>
+                                  </label>
+                                </p>
+                                <p style="margin-bottom: 20px;">
+                                  <label>
+                                    <input value="no" class="with-gap" name="5k-selection" type="radio" />
+                                    <span>No</span>
+                                  </label>
+                                </p>
+                              </div>
+                            </div>
                             
                             <div class="input-field col s12" style="margin-top: 0">
                               {{ mailing_form.address_line_1 }}
@@ -213,7 +229,7 @@ Register | ETV 2024 Power Walk
                                     </div>
                                   </div>
                               </div>
-                                <p id="pledge-p">
+                                <p id="pledge-p"  style="margin-bottom: 20px;">
                                   <label>
                                     <input name="pledge" type="checkbox" id="pledge-toggle"/>
                                     <span><b style="font-weight: 600;">Select a pledge amount and pay now (optional)</b></span>
@@ -281,14 +297,14 @@ Register | ETV 2024 Power Walk
                     </fieldset>
                     <fieldset class="checkout-fieldset z-depth-1">
                       <div class="row" style="margin-bottom: 0;">
-                          <h5 class="fieldset-title" style="padding-bottom: 10px;">T-Shirt Pre-Order</h5>
-                          <p style="margin-bottom: 30px;">
+                          <h5 class="fieldset-title" style="padding-bottom: 10px;">T-Shirt Size</h5>
+                          <!--<p style="margin-bottom: 30px;">
                             <label>
                               <input type="checkbox" name="shirt-boolean" id="shirt-boolean"/>
                               <span>I'd like to pre-order an exclusive ETV 2024 Power Walk T-Shirt for $25 (includes registration)</span>
                             </label>
-                          </p>
-                          <div class="hidden" id="shirt-size-selector">
+                          </p>-->
+                          <div id="shirt-size-selector">
                             <div class="input-field col s8 m4">
                               <select name="shirt-size">
                                 <option value="" disabled selected>Choose Your Shirt Size</option>
@@ -299,7 +315,7 @@ Register | ETV 2024 Power Walk
                                 <option value="xl">XL</option>
                                 <option value="xxl">XXL</option>
                               </select>
-                              <label>Shirt Size</label>
+                              <label>Shirt Size<b class="required">*</b></label>
                             </div>
                           </div>
                       </div>
@@ -318,7 +334,7 @@ Register | ETV 2024 Power Walk
                     </div>
                     <div class="row">
                       <div class="col s12 center-align" style="margin-top: 0;">
-                        <h6><b>Registration Fee:</b> $<b style="font-weight: 400;" id="registration-total">15</b></h6>
+                        <h6><b>Registration Fee:</b> $<b style="font-weight: 400;" id="registration-total">25</b></h6>
                         <div class="hidden" id="pledge-fees">
                           <h6><b>Pledge:</b> $<b style="font-weight: 400;" id="pledge-total"></b></h6>
                           <h6><b>Total:</b> $<b style="font-weight: 400;" id="registration-pledge-total"></b></h6>
@@ -466,6 +482,13 @@ braintree.client.create({
           'text': "Please select if you'd like to participate virtually or in-person"
         })
         return;
+      }else if($('[name="5k-selection"]:checked').val()==undefined){
+        Swal.fire({
+          'title': 'Required field missing',
+          'icon': 'error',
+          'text': "Please select if you'd like to participate in the 5k"
+        })
+        return;
       }else if($('#emergency-contact-name').val()==''){
         Swal.fire({
           'title': 'Required field missing',
@@ -487,17 +510,13 @@ braintree.client.create({
           'text': 'Please review and accept the 2024 Power Walk Waiver'
         });
         return;
-      }else if($('#shirt-boolean').is(':checked')){
-        if ($('#shirt-size-selector').find(':selected').val() != ''){
-          
-        }else{
+      }if ($('#shirt-size-selector').find(':selected').val()==''){
           Swal.fire({
-            'title': 'Required field missing',
-            'icon': 'error',
-            'text': 'Please select your shirt size'
-          });
+              'title': 'Required field missing',
+              'icon': 'error',
+              'text': 'Please select your shirt size'
+            });
           return;
-        }
       }
       hostedFieldsInstance.tokenize(function (tokenizeErr, payload) {
         if (tokenizeErr) {
@@ -627,20 +646,20 @@ braintree.client.create({
     $('#pledge-total').text($(this).val())
     UpdateTotal()
   });
-  $('#shirt-boolean').on('change', function(){
-    $('#shirt-size-selector').toggleClass('hidden');
-    $('#shirt-price').toggleClass('hidden');
-    UpdateTotal()
-  });
+  //$('#shirt-boolean').on('change', function(){
+  //  $('#shirt-size-selector').toggleClass('hidden');
+  //  $('#shirt-price').toggleClass('hidden');
+  //  UpdateTotal()
+  //});
   function UpdateTotal(){
-    var registrationFee = 15
-    if($('#shirt-boolean').is(':checked')){
-      var registrationFee = 25
-      $('#registration-total').text('25')
-    }else{
-      var registrationFee = 15
-      $('#registration-total').text('15')
-    }
+    var registrationFee = 25
+    //if($('#shirt-boolean').is(':checked')){
+    //  var registrationFee = 25
+    //  $('#registration-total').text('25')
+    //}else{
+    //  var registrationFee = 15
+    //  $('#registration-total').text('15')
+    //}
     if($('[name="pledge"]').is(':checked')==true){
       $('#pledge-fees').removeClass('hidden')
       var pledge = parseInt($('[name="pledge-amount"]:checked').val())
