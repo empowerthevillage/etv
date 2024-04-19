@@ -54,7 +54,8 @@ def policy_home(request):
 def voting(request):
     context = {
         'title': 'ETV | Operation Ballot Box',
-        'flyers': Flyer.objects.filter(active=True)
+        'flyers': Flyer.objects.filter(active=True).exclude(state='NJ'),
+        'nj_flyer': Flyer.objects.get(state='NJ')
     }
     return render(request, "voting.html", context)
 

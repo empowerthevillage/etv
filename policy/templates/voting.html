@@ -32,88 +32,25 @@
                 </div>
             </div>
             <div class="divider" style="margin-top: 10px; margin-bottom: 10px"></div>
-            <p class="voting-subtitle" style="text-align: center;margin-top:0">Click your state to download and share key voting info with friends, family and your network!</p>
+            <p class="voting-subtitle" style="text-align: center;margin-top:0">Check out the 2023 Voting Info and Stay tuned for the downloadable 2024 Multi-State Flyers Voting Info & Resources to share with friends, family, and your network!</p>
+            <div class="row">
+                <div class="col s12 m6">
+                    <img class="lazy z-depth-1" src="{{ nj_flyer.thumbnail_link }}" width="100%" style="margin-top: 10px">
+                </div>
+                <div class="col s12 m6">
+                    <img class="lazy z-depth-1" src="{{ nj_flyer.pg2_link }}" width="100%" style="margin-top: 10px">
+                </div>
+            </div>
             <div class="row">
                 {% for flyer in flyers %}
                 <div class="col s12 m6 l4">
-                    <a href="{{ flyer.pdf_link }}" target="_blank"><img class="lazy z-depth-1" src="{{ flyer.thumbnail_link }}" width="100%" style="margin-top: 10px"></a>
+                    <img class="lazy z-depth-1" src="{{ flyer.thumbnail_link }}" width="100%" style="margin-top: 10px">
                 </div>
                 {% endfor %}
             </div>
-            <!--<div class="col s12 l10 offset-l1  pillar-body center-align">
-        
-            
-            
-
-            
-            <div class="divider" style="margin-top: 40px; margin-bottom: 40px"></div>
-            <div class="row">
-                <div class="col s12 m6 l4">
-                    <a href="{% static 'img/US-AZ-22.pdf' %}" target="_blank"><img class="lazy z-depth-1" src="{% static 'img/US-AZ-22.webp' %}" width="100%" style="margin-top: 10px"></a>
-                </div>
-                <div class="col s12 m6 l4">
-                    <a href="{% static 'img/US-AR-22.pdf' %}" target="_blank"><img class="lazy z-depth-1" src="{% static 'img/US-AR-22.webp' %}" width="100%" style="margin-top: 10px"></a>
-                </div>
-                <div class="col s12 m6 l4">
-                    <a href="{% static 'img/US-FL-22.pdf' %}" target="_blank"><img class="lazy z-depth-1" src="{% static 'img/US-FL-22.webp' %}" width="100%" style="margin-top: 10px"></a>
-                </div>
-                <div class="col s12 m6 l4">
-                    <a href="{% static 'img/US-GA-22.pdf' %}" target="_blank"><img class="lazy z-depth-1" src="{% static 'img/US-GA-22.webp' %}" width="100%" style="margin-top: 10px"></a>
-                </div>
-                <div class="col s12 m6 l4">
-                    <a href="{% static 'img/US-KY-22.pdf' %}" target="_blank"><img class="lazy z-depth-1" src="{% static 'img/US-KY-22.webp' %}" width="100%" style="margin-top: 10px"></a>
-                </div>
-                <div class="col s12 m6 l4">
-                    <a href="{% static 'img/US-LA-22.pdf' %}" target="_blank"><img class="lazy z-depth-1" src="{% static 'img/US-LA-22.webp' %}" width="100%" style="margin-top: 10px"></a>
-                </div>
-                <div class="col s12 m6 l4">
-                    <a href="{% static 'img/US-MD-22.pdf' %}" target="_blank"><img class="lazy z-depth-1" src="{% static 'img/US-MD-22.webp' %}" width="100%" style="margin-top: 10px"></a>
-                </div>
-                <div class="col s12 m6 l4">
-                    <a href="{% static 'img/US-MI-22.pdf' %}" target="_blank"><img class="lazy z-depth-1" src="{% static 'img/US-MI-22.webp' %}" width="100%" style="margin-top: 10px"></a>
-                </div>
-                <div class="col s12 m6 l4">
-                    <a href="{% static 'img/US-NC-22.pdf' %}" target="_blank"><img class="lazy z-depth-1" src="{% static 'img/US-NC-22.webp' %}" width="100%" style="margin-top: 10px"></a>
-                </div>
-                <div class="col s12 m6 l4">
-                    <a href="{% static 'img/US-OH-22.pdf' %}" target="_blank"><img class="lazy z-depth-1" src="{% static 'img/US-OH-22.webp' %}" width="100%" style="margin-top: 10px"></a>
-                </div>
-                <div class="col s12 m6 l4">
-                    <a href="{% static 'img/US-PA-22.pdf' %}" target="_blank"><img class="lazy z-depth-1" src="{% static 'img/US-PA-22.webp' %}" width="100%" style="margin-top: 10px"></a>
-                </div>
-                <div class="col s12 m6 l4">
-                    <a href="{% static 'img/US-TX-22.pdf' %}" target="_blank"><img class="lazy z-depth-1" src="{% static 'img/US-TX-22.webp' %}" width="100%" style="margin-top: 10px"></a>
-                </div>
-                <div class="col s12 m6 l4">
-                    <a href="{% static 'img/US-WI-22.pdf' %}" target="_blank"><img class="lazy z-depth-1" src="{% static 'img/US-WI-22.webp' %}" width="100%" style="margin-top: 10px"></a>
-                </div>
-            </div>-->
-            
         </div>
     </div>
 </div>
-<!--
-<div class="modal" id="state-modal">
-    <p class="voting-subtitle" style="text-align: center;margin-top:0">Choose your state to download and share key voting info with friends, family and your network!</p>
-    <div class="input-field">
-        <select id="flyer-state-select">
-        <option value="" disabled selected>Choose state</option>
-        <option value="US-AZ">Arizona</option>
-        <option value="US-AR">Arkansas</option>
-        <option value="US-FL">Florida</option>
-        <option value="US-GA">Georgia</option>
-        <option value="US-KY">Kentucky</option>
-        <option value="US-LA">Louisiana</option>
-        <option value="US-MD">Maryland</option>
-        <option value="US-MI">Michigan</option>
-        <option value="US-NJ">New Jersey</option>
-        <option value="US-NC">North Carolina</option>
-        <option value="US-OH">Ohio</option>
-        <option value="US-PA">Pennsylvania</option>
-        <option value="US-TX">Texas</option>
-        <option value="US-WI">Wisconson</option>
-    </select>
-</div>-->
 
 <style>
     .obb-title {

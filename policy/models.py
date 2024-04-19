@@ -62,6 +62,7 @@ class Flyer(models.Model):
     state                   = models.CharField(choices=STATE_CHOICES, blank=True, null=True, max_length=120)
     year                    = models.PositiveIntegerField(default=int(date.today().year))
     thumbnail_link          = models.URLField(blank=True, null=True)
+    pg2_link                = models.URLField(blank=True, null=True)
     pdf_link                = models.URLField(blank=True, null=True)
     active                  = models.BooleanField(default=True)
     order                   = models.IntegerField(default=1)
