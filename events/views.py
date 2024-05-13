@@ -1089,7 +1089,7 @@ def full_gallery_home(request):
         'filter': filter,
         'artists': artists,
     }
-    return render(request, 'mv_gallery_home.html', context)
+    return render(request, 'full_gallery_home.html', context)
     #return HttpResponseNotFound("Oops! The event you're looking for is no longer available")
 
 def gallery_get_next(request):

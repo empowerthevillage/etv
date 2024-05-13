@@ -31,7 +31,7 @@
                 {% if x.note %}
                 <p id="item-dimensions-sm"><b style="color:#cb1010">{{ x.note }}</b></p>
                 {% endif %}
-                <!--
+                
                 {% if x.get_availability == True %}
                 <div id="sold-btn" class="btn disabled">Sold</div>
                 {% else %}
@@ -43,7 +43,6 @@
                     <div id="remove-from-cart-{{ x.pk }}" class="btn red darken-2 remove-from-cart remove-grid" itemID="{{ x.pk }}" style="display: none"><i class="bi bi-cart-x"></i> Remove from Cart</div>
                     {% endif %}
                 {% endif %}
-                -->
             </div>
         </div>
     {% endfor %}
