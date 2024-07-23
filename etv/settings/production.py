@@ -66,7 +66,8 @@ EMAIL_USE_SSL = False
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['etv.villageblackpages.org', 'villageblackpages.org', 'www.villageblackpages.org', 'www.etv.villageblackpages.org', 'etvlive.herokuapp.com', 'empowerthevillage.org', 'www.empowerthevillage.org', 'etv.empowerthevillage.org', 'www.etv.empowerthevillage.org']
+# ALLOWED_HOSTS = ['etv.villageblackpages.org', 'villageblackpages.org', 'www.villageblackpages.org', 'www.etv.villageblackpages.org', 'etvlive.herokuapp.com', 'empowerthevillage.org', 'www.empowerthevillage.org', 'etv.empowerthevillage.org', 'www.etv.empowerthevillage.org']
+ALLOWED_HOSTS = ['.empowerthevillage.org', '.herokuapp.com']
 
 SITE_ID = 1
 
