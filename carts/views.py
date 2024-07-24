@@ -556,6 +556,7 @@ def ticket_nb(request):
                 last_name=last_name,
             )
             ad_list.append(new_ad)
+        print('Created ads')
         cart_obj.active = False
         cart_obj.save()
         confirmation_subject = 'ETV Ticket Purchase Confirmation'
@@ -567,9 +568,11 @@ def ticket_nb(request):
             'donations': donations,
             'event': event
         })
-        confirmation_plain_text = 'View email in browser'      
+        confirmation_plain_text = 'View email in browser'
+        print('Created email')   
         
         send_mail(confirmation_subject, confirmation_plain_text, from_email, [str(email)], html_message=confirmation_content)
+        print('Sent email 1')
         detail_content = render_to_string('ticket-admin-email.html',
         {
             'purchaser': '%s %s' %(first_name, last_name),
@@ -578,6 +581,7 @@ def ticket_nb(request):
             'donations': donations,
             'event': event
         })
+        print('Created email 2')
         if event.title == 'Power Swing Classic Fundraiser':
             recipients = ['chandler@eliftcreations.com', 'admin@empowerthevillage.org', 'ayo@empowerthevillage.org', 'powerswing@empowerthevillage.org']
             #recipients = ['chandler@eliftcreations.com']
@@ -593,6 +597,7 @@ def ticket_nb(request):
             html_message=detail_content,
             fail_silently=True
         )
+        print('Sent email 2')
         return JsonResponse({"status":"success"})
     else:
         return JsonResponse({"status":"error"})
