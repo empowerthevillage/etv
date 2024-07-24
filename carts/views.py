@@ -572,7 +572,7 @@ def ticket_nb(request):
         print('Created email')   
         
         settings.DEBUG = True
-        send_mail(confirmation_subject, confirmation_plain_text, from_email, [str(email)], html_message=confirmation_content)
+        send_mail(confirmation_subject, confirmation_plain_text, from_email, [str(email)], html_message=confirmation_content, fail_silently=True)
         print('Sent email 1')
         detail_content = render_to_string('ticket-admin-email.html',
         {
@@ -594,7 +594,6 @@ def ticket_nb(request):
             str('A ticket purchase has been successfully processed! Purchaser: '+ str(email)),
             'etvnotifications@gmail.com',
             recipients,
-            #['chandler@eliftcreations.com'],
             html_message=detail_content,
             fail_silently=True
         )
