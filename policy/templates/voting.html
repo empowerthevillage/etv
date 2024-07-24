@@ -41,13 +41,13 @@
                     <img class="lazy z-depth-1" src="{{ nj_flyer.pg2_link }}" width="100%" style="margin-top: 10px">
                 </div>
             </div>
-            <div class="row">
+            {% comment %} <div class="row">
                 {% for flyer in flyers %}
                 <div class="col s12 m6 l4">
                     <img class="lazy z-depth-1" src="{{ flyer.thumbnail_link }}" width="100%" style="margin-top: 10px">
                 </div>
                 {% endfor %}
-            </div>
+            </div> {% endcomment %}
         </div>
     </div>
 </div>
