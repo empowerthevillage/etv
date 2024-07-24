@@ -523,7 +523,7 @@ def ticket_nb(request):
         for x in donations:
             donor_obj = Donor.objects.filter(first_name=first_name, last_name=last_name).first()
             if donor_obj is None:
-                donor_obj = Donor.create(
+                donor_obj = Donor.objects.create(
                     first_name=first_name,
                     last_name=last_name,
                     email=email,
