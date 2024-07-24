@@ -571,7 +571,6 @@ def ticket_nb(request):
         confirmation_plain_text = 'View email in browser'
         print('Created email')   
         
-        settings.DEBUG = True
         send_mail(confirmation_subject, confirmation_plain_text, from_email, [str(email)], html_message=confirmation_content, fail_silently=True)
         print('Sent email 1')
         detail_content = render_to_string('ticket-admin-email.html',
@@ -598,7 +597,6 @@ def ticket_nb(request):
             fail_silently=True
         )
         print('Sent email 2')
-        settings.DEBUG = False
         return JsonResponse({"status":"success"})
     else:
         print(result)

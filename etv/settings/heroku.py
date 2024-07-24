@@ -10,7 +10,7 @@ env = environ.Env(
     DEBUG=(bool, False)
 )
 
-DEBUG = False
+DEBUG = True
 
 SECRET_KEY = env('SECRET_KEY')
 SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = env('SOCIAL_AUTH_GOOGLE_OAUTH2_KEY')
@@ -19,7 +19,7 @@ SOCIAL_AUTH_FACEBOOK_KEY = env('SOCIAL_AUTH_FACEBOOK_KEY')
 SOCIAL_AUTH_FACEBOOK_SECRET = env('SOCIAL_AUTH_FACEBOOK_SECRET')
 AWS_ACCESS_KEY_ID = env('AWS_ACCESS_KEY_ID')
 AWS_SECRET_ACCESS_KEY = env('AWS_SECRET_ACCESS_KEY')
-ALLOWED_HOSTS = ['.empowerthevillage.org', '.villageblackpages.org', '.herokuapp.com']
+ALLOWED_HOSTS = ['.empowerthevillage.org', '.villageblackpages.org', '.herokuapp.com', '*']
 EMAIL_HOST = env('EMAIL_HOST')
 EMAIL_HOST_USER = env('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASSWORD')
