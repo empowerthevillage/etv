@@ -179,10 +179,16 @@ class Donor(models.Model):
         return cards_qs.filter(active=True).count()
 
 def donor_total_pre_save_receiver(sender, instance, *args, **kwargs):
-    instance.total = instance.get_total
+    if instance.pk is None:
+        instance.total = 0
+    else:
+        instance.total = instance.get_total
 
 def donor_level_pre_save_receiver(sender, instance, *args, **kwargs):
-    instance.donor_level = instance.get_level
+    if instance.pk is None:
+        instance.donor_level = "Past Donor - Data Unavailable"
+    else:
+        instance.donor_level = instance.get_level
 
 pre_save.connect(donor_total_pre_save_receiver, sender=Donor)
 pre_save.connect(donor_level_pre_save_receiver, sender=Donor)

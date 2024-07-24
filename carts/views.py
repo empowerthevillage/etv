@@ -519,15 +519,15 @@ def ticket_nb(request):
                     bt_obj.save()
                 except:
                     pass
+        donor_obj = Donor.objects.filter(first_name=first_name, last_name=last_name).first()
+        if donor_obj is None:
+            donor_obj = Donor.objects.create(
+                first_name=first_name,
+                last_name=last_name,
+                email=email,
+            )
         donations = ticketDonation.objects.filter(cart=cart_obj)
         for x in donations:
-            donor_obj = Donor.objects.filter(first_name=first_name, last_name=last_name).first()
-            if donor_obj is None:
-                donor_obj = Donor.objects.create(
-                    first_name=first_name,
-                    last_name=last_name,
-                    email=email,
-                )
             donation_obj = CompleteDonation()
             donation_obj.email = email
             donation_obj.event = event
@@ -537,6 +537,7 @@ def ticket_nb(request):
             donation_obj.amount = amount
             donation_obj.braintree_id = result.transaction.id
             donation_obj.save()
+
             donor_obj.event_donations.add(donation_obj)
             donor_obj.save()
         ad_list = []
