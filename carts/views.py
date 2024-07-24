@@ -600,6 +600,7 @@ def ticket_nb(request):
         print('Sent email 2')
         return JsonResponse({"status":"success"})
     else:
+        print(result)
         return JsonResponse({"status":"error"})
 
 def gallery_cart_update(request):
