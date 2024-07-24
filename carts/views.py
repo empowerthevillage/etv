@@ -491,6 +491,7 @@ def ticket_nb(request):
         }
     })
     if result.is_success:
+        print('Donation succeeded')
         tickets = ticketItem.objects.filter(cart=cart_obj)
         ticket_list = []
         for x in tickets:
@@ -519,6 +520,7 @@ def ticket_nb(request):
                     bt_obj.save()
                 except:
                     pass
+        print('Created tickets')
         donor_obj = Donor.objects.filter(first_name=first_name, last_name=last_name).first()
         if donor_obj is None:
             donor_obj = Donor.objects.create(
@@ -526,6 +528,7 @@ def ticket_nb(request):
                 last_name=last_name,
                 email=email,
             )
+        print('Created donor')
         donations = ticketDonation.objects.filter(cart=cart_obj)
         for x in donations:
             donation_obj = CompleteDonation()
@@ -540,6 +543,7 @@ def ticket_nb(request):
 
             donor_obj.event_donations.add(donation_obj)
             donor_obj.save()
+        print('Created donations')
         ad_list = []
         ads = ticketAd.objects.filter(cart=cart_obj)
         for x in ads:
