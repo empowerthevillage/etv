@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist",
+    "module": "esnext",
+    "target": "es5",
+    "jsx": "react-jsx",
+    "allowJs": true,
+    "noImplicitAny": false,
+    "moduleResolution": "node"
+  },
+  "exclude": [
+    "node_modules"
+  ],
+}

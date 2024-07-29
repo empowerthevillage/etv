@@ -2,7 +2,7 @@
 *.pot
 *.pyc
 venv
-.env
+etv/.env
 __pycache__
 etv/static_my_proj
 staticfiles
@@ -20,3 +20,11 @@ __pycache__/
 
 pip-log.txt
 pip-delete-this-directory.txt
+
+policy/obb-fliers/node_modules/
+/policy/obb-fliers/static/
+node_modules
+.idea/*
+.venv/**/*
+env/**/*
+/etv/.idea/

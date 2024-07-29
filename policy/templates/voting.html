@@ -42,11 +42,12 @@
                 </div>
             </div>
             <div class="row">
-                {% for flyer in flyers %}
-                <div class="col s12 m6 l4">
-                    <img class="lazy z-depth-1" src="{{ flyer.thumbnail_link }}" width="100%" style="margin-top: 10px">
-                </div>
-                {% endfor %}
+                <div id="obb-fliers"></div>
+<!--                {% for flyer in flyers %}-->
+<!--                <div class="col s12 m6 l4">-->
+<!--                    <img class="lazy z-depth-1" src="{{ flyer.thumbnail_link }}" width="100%" style="margin-top: 10px">-->
+<!--                </div>-->
+<!--                {% endfor %}-->
             </div>
         </div>
     </div>
@@ -316,6 +317,7 @@
         }
     }
 </style>
+<script src="{% static 'policy/obb-fliers/dist/obbFliers.js' %}"></script>
 <!--
 <script>
     $(document).ready(function(){
