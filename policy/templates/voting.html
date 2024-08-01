@@ -35,20 +35,21 @@
             <p class="voting-subtitle" style="text-align: center;margin-top:0">Review & click downloadable 2024 state-specific voting info below & share with friends, family, and your network!</p>
             <div class="row">
                 <div class="col s12 m6">
-                    <a href="https://www.lipsum.com">
+                    <a target="_blank" href="https://2024obbnew.s3.us-east-2.amazonaws.com/NJ.pdf">
                         <img class="lazy z-depth-1" src="{{ nj_flyer.thumbnail_link }}" width="100%" style="margin-top: 10px">
                     </a>
                 </div>
                 <div class="col s12 m6">
-                    <a href="https://www.lipsum.com">
+                    <a target="_blank" href="https://2024obbnew.s3.us-east-2.amazonaws.com/NJ.pdf">
                         <img class="lazy z-depth-1" src="{{ nj_flyer.pg2_link }}" width="100%" style="margin-top: 10px">
                     </a>
                 </div>
             </div>
             <div class="row">
+                <!-- "flyers" information is coming from the back end -->
                 {% for flyer in flyers %}
                 <div class="col s12 m6 l4">
-                    <a href="https://www.lipsum.com">
+                    <a target="_blank" href="https://www.lipsum.com">
                         <img class="lazy z-depth-1" src="{{ flyer.thumbnail_link }}" width="100%" style="margin-top: 10px">
                     </a>
                 </div>
