@@ -89,7 +89,7 @@ def obb_flyer(request, state):
         url = 'https://empowerthevillage.s3.amazonaws.com/static/img/operation-ballot-box/%s-web.pdf' %(state_formatted)
         return redirect(url)
     else:
-        return redirect('/policy-and-power/voting/')
+        return redirect('/policy-and-power/voting/TEST')
     
 def strivers_application(request):
     if request.method == 'POST':
