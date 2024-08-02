@@ -55,6 +55,7 @@ def voting(request):
     context = {
         'title': 'ETV | Operation Ballot Box',
         'flyers': Flyer.objects.filter(active=True).exclude(state='NJ'),
+        '''
         'flyer_pdfs': {'https://pub-20653bdffd2f4753869eb9180a6b5512.r2.dev/aj0fr-vau02.webp':'https://2024obbnew.s3.us-east-2.amazonaws.com/AZ.pdf',
                        'https://pub-20653bdffd2f4753869eb9180a6b5512.r2.dev/acifw-ug2gk%20(1).webp':'https://2024obb.s3.us-east-2.amazonaws.com/2024-OBB-Arizona.pdf',
                        'https://pub-20653bdffd2f4753869eb9180a6b5512.r2.dev/aln8w-x4vbp.webp':'https://2024obbnew.s3.us-east-2.amazonaws.com/fl.pdf',
@@ -72,6 +73,8 @@ def voting(request):
                        'https://pub-20653bdffd2f4753869eb9180a6b5512.r2.dev/anjhb-aq1kd.webp':'https://2024obbnew.s3.us-east-2.amazonaws.com/TX.pdf',
                        'https://pub-20653bdffd2f4753869eb9180a6b5512.r2.dev/aa1c9-35kla.webp':'https://2024obbnew.s3.us-east-2.amazonaws.com/VA+FULL+PDF.pdf',
                        'https://pub-20653bdffd2f4753869eb9180a6b5512.r2.dev/ayuxb-ug2tb.webp':'https://2024obbnew.s3.us-east-2.amazonaws.com/WI.pdf'},
+            '''
+        'flyer_pdfs': {'a':'https://2024obbnew.s3.us-east-2.amazonaws.com/WI.pdf'},
         'nj_flyer': Flyer.objects.get(state='NJ')
     }
     return render(request, "voting.html", context)
@@ -89,7 +92,7 @@ def obb_flyer(request, state):
         url = 'https://empowerthevillage.s3.amazonaws.com/static/img/operation-ballot-box/%s-web.pdf' %(state_formatted)
         return redirect(url)
     else:
-        return redirect('/policy-and-power/voting/TEST')
+        return redirect('/policy-and-power/voting/')
     
 def strivers_application(request):
     if request.method == 'POST':
