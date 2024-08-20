@@ -28,7 +28,17 @@
             <div class="divider" style="margin-top: 10px; margin-bottom: 20px"></div>
             <div class="row">
                 <div class="col s12 l8 offset-l2">
-                    <img class="z-depth-1" src="https://pub-20653bdffd2f4753869eb9180a6b5512.r2.dev/aep1m-12jqg.webp" width="100%">
+                    {% for flyer in flyers %}
+                        {% if flyer.state == 'AK' %}
+                            {% if flyer.clickable_link %}
+                            <a target="_blank" href="{{ flyer.clickable_link }}">
+                            {% else %}
+                            <a>
+                            {% endif %}
+                                <img class="z-depth-1" src="{{ flyer.thumbnail_link }}" width="100%">
+                            </a>
+                        {% endif %}
+                    {% endfor %}
                 </div>
             </div>
             <div class="divider" style="margin-top: 10px; margin-bottom: 10px"></div>
@@ -56,47 +66,6 @@
                     {% endif %}
                         <img class="lazy z-depth-1" src="{{ flyer.thumbnail_link }}" width="100%" style="margin-top: 10px">
                     </a>
-                    {% comment %} {% if flyer.thumbnail_link == 'https://pub-20653bdffd2f4753869eb9180a6b5512.r2.dev/a40o3-duuzu.webp' %}
-                    <a target="_blank" href="https://2024obbnew.s3.us-east-2.amazonaws.com/GENERIC+(5).pdf">
-                        {% elif flyer.thumbnail_link == 'https://pub-20653bdffd2f4753869eb9180a6b5512.r2.dev/aj0fr-vau02.webp' %}
-                        <a target="_blank" href="https://2024obb.s3.us-east-2.amazonaws.com/2024-OBB-Arizona.pdf">
-                        {% elif flyer.thumbnail_link == 'https://pub-20653bdffd2f4753869eb9180a6b5512.r2.dev/acifw-ug2gk%20(1).webp' %}
-                        <a target="_blank" href="https://2024obbnew.s3.us-east-2.amazonaws.com/AK.pdf">
-                        {% elif flyer.thumbnail_link == 'https://pub-20653bdffd2f4753869eb9180a6b5512.r2.dev/asvxd-635kg.webp' %}
-                        <a target="_blank" href="https://2024obbnew.s3.us-east-2.amazonaws.com/MD.pdf">
-                        {% elif flyer.thumbnail_link == 'https://pub-20653bdffd2f4753869eb9180a6b5512.r2.dev/azqz5-ytada.webp' %}
-                        <a target="_blank" href="https://2024obbnew.s3.us-east-2.amazonaws.com/MI.pdf">
-                        {% elif flyer.thumbnail_link == 'https://pub-20653bdffd2f4753869eb9180a6b5512.r2.dev/a7whj-b4fh5.webp' %}
-                        <a target="_blank" href="https://2024obbnew.s3.us-east-2.amazonaws.com/NC.pdf">
-                        {% elif flyer.thumbnail_link == 'https://pub-20653bdffd2f4753869eb9180a6b5512.r2.dev/ax1yd-jywdx.webp' %}
-                        <a target="_blank" href="https://2024obbnew.s3.us-east-2.amazonaws.com/NV+FULL+PDF.pdf">
-                        {% elif flyer.thumbnail_link == 'https://pub-20653bdffd2f4753869eb9180a6b5512.r2.dev/as3zy-8nvie.webp' %}
-                        <a target="_blank" href="https://2024obbnew.s3.us-east-2.amazonaws.com/NY+FULL+PDF.pdf">
-                        {% elif flyer.thumbnail_link == 'https://pub-20653bdffd2f4753869eb9180a6b5512.r2.dev/a7bz8-9gnx2.webp' %}
-                        <a target="_blank" href="https://2024obbnew.s3.us-east-2.amazonaws.com/OH.pdf">
-                        {% elif flyer.thumbnail_link == 'https://pub-20653bdffd2f4753869eb9180a6b5512.r2.dev/aaar6-cjqx5.webp' %}
-                        <a target="_blank" href="https://2024obbnew.s3.us-east-2.amazonaws.com/PA.pdf">
-                        {% elif flyer.thumbnail_link == 'https://pub-20653bdffd2f4753869eb9180a6b5512.r2.dev/amtc0-ltec7.webp' %}
-                        <a target="_blank" href="https://2024obbnew.s3.us-east-2.amazonaws.com/SC+FULL+PDF..pdf">
-                        {% elif flyer.thumbnail_link == 'https://pub-20653bdffd2f4753869eb9180a6b5512.r2.dev/anjhb-aq1kd.webp' %}
-                        <a target="_blank" href="https://2024obbnew.s3.us-east-2.amazonaws.com/TX.pdf">
-                        {% elif flyer.thumbnail_link == 'https://pub-20653bdffd2f4753869eb9180a6b5512.r2.dev/aa1c9-35kla.webp' %}
-                        <a target="_blank" href="https://2024obbnew.s3.us-east-2.amazonaws.com/VA+FULL+PDF.pdf">
-                        {% elif flyer.thumbnail_link == 'https://pub-20653bdffd2f4753869eb9180a6b5512.r2.dev/ayuxb-ug2tb.webp' %}
-                        <a target="_blank" href="https://2024obbnew.s3.us-east-2.amazonaws.com/WI.pdf">
-                        {% elif flyer.thumbnail_link == 'https://pub-20653bdffd2f4753869eb9180a6b5512.r2.dev/aln8w-x4vbp.webp' %}
-                        <a target="_blank" href="https://2024obbnew.s3.us-east-2.amazonaws.com/fl.pdf">
-                        {% elif flyer.thumbnail_link == 'https://pub-20653bdffd2f4753869eb9180a6b5512.r2.dev/av8dj-2qp50.webp' %}
-                        <a target="_blank" href="https://2024obbnew.s3.us-east-2.amazonaws.com/GA.pdf">
-                        {% elif flyer.thumbnail_link == 'https://pub-20653bdffd2f4753869eb9180a6b5512.r2.dev/aon0s-j5iyp.webp' %}
-                        <a target="_blank" href="https://2024obbnew.s3.us-east-2.amazonaws.com/KT.pdf">
-                        {% elif flyer.thumbnail_link == 'https://pub-20653bdffd2f4753869eb9180a6b5512.r2.dev/a80zk-f9i0i.webp' %}
-                        <a target="_blank" href="https://2024obbnew.s3.us-east-2.amazonaws.com/LA.pdf">
-                    {% else %}
-                    <a>
-                    {% endif %}
-                        <img class="lazy z-depth-1" src="{{ flyer.thumbnail_link }}" width="100%" style="margin-top: 10px">
-                    </a> {% endcomment %}
                 </div>
                 {% endfor %}
             </div>
