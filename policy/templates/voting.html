@@ -46,8 +46,7 @@
                     </a>
                 </div>
             </div>
-            <div class="row">
-                <!-- "flyers" information is coming from the back end -->
+            {% comment %} <div class="row">
                 {% for flyer in flyers %}
                 <div class="col s12 m6 l4">
                     {% if flyer.thumbnail_link == 'https://pub-20653bdffd2f4753869eb9180a6b5512.r2.dev/a40o3-duuzu.webp' %}
@@ -93,7 +92,7 @@
                     </a>
                 </div>
                 {% endfor %}
-            </div>
+            </div> {% endcomment %}
         </div>
     </div>
 </div>
