@@ -64,6 +64,7 @@ class Flyer(models.Model):
     thumbnail_link          = models.URLField(blank=True, null=True)
     pg2_link                = models.URLField(blank=True, null=True)
     pdf_link                = models.URLField(blank=True, null=True)
+    clickable_link          = models.URLField(blank=True, null=True)
     active                  = models.BooleanField(default=True)
     order                   = models.IntegerField(default=1)
     
