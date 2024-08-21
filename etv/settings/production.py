@@ -64,7 +64,7 @@ EMAIL_PORT = env('EMAIL_PORT')
 EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
 
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['.empowerthevillage.org', '.villageblackpages.org', '.herokuapp.com']
 
