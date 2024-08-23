@@ -53,7 +53,7 @@
                             {% else %}
                             <p class="item-price"><b>Buy Now Price:</b> <b>${{ x.buy_now_price|intcomma }}</b></p>
                             <a href="{{ x.get_buy_now_url }}" class="btn add-to-cart add-grid"><i class="bi bi-credit-card-2-front"></i> Buy Now</a>
-                            <p id="item-description-sm">Minimum Value: ${{ x.minimum_bid|intcomma }}</p>
+                            <p id="item-description-sm">Value: ${{ x.minimum_bid|intcomma }}</p>
                             {% endif %}
                             
                         </div>
