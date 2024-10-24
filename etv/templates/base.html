@@ -409,30 +409,51 @@
           <div class="row">
               <div class="col s12 l7 xl6 offset-xl1" style="padding-left: 5%">
                 <img src="https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/footer-r-knockout.png" width=95% style="z-index: 3;padding-top: 10px">
-                <p class="mailchimp-title">Sign up to receive news and updates from Empower The Village!</p>
+                <p class="mailchimp-title" style="padding-top:10px">Sign up to receive news and updates from Empower The Village!</p>
+
                 <div class="row">
-                  <form id="mailchimp-form">
-                    {% csrf_token %}
-                  <div class="input-field col 8" style="margin:0; margin-top: 1vw;width:80%">
-                    
-                    <div class="row valign-wrapper">
-                      <div class="col s12">
-                        <i class="material-icons prefix" style="color: rgb(196, 196, 196);">email</i>
-                        <input required id="mailchimp-email" name="email" type="email" style="font-size: 16px;color:white;padding: 0.1vw">
-                        <label for="mailchimp-email" id="mailchimp-email-label">Email</label>
-                      </div>
-                      <div class="col s1" style="padding-bottom: 15px">
-                        <button class="btn waves-effect light-green darken-1" type='submit'><span class="material-icons">
-                          send
-                          </span>
-                          </button>
-                      </div>
-                      
+                  <div id="mc_embed_shell">
+                    <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
+                    <style type="text/css">
+                      #mc_embed_signup{background:rgb(12,12,12); false;clear:left; font:16px rgb(256, 256, 256); width: 600px;}
+                      /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+                        We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+                    </style>
+                    <div id="mc_embed_signup">
+                      <form action="https://empowerthevillage.us7.list-manage.com/subscribe/post?u=d66e42f78049eef4b335aab17&amp;id=bfb104d810&amp;f_id=00f6a9e4f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+                        <div id="mc_embed_signup_scroll">
+                          <div class="col s1">
+                            <i class="material-icons prefix" style="color: rgb(196, 196, 196);font-size:2rem;padding-top:.5em">email</i>
+                          </div>
+                          <div class="col s10">
+                            <div class="mc-field-group">
+                              <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required="" value="" style="font-size: 16px;color:white;padding: 0.1vw;border:none;border-bottom:1px solid #9e9e9e;">
+                              <label for="mce-EMAIL" style="font-size: 16px;color:white;margin: left 0px;">Email</label>
+                            </div>
+                            <div id="mce-responses" class="clear">
+                              <div class="response" id="mce-error-response" style="display: none;"></div>
+                              <div class="response" id="mce-success-response" style="display: none;"></div>
+                            </div>
+                            <div aria-hidden="true" style="position: absolute; left: -5000px;">
+                              <input type="text" name="b_d66e42f78049eef4b335aab17_bfb104d810" tabindex="-1" value="">
+                            </div>
+                          </div>
+                          <div class="col s1">
+                            <div class="clear">
+                              <button type="submit" name="subscribe" id="mc-embedded-subscribe" class="btn waves-effect light-green darken-1" value="Subscribe" style="margin-top:1em">
+                                <span class="material-icons">send</span>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                        <span class="helper-text col s10 offset-s1" style="color:rgb(124, 124, 124);">We respect your privacy and do not share or sell your contact information.</span>
+                      </form>
                     </div>
-                    <span class="helper-text col s11 offset-s1" data-error="wrong" data-success="right" style="color:rgb(124, 124, 124);">We respect your privacy and do not share or sell your contact information.</span>
+                    <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
+                    <script type="text/javascript">(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[12]='WEBSITEYU';ftypes[12]='text';fnames[20]='CHECKBOX2';ftypes[20]='text';fnames[19]='TEXTAREA7';ftypes[19]='text';fnames[18]='TEXT4';ftypes[18]='text';fnames[17]='TEXT1';ftypes[17]='text';fnames[16]='TEXT7';ftypes[16]='text';fnames[15]='TEXT3';ftypes[15]='text';fnames[14]='TEXTAREA6';ftypes[14]='text';fnames[13]='CHECKBOXY';ftypes[13]='text';fnames[11]='ADDRESSYU';ftypes[11]='address';fnames[1]='FNAME';ftypes[1]='text';fnames[10]='TEXTAREA5';ftypes[10]='text';fnames[9]='PHONEYUI_';ftypes[9]='phone';fnames[8]='TEXTAREAY';ftypes[8]='text';fnames[7]='TEXT2';ftypes[7]='text';fnames[6]='TEXTYUI_3';ftypes[6]='text';fnames[5]='BIRTHDAY';ftypes[5]='birthday';fnames[4]='PHONE';ftypes[4]='phone';fnames[3]='ADDRESS';ftypes[3]='address';fnames[2]='LNAME';ftypes[2]='text';fnames[21]='ETVAMOUNT';ftypes[21]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
                   </div>
-                  </form>
                 </div>
+
               </div>
               <div class="col s12 l5">
                 <div class="row">
