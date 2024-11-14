@@ -7,11 +7,17 @@ from django.utils.safestring import mark_safe
 User = get_user_model()
 
 DONATION_LEVEL_CHOICES = (
-    ('25', 'Village Member - $25'),
-    ('50', 'Village Patron - $50'),
-    ('100', 'Village Supporter - $100'),
-    ('500', 'Village Leader - $500'),
-    ('1000', 'Village Ambassador - $1000')
+    ('1', 'Village Test'),
+    ('25', 'Village Member'),
+    ('50', 'Village Patron'),
+    ('100', 'Village Supporter'),
+    ('500', 'Village Leader'),
+    ('1000', 'Village Ambassador'),
+    ('2500', 'Village Council'),
+    ('5000', "Founder's Circle - Bronze"),
+    ('10000', "Founder's Circle - Silver"),
+    ('15000', "Founder's Circle - Gold"),
+    ('25000', "Founder's Circle - Platinum")
 )
 
 DONATION_FREQUENCY_CHOICES = (

@@ -5,15 +5,17 @@ from billing.models import BillingProfile
 import json
 
 DONATION_LEVEL_CHOICES = (
+    ('1', 'Village Test'),
     ('25', 'Village Member'),
     ('50', 'Village Patron'),
     ('100', 'Village Supporter'),
     ('500', 'Village Leader'),
     ('1000', 'Village Ambassador'),
+    ('2500', 'Village Council'),
     ('5000', "Founder's Circle - Bronze"),
     ('10000', "Founder's Circle - Silver"),
     ('15000', "Founder's Circle - Gold"),
-    ('25000', "Founder's Circle - Platinum"),
+    ('25000', "Founder's Circle - Platinum")
 )
 STATE_CHOICES = (
     ('AL', 'Alabama'),
