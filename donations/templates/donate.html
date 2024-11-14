@@ -941,6 +941,11 @@ function handleVenmoSuccess(payload) {
         $('.other-input').addClass('hidden');
         $('#make-my-donation').show()
     });
+    $(":radio[value=1]").change(function() {
+        $('#other-donation').val('');
+        $('.other-input').addClass('hidden');
+        $('#make-my-donation').show()
+    });
     $(":radio[value=25]").change(function() {
         $('#other-donation').val('');
         $('.other-input').addClass('hidden');
@@ -964,6 +969,11 @@ function handleVenmoSuccess(payload) {
     $(":radio[value=1000]").change(function() {
         $('.other-input').addClass('hidden');
         $('#other-donation').val('');
+        $('#make-my-donation').show()
+    });
+    $(":radio[value=2500]").change(function() {
+        $('#other-donation').val('');
+        $('.other-input').addClass('hidden');
         $('#make-my-donation').show()
     });
     $(":radio[value=5000]").change(function() {
