@@ -281,7 +281,7 @@ $50, $100, $500 or whatever you are inspired to invest in the community!{% endbl
               <div class="col s12" style="padding-top: 15px; padding-bottom: 20px;">
                 <p class="">
                   <label>
-                    <input name="cover-fee" type="checkbox" value="yes" id="cover-fee">
+                    <input type="checkbox" class="filled-in" checked="checked" name="cover-fee" value="yes" id="cover-fee" />
                     <span>I'd like to cover all transaction fees so 100% of my donation goes to Empower The Village</span>
                   </label>
                 </p>
@@ -845,9 +845,10 @@ $50, $100, $500 or whatever you are inspired to invest in the community!{% endbl
   })
 </script>
 <script>
-  $(document).ready(function () {
+$(document).ready(function () {
     $('.phone_us').mask('(000) 000-0000');
   })
+  /*
   $('#phone').on('keyup', function () {
     if ($(this).val() !== '') {
       $('#opt-in').removeClass('hidden')
@@ -855,6 +856,7 @@ $50, $100, $500 or whatever you are inspired to invest in the community!{% endbl
       $('opt-in').addClass('hidden')
     }
   })
+  */
   $('[name="donation_level"]').on('change', function () {
     var level = parseInt($(this).val())
 
