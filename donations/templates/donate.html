@@ -885,6 +885,8 @@ $(document).ready(function () {
     } else {
         $('#donor-detail-section').prop("disabled", false);
         $('#donor-detail-section').css('opacity', '1.0');
+        var targetOffset = $('#donor-detail-section').offset().top;
+        $("html, body").animate({ scrollTop: targetOffset}, 400);  // Animate scrolling to next section
     }
   });
   $('#other-donation').on('keyup', function () {
