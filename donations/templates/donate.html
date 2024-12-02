@@ -1108,13 +1108,13 @@ $(document).ready(function () {
   });
   $('#other-donation').keyup(function () {
     var value = $(this).val();
-    $('#donor-detail-section').removeClass('hidden')
+    /*$('#donor-detail-section').removeClass('hidden')*/
   });
   $('.other').change(function () {
-    $('#donor-cadence-section').hide();
+    /*$('#donor-cadence-section').hide();*/
     if ($('#other-donation').val() == '') {
       $('#donationTotal').text('Enter Custom Amount Above')
-      /*$('#donor-detail-section').addClass('hidden')*/
+    /*$('#donor-detail-section').addClass('hidden')*/
     }
     $('[value="once"]').prop('checked', true);
   })
@@ -1143,7 +1143,6 @@ $(document).ready(function () {
     $('#saved-billing-id').attr('value', 'saved');
     $('#new-billing-address-form').hide();
     $('#new-billing-address-form input').val('');
-
   });
   $('#new-billing-address-form input').on('keyup', function () {
     $('#billing-saved-or-new').attr('value', 'new');
