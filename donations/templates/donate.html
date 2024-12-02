@@ -81,7 +81,7 @@ $50, $100, $500 or whatever you are inspired to invest in the community!{% endbl
           {% csrf_token %}
           <input type="hidden" value="" id="device-data-input">
           <input type="hidden" value="" id="donation-level">
-          <fieldset class="checkout-fieldset z-depth-1" id="make-my-donation">
+          <fieldset class="checkout-fieldset z-depth-1" id="donor-cadence-section">
             <input type="hidden" id="donation-level-input">
             <input type="hidden" id="frequency-input">
             <input type="hidden" id="frequency-verbose-input">
@@ -454,7 +454,7 @@ $50, $100, $500 or whatever you are inspired to invest in the community!{% endbl
         allowfullscreen></iframe>
       <style>
         /*
-        #make-my-donation {
+        #donor-cadence-section {
           display: none;
         }
         */
@@ -971,77 +971,77 @@ $50, $100, $500 or whatever you are inspired to invest in the community!{% endbl
   $(":radio[value=20]").change(function () {
     $('#other-donation').val('');
     $('.other-input').addClass('hidden');
-    $('#make-my-donation').show()
+    $('#donor-cadence-section').show()
   });
   $(":radio[value=200]").change(function () {
     $('#other-donation').val('');
     $('.other-input').addClass('hidden');
-    $('#make-my-donation').show()
+    $('#donor-cadence-section').show()
   });
   $(":radio[value=1500]").change(function () {
     $('#other-donation').val('');
     $('.other-input').addClass('hidden');
-    $('#make-my-donation').show()
+    $('#donor-cadence-section').show()
   });
   $(":radio[value=1200]").change(function () {
     $('#other-donation').val('');
     $('.other-input').addClass('hidden');
-    $('#make-my-donation').show()
+    $('#donor-cadence-section').show()
   });
   $(":radio[value=1]").change(function () {
     $('#other-donation').val('');
     $('.other-input').addClass('hidden');
-    $('#make-my-donation').show()
+    $('#donor-cadence-section').show()
   });
   $(":radio[value=25]").change(function () {
     $('#other-donation').val('');
     $('.other-input').addClass('hidden');
-    $('#make-my-donation').show()
+    $('#donor-cadence-section').show()
   });
   $(":radio[value=50]").change(function () {
     $('#other-donation').val('');
     $('.other-input').addClass('hidden');
-    $('#make-my-donation').show()
+    $('#donor-cadence-section').show()
   });
   $(":radio[value=100]").change(function () {
     $('#other-donation').val('');
     $('.other-input').addClass('hidden');
-    $('#make-my-donation').show()
+    $('#donor-cadence-section').show()
   });
   $(":radio[value=500]").change(function () {
     $('#other-donation').val('');
     $('.other-input').addClass('hidden');
-    $('#make-my-donation').show()
+    $('#donor-cadence-section').show()
   });
   $(":radio[value=1000]").change(function () {
     $('.other-input').addClass('hidden');
     $('#other-donation').val('');
-    $('#make-my-donation').show()
+    $('#donor-cadence-section').show()
   });
   $(":radio[value=2500]").change(function () {
     $('#other-donation').val('');
     $('.other-input').addClass('hidden');
-    $('#make-my-donation').show()
+    $('#donor-cadence-section').show()
   });
   $(":radio[value=5000]").change(function () {
     $('.other-input').addClass('hidden');
     $('#other-donation').val('');
-    $('#make-my-donation').show()
+    $('#donor-cadence-section').show()
   });
   $(":radio[value=10000]").change(function () {
     $('.other-input').addClass('hidden');
     $('#other-donation').val('');
-    $('#make-my-donation').show()
+    $('#donor-cadence-section').show()
   });
   $(":radio[value=15000]").change(function () {
     $('.other-input').addClass('hidden');
     $('#other-donation').val('');
-    $('#make-my-donation').show()
+    $('#donor-cadence-section').show()
   });
   $(":radio[value=25000]").change(function () {
     $('.other-input').addClass('hidden');
     $('#other-donation').val('');
-    $('#make-my-donation').show()
+    $('#donor-cadence-section').show()
   });
 
   $(".other").change(function () {
@@ -1052,7 +1052,7 @@ $50, $100, $500 or whatever you are inspired to invest in the community!{% endbl
     $('#donor-detail-section').removeClass('hidden')
   });
   $('.other').change(function () {
-    $('#make-my-donation').hide();
+    $('#donor-cadence-section').hide();
     if ($('#other-donation').val() == '') {
       $('#donationTotal').text('Enter Custom Amount Above')
       $('#donor-detail-section').addClass('hidden')
