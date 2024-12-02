@@ -872,21 +872,22 @@ $(document).ready(function () {
   });
   $('#other-donation').blur( function () {
     // Convert the input to a positive integer
-    let value = parseInt($(this).val(), 10);
+    let value = parseInt($('#other-donation').val(), 10);
     // If the value is not a valid number or less than or equal to zero, set it to zero
     if (isNaN(value) || value <= 0) {
-        value = 0;
-        $(this).val(value); // Update the input field
+      $('#other-donation').val(0); // Update the input field
     }
     // Reveal details panel only if valid input detected
     if (value === 0) {
-        $('#donor-detail-section').prop("disabled", true);
-        $('#donor-detail-section').css('opacity', '0.5');
+      $('#donor-detail-section').prop("disabled", true);
+      $('#donor-detail-section').css('opacity', '0.5');
+      $('#creditcard-button').prop("disabled", true);
+      $('#express-pay-options').prop("hidden", true);
     } else {
-        $('#donor-detail-section').prop("disabled", false);
-        $('#donor-detail-section').css('opacity', '1.0');
-        var targetOffset = $('#donor-detail-section').offset().top;
-        $("html, body").animate({ scrollTop: targetOffset}, 400);  // Animate scrolling to next section
+      $('#donor-detail-section').prop("disabled", false);
+      $('#donor-detail-section').css('opacity', '1.0');
+      var targetOffset = $('#donor-detail-section').offset().top;
+      $("html, body").animate({ scrollTop: targetOffset}, 400);  // Animate scrolling to next section
     }
   });
   $('#other-donation').on('keyup', function () {
@@ -1122,21 +1123,28 @@ $(document).ready(function () {
 
   $(".other").change(function () {
     $('.other-input').removeClass('hidden');
-  });
-  /*
-  $('#other-donation').keyup(function () {
-    var value = $(this).val();
-    $('#donor-detail-section').removeClass('hidden')
-  });
-  */
-  $('.other').change(function () {
-    /*$('#donor-cadence-section').hide();*/
+    // Convert the input to a positive integer
+    let value = parseInt($('#other-donation').val(), 10);
+    // If the value is not a valid number or less than or equal to zero, set it to zero
+    if (isNaN(value) || value <= 0) {
+      $('#other-donation').val(0); // Update the input field
+    }
+    // Reveal details panel only if valid input detected
+    if (value === 0) {
+      $('#donor-detail-section').prop("disabled", true);
+      $('#donor-detail-section').css('opacity', '0.5');
+      $('#creditcard-button').prop("disabled", true);
+      $('#express-pay-options').prop("hidden", true);
+    } else {
+      $('#donor-detail-section').prop("disabled", false);
+      $('#donor-detail-section').css('opacity', '1.0');
+    }
     if ($('#other-donation').val() == '') {
       $('#donationTotal').text('Enter Custom Amount Above')
     /*$('#donor-detail-section').addClass('hidden')*/
     }
     $('[value="once"]').prop('checked', true);
-  })
+  });
   $('#cover-fee').on('change', function () {
     if ($(this).is(':checked')) {
       var amount = parseInt($('#donation-level-input').val())
