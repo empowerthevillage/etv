@@ -871,6 +871,7 @@ $(document).ready(function () {
     }
   });
   $('#other-donation').on('keyup', function () {
+    $(this).val(parseInt($(this).val(), 10));
     var level = $(this).val()
 
     if ($('#cover-fee').is(':checked')) {
