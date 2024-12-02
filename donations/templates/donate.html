@@ -871,9 +871,19 @@ $(document).ready(function () {
     }
   });
   $('#other-donation').on('keyup', function () {
+    
+    // Force input to positive integer
     $(this).val(parseInt($(this).val(), 10));
     var level = $(this).val()
 
+    // Reveal details panel only if valid input detected
+    if (!Number.isInteger($('#other-donation').val()) || $('#other-donation').val() == 0) {
+      $('#donor-detail-section').prop("disabled", true);;
+      $('#donor-detail-section').css('opacity','0.5');
+    } else {
+      $('#donor-detail-section').removeAttr('disabled');
+      $('#donor-detail-section').css('opacity','1.0');
+    }
     if ($('#cover-fee').is(':checked')) {
       var fee = level * 0.0199 + 0.49
       var total = level + fee
