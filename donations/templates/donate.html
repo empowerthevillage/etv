@@ -971,10 +971,14 @@ $50, $100, $500 or whatever you are inspired to invest in the community!{% endbl
   $(":radio[value=once]").change(function () {
     $('#donor-amount-section').removeAttr('disabled');
     $('#donor-amount-section').css('opacity','1.0');
+    var targetOffset = $('#donor-amount-section').offset().top;
+    $("html, body").animate({ scrollTop: targetOffset}, 800);  // Animate scrolling to next section
   });
   $(":radio[value=monthly]").change(function () {
     $('#donor-amount-section').removeAttr('disabled');
     $('#donor-amount-section').css('opacity','1.0');
+    var targetOffset = $('#donor-amount-section').offset().top;
+    $("html, body").animate({ scrollTop: targetOffset}, 800);  // Animate scrolling to next section
   });
   $(":radio[value=20]").change(function () {
     $('#other-donation').val('');
