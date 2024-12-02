@@ -871,17 +871,20 @@ $(document).ready(function () {
     }
   });
   $('#other-donation').blur( function () {
-    // Force input to positive integer
-    $(this).val(parseInt($(this).val(), 10));
-    var level = $(this).val()
-
+    // Convert the input to a positive integer
+    let value = parseInt($(this).val(), 10);
+    // If the value is not a valid number or less than or equal to zero, set it to zero
+    if (isNaN(value) || value <= 0) {
+        value = 0;
+        $(this).val(value); // Update the input field
+    }
     // Reveal details panel only if valid input detected
-    if (!Number.isInteger($('#other-donation').val()) || $('#other-donation').val() == 0) {
-      $('#donor-detail-section').prop("disabled", true);;
-      $('#donor-detail-section').css('opacity','0.5');
+    if (value === 0) {
+        $('#donor-detail-section').prop("disabled", true);
+        $('#donor-detail-section').css('opacity', '0.5');
     } else {
-      $('#donor-detail-section').removeAttr('disabled');
-      $('#donor-detail-section').css('opacity','1.0');
+        $('#donor-detail-section').prop("disabled", false);
+        $('#donor-detail-section').css('opacity', '1.0');
     }
   });
   $('#other-donation').on('keyup', function () {
