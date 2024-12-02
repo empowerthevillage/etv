@@ -969,11 +969,11 @@ $50, $100, $500 or whatever you are inspired to invest in the community!{% endbl
     $('.step-2').removeClass('hidden')
   });
   $(":radio[value=once]").change(function () {
-    $('#donor-amount-section').disabled('false');
+    $('#donor-amount-section').removeAttr('disabled');
     $('#donor-cadence-section').css('opacity','0.5');
   });
   $(":radio[value=monthly]").change(function () {
-    $('#donor-amount-section').disabled('false');
+    $('#donor-amount-section').removeAttr('disabled');
     $('#donor-cadence-section').css('opacity','0.5');
   });
   $(":radio[value=20]").change(function () {
