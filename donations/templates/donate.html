@@ -870,8 +870,7 @@ $(document).ready(function () {
       $('#donationTotal').text('$' + parseFloat(level, 10).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString())
     }
   });
-  $('#other-donation').on('keyup', function () {
-    
+  $('#other-donation').blur( function () {
     // Force input to positive integer
     $(this).val(parseInt($(this).val(), 10));
     var level = $(this).val()
@@ -884,6 +883,8 @@ $(document).ready(function () {
       $('#donor-detail-section').removeAttr('disabled');
       $('#donor-detail-section').css('opacity','1.0');
     }
+  });
+  $('#other-donation').on('keyup', function () {
     if ($('#cover-fee').is(':checked')) {
       var fee = level * 0.0199 + 0.49
       var total = level + fee
