@@ -972,19 +972,21 @@ $50, $100, $500 or whatever you are inspired to invest in the community!{% endbl
     $('#donor-amount-section').removeAttr('disabled');
     $('#donor-amount-section').css('opacity','1.0');
     var targetOffset = $('#donor-amount-section').offset().top;
-    $("html, body").animate({ scrollTop: targetOffset}, 800);  // Animate scrolling to next section
+    $("html, body").animate({ scrollTop: targetOffset}, 400);  // Animate scrolling to next section
   });
   $(":radio[value=monthly]").change(function () {
     $('#donor-amount-section').removeAttr('disabled');
     $('#donor-amount-section').css('opacity','1.0');
     var targetOffset = $('#donor-amount-section').offset().top;
-    $("html, body").animate({ scrollTop: targetOffset}, 800);  // Animate scrolling to next section
+    $("html, body").animate({ scrollTop: targetOffset}, 400);  // Animate scrolling to next section
   });
   $(":radio[value=20]").change(function () {
     $('#other-donation').val('');
     $('.other-input').addClass('hidden');
     $('#donor-detail-section').removeAttr('disabled');
     $('#donor-detail-section').css('opacity','1.0');
+    var targetOffset = $('#donor-detail-section').offset().top;
+    $("html, body").animate({ scrollTop: targetOffset}, 400);  // Animate scrolling to next section
   });
   $(":radio[value=200]").change(function () {
     $('#other-donation').val('');
