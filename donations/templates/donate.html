@@ -82,6 +82,63 @@ $50, $100, $500 or whatever you are inspired to invest in the community!{% endbl
           <input type="hidden" value="" id="device-data-input">
           <input type="hidden" value="" id="donation-level">
           <fieldset class="checkout-fieldset z-depth-1">
+            <input type="hidden" id="donation-level-input">
+            <input type="hidden" id="frequency-input">
+            <input type="hidden" id="frequency-verbose-input">
+            <div class="row" style="margin-bottom: 0">
+              <!--<div class="col s12" style="padding-left: 0; padding-right: 0">
+                        <h6 class="fieldset-subtitle" style="margin-top: 10px">Village Empowerment Network™ Sponsor</h6>
+                      </div>
+                      <div class="col s12" style="padding-left: 0; padding-right: 0">                 
+                        <p style="padding-bottom: 5px; padding-top: 5px;">
+                          <label>
+                            <input id="ven-sponsor" class="with-gap" name="donation_level" type="radio" value="1500" plan-id='hkm6'>
+                            <span id="ven-sponsor-amount" style="height: fit-content !important;">$1,500 - Sponsors 10 business coaching sessions for entrepreneurs or 10 financial planning sessions for individuals or families PLUS unlimited access to online courses</span>
+                          </label>
+                        </p>
+                        <div class="col s12" style="padding-left: 0; padding-right: 0">
+                          <h6 class="fieldset-subtitle" style="margin-top: 10px">Village Assist™ Community Circle Donation</h6>
+                        </div>
+                        <p>
+                          <label>
+                            <input id="vap-sponsor-counseling" class="with-gap" name="donation_level" type="radio" value="20" plan-id='6wbg'>
+                            <span id="vap-sponsor-counseling-amount" style="height: fit-content !important;">$20 - Counseling Session</span>
+                          </label>
+                        </p> 
+                        <p>
+                          <label>
+                            <input id="vap-sponsor-counseling" class="with-gap" name="donation_level" type="radio" value="200" plan-id='mtpr'>
+                            <span id="vap-sponsor-counseling-amount" style="height: fit-content !important;">$200 - Program Donation (12 Sessions)</span>
+                          </label>
+                        </p>
+                      </div>
+                  </div>-->
+              <div id="make-my-donation">
+                <div class="row" style='margin-bottom: 0'>
+                  <h5 class="fieldset-title">Please Make My Donation:</h5>
+                  <div class="col s12">
+                    <div class="row" style="margin-bottom: 0;">
+                      <p class="col s12 m6" style="padding-left:0 ; padding-right: 0">
+                        <label>
+                          <input class="with-gap" name="frequency" type="radio" value="once"
+                            confirm-display="A One Time Gift">
+                          <span>A One Time Gift</span>
+                        </label>
+                      </p>
+                      <p class="col s12 m6" style="padding-left: 0; padding-right: 0">
+                        <label>
+                          <input class="with-gap" name="frequency" type="radio" value="monthly"
+                            confirm-display="A Monthly Gift">
+                          <span>A Monthly Gift</span>
+                        </label>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+          <fieldset class="checkout-fieldset z-depth-1">
             <div class="row" style="margin-bottom: 0">
               <div class="col s12 valign-wrapper" style="padding-left: 0; padding-right: 0">
                 <h5 class="fieldset-title">Donate</h5>
@@ -92,9 +149,6 @@ $50, $100, $500 or whatever you are inspired to invest in the community!{% endbl
                 </h6>
               </div>
               <div class="col s12 xl6" style="margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0">
-                <input type="hidden" id="donation-level-input">
-                <input type="hidden" id="frequency-input">
-                <input type="hidden" id="frequency-verbose-input">
                 <!--<p>
                               <label>
                               <input class="with-gap" name="donation_level" type="radio" value="1" plan-id='1001'>
@@ -183,60 +237,6 @@ $50, $100, $500 or whatever you are inspired to invest in the community!{% endbl
                     <span>Platinum - $25,000</span>
                   </label>
                 </p>
-              </div>
-            </div>
-          </fieldset>
-          <fieldset class="checkout-fieldset z-depth-1">
-            <div class="row" style="margin-bottom: 0">
-              <!--<div class="col s12" style="padding-left: 0; padding-right: 0">
-                        <h6 class="fieldset-subtitle" style="margin-top: 10px">Village Empowerment Network™ Sponsor</h6>
-                      </div>
-                      <div class="col s12" style="padding-left: 0; padding-right: 0">                 
-                        <p style="padding-bottom: 5px; padding-top: 5px;">
-                          <label>
-                            <input id="ven-sponsor" class="with-gap" name="donation_level" type="radio" value="1500" plan-id='hkm6'>
-                            <span id="ven-sponsor-amount" style="height: fit-content !important;">$1,500 - Sponsors 10 business coaching sessions for entrepreneurs or 10 financial planning sessions for individuals or families PLUS unlimited access to online courses</span>
-                          </label>
-                        </p>
-                        <div class="col s12" style="padding-left: 0; padding-right: 0">
-                          <h6 class="fieldset-subtitle" style="margin-top: 10px">Village Assist™ Community Circle Donation</h6>
-                        </div>
-                        <p>
-                          <label>
-                            <input id="vap-sponsor-counseling" class="with-gap" name="donation_level" type="radio" value="20" plan-id='6wbg'>
-                            <span id="vap-sponsor-counseling-amount" style="height: fit-content !important;">$20 - Counseling Session</span>
-                          </label>
-                        </p> 
-                        <p>
-                          <label>
-                            <input id="vap-sponsor-counseling" class="with-gap" name="donation_level" type="radio" value="200" plan-id='mtpr'>
-                            <span id="vap-sponsor-counseling-amount" style="height: fit-content !important;">$200 - Program Donation (12 Sessions)</span>
-                          </label>
-                        </p>
-                      </div>
-                  </div>-->
-              <div id="make-my-donation">
-                <div class="row" style='margin-bottom: 0'>
-                  <h5 class="fieldset-title">Please Make My Donation:</h5>
-                  <div class="col s12">
-                    <div class="row" style="margin-bottom: 0;">
-                      <p class="col s12 m6" style="padding-left:0 ; padding-right: 0">
-                        <label>
-                          <input class="with-gap" name="frequency" type="radio" value="once"
-                            confirm-display="A One Time Gift">
-                          <span>A One Time Gift</span>
-                        </label>
-                      </p>
-                      <p class="col s12 m6" style="padding-left: 0; padding-right: 0">
-                        <label>
-                          <input class="with-gap" name="frequency" type="radio" value="monthly"
-                            confirm-display="A Monthly Gift">
-                          <span>A Monthly Gift</span>
-                        </label>
-                      </p>
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
           </fieldset>
