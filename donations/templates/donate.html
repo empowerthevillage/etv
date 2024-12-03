@@ -881,11 +881,11 @@ $50, $100, $500 or whatever you are inspired to invest in the community!{% endbl
   });
   function checkForm() {
     if (donor_first != '' && donor_first != '' && donor_email != '') {
-      $('#creditcard-button').removeClass('disabled')
-      $('#express-pay-options').removeClass('hidden')
+      $('#creditcard-button').removeClass('disabled');
+      $('#express-pay-options').removeClass('hidden');
     } else {
-      $('#creditcard-button').prop("disabled", true);
-      $('#express-pay-options').prop("hidden", true);
+      $('#creditcard-button').addClass('disabled');
+      $('#express-pay-options').addClass('hidden');
     }
   }
   $('#donor-detail-section :input').on('change', function () {
