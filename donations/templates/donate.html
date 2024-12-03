@@ -887,13 +887,10 @@ $50, $100, $500 or whatever you are inspired to invest in the community!{% endbl
     if (donor_first != '' && donor_first != '' && donor_email != '' && donor_amount > 0 ) {
       $('#creditcard-button').removeClass('disabled');
       $('#express-pay-options').removeClass('hidden');
-      console.log("Check results: form incomplete");
     } else {
       $('#creditcard-button').addClass('disabled');
       $('#express-pay-options').addClass('hidden');
-      console.log("Check results: form complete");
     }
-    console.log("Form check complete");
   };
   $('#donor-detail-section input').on('change', function () {
     checkForm();
@@ -1165,11 +1162,13 @@ $50, $100, $500 or whatever you are inspired to invest in the community!{% endbl
     $('#other-donation').val(parseInt($('#other-donation').val(), 10));
     // Reveal details panel only if valid input detected
     if ($('#other-donation').val() === 0) {
+      console.log("#other-donation === 0");
       $('#donor-detail-section').prop("disabled", true);
       $('#donor-detail-section').css('opacity', '0.5');
       $('#donation-level-input').attr('value', 0);
       $('#donationTotal').text('$0.00');
     } else {
+      console.log("#other-donation != 0");
       $('#donor-detail-section').prop("disabled", false);
       $('#donor-detail-section').css('opacity', '1.0');
       if ($('#cover-fee').is(':checked')) {
