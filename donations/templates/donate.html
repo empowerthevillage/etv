@@ -883,7 +883,8 @@ $50, $100, $500 or whatever you are inspired to invest in the community!{% endbl
     var donor_first = $('#id_first_name').val()
     var donor_last = $('#last_name').val()
     var donor_email = $('#email').val()
-    if (donor_first != '' && donor_first != '' && donor_email != '') {
+    var donor_amount = $('#donation-level-input').val()
+    if (donor_first != '' && donor_first != '' && donor_email != '' && donor_amount > 0 ) {
       $('#creditcard-button').removeClass('disabled');
       $('#express-pay-options').removeClass('hidden');
       console.log("Check results: form incomplete");
