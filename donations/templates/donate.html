@@ -1111,6 +1111,8 @@ $50, $100, $500 or whatever you are inspired to invest in the community!{% endbl
     $('#other-donation').val(0); // Update the input field
     $('[value="once"]').prop('checked', true);
     $('[value="monthly"]').prop("disabled", true);
+    $('#creditcard-button').prop("disabled", true);
+    $('#express-pay-options').prop("hidden", true);
   });
   $('#other-donation').blur(function () {
     // If the value is not a valid number or less than or equal to zero, set it to zero
