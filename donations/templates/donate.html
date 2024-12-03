@@ -1104,9 +1104,9 @@ $50, $100, $500 or whatever you are inspired to invest in the community!{% endbl
     $('[value="monthly"]').prop("disabled", false);
     $("html, body").animate({ scrollTop: targetOffset }, 400);  // Animate scrolling to next section
   });
-  $('#other-input').blur(function () {
+  $(".other").change(function () {
     $('.other-input').removeClass('hidden');
-    if (isNaN($('#other-donation').val()) || $('#other-donation').val() < 0) {
+    if (isNaN($('#other-donation').val()) || $('#other-donation').val() <= 0) {
       $('#other-donation').val(0); // Update the input field
     }
     // Convert the input to a positive integer
@@ -1119,7 +1119,7 @@ $50, $100, $500 or whatever you are inspired to invest in the community!{% endbl
       $('#donor-detail-section').css('opacity', '0.5');
       $('#creditcard-button').prop("disabled", true);
       $('#express-pay-options').prop("hidden", true);
-      $('#donationTotal').text('$0');
+      $('#donationTotal').text('$0')
     } else {
       $('#donor-detail-section').prop("disabled", false);
       $('#donor-detail-section').css('opacity', '1.0');
@@ -1138,9 +1138,9 @@ $50, $100, $500 or whatever you are inspired to invest in the community!{% endbl
     $('[value="once"]').prop('checked', true);
     $('[value="monthly"]').prop("disabled", true);
   });
-  $(".other").change(function () {
+  $('#other-input').blur(function () {
     $('.other-input').removeClass('hidden');
-    if (isNaN($('#other-donation').val()) || $('#other-donation').val() < 0) {
+    if (isNaN($('#other-donation').val()) || $('#other-donation').val() <= 0) {
       $('#other-donation').val(0); // Update the input field
     }
     // Convert the input to a positive integer
@@ -1153,7 +1153,7 @@ $50, $100, $500 or whatever you are inspired to invest in the community!{% endbl
       $('#donor-detail-section').css('opacity', '0.5');
       $('#creditcard-button').prop("disabled", true);
       $('#express-pay-options').prop("hidden", true);
-      $('#donationTotal').text('$0')
+      $('#donationTotal').text('$0');
     } else {
       $('#donor-detail-section').prop("disabled", false);
       $('#donor-detail-section').css('opacity', '1.0');
