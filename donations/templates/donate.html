@@ -876,7 +876,7 @@ $(document).ready(function () {
     // Convert the input to a positive integer
     $('#other-donation').val(parseInt($('#other-donation').val(), 10));
     // If the value is not a valid number or less than or equal to zero, set it to zero
-    if (isNaN($('#other-donation').val()) || $('#other-donation').val() <= 0) {
+    if (isNaN($('#other-donation').val()) || $('#other-donation').val() < 0) {
       $('#other-donation').val(0); // Update the input field
     }
     // Reveal details panel only if valid input detected
@@ -885,13 +885,12 @@ $(document).ready(function () {
       $('#donor-detail-section').css('opacity', '0.5');
       $('#creditcard-button').prop("disabled", true);
       $('#express-pay-options').prop("hidden", true);
-      $('#donationTotal').text('$' + parseFloat( $('#other-donation').val(), 10).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+      $('#donationTotal').text('$0')
     } else {
       $('#donor-detail-section').prop("disabled", false);
       $('#donor-detail-section').css('opacity', '1.0');
-      $('#donationTotal').text('$0')
+      $('#donationTotal').text('$' + parseFloat( $('#other-donation').val(), 10).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
     }
-    $('#donationTotal').text('BLUR')
     $('[value="once"]').prop('checked', true);    
   });
   $('#other-donation').on('keyup', function () {
@@ -1131,7 +1130,7 @@ $(document).ready(function () {
     // Convert the input to a positive integer
     $('#other-donation').val(parseInt($('#other-donation').val(), 10));
     // If the value is not a valid number or less than or equal to zero, set it to zero
-    if (isNaN($('#other-donation').val()) || $('#other-donation').val() <= 0) {
+    if (isNaN($('#other-donation').val()) || $('#other-donation').val() < 0) {
       $('#other-donation').val(0); // Update the input field
     }
     // Reveal details panel only if valid input detected
@@ -1140,11 +1139,11 @@ $(document).ready(function () {
       $('#donor-detail-section').css('opacity', '0.5');
       $('#creditcard-button').prop("disabled", true);
       $('#express-pay-options').prop("hidden", true);
-      $('#donationTotal').text('$' + parseFloat($('#other-donation').val(), 10).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+      $('#donationTotal').text('$0')
     } else {
       $('#donor-detail-section').prop("disabled", false);
       $('#donor-detail-section').css('opacity', '1.0');
-      $('#donationTotal').text('$0');
+      $('#donationTotal').text('$' + parseFloat( $('#other-donation').val(), 10).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
     }
     $('#donationTotal').text('CHANGE')
     $('[value="once"]').prop('checked', true);
