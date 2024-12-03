@@ -1214,7 +1214,7 @@ $50, $100, $500 or whatever you are inspired to invest in the community!{% endbl
       if ($('#other-custom-amount').is(':checked')) {
         var amount = parseInt($('#other-donation').val(), 10);
       } else {
-        var amount = $('radio[name="donation_level"]:checked').val();
+        var amount = $('input[name="donation_level"]:checked').val();
       }
       $('#donation-level-input').attr('value', amount)
       $('#donationTotal').text('$' + parseFloat(amount, 10).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString())
