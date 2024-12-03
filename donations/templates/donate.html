@@ -870,12 +870,13 @@ $(document).ready(function () {
       $('#donationTotal').text('$' + parseFloat(level, 10).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString())
     }
   });
+  ////
   $('#other-donation').blur( function () {
     // Convert the input to a positive integer
     let value = parseInt($('#other-donation').val(), 10);
     // If the value is not a valid number or less than or equal to zero, set it to zero
     if (isNaN(value) || value <= 0) {
-      $('#other-donation').val(''); // Update the input field
+      $('#other-donation').val(0); // Update the input field
     }
     // Reveal details panel only if valid input detected
     if (value === 0) {
@@ -883,12 +884,13 @@ $(document).ready(function () {
       $('#donor-detail-section').css('opacity', '0.5');
       $('#creditcard-button').prop("disabled", true);
       $('#express-pay-options').prop("hidden", true);
+      $('#donationTotal').text('$' + parseFloat(amount, 10).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
     } else {
       $('#donor-detail-section').prop("disabled", false);
       $('#donor-detail-section').css('opacity', '1.0');
-      var targetOffset = $('#donor-detail-section').offset().top;
-      $("html, body").animate({ scrollTop: targetOffset}, 400);  // Animate scrolling to next section
+      $('#donationTotal').text('$0')
     }
+    $('[value="once"]').prop('checked', true);    
   });
   $('#other-donation').on('keyup', function () {
     if ($('#cover-fee').is(':checked')) {
@@ -1120,7 +1122,7 @@ $(document).ready(function () {
     var targetOffset = $('#donor-detail-section').offset().top;
     $("html, body").animate({ scrollTop: targetOffset}, 400);  // Animate scrolling to next section
   });
-
+////
   $(".other").change(function () {
     $('.other-input').removeClass('hidden');
     // Convert the input to a positive integer
@@ -1135,13 +1137,11 @@ $(document).ready(function () {
       $('#donor-detail-section').css('opacity', '0.5');
       $('#creditcard-button').prop("disabled", true);
       $('#express-pay-options').prop("hidden", true);
+      $('#donationTotal').text('$' + parseFloat(amount, 10).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
     } else {
       $('#donor-detail-section').prop("disabled", false);
       $('#donor-detail-section').css('opacity', '1.0');
-    }
-    if ($('#other-donation').val() == '') {
-      $('#donationTotal').text('Enter Custom Amount Above')
-    /*$('#donor-detail-section').addClass('hidden')*/
+      $('#donationTotal').text('$0');
     }
     $('[value="once"]').prop('checked', true);
   });
