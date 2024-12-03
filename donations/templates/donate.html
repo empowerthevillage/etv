@@ -1107,12 +1107,12 @@ $50, $100, $500 or whatever you are inspired to invest in the community!{% endbl
     $("html, body").animate({ scrollTop: targetOffset }, 400);  // Animate scrolling to next section
   });
   $(".other").change(function () {
-    $('#other-input').removeClass('hidden');
+    $('.other-input').removeClass('hidden');
     $('#other-donation').val(0); // Update the input field
     $('[value="once"]').prop('checked', true);
     $('[value="monthly"]').prop("disabled", true);
   });
-  $('#other-input').blur(function () {
+  $('#other-donation').blur(function () {
     // If the value is not a valid number or less than or equal to zero, set it to zero
     if (isNaN($('#other-donation').val()) || $('#other-donation').val() <= 0) {
       $('#other-donation').val(0); // Update the input field
