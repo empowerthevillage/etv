@@ -1119,7 +1119,7 @@ $50, $100, $500 or whatever you are inspired to invest in the community!{% endbl
     }
     // Convert the input to a positive integer; eliminates leading zeros
     let value = parseInt($('#other-donation').val(), 10);
-    $('#other-donation').val(value);
+    $('#other-donation').val(parseInt($('#other-donation').val(), 10));
     $('#test-field').text($('#other-donation').val().toString());
     $('#test-field2').text("blur");
     // Reveal details panel only if valid input detected
@@ -1133,13 +1133,13 @@ $50, $100, $500 or whatever you are inspired to invest in the community!{% endbl
       $('#donor-detail-section').prop("disabled", false);
       $('#donor-detail-section').css('opacity', '1.0');
       if ($('#cover-fee').is(':checked')) {
-        var amount = parseInt($('#donation-level-input').val())
+        var amount = parseInt($('#other-donation').val(), 10)
         var fee = amount * 0.0199 + 0.49
         var total = amount + fee
         $('#donation-level-input').attr('value', total.toFixed(2))
         $('#donationTotal').text('$' + parseFloat(total, 10).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString())
       } else {
-        var amount = parseInt($('#donation-level-input').val())
+        var amount = parseInt($('#other-donation').val(), 10)
         $('#donation-level-input').attr('value', amount)
         $('#donationTotal').text('$' + parseFloat(amount, 10).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString())
       }
