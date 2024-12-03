@@ -883,11 +883,14 @@ $50, $100, $500 or whatever you are inspired to invest in the community!{% endbl
     if (donor_first != '' && donor_first != '' && donor_email != '') {
       $('#creditcard-button').removeClass('disabled');
       $('#express-pay-options').removeClass('hidden');
+      console.log("Check results: form incomplete");
     } else {
       $('#creditcard-button').addClass('disabled');
       $('#express-pay-options').addClass('hidden');
+      console.log("Check results: form complete");
     }
-  }
+    console.log("Form check complete");
+  };
   $('#donor-detail-section input').on('change', function () {
     var donor_first = $('#id_first_name').val()
     var donor_last = $('#last_name').val()
