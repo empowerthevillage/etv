@@ -879,7 +879,7 @@ $(document).ready(function () {
       $('#other-donation').val(0); // Update the input field
     }
     // Reveal details panel only if valid input detected
-    if (value === 0) {
+    if ($('#other-donation').val() === 0) {
       $('#donor-detail-section').prop("disabled", true);
       $('#donor-detail-section').css('opacity', '0.5');
       $('#creditcard-button').prop("disabled", true);
@@ -1132,7 +1132,7 @@ $(document).ready(function () {
       $('#other-donation').val(0); // Update the input field
     }
     // Reveal details panel only if valid input detected
-    if (value === 0) {
+    if ($('#other-donation').val() === 0) {
       $('#donor-detail-section').prop("disabled", true);
       $('#donor-detail-section').css('opacity', '0.5');
       $('#creditcard-button').prop("disabled", true);
