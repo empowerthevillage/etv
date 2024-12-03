@@ -190,7 +190,7 @@ $50, $100, $500 or whatever you are inspired to invest in the community!{% endbl
                     <input class="with-gap" name="donation_level" type="radio" value="2500" plan-id='i4j7'>
                     <span>Village Council - $2,500</span>
                   </label>
-                </p><!--
+                </p>
                 <p id="custom-amount">
                   <label>
                     <input class="with-gap other" name="donation_level" type="radio">
@@ -198,11 +198,10 @@ $50, $100, $500 or whatever you are inspired to invest in the community!{% endbl
                   </label>
                 </p>
                 <div class="other-input hidden text-field" hidden>
-                  <div class="valign-wrapper">$<input type="number" id="other-donation" min="0" step="1" oninput="validity.valid||(value='0');"
+                  <div class="valign-wrapper">$<input type="number" id="other-donation" min="0" step="1" oninput="validity.valid||(value='');"
                       style="width: 50%; padding-left: 10px"></div>
                   <label>Enter a Custom Amount</label>
                 </div>
-              -->
               </div>
             </div>
             <div class="row" style="margin-bottom: 0">
@@ -876,7 +875,7 @@ $(document).ready(function () {
     let value = parseInt($('#other-donation').val(), 10);
     // If the value is not a valid number or less than or equal to zero, set it to zero
     if (isNaN(value) || value <= 0) {
-      $('#other-donation').val(0); // Update the input field
+      $('#other-donation').val(''); // Update the input field
     }
     // Reveal details panel only if valid input detected
     if (value === 0) {
