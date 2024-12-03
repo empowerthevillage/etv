@@ -885,7 +885,7 @@ $(document).ready(function () {
       $('#donor-detail-section').css('opacity', '0.5');
       $('#creditcard-button').prop("disabled", true);
       $('#express-pay-options').prop("hidden", true);
-      $('#donationTotal').text('$' + parseFloat(amount, 10).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+      $('#donationTotal').text('$' + parseFloat( $('#other-donation').val(), 10).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
     } else {
       $('#donor-detail-section').prop("disabled", false);
       $('#donor-detail-section').css('opacity', '1.0');
@@ -1138,7 +1138,7 @@ $(document).ready(function () {
       $('#donor-detail-section').css('opacity', '0.5');
       $('#creditcard-button').prop("disabled", true);
       $('#express-pay-options').prop("hidden", true);
-      $('#donationTotal').text('$' + parseFloat(amount, 10).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
+      $('#donationTotal').text('$' + parseFloat($('#other-donation').val(), 10).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
     } else {
       $('#donor-detail-section').prop("disabled", false);
       $('#donor-detail-section').css('opacity', '1.0');
