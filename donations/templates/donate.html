@@ -880,6 +880,9 @@ $50, $100, $500 or whatever you are inspired to invest in the community!{% endbl
     $('#donor-detail-section').removeClass('hidden')
   });
   function checkForm() {
+    var donor_first = $('#id_first_name').val()
+    var donor_last = $('#last_name').val()
+    var donor_email = $('#email').val()
     if (donor_first != '' && donor_first != '' && donor_email != '') {
       $('#creditcard-button').removeClass('disabled');
       $('#express-pay-options').removeClass('hidden');
@@ -892,9 +895,6 @@ $50, $100, $500 or whatever you are inspired to invest in the community!{% endbl
     console.log("Form check complete");
   };
   $('#donor-detail-section input').on('change', function () {
-    var donor_first = $('#id_first_name').val()
-    var donor_last = $('#last_name').val()
-    var donor_email = $('#email').val()
     checkForm();
   })
   $('.step1-next').click(function (event) {
