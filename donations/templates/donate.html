@@ -1106,13 +1106,13 @@ $50, $100, $500 or whatever you are inspired to invest in the community!{% endbl
   });
   $('#other-input').blur(function () {
     $('.other-input').removeClass('hidden');
+    if (isNaN($('#other-donation').val()) || $('#other-donation').val() < 0) {
+      $('#other-donation').val(0); // Update the input field
+    }
     // Convert the input to a positive integer
     $('#other-donation').val(parseInt($('#other-donation').val(), 10));
     $('#test-field').text(parseInt($('#other-donation').val(), 10));
     // If the value is not a valid number or less than or equal to zero, set it to zero
-    if (isNaN($('#other-donation').val()) || $('#other-donation').val() < 0) {
-      $('#other-donation').val(0); // Update the input field
-    }
     // Reveal details panel only if valid input detected
     if ($('#other-donation').val() === 0) {
       $('#donor-detail-section').prop("disabled", true);
@@ -1140,13 +1140,13 @@ $50, $100, $500 or whatever you are inspired to invest in the community!{% endbl
   });
   $(".other").change(function () {
     $('.other-input').removeClass('hidden');
+    if (isNaN($('#other-donation').val()) || $('#other-donation').val() < 0) {
+      $('#other-donation').val(0); // Update the input field
+    }
     // Convert the input to a positive integer
     $('#other-donation').val(parseInt($('#other-donation').val(), 10));
     $('#test-field').text(parseInt($('#other-donation').val(), 10));
     // If the value is not a valid number or less than or equal to zero, set it to zero
-    if (isNaN($('#other-donation').val()) || $('#other-donation').val() < 0) {
-      $('#other-donation').val(0); // Update the input field
-    }
     // Reveal details panel only if valid input detected
     if ($('#other-donation').val() === 0) {
       $('#donor-detail-section').prop("disabled", true);
