@@ -1153,15 +1153,13 @@ $50, $100, $500 or whatever you are inspired to invest in the community!{% endbl
     checkForm();
   });
   $('#other-donation').change(function () {
+    // Convert the input to a positive integer; eliminates leading zeros
+    $('#other-donation').val(parseInt($('#other-donation').val(), 10));
     // If the value is not a valid number or less than or equal to zero, set it to zero
     if (isNaN($('#other-donation').val()) || $('#other-donation').val() <= 0) {
       $('#other-donation').val(0); // Update the input field
     }
     console.log($('#other-donation').val());
-    // Convert the input to a positive integer; eliminates leading zeros
-    let value = parseInt($('#other-donation').val(), 10);
-    $('#other-donation').val(parseInt($('#other-donation').val(), 10));
-    // Reveal details panel only if valid input detected
     if ($('#other-donation').val() === 0) {
       console.log("#other-donation === 0");
       $('#donor-detail-section').prop("disabled", true);
