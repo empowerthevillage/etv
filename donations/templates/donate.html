@@ -879,14 +879,20 @@ $50, $100, $500 or whatever you are inspired to invest in the community!{% endbl
     $('#frequency-verbose-input').attr('value', frequencyVerbose)
     $('#donor-detail-section').removeClass('hidden')
   });
-  $('#donor-detail-section input').on('change', function () {
-    var donor_first = $('#id_first_name').val()
-    var donor_last = $('#last_name').val()
-    var donor_email = $('#email').val()
+  function checkForm() {
     if (donor_first != '' && donor_first != '' && donor_email != '') {
       $('#creditcard-button').removeClass('disabled')
       $('#express-pay-options').removeClass('hidden')
+    } else {
+      $('#creditcard-button').prop("disabled", true);
+      $('#express-pay-options').prop("hidden", true);
     }
+  }
+  $('#donor-detail-section :input').on('change', function () {
+    var donor_first = $('#id_first_name').val()
+    var donor_last = $('#last_name').val()
+    var donor_email = $('#email').val()
+    checkForm();
   })
   $('.step1-next').click(function (event) {
     event.preventDefault();
@@ -1141,10 +1147,9 @@ $50, $100, $500 or whatever you are inspired to invest in the community!{% endbl
     $('#other-donation').val(0); // Update the input field
     $('[value="once"]').prop('checked', true);
     $('[value="monthly"]').prop("disabled", true);
-    $('#creditcard-button').prop("disabled", true);
-    $('#express-pay-options').prop("hidden", true);
     $('#donation-level-input').attr('value', 0);
     $('#donationTotal').text('$0.00');
+    checkForm();
   });
   $('#other-donation').blur(function () {
     // If the value is not a valid number or less than or equal to zero, set it to zero
@@ -1158,8 +1163,6 @@ $50, $100, $500 or whatever you are inspired to invest in the community!{% endbl
     if ($('#other-donation').val() === 0) {
       $('#donor-detail-section').prop("disabled", true);
       $('#donor-detail-section').css('opacity', '0.5');
-      $('#creditcard-button').prop("disabled", true);
-      $('#express-pay-options').prop("hidden", true);
       $('#donation-level-input').attr('value', 0);
       $('#donationTotal').text('$0.00');
     } else {
@@ -1179,6 +1182,7 @@ $50, $100, $500 or whatever you are inspired to invest in the community!{% endbl
     }
     $('[value="once"]').prop('checked', true);
     $('[value="monthly"]').prop("disabled", true);
+    checkForm();
   });/*
   $('#other-donation').on('keyup', function () {
     if ($('#cover-fee').is(':checked')) {
