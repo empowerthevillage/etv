@@ -204,6 +204,8 @@ $50, $100, $500 or whatever you are inspired to invest in the community!{% endbl
                 </div>
                 <p id="test-field">
                 </p>
+                <p id="test-field2">
+                </p>
               </div>
             </div>
             <div class="row" style="margin-bottom: 0">
@@ -1113,7 +1115,8 @@ $50, $100, $500 or whatever you are inspired to invest in the community!{% endbl
     // Convert the input to a positive integer; eliminates leading zeros
     let value = parseInt($('#other-donation').val(), 10);
     $('#other-donation').val(value);
-    $('#test-field').text($('#other-donation').val());
+    $('#test-field').text($('#other-donation').val().toString());
+    $('#test-field2').text("change");
     // Reveal details panel only if valid input detected
     if ($('#other-donation').val() === 0) {
       $('#donor-detail-section').prop("disabled", true);
@@ -1148,7 +1151,8 @@ $50, $100, $500 or whatever you are inspired to invest in the community!{% endbl
     // Convert the input to a positive integer; eliminates leading zeros
     let value = parseInt($('#other-donation').val(), 10);
     $('#other-donation').val(value);
-    $('#test-field').text($('#other-donation').val());
+    $('#test-field').text($('#other-donation').val().toString());
+    $('#test-field2').text("blur");
     // Reveal details panel only if valid input detected
     if ($('#other-donation').val() === 0) {
       $('#donor-detail-section').prop("disabled", true);
