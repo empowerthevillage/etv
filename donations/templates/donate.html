@@ -202,10 +202,6 @@ $50, $100, $500 or whatever you are inspired to invest in the community!{% endbl
                       oninput="validity.valid||(value='');" style="width: 50%; padding-left: 10px"></div>
                   <label>Enter a Custom Amount</label>
                 </div>
-                <p id="test-field">
-                </p>
-                <p id="test-field2">
-                </p>
               </div>
             </div>
             <div class="row" style="margin-bottom: 0">
@@ -1148,7 +1144,7 @@ $50, $100, $500 or whatever you are inspired to invest in the community!{% endbl
     $('#creditcard-button').prop("disabled", true);
     $('#express-pay-options').prop("hidden", true);
     $('#donation-level-input').attr('value', 0);
-    $('#donationTotal').text('$0');
+    $('#donationTotal').text('$0.00');
   });
   $('#other-donation').blur(function () {
     // If the value is not a valid number or less than or equal to zero, set it to zero
@@ -1158,8 +1154,6 @@ $50, $100, $500 or whatever you are inspired to invest in the community!{% endbl
     // Convert the input to a positive integer; eliminates leading zeros
     let value = parseInt($('#other-donation').val(), 10);
     $('#other-donation').val(parseInt($('#other-donation').val(), 10));
-    $('#test-field').text($('#other-donation').val().toString());
-    $('#test-field2').text("blur");
     // Reveal details panel only if valid input detected
     if ($('#other-donation').val() === 0) {
       $('#donor-detail-section').prop("disabled", true);
@@ -1167,7 +1161,7 @@ $50, $100, $500 or whatever you are inspired to invest in the community!{% endbl
       $('#creditcard-button').prop("disabled", true);
       $('#express-pay-options').prop("hidden", true);
       $('#donation-level-input').attr('value', 0);
-      $('#donationTotal').text('$0');
+      $('#donationTotal').text('$0.00');
     } else {
       $('#donor-detail-section').prop("disabled", false);
       $('#donor-detail-section').css('opacity', '1.0');
