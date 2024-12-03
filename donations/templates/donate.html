@@ -193,7 +193,7 @@ $50, $100, $500 or whatever you are inspired to invest in the community!{% endbl
                 </p>
                 <p id="custom-amount">
                   <label>
-                    <input class="with-gap other" name="donation_level" value="other" type="radio">
+                    <input class="with-gap other" name="donation_level" id="other-custom-amount" type="radio">
                     <span>Other</span>
                   </label>
                 </p>
@@ -1202,8 +1202,8 @@ $50, $100, $500 or whatever you are inspired to invest in the community!{% endbl
     $('#frequency-verbose-input').attr('value', 'One Time Donation')
   });*/
   $('#cover-fee').on('change', function () {
-    var amount = parseInt($('#donation-level-input').val());
     if ($('#cover-fee').is(':checked')) {
+      var amount = parseInt($('#donation-level-input').val());
       var fee = amount * 0.0199 + 0.49
       var total = amount + fee
       $('#donation-level-input').attr('value', total.toFixed(2))
@@ -1211,10 +1211,10 @@ $50, $100, $500 or whatever you are inspired to invest in the community!{% endbl
       //$('#donation-level-input').attr('value', level)
       //$('#donationTotal').text('$' + parseFloat(level, 10).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString())
     } else {
-      if ($('radio[name="donation_level"][value="other"]').is(':checked')) {
-        amount = parseInt($('#other-donation').val(), 10);
+      if ($('#other-custom-amount').is(':checked')) {
+        var amount = parseInt($('#other-donation').val(), 10);
       } else {
-        amount = $('radio[name="donation_level"]:checked').val();
+        var amount = $('radio[name="donation_level"]:checked').val();
       }
       $('#donation-level-input').attr('value', amount)
       $('#donationTotal').text('$' + parseFloat(amount, 10).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString())
