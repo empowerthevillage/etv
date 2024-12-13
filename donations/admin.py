@@ -12,7 +12,7 @@ from decimal import Decimal, InvalidOperation
 
 
 class DonationAdmin(admin.ModelAdmin):
-    list_display = ['amount', 'last_name', 'first_name', 'billing_profile', 'status', 'updated']
+    list_display = ['safe_amount', 'last_name', 'first_name', 'billing_profile', 'status', 'updated']
     list_filter = ['billing_profile', 'amount', 'frequency', 'status']
     search_fields = ['first_name', 'last_name', 'amount']
     ordering = ['-updated']
@@ -23,7 +23,7 @@ class DonationAdmin(admin.ModelAdmin):
             return Decimal(obj.amount)
         except (InvalidOperation, ValueError, TypeError):
             return 0  # Default value for invalid data
-    safe_amount.short_description = "Amount sanitized"
+    safe_amount.short_description = "Amount"
 
     def download_csv(self, request, queryset):
         opts = queryset.model._meta
