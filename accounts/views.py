@@ -22,6 +22,7 @@ from .signals import user_logged_in
 import datetime
 from django.shortcuts import render, redirect
 import sweetify
+import math
 
 User = get_user_model()
 
@@ -35,7 +36,9 @@ def AccountHomeView(request):
     if donor_obj is not None:
         donation_qs = donor_obj.donations.all()
         for x in donation_qs:
-            total += x.amount
+            x_amount = float(x.amount)
+            if not math.isnan(x_amount):
+                total += x.amount
         recent_qs = donation_qs.filter(updated__gte=recent, status="complete")
     donation_qs = None
     order_qs = Order.objects.filter(billing_profile=billing_profile).filter(status='submitted_for_settlement')
