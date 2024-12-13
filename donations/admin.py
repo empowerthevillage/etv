@@ -2,6 +2,9 @@ from django.contrib import admin
 from dashboard.models import dashboardModel
 
 from django.contrib import admin
+
+from decimal import Decimal, InvalidOperation
+
 from .models import donation_submission, donation, donation_event, tag
 from accounts.admin import admin_site
 
