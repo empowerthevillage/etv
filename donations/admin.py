@@ -9,11 +9,19 @@ import csv
 from django.http import HttpResponse
 
 class DonationAdmin(admin.ModelAdmin):
-    list_display = ['amount', 'last_name', 'first_name', 'billing_profile', 'status', 'updated']
+    list_display = ['sanitized_amount', 'last_name', 'first_name', 'billing_profile', 'status', 'updated']
     list_filter = ['billing_profile', 'amount', 'frequency', 'status']
     search_fields = ['first_name', 'last_name', 'amount']
     ordering = ['-updated']
-    actions = ['download_csv',]
+    actions = ['download_csv']
+
+    def sanitized_amount(self, obj):
+        """Safely convert and display the amount field."""
+        try:
+            return Decimal(obj.amount)
+        except (InvalidOperation, ValueError, TypeError):
+            return Decimal(0)  # Default value for invalid data
+    sanitized_amount.short_description = "Amount"  # Display name in Admin
     
     def download_csv(self, request, queryset):
         opts = queryset.model._meta
