@@ -19,29 +19,22 @@ class DonationAdmin(admin.ModelAdmin):
     actions = ['download_csv']
 
     def sanitized_amount(self, obj):
-        """Safely convert and display the amount field."""
-        try:
-            return Decimal(obj.amount)
-        except (InvalidOperation, ValueError, TypeError):
-            return Decimal(0)  # Default value for invalid data
-    sanitized_amount.short_description = "Amount"  # Display name in Admin
-    
+        """Display sanitized amount in the admin."""
+        return obj.sanitized_amount
+    sanitized_amount.short_description = "Amount (Sanitized)"  # Column header in the admin
+
     def download_csv(self, request, queryset):
+        """Allow CSV download."""
         opts = queryset.model._meta
-        model = queryset.model
         response = HttpResponse(content_type='text/csv')
-        # force download.
         response['Content-Disposition'] = 'attachment;filename=export.csv'
-        # the csv writer
         writer = csv.writer(response)
         field_names = [field.name for field in opts.fields]
-        # Write a first row with header information
-        writer.writerow(field_names)
-        # Write data rows
+        writer.writerow(field_names)  # Header row
         for obj in queryset:
             writer.writerow([getattr(obj, field) for field in field_names])
         return response
-    download_csv.short_description = "Download selected as csv"
+    download_csv.short_description = "Download selected as CSV"
     
 
 admin.site.register(donation_submission)
