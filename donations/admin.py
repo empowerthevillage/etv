@@ -18,6 +18,16 @@ class DonationAdmin(admin.ModelAdmin):
     ordering = ['-updated']
     actions = ['download_csv',]
 
+    def get_queryset(self, request):
+        # Override queryset to sanitize `amount`
+        qs = super().get_queryset(request)
+        for obj in qs:
+            try:
+                obj.amount = Decimal(obj.amount)
+            except (InvalidOperation, ValueError, TypeError):
+                obj.amount = Decimal(0)  # Replace invalid values with 0
+        return qs
+
     def safe_amount(self, obj):
         try:
             return Decimal(obj.amount)
