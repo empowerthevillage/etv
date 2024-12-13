@@ -8,33 +8,13 @@ from accounts.admin import admin_site
 import csv
 from django.http import HttpResponse
 
-from decimal import Decimal, InvalidOperation
-
-
 class DonationAdmin(admin.ModelAdmin):
-    list_display = ['safe_amount', 'last_name', 'first_name', 'billing_profile', 'status', 'updated']
+    list_display = ['amount', 'last_name', 'first_name', 'billing_profile', 'status', 'updated']
     list_filter = ['billing_profile', 'amount', 'frequency', 'status']
     search_fields = ['first_name', 'last_name', 'amount']
     ordering = ['-updated']
     actions = ['download_csv',]
-
-    def get_queryset(self, request):
-        # Override queryset to sanitize `amount`
-        qs = super().get_queryset(request)
-        for obj in qs:
-            try:
-                obj.amount = Decimal(obj.amount)
-            except (InvalidOperation, ValueError, TypeError):
-                obj.amount = Decimal(0)  # Replace invalid values with 0
-        return qs
-
-    def safe_amount(self, obj):
-        try:
-            return Decimal(obj.amount)
-        except (InvalidOperation, ValueError, TypeError):
-            return 0  # Default value for invalid data
-    safe_amount.short_description = "Amount"
-
+    
     def download_csv(self, request, queryset):
         opts = queryset.model._meta
         model = queryset.model
