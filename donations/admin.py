@@ -12,16 +12,33 @@ import csv
 from django.http import HttpResponse
 
 class DonationAdmin(admin.ModelAdmin):
-    list_display = ['sanitized_amount', 'last_name', 'first_name', 'billing_profile', 'status', 'updated']
+    list_display = ['get_sanitized_amount', 'last_name', 'first_name', 'billing_profile', 'status', 'updated']
     list_filter = ['billing_profile', 'amount', 'frequency', 'status']
     search_fields = ['first_name', 'last_name', 'amount']
     ordering = ['-updated']
     actions = ['download_csv']
 
-    def sanitized_amount(self, obj):
-        """Display sanitized amount in the admin."""
-        return obj.sanitized_amount
-    sanitized_amount.short_description = "Amount (Sanitized)"  # Column header in the admin
+    def get_queryset(self, request):
+        """
+        Override queryset to replace invalid amounts.
+        """
+        qs = super().get_queryset(request)
+        for obj in qs:
+            try:
+                obj.amount = Decimal(obj.amount)
+            except (InvalidOperation, TypeError, ValueError):
+                obj.amount = Decimal(0)  # Replace invalid values with 0
+        return qs
+
+    def get_sanitized_amount(self, obj):
+        """
+        Use the sanitized amount for the change list display.
+        """
+        try:
+            return Decimal(obj.amount)
+        except (InvalidOperation, TypeError, ValueError):
+            return Decimal(0)
+    get_sanitized_amount.short_description = "Amount (Sanitized)"  # Column header
 
     def download_csv(self, request, queryset):
         """Allow CSV download."""

@@ -49,17 +49,42 @@
                 {% if cl.formset %}
                   <div>{{ cl.formset.management_form }}</div>
                 {% endif %}
-        
+                
                 {% block result_list %}
                   {% if action_form and actions_on_top and cl.show_admin_actions %}
-                    {% admin_actions %}
+                      {% admin_actions %}
                   {% endif %}
-                  {% result_list cl|safe_decimal %}
+              
+                  <table>
+                      <thead>
+                          <tr>
+                              <th>Amount (Sanitized)</th>
+                              <th>Last Name</th>
+                              <th>First Name</th>
+                              <th>Billing Profile</th>
+                              <th>Status</th>
+                              <th>Updated</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          {% for obj in cl.result_list %}
+                          <tr>
+                              <td>{{ obj.get_sanitized_amount }}</td>
+                              <td>{{ obj.last_name }}</td>
+                              <td>{{ obj.first_name }}</td>
+                              <td>{{ obj.billing_profile }}</td>
+                              <td>{{ obj.status }}</td>
+                              <td>{{ obj.updated }}</td>
+                          </tr>
+                          {% endfor %}
+                      </tbody>
+                  </table>
+              
                   {% if action_form and actions_on_bottom and cl.show_admin_actions %}
-                    {% admin_actions %}
+                      {% admin_actions %}
                   {% endif %}
                 {% endblock %}
-                {% block pagination %}{% pagination cl %}{% endblock %}
+
                 </form>
         </div>
         <div class="col s2">
