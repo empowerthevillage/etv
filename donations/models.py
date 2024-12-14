@@ -2,8 +2,6 @@ from django.db import models
 from django.http import JsonResponse, HttpResponse
 from bfchallenge.models import everyfriday_transaction
 from billing.models import BillingProfile
-from decimal import Decimal, InvalidOperation
-
 import json
 
 DONATION_LEVEL_CHOICES = (
@@ -159,7 +157,7 @@ class donation(models.Model):
     billing_profile = models.ForeignKey(BillingProfile, null=True, blank=True, on_delete=models.SET_NULL)
     first_name      = models.CharField(max_length=50, unique=False)
     last_name       = models.CharField(max_length=50, unique=False)
-    amount          = models.DecimalField(max_digits=12, decimal_places=2, null=True, blank=True)
+    amount          = models.DecimalField(max_digits=12, decimal_places=2, default=0.00)
     frequency       = models.CharField(max_length=100, default='once', choices=DONATION_FREQUENCY_CHOICES)
     status          = models.CharField(max_length=100, choices=DONATION_STATUS_CHOICES, null=True, blank=True)
     braintree_id    = models.CharField(max_length=270, blank=True)
@@ -184,12 +182,3 @@ class donation(models.Model):
     @property
     def get_full_name(self):
         return '%s %s' %(self.first_name, self.last_name)
-    
-    
-    @property
-    def sanitized_amount(self):
-        """Ensure the amount is always a valid Decimal."""
-        try:
-            return Decimal(self.amount)
-        except (InvalidOperation, TypeError, ValueError):
-            return Decimal(0)  # Default value for invalid data
