@@ -16,7 +16,7 @@ Register | ETV 2024 Power Walk
           <div class="col s12" style="padding-bottom: 10px;">
               <a href="/power-walk-2024/"><i class="bi bi-arrow-left"></i> Back to Power Walk home page</a>
           </div>
-          <h5 class="center-align donation-title">ETV 2024 Power Walk Registration</h5>
+          <h5 class="center-align donation-title">ETV 2025 Power Walk Registration</h5>
           
           <div id="preloader" class="center-align" style="display:none; padding-top: 200px; height: 800px">
             <div class="preloader-wrapper big active" >
@@ -117,7 +117,7 @@ Register | ETV 2024 Power Walk
                               </label>
                             </p>
                             <div class="col s12" style="padding-bottom: 5px;">
-                              <p style="font-weight: 600;">I would like to participate in the 2024 Power Walk:<b class="required">*</b></p>
+                              <p style="font-weight: 600;">I would like to participate in the 2025 Power Walk:<b class="required">*</b></p>
                               <div class="">
                                 <p style="margin-bottom: 25px;">
                                   <label>
@@ -275,7 +275,7 @@ Register | ETV 2024 Power Walk
                               <p style="margin-bottom: 20px;">
                                 <label>
                                   <input type="checkbox" name="waiver" id="waiver-boolean" value="True" required/>
-                                  <span>I agree and accept the terms of the ETV 2024 Power Walk <a href="#waiver-modal" class="waves-effect waves-light modal-trigger" href="#waiver-modal">Waiver</a></span>
+                                  <span>I agree and accept the terms of the ETV 2025 Power Walk <a href="#waiver-modal" class="waves-effect waves-light modal-trigger" href="#waiver-modal">Waiver</a></span>
                                 </label>
                               </p>
                             </div>
@@ -379,7 +379,7 @@ Register | ETV 2024 Power Walk
 </div>
 <div id="waiver-modal" class="modal">
   <div class="modal-content" style="padding-bottom: 0">
-    <h4>ETV 2024 Power Walk Waiver</h4>
+    <h4>ETV 2025 Power Walk Waiver</h4>
     <p>I acknowledge that my participation in the Power Walk may involve a risk of injury, including bodily injury, and assume the risk for same. On my own behalf and on behalf of my heirs and legal representatives and to the fullest extent permitted by law, I hereby release and discharge Empower The Village and their respective directors, officers, board of trustees, members, agent and representatives, of and from any and all liability for injury, death, or damages and/or any other claims, demands, losses or damages, incurred by me in connection with any aspect of the walk.</p>
     <p>I also agree to the use of any photo, film, video of the event, in which I may be included, for any legitimate purpose, including advertising and promotion.</p>
   </div>
@@ -507,7 +507,7 @@ braintree.client.create({
         Swal.fire({
           'title': 'Required field missing',
           'icon': 'error',
-          'text': 'Please review and accept the 2024 Power Walk Waiver'
+          'text': 'Please review and accept the 2025 Power Walk Waiver'
         });
         return;
       }if ($('#shirt-size-selector').find(':selected').val()==''){
@@ -558,7 +558,7 @@ braintree.client.create({
             if(data.status == 'success'){
               Swal.fire(
                 'Registration successful!',
-                "You're all set! We'll see you at the Power Walk on Saturday, July 15th",
+                "You're all set! We'll see you at the Power Walk on Saturday, May 3rd, 2025",
                 "success",
               )
               $('#preloader').hide();
