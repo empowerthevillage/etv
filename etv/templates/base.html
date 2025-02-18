@@ -150,11 +150,13 @@
             <div class="right valign-wrapper" style="height:100%; position: absolute; right: 10px">
               <a class="main-nav-link ul-effect valign-wrapper {% if request.path == home_url %}active{% endif %}" href="{{ home_url }}">Home</a>
                   <div class="navbar-slash"> | </div>
-                <a class="main-nav-link ul-effect valign-wrapper {% if request.path == about_url %}active{% endif %}" href="{{ about_url }}">About</a>
+
+                <a class="main-nav-link dropdown-trigger ul-effect valign-wrapper {% if request.path == about_url %}active{% endif %}" data-target='about-dropdown' href="{{ about_url }}">About</a>
                   <div class="navbar-slash"> | </div>
                 
                 <a class="main-nav-link dropdown-trigger ul-effect valign-wrapper" data-target='top-dropdown-sp'>Programs</a>
                   <div class="navbar-slash"> | </div>
+                  
                 <a class="main-nav-link dropdown-trigger ul-effect valign-wrapper" data-target='top-dropdown-pillars'>Pillars</a>
                   <div class="navbar-slash"> | </div>
                   
@@ -396,6 +398,15 @@
                 <li><a class="center-align valign-wrapper" href="/power-walk-2024/">Power Walk</a></li>
                 <li><a class="center-align valign-wrapper" href="/events/love-of-art-fundraiser/">Juneteenth Celebration</a></li>
                 <li><a class="center-align valign-wrapper" href="/events/power-swing-classic/">Power Swing Classic</a></li>
+            </ul>
+          </div>
+          <div class="dropdown-container">
+            <ul id="about-dropdown" class="dropdown-content dd-base">
+                <li><a class="center-align valign-wrapper" href="/about/">Overview</a></li>
+                <li><a class="center-align valign-wrapper" href="/news-and-events/">News</a></li>
+                <li><a class="center-align valign-wrapper" href="/shop/">Shop</a></li>
+                <li><a class="center-align valign-wrapper" href="/careers/">Careers</a></li>
+                <!-- <li><a class="main-nav-link valign-wrapper ul-effect modal-trigger" href="#join-the-village-modal" style="cursor: pointer">Join</a>-->
             </ul>
           </div>
         <div style="z-index: -1; margin-top: 120px" id="body-container">
