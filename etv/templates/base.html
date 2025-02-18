@@ -2,7 +2,7 @@
 {% load mailchimp_tags %}
 {% include 'base/css.html' %}
 {% include 'base/js.html' %}
-{% url 'test_250218' as test_url %}
+{% url 'test' as test_url %}
 {% url 'about' as about_url %}
 {% url 'account:home' as account_url %}
 {% url 'cart:home' as cart_home_url %}
@@ -164,10 +164,10 @@
                 {% if request.user.is_authenticated %}
                 <a class="main-nav-link dropdown-trigger ul-effect valign-wrapper {% if request.path == events_url %}active{% endif %}" data-target='events-dropdown' href="{{ events_url }}">Events</a>
                 <div class="navbar-slash"> | </div>
-                
-                <a class="main-nav-link ul-effect valign-wrapper {% if request.path == test_url %}active{% endif %}" href="{{ test_url }}">News</a>
+                <!--
+                <a class="main-nav-link ul-effect valign-wrapper {% if request.path == news_url %}active{% endif %}" href="{{ news_url }}">News</a>
                 <div class="navbar-slash"> | </div>
-                
+                -->
                 {% if request.user.is_admin %}
                 <a class="main-nav-link ul-effect valign-wrapper {% if request.path == dashboard_url %}active{% endif %}" href="/dashboard/">Dashboard</a>
                   <div class="navbar-slash"> | </div>
@@ -177,10 +177,10 @@
                 {% else %}
                 <a class="main-nav-link dropdown-trigger ul-effect valign-wrapper {% if request.path == events_url %}active{% endif %}" data-target='events-dropdown' href="{{ events_url }}">Events</a>
                 <div class="navbar-slash"> | </div>
-                <!--
-                <a class="main-nav-link ul-effect valign-wrapper {% if request.path == news_url %}active{% endif %}" href="{{ news_url }}">News</a>
+                
+                <a class="main-nav-link ul-effect valign-wrapper {% if request.path == test_url %}active{% endif %}" href="{{ test_url }}">Test</a>
                 <div class="navbar-slash"> | </div>
-                -->
+                
                 <!--
                 <a class="main-nav-link valign-wrapper ul-effect modal-trigger" href="#join-the-village-modal" style="cursor: pointer">Join</a>
                 <div class="navbar-slash"> | </div>
