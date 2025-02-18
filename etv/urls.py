@@ -138,6 +138,7 @@ urlpatterns = [
     path('events/', include(("events.urls", "events"), namespace='events')),
     path('news/', news, name='news'),
     path('news-and-events/', news, name='news'),
+    path('careers/', careers, name='careers'),
     path('sitemap.xml/', sitemap),
     path('robots.txt/', robots),
     path('shop/', ProductList, name='shop'),

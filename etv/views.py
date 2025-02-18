@@ -53,6 +53,12 @@ def news(request):
     }
     return render(request, "news.html", context)
 
+def careers(request):
+    context = {
+    'title':'ETV | Careers'
+    }
+    return render(request, "careers.html", context)
+
 def shop(request):
     context = {
         'title': 'ETV | Shop',
