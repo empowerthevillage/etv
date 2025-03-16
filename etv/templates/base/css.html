@@ -955,6 +955,71 @@
       padding-right: 12px;
     }
 
+
+    .etv-button {
+    width: 180px;
+    height: 50px;
+    background-color: #08C10E;
+    background-image: url('https://empowerthevillage.s3.us-east-2.amazonaws.com/vbp_logo.svg');
+    background-size: 40px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.5s ease;
+}
+
+.etv-vdp-button-nav-bar:hover {
+    background-color: #b2b2b2;
+    background-position: 20px center;
+    transition: background-color 0.5s ease, background-position 0.5s ease;
+}
+
+.etv-vdp-button-nav-bar span {
+    position: absolute;
+    left: 70px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    font-family: Arial, sans-serif;
+}
+
+.etv-vdp-button-nav-bar .village {
+    color: #BF1E2D;
+    top: 10px;
+    transition-delay: 0.1s;
+}
+
+.etv-vdp-button-nav-bar .black {
+    color: #000000;
+    top: 20px;
+    transition-delay: 0.2s;
+}
+
+.etv-vdp-button-nav-bar .pages {
+    color: #08C10E;
+    top: 30px;
+    transition-delay: 0.3s;
+}
+
+.etv-vdp-button-nav-bar:hover .village,
+.etv-vdp-button-nav-bar:hover .black,
+.etv-vdp-button-nav-bar:hover .pages {
+    opacity: 1;
+}
+
+.etv-vdp-button-nav-bar:not(:hover) .village,
+.etv-vdp-button-nav-bar:not(:hover) .black,
+.etv-vdp-button-nav-bar:not(:hover) .pages {
+    opacity: 0;
+}
+
+
     #navbar .vbp-btn-navbar {
       text-align: center;
       height: 50px;
