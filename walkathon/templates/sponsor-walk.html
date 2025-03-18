@@ -2,7 +2,7 @@
 {% block title %}
 Sponsor | ETV 2024 Power Walk
 {% endblock %}
-{% block canonical %}https://www.empowerthevillage.org/power-walk-2024/sponsor/{% endblock %}
+{% block canonical %}https://www.empowerthevillage.org/annual-power-walk/sponsor/{% endblock %}
 {% block seo_description %}Join ETV as we take steps to improve the mental and physical health of the Black community!{% endblock %}
 {% load static %}
 
@@ -13,7 +13,7 @@ Sponsor | ETV 2024 Power Walk
     <div class="content-container row" style="margin-bottom: 0">
         <div class="col s12" style="padding-left: 2%; padding-right: 2%; padding-bottom: 3%">
           <div class="col s12" style="padding-bottom: 10px;">
-              <a href="/power-walk-2024/"><i class="bi bi-arrow-left"></i> Back to Power Walk home page</a>
+              <a href="/annual-power-walk/"><i class="bi bi-arrow-left"></i> Back to Power Walk home page</a>
           </div>
           <h5 class="center-align donation-title">Sponsor ETV's 2025 Power Walk!</h5>
     
@@ -63,7 +63,7 @@ Sponsor | ETV 2024 Power Walk
           <div id="success-container" style="display: none; padding-top: 20px;"></div>
           <div id="form-container">
               <div>
-                <form id="sponsor-form" enctype="multipart/form-data" method="POST" action="/power-walk-2024/sponsor/">
+                <form id="sponsor-form" enctype="multipart/form-data" method="POST" action="/annual-power-walk/sponsor/">
                     {% csrf_token %}
                     <input type="hidden" name="nonce" id="nonce">
                     <input type="hidden" value="" id="device-data-input">
@@ -844,7 +844,7 @@ braintree.client.create({
               "X-CSRFToken": '{{ csrf_token }}'
           },
           method: 'POST',
-          url: '/power-walk-2024/sponsor/',
+          url: '/annual-power-walk/sponsor/',
           success: function(data){
             Swal.fire(
               'Payment successful!',
