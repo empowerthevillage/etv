@@ -37,6 +37,25 @@ def walker_home(request):
     }
     return render(request, 'walkathon_home.html', context)
 
+
+def annual_walker_home(request):
+    individuals = Walker.objects.filter(active=True)
+    orgs = Organization.objects.filter(active=True)
+    dropdown_list = []
+    for x in individuals:
+        dropdown_list.append(x)
+    for x in orgs:
+        paid_count = Walker.objects.filter(organization=x)
+        if len(paid_count) > 0:
+            dropdown_list.append(x)
+    context = {
+        "title": "ETV Annual Power Walk",
+        "photos": HomeGalleryImage.objects.all(),
+        "dropdown_list": sorted(dropdown_list, key=lambda x: x.title),
+    }
+    return render(request, "annual_walkathon_home.html", context)
+
+
 def walker_detail(request, walker):
     #try:
         try:
@@ -215,7 +234,7 @@ def walker_registration(request):
             'orgs': orgs,
         }
         return render(request, 'registration_form.html', context)
-    
+
 def org_registration(request):
     if request.method == 'POST':
         org, created = Organization.objects.get_or_create(title = request.POST['organization'])
@@ -248,7 +267,7 @@ def org_registration(request):
     else:
         
         return render(request, 'org-registration.html')
-    
+
 def sponsor(request):
     if request.method == 'POST':
         data = request.POST
@@ -329,7 +348,7 @@ def sponsor(request):
             'mailing_form': BillingAddressForm(),
         }
         return render(request, 'sponsor-walk.html', context)
-    
+
 def sponsor_walker(request):
     if request.method == 'POST':
         print(request.POST)
@@ -358,7 +377,7 @@ def walker_donation_form(request):
         'walker_type': walker_type,
     }
     return render(request, 'support-walker-unique.html', context)
-    
+
 def process_walker_donation(request):
     if request.method == 'POST':
         data = request.POST
@@ -436,4 +455,3 @@ def process_walker_donation(request):
                 'message': 'There was an issue processing your payment method. Please verify your card details and try again'
             }
             return JsonResponse(data)
-        
