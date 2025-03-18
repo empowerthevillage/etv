@@ -956,7 +956,7 @@
     }
 
 
-    .etv-vbp-button-navbar {
+.etv-vbp-btn-navbar {
     width: 180px;
     height: 50px;
     background-color: #08C10E;
@@ -968,16 +968,18 @@
     cursor: pointer;
     position: relative;
     overflow: hidden;
+    display: inline-block;
+    text-decoration: none;
     transition: background-color 0.5s ease;
 }
 
-.etv-vbp-button-navbar:hover {
+.etv-vbp-btn-navbar:hover {
     background-color: #b2b2b2;
     background-position: 20px center;
     transition: background-color 0.5s ease, background-position 0.5s ease;
 }
 
-.etv-vbp-button-navbar span {
+.etv-vbp-btn-navbar span {
     position: absolute;
     left: 70px;
     top: 50%;
@@ -989,36 +991,35 @@
     font-family: Arial, sans-serif;
 }
 
-.etv-vbp-button-navbar .village {
+.etv-vbp-btn-navbar .village {
     color: #BF1E2D;
     top: 10px;
     transition-delay: 0.1s;
 }
 
-.etv-vbp-button-navbar .black {
+.etv-vbp-btn-navbar .black {
     color: #000000;
     top: 20px;
     transition-delay: 0.2s;
 }
 
-.etv-vbp-button-navbar .pages {
+.etv-vbp-btn-navbar .pages {
     color: #08C10E;
     top: 30px;
     transition-delay: 0.3s;
 }
 
-.etv-vbp-button-navbar:hover .village,
-.etv-vbp-button-navbar:hover .black,
-.etv-vbp-button-navbar:hover .pages {
+.etv-vbp-btn-navbar:hover .village,
+.etv-vbp-btn-navbar:hover .black,
+.etv-vbp-btn-navbar:hover .pages {
     opacity: 1;
 }
 
-.etv-vbp-button-navbar:not(:hover) .village,
-.etv-vbp-button-navbar:not(:hover) .black,
-.etv-vbp-button-navbar:not(:hover) .pages {
+.etv-vbp-btn-navbar:not(:hover) .village,
+.etv-vbp-btn-navbar:not(:hover) .black,
+.etv-vbp-btn-navbar:not(:hover) .pages {
     opacity: 0;
 }
-
 
     #navbar .vbp-btn-navbar {
       text-align: center;
