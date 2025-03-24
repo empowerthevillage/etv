@@ -934,7 +934,7 @@
       transition: all 0.3s ease-in-out
     }
 
-    a:hover {
+    a:not(.vbp-btn-navbar-v2):hover {
       filter: brightness(0.7)
     }
 
@@ -977,6 +977,8 @@
 
     .vbp-btn-img {
       position: absolute;
+      max-height: 90%;
+      top: 5%;
       background-image: url('https://empowerthevillage.s3.us-east-2.amazonaws.com/vbp_logo.svg');
       background-position-x: center;
       background-size: contain;
@@ -1065,6 +1067,7 @@
       left: 50%;
       background: #fff;
       opacity: 0;
+      filter: brightness(0.7);
       -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
       -moz-transform: translateX(-50%) translateY(-50%) rotate(45deg);
       -ms-transform: translateX(-50%) translateY(-50%) rotate(45deg);
@@ -1088,6 +1091,7 @@
     
     .vbp-btn-navbar-v2:hover .vbp-btn-text-village,
     .vbp-btn-navbar-v2:active .vbp-btn-text-village {
+      filter: brightness(0.7);
       -webkit-transition: all 0.3s;
       -moz-transition: all 0.3s;
       transition: all 0.3s;
@@ -1102,6 +1106,7 @@
 
     .vbp-btn-navbar-v2:hover .vbp-btn-text-black,
     .vbp-btn-navbar-v2:active .vbp-btn-text-black {
+      filter: brightness(0.7);
       -webkit-transition: all 0.3s;
       -moz-transition: all 0.3s;
       transition: all 0.3s;
@@ -1116,6 +1121,7 @@
 
     .vbp-btn-navbar-v2:hover .vbp-btn-text-pages,
     .vbp-btn-navbar-v2:active .vbp-btn-text-pages {
+      filter: brightness(0.7);
       -webkit-transition: all 0.3s;
       -moz-transition: all 0.3s;
       transition: all 0.3s;
