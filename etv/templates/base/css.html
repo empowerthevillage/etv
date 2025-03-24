@@ -947,7 +947,7 @@
 
   .vbp-btn-img {
     height: 100%;
-    /*position: absolute;*/
+    position: absolute;
     z-index: 0 !important;
     background-image: url('https://empowerthevillage.s3.us-east-2.amazonaws.com/vbp_logo.svg');
     background-position-x: center;
@@ -1073,17 +1073,18 @@
       color: #42b56e;
     }
 
-      .vbp-btn-navbar:hover .vbp-btn-img,
-      .vbp-btn-navbar:active .vbp-btn-img {
-        position: absolute;
-        -webkit-transition: all 0.3s;
-        -moz-transition: all 0.3s;
-        transition: all 0.3s;
-        -webkit-transform: translateX(-100%) rotate(180deg);
-        -moz-transform: translateX(-100%) rotate(180deg);
-        -ms-transform: translateX(-100%) rotate(180deg);
-        transform: translateX(-100%) rotate(180deg);
-      }
+    .vbp-btn-navbar:hover .vbp-btn-img,
+    .vbp-btn-navbar:active .vbp-btn-img {
+      -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      transition: all 0.3s;
+      /*
+      -webkit-transform: translateX(-100%) rotate(180deg);
+      -moz-transform: translateX(-100%) rotate(180deg);
+      -ms-transform: translateX(-100%) rotate(180deg);
+      transform: translateX(-100%) rotate(180deg);
+      */
+    }
 
 
     .vbp-btn-navbar:hover .vbp-btn-text-village,
@@ -1138,11 +1139,12 @@
       opacity: 1;
     }
 
+    /*
       .vbp-btn-img:hover:after {
         height: 400%;
         opacity: 1;
       }
-
+*/
     .donate-btn-navbar:active:after {
       height: 400%;
       opacity: 1;
@@ -1153,10 +1155,12 @@
     opacity: 1;
   }
 
+    /*
   .vbp-btn-img:active:after {
     height: 400%;
     opacity: 1;
   }
+*/
 
     .donate-btn-sidenav {
       border: solid 1px rgb(172, 172, 172);
