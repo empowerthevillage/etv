@@ -40,7 +40,6 @@
 <link rel="stylesheet" src="https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/justifiedGallery.min.css" />
 
 <style>
-
   @media only screen and (min-width:0px) {
     .d-sm-none {
       display: none;
@@ -872,7 +871,7 @@
       /* Internet Explorer/Edge */
       user-select: none;
       /* Non-prefixed version, currently
-      supported by Chrome, Edge, Opera and Firefox */
+                                  supported by Chrome, Edge, Opera and Firefox */
 
     }
 
@@ -945,51 +944,7 @@
       font-weight: 500
     }
 
-  .vbp-btn-img {
-    height: 100%;
-    position: absolute;
-    z-index: 0 !important;
-    background-image: url('https://empowerthevillage.s3.us-east-2.amazonaws.com/vbp_logo.svg');
-    background-position-x: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 100%;
-  }
-
-    .vbp-btn-text-container {
-      padding-top: .1em;
-      display: block;
-      position: absolute;
-      z-index: 1 !important;
-      float: left;
-    }
-
-    .vbp-btn-text-village {
-      display: block;
-      float: left;
-      clear: left;
-      color: rgb(191, 30, 45, 0);
-      font-weight: 650;
-    }
-
-    .vbp-btn-text-black {
-      display: block;
-      float: left;
-      clear: left;
-      color: rgb(0, 0, 0, 0);
-      font-weight: 650;
-    }
-
-    .vbp-btn-text-pages {
-      display: block;
-      float: left;
-      clear: left;
-      color: rgb(20, 158, 15, 0);
-      font-weight: 650;
-    }
-
     #navbar .donate-btn-navbar {
-      overflow: hidden;
       text-align: center;
       height: 50px;
       line-height: 18px;
@@ -1000,34 +955,81 @@
       padding-right: 12px;
     }
 
-    #navbar .vbp-btn-navbar_OLD {
-      text-align: center;
-      height: 50px;
-      line-height: 18px;
-      width: 240px;
-      background-color: #08c10e;
-      font-size: 14px;
-      padding-left: 12px;
-      padding-right: 12px;
-    }
+
+.etv-vbp-btn-navbar {
+    width: 180px;
+    height: 50px;
+    background-color: #08C10E;
+    background-image: url('https://empowerthevillage.s3.us-east-2.amazonaws.com/vbp_logo.svg');
+    background-size: 40px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    text-decoration: none;
+    transition: background-color 0.5s ease;
+}
+
+.etv-vbp-btn-navbar:hover {
+    background-color: #b2b2b2;
+    background-position: 20px center;
+    transition: background-color 0.5s ease, background-position 0.5s ease;
+}
+
+.etv-vbp-btn-navbar span {
+    position: absolute;
+    left: 70px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    font-family: Arial, sans-serif;
+}
+
+.etv-vbp-btn-navbar .village {
+    color: #BF1E2D;
+    top: 10px;
+    transition-delay: 0.1s;
+}
+
+.etv-vbp-btn-navbar .black {
+    color: #000000;
+    top: 20px;
+    transition-delay: 0.2s;
+}
+
+.etv-vbp-btn-navbar .pages {
+    color: #08C10E;
+    top: 30px;
+    transition-delay: 0.3s;
+}
+
+.etv-vbp-btn-navbar:hover .village,
+.etv-vbp-btn-navbar:hover .black,
+.etv-vbp-btn-navbar:hover .pages {
+    opacity: 1;
+}
+
+.etv-vbp-btn-navbar:not(:hover) .village,
+.etv-vbp-btn-navbar:not(:hover) .black,
+.etv-vbp-btn-navbar:not(:hover) .pages {
+    opacity: 0;
+}
 
     #navbar .vbp-btn-navbar {
-      overflow: hidden;
-      padding-top: .25em;
-      padding-bottom: .25em;
       text-align: center;
       height: 50px;
       line-height: 18px;
-      width: 140px;
+      width: 280px;
       background-color: #08c10e;
-      font-size: 14px;
-      padding-left: 1em;
-      padding-right: 1em;
-      position: relative;
-      /*background-image: url('https://empowerthevillage.s3.us-east-2.amazonaws.com/vbp_logo.svg');
-      background-position-x: center;
-      background-size: contain;
-      background-repeat: no-repeat;*/
+      font-size: 18px;
+      padding-left: 12px;
+      padding-right: 12px;
     }
 
     .donate-btn-navbar:after {
@@ -1073,60 +1075,9 @@
       color: #42b56e;
     }
 
-    .vbp-btn-navbar:hover .vbp-btn-img,
-    .vbp-btn-navbar:active .vbp-btn-img {
-      -webkit-transition: all 0.3s;
-      -moz-transition: all 0.3s;
-      transition: all 0.3s;
-      /*
-      -webkit-transform: translateX(-100%) rotate(180deg);
-      -moz-transform: translateX(-100%) rotate(180deg);
-      -ms-transform: translateX(-100%) rotate(180deg);
-      transform: translateX(-100%) rotate(180deg);
-      */
-    }
-
-
-    .vbp-btn-navbar:hover .vbp-btn-text-village,
-    .vbp-btn-navbar:active .vbp-btn-text-village {
-      -webkit-transition: all 0.3s;
-      -moz-transition: all 0.3s;
-      transition: all 0.3s;
-      transition-delay: 0.05s;
-      -webkit-transform: translateX(2em);
-      -moz-transform: translateX(2em);
-      -ms-transform: translateX(2em);
-      transform: translateX(2em);
-      color: rgb(191, 30, 45, 1);
-      font-weight: 650;
-    }
-
-    .vbp-btn-navbar:hover .vbp-btn-text-black,
-    .vbp-btn-navbar:active .vbp-btn-text-black {
-      -webkit-transition: all 0.3s;
-      -moz-transition: all 0.3s;
-      transition: all 0.3s;
-      transition-delay: 0.10s;
-      -webkit-transform: translateX(2em);
-      -moz-transform: translateX(2em);
-      -ms-transform: translateX(2em);
-      transform: translateX(2em);
-      color: rgb(0, 0, 0, 1);
-      font-weight: 650;
-    }
-
-    .vbp-btn-navbar:hover .vbp-btn-text-pages,
-    .vbp-btn-navbar:active .vbp-btn-text-pages {
-      -webkit-transition: all 0.3s;
-      -moz-transition: all 0.3s;
-      transition: all 0.3s;
-      transition-delay: 0.15s;
-      -webkit-transform: translateX(2em);
-      -moz-transform: translateX(2em);
-      -ms-transform: translateX(2em);
-      transform: translateX(2em);
-      color: rgb(20, 158, 15, 1);
-      font-weight: 650;
+    .vbp-btn-navbar:hover,
+    .vbp-btn-navbar:active {
+      color: #42b56e;
     }
 
     .donate-btn-navbar:hover:after {
@@ -1135,32 +1086,19 @@
     }
 
     .vbp-btn-navbar:hover:after {
-      height: 210%;
+      height: 500%;
       opacity: 1;
     }
 
-    /*
-      .vbp-btn-img:hover:after {
-        height: 400%;
-        opacity: 1;
-      }
-*/
     .donate-btn-navbar:active:after {
       height: 400%;
       opacity: 1;
     }
 
-  .vbp-btn-navbar:active:after {
-    height: 400%;
-    opacity: 1;
-  }
-
-    /*
-  .vbp-btn-img:active:after {
-    height: 400%;
-    opacity: 1;
-  }
-*/
+    .vbp-btn-navbar:active:after {
+      height: 400%;
+      opacity: 1;
+    }
 
     .donate-btn-sidenav {
       border: solid 1px rgb(172, 172, 172);
@@ -1484,17 +1422,17 @@
     }
 
     /* ----------------------------------------------
-  * Generated by Animista on 2022-3-24 18:25:10
-  * Licensed under FreeBSD License.
-  * See http://animista.net/license for more info. 
-  * w: http://animista.net, t: @cssanimista
-  * ---------------------------------------------- */
+* Generated by Animista on 2022-3-24 18:25:10
+* Licensed under FreeBSD License.
+* See http://animista.net/license for more info. 
+* w: http://animista.net, t: @cssanimista
+* ---------------------------------------------- */
 
     /**
-  * ----------------------------------------
-  * animation scale-up-center
-  * ----------------------------------------
-  */
+* ----------------------------------------
+* animation scale-up-center
+* ----------------------------------------
+*/
     @-webkit-keyframes scale-up-center {
       0% {
         -webkit-transform: scale(0.8);
@@ -2164,7 +2102,7 @@
     }
 
     #navbar .vbp-btn-navbar {
-      line-height: 1.05em;
+      line-height: 55px;
       letter-spacing: 2px
     }
 
@@ -3098,6 +3036,4 @@
       display: none;
     }
   }
-
-
 </style>
