@@ -248,6 +248,7 @@
               </li>
           </ul>
         </div>
+        <!-- Mobile Nav: Start -->
         <ul id="side-nav" class="sidenav" style="background-color:rgba(255, 255, 255, 0.899)">
           <li style="margin-bottom: 2px; background-color: rgb(230, 229, 228);"><img src="https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/footer-r.png" width="95%" style="margin-left:2.5%; padding-top:19px"></li>
           <li><a href="{{ home_url }}" class="waves-effect">Home</a></li>
@@ -292,14 +293,8 @@
               </li>
             </ul>
           </li>
-          
-          
-          
-          
-          <li><a href="{{ contact_url }}" class="waves-effect">Contact</a></li>
-          <li><a class="waves-effect" href="{{ events_url }}">Events</a></li>
-          <li><a class="waves-effect" href="{{ news_url }}">News</a></li>
-          <li class="divider"></li>
+
+          <!-- Mobile Nav: Strategic Pillars -->
           <li><a href="{{ pillars_url }}">Strategic Pillars</a></li>
           <li class="">
             
@@ -344,21 +339,31 @@
               </li>
             </ul>
           </li>
+          
+          
+          <!-- Mobile Nav: Events -->
+          <li><a class="waves-effect" href="{{ events_url }}">Events</a></li>
+          
+          <!-- Mobile Nav: Contact -->
+          <li><a href="{{ contact_url }}" class="waves-effect">Contact</a></li>
+
+
+          <li class="divider"></li>
         
           <li class="divider"></li>
           {% if request.user.is_authenticated %}
           {% if request.user.is_staff %}
           <li><a href="{{ dashboard_url }}" class="waves-effect">Dashboard</a></li>
           {% endif %}
-          <li><a href="/shop" class="waves-effect">Shop</a></li>
+          <!--<li><a href="/shop" class="waves-effect">Shop</a></li>-->
           <li><a href="{{ account_url }}" class="waves-effect">Account</a></li>
           <li><a href="{{ logout_url }}" class="waves-effect">Logout</a></li>
           
           {% else %}
           <!--<li><a href="{{ login_url }}" class="waves-effect">Login</a></li>
-          <li><a href="{{ register_url }}" class="waves-effect">Register</a></li>-->
+          <li><a href="{{ register_url }}" class="waves-effect">Register</a></li>
           <li><a href="/shop" class="waves-effect">Shop</a></li>
-          <li><a class="waves-effect modal-trigger" href="#join-the-village-modal">Join The Village</a></li>
+          <li><a class="waves-effect modal-trigger" href="#join-the-village-modal">Join The Village</a></li>-->
           {% endif %}
           <li class="divider"></li>
           <a class="btn btn-large waves-effect waves-light donate-btn-sidenav" style="line-height: 50px; width: 93%" href="{{ donate_url }}" id="donate-btn-navbar">DONATE</a>
@@ -369,6 +374,8 @@
             <a href="https://www.youtube.com/@empower-the-village" class="youtube nav-socialmedia" target="_blank"><i class="fab fa-youtube nav-socialmedia-icon"></i></a>
           </div>
         </ul>
+        <!-- Mobile Nav: End -->
+
           <div class="dropdown-container">
             <ul id="nav-dropdown-sp" class="dropdown-content dd-base">
               <li><a class="center-align valign-wrapper {% if request.path == efbf_url %}active{% endif %}" href="{{ pillars_url }}">Strategic Pillars</a></li>
