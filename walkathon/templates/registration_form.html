@@ -295,11 +295,11 @@ Register | ETV 2024 Power Walk
                             </div>
                         </div>
                     </fieldset>
-                    <!--
+
                     <fieldset class="checkout-fieldset z-depth-1">
                       <div class="row" style="margin-bottom: 0;">
                           <h5 class="fieldset-title" style="padding-bottom: 10px;">T-Shirt Size</h5>
-                    -->
+
                           <!--
                           <p style="margin-bottom: 30px;">
                             <label>
@@ -308,7 +308,7 @@ Register | ETV 2024 Power Walk
                             </label>
                           </p>
                           -->
-                    <!--
+
                           <div id="shirt-size-selector">
                             <div class="input-field col s8 m4">
                               <select name="shirt-size">
@@ -325,7 +325,7 @@ Register | ETV 2024 Power Walk
                           </div>
                       </div>
                   </fieldset>
-                -->
+
                 </form>
               </div>
               <div class="step-2">
@@ -582,8 +582,6 @@ braintree.client.create({
             }
           },
           error: function(){
-            console.log("fromData:");
-            console.log(formData);
             Swal.fire(
               'An Error Occured',
               'Please Try Again',
