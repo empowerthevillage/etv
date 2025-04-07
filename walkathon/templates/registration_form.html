@@ -582,6 +582,8 @@ braintree.client.create({
             }
           },
           error: function(){
+            console.log("fromData:");
+            console.log(formData);
             Swal.fire(
               'An Error Occured',
               'Please Try Again',
