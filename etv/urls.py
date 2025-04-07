@@ -161,6 +161,7 @@ urlpatterns = [
     path('walkathon/', include(("walkathon.urls", "walkathon"), namespace="walkathon")),
     path('power-walk-2023/', include(("walkathon.urls", "walkathon"), namespace="power-walk")),
     path('power-walk-2024/', include(("walkathon.urls", "walkathon"), namespace="power-walk-24")),
+    path('power-walk-2025/', include(("walkathon.urls", "walkathon"), namespace="power-walk-25")),
     path('annual-power-walk/', include(("walkathon.urls", "walkathon"), namespace="annual-power-walk")),
     path('village-empowerment-network/', include(("ven.urls", "ven"), namespace='ven')),
     path('village-empowerment-network-nomination/', venForm, name='ven-nomination'),

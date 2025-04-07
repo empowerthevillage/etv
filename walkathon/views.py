@@ -31,11 +31,11 @@ def walker_home(request):
         if len(paid_count) > 0:
             dropdown_list.append(x)
     context = {
-        'title': 'ETV 2024 Power Walk',
+        'title': 'ETV 2025 Power Walk',
         'photos': HomeGalleryImage.objects.all(),
         'dropdown_list': sorted(dropdown_list, key=lambda x: x.title)
     }
-    return render(request, 'walkathon_home.html', context)
+    return render(request, "walkathon_home_2025.html", context)
 
 
 def annual_walker_home(request):
@@ -76,8 +76,8 @@ def walker_detail(request, walker):
             'donation_list': donation_list,
         }
         return render(request, 'walker_detail.html', context)
-    #except:
-       #return redirect('/power-walk-2023/')
+# except:
+# return redirect('/power-walk-2023/')
 
 def org_walker_detail(request, org, walker):
     walker_obj = Walker.objects.get(slug=walker)

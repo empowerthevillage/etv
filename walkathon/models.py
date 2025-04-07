@@ -24,7 +24,7 @@ class Organization(models.Model):
         return str(self.title)
 
     def get_absolute_url(self):
-        return reverse("power-walk-24:walker-detail", kwargs={"walker": self.slug})
+        return reverse("power-walk-25:walker-detail", kwargs={"walker": self.slug})
 
     @property
     def goal_truncated(self):
@@ -103,7 +103,7 @@ class Walker(models.Model):
         return '%s %s' %(self.first_name, self.last_name)
 
     def get_absolute_url(self):
-        return reverse("power-walk-24:walker-detail", kwargs={"walker": self.slug})
+        return reverse("power-walk-25:walker-detail", kwargs={"walker": self.slug})
     
     @property
     def goal_truncated(self):
