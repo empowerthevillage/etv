@@ -584,7 +584,7 @@ class AuctionItem(models.Model):
         return str(self.title)
     
     def get_buy_now_url(self):
-        return str('/events/2023-power-swing-silent-auction/buy-now/%s' %(self.item_id))
+        return str('/events/power-swing-silent-auction/buy-now/%s' %(self.item_id))
     
     class Meta:
         ordering = ['order']
