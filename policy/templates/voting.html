@@ -8,9 +8,10 @@
 {% block content %}
 
 <div class="parallax-container z-depth-3 box-shadow valign-wrapper">
-    
+
     <div class="container z-depth-4 center-align parallax-banner" id="obb-banner">
-        <h4 class="obb-title" style="font-family: oskar; font-weight: 800; letter-spacing: 1px; color:rgb(184, 23, 23)">Operation: <b style="font-weight:800; color: black">Ballot Box™</b></h4>
+        <h4 class="obb-title" style="font-family: oskar; font-weight: 800; letter-spacing: 1px; color:rgb(184, 23, 23)">
+            Operation: <b style="font-weight:800; color: black">Ballot Box™</b></h4>
     </div>
     <div class="parallax">
         <img src='https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/policy-collage.webp'>
@@ -22,36 +23,41 @@
     <div class="row" style="background-color: rgba(255, 255, 255, 0.781);">
         <div class="col s12 l10 offset-l1  pillar-body center-align">
             <p class="pillar-tagline">
-                ETV’s nonpartisan voter education and mobilization program is executed annually to inform Black voters in key strategic states how and where to vote early, reliably, and unimpeded by the vestiges of systemic racism and abuse.
+                ETV’s nonpartisan voter education and mobilization program is executed annually to inform Black voters
+                in key strategic states how and where to vote early, reliably, and unimpeded by the vestiges of systemic
+                racism and abuse.
             </p>
-            <h6 class="voting-subtitle">Check Out & Share 2024 Early Voting<br/>Info & Resources Below!</h6>
+            <h6 class="voting-subtitle">Check Out & Share 2025 Early Voting<br />Info & Resources Below!</h6>
             <div class="divider" style="margin-top: 10px; margin-bottom: 20px"></div>
             <div class="row">
                 <div class="col s12 l8 offset-l2">
                     {% for flyer in flyers %}
-                        {% if flyer.state == 'AK' %}
-                            {% if flyer.clickable_link %}
-                            <a target="_blank" href="{{ flyer.clickable_link }}">
-                            {% else %}
-                            <a>
+                    {% if flyer.state == 'AK' %}
+                    {% if flyer.clickable_link %}
+                    <a target="_blank" href="{{ flyer.clickable_link }}">
+                        {% else %}
+                        <a>
                             {% endif %}
-                                <img class="z-depth-1" src="{{ flyer.thumbnail_link }}" width="100%">
-                            </a>
+                            <img class="z-depth-1" src="{{ flyer.thumbnail_link }}" width="100%">
+                        </a>
                         {% endif %}
-                    {% endfor %}
+                        {% endfor %}
                 </div>
             </div>
             <div class="divider" style="margin-top: 10px; margin-bottom: 10px"></div>
-            <p class="voting-subtitle" style="text-align: center;margin-top:0">Review & click downloadable 2024 state-specific voting info below & share with friends, family, and your network!<br/>Scroll to Page 2 of State Flyers to Access County-Specific Info & Links.
+            <p class="voting-subtitle" style="text-align: center;margin-top:0">Review & click downloadable 2025
+                state-specific voting info below & share with friends, family, and your network!<br />Scroll to Page 2
+                of State Flyers to Access County-Specific Info & Links.
             </p>
             <div class="row">
                 <div class="col s12 m6">
-                    <a target="_blank" href="https://2024obbnew.s3.us-east-2.amazonaws.com/NJ.pdf">
-                        <img class="lazy z-depth-1" src="{{ nj_flyer.thumbnail_link }}" width="100%" style="margin-top: 10px">
+                    <a target="_blank" href="https://2025obbnew.s3.us-east-2.amazonaws.com/NJ.pdf">
+                        <img class="lazy z-depth-1" src="{{ nj_flyer.thumbnail_link }}" width="100%"
+                            style="margin-top: 10px">
                     </a>
                 </div>
                 <div class="col s12 m6">
-                    <a target="_blank" href="https://2024obbnew.s3.us-east-2.amazonaws.com/NJ.pdf">
+                    <a target="_blank" href="https://2025obbnew.s3.us-east-2.amazonaws.com/NJ.pdf">
                         <img class="lazy z-depth-1" src="{{ nj_flyer.pg2_link }}" width="100%" style="margin-top: 10px">
                     </a>
                 </div>
@@ -61,11 +67,12 @@
                 <div class="col s12 m6 l4">
                     {% if flyer.clickable_link %}
                     <a target="_blank" href="{{ flyer.clickable_link }}">
-                    {% else %}
-                    <a>
-                    {% endif %}
-                        <img class="lazy z-depth-1" src="{{ flyer.thumbnail_link }}" width="100%" style="margin-top: 10px">
-                    </a>
+                        {% else %}
+                        <a>
+                            {% endif %}
+                            <img class="lazy z-depth-1" src="{{ flyer.thumbnail_link }}" width="100%"
+                                style="margin-top: 10px">
+                        </a>
                 </div>
                 {% endfor %}
             </div>
@@ -78,55 +85,67 @@
         font-size: 32px;
         padding: 0% 2% 3% 2%;
     }
+
     #state-modal {
         padding: 2%;
         height: 80%
     }
+
     #state-modal .input-field {
         width: 60%;
         margin-left: 20%;
     }
+
     h5 b {
         font-family: poppins;
         font-weight: 500;
         font-size: 24px;
         padding-right: 5%
     }
+
     h5 a {
         font-family: poppins;
         font-weight: 400;
         font-size: 22px;
         padding-right: 5%
     }
+
     #map {
         background-color: transparent;
     }
+
     .pillar-header {
         background-color: white;
     }
-    
+
     .pillar-collapsible li {
-        margin:0 !important;
+        margin: 0 !important;
     }
+
     .phase-one-list {
         padding-left: 10% !important;
         padding-right: 10%;
     }
+
     .phase-one-list li {
         padding: 15px;
     }
-    .phase-one-title{
+
+    .phase-one-title {
         font-family: oskar;
         text-align: center;
     }
-    @media only screen and (min-width:0px){
+
+    @media only screen and (min-width:0px) {
         #obb-banner {
             width: fit-content;
         }
+
         .print-btn {
             width: fit-content;
-            
+
         }
+
         .print-btn p {
             background: black;
             color: white;
@@ -134,52 +153,62 @@
             font-size: 28px;
             line-height: 36px;
             font-weight: 300;
-            box-shadow: 0px 0px 7px 0px rgba(66,66,66,0.72);
-            -webkit-box-shadow: 0px 0px 7px 0px rgba(66,66,66,0.72);
-            -moz-box-shadow: 0px 0px 7px 0px rgba(66,66,66,0.72);
+            box-shadow: 0px 0px 7px 0px rgba(66, 66, 66, 0.72);
+            -webkit-box-shadow: 0px 0px 7px 0px rgba(66, 66, 66, 0.72);
+            -moz-box-shadow: 0px 0px 7px 0px rgba(66, 66, 66, 0.72);
             transition: all 0.3s ease-in-out;
             padding: 10px
         }
+
         .print-btn p:hover {
             background: rgb(54, 159, 20);
             cursor: pointer;
         }
+
         .health-main-title {
-        font-family: oskar;
-        font-size: 36px;
-        text-align: center;
-        color:rgb(18, 148, 18);
-        margin-bottom: 0;
-        margin-top: 20px
-    }
-    .health-main-text {
-        line-height: 32px;
-    }
+            font-family: oskar;
+            font-size: 36px;
+            text-align: center;
+            color: rgb(18, 148, 18);
+            margin-bottom: 0;
+            margin-top: 20px
+        }
+
+        .health-main-text {
+            line-height: 32px;
+        }
+
         .phase-one-list {
             font-size: 16px
         }
+
         .phase-one-title {
             font-size: 38px;
             line-height: 48px;
         }
+
         .voting-subtitle {
-            font-size: 18px; 
+            font-size: 18px;
             margin-bottom: 0px;
             padding-top: 10px;
             line-height: 22px;
             font-family: 'oskar';
             font-weight: 600;
         }
+
         .coming-soon-text {
             font-size: 28px;
         }
+
         .pillar-collapsible {
-        width: 100%;
-        margin-left:0;
-    }
-        p {
-            font-size:16px
+            width: 100%;
+            margin-left: 0;
         }
+
+        p {
+            font-size: 16px
+        }
+
         .pillar-title {
             color: black;
             font-family: poppins;
@@ -188,150 +217,182 @@
             text-transform: none;
         }
     }
-    @media only screen and (min-width:601px){
+
+    @media only screen and (min-width:601px) {
         #obb-banner {
             width: 60%;
         }
+
         .obb-title {
-        font-size: 42px;
+            font-size: 42px;
             padding: 0% 2% 2% 2%;
         }
+
         .health-main-title {
-        font-family: oskar;
-        font-size: 48px;
-        text-align: center;
-        color:rgb(18, 148, 18);
-        margin-bottom: 0;
-        margin-top: 20px
-    }
+            font-family: oskar;
+            font-size: 48px;
+            text-align: center;
+            color: rgb(18, 148, 18);
+            margin-bottom: 0;
+            margin-top: 20px
+        }
+
         .phase-one-list {
             font-size: 18px
         }
+
         .phase-one-title {
             font-size: 48px;
             line-height: 56px;
             margin-left: 10%
         }
+
         .voting-subtitle {
-            font-size: 28px; 
+            font-size: 28px;
             line-height: 32px;
             margin-bottom: 10px;
         }
+
         .coming-soon-text {
             font-size: 32px;
             line-height: 56px;
         }
+
         p {
-            font-size:18px
+            font-size: 18px
         }
+
         .pillar-title {
             font-size: 20px;
             letter-spacing: 2px;
         }
+
         .pillar-collapsible {
-        width: 80%;
-        margin-left:10%;
-    }
+            width: 80%;
+            margin-left: 10%;
+        }
+
         h5 b {
             font-size: 32px;
             line-height: 40px
         }
     }
-    @media only screen and (min-width:993px){
+
+    @media only screen and (min-width:993px) {
         .print-btn p {
             font-size: 36px;
             padding-bottom: 15px
         }
+
         #obb-banner {
             width: 60%;
         }
+
         .obb-title {
             font-size: 56px;
             padding: 0% 2% 2% 2%;
         }
+
         .health-main-title {
-        font-size: 48px;
-        text-align: left;
-        color:rgb(18, 148, 18);
-        margin-bottom: 0;
-        margin-top:0
-    }
+            font-size: 48px;
+            text-align: left;
+            color: rgb(18, 148, 18);
+            margin-bottom: 0;
+            margin-top: 0
+        }
+
         .phase-one-list {
             font-size: 22px
         }
+
         .phase-one-title {
             font-size: 64px;
             line-height: 72px;
         }
+
         p {
-            font-size:22px
+            font-size: 22px
         }
+
         .pillar-collapsible {
             width: 70%;
-            margin-left:15%;
+            margin-left: 15%;
         }
+
         .coming-soon-text {
             font-size: 38px;
         }
+
         .voting-subtitle {
-            font-size: 38px; 
+            font-size: 38px;
             line-height: 42px;
             margin-bottom: 15px;
         }
-}
-    @media only screen and (min-width:1201px){
+    }
+
+    @media only screen and (min-width:1201px) {
         #obb-banner {
             width: 55%;
         }
+
         .pillar-collapsible {
-        width: 60%;
-        margin-left:20%;
-    }
-    .pillar-title {
+            width: 60%;
+            margin-left: 20%;
+        }
+
+        .pillar-title {
             font-size: 24px;
             letter-spacing: 2px;
         }
+
         .health-main-title {
-        font-size: 52px;
+            font-size: 52px;
+        }
+
+        .health-main-text {
+            font-size: 24px;
+            line-height: 40px
+        }
     }
-    .health-main-text {
-        font-size: 24px;
-        line-height: 40px
-    }
-    }
-    
 </style>
 <style>
-    .phase-one-title{
+    .phase-one-title {
         font-family: oskar;
         text-align: center;
         width: 100%;
         margin-left: 0;
     }
+
     .jvectormap-container {
         height: 100%;
     }
-    .map-container{
+
+    .map-container {
         background-color: transparent;
     }
+
     h6 {
         font-weight: 500;
         text-align: center;
     }
+
     p {
         padding-left: 10%;
         padding-right: 10%
     }
+
     @media only screen and (min-width: 0px) {
         h5 {
             font-size: 54px;
             line-height: 36px
         }
+
         h6 {
             font-size: 22px;
             letter-spacing: 1px;
             line-height: 36px
         }
+
         p {
             font-size: 20px
         }
