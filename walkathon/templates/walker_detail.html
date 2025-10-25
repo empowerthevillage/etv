@@ -4,30 +4,33 @@
 {% block title %}{{ title }}{% endblock %}
 
 {% block meta_tags %}
-<meta property="og:url"           content="{{ walker.get_absolute_url }}" />
-<meta property="og:type"          content="website" />
-<meta property="og:title"         content="Empower The Village" />
-<meta property="og:description"   content="I'm taking steps to restore prosperity, peace and power to the Black community with Empower The Village! Learn how you can support my walk" />
-<meta property="og:image"         content="https://pub-55bcc1133b6f4859ad5d4099f52a3340.r2.dev/2025%20Power%20Walk%20Flyer%20(1)%20(1).png" />
+<meta property="og:url" content="{{ walker.get_absolute_url }}" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Empower The Village" />
+<meta property="og:description"
+    content="I'm taking steps to restore prosperity, peace and power to the Black community with Empower The Village! Learn how you can support my walk" />
+<meta property="og:image" content="https://pub-b5328bf79b944420816257d1e024a4ac.r2.dev/a6e0a-e2jlu.webp" />
 {% endblock %}
 {% block content %}
 <div id="fb-root"></div>
-<script>(function(d, s, id) {
-var js, fjs = d.getElementsByTagName(s)[0];
-if (d.getElementById(id)) return;
-js = d.createElement(s); js.id = id;
-js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
-fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+<script>(function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
 <script src="https://platform.linkedin.com/in.js" type="text/javascript">lang: en_US</script>
 
 
 <div class="parallax-container z-depth-3 box-shadow valign-wrapper">
     <div class="container z-depth-4 center-align parallax-banner" style="padding-left: 20px; padding-right: 20px;">
-        <h1 style="font-family: oskar; color:black; font-weight: 800; padding-bottom: 15px;">Show your Support for {{ walker }} & Community Mental Health!</h1>
+        <h1 style="font-family: oskar; color:black; font-weight: 800; padding-bottom: 15px;">Show your Support for {{
+            walker }} & Community Mental Health!</h1>
     </div>
     <div class="parallax">
-        <img class="lazy" src="https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/health-collage-4.webp" style="opacity: 1;">
+        <img class="lazy" src="https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/health-collage-4.webp"
+            style="opacity: 1;">
     </div>
 </div>
 <div class="row hidden" style="padding: 1%" id="donate-window">
@@ -36,74 +39,86 @@ fjs.parentNode.insertBefore(js, fjs);
     <div class="col s12" style="padding-bottom: 20px;padding-top: 0px;">
         <a href="/power-walk-2025/" class="back-link"><i class="bi bi-arrow-left"></i> Back to Power Walk home page</a>
         <div class="right valign-wrapper" style="padding-right: 20px;">
-            <div class="fb-share-button" data-href="{{ walker.get_absolute_url }}" data-layout="button" style="margin-right: 5px;"></div>
+            <div class="fb-share-button" data-href="{{ walker.get_absolute_url }}" data-layout="button"
+                style="margin-right: 5px;"></div>
             <script type="IN/Share" data-url="{{ waler.get_absolute_url }}"></script>
         </div>
         <br>
-        <a href="/power-walk-2025/register/" class="btn" style="font-size: 12px; font-weight: 600; margin-top: 5px; background: rgb(27, 154, 27);">Register for the Power Walk Today!</a>
+        <a href="/power-walk-2025/register/" class="btn"
+            style="font-size: 12px; font-weight: 600; margin-top: 5px; background: rgb(27, 154, 27);">Register for the
+            Power Walk Today!</a>
     </div>
     <div class="col s4 offset-s4 offset-m1 l3 offset-l2">
         {% if walker.image %}
         <img src="{{ walker.image.url }}" width="100%" class="z-depth-4">
         {% else %}
-        <img src="https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/power-walk-avatar.png" width="100%" class="z-depth-4">
+        <img src="https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/power-walk-avatar.png" width="100%"
+            class="z-depth-4">
         {% endif %}
-        
+
     </div>
-    
+
     <div class="col s12 m6">
-        <h6 class="walker-name" style="color:rgb(9, 131, 9)">{% if walker_type == 'individual' %}Power Walker{% elif walker_type == 'org' %}Power Walk Group{% endif %}</h6>
+        <h6 class="walker-name" style="color:rgb(9, 131, 9)">{% if walker_type == 'individual' %}Power Walker{% elif
+            walker_type == 'org' %}Power Walk Group{% endif %}</h6>
         <h6 class="walker-name">{{ walker }}</h6>
         {% if walker.organization %}
-        <h6 class="walker-name mini">I'm walking with <a href="{{ walker.organization.get_absolute_url }}">{{ walker.organization }}</a></h6>
+        <h6 class="walker-name mini">I'm walking with <a href="{{ walker.organization.get_absolute_url }}">{{
+                walker.organization }}</a></h6>
         {% endif %}
-        <p class="power-walk-slogan" style="font-weight:600;">Empower The Village to improve community health and wellness now!</p>
-        <p class="power-walk-slogan" style="color:rgb(9, 131, 9)">Reports of the Mental Health Crisis affecting our children and people of all ages is all over the news. ETV's solutions-focused work is more urgent and important than ever! In recent years, the US Surgeon General issued a warning and declared that immediate action must be taken.</p>
-        <p class="power-walk-slogan" style="color: black; font-weight: 600;">Support us ... We are making a difference where it counts!</p>
+        <p class="power-walk-slogan" style="font-weight:600;">Empower The Village to improve community health and
+            wellness now!</p>
+        <p class="power-walk-slogan" style="color:rgb(9, 131, 9)">Reports of the Mental Health Crisis affecting our
+            children and people of all ages is all over the news. ETV's solutions-focused work is more urgent and
+            important than ever! In recent years, the US Surgeon General issued a warning and declared that immediate
+            action must be taken.</p>
+        <p class="power-walk-slogan" style="color: black; font-weight: 600;">Support us ... We are making a difference
+            where it counts!</p>
         <div class="row">
             <div class="col s4 offset-s2">
                 <p>
                     <label>
-                    <input value="10" class="with-gap" name="amount" type="radio" />
-                    <span>$10</span>
+                        <input value="10" class="with-gap" name="amount" type="radio" />
+                        <span>$10</span>
                     </label>
                 </p>
                 <p>
                     <label>
-                    <input value="25" class="with-gap" name="amount" type="radio" />
-                    <span>$25</span>
+                        <input value="25" class="with-gap" name="amount" type="radio" />
+                        <span>$25</span>
                     </label>
                 </p>
                 <p>
                     <label>
-                    <input value="50" class="with-gap" name="amount" type="radio" />
-                    <span>$50</span>
+                        <input value="50" class="with-gap" name="amount" type="radio" />
+                        <span>$50</span>
                     </label>
                 </p>
             </div>
             <div class="col s6">
-            <p>
-                <label>
-                  <input value="100" class="with-gap" name="amount" type="radio" />
-                  <span>$100</span>
-                </label>
-            </p>
-            <p>
-                <label>
-                  <input value="250" class="with-gap" name="amount" type="radio" />
-                  <span>$250</span>
-                </label>
-            </p>
-            <p>
-                <label>
-                  <input value="" class="with-gap" name="amount" type="radio"  id="other-amount"/>
-                  <span>Custom Amount</span>
-                </label>
-            </p>
-            <div class="other-input hidden text-field" id="other-input-wrapper">
-                <div class="valign-wrapper">$<input type="number" id="other-input" style="width: 50%; padding-left: 10px"></div>
-                <label>Enter a Custom Amount</label>
-              </div>
+                <p>
+                    <label>
+                        <input value="100" class="with-gap" name="amount" type="radio" />
+                        <span>$100</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input value="250" class="with-gap" name="amount" type="radio" />
+                        <span>$250</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input value="" class="with-gap" name="amount" type="radio" id="other-amount" />
+                        <span>Custom Amount</span>
+                    </label>
+                </p>
+                <div class="other-input hidden text-field" id="other-input-wrapper">
+                    <div class="valign-wrapper">$<input type="number" id="other-input"
+                            style="width: 50%; padding-left: 10px"></div>
+                    <label>Enter a Custom Amount</label>
+                </div>
             </div>
         </div>
         <div class="center-align">
@@ -114,17 +129,22 @@ fjs.parentNode.insertBefore(js, fjs);
         <div class="divider"></div>
     </div>
     <div class="col s12" style="display:flex; justify-content: center">
-        <a href="/power-walk-2025/" class="btn" style="font-size: 18px; font-weight: 600; margin-top: 0px; margin-bottom: 15px; height: fit-content; line-height: 24px; padding-top: 8px; padding-bottom: 5px;background: rgb(27, 154, 27); width: fit-content;">Click to Learn More About ETV's Mental Health Initiative!</a>
+        <a href="/power-walk-2025/" class="btn"
+            style="font-size: 18px; font-weight: 600; margin-top: 0px; margin-bottom: 15px; height: fit-content; line-height: 24px; padding-top: 8px; padding-bottom: 5px;background: rgb(27, 154, 27); width: fit-content;">Click
+            to Learn More About ETV's Mental Health Initiative!</a>
     </div>
     <div class="col s10 offset-s1 m4 offset-m0 l3 offset-l1">
         <div class="card goal-card" style="width: 100%">
             <div class="card-body" style="padding: 2% 5%; height: 425px;">
                 <div class="row">
                     <div class="col-12 center-align">
-                        <h5 style="font-family: oskar; margin-bottom: 0; padding-bottom: 0; text-decoration: underline;">{% if walker_type == 'individual' %}My Power Walk Goal{% elif walker_type == 'org' %}Our Power Walk Goal{% endif %}</h5>
+                        <h5
+                            style="font-family: oskar; margin-bottom: 0; padding-bottom: 0; text-decoration: underline;">
+                            {% if walker_type == 'individual' %}My Power Walk Goal{% elif walker_type == 'org' %}Our
+                            Power Walk Goal{% endif %}</h5>
                     </div>
                 </div>
-                
+
                 <div class="margin: 0">
                     <div id="thermometer">
                         <div class="track">
@@ -134,9 +154,10 @@ fjs.parentNode.insertBefore(js, fjs);
                                     <div class="amount" id="goalAmount">{{ walker.goal_truncated }}</div>
                                 </div>
                             </div>
-                            
+
                             <div class="progress">
-                                <div style="display: block;" class="amount" id="progessAmount">{{ walker.donation_total_truncated }}</div>
+                                <div style="display: block;" class="amount" id="progessAmount">{{
+                                    walker.donation_total_truncated }}</div>
                             </div>
                             <div class="bulb">
                                 <div class="inner-bulb"></div>
@@ -144,25 +165,27 @@ fjs.parentNode.insertBefore(js, fjs);
                         </div>
                     </div>
                 </div>
-                
+
             </div>
         </div>
     </div>
     <div class="col s10 offset-s1 m8 l7">
         <div class="card" style="height: 425px;">
-            <div class="header" style="border-bottom: 1px solid rgb(233, 233, 233);background: url('https://pub-55bcc1133b6f4859ad5d4099f52a3340.r2.dev/2025%20Power%20Walk%20Flyer%20(1)%20(1).png');background-size:40%">
+            <div class="header"
+                style="border-bottom: 1px solid rgb(233, 233, 233);background: url('https://pub-b5328bf79b944420816257d1e024a4ac.r2.dev/a6e0a-e2jlu.webp');background-size:40%">
                 <div style="width: 100%; background: rgba(255, 255, 255, 0.884); padding: 1px 0px 8px 0px;">
                     <h6 class="walker-name" style="color:rgb(187, 37, 27); margin-bottom: 0">Donations</h6>
                 </div>
             </div>
             <div class="card-body" style="overflow: scroll; height: 365px">
-            {% if donation_list|length > 0 %}
+                {% if donation_list|length > 0 %}
                 {% for donation in donation_list %}
                 <div class="donation">
                     <div class="row">
                         <div class="col s12">
                             <div class="left">
-                                <h6><i class="bi bi-cash-coin" style="color:#44c444"></i> ${{ donation.amount }} from {{ donation.first_name }} {{ donation.last_name }}</h6>
+                                <h6><i class="bi bi-cash-coin" style="color:#44c444"></i> ${{ donation.amount }} from {{
+                                    donation.first_name }} {{ donation.last_name }}</h6>
                             </div>
                             <div class="right">
                                 <h6>{{ donation.created }}</h6>
@@ -170,21 +193,22 @@ fjs.parentNode.insertBefore(js, fjs);
                         </div>
                         {% if donation.message != '' %}
                         <div class="col s12">
-                            <h6 class="donation-message"><i class="bi bi-chat-heart" style="color:#bc1515"></i> {{ donation.message }}</h6>
+                            <h6 class="donation-message"><i class="bi bi-chat-heart" style="color:#bc1515"></i> {{
+                                donation.message }}</h6>
                         </div>
                         {% endif %}
                     </div>
                 </div>
                 {% endfor %}
-            {% else %}
-            <div style="display: flex; align-items: center; justify-content: center; height: 100%">
-                <h6 style="margin-top: -20px; text-align: center">Be the first to support {{ walker }}!</h6>
-            </div>
-            {% endif %}
+                {% else %}
+                <div style="display: flex; align-items: center; justify-content: center; height: 100%">
+                    <h6 style="margin-top: -20px; text-align: center">Be the first to support {{ walker }}!</h6>
+                </div>
+                {% endif %}
             </div>
         </div>
     </div>
-    
+
     {% if walker_type == 'org' %}
     <div class="col s10 offset-s1">
         <div class="divider"></div>
@@ -192,7 +216,9 @@ fjs.parentNode.insertBefore(js, fjs);
     <div class="col s12">
         <div class="row center-align">
             <h6 class="walker-name" style="color:rgb(9, 131, 9)">Our Walkers</h6>
-            <div class="div-mini-dotted" style="border-bottom: 3px dotted black; width: 5%; margin-left: 48%; margin-top:10px; margin-bottom: 20px"></div>
+            <div class="div-mini-dotted"
+                style="border-bottom: 3px dotted black; width: 5%; margin-left: 48%; margin-top:10px; margin-bottom: 20px">
+            </div>
             {% for x in walker_list %}
             <div class="col s4 m3 l2">
                 <a href="{{ x.get_absolute_url }}">
@@ -204,7 +230,8 @@ fjs.parentNode.insertBefore(js, fjs);
                             <img src="https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/power-walk-avatar.png">
                             {% endif %}
                         </div>
-                        <div class="card-body" style="height: 60px; display: flex; align-items: center; justify-content: center;">
+                        <div class="card-body"
+                            style="height: 60px; display: flex; align-items: center; justify-content: center;">
                             <h6 style="font-size: 16px; font-weight: 600">{{ x }}</h6>
                         </div>
                     </div>
@@ -219,6 +246,7 @@ fjs.parentNode.insertBefore(js, fjs);
     .back-link {
         font-size: 12px;
     }
+
     .donation {
         height: fit-content;
         font-family: oskar;
@@ -226,132 +254,153 @@ fjs.parentNode.insertBefore(js, fjs);
         border-bottom: 1px solid rgb(235, 235, 235);
         font-size: 22px;
     }
+
     .donation-message {
         font-weight: 300;
         font-size: 16px;
-        color:rgb(118, 118, 118);
+        color: rgb(118, 118, 118);
         font-style: italic;
         padding-left: 30px;
     }
+
     .divider {
         border-bottom: 1px rgb(199, 199, 199) solid;
         width: 100%;
         margin-top: 20px;
         margin-bottom: 20px;
     }
+
     .goal-card {
-        background: url('https://pub-55bcc1133b6f4859ad5d4099f52a3340.r2.dev/2025%20Power%20Walk%20Flyer%20(1)%20(1).png');
+        background: url('https://pub-b5328bf79b944420816257d1e024a4ac.r2.dev/a6e0a-e2jlu.webp');
         background-size: 100%
     }
+
     .goal-card .card-body {
         background: rgba(255, 255, 255, 0.871);
     }
+
     .power-walk-slogan {
         text-align: center
     }
+
     h1 {
         font-size: 24px;
     }
+
     #thermometer .goal {
-    position: absolute;
-    right: 0;
-    top: 0;
-}
-#thermometer .amount {
-    border-top: 1px solid #006600;
-    color: black;
-    display: inline-block;
-    font-family: Trebuchet MS;
-    font-weight: bold;
-    padding: 0 75px 0 0;
-}
-#thermometer .progress .amount {
-    border-top: 1px solid #006600;
-    color: #006600;
-    left: 0;
-    padding: 0 0 0 75px;
-    position: absolute;
-}
-#thermometer {
-    border-radius: 12px;
-    position: relative;
-}
-#thermometer .track {
-    background: #9eb8a0 none repeat scroll 0 0;
-    border-radius: 8px;
-    height: 280px;
-    left: 10px;
-    margin: 0 auto;
-    position: relative;
-    top: 10px;
-    width: 30px;
-}
-#thermometer .progress {
-    background: green none repeat scroll 0 0;
-    border-radius: 23px 23px 0 0;
-    bottom: 0;
-    height: 0;
-    left: 5px;
-    margin-bottom: 0 !important;
-    position: absolute;
-    width: 69%;
-    z-index: 100;
-}
-#thermometer .goal {
-    position: absolute;
-    right: 0;
-    top: 0;
-}
-#thermometer .amount {
-    border-top: 1px solid #006600;
-    color: black;
-    display: inline-block;
-    font-family: Trebuchet MS;
-    font-weight: bold;
-    padding: 0 75px 0 0;
-}
-#thermometer .progress .amount {
-    border-top: 1px solid #006600;
-    color: #006600;
-    left: 0;
-    padding: 0 0 0 75px;
-    position: absolute;
-}
-.bulb {
-    background: #9eb8a0 none repeat scroll 0 0;
-    border-radius: 50%;
-    bottom: -37px;
-    display: block;
-    height: 65;
-    left: -17px;
-    padding: 10px;
-    position: absolute;
-    width: 65;
-}
-.inner-bulb {
-    background-color: green;
-    border-radius: 50%;
-    height: 45px;
-    left: 0;
-    position: relative;
-    top: 0;
-    width: 45px;
-}
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    #thermometer .amount {
+        border-top: 1px solid #006600;
+        color: black;
+        display: inline-block;
+        font-family: Trebuchet MS;
+        font-weight: bold;
+        padding: 0 75px 0 0;
+    }
+
+    #thermometer .progress .amount {
+        border-top: 1px solid #006600;
+        color: #006600;
+        left: 0;
+        padding: 0 0 0 75px;
+        position: absolute;
+    }
+
+    #thermometer {
+        border-radius: 12px;
+        position: relative;
+    }
+
+    #thermometer .track {
+        background: #9eb8a0 none repeat scroll 0 0;
+        border-radius: 8px;
+        height: 280px;
+        left: 10px;
+        margin: 0 auto;
+        position: relative;
+        top: 10px;
+        width: 30px;
+    }
+
+    #thermometer .progress {
+        background: green none repeat scroll 0 0;
+        border-radius: 23px 23px 0 0;
+        bottom: 0;
+        height: 0;
+        left: 5px;
+        margin-bottom: 0 !important;
+        position: absolute;
+        width: 69%;
+        z-index: 100;
+    }
+
+    #thermometer .goal {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    #thermometer .amount {
+        border-top: 1px solid #006600;
+        color: black;
+        display: inline-block;
+        font-family: Trebuchet MS;
+        font-weight: bold;
+        padding: 0 75px 0 0;
+    }
+
+    #thermometer .progress .amount {
+        border-top: 1px solid #006600;
+        color: #006600;
+        left: 0;
+        padding: 0 0 0 75px;
+        position: absolute;
+    }
+
+    .bulb {
+        background: #9eb8a0 none repeat scroll 0 0;
+        border-radius: 50%;
+        bottom: -37px;
+        display: block;
+        height: 65;
+        left: -17px;
+        padding: 10px;
+        position: absolute;
+        width: 65;
+    }
+
+    .inner-bulb {
+        background-color: green;
+        border-radius: 50%;
+        height: 45px;
+        left: 0;
+        position: relative;
+        top: 0;
+        width: 45px;
+    }
+
     label span {
         font-size: 18px;
     }
+
     .walker-name {
-        font-family: oskar; 
-        font-weight: 600; 
+        font-family: oskar;
+        font-weight: 600;
         font-size: 24px;
         text-align: center;
     }
+
     .walker-name.mini {
         font-size: 16px;
         font-weight: 400;
         font-style: italic;
-        color:rgb(89, 89, 89)
+        color: rgb(89, 89, 89)
     }
+
     .support-btn {
         background: black;
         color: white;
@@ -363,36 +412,46 @@ fjs.parentNode.insertBefore(js, fjs);
         border-radius: 30px;
         margin-bottom: 20px;
     }
+
     .support-btn:hover {
         background: rgb(14, 116, 14);
     }
+
     @media only screen and (min-width: 601px) {
         h1 {
             font-size: 32px;
         }
+
         .walker-name {
             font-size: 28px;
         }
+
         .walker-name.mini {
             font-size: 18px;
         }
     }
+
     @media only screen and (min-width: 901px) {
         h1 {
             font-size: 42px;
         }
-        .walker-name { 
+
+        .walker-name {
             font-size: 36px;
         }
+
         .walker-name.mini {
             font-size: 22px;
         }
-        .donation h6{
+
+        .donation h6 {
             font-size: 22px;
         }
+
         .donation-message {
             font-size: 18px !important;
         }
+
         .parallax-banner {
             width: 60%;
         }
@@ -407,8 +466,8 @@ fjs.parentNode.insertBefore(js, fjs);
             percentageAmount;
 
         goalAmount = goalAmount || parseFloat($goal.text()),
-        progressAmount = progressAmount || parseFloat($progress.text()),
-        percentageAmount = Math.min(Math.round(progressAmount / goalAmount * 1000) / 10, 100); //make sure we have 1 decimal point
+            progressAmount = progressAmount || parseFloat($progress.text()),
+            percentageAmount = Math.min(Math.round(progressAmount / goalAmount * 1000) / 10, 100); //make sure we have 1 decimal point
 
         $goal.find(".amount").text();
         $progress.find(".amount").text();
@@ -431,19 +490,19 @@ fjs.parentNode.insertBefore(js, fjs);
     $(document).ready(function () {
 
         thermometer();
-        $('[name="amount"]').on('change', function(){
+        $('[name="amount"]').on('change', function () {
             $('#support-btn').removeClass('disabled')
-            if($('[name="amount"]:checked').attr('id')=='other-amount'){
-            $('#other-input-wrapper').removeClass('hidden')
-            }else{
-            $('#other-input-wrapper').addClass('hidden')
+            if ($('[name="amount"]:checked').attr('id') == 'other-amount') {
+                $('#other-input-wrapper').removeClass('hidden')
+            } else {
+                $('#other-input-wrapper').addClass('hidden')
             }
         })
-        $('#other-input').on('keyup', function(){
+        $('#other-input').on('keyup', function () {
             $('#other-amount').val($('#other-input').val())
         });
     });
-    $('#support-btn').on('click', function(event){
+    $('#support-btn').on('click', function (event) {
         event.preventDefault()
         var data = {
             csrfmiddlewaretoken: '{{ csrf_token }}',
@@ -452,18 +511,18 @@ fjs.parentNode.insertBefore(js, fjs);
             'support-amount': $('[name="amount"]:checked').val()
         }
         $.ajax({
-          data: data,
-          method: 'POST',
-          url: '/power-walk-2025/support-a-walker/',
-          success: function(data){
-            window.location.replace('/power-walk-2025/walker-donation/')
-            //$('#donate-window').removeClass('hidden');
-            //$('#donate-window').html(data.html);
-            //$('#walker-content').addClass('hidden')
-          },
-          error: function(){
-            
-          },
+            data: data,
+            method: 'POST',
+            url: '/power-walk-2025/support-a-walker/',
+            success: function (data) {
+                window.location.replace('/power-walk-2025/walker-donation/')
+                //$('#donate-window').removeClass('hidden');
+                //$('#donate-window').html(data.html);
+                //$('#walker-content').addClass('hidden')
+            },
+            error: function () {
+
+            },
         });
     })
 </script>
