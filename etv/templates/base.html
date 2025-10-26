@@ -37,620 +37,752 @@
 
 <script src="https:cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 <!-- JQuery Mask -->
-<script src="https:cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js" integrity="sha512-pHVGpX7F/27yZ0ISY+VVjyULApbDlD0/X0rgGbTqCE7WFW5MezNTWG/dnhtbBuICzsd0WQPgpE4REBLv+UqChw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https:cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"
+  integrity="sha512-pHVGpX7F/27yZ0ISY+VVjyULApbDlD0/X0rgGbTqCE7WFW5MezNTWG/dnhtbBuICzsd0WQPgpE4REBLv+UqChw=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script>
-  $(document).ready(function(){
-      $('.collapsible').collapsible();
-      $('.parallax').parallax();
-      $('select').formSelect();
-      $('.dropdown-trigger').dropdown({hover: true, constrainWidth: false, coverTrigger: false, container:'.dropdown-container', closeOnClick: false});
-      $('.sidenav').sidenav();
-      $('.carousel').carousel({indicators: true, numVisible: 10,});
-      $('.tooltipped').tooltip({'margin':'0', 'transitionMovement': '0',});
-      $('.phone_us').mask('(000) 000-0000');
-      $('.money').mask('000,000.00', {reverse: true});
-      $('#other-donation').mask('000,000', {reverse: true});
-      $('.datepicker').datepicker();
-      $('.ways-to-play-tabs').tabs();
-    });
-  </script>
+  $(document).ready(function () {
+    $('.collapsible').collapsible();
+    $('.parallax').parallax();
+    $('select').formSelect();
+    $('.dropdown-trigger').dropdown({ hover: true, constrainWidth: false, coverTrigger: false, container: '.dropdown-container', closeOnClick: false });
+    $('.sidenav').sidenav();
+    $('.carousel').carousel({ indicators: true, numVisible: 10, });
+    $('.tooltipped').tooltip({ 'margin': '0', 'transitionMovement': '0', });
+    $('.phone_us').mask('(000) 000-0000');
+    $('.money').mask('000,000.00', { reverse: true });
+    $('#other-donation').mask('000,000', { reverse: true });
+    $('.datepicker').datepicker();
+    $('.ways-to-play-tabs').tabs();
+  });
+</script>
 <!doctype html>
 <html lang="en">
 
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="shortcut icon" type="image/png" href="https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/favicon.ico" />
-        <title>{% block title %}{% endblock %}</title>
-        <meta name="description" content="{% block seo_description%}{% endblock %}" />
-        {% block meta_tags %}
-        {% endblock %}
-        <link rel="canonical" href="{% block canonical %}{% endblock %}" />
-        <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-GFM7WGP9KD"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/png" href="https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/favicon.ico" />
+  <title>{% block title %}{% endblock %}</title>
+  <meta name="description" content="{% block seo_description%}{% endblock %}" />
+  {% block meta_tags %}
+  {% endblock %}
+  <link rel="canonical" href="{% block canonical %}{% endblock %}" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GFM7WGP9KD"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-          gtag('config', 'G-GFM7WGP9KD');
-        </script>
-        <!-- Google Tag Manager -->
-        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer','GTM-WQSMDJ8T');</script>
-        <!-- End Google Tag Manager -->
-        <script>
-          $(document).ready(function(){
-            $('#mailchimp-nav-form').submit(function(event){
-              event.preventDefault();
-              $('#join-the-village-modal').modal('close')
-              var email = $('#mailchimp-email-nav').val()
-              var token = '{{csrf_token}}'
-              var form = $('#mailchimp-nav-form')
-              $.ajax({
-                data: form.serialize(),
-                dataType: 'json',
-                url: '/mailchimp-signup/',
-                method: "POST",
-                success: function(data) {
-                    Swal.fire({
-                    title:'Welcome to the Village!',
-                    html: '',
-                    showComfirmButton: false,
-                    showCancelButton: false,
-                    showCloseButton: false,
-                    text:"You've been added to our mailing list",
-                    })
-                },
-                error: function(){
-                    Swal.fire({
-                    title:"You're on the list!",
-                    html: '',
-                    showComfirmButton: false,
-                    showCancelButton: false,
-                    showCloseButton: false,
-                    text:"You're on our mailing list, thank you for keeping up with ETV!",
-                    })
-                }
+    gtag('config', 'G-GFM7WGP9KD');
+  </script>
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-WQSMDJ8T');</script>
+  <!-- End Google Tag Manager -->
+  <script>
+    $(document).ready(function () {
+      $('#mailchimp-nav-form').submit(function (event) {
+        event.preventDefault();
+        $('#join-the-village-modal').modal('close')
+        var email = $('#mailchimp-email-nav').val()
+        var token = '{{csrf_token}}'
+        var form = $('#mailchimp-nav-form')
+        $.ajax({
+          data: form.serialize(),
+          dataType: 'json',
+          url: '/mailchimp-signup/',
+          method: "POST",
+          success: function (data) {
+            Swal.fire({
+              title: 'Welcome to the Village!',
+              html: '',
+              showComfirmButton: false,
+              showCancelButton: false,
+              showCloseButton: false,
+              text: "You've been added to our mailing list",
             })
-            });
-          })
-        </script>
-        {% block headtags %}{% endblock %}
-    </head>
-    
-    <body>
-      <!-- Google Tag Manager (noscript) -->
-      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WQSMDJ8T"
-      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-      <!-- End Google Tag Manager (noscript) -->
-      <script>
-         $(document).ready(function(){
-            $('.sidenav').sidenav();
-            $('select').formSelect();
-          });
-      </script>
-      <main>
-        <nav id="navbar" class="nav-extended">
-          <div class="nav-wrapper z-depth-1" id="navbar-div" style="display: flex; align-items: center;">
-              
-            <i class="left sidenav-trigger material-icons" data-target="side-nav" id="sidenav-menu-trigger" style="z-index: 2;">menu</i>
-            <a href="{{ home_url }}" class="brand-logo"><img src="https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/etv-logo-r.jpg" height=110></a>
-              
-            <div class="center-align nav-tagline">
-                <h7 style="color:black; text-align: center; font-family: oskar;"><b style="color:#bf1e2d; font-weight: 300">Restoring</b></h7><br>
-                <h7 style="color:black; text-align: center; font-family: oskar;">Prosperity, Peace & Power</h7><br>
-                <h7 style="color:black; text-align: center; font-family: oskar;"><b style="color:#01a650; font-weight: 300">To The Black Community</b></h7>
-            </div>
-       
-            <div class="right valign-wrapper" style="height:100%; position: absolute; right: 10px">
-              <a class="main-nav-link ul-effect valign-wrapper {% if request.path == home_url %}active{% endif %}" href="{{ home_url }}">Home</a>
-                  <div class="navbar-slash"> | </div>
+          },
+          error: function () {
+            Swal.fire({
+              title: "You're on the list!",
+              html: '',
+              showComfirmButton: false,
+              showCancelButton: false,
+              showCloseButton: false,
+              text: "You're on our mailing list, thank you for keeping up with ETV!",
+            })
+          }
+        })
+      });
+    })
+  </script>
+  {% block headtags %}{% endblock %}
+</head>
 
-                <a class="main-nav-link dropdown-trigger ul-effect valign-wrapper {% if request.path == about_url %}active{% endif %}" data-target='about-dropdown' href="{{ about_url }}">About</a>
-                  <div class="navbar-slash"> | </div>
-                
-                <a class="main-nav-link dropdown-trigger ul-effect valign-wrapper" data-target='top-dropdown-sp'>Programs</a>
-                  <div class="navbar-slash"> | </div>
-                  
-                <a class="main-nav-link dropdown-trigger ul-effect valign-wrapper" data-target='top-dropdown-pillars'>Pillars</a>
-                  <div class="navbar-slash"> | </div>
-                  
-                {% if request.user.is_authenticated %}
-                <a class="main-nav-link dropdown-trigger ul-effect valign-wrapper {% if request.path == events_url %}active{% endif %}" data-target='events-dropdown' href="{{ events_url }}">Events</a>
-                <div class="navbar-slash"> | </div>
-                <!--
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WQSMDJ8T" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <script>
+    $(document).ready(function () {
+      $('.sidenav').sidenav();
+      $('select').formSelect();
+    });
+  </script>
+  <main>
+    <nav id="navbar" class="nav-extended">
+      <div class="nav-wrapper z-depth-1" id="navbar-div" style="display: flex; align-items: center;">
+
+        <i class="left sidenav-trigger material-icons" data-target="side-nav" id="sidenav-menu-trigger"
+          style="z-index: 2;">menu</i>
+        <a href="{{ home_url }}" class="brand-logo"><img
+            src="https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/etv-logo-r.jpg" height=110></a>
+
+        <div class="center-align nav-tagline">
+          <h7 style="color:black; text-align: center; font-family: oskar;"><b
+              style="color:#bf1e2d; font-weight: 300">Empowering Communities</b></h7><br>
+          <h7 style="color:black; text-align: center; font-family: oskar;">Centering on</h7><br>
+          <h7 style="color:black; text-align: center; font-family: oskar;"><b
+              style="color:#01a650; font-weight: 300">Prosperity & Wellness</b></h7>
+        </div>
+
+        <div class="right valign-wrapper" style="height:100%; position: absolute; right: 10px">
+          <a class="main-nav-link ul-effect valign-wrapper {% if request.path == home_url %}active{% endif %}"
+            href="{{ home_url }}">Home</a>
+          <div class="navbar-slash"> | </div>
+
+          <a class="main-nav-link dropdown-trigger ul-effect valign-wrapper {% if request.path == about_url %}active{% endif %}"
+            data-target='about-dropdown' href="{{ about_url }}">About</a>
+          <div class="navbar-slash"> | </div>
+
+          <a class="main-nav-link dropdown-trigger ul-effect valign-wrapper" data-target='top-dropdown-sp'>Programs</a>
+          <div class="navbar-slash"> | </div>
+
+          <a class="main-nav-link dropdown-trigger ul-effect valign-wrapper"
+            data-target='top-dropdown-pillars'>Pillars</a>
+          <div class="navbar-slash"> | </div>
+
+          {% if request.user.is_authenticated %}
+          <a class="main-nav-link dropdown-trigger ul-effect valign-wrapper {% if request.path == events_url %}active{% endif %}"
+            data-target='events-dropdown' href="{{ events_url }}">Events</a>
+          <div class="navbar-slash"> | </div>
+          <!--
                 <a class="main-nav-link ul-effect valign-wrapper {% if request.path == news_url %}active{% endif %}" href="{{ news_url }}">News</a>
                 <div class="navbar-slash"> | </div>
                 -->
-                {% if request.user.is_admin %}
-                <a class="main-nav-link ul-effect valign-wrapper {% if request.path == dashboard_url %}active{% endif %}" href="/dashboard/">Dashboard</a>
-                  <div class="navbar-slash"> | </div>
-                {% endif %}
-                <a href="{{ logout_url }}" class="main-nav-link ul-effect valign-wrapper"> Logout</a>
-                  
-                {% else %}
-                <a class="main-nav-link dropdown-trigger ul-effect valign-wrapper {% if request.path == events_url %}active{% endif %}" data-target='events-dropdown' href="{{ events_url }}">Events</a>
-                <div class="navbar-slash"> | </div>
-                <!--
+          {% if request.user.is_admin %}
+          <a class="main-nav-link ul-effect valign-wrapper {% if request.path == dashboard_url %}active{% endif %}"
+            href="/dashboard/">Dashboard</a>
+          <div class="navbar-slash"> | </div>
+          {% endif %}
+          <a href="{{ logout_url }}" class="main-nav-link ul-effect valign-wrapper"> Logout</a>
+
+          {% else %}
+          <a class="main-nav-link dropdown-trigger ul-effect valign-wrapper {% if request.path == events_url %}active{% endif %}"
+            data-target='events-dropdown' href="{{ events_url }}">Events</a>
+          <div class="navbar-slash"> | </div>
+          <!--
                 <a class="main-nav-link valign-wrapper ul-effect modal-trigger" href="#join-the-village-modal" style="cursor: pointer">Join</a>
                 <div class="navbar-slash"> | </div>
                 -->
-                <!--
+          <!--
                 <a class="main-nav-link ul-effect valign-wrapper" href="/shop">Shop</a>
                 -->
-                <!--<a class="main-nav-link valign-wrapper ul-effect {% if request.path == login_url %}active{% endif %}" href="{{ login_url }}">Login</a>-->
-                <a class="main-nav-link ul-effect valign-wrapper {% if request.path == contact_url %}active{% endif %}" href="{{ contact_url }}" style="margin-right:2%">Contact</a>
-                {% endif %}
-                <!--
+          <!--<a class="main-nav-link valign-wrapper ul-effect {% if request.path == login_url %}active{% endif %}" href="{{ login_url }}">Login</a>-->
+          <a class="main-nav-link ul-effect valign-wrapper {% if request.path == contact_url %}active{% endif %}"
+            href="{{ contact_url }}" style="margin-right:2%">Contact</a>
+          {% endif %}
+          <!--
                 <a class="btn btn-large waves-effect waves-light vbp-btn-navbar" href="{{ vbp_url }}" id="vbp-btn-navbar">VILLAGE BLACK PAGES</a>
                 -->
-                <a class="btn btn-large waves-effect waves-light vbp-btn-navbar-v2" href="{{ vbp_url }}" id="vbp-btn-navbar">
-                  <div class="vbp-btn-img"></div>
-                  <div class="vbp-btn-text-container">
-                    <span class="vbp-btn-text-village">VILLAGE</span>
-                    <span class="vbp-btn-text-black">BLACK</span>
-                    <span class="vbp-btn-text-pages">PAGES</span>
-                  </div>
-                </a>
-                <a class="btn btn-large waves-effect waves-light donate-btn-navbar" href="{{ donate_url }}" id="donate-btn-navbar">DONATE</a>
+          <a class="btn btn-large waves-effect waves-light vbp-btn-navbar-v2" href="{{ vbp_url }}" id="vbp-btn-navbar">
+            <div class="vbp-btn-img"></div>
+            <div class="vbp-btn-text-container">
+              <span class="vbp-btn-text-village">VILLAGE</span>
+              <span class="vbp-btn-text-black">BLACK</span>
+              <span class="vbp-btn-text-pages">PAGES</span>
             </div>
-          </div>
-          <div class="dropdown-container">
-            <ul id="top-dropdown-sp" class="dropdown-content dd-base">
-                <li><a class="center-align valign-wrapper {% if request.path == efbf_url %}active{% endif %}" href="{{ efbf_url }}">MAKE EVERY FRIDAY, BLACK FRIDAY!®</a></li>
-                <li><a class="center-align valign-wrapper {% if request.path == vbp_url %}active{% endif %}" href="{{ vbp_url }}" style="padding-left:10px">Village Black Pages®</a></li>
-                <li><a class="center-align valign-wrapper {% if request.path == vbp_url %}active{% endif %}" href="/village-black-pages/2023-holiday-gift-guide/" style="padding-left:10px">Specialty Directory</a></li>
-                <li><a class="center-align valign-wrapper {% if request.path == bf_home_url %}active{% endif %}" data-target="nav-dropdown-bf" href="{{ bf_home_url }}">BLACK FRIDAY CHALLENGE™</a></li>
-                <li><a class="center-align valign-wrapper {% if request.path == ven_url %}active{% endif %}" data-target="nav-dropdown-pp" href="{{ ven_url }}">VILLAGE EMPOWERMENT NETWORK™</a></li>
-                <li><a class="center-align valign-wrapper {% if request.path == vap_url %}active{% endif %}" data-target="nav-dropdown-pp" href="{{ vap_url }}">VILLAGE ASSIST PROGRAM™</a></li>
-                <li><a class="center-align valign-wrapper {% if request.path == vaw_url %}active{% endif %}" data-target="nav-dropdown-pp" href="{{ vaw_url }}">VILLAGE@WORK™</a></li>
-                <li><a class="center-align valign-wrapper {% if request.path == vaw_url %}active{% endif %}" data-target="nav-dropdown-pp" href="/education/village-strivers/">VILLAGE STRIVERS™</a></li>
-                
-                <li><a class="center-align valign-wrapper" href="{{ voting_url }}">OPERATION: BALLOT BOX™</a></li>
-            </ul>
-          </div>
-        </nav>
-        <div class="dropdown-container">
-          <ul id="top-dropdown-pillars" class="dropdown-content dd-base collapsible">
-            <li><a class="center-align valign-wrapper {% if request.path == efbf_url %}active{% endif %}" href="{{ pillars_url }}">Overview</a></li>
-              <li>
-                <a class="center-align valign-wrapper collapsible-header">Prosperity</a>
-                <div class="collapsible-body">
-                <ul>
-                  <li><a href="{{ ep_url }}">Overview</a></li>
-                  <li><a href="{{ efbf_url }}">MAKE EVERY FRIDAY, BLACK FRIDAY!®</a></li>
-                  <li><a href="{{ vbp_url }}">Village Black Pages®</a></li>
-                  <li><a href="/village-black-pages/2023-holiday-gift-guide/">Specialty Directory</a></li>
-                  <li><a href="{{ bf_home_url }}">Black Friday Challenge™</a></li>
-                  <li><a href="{{ ven_url }}">Village Empowerment Network™</a></li>
-                  <li><a href="{{ vap_url }}">Village Assist Program™</a></li>
-                  <li><a href="{{ vaw_url }}">Village@Work™</a></li>
-                  <li><a href="/education/village-strivers/">Village Strivers™</a></li>
-                  <li><a href="{{ voting_url }}">Operation: Ballot Box™</a></li>
-                </ul>
-              </div>
-              </li>
-              <li>
-                <a href="{{ health_url }}">Peace</a>
-              </li>
-              <li>
-                <a class="center-align valign-wrapper collapsible-header">Power</a>
-                <div class="collapsible-body">
-                  <ul>
-                    <li><a href="{{ policy_url }}">Overview</a></li>
-                    <li><a href="{{ voting_url }}">Operation: Ballot Box™</a></li>
-                    <li><a href="/education/village-strivers/">Village Strivers™</a></li>
-                  </ul>
-                </div>
-              </li>
-          </ul>
+          </a>
+          <a class="btn btn-large waves-effect waves-light donate-btn-navbar" href="{{ donate_url }}"
+            id="donate-btn-navbar">DONATE</a>
         </div>
-        <!-- Mobile Nav: Start -->
-        <ul id="side-nav" class="sidenav" style="background-color:rgba(255, 255, 255, 0.899)">
-          <li style="margin-bottom: 2px; background-color: rgb(230, 229, 228);"><img src="https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/footer-r.png" width="95%" style="margin-left:2.5%; padding-top:19px"></li>
-          <li><a href="{{ home_url }}" class="waves-effect">Home</a></li>
+      </div>
+      <div class="dropdown-container">
+        <ul id="top-dropdown-sp" class="dropdown-content dd-base">
+          <li><a class="center-align valign-wrapper {% if request.path == efbf_url %}active{% endif %}"
+              href="{{ efbf_url }}">MAKE EVERY FRIDAY, BLACK FRIDAY!®</a></li>
+          <li><a class="center-align valign-wrapper {% if request.path == vbp_url %}active{% endif %}"
+              href="{{ vbp_url }}" style="padding-left:10px">Village Black Pages®</a></li>
+          <li><a class="center-align valign-wrapper {% if request.path == vbp_url %}active{% endif %}"
+              href="/village-black-pages/2023-holiday-gift-guide/" style="padding-left:10px">Specialty Directory</a>
+          </li>
+          <li><a class="center-align valign-wrapper {% if request.path == bf_home_url %}active{% endif %}"
+              data-target="nav-dropdown-bf" href="{{ bf_home_url }}">BLACK FRIDAY CHALLENGE™</a></li>
+          <li><a class="center-align valign-wrapper {% if request.path == ven_url %}active{% endif %}"
+              data-target="nav-dropdown-pp" href="{{ ven_url }}">VILLAGE EMPOWERMENT NETWORK™</a></li>
+          <li><a class="center-align valign-wrapper {% if request.path == vap_url %}active{% endif %}"
+              data-target="nav-dropdown-pp" href="{{ vap_url }}">VILLAGE ASSIST PROGRAM™</a></li>
+          <li><a class="center-align valign-wrapper {% if request.path == vaw_url %}active{% endif %}"
+              data-target="nav-dropdown-pp" href="{{ vaw_url }}">VILLAGE@WORK™</a></li>
+          <li><a class="center-align valign-wrapper {% if request.path == vaw_url %}active{% endif %}"
+              data-target="nav-dropdown-pp" href="/education/village-strivers/">VILLAGE STRIVERS™</a></li>
 
-          <!-- Mobile Nav: About -->
-          <li class="">
-            <ul class="collapsible collapsible-accordion" style="padding-left: 4.5%">
-              <li>
-                <a class="collapsible-header ">About</a>
-                <div class="collapsible-body">
-                  <ul>
-                    <li><a href="/about/">Overview</a></li>
-                    <li><a href="/news-and-events/">News</a></li>
-                    <li><a href="/shop/">Shop</a></li>
-                    <li><a href="/careers/">Careers</a></li>
-                    <li><a class="waves-effect modal-trigger" href="#join-the-village-modal">Join The Village</a></li>
-                  </ul>
-                </div>
-              </li>
+          <li><a class="center-align valign-wrapper" href="{{ voting_url }}">OPERATION: BALLOT BOX™</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="dropdown-container">
+      <ul id="top-dropdown-pillars" class="dropdown-content dd-base collapsible">
+        <li><a class="center-align valign-wrapper {% if request.path == efbf_url %}active{% endif %}"
+            href="{{ pillars_url }}">Overview</a></li>
+        <li>
+          <a class="center-align valign-wrapper collapsible-header">Prosperity</a>
+          <div class="collapsible-body">
+            <ul>
+              <li><a href="{{ ep_url }}">Overview</a></li>
+              <li><a href="{{ efbf_url }}">MAKE EVERY FRIDAY, BLACK FRIDAY!®</a></li>
+              <li><a href="{{ vbp_url }}">Village Black Pages®</a></li>
+              <li><a href="/village-black-pages/2023-holiday-gift-guide/">Specialty Directory</a></li>
+              <li><a href="{{ bf_home_url }}">Black Friday Challenge™</a></li>
+              <li><a href="{{ ven_url }}">Village Empowerment Network™</a></li>
+              <li><a href="{{ vap_url }}">Village Assist Program™</a></li>
+              <li><a href="{{ vaw_url }}">Village@Work™</a></li>
+              <li><a href="/education/village-strivers/">Village Strivers™</a></li>
+              <li><a href="{{ voting_url }}">Operation: Ballot Box™</a></li>
             </ul>
-          </li>
-          
-          <!-- Mobile Nav: Signature Programs -->
-          <li class="">
-            <ul class="collapsible collapsible-accordion" style="padding-left: 4.5%">
-              <li>
-                <a class="collapsible-header ">Signature Programs</a>
-                <div class="collapsible-body">
-                  <ul>
-                    <li><a href="{{ efbf_url }}">MAKE EVERY FRIDAY, BLACK FRIDAY!®</a></li>
-                    <li><a href="{{ vbp_url }}">Village Black Pages®</a></li>
-                    <li><a href="/village-black-pages/2023-holiday-gift-guide/">Specialty Directory</a></li>
-                    <li><a href="{{ bf_home_url }}">Black Friday Challenge™</a></li>
-                    <li><a href="{{ ven_url }}">Village Empowerment Network™</a></li>
-                    <li><a href="{{ vap_url }}">Village Assist Program™</a></li>
-                    <li><a href="{{ vaw_url }}">Village@Work™</a></li>
-                    <li><a href="/education/village-strivers/">Village Strivers™</a></li>
-                    <li><a href="{{ voting_url }}">Operation: Ballot Box™</a></li>
-                  </ul>
-                </div>
-              </li>
+          </div>
+        </li>
+        <li>
+          <a href="{{ health_url }}">Peace</a>
+        </li>
+        <li>
+          <a class="center-align valign-wrapper collapsible-header">Power</a>
+          <div class="collapsible-body">
+            <ul>
+              <li><a href="{{ policy_url }}">Overview</a></li>
+              <li><a href="{{ voting_url }}">Operation: Ballot Box™</a></li>
+              <li><a href="/education/village-strivers/">Village Strivers™</a></li>
             </ul>
-          </li>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <!-- Mobile Nav: Start -->
+    <ul id="side-nav" class="sidenav" style="background-color:rgba(255, 255, 255, 0.899)">
+      <li style="margin-bottom: 2px; background-color: rgb(230, 229, 228);"><img
+          src="https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/footer-r.png" width="95%"
+          style="margin-left:2.5%; padding-top:19px"></li>
+      <li><a href="{{ home_url }}" class="waves-effect">Home</a></li>
 
-          <!-- Mobile Nav: Strategic Pillars -->
-          <li><a href="{{ pillars_url }}">Strategic Pillars</a></li>
-          <li class="">
-            
-            <ul class="collapsible" style="padding-left: 4.5%">
-              <li>
-                <a class="collapsible-header ">Prosperity</a>
-                <div class="collapsible-body">
-                  <ul>
-                    <li><a href="{{ ep_url }}">Overview</a></li>
-                    <li><a href="{{ efbf_url }}">Make Every Friday, Black Friday!</a></li>
-                    <li><a href="{{ vbp_url }}">Village Black Pages®</a></li>
-                    <li><a href="/village-black-pages/2023-holiday-gift-guide/">Specialty Directory</a></li>
-                    <li><a href="{{ bf_home_url }}">Black Friday Challenge™</a></li>
-                    <li><a href="{{ ven_url }}">Village Empowerment Network™</a></li>
-                    <li><a href="{{ vap_url }}">Village Assist Program™</a></li>
-                    <li><a href="{{ vaw_url }}">Village@Work™</a></li>
-                    <li><a href="/education/village-strivers/">Village Strivers™</a></li>
-                    <li><a href="{{ voting_url }}">Operation: Ballot Box™</a></li>
-                  </ul>
-                </div>
-              </li>
-            </ul>
+      <!-- Mobile Nav: About -->
+      <li class="">
+        <ul class="collapsible collapsible-accordion" style="padding-left: 4.5%">
+          <li>
+            <a class="collapsible-header ">About</a>
+            <div class="collapsible-body">
+              <ul>
+                <li><a href="/about/">Overview</a></li>
+                <li><a href="/news-and-events/">News</a></li>
+                <li><a href="/shop/">Shop</a></li>
+                <li><a href="/careers/">Careers</a></li>
+                <li><a class="waves-effect modal-trigger" href="#join-the-village-modal">Join The Village</a></li>
+              </ul>
+            </div>
           </li>
-          <li class="">
-            <ul class="" style="padding-left: 0">
-              <li>
-                <a href="{{ health_url }}">Peace</a>
-                
-              </li>
-            </ul>
+        </ul>
+      </li>
+
+      <!-- Mobile Nav: Signature Programs -->
+      <li class="">
+        <ul class="collapsible collapsible-accordion" style="padding-left: 4.5%">
+          <li>
+            <a class="collapsible-header ">Signature Programs</a>
+            <div class="collapsible-body">
+              <ul>
+                <li><a href="{{ efbf_url }}">MAKE EVERY FRIDAY, BLACK FRIDAY!®</a></li>
+                <li><a href="{{ vbp_url }}">Village Black Pages®</a></li>
+                <li><a href="/village-black-pages/2023-holiday-gift-guide/">Specialty Directory</a></li>
+                <li><a href="{{ bf_home_url }}">Black Friday Challenge™</a></li>
+                <li><a href="{{ ven_url }}">Village Empowerment Network™</a></li>
+                <li><a href="{{ vap_url }}">Village Assist Program™</a></li>
+                <li><a href="{{ vaw_url }}">Village@Work™</a></li>
+                <li><a href="/education/village-strivers/">Village Strivers™</a></li>
+                <li><a href="{{ voting_url }}">Operation: Ballot Box™</a></li>
+              </ul>
+            </div>
           </li>
-          <li class="">
-            <ul class="collapsible" style="padding-left: 4.5%">
-              <li>
-                <a class="collapsible-header ">Power</a>
-                <div class="collapsible-body">
-                  <ul>
-                    <li><a href="{{ policy_url }}">Overview</a></li>
-                    <li><a href="{{ voting_url }}">Operation: Ballot Box™</a></li>
-                    <li><a href="/education/village-strivers/">Village Strivers™</a></li>
-                  </ul>
-                </div>
-              </li>
-            </ul>
+        </ul>
+      </li>
+
+      <!-- Mobile Nav: Strategic Pillars -->
+      <li><a href="{{ pillars_url }}">Strategic Pillars</a></li>
+      <li class="">
+
+        <ul class="collapsible" style="padding-left: 4.5%">
+          <li>
+            <a class="collapsible-header ">Prosperity</a>
+            <div class="collapsible-body">
+              <ul>
+                <li><a href="{{ ep_url }}">Overview</a></li>
+                <li><a href="{{ efbf_url }}">Make Every Friday, Black Friday!</a></li>
+                <li><a href="{{ vbp_url }}">Village Black Pages®</a></li>
+                <li><a href="/village-black-pages/2023-holiday-gift-guide/">Specialty Directory</a></li>
+                <li><a href="{{ bf_home_url }}">Black Friday Challenge™</a></li>
+                <li><a href="{{ ven_url }}">Village Empowerment Network™</a></li>
+                <li><a href="{{ vap_url }}">Village Assist Program™</a></li>
+                <li><a href="{{ vaw_url }}">Village@Work™</a></li>
+                <li><a href="/education/village-strivers/">Village Strivers™</a></li>
+                <li><a href="{{ voting_url }}">Operation: Ballot Box™</a></li>
+              </ul>
+            </div>
           </li>
-          
-          
-          <!-- Mobile Nav: Events -->
-          <li><a class="waves-effect" href="{{ events_url }}">Events</a></li>
-          
-          <!-- Mobile Nav: Contact -->
-          <li><a href="{{ contact_url }}" class="waves-effect">Contact</a></li>
+        </ul>
+      </li>
+      <li class="">
+        <ul class="" style="padding-left: 0">
+          <li>
+            <a href="{{ health_url }}">Peace</a>
+
+          </li>
+        </ul>
+      </li>
+      <li class="">
+        <ul class="collapsible" style="padding-left: 4.5%">
+          <li>
+            <a class="collapsible-header ">Power</a>
+            <div class="collapsible-body">
+              <ul>
+                <li><a href="{{ policy_url }}">Overview</a></li>
+                <li><a href="{{ voting_url }}">Operation: Ballot Box™</a></li>
+                <li><a href="/education/village-strivers/">Village Strivers™</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </li>
 
 
-        
-          {% if request.user.is_authenticated %}
-          {% if request.user.is_staff %}
-          <li><a href="{{ dashboard_url }}" class="waves-effect">Dashboard</a></li>
-          {% endif %}
-          <!--<li><a href="/shop" class="waves-effect">Shop</a></li>-->
-          <li><a href="{{ account_url }}" class="waves-effect">Account</a></li>
-          <li><a href="{{ logout_url }}" class="waves-effect">Logout</a></li>
-          
-          {% else %}
-          <!--<li><a href="{{ login_url }}" class="waves-effect">Login</a></li>
+      <!-- Mobile Nav: Events -->
+      <li><a class="waves-effect" href="{{ events_url }}">Events</a></li>
+
+      <!-- Mobile Nav: Contact -->
+      <li><a href="{{ contact_url }}" class="waves-effect">Contact</a></li>
+
+
+
+      {% if request.user.is_authenticated %}
+      {% if request.user.is_staff %}
+      <li><a href="{{ dashboard_url }}" class="waves-effect">Dashboard</a></li>
+      {% endif %}
+      <!--<li><a href="/shop" class="waves-effect">Shop</a></li>-->
+      <li><a href="{{ account_url }}" class="waves-effect">Account</a></li>
+      <li><a href="{{ logout_url }}" class="waves-effect">Logout</a></li>
+
+      {% else %}
+      <!--<li><a href="{{ login_url }}" class="waves-effect">Login</a></li>
           <li><a href="{{ register_url }}" class="waves-effect">Register</a></li>
           <li><a href="/shop" class="waves-effect">Shop</a></li>
           <li><a class="waves-effect modal-trigger" href="#join-the-village-modal">Join The Village</a></li>-->
-          {% endif %}
-          <li class="divider"></li>
-
-          
-          <a class="btn btn-large waves-effect waves-light donate-btn-sidenav" style="line-height: 50px; width: 93%" href="{{ vbp_url }}" id="vbp-btn-navbar">
-            VILLAGE BLACK PAGES
-          </a>
+      {% endif %}
+      <li class="divider"></li>
 
 
+      <a class="btn btn-large waves-effect waves-light donate-btn-sidenav" style="line-height: 50px; width: 93%"
+        href="{{ vbp_url }}" id="vbp-btn-navbar">
+        VILLAGE BLACK PAGES
+      </a>
 
-          <a class="btn btn-large waves-effect waves-light donate-btn-sidenav" style="line-height: 50px; width: 93%" href="{{ donate_url }}" id="donate-btn-navbar">DONATE</a>
-          <div class="icon-wrap valign-wrapper" id="icon-wrap" style="display: flex; justify-content: center;">
-            <a href="https://www.facebook.com/Empower-The-Village-Nonprofit-Organization-105185814766521/" class="facebook nav-socialmedia" target="_blank"><i class="fab fa-facebook nav-socialmedia-icon"></i></a>
-            <a href="https://www.instagram.com/empower_etv/" class="instagram nav-socialmedia" target="_blank"><i class="fab fa-instagram nav-socialmedia-icon"></i></a>
-            <a href="http://linkedin.com/company/empower-the-village" class="linkedin nav-socialmedia" target="_blank"><i class="fab fa-linkedin nav-socialmedia-icon"></i></a>
-            <a href="https://www.youtube.com/@empower-the-village" class="youtube nav-socialmedia" target="_blank"><i class="fab fa-youtube nav-socialmedia-icon"></i></a>
-          </div>
-        </ul>
-        <!-- Mobile Nav: End -->
 
-          <div class="dropdown-container">
-            <ul id="nav-dropdown-sp" class="dropdown-content dd-base">
-              <li><a class="center-align valign-wrapper {% if request.path == efbf_url %}active{% endif %}" href="{{ pillars_url }}">Strategic Pillars</a></li>
-                <li><a class="center-align valign-wrapper {% if request.path == efbf_url %}active{% endif %}" href="{{ efbf_url }}">MAKE EVERY FRIDAY, BLACK FRIDAY!®</a></li>
-                <li><a class="center-align valign-wrapper {% if request.path == vbp_url %}active{% endif %}" href="{{ vbp_url }}" style="padding-left:10px">Village Black Pages®</a></li>
-                <li><a class="center-align valign-wrapper" style="padding-left: 10px;" href="/village-black-pages/2023-holiday-gift-guide/">Specialty Directory</a></li>
-                <li><a class="center-align valign-wrapper {% if request.path == bf_home_url %}active{% endif %}" data-target="nav-dropdown-bf" href="{{ bf_home_url }}">BLACK FRIDAY CHALLENGE™</a></li>
-                <li><a class="center-align valign-wrapper {% if request.path == voting_url %}active{% endif %}" data-target="nav-dropdown-pp" href="{{ voting_url }}">OPERATION: BALLOT BOX™</a></li>
-                <li><a class="center-align valign-wrapper" data-target="nav-dropdown-pp" href="/education/village-strivers/">Village Strivers™</a></li>
-            </ul>
-          </div>
-          <div class="dropdown-container">
-            <ul id="nav-dropdown-bf" class="dropdown-content dd-base">
-              <li><a href="{{ ep_url }}" class="center-align valign-wrapper {% if request.path == ep_url %}active{% endif %}">Prosperity</a>
-              </li>
-              
-              <li><a href="{{ health_url }}" class="center-align valign-wrapper dropdown-trigger {% if request.path == health_url %}active{% endif %}">Peace</a></li>
-              <li><a href="{{ policy_url }}" class="center-align valign-wrapper dropdown-trigger {% if request.path == policy_url %}active{% endif %}">Power</a></li>
-            </ul>
-          </div>
-          <div class="dropdown-container">
-            <ul id="nav-dropdown-ep" class="dropdown-content dd-base">
-              <li><a href="{{ ep_url }}" class="center-align valign-wrapper {% if request.path == ep_url %}active{% endif %}" style="color: rgb(39, 160, 97);text-transform: uppercase;">Overview</a></li>
-              <li><a href="{{ efbf_url }}" class="center-align valign-wrapper {% if request.path == efbf_url %}active{% endif %}" style="color: rgb(39, 160, 97);text-transform: uppercase;">MAKE EVERY FRIDAY, BLACK FRIDAY!®</a></li>
-              <li><a href="{{ vbp_url }}" class="center-align valign-wrapper {% if request.path == vbp_url %}active{% endif %}" style="color: rgb(39, 160, 97);text-transform: uppercase;">Village Black Pages®</a></li>
-              <li ><a href="{{ bf_home_url }}" class="center-align valign-wrapper {% if request.path == bf_home_url %}active{% endif %}" style="color: rgb(39, 160, 97);text-transform: uppercase;">Black Friday Challenge™</a></li>
-              <li><a style="color: black; text-transform: none; font-size: 14px;" href="{{ readyss_url }}" class="center-align {% if request.path == readyss_url %}active{% endif %}" >Ready, Set, Shop</a></li>
-              <li><a style="color: black; text-transform: none; font-size: 14px;" href="{{ nomination_url }}" class="center-align valign-wrapper {% if request.path == nomination_url %}active{% endif %}">Nomination Challenge</a</li>
-              
-              <li><a style="color: black; text-transform: none; font-size: 14px;" class="center-align {% if request.path == bingo_url %}active{% endif %}" href="{{ bingo_url }}">Power Bingo</a></li>
-            </ul>
-          </div>
-          <div class="dropdown-container">
-            <ul id="nav-dropdown-hw" class="dropdown-content dd-base">
-              <li><a href="{{ health_url }}" class="center-align valign-wrapper {% if request.path == health_url %}active{% endif %}">Overview</a></li>
-              
-              
-            </ul>
-          </div>
-          <div class="dropdown-container">
-            <ul id="nav-dropdown-pp" class="dropdown-content dd-base">
-              <li><a style="margin-left: 6px" href="{{ policy_url }}" class="center-align valign-wrapper {% if request.path == policy_url %}active{% endif %}">Overview</a></li>
-              <li><a style="margin-left: 6px" href="{{ voting_url }}" class="center-align valign-wrapper {% if request.path == voting_url %}active{% endif %}">Operation: Ballot Box™</a></li>
-              li><a style="margin-left: 6px" href="/education/village-strivers/" class="center-align valign-wrapper">Village Strivers™</a></li>
-            </ul>
-          </div>
-          <div class="dropdown-container">
-            <ul id="top-dropdown-sp" class="dropdown-content dd-base">
-              <li><a class="center-align valign-wrapper {% if request.path == efbf_url %}active{% endif %}" href="{{ pillars_url }}">Strategic Pillars</a></li>
-                <li><a class="center-align valign-wrapper {% if request.path == efbf_url %}active{% endif %}" href="{{ efbf_url }}">MAKE EVERY FRIDAY, BLACK FRIDAY!®</a></li>
-                <li><a class="center-align valign-wrapper {% if request.path == vbp_url %}active{% endif %}" href="{{ vbp_url }}" style="padding-left:10px">Village Black Pages®</a></li>
-                <li><a class="center-align valign-wrapper" data-target="nav-dropdown-pp" href="{{ voting_url }}">Village Strivers™</a></li>
-                <li><a class="center-align valign-wrapper {% if request.path == bf_home_url %}active{% endif %}" data-target="nav-dropdown-bf" href="{{ bf_home_url }}">BLACK FRIDAY CHALLENGE™</a></li>
-                <li><a class="center-align valign-wrapper {% if request.path == voting_url %}active{% endif %}" data-target="nav-dropdown-pp" href="{{ voting_url }}">OPERATION: BALLOT BOX™</a></li>
-            </ul>
-          </div>
-          <div class="dropdown-container">
-            <ul id="events-dropdown" class="dropdown-content dd-base">
-                <li><a class="center-align valign-wrapper" href="/events/">Overview</a></li>
-                <li><a class="center-align valign-wrapper" href="/events/empowerment-summit/">Empowerment Summit</a></li>
-                <li><a class="center-align valign-wrapper" href="/events/village-ventures/">Village Ventures Business Pitch Competition</a></li>
-                <li><a class="center-align valign-wrapper" href="/events/north-star-celebration/">North Star Celebration</a></li>
-                <li><a class="center-align valign-wrapper" href="/power-walk-2025/">Power Walk</a></li>
-                <li><a class="center-align valign-wrapper" href="/events/love-of-art-fundraiser/">Juneteenth Celebration</a></li>
-                <li><a class="center-align valign-wrapper" href="/events/power-swing-classic/">Power Swing Classic</a></li>
-            </ul>
-          </div>
-          <div class="dropdown-container">
-            <ul id="about-dropdown" class="dropdown-content dd-base">
-                <li><a class="center-align valign-wrapper" href="/about/">Overview</a></li>
-                <li><a class="center-align valign-wrapper" href="/news-and-events/">News</a></li>
-                <li><a class="center-align valign-wrapper" href="/shop/">Shop</a></li>
-                <li><a class="center-align valign-wrapper" href="/careers/">Careers</a></li> 
-                <li><a class="center-align valign-wrapper modal-trigger" href="#join-the-village-modal" style="cursor: pointer">Join</a>
-            </ul>
-          </div>
-        <div style="z-index: -1; margin-top: 120px" id="body-container">
-        {% block content %}
-        
-        {% endblock %}
-        </div>
-      </main>
-    {% load sweetify %}
-    {% sweetify %}
-    </body>
-    <footer class="page-footer etv-footer">
-        <div class="">
-          <div class="row">
-              <div class="col s12 l7 xl6 offset-xl1" style="padding-left: 5%">
-                <img src="https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/footer-r-knockout.png" width=95% style="z-index: 3;padding-top: 10px">
-                <p class="mailchimp-title" style="padding-top:10px">Sign up to receive news and updates from Empower The Village!</p>
 
-                <div class="row">
-                  <div id="mc_embed_shell">
-                    <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
-                    <style type="text/css">
-                      #mc_embed_signup{background:rgb(12,12,12); clear:left; font:16px rgb(256, 256, 256); width: 600px;}
-                      /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
-                        We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
-                    </style>
-                    <div id="mc_embed_signup">
-                      <form action="https://empowerthevillage.us7.list-manage.com/subscribe/post?u=d66e42f78049eef4b335aab17&amp;id=bfb104d810&amp;f_id=00f6a9e4f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
-                        <div id="mc_embed_signup_scroll">
-                          <div class="col s1">
-                            <i class="material-icons prefix" style="color: rgb(196, 196, 196);font-size:2rem;padding-top:.5em">email</i>
-                          </div>
-                          <div class="col s10">
-                            <div class="mc-field-group">
-                              <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required="" value="" style="font-size: 16px;color:white;padding: 0.1vw;border:none;border-bottom:1px solid #9e9e9e;">
-                              <label for="mce-EMAIL" style="font-size: 16px;color:white;margin: left 0px;">Email</label>
-                            </div>
-                            <div id="mce-responses" class="clear">
-                              <div class="response" id="mce-error-response" style="display: none;"></div>
-                              <div class="response" id="mce-success-response" style="display: none;"></div>
-                            </div>
-                            <div aria-hidden="true" style="position: absolute; left: -5000px;">
-                              <input type="text" name="b_d66e42f78049eef4b335aab17_bfb104d810" tabindex="-1" value="">
-                            </div>
-                          </div>
-                          <div class="col s1">
-                            <div class="clear">
-                              <button type="submit" name="subscribe" id="mc-embedded-subscribe" class="btn waves-effect light-green darken-1" value="Subscribe" style="margin-top:1em">
-                                <span class="material-icons">send</span>
-                              </button>
-                            </div>
-                          </div>
-                        </div>
-                        <span class="helper-text col s10 offset-s1" style="color:rgb(124, 124, 124);">We respect your privacy and do not share or sell your contact information.</span>
-                      </form>
-                    </div>
-                    <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
-                    <script type="text/javascript">(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[12]='WEBSITEYU';ftypes[12]='text';fnames[20]='CHECKBOX2';ftypes[20]='text';fnames[19]='TEXTAREA7';ftypes[19]='text';fnames[18]='TEXT4';ftypes[18]='text';fnames[17]='TEXT1';ftypes[17]='text';fnames[16]='TEXT7';ftypes[16]='text';fnames[15]='TEXT3';ftypes[15]='text';fnames[14]='TEXTAREA6';ftypes[14]='text';fnames[13]='CHECKBOXY';ftypes[13]='text';fnames[11]='ADDRESSYU';ftypes[11]='address';fnames[1]='FNAME';ftypes[1]='text';fnames[10]='TEXTAREA5';ftypes[10]='text';fnames[9]='PHONEYUI_';ftypes[9]='phone';fnames[8]='TEXTAREAY';ftypes[8]='text';fnames[7]='TEXT2';ftypes[7]='text';fnames[6]='TEXTYUI_3';ftypes[6]='text';fnames[5]='BIRTHDAY';ftypes[5]='birthday';fnames[4]='PHONE';ftypes[4]='phone';fnames[3]='ADDRESS';ftypes[3]='address';fnames[2]='LNAME';ftypes[2]='text';fnames[21]='ETVAMOUNT';ftypes[21]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
-                  </div>
-                </div>
+      <a class="btn btn-large waves-effect waves-light donate-btn-sidenav" style="line-height: 50px; width: 93%"
+        href="{{ donate_url }}" id="donate-btn-navbar">DONATE</a>
+      <div class="icon-wrap valign-wrapper" id="icon-wrap" style="display: flex; justify-content: center;">
+        <a href="https://www.facebook.com/Empower-The-Village-Nonprofit-Organization-105185814766521/"
+          class="facebook nav-socialmedia" target="_blank"><i class="fab fa-facebook nav-socialmedia-icon"></i></a>
+        <a href="https://www.instagram.com/empower_etv/" class="instagram nav-socialmedia" target="_blank"><i
+            class="fab fa-instagram nav-socialmedia-icon"></i></a>
+        <a href="http://linkedin.com/company/empower-the-village" class="linkedin nav-socialmedia" target="_blank"><i
+            class="fab fa-linkedin nav-socialmedia-icon"></i></a>
+        <a href="https://www.youtube.com/@empower-the-village" class="youtube nav-socialmedia" target="_blank"><i
+            class="fab fa-youtube nav-socialmedia-icon"></i></a>
+      </div>
+    </ul>
+    <!-- Mobile Nav: End -->
 
-              </div>
-              <div class="col s12 l5">
-                <div class="row">
-                  <div class="col s12 m3 offset-m3">
-                
-                    <ul class="other-links">
-                      <li><a class="" href="{{ home_url }}">Home</a></li>
-                      <li><a class="" href="{{ about_url }}">About</a></li>
-                      <li><a class="" href="{{ contact_url }}">Contact</a></li>
-                      <li><a class="" href="{{ events_url }}">Events</a></li>
-                      
-                    </ul>
-                    
-                  </div>
-                  <div class="col s12 m6">
-                    <ul class="other-links">
-                      <li><a class="" href="{{ news_url }}">News</a></li>
-                      <li><a class="" href="{{ ep_url }}">Prosperity</a></li>
-                      <li><a class="" href="{{ health_url }}">Peace</a></li>
-                      <li><a class="" href="{{ policy_url }}">Power</a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-         
-          <div class="row center-align">
-            <a class="btn btn-large waves-effect waves-light donate-btn footer-donate-btn" href="{{ donate_url }}">DONATE</a>
-            <p class="tax-disclaimer">Empower The Village, Inc. is a data-driven 501(c)(3) non-profit organization.</p>
-            <p class="tax-disclaimer">All donations are tax-deductible to the fullest extent of the law.</p>
-            <p class="copyright-text modal-trigger" data-target="privacy-policy-modal" style="margin-top: 20px"><a>Privacy Policy</a></p>
-          </div>
-        </div>
-        </div>
-        <div class="footer-copyright" style="height:100px; background-color: rgb(0, 0, 0);">
-          <div class="container center-align">
-          <p class="copyright-text row" style="padding-top: 30px">©{% now "Y" %} Copyright Empower The Village, Inc.</p>
-          <div class="row footer-icon-row" style="padding-top: 10px">
-              <a href="https://www.facebook.com/Empower-The-Village-Nonprofit-Organization-105185814766521/" target="_blank" class="facebook"><i class="fab fa-facebook"></i></a>
-              <a href="https://twitter.com/empower_etv" target="_blank" class="twitter"><i class="fab fa-twitter"></i></a>
-              <a href="https://www.instagram.com/empower_etv/" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a>
-              <a href="http://linkedin.com/company/empower-the-village" target="_blank" class="linkedin"><i class="fab fa-linkedin"></i></a>
-              <a href="https://www.youtube.com/@empower-the-village" target="_blank" class="youtube"><i class="fab fa-youtube"></i></a>
-            </div>
-          </div>
-        </div>
-    </footer>
-      <div class="modal" id="privacy-policy-modal">
-        <div class="modal-content">
-          <h4 class="center-align">Privacy Policy</h4>
-          <p class="center-align">Last Updated: Oct 1, 2020</p>
-      <h7 class="center-align">Introduction</h7>
-      <p>Empower The Village (“we” or “us” or “our”) may use cookies, web beacons, tracking pixels, and other tracking technologies when you visit our website [empowerthevillage.org], including any other media form, media channel, mobile website, or mobile application related or connected thereto (collectively, the “Site”) to help customize the Site and improve your experience.
-      We reserve the right to make changes to this Cookie Policy at any time and for any reason. We will alert you about any changes by updating the “Last Updated” date of this Cookie Policy. Any changes or modifications will be effective immediately upon posting the updated Cookie Policy on the Site, and you waive the right to receive specific notice of each such change or modification.
-      You are encouraged to periodically review this Cookie Policy to stay informed of updates. You will be deemed to have been made aware of, will be subject to, and will be deemed to have accepted the changes in any revised Cookie Policy by your continued use of the Site after the date such revised Cookie Policy is posted.</p>
-      <h7>Use of Cookies</h7>
-      <p>A “cookie” is a string of information which assigns you a unique identifier that we store on your computer. Your browser then provides that unique identifier to use each time you submit a query to the Site. We use cookies on the Site to, among other things, keep track of services you have used, record registration information, record your user preferences, keep you logged into the Site, facilitate purchase procedures, and track the pages you visit. Cookies help us understand how the Site is being used and improve your user experience.
-      </p>
-      <h7>Types of Cookies</h7>
-      <p>The following types of cookies may be used when you visit the Site:</p>
-      <h7>Advertising Cookies</h7>
-      <p>Advertising cookies are placed on your computer by advertisers and ad servers in order to display advertisements that are most likely to be of interest to you. These cookies allow advertisers and ad servers to gather information about your visits to the Site and other websites, alternate the ads sent to a specific computer, and track how often an ad has been viewed and by whom. These cookies are linked to a computer and do not gather any personal information about you.</p>
-      <h7>Analytics Cookies</h7>
-      <p>Analytics cookies monitor how users reached the Site, and how they interact with and move around once on the Site. These cookies let us know what features on the Site are working the best and what features on the Site can be improved.</p>
-      <h7>Our Cookies</h7>
-      <p>Our cookies are “first-party cookies”, and can be either permanent or temporary. These are necessary cookies, without which the Site won’t work properly or be able to provide certain features and functionalities. Some of these may be manually disabled in your browser, but may affect the functionality of the Site.</p>
-      <h7>Personalization Cookies</h7>
-      <p>Personalization cookies are used to recognize repeat visitors to the Site. We use these cookies to record your browsing history, the pages you have visited, and your settings and preferences each time you visit the Site.</p>
-      <h7>Security Cookies</h7>
-      <p>Security cookies help identify and prevent security risks. We use these cookies to authenticate users and protect user data from unauthorized parties.</p>
-      <h7>Site Management Cookies</h7>
-      <p>Site management cookies are used to maintain your identity or session on the Site so that you are not logged off unexpectedly, and any information you enter is retained from page to page. These cookies cannot be turned off individually, but you can disable all cookies in your browser.</p>
-      <h7>Third-Party Cookies</h7>
-      <p>Third-party cookies may be place on your computer when you visit the Site by companies that run certain services we offer. These cookies allow the third parties to gather and track certain information about you. These cookies can be manually disabled in your browser.</p>
-      <h7>Control of Cookies</h7>
-      <p>Most browsers are set to accept cookies by default. However, you can remove or reject cookies in your browser’s settings. Please be aware that such action could affect the availability and functionality of the Site.
-      For more information on how to control cookies, check your browser or device’s settings for how you can control or reject cookies, or visit the following links:</p>
-      <ul>
-      <li>•	Apple Safari</li>
-      <li>•	Google Chrome</li>
-      <li>•	Microsoft Edge</li>
-      <li>•	Microsoft Internet Explorer</li>
-      <li>•	Mozilla Firefox</li>
-      <li>•	Opera</li>
-      <li>•	Android (Chrome)</li>
-      <li>•	Blackberry
-      <li>•	iPhone or iPad (Chrome)</li>
-      <li>•	iPhone or iPad (Safari)</li>
+    <div class="dropdown-container">
+      <ul id="nav-dropdown-sp" class="dropdown-content dd-base">
+        <li><a class="center-align valign-wrapper {% if request.path == efbf_url %}active{% endif %}"
+            href="{{ pillars_url }}">Strategic Pillars</a></li>
+        <li><a class="center-align valign-wrapper {% if request.path == efbf_url %}active{% endif %}"
+            href="{{ efbf_url }}">MAKE EVERY FRIDAY, BLACK FRIDAY!®</a></li>
+        <li><a class="center-align valign-wrapper {% if request.path == vbp_url %}active{% endif %}"
+            href="{{ vbp_url }}" style="padding-left:10px">Village Black Pages®</a></li>
+        <li><a class="center-align valign-wrapper" style="padding-left: 10px;"
+            href="/village-black-pages/2023-holiday-gift-guide/">Specialty Directory</a></li>
+        <li><a class="center-align valign-wrapper {% if request.path == bf_home_url %}active{% endif %}"
+            data-target="nav-dropdown-bf" href="{{ bf_home_url }}">BLACK FRIDAY CHALLENGE™</a></li>
+        <li><a class="center-align valign-wrapper {% if request.path == voting_url %}active{% endif %}"
+            data-target="nav-dropdown-pp" href="{{ voting_url }}">OPERATION: BALLOT BOX™</a></li>
+        <li><a class="center-align valign-wrapper" data-target="nav-dropdown-pp"
+            href="/education/village-strivers/">Village Strivers™</a></li>
       </ul>
-      <p>In addition, you may opt-out of some third-party cookies through the Network Advertising Initiative’s Opt-Out Tool.</p>
-      <h7>Other Tracking Technologies</h7>
-      <p>In addition to cookies, we may use web beacons, pixel tags, and other tracking technologies on the Site to help customize the Site and improve your experience. A “web beacon” or “pixel tag” is tiny object or image embedded in a web page or email. They are used to track the number of users who have visited particular pages and viewed emails and acquire other statistical data. They collect only a limited set of data, such as a cookie number, time and date of page or email view, and a description of the page or email on which they reside. Web beacons and pixel tags cannot be declined. However, you can limit their use by controlling the cookies that interact with them.</p>
-      <h7>Privacy Policy</h7>
-      <p>For more information about how we use information collected by cookies and other tracking technologies, please refer to our Privacy Policy posted on the Site. This Cookie Policy is part of and is incorporated into our Privacy Policy. By using the Site, you agree to be bound by this Cookie Policy and our Privacy Policy.</p>
-      <h7>Contact Us</h7>
-      <p>If you have questions or comments about this Cookie Policy, please contact us at:</p>
-      <p style="margin:0; padding:0; font-weight: 500">Empower The Village, Inc.</p>
-      <p style="margin:0; padding:0">178 E. Hanover Avenue, Suite 103</p>
-      <p style="margin:0; padding:0">Cedar Knolls, NJ 07927</p>
-      <p style="margin:0; padding:0">(862) 777-3193</p>
-      <p style="margin:0; padding:0">info@empowerthevillage.org</p>
+    </div>
+    <div class="dropdown-container">
+      <ul id="nav-dropdown-bf" class="dropdown-content dd-base">
+        <li><a href="{{ ep_url }}"
+            class="center-align valign-wrapper {% if request.path == ep_url %}active{% endif %}">Prosperity</a>
+        </li>
+
+        <li><a href="{{ health_url }}"
+            class="center-align valign-wrapper dropdown-trigger {% if request.path == health_url %}active{% endif %}">Peace</a>
+        </li>
+        <li><a href="{{ policy_url }}"
+            class="center-align valign-wrapper dropdown-trigger {% if request.path == policy_url %}active{% endif %}">Power</a>
+        </li>
+      </ul>
+    </div>
+    <div class="dropdown-container">
+      <ul id="nav-dropdown-ep" class="dropdown-content dd-base">
+        <li><a href="{{ ep_url }}" class="center-align valign-wrapper {% if request.path == ep_url %}active{% endif %}"
+            style="color: rgb(39, 160, 97);text-transform: uppercase;">Overview</a></li>
+        <li><a href="{{ efbf_url }}"
+            class="center-align valign-wrapper {% if request.path == efbf_url %}active{% endif %}"
+            style="color: rgb(39, 160, 97);text-transform: uppercase;">MAKE EVERY FRIDAY, BLACK FRIDAY!®</a></li>
+        <li><a href="{{ vbp_url }}"
+            class="center-align valign-wrapper {% if request.path == vbp_url %}active{% endif %}"
+            style="color: rgb(39, 160, 97);text-transform: uppercase;">Village Black Pages®</a></li>
+        <li><a href="{{ bf_home_url }}"
+            class="center-align valign-wrapper {% if request.path == bf_home_url %}active{% endif %}"
+            style="color: rgb(39, 160, 97);text-transform: uppercase;">Black Friday Challenge™</a></li>
+        <li><a style="color: black; text-transform: none; font-size: 14px;" href="{{ readyss_url }}"
+            class="center-align {% if request.path == readyss_url %}active{% endif %}">Ready, Set, Shop</a></li>
+        <li><a style="color: black; text-transform: none; font-size: 14px;" href="{{ nomination_url }}"
+            class="center-align valign-wrapper {% if request.path == nomination_url %}active{% endif %}">Nomination
+            Challenge</a< /li>
+
+        <li><a style="color: black; text-transform: none; font-size: 14px;"
+            class="center-align {% if request.path == bingo_url %}active{% endif %}" href="{{ bingo_url }}">Power
+            Bingo</a></li>
+      </ul>
+    </div>
+    <div class="dropdown-container">
+      <ul id="nav-dropdown-hw" class="dropdown-content dd-base">
+        <li><a href="{{ health_url }}"
+            class="center-align valign-wrapper {% if request.path == health_url %}active{% endif %}">Overview</a></li>
+
+
+      </ul>
+    </div>
+    <div class="dropdown-container">
+      <ul id="nav-dropdown-pp" class="dropdown-content dd-base">
+        <li><a style="margin-left: 6px" href="{{ policy_url }}"
+            class="center-align valign-wrapper {% if request.path == policy_url %}active{% endif %}">Overview</a></li>
+        <li><a style="margin-left: 6px" href="{{ voting_url }}"
+            class="center-align valign-wrapper {% if request.path == voting_url %}active{% endif %}">Operation: Ballot
+            Box™</a></li>
+        li><a style="margin-left: 6px" href="/education/village-strivers/" class="center-align valign-wrapper">Village
+          Strivers™</a></li>
+      </ul>
+    </div>
+    <div class="dropdown-container">
+      <ul id="top-dropdown-sp" class="dropdown-content dd-base">
+        <li><a class="center-align valign-wrapper {% if request.path == efbf_url %}active{% endif %}"
+            href="{{ pillars_url }}">Strategic Pillars</a></li>
+        <li><a class="center-align valign-wrapper {% if request.path == efbf_url %}active{% endif %}"
+            href="{{ efbf_url }}">MAKE EVERY FRIDAY, BLACK FRIDAY!®</a></li>
+        <li><a class="center-align valign-wrapper {% if request.path == vbp_url %}active{% endif %}"
+            href="{{ vbp_url }}" style="padding-left:10px">Village Black Pages®</a></li>
+        <li><a class="center-align valign-wrapper" data-target="nav-dropdown-pp" href="{{ voting_url }}">Village
+            Strivers™</a></li>
+        <li><a class="center-align valign-wrapper {% if request.path == bf_home_url %}active{% endif %}"
+            data-target="nav-dropdown-bf" href="{{ bf_home_url }}">BLACK FRIDAY CHALLENGE™</a></li>
+        <li><a class="center-align valign-wrapper {% if request.path == voting_url %}active{% endif %}"
+            data-target="nav-dropdown-pp" href="{{ voting_url }}">OPERATION: BALLOT BOX™</a></li>
+      </ul>
+    </div>
+    <div class="dropdown-container">
+      <ul id="events-dropdown" class="dropdown-content dd-base">
+        <li><a class="center-align valign-wrapper" href="/events/">Overview</a></li>
+        <li><a class="center-align valign-wrapper" href="/events/empowerment-summit/">Empowerment Summit</a></li>
+        <li><a class="center-align valign-wrapper" href="/events/village-ventures/">Village Ventures Business Pitch
+            Competition</a></li>
+        <li><a class="center-align valign-wrapper" href="/events/north-star-celebration/">North Star Celebration</a>
+        </li>
+        <li><a class="center-align valign-wrapper" href="/power-walk-2025/">Power Walk</a></li>
+        <li><a class="center-align valign-wrapper" href="/events/love-of-art-fundraiser/">Juneteenth Celebration</a>
+        </li>
+        <li><a class="center-align valign-wrapper" href="/events/power-swing-classic/">Power Swing Classic</a></li>
+      </ul>
+    </div>
+    <div class="dropdown-container">
+      <ul id="about-dropdown" class="dropdown-content dd-base">
+        <li><a class="center-align valign-wrapper" href="/about/">Overview</a></li>
+        <li><a class="center-align valign-wrapper" href="/news-and-events/">News</a></li>
+        <li><a class="center-align valign-wrapper" href="/shop/">Shop</a></li>
+        <li><a class="center-align valign-wrapper" href="/careers/">Careers</a></li>
+        <li><a class="center-align valign-wrapper modal-trigger" href="#join-the-village-modal"
+            style="cursor: pointer">Join</a>
+      </ul>
+    </div>
+    <div style="z-index: -1; margin-top: 120px" id="body-container">
+      {% block content %}
+
+      {% endblock %}
+    </div>
+  </main>
+  {% load sweetify %}
+  {% sweetify %}
+</body>
+<footer class="page-footer etv-footer">
+  <div class="">
+    <div class="row">
+      <div class="col s12 l7 xl6 offset-xl1" style="padding-left: 5%">
+        <img src="https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/footer-r-knockout.png" width=95%
+          style="z-index: 3;padding-top: 10px">
+        <p class="mailchimp-title" style="padding-top:10px">Sign up to receive news and updates from Empower The
+          Village!</p>
+
+        <div class="row">
+          <div id="mc_embed_shell">
+            <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
+            <style type="text/css">
+              #mc_embed_signup {
+                background: rgb(12, 12, 12);
+                clear: left;
+                font: 16px rgb(256, 256, 256);
+                width: 600px;
+              }
+
+              /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+                        We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+            </style>
+            <div id="mc_embed_signup">
+              <form
+                action="https://empowerthevillage.us7.list-manage.com/subscribe/post?u=d66e42f78049eef4b335aab17&amp;id=bfb104d810&amp;f_id=00f6a9e4f0"
+                method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate"
+                target="_blank">
+                <div id="mc_embed_signup_scroll">
+                  <div class="col s1">
+                    <i class="material-icons prefix"
+                      style="color: rgb(196, 196, 196);font-size:2rem;padding-top:.5em">email</i>
+                  </div>
+                  <div class="col s10">
+                    <div class="mc-field-group">
+                      <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required="" value=""
+                        style="font-size: 16px;color:white;padding: 0.1vw;border:none;border-bottom:1px solid #9e9e9e;">
+                      <label for="mce-EMAIL" style="font-size: 16px;color:white;margin: left 0px;">Email</label>
+                    </div>
+                    <div id="mce-responses" class="clear">
+                      <div class="response" id="mce-error-response" style="display: none;"></div>
+                      <div class="response" id="mce-success-response" style="display: none;"></div>
+                    </div>
+                    <div aria-hidden="true" style="position: absolute; left: -5000px;">
+                      <input type="text" name="b_d66e42f78049eef4b335aab17_bfb104d810" tabindex="-1" value="">
+                    </div>
+                  </div>
+                  <div class="col s1">
+                    <div class="clear">
+                      <button type="submit" name="subscribe" id="mc-embedded-subscribe"
+                        class="btn waves-effect light-green darken-1" value="Subscribe" style="margin-top:1em">
+                        <span class="material-icons">send</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <span class="helper-text col s10 offset-s1" style="color:rgb(124, 124, 124);">We respect your privacy
+                  and do not share or sell your contact information.</span>
+              </form>
+            </div>
+            <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
+            <script
+              type="text/javascript">(function ($) { window.fnames = new Array(); window.ftypes = new Array(); fnames[0] = 'EMAIL'; ftypes[0] = 'email'; fnames[12] = 'WEBSITEYU'; ftypes[12] = 'text'; fnames[20] = 'CHECKBOX2'; ftypes[20] = 'text'; fnames[19] = 'TEXTAREA7'; ftypes[19] = 'text'; fnames[18] = 'TEXT4'; ftypes[18] = 'text'; fnames[17] = 'TEXT1'; ftypes[17] = 'text'; fnames[16] = 'TEXT7'; ftypes[16] = 'text'; fnames[15] = 'TEXT3'; ftypes[15] = 'text'; fnames[14] = 'TEXTAREA6'; ftypes[14] = 'text'; fnames[13] = 'CHECKBOXY'; ftypes[13] = 'text'; fnames[11] = 'ADDRESSYU'; ftypes[11] = 'address'; fnames[1] = 'FNAME'; ftypes[1] = 'text'; fnames[10] = 'TEXTAREA5'; ftypes[10] = 'text'; fnames[9] = 'PHONEYUI_'; ftypes[9] = 'phone'; fnames[8] = 'TEXTAREAY'; ftypes[8] = 'text'; fnames[7] = 'TEXT2'; ftypes[7] = 'text'; fnames[6] = 'TEXTYUI_3'; ftypes[6] = 'text'; fnames[5] = 'BIRTHDAY'; ftypes[5] = 'birthday'; fnames[4] = 'PHONE'; ftypes[4] = 'phone'; fnames[3] = 'ADDRESS'; ftypes[3] = 'address'; fnames[2] = 'LNAME'; ftypes[2] = 'text'; fnames[21] = 'ETVAMOUNT'; ftypes[21] = 'text'; }(jQuery)); var $mcj = jQuery.noConflict(true);</script>
+          </div>
+        </div>
+
+      </div>
+      <div class="col s12 l5">
+        <div class="row">
+          <div class="col s12 m3 offset-m3">
+
+            <ul class="other-links">
+              <li><a class="" href="{{ home_url }}">Home</a></li>
+              <li><a class="" href="{{ about_url }}">About</a></li>
+              <li><a class="" href="{{ contact_url }}">Contact</a></li>
+              <li><a class="" href="{{ events_url }}">Events</a></li>
+
+            </ul>
+
+          </div>
+          <div class="col s12 m6">
+            <ul class="other-links">
+              <li><a class="" href="{{ news_url }}">News</a></li>
+              <li><a class="" href="{{ ep_url }}">Prosperity</a></li>
+              <li><a class="" href="{{ health_url }}">Peace</a></li>
+              <li><a class="" href="{{ policy_url }}">Power</a></li>
+            </ul>
+          </div>
         </div>
       </div>
-      <div class="modal" id="join-the-village-modal">
-        <h3 class="join-tv-title">Join The Village!</h3>
-        <p>Enter your email address to join the ETV mailing list.</p>
-        <form id="mailchimp-nav-form">
-          {% csrf_token %}
-          <div class="input-field">
-            <input required id="mailchimp-email-nav" name="email" type="email">
-            <label for="mailchimp-email-nav">Email</label>
-          </div>
-          <button type="submit" class="btn light-green darken-3 waves-effect" id="efbf-mailchimp">Add Me To The List!</button>
-        </form>
+    </div>
+  </div>
+
+  <div class="row center-align">
+    <a class="btn btn-large waves-effect waves-light donate-btn footer-donate-btn" href="{{ donate_url }}">DONATE</a>
+    <p class="tax-disclaimer">Empower The Village, Inc. is a data-driven 501(c)(3) non-profit organization.</p>
+    <p class="tax-disclaimer">All donations are tax-deductible to the fullest extent of the law.</p>
+    <p class="copyright-text modal-trigger" data-target="privacy-policy-modal" style="margin-top: 20px"><a>Privacy
+        Policy</a></p>
+  </div>
+  </div>
+  </div>
+  <div class="footer-copyright" style="height:100px; background-color: rgb(0, 0, 0);">
+    <div class="container center-align">
+      <p class="copyright-text row" style="padding-top: 30px">©{% now "Y" %} Copyright Empower The Village, Inc.</p>
+      <div class="row footer-icon-row" style="padding-top: 10px">
+        <a href="https://www.facebook.com/Empower-The-Village-Nonprofit-Organization-105185814766521/" target="_blank"
+          class="facebook"><i class="fab fa-facebook"></i></a>
+        <a href="https://twitter.com/empower_etv" target="_blank" class="twitter"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com/empower_etv/" target="_blank" class="instagram"><i
+            class="fab fa-instagram"></i></a>
+        <a href="http://linkedin.com/company/empower-the-village" target="_blank" class="linkedin"><i
+            class="fab fa-linkedin"></i></a>
+        <a href="https://www.youtube.com/@empower-the-village" target="_blank" class="youtube"><i
+            class="fab fa-youtube"></i></a>
       </div>
-      <script>
-        $('#top-dropdown-pillars .collapsible-header:contains("                  ")').remove()
-        $('#top-dropdown-pillars .collapsible-header:empty').remove()
-        $('.carousel').resize(function(e){
-          e.preventDefault();
-        })
-        $('#top-dropdown-pillars .collapsible-header').on('click', function(){
-          $(this).closest('.dropdown-content').css('height', 'fit-content')
-        });
-        $(document).ready(function(){
-          $('.modal').modal();
-          $('label').on('click', function(){
-            $(this).addClass('active')
-            $(this).closest('.input-field').find('input').focus()
-          });
-        });
-        
-    </script>
+    </div>
+  </div>
+</footer>
+<div class="modal" id="privacy-policy-modal">
+  <div class="modal-content">
+    <h4 class="center-align">Privacy Policy</h4>
+    <p class="center-align">Last Updated: Oct 1, 2020</p>
+    <h7 class="center-align">Introduction</h7>
+    <p>Empower The Village (“we” or “us” or “our”) may use cookies, web beacons, tracking pixels, and other tracking
+      technologies when you visit our website [empowerthevillage.org], including any other media form, media channel,
+      mobile website, or mobile application related or connected thereto (collectively, the “Site”) to help customize
+      the Site and improve your experience.
+      We reserve the right to make changes to this Cookie Policy at any time and for any reason. We will alert you about
+      any changes by updating the “Last Updated” date of this Cookie Policy. Any changes or modifications will be
+      effective immediately upon posting the updated Cookie Policy on the Site, and you waive the right to receive
+      specific notice of each such change or modification.
+      You are encouraged to periodically review this Cookie Policy to stay informed of updates. You will be deemed to
+      have been made aware of, will be subject to, and will be deemed to have accepted the changes in any revised Cookie
+      Policy by your continued use of the Site after the date such revised Cookie Policy is posted.</p>
+    <h7>Use of Cookies</h7>
+    <p>A “cookie” is a string of information which assigns you a unique identifier that we store on your computer. Your
+      browser then provides that unique identifier to use each time you submit a query to the Site. We use cookies on
+      the Site to, among other things, keep track of services you have used, record registration information, record
+      your user preferences, keep you logged into the Site, facilitate purchase procedures, and track the pages you
+      visit. Cookies help us understand how the Site is being used and improve your user experience.
+    </p>
+    <h7>Types of Cookies</h7>
+    <p>The following types of cookies may be used when you visit the Site:</p>
+    <h7>Advertising Cookies</h7>
+    <p>Advertising cookies are placed on your computer by advertisers and ad servers in order to display advertisements
+      that are most likely to be of interest to you. These cookies allow advertisers and ad servers to gather
+      information about your visits to the Site and other websites, alternate the ads sent to a specific computer, and
+      track how often an ad has been viewed and by whom. These cookies are linked to a computer and do not gather any
+      personal information about you.</p>
+    <h7>Analytics Cookies</h7>
+    <p>Analytics cookies monitor how users reached the Site, and how they interact with and move around once on the
+      Site. These cookies let us know what features on the Site are working the best and what features on the Site can
+      be improved.</p>
+    <h7>Our Cookies</h7>
+    <p>Our cookies are “first-party cookies”, and can be either permanent or temporary. These are necessary cookies,
+      without which the Site won’t work properly or be able to provide certain features and functionalities. Some of
+      these may be manually disabled in your browser, but may affect the functionality of the Site.</p>
+    <h7>Personalization Cookies</h7>
+    <p>Personalization cookies are used to recognize repeat visitors to the Site. We use these cookies to record your
+      browsing history, the pages you have visited, and your settings and preferences each time you visit the Site.</p>
+    <h7>Security Cookies</h7>
+    <p>Security cookies help identify and prevent security risks. We use these cookies to authenticate users and protect
+      user data from unauthorized parties.</p>
+    <h7>Site Management Cookies</h7>
+    <p>Site management cookies are used to maintain your identity or session on the Site so that you are not logged off
+      unexpectedly, and any information you enter is retained from page to page. These cookies cannot be turned off
+      individually, but you can disable all cookies in your browser.</p>
+    <h7>Third-Party Cookies</h7>
+    <p>Third-party cookies may be place on your computer when you visit the Site by companies that run certain services
+      we offer. These cookies allow the third parties to gather and track certain information about you. These cookies
+      can be manually disabled in your browser.</p>
+    <h7>Control of Cookies</h7>
+    <p>Most browsers are set to accept cookies by default. However, you can remove or reject cookies in your browser’s
+      settings. Please be aware that such action could affect the availability and functionality of the Site.
+      For more information on how to control cookies, check your browser or device’s settings for how you can control or
+      reject cookies, or visit the following links:</p>
+    <ul>
+      <li>• Apple Safari</li>
+      <li>• Google Chrome</li>
+      <li>• Microsoft Edge</li>
+      <li>• Microsoft Internet Explorer</li>
+      <li>• Mozilla Firefox</li>
+      <li>• Opera</li>
+      <li>• Android (Chrome)</li>
+      <li>• Blackberry
+      <li>• iPhone or iPad (Chrome)</li>
+      <li>• iPhone or iPad (Safari)</li>
+    </ul>
+    <p>In addition, you may opt-out of some third-party cookies through the Network Advertising Initiative’s Opt-Out
+      Tool.</p>
+    <h7>Other Tracking Technologies</h7>
+    <p>In addition to cookies, we may use web beacons, pixel tags, and other tracking technologies on the Site to help
+      customize the Site and improve your experience. A “web beacon” or “pixel tag” is tiny object or image embedded in
+      a web page or email. They are used to track the number of users who have visited particular pages and viewed
+      emails and acquire other statistical data. They collect only a limited set of data, such as a cookie number, time
+      and date of page or email view, and a description of the page or email on which they reside. Web beacons and pixel
+      tags cannot be declined. However, you can limit their use by controlling the cookies that interact with them.</p>
+    <h7>Privacy Policy</h7>
+    <p>For more information about how we use information collected by cookies and other tracking technologies, please
+      refer to our Privacy Policy posted on the Site. This Cookie Policy is part of and is incorporated into our Privacy
+      Policy. By using the Site, you agree to be bound by this Cookie Policy and our Privacy Policy.</p>
+    <h7>Contact Us</h7>
+    <p>If you have questions or comments about this Cookie Policy, please contact us at:</p>
+    <p style="margin:0; padding:0; font-weight: 500">Empower The Village, Inc.</p>
+    <p style="margin:0; padding:0">178 E. Hanover Avenue, Suite 103</p>
+    <p style="margin:0; padding:0">Cedar Knolls, NJ 07927</p>
+    <p style="margin:0; padding:0">(862) 777-3193</p>
+    <p style="margin:0; padding:0">info@empowerthevillage.org</p>
+  </div>
+</div>
+<div class="modal" id="join-the-village-modal">
+  <h3 class="join-tv-title">Join The Village!</h3>
+  <p>Enter your email address to join the ETV mailing list.</p>
+  <form id="mailchimp-nav-form">
+    {% csrf_token %}
+    <div class="input-field">
+      <input required id="mailchimp-email-nav" name="email" type="email">
+      <label for="mailchimp-email-nav">Email</label>
+    </div>
+    <button type="submit" class="btn light-green darken-3 waves-effect" id="efbf-mailchimp">Add Me To The List!</button>
+  </form>
+</div>
+<script>
+  $('#top-dropdown-pillars .collapsible-header:contains("                  ")').remove()
+  $('#top-dropdown-pillars .collapsible-header:empty').remove()
+  $('.carousel').resize(function (e) {
+    e.preventDefault();
+  })
+  $('#top-dropdown-pillars .collapsible-header').on('click', function () {
+    $(this).closest('.dropdown-content').css('height', 'fit-content')
+  });
+  $(document).ready(function () {
+    $('.modal').modal();
+    $('label').on('click', function () {
+      $(this).addClass('active')
+      $(this).closest('.input-field').find('input').focus()
+    });
+  });
+
+</script>
+
 </html>
