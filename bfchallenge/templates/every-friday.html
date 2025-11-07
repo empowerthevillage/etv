@@ -4,41 +4,44 @@
 {% block content %}
 {% if messages %}
 <ul class="messages">
-    {% for message in messages %}
-    <li  {% if message.tags %} class=" {{ message.tags }} " {% endif %}> {{ message }} </li>
-    {% endfor %}
+  {% for message in messages %}
+  <li {% if message.tags %} class=" {{ message.tags }} " {% endif %}> {{ message }} </li>
+  {% endfor %}
 </ul>
 {% endif %}
 {% if request.user.is_donor %}
 <div id="page">
 
-    <div class="row center-align" style="margin-top:0px">
-      <div class="col s10 l8 offset-s1 offset-l2 login-card" style="background-color:#fdfdfdf1;padding-top:110px; padding-bottom:40px; padding-left: 30px; padding-right: 30px">
-        <h6 id="vbp-nomination-form-title">Every Friday! Transaction Form</h6>
-          <p style="color:rgb(165, 55, 55); font-size: 18px"><u><b>Show Me The Money!</b></u>: Player with the highest dollar amount spent at Black-owned businesses within the challenge period wins!</p>
-          <p style="color:rgb(165, 55, 55); font-size: 18px"><u><b>Throw It In The Bag!</b></u>: Player with the most transactions within the challenge period wins!</p>
-          <form method="POST" style="padding-left:10%; padding-right:10%;" id="nomination-form">
-            {% csrf_token %}
-      
-            <div class="input-field">
-              {{ rss_form.business_name }}
-              <label>{{ rss_form.business_name.label }}<b>*</b></label>
-            </div>
-            <div class="row" style='margin-bottom:0'>
-                <div class="input-field col s5">
-                {{ rss_form.date }}
-                <label>{{ rss_form.date.label }}<b>*</b></label>
-                </div>
-                <div class="input-field col s7">
-                    {{ rss_form.amount }}
-                    <label>{{ rss_form.amount.label }}<b>*</b></label>
-                </div>
-            </div>
-            <div class="input-field">
-              {{ rss_form.category }}
-              <label>{{ rss_form.category.label }}<b>*</b></label>
-            </div>
-            <!--
+  <div class="row center-align" style="margin-top:0px">
+    <div class="col s10 l8 offset-s1 offset-l2 login-card"
+      style="background-color:#fdfdfdf1;padding-top:110px; padding-bottom:40px; padding-left: 30px; padding-right: 30px">
+      <h6 id="vbp-nomination-form-title">Every Friday! Transaction Form</h6>
+      <p style="color:rgb(165, 55, 55); font-size: 18px"><u><b>Show Me The Money!</b></u>: Player with the highest
+        dollar amount spent at Black-owned businesses within the challenge period wins!</p>
+      <p style="color:rgb(165, 55, 55); font-size: 18px"><u><b>Throw It In The Bag!</b></u>: Player with the most
+        transactions within the challenge period wins!</p>
+      <form method="POST" style="padding-left:10%; padding-right:10%;" id="nomination-form">
+        {% csrf_token %}
+
+        <div class="input-field">
+          {{ rss_form.business_name }}
+          <label>{{ rss_form.business_name.label }}<b>*</b></label>
+        </div>
+        <div class="row" style='margin-bottom:0'>
+          <div class="input-field col s5">
+            {{ rss_form.date }}
+            <label>{{ rss_form.date.label }}<b>*</b></label>
+          </div>
+          <div class="input-field col s7">
+            {{ rss_form.amount }}
+            <label>{{ rss_form.amount.label }}<b>*</b></label>
+          </div>
+        </div>
+        <div class="input-field">
+          {{ rss_form.category }}
+          <label>{{ rss_form.category.label }}<b>*</b></label>
+        </div>
+        <!--
             <div class="file-field input-field">
                 <div class="btn">
                     <span class="material-icons" style="margin-top:8px">attach_file</span>
@@ -48,108 +51,130 @@
                     {{ rss_form.receipt }}
                 </div>
             </div>-->
-        
-            <button class="btn btn-large submit-btn nomination-submit" type="submit">
-                SUBMIT
-            </button>
-          </form>
-      </div>
+
+        <button class="btn btn-large submit-btn nomination-submit" type="submit">
+          SUBMIT
+        </button>
+      </form>
     </div>
   </div>
+</div>
 {% else %}
 <div id='page'>
-    <div class="row center-align" style="margin-top:0px">
-        <div class="col s10 l8 offset-s1 offset-l2 login-card" style="background-color:#fdfdfdf1;padding-top:30px; padding-bottom:20px; padding-left: 30px; padding-right: 30px">
-          <h6 id="vbp-nomination-form-title" style="text-transform: uppercase">Make a donation to start playing the
-            <br><div style="color:rgb(66, 172, 13)">every friday challenge today</div></h6>
-            <a class="btn donate-btn-sidenav" style="margin-bottom: 30px; font-size: 36px" href="{{ donate_url }}">DONATE TO PLAY</a>
-             <br>
-             <div class="divider"></div>
-             <br>
-             <div style="font-size: 32px; font-family: oskar">OR</div>
-             <h6 id="vbp-nomination-form-title" style="text-transform: uppercase;">Contact Us To Sponsor a 
-               <br><div style="color:rgb(66, 172, 13)">Ready, Set, Shop! Team Challenge</div></h6>
-          <form method="POST" style="padding-left:10%; padding-right:10%;" id="nomination-form">
-              {% csrf_token %}
-        
-              {{ contact_form }}
-          
-              <button class="btn btn-large submit-btn nomination-submit" type="submit">
-                  SUBMIT
-              </button>
-            </form>
-        </div>
-      </div>
+  <div class="row center-align" style="margin-top:0px">
+    <div class="col s10 l8 offset-s1 offset-l2 login-card"
+      style="background-color:#fdfdfdf1;padding-top:30px; padding-bottom:20px; padding-left: 30px; padding-right: 30px">
+      <h6 id="vbp-nomination-form-title" style="text-transform: uppercase">Make a donation to start playing the
+        <br>
+        <div style="color:rgb(66, 172, 13)">every friday challenge today</div>
+      </h6>
+      <a class="btn donate-btn-sidenav" style="margin-bottom: 30px; font-size: 36px"
+        href="https://crm.bloomerang.co/HostedDonation?ApiKey=pub_950420b4-71d8-11ef-9e7a-0abe7fff0dfd&WidgetId=1944576">DONATE
+        TO PLAY</a>
+      <br>
+      <div class="divider"></div>
+      <br>
+      <div style="font-size: 32px; font-family: oskar">OR</div>
+      <h6 id="vbp-nomination-form-title" style="text-transform: uppercase;">Contact Us To Sponsor a
+        <br>
+        <div style="color:rgb(66, 172, 13)">Ready, Set, Shop! Team Challenge</div>
+      </h6>
+      <form method="POST" style="padding-left:10%; padding-right:10%;" id="nomination-form">
+        {% csrf_token %}
+
+        {{ contact_form }}
+
+        <button class="btn btn-large submit-btn nomination-submit" type="submit">
+          SUBMIT
+        </button>
+      </form>
+    </div>
+  </div>
 </div>
 
 {% endif %}
-  <style>
-    [type="radio"]:checked+span:after, [type="radio"].with-gap:checked+span:before, [type="radio"].with-gap:checked+span:after {
+<style>
+  [type="radio"]:checked+span:after,
+  [type="radio"].with-gap:checked+span:before,
+  [type="radio"].with-gap:checked+span:after {
     border: 2px solid rgb(67, 135, 33);
-}
-[type="radio"]:checked+span:after, [type="radio"].with-gap:checked+span:after {
+  }
+
+  [type="radio"]:checked+span:after,
+  [type="radio"].with-gap:checked+span:after {
     background-color: rgb(67, 135, 33);
-}
-    .textfield {
-      font-family: 'Poppins';
-      font-weight: 300;
-      letter-spacing: 1px;
-      color:rgb(60, 60, 60);
-      font-size:18px
-    }
-    .input-field {
-      padding-bottom: 10px;
-    }
-    input.datepicker {
+  }
+
+  .textfield {
     font-family: 'Poppins';
-      font-weight: 300;
-      letter-spacing: 1px;
-      color:rgb(60, 60, 60);
-      font-size:18px
-    }
-    input.file-path {
+    font-weight: 300;
+    letter-spacing: 1px;
+    color: rgb(60, 60, 60);
+    font-size: 18px
+  }
+
+  .input-field {
+    padding-bottom: 10px;
+  }
+
+  input.datepicker {
     font-family: 'Poppins';
-      font-weight: 300;
-      letter-spacing: 1px;
-      color:rgb(60, 60, 60);
-      font-size:18px
-    }
-    /* label color */
-   .input-field label {
-     color: rgb(128, 128, 128);;
-     font-family: 'Poppins';
-      font-weight: 300;
-      letter-spacing: 1px;
-      font-size:14px;
-      padding-bottom:10px
-    }
-    /* label focus color */
-    .input-field input[type=text]:focus + label {
-      color: rgb(67, 135, 33) !important;
-    }
-    /* label underline focus color */
-    .input-field input[type=text]:focus {
-      border-bottom: 1px solid rgb(67, 135, 33) !important;
-      box-shadow: 0 1px 0 0 rgb(67, 135, 33) !important;
-    }
-    
-    /* icon prefix focus color */
-    .input-field .prefix.active {
-      color: #000;
-    }
-    .select-dropdown {
-      font-family: 'Poppins';
-      font-weight: 300;
-      color:rgb(60, 60, 60);
-      letter-spacing: 1px;
-      padding-top: 10px
-    }
-    #page {
-      background-image: url("https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/bf-challenge-collage.webp");
-      background-size: 100%;
-      background-repeat: repeat;
-    }
-    .submit-btn {
+    font-weight: 300;
+    letter-spacing: 1px;
+    color: rgb(60, 60, 60);
+    font-size: 18px
+  }
+
+  input.file-path {
+    font-family: 'Poppins';
+    font-weight: 300;
+    letter-spacing: 1px;
+    color: rgb(60, 60, 60);
+    font-size: 18px
+  }
+
+  /* label color */
+  .input-field label {
+    color: rgb(128, 128, 128);
+    ;
+    font-family: 'Poppins';
+    font-weight: 300;
+    letter-spacing: 1px;
+    font-size: 14px;
+    padding-bottom: 10px
+  }
+
+  /* label focus color */
+  .input-field input[type=text]:focus+label {
+    color: rgb(67, 135, 33) !important;
+  }
+
+  /* label underline focus color */
+  .input-field input[type=text]:focus {
+    border-bottom: 1px solid rgb(67, 135, 33) !important;
+    box-shadow: 0 1px 0 0 rgb(67, 135, 33) !important;
+  }
+
+  /* icon prefix focus color */
+  .input-field .prefix.active {
+    color: #000;
+  }
+
+  .select-dropdown {
+    font-family: 'Poppins';
+    font-weight: 300;
+    color: rgb(60, 60, 60);
+    letter-spacing: 1px;
+    padding-top: 10px
+  }
+
+  #page {
+    background-image: url("https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/bf-challenge-collage.webp");
+    background-size: 100%;
+    background-repeat: repeat;
+  }
+
+  .submit-btn {
     border: solid 1px rgb(237, 237, 237);
     background-color: rgb(57, 57, 57);
     cursor: pointer;
@@ -165,12 +190,13 @@
     -moz-transition: all 0.3s;
     transition: all 0.3s;
     overflow: hidden;
-    border-radius:0;
-    transform:scale(1,0.9);
-    line-height:0px;
-    width:40%;
-    font-size:16px
+    border-radius: 0;
+    transform: scale(1, 0.9);
+    line-height: 0px;
+    width: 40%;
+    font-size: 16px
   }
+
   .submit-btn:after {
     content: '';
     position: absolute;
@@ -189,6 +215,7 @@
     -ms-transform: translateX(-50%) translateY(-50%) rotate(45deg);
     transform: translateX(-50%) translateY(-50%) rotate(45deg);
   }
+
   .submit-btn:hover,
   .submit-btn:active {
     color: #319657;
@@ -199,39 +226,49 @@
     height: 300%;
     opacity: 1;
   }
+
   .recommended-label {
-    color: rgb(128, 128, 128);;
-     font-family: 'Poppins';
-      font-weight: 300;
-      letter-spacing: 1px;
-      font-size:16px;
-      padding-bottom:0px
+    color: rgb(128, 128, 128);
+    ;
+    font-family: 'Poppins';
+    font-weight: 300;
+    letter-spacing: 1px;
+    font-size: 16px;
+    padding-bottom: 0px
   }
+
   .owned-label {
-    color: rgb(128, 128, 128);;
-     font-family: 'Poppins';
-      font-weight: 300;
-      letter-spacing: 1px;
-      font-size:16px;
-      padding-bottom:0px
+    color: rgb(128, 128, 128);
+    ;
+    font-family: 'Poppins';
+    font-weight: 300;
+    letter-spacing: 1px;
+    font-size: 16px;
+    padding-bottom: 0px
   }
+
   .onlineonly-label {
-    color: rgb(128, 128, 128);;
-     font-family: 'Poppins';
-      font-weight: 300;
-      letter-spacing: 1px;
-      font-size:16px;
-      padding-bottom:0px
+    color: rgb(128, 128, 128);
+    ;
+    font-family: 'Poppins';
+    font-weight: 300;
+    letter-spacing: 1px;
+    font-size: 16px;
+    padding-bottom: 0px
   }
+
   .input-field b {
     color: red
   }
+
   .hidden {
     display: none;
   }
+
   .swal2-popup .select-wrapper {
     display: none;
   }
+
   .donate-btn-navbar {
     border: solid 1px rgb(203, 202, 202);
     cursor: pointer;
@@ -247,17 +284,19 @@
     -moz-transition: all 0.3s;
     transition: all 0.3s;
     overflow: hidden;
-    border-radius:0;
-    transform:scale(1,0.9);
-    
+    border-radius: 0;
+    transform: scale(1, 0.9);
+
   }
+
   .donate-btn {
-    height:60px;
-    line-height:55px;
-    width:30%;
-    background-color:#03d30a;
-    font-size:22px
+    height: 60px;
+    line-height: 55px;
+    width: 30%;
+    background-color: #03d30a;
+    font-size: 22px
   }
+
   .donate-btn:after {
     content: '';
     position: absolute;
@@ -276,6 +315,7 @@
     -ms-transform: translateX(-50%) translateY(-50%) rotate(45deg);
     transform: translateX(-50%) translateY(-50%) rotate(45deg);
   }
+
   .donate-btn:hover,
   .donate-btn:active {
     color: #42b56e;
@@ -290,6 +330,7 @@
     height: 400%;
     opacity: 1;
   }
+
   .donate-btn-sidenav {
     border: solid 1px rgb(220, 220, 220);
     cursor: pointer;
@@ -308,10 +349,11 @@
     -moz-transition: all 0.3s;
     transition: all 0.3s;
     overflow: hidden;
-    border-radius:0;
-    transform:scale(1,0.9);
-    background-color:rgb(12, 177, 45)
+    border-radius: 0;
+    transform: scale(1, 0.9);
+    background-color: rgb(12, 177, 45)
   }
+
   .donate-btn-sidenav:after {
     content: '';
     position: absolute;
@@ -330,6 +372,7 @@
     -ms-transform: translateX(-50%) translateY(-50%) rotate(45deg);
     transform: translateX(-50%) translateY(-50%) rotate(45deg);
   }
+
   .donate-btn-sidenav:hover,
   .donate-btn-sidenav:active {
     color: #1eb810;
@@ -344,12 +387,12 @@
     height: 400%;
     opacity: 1;
   }
-  </style>
-  <script>
-    $(document).ready(function(){
+</style>
+<script>
+  $(document).ready(function () {
     $('select').formSelect();
   });
-    $(document).ready(function(){
+  $(document).ready(function () {
     $('input.autocomplete').autocomplete({
       data: {
         'Alabama': null,
@@ -406,8 +449,7 @@
       },
     });
   });
-  
-  </script>
-  
-{% endblock %}
 
+</script>
+
+{% endblock %}
