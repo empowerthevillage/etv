@@ -39,11 +39,11 @@ def walker_home(request):
         if len(paid_count) > 0:
             dropdown_list.append(x)
     context = {
-        "title": "ETV 2025 Power Walk",
+        "title": "ETV 2026 Unity Walk",
         "photos": HomeGalleryImage.objects.all(),
         "dropdown_list": sorted(dropdown_list, key=lambda x: x.title),
     }
-    return render(request, "walkathon_home_2025.html", context)
+    return render(request, "walkathon_home_2026.html", context)
 
 
 def annual_walker_home(request):
