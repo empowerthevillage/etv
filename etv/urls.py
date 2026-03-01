@@ -217,6 +217,10 @@ urlpatterns = [
         include(("walkathon.urls", "walkathon"), namespace="power-walk-25"),
     ),
     path(
+        "unity-walk-2026/",
+        include(("walkathon.urls", "walkathon"), namespace="unity-walk-26"),
+    ),
+    path(
         "annual-power-walk/",
         include(
             ("walkathon.urls", "walkathon"), namespace="annual-power-walk"
