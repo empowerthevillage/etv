@@ -200,32 +200,32 @@ urlpatterns = [
         "education/",
         include(("education.urls", "education"), namespace="education"),
     ),
-    path(
-        "walkathon/",
-        include(("walkathon.urls", "walkathon"), namespace="walkathon"),
-    ),
-    path(
-        "power-walk-2023/",
-        include(("walkathon.urls", "walkathon"), namespace="power-walk"),
-    ),
-    path(
-        "power-walk-2024/",
-        include(("walkathon.urls", "walkathon"), namespace="power-walk-24"),
-    ),
-    path(
-        "power-walk-2025/",
-        include(("walkathon.urls", "walkathon"), namespace="power-walk-25"),
-    ),
+    # path(
+    #     "walkathon/",
+    #     include(("walkathon.urls", "walkathon"), namespace="walkathon"),
+    # ),
+    # path(
+    #     "power-walk-2023/",
+    #     include(("walkathon.urls", "walkathon"), namespace="power-walk"),
+    # ),
+    # path(
+    #     "power-walk-2024/",
+    #     include(("walkathon.urls", "walkathon"), namespace="power-walk-24"),
+    # ),
+    # path(
+    #     "power-walk-2025/",
+    #     include(("walkathon.urls", "walkathon"), namespace="power-walk-25"),
+    # ),
     path(
         "unity-walk-2026/",
         include(("walkathon.urls", "walkathon"), namespace="unity-walk-26"),
     ),
-    path(
-        "annual-power-walk/",
-        include(
-            ("walkathon.urls", "walkathon"), namespace="annual-power-walk"
-        ),
-    ),
+    # path(
+    #     "annual-power-walk/",
+    #     include(
+    #         ("walkathon.urls", "walkathon"), namespace="annual-power-walk"
+    #     ),
+    # ),
     path(
         "village-empowerment-network/",
         include(("ven.urls", "ven"), namespace="ven"),
