@@ -30,7 +30,7 @@ class Organization(models.Model):
 
     def get_absolute_url(self):
         return reverse(
-            "unity-walk-2026:walker-detail", kwargs={"walker": self.slug}
+            "unity-walk-26:walker-detail", kwargs={"walker": self.slug}
         )
 
     @property
@@ -120,7 +120,7 @@ class Walker(models.Model):
 
     def get_absolute_url(self):
         return reverse(
-            "unity-walk-2026:walker-detail", kwargs={"walker": self.slug}
+            "unity-walk-26:walker-detail", kwargs={"walker": self.slug}
         )
 
     @property
