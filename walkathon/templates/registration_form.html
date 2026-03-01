@@ -1,398 +1,428 @@
 {% extends 'base.html' %}
 {% block title %}
-Register | ETV 2024 Power Walk
+Register | ETV 2026 Unity Walk
 {% endblock %}
-{% block canonical %}https://www.empowerthevillage.org/power-walk-2025/register/{% endblock %}
-{% block seo_description %}Join ETV as we take steps to improve the mental and physical health of the Black community!{% endblock %}
+{% block canonical %}https://www.empowerthevillage.org/unity-walk-2026/register/{% endblock %}
+{% block seo_description %}Join ETV as we take steps to improve the mental and physical health of the Black community!{%
+endblock %}
 {% load static %}
 
 {% block content %}
-  
+
 
 <div id="page">
 
-    <div class="content-container row" style="margin-bottom: 0">
-        <div class="col s12" style="padding-left: 2%; padding-right: 2%; padding-bottom: 3%">
-          <div class="col s12" style="padding-bottom: 10px;">
-              <a href="/power-walk-2025/"><i class="bi bi-arrow-left"></i> Back to Power Walk home page</a>
-          </div>
-          <h5 class="center-align donation-title">ETV 2025 Power Walk Registration</h5>
-          
-          <div id="preloader" class="center-align" style="display:none; padding-top: 200px; height: 800px">
-            <div class="preloader-wrapper big active" >
-              <div class="spinner-layer spinner-blue">
-                <div class="circle-clipper left">
-                  <div class="circle"></div>
-                </div><div class="gap-patch">
-                  <div class="circle"></div>
-                </div><div class="circle-clipper right">
-                  <div class="circle"></div>
-                </div>
-              </div>
-            
-              <div class="spinner-layer spinner-red">
-                <div class="circle-clipper left">
-                  <div class="circle"></div>
-                </div><div class="gap-patch">
-                  <div class="circle"></div>
-                </div><div class="circle-clipper right">
-                  <div class="circle"></div>
-                </div>
-              </div>
-            
-              <div class="spinner-layer spinner-yellow">
-                <div class="circle-clipper left">
-                  <div class="circle"></div>
-                </div><div class="gap-patch">
-                  <div class="circle"></div>
-                </div><div class="circle-clipper right">
-                  <div class="circle"></div>
-                </div>
-              </div>
-            
-              <div class="spinner-layer spinner-green">
-                <div class="circle-clipper left">
-                  <div class="circle"></div>
-                </div><div class="gap-patch">
-                  <div class="circle"></div>
-                </div><div class="circle-clipper right">
-                  <div class="circle"></div>
-                </div>
-              </div>
+  <div class="content-container row" style="margin-bottom: 0">
+    <div class="col s12" style="padding-left: 2%; padding-right: 2%; padding-bottom: 3%">
+      <div class="col s12" style="padding-bottom: 10px;">
+        <a href="/unity-walk-2026/"><i class="bi bi-arrow-left"></i> Back to Unity Walk home page</a>
+      </div>
+      <h5 class="center-align donation-title">ETV 2026 Unity Walk Registration</h5>
+
+      <div id="preloader" class="center-align" style="display:none; padding-top: 200px; height: 800px">
+        <div class="preloader-wrapper big active">
+          <div class="spinner-layer spinner-blue">
+            <div class="circle-clipper left">
+              <div class="circle"></div>
             </div>
-            <h4 style="font-family:oskar;">Processing your registration, please do not refresh or navigate away from this page</h4>
+            <div class="gap-patch">
+              <div class="circle"></div>
+            </div>
+            <div class="circle-clipper right">
+              <div class="circle"></div>
+            </div>
           </div>
-          <div id="success-container" style="display: none; padding-top: 20px;"></div>
-          <div id="form-container">
-              <div>
-                <form id="registration-form" enctype="multipart/form-data" method="POST" >
-                  {% csrf_token %}
-                    <input type="hidden" name="nonce" id="nonce">
-                    <input type="hidden" value="25.00" name="order-total" id="order-total">
-                    <fieldset class="checkout-fieldset z-depth-1">
-                      <div class="input-field col s12" style="margin-bottom: 0">
-                        <p style="font-weight: 600;" id="org-question">Walking with an team/organization? Select a registered group here!</p>
-                        <div style="padding: 0px 10px;">
-                        <select name="organization" id="organization">
-                          {% if new_org_popup %}
-                          <option value="{{ org_created }}" selected>{{ org_created }}</option>
-                          {% else %}
-                          <option value="" disabled selected>Select A Registered Group (optional)</option>
-                          {% endif %}
-                          {% for org in orgs %}
-                            {% if org.image.url is not None %}
-                                <option value="{{ org }}" data-icon="{{ org.image.url }}" class="left">{{ org }}</option>
-                            {% else %}
-                                <option value="{{ org }}">{{ org }}</option>
-                            {% endif %}
-                          {% endfor %}
-                        </select>
-                        </div>
-                        <div style="margin-bottom: 15px;">
-                          <a href="/power-walk-2025/organization-registration/" style="font-size: 12px; font-style: italic;">Don't see your organization? Click here to register your group with ETV!</a>
-                        </div>
+
+          <div class="spinner-layer spinner-red">
+            <div class="circle-clipper left">
+              <div class="circle"></div>
+            </div>
+            <div class="gap-patch">
+              <div class="circle"></div>
+            </div>
+            <div class="circle-clipper right">
+              <div class="circle"></div>
+            </div>
+          </div>
+
+          <div class="spinner-layer spinner-yellow">
+            <div class="circle-clipper left">
+              <div class="circle"></div>
+            </div>
+            <div class="gap-patch">
+              <div class="circle"></div>
+            </div>
+            <div class="circle-clipper right">
+              <div class="circle"></div>
+            </div>
+          </div>
+
+          <div class="spinner-layer spinner-green">
+            <div class="circle-clipper left">
+              <div class="circle"></div>
+            </div>
+            <div class="gap-patch">
+              <div class="circle"></div>
+            </div>
+            <div class="circle-clipper right">
+              <div class="circle"></div>
+            </div>
+          </div>
+        </div>
+        <h4 style="font-family:oskar;">Processing your registration, please do not refresh or navigate away from this
+          page</h4>
+      </div>
+      <div id="success-container" style="display: none; padding-top: 20px;"></div>
+      <div id="form-container">
+        <div>
+          <form id="registration-form" enctype="multipart/form-data" method="POST">
+            {% csrf_token %}
+            <input type="hidden" name="nonce" id="nonce">
+            <input type="hidden" value="25.00" name="order-total" id="order-total">
+            <fieldset class="checkout-fieldset z-depth-1">
+              <div class="input-field col s12" style="margin-bottom: 0">
+                <p style="font-weight: 600;" id="org-question">Walking with an team/organization? Select a registered
+                  group here!</p>
+                <div style="padding: 0px 10px;">
+                  <select name="organization" id="organization">
+                    {% if new_org_popup %}
+                    <option value="{{ org_created }}" selected>{{ org_created }}</option>
+                    {% else %}
+                    <option value="" disabled selected>Select A Registered Group (optional)</option>
+                    {% endif %}
+                    {% for org in orgs %}
+                    {% if org.image.url is not None %}
+                    <option value="{{ org }}" data-icon="{{ org.image.url }}" class="left">{{ org }}</option>
+                    {% else %}
+                    <option value="{{ org }}">{{ org }}</option>
+                    {% endif %}
+                    {% endfor %}
+                  </select>
+                </div>
+                <div style="margin-bottom: 15px;">
+                  <a href="/unity-walk-2026/organization-registration/"
+                    style="font-size: 12px; font-style: italic;">Don't see your organization? Click here to register
+                    your group with ETV!</a>
+                </div>
+              </div>
+              <h5 class="fieldset-title" style="padding-bottom: 10px;">Walker Details</h5>
+              <div class="row" style="margin-bottom: 0;">
+                <div class="input-field col s12 m6" style="margin-top: 0">
+                  <input type="text" name="walker_first_name" class="textfield" required id="id_first_name">
+                  <label for="id_first_name">First Name<b class="required">*</b></label>
+                </div>
+                <div class="input-field col s12 m6" style="margin-top: 0">
+                  <input type="text" required name="walker_last_name" id="last_name">
+                  <label for="id_last_name">Last Name<b class="required">*</b></label>
+                </div>
+                <div class="input-field col s12 m8" style="margin-top: 0">
+                  <input type="text" name="email" required id="email">
+                  <label for="id_email">Email<b class="required">*</b></label>
+                </div>
+                <div class="input-field col s12 m4" style="margin-top: 0">
+                  <input type="text" name="phone" class="phone_us" id="phone">
+                  <label for="phone">Phone (Optional)</label>
+                </div>
+                <p id="opt-in" class="hidden">
+                  <label>
+                    <input type="checkbox" class="filled-in" name="text-opt-in" checked="checked" />
+                    <span>I would like to receive news & SMS updates, opt out anytime. We respect your privacy and do
+                      not share or sell your contact information.</span>
+                  </label>
+                </p>
+                <div class="col s12" style="padding-bottom: 5px;">
+                  <p style="font-weight: 600;">I would like to participate in the 2026 Unity Walk:<b
+                      class="required">*</b></p>
+                  <div class="">
+                    <p style="margin-bottom: 25px;">
+                      <label>
+                        <input value="in-person" class="with-gap" name="virtual-selection" type="radio" />
+                        <span>In-Person (South Mountain Reservation, West Orange, NJ)</span>
+                      </label>
+                    </p>
+                    <p>
+                      <label>
+                        <input value="virtually" class="with-gap" name="virtual-selection" type="radio" />
+                        <span>Virtually (Home, gym, or other)</span>
+                      </label>
+                    </p>
+                  </div>
+                </div>
+                <div class="col s12" style="padding-bottom: 5px;">
+                  <p style="font-weight: 600;">Would you like to participate in the 5k? (Details will be emailed before
+                    event day)<b class="required">*</b></p>
+                  <div class="">
+                    <p>
+                      <label>
+                        <input value="yes" class="with-gap" name="5k-selection" type="radio" />
+                        <span>Yes</span>
+                      </label>
+                    </p>
+                    <p style="margin-bottom: 20px;">
+                      <label>
+                        <input value="no" class="with-gap" name="5k-selection" type="radio" />
+                        <span>No</span>
+                      </label>
+                    </p>
+                  </div>
+                </div>
+
+                <div class="input-field col s12" style="margin-top: 0">
+                  {{ mailing_form.address_line_1 }}
+                  <label for="id_address_line_1">Mailing Address</label>
+                </div>
+                <div class="input-field col s12" style="margin-top: 0">
+                  {{ mailing_form.address_line_2 }}
+                  <label for="id_address_line_2">{{ mailing_form.address_line_2.label }}</label>
+                </div>
+                <div class="input-field col s12 m5" style="margin-top: 0">
+                  {{ mailing_form.city }}
+                  <label for="id_city">City</label>
+                </div>
+                <div class="col s12 m4 input-field" style="margin-top: 0">
+                  {{ mailing_form.state }}
+                  <label>State</label>
+                </div>
+                <div class="input-field col s12 m3" style="margin-top: 0">
+                  <input type="text" name="zip" id="zip">
+                  <label for="zip">Zip Code</label>
+                </div>
+
+                <div class="file-field input-field col s12" style="margin-top: 0;">
+                  <div class="btn">
+                    <span class="material-icons" style="margin-top:8px">attach_file</span>
+                    <input type="file" name="image" accept="image/png, image/jpeg, image/heic">
+                  </div>
+                  <div class="file-path-wrapper">
+                    <input class="file-path validate" type="text" placeholder="Upload your headshot">
+                  </div>
+                </div>
+                <div class="col s12">
+                  <p style="font-weight: 600;">Select a fundraising goal for you and/or your team<b
+                      class="required">*</b>:</p>
+                  <div id="fundraising-options">
+                    <div class="col s12 m6">
+                      <p>
+                        <label>
+                          <input value="100" class="with-gap" name="fundraising-goal" type="radio" />
+                          <span>$100</span>
+                        </label>
+                      </p>
+                      <p>
+                        <label>
+                          <input value="250" class="with-gap" name="fundraising-goal" type="radio" />
+                          <span>$250</span>
+                        </label>
+                      </p>
+                      <p>
+                        <label>
+                          <input value="500" class="with-gap" name="fundraising-goal" type="radio" />
+                          <span>$500</span>
+                        </label>
+                      </p>
+                    </div>
+                    <div class="col s12 m6">
+                      <p>
+                        <label>
+                          <input value="750" class="with-gap" name="fundraising-goal" type="radio" />
+                          <span>$750</span>
+                        </label>
+                      </p>
+                      <p>
+                        <label>
+                          <input value="1000" class="with-gap" name="fundraising-goal" type="radio" />
+                          <span>$1,000</span>
+                        </label>
+                      </p>
+                      <p>
+                        <label>
+                          <input value="other" class="with-gap" name="fundraising-goal" type="radio" id="other-goal" />
+                          <span>Other</span>
+                        </label>
+                      </p>
+                      <div class="other-input hidden text-field" id="other-input-wrapper">
+                        <div class="valign-wrapper">$<input type="number" id="other-input"
+                            style="width: 50%; padding-left: 10px"></div>
+                        <label>Enter a Custom Amount</label>
                       </div>
-                        <h5 class="fieldset-title" style="padding-bottom: 10px;">Walker Details</h5>
-                        <div class="row" style="margin-bottom: 0;">
-                            <div class="input-field col s12 m6" style="margin-top: 0">
-                              <input type="text" name="walker_first_name" class="textfield" required id="id_first_name">
-                                <label for="id_first_name">First Name<b class="required">*</b></label>
-                            </div>
-                            <div class="input-field col s12 m6" style="margin-top: 0">
-                              <input type="text" required name="walker_last_name" id="last_name">
-                              <label for="id_last_name">Last Name<b class="required">*</b></label>
-                            </div>
-                            <div class="input-field col s12 m8" style="margin-top: 0">
-                              <input type="text" name="email" required id="email">
-                              <label for="id_email">Email<b class="required">*</b></label>
-                            </div>
-                            <div class="input-field col s12 m4" style="margin-top: 0">
-                              <input type="text" name="phone" class="phone_us" id="phone">
-                              <label for="phone">Phone (Optional)</label>
-                            </div>
-                            <p id="opt-in" class="hidden">
-                              <label>
-                                <input type="checkbox" class="filled-in" name="text-opt-in" checked="checked" />
-                                <span>I would like to receive news & SMS updates, opt out anytime. We respect your privacy and do not share or sell your contact information.</span>
-                              </label>
-                            </p>
-                            <div class="col s12" style="padding-bottom: 5px;">
-                              <p style="font-weight: 600;">I would like to participate in the 2025 Power Walk:<b class="required">*</b></p>
-                              <div class="">
-                                <p style="margin-bottom: 25px;">
-                                  <label>
-                                    <input value="in-person" class="with-gap" name="virtual-selection" type="radio" />
-                                    <span>In-Person (South Mountain Reservation, West Orange, NJ)</span>
-                                  </label>
-                                </p>
-                                <p>
-                                  <label>
-                                    <input value="virtually" class="with-gap" name="virtual-selection" type="radio" />
-                                    <span>Virtually (Home, gym, or other)</span>
-                                  </label>
-                                </p>
-                              </div>
-                            </div>
-                            <div class="col s12" style="padding-bottom: 5px;">
-                              <p style="font-weight: 600;">Would you like to participate in the 5k? (Details will be emailed before event day)<b class="required">*</b></p>
-                              <div class="">
-                                <p>
-                                  <label>
-                                    <input value="yes" class="with-gap" name="5k-selection" type="radio" />
-                                    <span>Yes</span>
-                                  </label>
-                                </p>
-                                <p style="margin-bottom: 20px;">
-                                  <label>
-                                    <input value="no" class="with-gap" name="5k-selection" type="radio" />
-                                    <span>No</span>
-                                  </label>
-                                </p>
-                              </div>
-                            </div>
-                            
-                            <div class="input-field col s12" style="margin-top: 0">
-                              {{ mailing_form.address_line_1 }}
-                              <label for="id_address_line_1">Mailing Address</label>
-                            </div>
-                            <div class="input-field col s12" style="margin-top: 0">
-                              {{ mailing_form.address_line_2 }}
-                              <label for="id_address_line_2">{{ mailing_form.address_line_2.label }}</label>
-                            </div>
-                            <div class="input-field col s12 m5" style="margin-top: 0">
-                              {{ mailing_form.city }}
-                              <label for="id_city">City</label>
-                            </div>
-                            <div class="col s12 m4 input-field" style="margin-top: 0">
-                              {{ mailing_form.state }}
-                              <label>State</label>
-                            </div>
-                            <div class="input-field col s12 m3" style="margin-top: 0">
-                                <input type="text" name="zip" id="zip">
-                                <label for="zip">Zip Code</label>
-                            </div>
-                            
-                            <div class="file-field input-field col s12" style="margin-top: 0;">
-                              <div class="btn">
-                                  <span class="material-icons" style="margin-top:8px">attach_file</span>
-                                  <input type="file" name="image" accept="image/png, image/jpeg, image/heic">
-                              </div>
-                              <div class="file-path-wrapper">
-                                <input class="file-path validate" type="text" placeholder="Upload your headshot">
-                              </div>
-                            </div>
-                            <div class="col s12">
-                              <p style="font-weight: 600;">Select a fundraising goal for you and/or your team<b class="required">*</b>:</p>
-                              <div id="fundraising-options">
-                                  <div class="col s12 m6">
-                                    <p>
-                                      <label>
-                                        <input value="100" class="with-gap" name="fundraising-goal" type="radio" />
-                                        <span>$100</span>
-                                      </label>
-                                    </p>
-                                    <p>
-                                      <label>
-                                        <input value="250" class="with-gap" name="fundraising-goal" type="radio" />
-                                        <span>$250</span>
-                                      </label>
-                                    </p>
-                                    <p>
-                                      <label>
-                                        <input value="500" class="with-gap" name="fundraising-goal" type="radio" />
-                                        <span>$500</span>
-                                      </label>
-                                    </p>
-                                  </div>
-                                  <div class="col s12 m6">
-                                    <p>
-                                      <label>
-                                        <input value="750" class="with-gap" name="fundraising-goal" type="radio" />
-                                        <span>$750</span>
-                                      </label>
-                                    </p>
-                                    <p>
-                                      <label>
-                                        <input value="1000" class="with-gap" name="fundraising-goal" type="radio" />
-                                        <span>$1,000</span>
-                                      </label>
-                                    </p>
-                                    <p>
-                                      <label>
-                                        <input value="other" class="with-gap" name="fundraising-goal" type="radio" id="other-goal"/>
-                                        <span>Other</span>
-                                      </label>
-                                    </p>
-                                    <div class="other-input hidden text-field" id="other-input-wrapper">
-                                      <div class="valign-wrapper">$<input type="number" id="other-input" style="width: 50%; padding-left: 10px"></div>
-                                      <label>Enter a Custom Amount</label>
-                                    </div>
-                                  </div>
-                              </div>
-                                <p id="pledge-p"  style="margin-bottom: 20px;">
-                                  <label>
-                                    <input name="pledge" type="checkbox" id="pledge-toggle"/>
-                                    <span><b style="font-weight: 600;">Select a pledge amount and pay now (optional)</b></span>
-                                  </label>
-                                </p>
-                                <div class="hidden" id="pledge-options">
-                                  <div class="col s12 m6">
-                                    <p>
-                                      <label>
-                                        <input value="50" class="with-gap" name="pledge-amount" type="radio" />
-                                        <span>$50</span>
-                                      </label>
-                                    </p>
-                                    <p>
-                                      <label>
-                                        <input value="100" class="with-gap" name="pledge-amount" type="radio" />
-                                        <span>$100</span>
-                                      </label>
-                                    </p>
-                                  </div>
-                                  <div class="col s12 m6">
-                                    <p>
-                                      <label>
-                                        <input value="150" class="with-gap" name="pledge-amount" type="radio" />
-                                        <span>$150</span>
-                                      </label>
-                                    </p>
-                                    <p>
-                                      <label>
-                                        <input value="other" class="with-gap" name="pledge-amount" type="radio" id="other-pledge"/>
-                                        <span>Other</span>
-                                      </label>
-                                    </p>
-                                    <div class="other-input hidden text-field" id="other-pledge-input-wrapper">
-                                      <div class="valign-wrapper">$<input type="number" id="other-pledge-input" style="width: 50%; padding-left: 10px"></div>
-                                      <label>Enter a Custom Amount</label>
-                                    </div>
-                                  </div>
-                              </div>
-                            </div>
-                            <div class="col s12" id="waiver-col">
-                              <p style="font-weight: 600;">Waiver:<b class="required">*</b>:</p>
-                              <p style="margin-bottom: 20px;">
-                                <label>
-                                  <input type="checkbox" name="waiver" id="waiver-boolean" value="True" required/>
-                                  <span>I agree and accept the terms of the ETV 2025 Power Walk <a href="#waiver-modal" class="waves-effect waves-light modal-trigger" href="#waiver-modal">Waiver</a></span>
-                                </label>
-                              </p>
-                            </div>
-                        </div>
-                    </fieldset>
-                    <fieldset class="checkout-fieldset z-depth-1">
-                        <div class="row" style="margin-bottom: 0;">
-                            <h5 class="fieldset-title" style="padding-bottom: 10px;">Emergency Contact</h5>
-                            <div class="input-field col s12 m8" style="margin-top: 0">
-                                
-                                <input type="text" name="emergency-contact-name" class="textfield" required id="emergency-contact-name">
-                                  <label for="emergency-contact-name">Emergency Contact Full Name<b class="required">*</b></label>
-                            </div>
-                            <div class="input-field col s12 m4" style="margin-top: 0">
-                              <input type="text" class="phone_us" name="emergency-contact-phone" id="emergency-contact-phone">
-                              <label for="emergency-contact-phone">Emergency Contact Phone<b class="required">*</b></label>
-                            </div>
-                        </div>
-                    </fieldset>
+                    </div>
+                  </div>
+                  <p id="pledge-p" style="margin-bottom: 20px;">
+                    <label>
+                      <input name="pledge" type="checkbox" id="pledge-toggle" />
+                      <span><b style="font-weight: 600;">Select a pledge amount and pay now (optional)</b></span>
+                    </label>
+                  </p>
+                  <div class="hidden" id="pledge-options">
+                    <div class="col s12 m6">
+                      <p>
+                        <label>
+                          <input value="50" class="with-gap" name="pledge-amount" type="radio" />
+                          <span>$50</span>
+                        </label>
+                      </p>
+                      <p>
+                        <label>
+                          <input value="100" class="with-gap" name="pledge-amount" type="radio" />
+                          <span>$100</span>
+                        </label>
+                      </p>
+                    </div>
+                    <div class="col s12 m6">
+                      <p>
+                        <label>
+                          <input value="150" class="with-gap" name="pledge-amount" type="radio" />
+                          <span>$150</span>
+                        </label>
+                      </p>
+                      <p>
+                        <label>
+                          <input value="other" class="with-gap" name="pledge-amount" type="radio" id="other-pledge" />
+                          <span>Other</span>
+                        </label>
+                      </p>
+                      <div class="other-input hidden text-field" id="other-pledge-input-wrapper">
+                        <div class="valign-wrapper">$<input type="number" id="other-pledge-input"
+                            style="width: 50%; padding-left: 10px"></div>
+                        <label>Enter a Custom Amount</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col s12" id="waiver-col">
+                  <p style="font-weight: 600;">Waiver:<b class="required">*</b>:</p>
+                  <p style="margin-bottom: 20px;">
+                    <label>
+                      <input type="checkbox" name="waiver" id="waiver-boolean" value="True" required />
+                      <span>I agree and accept the terms of the ETV 2026 Unity Walk <a href="#waiver-modal"
+                          class="waves-effect waves-light modal-trigger" href="#waiver-modal">Waiver</a></span>
+                    </label>
+                  </p>
+                </div>
+              </div>
+            </fieldset>
+            <fieldset class="checkout-fieldset z-depth-1">
+              <div class="row" style="margin-bottom: 0;">
+                <h5 class="fieldset-title" style="padding-bottom: 10px;">Emergency Contact</h5>
+                <div class="input-field col s12 m8" style="margin-top: 0">
 
-                    <fieldset class="checkout-fieldset z-depth-1" hidden>
-                      <div class="row" style="margin-bottom: 0;">
-                          <h5 class="fieldset-title" style="padding-bottom: 10px;">T-Shirt Size</h5>
+                  <input type="text" name="emergency-contact-name" class="textfield" required
+                    id="emergency-contact-name">
+                  <label for="emergency-contact-name">Emergency Contact Full Name<b class="required">*</b></label>
+                </div>
+                <div class="input-field col s12 m4" style="margin-top: 0">
+                  <input type="text" class="phone_us" name="emergency-contact-phone" id="emergency-contact-phone">
+                  <label for="emergency-contact-phone">Emergency Contact Phone<b class="required">*</b></label>
+                </div>
+              </div>
+            </fieldset>
 
-                          <!--
+            <fieldset class="checkout-fieldset z-depth-1" hidden>
+              <div class="row" style="margin-bottom: 0;">
+                <h5 class="fieldset-title" style="padding-bottom: 10px;">T-Shirt Size</h5>
+
+                <!--
                           <p style="margin-bottom: 30px;">
                             <label>
                               <input type="checkbox" name="shirt-boolean" id="shirt-boolean"/>
-                              <span>I'd like to pre-order an exclusive ETV 2024 Power Walk T-Shirt for $25 (includes registration)</span>
+                              <span>I'd like to pre-order an exclusive ETV 2026 Unity Walk T-Shirt for $25 (includes registration)</span>
                             </label>
                           </p>
                           -->
 
-                          <div id="shirt-size-selector">
-                            <div class="input-field col s8 m4">
-                              <select name="shirt-size">
-                                <option value="none" selected>Choose Your Shirt Size</option>
-                                <option value="xs">XS</option>
-                                <option value="s">S</option>
-                                <option value="m">M</option>
-                                <option value="l">L</option>
-                                <option value="xl">XL</option>
-                                <option value="xxl">XXL</option>
-                              </select>
-                              <label><b>Shirt Size</b> *while supplies last</label>
-                            </div>
-                          </div>
-                      </div>
-                  </fieldset>
-
-                </form>
-              </div>
-              <div class="step-2">
-                <form id="creditcard-form">
-                  <input type="hidden" value="" id="nonce-input">
-                  <fieldset class="checkout-fieldset z-depth-1" style="padding-right: 7%">
-                    <div class="valign-wrapper" style="margin-bottom: 10px">
-                    <h5 class="fieldset-title">Payment Method</h5><h6 class="valign-wrapper secure-checkout align" style="margin-bottom:0; margin-left: 10px"><span class="material-icons">
-                      lock
-                      </span>&nbsp;SECURE
-                    </h6>
-                    </div>
-                    <div class="row">
-                      <div class="col s12 center-align" style="margin-top: 0;">
-                        <h6><b>Registration Fee:</b> $<b style="font-weight: 400;" id="registration-total">25</b></h6>
-                        <div class="hidden" id="pledge-fees">
-                          <h6><b>Pledge:</b> $<b style="font-weight: 400;" id="pledge-total"></b></h6>
-                          <h6><b>Total:</b> $<b style="font-weight: 400;" id="registration-pledge-total"></b></h6>
-                        </div>
-                      </div>
-                      <div class="col s12">
-                        <label for="card-name">Cardholder Name</label>
-                        <div id="card-name" class="valign-wrapper"><i class="fas fa-user-circle input-icon"></i></div>
-                      </div>
-                      <div class="col s12">
-                        <label for="card-number">Card Number</label>
-                        <div id="card-number" class="valign-wrapper"><i class="fas fa-credit-card input-icon"></i></div>
-                      </div>
-                      <div class="col s12 m4">
-                        <label for="card-date">Expiration Date</label>
-                        <div id="card-date" class="valign-wrapper"><i class="fas fa-calendar-day input-icon"></i></div>
-                      </div>
-                      <div class="col s6 m4">
-                        <label for="card-cvv">CVV</label>
-                        <div id="card-cvv" class="valign-wrapper"><i class="fas fa-lock input-icon"></i></div>
-                      </div>
-                      <div class="col s6 m4">
-                        <label for="card-zip">ZIP</label>
-                        <div id="card-zip" class="valign-wrapper"><i class="fas fa-globe-americas input-icon"></i></div>
-                      </div>
-                      <div class="col s12 center-align">
-                        <div class="btn submit-btn" id="registration-submit">Complete Registration</div>
-                      </div>
-                    </div>
-                    
-                  </fieldset>
-                </form>
-                <div class="col s12 center-align">
-                  <a href="https://www.braintreegateway.com/merchants/tb3vd7jd2hynhxcn/verified" target="_blank">
-                    <img src="https://s3.amazonaws.com/braintree-badges/braintree-badge-wide-dark.png" width="280px" height ="44px" border="0"/>
-                    </a>
+                <div id="shirt-size-selector">
+                  <div class="input-field col s8 m4">
+                    <select name="shirt-size">
+                      <option value="none" selected>Choose Your Shirt Size</option>
+                      <option value="xs">XS</option>
+                      <option value="s">S</option>
+                      <option value="m">M</option>
+                      <option value="l">L</option>
+                      <option value="xl">XL</option>
+                      <option value="xxl">XXL</option>
+                    </select>
+                    <label><b>Shirt Size</b> *while supplies last</label>
+                  </div>
                 </div>
               </div>
+            </fieldset>
+
+          </form>
+        </div>
+        <div class="step-2">
+          <form id="creditcard-form">
+            <input type="hidden" value="" id="nonce-input">
+            <fieldset class="checkout-fieldset z-depth-1" style="padding-right: 7%">
+              <div class="valign-wrapper" style="margin-bottom: 10px">
+                <h5 class="fieldset-title">Payment Method</h5>
+                <h6 class="valign-wrapper secure-checkout align" style="margin-bottom:0; margin-left: 10px"><span
+                    class="material-icons">
+                    lock
+                  </span>&nbsp;SECURE
+                </h6>
+              </div>
+              <div class="row">
+                <div class="col s12 center-align" style="margin-top: 0;">
+                  <h6><b>Registration Fee:</b> $<b style="font-weight: 400;" id="registration-total">25</b></h6>
+                  <div class="hidden" id="pledge-fees">
+                    <h6><b>Pledge:</b> $<b style="font-weight: 400;" id="pledge-total"></b></h6>
+                    <h6><b>Total:</b> $<b style="font-weight: 400;" id="registration-pledge-total"></b></h6>
+                  </div>
+                </div>
+                <div class="col s12">
+                  <label for="card-name">Cardholder Name</label>
+                  <div id="card-name" class="valign-wrapper"><i class="fas fa-user-circle input-icon"></i></div>
+                </div>
+                <div class="col s12">
+                  <label for="card-number">Card Number</label>
+                  <div id="card-number" class="valign-wrapper"><i class="fas fa-credit-card input-icon"></i></div>
+                </div>
+                <div class="col s12 m4">
+                  <label for="card-date">Expiration Date</label>
+                  <div id="card-date" class="valign-wrapper"><i class="fas fa-calendar-day input-icon"></i></div>
+                </div>
+                <div class="col s6 m4">
+                  <label for="card-cvv">CVV</label>
+                  <div id="card-cvv" class="valign-wrapper"><i class="fas fa-lock input-icon"></i></div>
+                </div>
+                <div class="col s6 m4">
+                  <label for="card-zip">ZIP</label>
+                  <div id="card-zip" class="valign-wrapper"><i class="fas fa-globe-americas input-icon"></i></div>
+                </div>
+                <div class="col s12 center-align">
+                  <div class="btn submit-btn" id="registration-submit">Complete Registration</div>
+                </div>
+              </div>
+
+            </fieldset>
+          </form>
+          <div class="col s12 center-align">
+            <a href="https://www.braintreegateway.com/merchants/tb3vd7jd2hynhxcn/verified" target="_blank">
+              <img src="https://s3.amazonaws.com/braintree-badges/braintree-badge-wide-dark.png" width="280px"
+                height="44px" border="0" />
+            </a>
           </div>
         </div>
-    </div> 
+      </div>
+    </div>
+  </div>
 </div>
 <div id="waiver-modal" class="modal">
   <div class="modal-content" style="padding-bottom: 0">
-    <h4>ETV 2025 Power Walk Waiver</h4>
-    <p>I acknowledge that my participation in the Power Walk may involve a risk of injury, including bodily injury, and assume the risk for same. On my own behalf and on behalf of my heirs and legal representatives and to the fullest extent permitted by law, I hereby release and discharge Empower The Village and their respective directors, officers, board of trustees, members, agent and representatives, of and from any and all liability for injury, death, or damages and/or any other claims, demands, losses or damages, incurred by me in connection with any aspect of the walk.</p>
-    <p>I also agree to the use of any photo, film, video of the event, in which I may be included, for any legitimate purpose, including advertising and promotion.</p>
+    <h4>ETV 2026 Unity Walk Waiver</h4>
+    <p>I acknowledge that my participation in the Unity Walk may involve a risk of injury, including bodily injury, and
+      assume the risk for same. On my own behalf and on behalf of my heirs and legal representatives and to the fullest
+      extent permitted by law, I hereby release and discharge Empower The Village and their respective directors,
+      officers, board of trustees, members, agent and representatives, of and from any and all liability for injury,
+      death, or damages and/or any other claims, demands, losses or damages, incurred by me in connection with any
+      aspect of the walk.</p>
+    <p>I also agree to the use of any photo, film, video of the event, in which I may be included, for any legitimate
+      purpose, including advertising and promotion.</p>
   </div>
 </div>
 {% if new_org_popup == True %}
 <script>
-  $(document).ready(function(){
+  $(document).ready(function () {
     $('')
     $('select').formSelect();
     Swal.fire({
@@ -411,243 +441,243 @@ Register | ETV 2024 Power Walk
 <script src="https://js.braintreegateway.com/web/3.82.0/js/paypal-checkout.min.js"></script>
 <script src="https://js.braintreegateway.com/web/3.82.0/js/hosted-fields.min.js"></script>
 <script>
-braintree.client.create({
+  braintree.client.create({
     authorization: '{{ tokenization_key }}'
   }, function (clientErr, clientInstance) {
-  if (clientErr) {
-    console.error('Error creating client:', clientErr);
-    return;
-  }
-  braintree.hostedFields.create({
-    client: clientInstance,
-    styles: {
-      'input': {
-        'font-size': '16px',
-        'color': 'black',
-        'border-bottom': '1px solid #9e9e9e',
-        'border-radius': '0',
-        'outline': 'none',
-        'height': '3rem',
-        'font-family': 'poppins',
-        'font-weight': '400',
-        'letter-spacing': '1px',
-        'margin-bottom': '10px',
-      }
-    },
-    fields: {
-      cardholderName: {
-        container: '#card-name',
-      },
-      number: {
-        container: '#card-number',
-      },
-      cvv: {
-        container: '#card-cvv',
-        masked: true
-      },
-      expirationDate: {
-        container: '#card-date',
-      },
-      postalCode: {
-        container: '#card-zip',
-      }
-    }
-  }, function(hostedFieldsErr, hostedFieldsInstance){
-    if (hostedFieldsErr){
-      alert(hostedFieldsErr);
+    if (clientErr) {
+      console.error('Error creating client:', clientErr);
       return;
     }
-    $('#registration-submit').on('click', function(event){
-      event.preventDefault();
-      console.log($('[name="waiver"]:checked').val())
-      if($('#id_first_name').val()==''){
-        Swal.fire({
-          'title': 'Required field missing',
-          'icon': 'error',
-          'text': 'First name is required'
-        })
-        return;
-      }else if($('#last_name').val()==''){
-        Swal.fire({
-          'title': 'Required field missing',
-          'icon': 'error',
-          'text': 'Lase name is required'
-        })
-        return;
-      }else if($('#email').val()==''){
-        Swal.fire({
-          'title': 'Required field missing',
-          'icon': 'error',
-          'text': 'Email address is required'
-        })
-        return;
-      }else if($('[name="virtual-selection"]:checked').val()==undefined){
-        Swal.fire({
-          'title': 'Required field missing',
-          'icon': 'error',
-          'text': "Please select if you'd like to participate virtually or in-person"
-        })
-        return;
-      }else if($('[name="5k-selection"]:checked').val()==undefined){
-        Swal.fire({
-          'title': 'Required field missing',
-          'icon': 'error',
-          'text': "Please select if you'd like to participate in the 5k"
-        })
-        return;
-      }else if($('#emergency-contact-name').val()==''){
-        Swal.fire({
-          'title': 'Required field missing',
-          'icon': 'error',
-          'text': 'Emergency contact is required'
-        })
-        return;
-      }else if($('#emergency-contact-phone').val()==''){
-        Swal.fire({
-          'title': 'Required field missing',
-          'icon': 'error',
-          'text': 'Emergency contact phone number is required'
-        });
-        return;
-      }else if($('[name="waiver"]:checked').val()!='True'){
-        Swal.fire({
-          'title': 'Required field missing',
-          'icon': 'error',
-          'text': 'Please review and accept the 2025 Power Walk Waiver'
-        });
-        return;
-      }if ($('#shirt-size-selector').find(':selected').val()==''){
-          Swal.fire({
-              'title': 'Required field missing',
-              'icon': 'error',
-              'text': 'Please select your shirt size'
-            });
-          return;
+    braintree.hostedFields.create({
+      client: clientInstance,
+      styles: {
+        'input': {
+          'font-size': '16px',
+          'color': 'black',
+          'border-bottom': '1px solid #9e9e9e',
+          'border-radius': '0',
+          'outline': 'none',
+          'height': '3rem',
+          'font-family': 'poppins',
+          'font-weight': '400',
+          'letter-spacing': '1px',
+          'margin-bottom': '10px',
+        }
+      },
+      fields: {
+        cardholderName: {
+          container: '#card-name',
+        },
+        number: {
+          container: '#card-number',
+        },
+        cvv: {
+          container: '#card-cvv',
+          masked: true
+        },
+        expirationDate: {
+          container: '#card-date',
+        },
+        postalCode: {
+          container: '#card-zip',
+        }
       }
-      hostedFieldsInstance.tokenize(function (tokenizeErr, payload) {
-        if (tokenizeErr) {
-          console.error(tokenizeErr);
-          $('#preloader').hide();
-          $('#form-container').removeClass('hidden');
-          if(tokenizeErr.code == 'HOSTED_FIELDS_FIELDS_INVALID'){
-            Swal.fire(
-              'Incorrect Card Details',
-              'Verify your card information and try again!',
-              'error'
-            )
-          }else{
-            $('#preloader').hide();
-            $('#form-container').removeClass('hidden');
-            Swal.fire(
-              'An Error Occured',
-              'There was a problem with your payment method. Please verify your card details, refresh the page, and try again!',
-              'error'
-            )
-          }
+    }, function (hostedFieldsErr, hostedFieldsInstance) {
+      if (hostedFieldsErr) {
+        alert(hostedFieldsErr);
+        return;
+      }
+      $('#registration-submit').on('click', function (event) {
+        event.preventDefault();
+        console.log($('[name="waiver"]:checked').val())
+        if ($('#id_first_name').val() == '') {
+          Swal.fire({
+            'title': 'Required field missing',
+            'icon': 'error',
+            'text': 'First name is required'
+          })
+          return;
+        } else if ($('#last_name').val() == '') {
+          Swal.fire({
+            'title': 'Required field missing',
+            'icon': 'error',
+            'text': 'Lase name is required'
+          })
+          return;
+        } else if ($('#email').val() == '') {
+          Swal.fire({
+            'title': 'Required field missing',
+            'icon': 'error',
+            'text': 'Email address is required'
+          })
+          return;
+        } else if ($('[name="virtual-selection"]:checked').val() == undefined) {
+          Swal.fire({
+            'title': 'Required field missing',
+            'icon': 'error',
+            'text': "Please select if you'd like to participate virtually or in-person"
+          })
+          return;
+        } else if ($('[name="5k-selection"]:checked').val() == undefined) {
+          Swal.fire({
+            'title': 'Required field missing',
+            'icon': 'error',
+            'text': "Please select if you'd like to participate in the 5k"
+          })
+          return;
+        } else if ($('#emergency-contact-name').val() == '') {
+          Swal.fire({
+            'title': 'Required field missing',
+            'icon': 'error',
+            'text': 'Emergency contact is required'
+          })
+          return;
+        } else if ($('#emergency-contact-phone').val() == '') {
+          Swal.fire({
+            'title': 'Required field missing',
+            'icon': 'error',
+            'text': 'Emergency contact phone number is required'
+          });
+          return;
+        } else if ($('[name="waiver"]:checked').val() != 'True') {
+          Swal.fire({
+            'title': 'Required field missing',
+            'icon': 'error',
+            'text': 'Please review and accept the 2026 Unity Walk Waiver'
+          });
+          return;
+        } if ($('#shirt-size-selector').find(':selected').val() == '') {
+          Swal.fire({
+            'title': 'Required field missing',
+            'icon': 'error',
+            'text': 'Please select your shirt size'
+          });
           return;
         }
-        window.scrollTo(0,0);
-        $('#preloader').show();
-        $('#success-container').hide();
-        
-        var nonce = payload.nonce
-        $('#nonce').val(nonce)
-        var formData = new FormData(document.getElementById("registration-form"))
-        $.ajax({
-          data: formData,
-          headers:{
-              "X-CSRFToken": '{{ csrf_token }}'
-          },
-          method: 'POST',
-          url: '/power-walk-2025/register/',
-          success: function(data){
-            if(data.status == 'success'){
+        hostedFieldsInstance.tokenize(function (tokenizeErr, payload) {
+          if (tokenizeErr) {
+            console.error(tokenizeErr);
+            $('#preloader').hide();
+            $('#form-container').removeClass('hidden');
+            if (tokenizeErr.code == 'HOSTED_FIELDS_FIELDS_INVALID') {
               Swal.fire(
-                'Registration successful!',
-                "You're all set! We'll see you at the Power Walk on Saturday, May 16th, 2026",
-                "success",
+                'Incorrect Card Details',
+                'Verify your card information and try again!',
+                'error'
               )
+            } else {
               $('#preloader').hide();
-              $('#form-container').remove();
-              $('#success-container').show();
-              $('#success-container').html(data.html);
-            }else{
+              $('#form-container').removeClass('hidden');
               Swal.fire(
-                "Payment Unsuccessful",
-                "We weren't able to charge your payment method. Please verify your card details and try again",
-                "error",
+                'An Error Occured',
+                'There was a problem with your payment method. Please verify your card details, refresh the page, and try again!',
+                'error'
+              )
+            }
+            return;
+          }
+          window.scrollTo(0, 0);
+          $('#preloader').show();
+          $('#success-container').hide();
+
+          var nonce = payload.nonce
+          $('#nonce').val(nonce)
+          var formData = new FormData(document.getElementById("registration-form"))
+          $.ajax({
+            data: formData,
+            headers: {
+              "X-CSRFToken": '{{ csrf_token }}'
+            },
+            method: 'POST',
+            url: '/unity-walk-2026/register/',
+            success: function (data) {
+              if (data.status == 'success') {
+                Swal.fire(
+                  'Registration successful!',
+                  "You're all set! We'll see you at the Unity Walk on Saturday, May 16th, 2026",
+                  "success",
+                )
+                $('#preloader').hide();
+                $('#form-container').remove();
+                $('#success-container').show();
+                $('#success-container').html(data.html);
+              } else {
+                Swal.fire(
+                  "Payment Unsuccessful",
+                  "We weren't able to charge your payment method. Please verify your card details and try again",
+                  "error",
+                )
+                $('#preloader').hide();
+                $('#form-container').removeClass('hidden');
+              }
+            },
+            error: function () {
+              Swal.fire(
+                'An Error Occured',
+                'Please Try Again',
+                'error'
               )
               $('#preloader').hide();
               $('#form-container').removeClass('hidden');
-            }
-          },
-          error: function(){
-            Swal.fire(
-              'An Error Occured',
-              'Please Try Again',
-              'error'
-            )
-            $('#preloader').hide();
-            $('#form-container').removeClass('hidden');
-          },
-          cache: false,
-          contentType: false,
-          processData: false
+            },
+            cache: false,
+            contentType: false,
+            processData: false
           });
         });
-        });
       });
+    });
   })
 </script>
 <script>
-  $(document).ready(function(){
+  $(document).ready(function () {
     $('.phone_us').mask('(000) 000-0000');
-    $('.money').mask('000,000,000,000,000.00', {reverse: true});
+    $('.money').mask('000,000,000,000,000.00', { reverse: true });
   })
-  $('[name="pledge"]').on('change', function(){
+  $('[name="pledge"]').on('change', function () {
     $('#pledge-options').toggleClass('hidden');
     UpdateTotal()
   });
-  $('[name="pledge-amount"]').on('change', function(){
-    if($('[name="pledge-amount"]:checked').attr('id')=='other-pledge'){
+  $('[name="pledge-amount"]').on('change', function () {
+    if ($('[name="pledge-amount"]:checked').attr('id') == 'other-pledge') {
       $('#other-pledge-input-wrapper').removeClass('hidden')
-    }else{
+    } else {
       $('#other-pledge-input-wrapper').addClass('hidden')
     }
-    if($('[name="pledge"]').is(':checked')){
+    if ($('[name="pledge"]').is(':checked')) {
       $('#pledge-fees').removeClass('hidden')
       $('#pledge-total').text($(this).val())
       UpdateTotal()
     }
   })
-  $('[name="fundraising-goal"]').on('change', function(){
-    if($('[name="fundraising-goal"]:checked').attr('id')=='other-goal'){
+  $('[name="fundraising-goal"]').on('change', function () {
+    if ($('[name="fundraising-goal"]:checked').attr('id') == 'other-goal') {
       $('#other-input-wrapper').removeClass('hidden')
-    }else{
+    } else {
       $('#other-input-wrapper').addClass('hidden')
     }
-    if($('[name="pledge"]').is(':checked')==true){
+    if ($('[name="pledge"]').is(':checked') == true) {
       $('#pledge-fees').removeClass('hidden')
       $('#pledge-total').text($(this).val())
       UpdateTotal()
     }
   });
-  $('[name="pledge"]').on('change', function(){
+  $('[name="pledge"]').on('change', function () {
     $('#fundraising-options').removeClass('hidden')
   })
-  $('#phone').on('keyup', function(){
-    if($(this).val() !== ''){
+  $('#phone').on('keyup', function () {
+    if ($(this).val() !== '') {
       $('#opt-in').removeClass('hidden')
-    }else{
+    } else {
       $('opt-in').addClass('hidden')
     }
   });
-  $('#other-input').on('keyup', function(){
+  $('#other-input').on('keyup', function () {
     $('#other-goal').val($('#other-input').val());
     $('#pledge-total').text($(this).val())
     UpdateTotal()
   });
-  $('#other-pledge-input').on('keyup', function(){
+  $('#other-pledge-input').on('keyup', function () {
     $('#other-pledge').val($('#other-pledge-input').val());
     $('#pledge-total').text($(this).val())
     UpdateTotal()
@@ -657,7 +687,7 @@ braintree.client.create({
   //  $('#shirt-price').toggleClass('hidden');
   //  UpdateTotal()
   //});
-  function UpdateTotal(){
+  function UpdateTotal() {
     var registrationFee = 25
     //if($('#shirt-boolean').is(':checked')){
     //  var registrationFee = 25
@@ -666,11 +696,11 @@ braintree.client.create({
     //  var registrationFee = 15
     //  $('#registration-total').text('15')
     //}
-    if($('[name="pledge"]').is(':checked')==true){
+    if ($('[name="pledge"]').is(':checked') == true) {
       $('#pledge-fees').removeClass('hidden')
       var pledge = parseInt($('[name="pledge-amount"]:checked').val())
       console.log(pledge)
-    }else{
+    } else {
       $('#pledge-fees').addClass('hidden')
       var pledge = 0
     }
@@ -678,49 +708,53 @@ braintree.client.create({
     $('#order-total').val(total)
     $('#registration-pledge-total').text(total)
   }
- $('#donor-detail-section input').on('change', function(){
-      var donor_first = $('#id_first_name').val()
-      var donor_last = $('#last_name').val()
-      var donor_email = $('#email').val()
-      if(donor_first != '' && donor_first != '' && donor_email != ''){
-        $('#creditcard-button').removeClass('disabled')
-        $('#express-pay-options').removeClass('hidden')
-      }
-    })
-    $('label').on('click', function(){
-      $(this).addClass('active')
-    });
-    $('#add-new-billing').hide()
-    $('[name="billing-address-group"]').on('change', function(){
-      $('#add-new-billing').show();
-      $('#billing-saved-or-new').attr('value', 'saved');
-      $('#saved-billing-id').attr('value', 'saved');
-      $('#new-billing-address-form').hide();
-      $('#new-billing-address-form input').val('');
-      
-    });
-    $('#new-billing-address-form input').on('keyup', function(){
-      $('#billing-saved-or-new').attr('value', 'new');
-    })
-    $('#add-new-billing').on('click', function(){
+  $('#donor-detail-section input').on('change', function () {
+    var donor_first = $('#id_first_name').val()
+    var donor_last = $('#last_name').val()
+    var donor_email = $('#email').val()
+    if (donor_first != '' && donor_first != '' && donor_email != '') {
+      $('#creditcard-button').removeClass('disabled')
+      $('#express-pay-options').removeClass('hidden')
+    }
+  })
+  $('label').on('click', function () {
+    $(this).addClass('active')
+  });
+  $('#add-new-billing').hide()
+  $('[name="billing-address-group"]').on('change', function () {
+    $('#add-new-billing').show();
+    $('#billing-saved-or-new').attr('value', 'saved');
+    $('#saved-billing-id').attr('value', 'saved');
+    $('#new-billing-address-form').hide();
+    $('#new-billing-address-form input').val('');
+
+  });
+  $('#new-billing-address-form input').on('keyup', function () {
+    $('#billing-saved-or-new').attr('value', 'new');
+  })
+  $('#add-new-billing').on('click', function () {
     $('#new-billing-address-form').toggle();
     $('[name="billing-address-group"]').prop('checked', false)
   });
-  
+
 </script>
 <style>
   #pledge-p {
     margin-top: 50px
   }
+
   #fundraising-amount {
     margin-bottom: 40px;
   }
+
   #waiver-col {
     margin-top: 50px;
   }
+
   #org-question {
     padding-bottom: 10px;
   }
+
   .submit-btn {
     background: green;
     color: white;
@@ -729,41 +763,53 @@ braintree.client.create({
     margin-top: 10px;
     width: fit-content;
   }
+
   #mobile-double-campaign {
     display: block;
   }
+
   #opt-in {
     padding-bottom: 120px;
   }
-  #registration-form [type="radio"]:not(:checked)+span, [type="radio"]:checked+span {
+
+  #registration-form [type="radio"]:not(:checked)+span,
+  [type="radio"]:checked+span {
     height: 30px !important
   }
+
   .p-title {
     font-family: oskar;
     font-size: 18px;
   }
+
   .donation-review-item {
     font-size: 18px;
     font-family: oskar;
   }
+
   #add-new-billing {
     background: rgb(41, 41, 41)
   }
+
   .address-label {
-      font-size: 14px
-    }
-    label span {
-      margin-bottom: -5px
-    }
-  .help-text{
+    font-size: 14px
+  }
+
+  label span {
+    margin-bottom: -5px
+  }
+
+  .help-text {
     margin: 0;
     text-align: center;
   }
+
   .input-icon {
     font-size: 18px;
     color: rgb(160, 160, 160);
     margin-right: 10px
   }
+
   .checkout-fieldset {
     background: rgba(255, 255, 255, 0.845);
     border: none;
@@ -773,365 +819,440 @@ braintree.client.create({
     padding-left: 7%;
     padding-right: 7%;
     padding-bottom: 40px
-
   }
+
   .checkout-fieldset p {
     margin-bottom: 0;
     margin-top: 0px;
   }
+
   .secure-checkout {
     font-size: 14px;
     font-weight: 300;
     color: rgb(99, 99, 99);
   }
+
   .secure-checkout span {
     font-size: 16px
   }
+
   label {
     color: rgb(43, 43, 43) !important
   }
+
   .fieldset-title {
     font-family: oskar;
     font-size: 20px;
     color: rgb(186, 37, 37);
     text-decoration: underline;
   }
+
   .fieldset-subtitle {
     font-family: oskar;
     font-size: 18px;
     font-weight: 300;
     margin-top: 15px
   }
-    .hidden {
-        display: none;
-    }
-    
-    #page {
-        background-image: url("https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/health-collage-4.webp");
-        background-size: 80%;
-        background-repeat: repeat;
-    }
-    .content-container {
+
+  .hidden {
+    display: none;
+  }
+
+  #page {
+    background-image: url("https://pub-91c8b4fa01b34d9cb1fda46285f07f62.r2.dev/health-collage-4.webp");
+    background-size: 80%;
+    background-repeat: repeat;
+  }
+
+  .content-container {
     padding: 3% 1%;
     background-color: rgba(255, 255, 255, 0.9);
+  }
+
+  .required {
+    color: red
+  }
+
+  .label-title {
+    font-size: 16px
+  }
+
+  .donate-buttons {
+    padding-bottom: 60px
+  }
+
+  .donate-buttons a {
+    width: 100%;
+    margin: 5px;
+    font-size: 16px;
+    letter-spacing: 1.5px;
+    font-weight: 400;
+    height: 50px;
+    padding-top: 4px;
+    border-radius: 40px;
+  }
+
+  .donate-buttons a i {
+    font-size: 24px;
+  }
+
+  .donation-title {
+    font-family: oskar;
+    font-size: 52px;
+  }
+
+  @media only screen and (min-width:0px) {
+    .donate-text-small {
+      display: block;
     }
-    .required {
-        color: red
-    }
-    .label-title {
-        font-size: 16px
-    }
-    .donate-buttons {
-        padding-bottom: 60px
-    }
-    .donate-buttons a {
-        width: 100%;
-        margin:5px;
-        font-size: 16px;
-        letter-spacing: 1.5px;
-        font-weight:400;
-        height: 50px;
-        padding-top:4px;
-        border-radius: 40px;
-    }
-    .donate-buttons a i {
-        font-size: 24px;
-    }
-    .donation-title {
-        font-family: oskar;
-        font-size: 52px;
-    }
-    @media only screen and (min-width:0px){
-        .donate-text-small {
-          display: block;
-        }
-        .donate-text-large {
-          display: none;
-        }
-        .donation-title {
-            font-family: oskar;
-            font-size: 32px;
-        }
-        .donation-subtitle {
-            font-size: 16px;
-            font-weight: 300;
-            line-height: 20px
-        }
-        .venmo-button {
-          width: 100%;
-          margin-left: 0;
-        }
-        .creditcard-button {
-          width: 95%;
-          font-size: 18px;
-        }
-        .applepay-button {
-          width: 95%;
-        }
-        .paypal-button-row {
-          height: 50px !important
-        }
-    }
-    @media only screen and (min-width:400px){
-      #opt-in {
-        padding-bottom: 70px;
-      }
-      #pledge-p {
-        margin-top: 30px
-      }
-      #waiver-col {
-        margin-top: 20px;
-      }
-    }
-    @media only screen and (min-width:601px){
-      #pledge-p {
-        margin-top: 20px
-      }
-      .content-container {
-        padding: 3% 5%
-      }
-     
-      .p-title {
-          font-family: oskar;
-          font-size: 20px;
-        }
-      .donation-review-item {
-        font-size: 20px;
-        font-family: oskar;
-      }
-      .donate-text-small {
-        display: none;
-      }
-      .donate-text-large {
-        display: block;
-        letter-spacing: 2px;
-      }
-      .donation-title {
-          font-family: oskar;
-          font-size: 42px;
-      }
-      .fieldset-title {
-        font-family: oskar;
-        font-size: 24px
-      }
-    }
-    @media only screen and (min-width:993px){
-      #pledge-p {
-        margin-top: 0px;
-      }
-      #org-question {
-        padding-bottom: 0px;
-        margin-bottom: 0px !important;
-      }
-      .submit-btn {
-        font-size: 26px;
-      }
-        .content-container {
-            padding: 3% 10%
-        }
-      #mobile-double-campaign {
+
+    .donate-text-large {
       display: none;
     }
-      #opt-in {
-    padding-bottom: 50px;
-  }
-      #registration-form [type="radio"]:not(:checked)+span, [type="radio"]:checked+span {
-        height: 25px !important
-      }
-      .p-title {
-          font-family: oskar;
-          font-size: 26px;
-        }
-        .donation-review-item {
-    font-size: 26px;
-    font-family: oskar;
-  }
-        .donation-title {
-            font-family: oskar;
-            font-size: 48px;
-        }
-        .donation-subtitle {
-            font-size: 20px;
-            font-weight: 300;
-            line-height: 24px;
-        }
-        .venmo-button {
-          font-size: 16px;
-        }
-        .creditcard-button {
-          font-size: 20px;
-        }
-        .google-button {
-          font-size: 16px;
-        }
-        .applepay-button {
-          font-size: 16px;
-        }
-        .fieldset-title {
-          font-family: oskar;
-          font-size: 26px
-        }
-        .checkout-fieldset p {
-          margin-bottom: 15px !important
-        }
+
+    .donation-title {
+      font-family: oskar;
+      font-size: 32px;
     }
-    @media only screen and (min-width:1400px){
-      #opt-in {
-    padding-bottom: 30px;
-  }
-        .donation-title {
-            font-family: oskar;
-            font-size: 56px;
-        }
-        .donation-subtitle {
-            font-size: 20px;
-            font-weight: 300;
-            line-height: 24px
-        }
-        .fieldset-title {
-          font-family: oskar;
-          font-size: 28px
-        }
+
+    .donation-subtitle {
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 20px
     }
-    .cc-button {
-        background-color: rgb(55, 54, 54)
-    }
-    .cc-button:hover {
-        background-color:rgb(101, 101, 101)
-    }
-    .pp-button {
-        background-color: #3b7bbf
-    }
-    .pp-button:hover {
-        background-color:#6799ce
-    }
+
     .venmo-button {
-        background-color: #3d95ce;
-        color:white;
-        letter-spacing: 1.5px;
-        font-weight:500;
-        height: 50px;
-        line-height: 45px;
-        border-radius: 5px;
-        margin-top: 10px
+      width: 100%;
+      margin-left: 0;
     }
-    .venmo-button:hover {
-        background-color:#739296
-    }
+
     .creditcard-button {
-      background-color: #0f9a22;
-      color:rgb(255, 255, 255);
-        margin:5px;
-        letter-spacing: 1.5px;
-        font-weight:500;
-        height: 50px;
-        line-height: 40px;
-        border-radius: 40px;
+      width: 95%;
+      font-size: 18px;
     }
-    .creditcard-button:hover {
-        background-color:#5e6a4b
-    }
-    .google-button {
-      background-color: #fcfcfc;
-      color:rgb(50, 50, 50);
-        margin:5px;
-        letter-spacing: 1.5px;
-        font-weight:500;
-        height: 50px;
-        line-height: 45px;
-        border-radius: 40px;
-    }
-    .google-button:hover {
-        background-color:#ded8d8
-    }
+
     .applepay-button {
-      background-color: #181818;
-      color:rgb(50, 50, 50);
-        margin:5px;
-        letter-spacing: 1.5px;
-        font-weight:500;
-        height: 50px;
-        line-height: 45px;
-        border-radius: 40px;
+      width: 95%;
     }
-    .applepay-button:hover {
-        background-color:#5e5e5e
+
+    .paypal-button-row {
+      height: 50px !important
     }
-    .paypal-button.paypal-button-color-white, .paypal-button-row.paypal-button-color-white .menu-button {
-      border: none !important;
+  }
+
+  @media only screen and (min-width:400px) {
+    #opt-in {
+      padding-bottom: 70px;
     }
-    body {
-  background-color: #fff;
-}
 
-.toast {
-  position: fixed;
-  top: 15px;
-  right: 15px;
-  z-index: 9999;
-}
+    #pledge-p {
+      margin-top: 30px
+    }
 
-.bootstrap-basic {
-  background: white;
-}
+    #waiver-col {
+      margin-top: 20px;
+    }
+  }
 
-#or {
-  position: relative;
-  line-height: 50px;
-  text-align: center;
-  font-weight: 500;
-}
+  @media only screen and (min-width:601px) {
+    #pledge-p {
+      margin-top: 20px
+    }
 
-#or::before,
-#or::after {
-  position: absolute;
-  width: 30%;
-  height: 1px;
-  
-  top: 25px;
-  
-  background-color: rgb(193, 193, 193);
-  
-  content: '';
-}
+    .content-container {
+      padding: 3% 5%
+    }
 
-#or::before {
-  left: 15%;
-}
+    .p-title {
+      font-family: oskar;
+      font-size: 20px;
+    }
 
-#or::after {
-  right: 15%;
-}
-.btn:focus {
-  background-color:rgb(160, 160, 160) !important;
-}
-#card-name {
-  height: 3rem;
-  border-bottom: 1px solid #9e9e9e;
-  margin-bottom: 10px !important;
-}
-#card-number {
-  height: 3rem;
-  border-bottom: 1px solid #9e9e9e;
-  margin-bottom: 10px !important;
-}
-#card-date {
-  height: 3rem;
-  border-bottom: 1px solid #9e9e9e;
-  margin-bottom: 10px !important;
-}
-#card-cvv {
-  height: 3rem;
-  border-bottom: 1px solid #9e9e9e;
-  margin-bottom: 10px !important;
-}
-#card-zip {
-  height: 3rem ;
-  border-bottom: 1px solid #9e9e9e;
-  margin-bottom: 10px !important;
-}
-::placeholder {
-  color: rgb(186, 186, 186) !important
-}
+    .donation-review-item {
+      font-size: 20px;
+      font-family: oskar;
+    }
+
+    .donate-text-small {
+      display: none;
+    }
+
+    .donate-text-large {
+      display: block;
+      letter-spacing: 2px;
+    }
+
+    .donation-title {
+      font-family: oskar;
+      font-size: 42px;
+    }
+
+    .fieldset-title {
+      font-family: oskar;
+      font-size: 24px
+    }
+  }
+
+  @media only screen and (min-width:993px) {
+    #pledge-p {
+      margin-top: 0px;
+    }
+
+    #org-question {
+      padding-bottom: 0px;
+      margin-bottom: 0px !important;
+    }
+
+    .submit-btn {
+      font-size: 26px;
+    }
+
+    .content-container {
+      padding: 3% 10%
+    }
+
+    #mobile-double-campaign {
+      display: none;
+    }
+
+    #opt-in {
+      padding-bottom: 50px;
+    }
+
+    #registration-form [type="radio"]:not(:checked)+span,
+    [type="radio"]:checked+span {
+      height: 25px !important
+    }
+
+    .p-title {
+      font-family: oskar;
+      font-size: 26px;
+    }
+
+    .donation-review-item {
+      font-size: 26px;
+      font-family: oskar;
+    }
+
+    .donation-title {
+      font-family: oskar;
+      font-size: 48px;
+    }
+
+    .donation-subtitle {
+      font-size: 20px;
+      font-weight: 300;
+      line-height: 24px;
+    }
+
+    .venmo-button {
+      font-size: 16px;
+    }
+
+    .creditcard-button {
+      font-size: 20px;
+    }
+
+    .google-button {
+      font-size: 16px;
+    }
+
+    .applepay-button {
+      font-size: 16px;
+    }
+
+    .fieldset-title {
+      font-family: oskar;
+      font-size: 26px
+    }
+
+    .checkout-fieldset p {
+      margin-bottom: 15px !important
+    }
+  }
+
+  @media only screen and (min-width:1400px) {
+    #opt-in {
+      padding-bottom: 30px;
+    }
+
+    .donation-title {
+      font-family: oskar;
+      font-size: 56px;
+    }
+
+    .donation-subtitle {
+      font-size: 20px;
+      font-weight: 300;
+      line-height: 24px
+    }
+
+    .fieldset-title {
+      font-family: oskar;
+      font-size: 28px
+    }
+  }
+
+  .cc-button {
+    background-color: rgb(55, 54, 54)
+  }
+
+  .cc-button:hover {
+    background-color: rgb(101, 101, 101)
+  }
+
+  .pp-button {
+    background-color: #3b7bbf
+  }
+
+  .pp-button:hover {
+    background-color: #6799ce
+  }
+
+  .venmo-button {
+    background-color: #3d95ce;
+    color: white;
+    letter-spacing: 1.5px;
+    font-weight: 500;
+    height: 50px;
+    line-height: 45px;
+    border-radius: 5px;
+    margin-top: 10px
+  }
+
+  .venmo-button:hover {
+    background-color: #739296
+  }
+
+  .creditcard-button {
+    background-color: #0f9a22;
+    color: rgb(255, 255, 255);
+    margin: 5px;
+    letter-spacing: 1.5px;
+    font-weight: 500;
+    height: 50px;
+    line-height: 40px;
+    border-radius: 40px;
+  }
+
+  .creditcard-button:hover {
+    background-color: #5e6a4b
+  }
+
+  .google-button {
+    background-color: #fcfcfc;
+    color: rgb(50, 50, 50);
+    margin: 5px;
+    letter-spacing: 1.5px;
+    font-weight: 500;
+    height: 50px;
+    line-height: 45px;
+    border-radius: 40px;
+  }
+
+  .google-button:hover {
+    background-color: #ded8d8
+  }
+
+  .applepay-button {
+    background-color: #181818;
+    color: rgb(50, 50, 50);
+    margin: 5px;
+    letter-spacing: 1.5px;
+    font-weight: 500;
+    height: 50px;
+    line-height: 45px;
+    border-radius: 40px;
+  }
+
+  .applepay-button:hover {
+    background-color: #5e5e5e
+  }
+
+  .paypal-button.paypal-button-color-white,
+  .paypal-button-row.paypal-button-color-white .menu-button {
+    border: none !important;
+  }
+
+  body {
+    background-color: #fff;
+  }
+
+  .toast {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 9999;
+  }
+
+  .bootstrap-basic {
+    background: white;
+  }
+
+  #or {
+    position: relative;
+    line-height: 50px;
+    text-align: center;
+    font-weight: 500;
+  }
+
+  #or::before,
+  #or::after {
+    position: absolute;
+    width: 30%;
+    height: 1px;
+
+    top: 25px;
+
+    background-color: rgb(193, 193, 193);
+
+    content: '';
+  }
+
+  #or::before {
+    left: 15%;
+  }
+
+  #or::after {
+    right: 15%;
+  }
+
+  .btn:focus {
+    background-color: rgb(160, 160, 160) !important;
+  }
+
+  #card-name {
+    height: 3rem;
+    border-bottom: 1px solid #9e9e9e;
+    margin-bottom: 10px !important;
+  }
+
+  #card-number {
+    height: 3rem;
+    border-bottom: 1px solid #9e9e9e;
+    margin-bottom: 10px !important;
+  }
+
+  #card-date {
+    height: 3rem;
+    border-bottom: 1px solid #9e9e9e;
+    margin-bottom: 10px !important;
+  }
+
+  #card-cvv {
+    height: 3rem;
+    border-bottom: 1px solid #9e9e9e;
+    margin-bottom: 10px !important;
+  }
+
+  #card-zip {
+    height: 3rem;
+    border-bottom: 1px solid #9e9e9e;
+    margin-bottom: 10px !important;
+  }
+
+  ::placeholder {
+    color: rgb(186, 186, 186) !important
+  }
 </style>
 {% endblock %}

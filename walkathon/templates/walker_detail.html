@@ -37,16 +37,16 @@
 </div>
 <div class="row" style="padding: 1%" id="walker-content">
     <div class="col s12" style="padding-bottom: 20px;padding-top: 0px;">
-        <a href="/power-walk-2025/" class="back-link"><i class="bi bi-arrow-left"></i> Back to Power Walk home page</a>
+        <a href="/unity-walk-2026/" class="back-link"><i class="bi bi-arrow-left"></i> Back to Unity Walk home page</a>
         <div class="right valign-wrapper" style="padding-right: 20px;">
             <div class="fb-share-button" data-href="{{ walker.get_absolute_url }}" data-layout="button"
                 style="margin-right: 5px;"></div>
             <script type="IN/Share" data-url="{{ waler.get_absolute_url }}"></script>
         </div>
         <br>
-        <a href="/power-walk-2025/register/" class="btn"
+        <a href="/unity-walk-2026/register/" class="btn"
             style="font-size: 12px; font-weight: 600; margin-top: 5px; background: rgb(27, 154, 27);">Register for the
-            Power Walk Today!</a>
+            Unity Walk Today!</a>
     </div>
     <div class="col s4 offset-s4 offset-m1 l3 offset-l2">
         {% if walker.image %}
@@ -59,20 +59,20 @@
     </div>
 
     <div class="col s12 m6">
-        <h6 class="walker-name" style="color:rgb(9, 131, 9)">{% if walker_type == 'individual' %}Power Walker{% elif
-            walker_type == 'org' %}Power Walk Group{% endif %}</h6>
+        <h6 class="walker-name" style="color:rgb(9, 131, 9)">{% if walker_type == 'individual' %}Unity Walker{% elif
+            walker_type == 'org' %}Unity Walk Group{% endif %}</h6>
         <h6 class="walker-name">{{ walker }}</h6>
         {% if walker.organization %}
         <h6 class="walker-name mini">I'm walking with <a href="{{ walker.organization.get_absolute_url }}">{{
                 walker.organization }}</a></h6>
         {% endif %}
-        <p class="power-walk-slogan" style="font-weight:600;">Empower The Village to improve community health and
+        <p class="unity-walk-slogan" style="font-weight:600;">Empower The Village to improve community health and
             wellness now!</p>
-        <p class="power-walk-slogan" style="color:rgb(9, 131, 9)">Reports of the Mental Health Crisis affecting our
+        <p class="unity-walk-slogan" style="color:rgb(9, 131, 9)">Reports of the Mental Health Crisis affecting our
             children and people of all ages is all over the news. ETV's solutions-focused work is more urgent and
             important than ever! In recent years, the US Surgeon General issued a warning and declared that immediate
             action must be taken.</p>
-        <p class="power-walk-slogan" style="color: black; font-weight: 600;">Support us ... We are making a difference
+        <p class="unity-walk-slogan" style="color: black; font-weight: 600;">Support us ... We are making a difference
             where it counts!</p>
         <div class="row">
             <div class="col s4 offset-s2">
@@ -129,7 +129,7 @@
         <div class="divider"></div>
     </div>
     <div class="col s12" style="display:flex; justify-content: center">
-        <a href="/power-walk-2025/" class="btn"
+        <a href="/unity-walk-2026/" class="btn"
             style="font-size: 18px; font-weight: 600; margin-top: 0px; margin-bottom: 15px; height: fit-content; line-height: 24px; padding-top: 8px; padding-bottom: 5px;background: rgb(27, 154, 27); width: fit-content;">Click
             to Learn More About ETV's Mental Health Initiative!</a>
     </div>
@@ -140,8 +140,8 @@
                     <div class="col-12 center-align">
                         <h5
                             style="font-family: oskar; margin-bottom: 0; padding-bottom: 0; text-decoration: underline;">
-                            {% if walker_type == 'individual' %}My Power Walk Goal{% elif walker_type == 'org' %}Our
-                            Power Walk Goal{% endif %}</h5>
+                            {% if walker_type == 'individual' %}My Unity Walk Goal{% elif walker_type == 'org' %}Our
+                            Unity Walk Goal{% endif %}</h5>
                     </div>
                 </div>
 
@@ -513,9 +513,9 @@
         $.ajax({
             data: data,
             method: 'POST',
-            url: '/power-walk-2025/support-a-walker/',
+            url: '/unity-walk-2026/support-a-walker/',
             success: function (data) {
-                window.location.replace('/power-walk-2025/walker-donation/')
+                window.location.replace('/unity-walk-2026/walker-donation/')
                 //$('#donate-window').removeClass('hidden');
                 //$('#donate-window').html(data.html);
                 //$('#walker-content').addClass('hidden')
