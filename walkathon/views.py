@@ -491,9 +491,9 @@ def process_walker_donation(request):
                 2794, 15013, {"email_address": str(email)}
             )
             send_mail(
-                "New Power Walk Donation!",
+                "New Unity Walk Donation!",
                 str(
-                    "A new $%s Power Walk donation for %s has been received from %s %s through www.empowerthevillage.org!"
+                    "A new $%s Unity Walk donation for %s has been received from %s %s through www.empowerthevillage.org!"
                     % (total, walker, first_name, last_name)
                 ),
                 "etvnotifications@gmail.com",
