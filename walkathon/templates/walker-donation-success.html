@@ -5,9 +5,9 @@
     </div>
     <div class="col-12 center-align">
         {% if walker_type == 'individual' %}
-        <p><b>Power Walker:</b> {{ donation.walker }}</p>
+        <p><b>Unity Walker:</b> {{ donation.walker }}</p>
         {% else %}
-        <p><b>Power Walk Group:</b> {{ donation.organization }}</p>
+        <p><b>Unity Walk Group:</b> {{ donation.organization }}</p>
         {% endif %}
         <p><b>Amount:</b> ${{ donation.amount }}</p>
         <p><b>Donor Name:</b> {{ donation.first_name }} {{ donation.last_name }}</p>

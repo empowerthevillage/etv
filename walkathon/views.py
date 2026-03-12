@@ -132,7 +132,7 @@ def walker_registration(request):
                     "email": email,
                 },
                 "custom_fields": {
-                    "memo": "Power Walk Registration - %s %s"
+                    "memo": "Unity Walk Registration - %s %s"
                     % (first_name, last_name)
                 },
                 "options": {
@@ -142,9 +142,9 @@ def walker_registration(request):
         )
         if result.is_success:
             send_mail(
-                "New Power Walk Registration!",
+                "New Unity Walk Registration!",
                 str(
-                    "A new $%s power walk registration has been processed for %s %s through www.empowerthevillage.org!"
+                    "A new $%s unity walk registration has been processed for %s %s through www.empowerthevillage.org!"
                     % (total, first_name, last_name)
                 ),
                 "etvnotifications@gmail.com",
@@ -329,7 +329,7 @@ def sponsor(request):
                     "email": email,
                 },
                 "custom_fields": {
-                    "memo": "Power Walk Sponsorship - %s %s"
+                    "memo": "Unity Walk Sponsorship - %s %s"
                     % (first_name, last_name)
                 },
                 "options": {
@@ -352,7 +352,7 @@ def sponsor(request):
                 2794, 15013, {"email_address": str(email)}
             )
             send_mail(
-                "New Power Walk Sponsorship!",
+                "New Unity Walk Sponsorship!",
                 str(
                     "A new $%s sponsorship has been received from %s %s through www.empowerthevillage.org!"
                     % (total, spons_obj.first_name, spons_obj.last_name)
@@ -468,7 +468,7 @@ def process_walker_donation(request):
                     "email": email,
                 },
                 "custom_fields": {
-                    "memo": "$%s Power Walker Donation for %s from %s %s"
+                    "memo": "$%s Unity Walker Donation for %s from %s %s"
                     % (total, walker, first_name, last_name)
                 },
                 "options": {
