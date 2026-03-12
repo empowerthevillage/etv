@@ -78,7 +78,7 @@ community!{%endblock %}
           <form id="registration-form" enctype="multipart/form-data" method="POST">
             {% csrf_token %}
             <input type="hidden" name="nonce" id="nonce">
-            <input type="hidden" value="25.00" name="order-total" id="order-total">
+            <input type="hidden" value="20.00" name="order-total" id="order-total">
             <fieldset class="checkout-fieldset z-depth-1">
               <div class="input-field col s12" style="margin-bottom: 0">
                 <p style="font-weight: 600;" id="org-question">Walking with an team/organization? Select a registered
@@ -363,7 +363,7 @@ community!{%endblock %}
               </div>
               <div class="row">
                 <div class="col s12 center-align" style="margin-top: 0;">
-                  <h6><b>Registration Fee:</b> $<b style="font-weight: 400;" id="registration-total">25</b></h6>
+                  <h6><b>Registration Fee:</b> $<b style="font-weight: 400;" id="registration-total">20</b></h6>
                   <div class="hidden" id="pledge-fees">
                     <h6><b>Pledge:</b> $<b style="font-weight: 400;" id="pledge-total"></b></h6>
                     <h6><b>Total:</b> $<b style="font-weight: 400;" id="registration-pledge-total"></b></h6>
@@ -688,7 +688,7 @@ community!{%endblock %}
   //  UpdateTotal()
   //});
   function UpdateTotal() {
-    var registrationFee = 25
+    var registrationFee = 20
     //if($('#shirt-boolean').is(':checked')){
     //  var registrationFee = 25
     //  $('#registration-total').text('25')
