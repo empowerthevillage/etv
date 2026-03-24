@@ -60,8 +60,8 @@
     </div>
 
     <div class="col s12 m6">
-        <h6 class="walker-name" style="color:rgb(9, 131, 9)">{% if walker_type == 'individual' %}Unity Walker{% elif
-            walker_type == 'org' %}Unity Walk Group{% endif %}</h6>
+        <h6 class="walker-name" style="color:rgb(9, 131, 9)">{% if walker_type == 'individual' %}Unity Walker
+            {% elif walker_type == 'org' %}Unity Walk Group{% endif %}</h6>
         <h6 class="walker-name">{{ walker }}</h6>
         {% if walker.organization %}
         <h6 class="walker-name mini">I'm walking with <a href="{{ walker.organization.get_absolute_url }}">{{
@@ -141,7 +141,8 @@
                     <div class="col-12 center-align">
                         <h5
                             style="font-family: oskar; margin-bottom: 0; padding-bottom: 0; text-decoration: underline;">
-                            {% if walker_type == 'individual' %}My Unity Walk Goal{% elif walker_type == 'org' %}Our Unity Walk Goal{% endif %}</h5>
+                            {% if walker_type == 'individual' %}My Unity Walk Goal{% elif walker_type == 'org' %}Our
+                            Unity Walk Goal{% endif %}</h5>
                     </div>
                 </div>
 
