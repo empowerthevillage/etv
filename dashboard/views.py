@@ -539,21 +539,24 @@ def save_obj(request):
                     },
                 )
                 if instance.counselor == "Andrew Frazier":
-                    send_mail(
-                        counselor_subject,
-                        plain_text,
-                        from_email,
-                        ["andrew@smallbusinesslikeapro.com"],
-                        html_message=counselor_confirmation_content,
-                    )
+                    pass
+                    # send_mail(
+                    #     counselor_subject,
+                    #     plain_text,
+                    #     from_email,
+                    #     ["andrew@smallbusinesslikeapro.com"],
+                    #     html_message=counselor_confirmation_content,
+                    # )
                 elif instance.counselor == "Michelle Harlan":
-                    send_mail(
-                        counselor_subject,
-                        plain_text,
-                        from_email,
-                        ["MHarlan@financialguide.com"],
-                        html_message=counselor_confirmation_content,
-                    )
+                    pass
+                    # send_mail(
+                    #     counselor_subject,
+                    #     plain_text,
+                    #     from_email,
+                    #     ["MHarlan@financialguide.com"],
+                    #     html_message=counselor_confirmation_content,
+                    # )
+                # NEW COUNSELORS - ADD TO THIS LIST
                 else:
                     pass
                 counselor_plain_text = "View email in browser"
