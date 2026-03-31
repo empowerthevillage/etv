@@ -557,6 +557,15 @@ def save_obj(request):
                     #     html_message=counselor_confirmation_content,
                     # )
                 # NEW COUNSELORS - ADD TO THIS LIST
+                elif instance.counselor == "Test":
+                    send_mail(
+                        counselor_subject,
+                        plain_text,
+                        from_email,
+                        ["admin@empowerthevillage.com"],
+                        html_message=counselor_confirmation_content,
+                    )
+                # NEW COUNSELORS - ADD TO THIS LIST
                 else:
                     pass
                 counselor_plain_text = "View email in browser"
