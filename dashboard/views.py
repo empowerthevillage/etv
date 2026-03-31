@@ -562,7 +562,7 @@ def save_obj(request):
                         counselor_subject,
                         plain_text,
                         from_email,
-                        ["admin@empowerthevillage.com"],
+                        ["admin@empowerthevillage.org"],
                         html_message=counselor_confirmation_content,
                     )
                 # NEW COUNSELORS - ADD TO THIS LIST
