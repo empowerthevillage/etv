@@ -557,7 +557,7 @@ def save_obj(request):
                     #     html_message=counselor_confirmation_content,
                     # )
                 # NEW COUNSELORS - ADD TO THIS LIST
-                elif instance.counselor == "Test":
+                elif instance.counselor == "Deidra Viney":
                     send_mail(
                         counselor_subject,
                         plain_text,
