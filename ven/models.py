@@ -97,6 +97,7 @@ COUNSELOR_CHOICES = (
     # NEW COUNSELORS - ADD TO THIS LIST
     # ('Andrew Frazier', 'Andrew Frazier'),
     # ('Michelle Harlan', 'Michelle Harlan'),
+    ("Test", "Test"),
 )
 
 
