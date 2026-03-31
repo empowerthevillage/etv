@@ -538,7 +538,9 @@ def save_obj(request):
                         "bus_priority3": instance.priority3,
                     },
                 )
-                if instance.counselor == "Andrew Frazier":
+                if instance.counselor == "Test":
+                    pass
+                elif instance.counselor == "Andrew Frazier":
                     pass
                     # send_mail(
                     #     counselor_subject,

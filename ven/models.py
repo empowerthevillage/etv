@@ -95,9 +95,10 @@ STATE_CHOICES = (
 COUNSELOR_CHOICES = (
     ("Unassigned", "Unassigned"),
     # NEW COUNSELORS - ADD TO THIS LIST
+    # ("Test", "Test"),
     # ('Andrew Frazier', 'Andrew Frazier'),
     # ('Michelle Harlan', 'Michelle Harlan'),
-    ("Test", "Test"),
+    ("Deidra Viney", "Deidra Viney"),
 )
 
 
