@@ -126,8 +126,8 @@
                   x.type.price|floatformat:"0"|intcomma }}</b> <b class="sale">&nbsp${{
                   x.type.sale_price|floatformat:"0"|intcomma }}</b> - {{ x.type.sale_description }}</p>
               {% else %}
-              <p class="ticket-price">${{ x.type.price|floatformat:"0"|intcomma }} {% if x.type.price_description is not
-                none %}- {{ x.type.price_description }}{% endif %}</p>
+              <p class="ticket-price">${{ x.type.price|floatformat:"0"|intcomma }}
+                {% if x.type.price_description is not none %}- {{ x.type.price_description }}{% endif %}</p>
               {% endif %}
               <p class="ticket-description">{{ x.type.description|safe }}{% if x.type.registration_url is not None %}<a
                   href="{{ x.type.registration_url}}" target="_blank"> {{ x.type.registration_text }}{% endif %}</p>
@@ -165,11 +165,11 @@
                         x.type.price|floatformat:"0"|intcomma }}</b> <b class="sale">&nbsp${{
                         x.type.sale_price|floatformat:"0"|intcomma }}</b> - {{ x.type.sale_description }}</p>
                     {% else %}
-                    <p class="ticket-price">${{ x.type.price|floatformat:"0"|intcomma }} {% if x.type.price_description
-                      is not none %}- {{ x.type.price_description }}{% endif %}</p>
+                    <p class="ticket-price">${{ x.type.price|floatformat:"0"|intcomma }}
+                      {% if x.type.price_description is not none %}- {{ x.type.price_description }}{% endif %}</p>
                     {% endif %}
-                    <p class="ticket-description">{{ x.type.description }}{% if x.type.registration_url is not None %}<a
-                        href="{{ x.type.registration_url}}" target="_blank"> {{ x.type.registration_text }}{% endif %}
+                    <p class="ticket-description">{{ x.type.description }}{% if x.type.registration_url is not None %}
+                      <a href="{{ x.type.registration_url}}" target="_blank"> {{ x.type.registration_text }}{% endif %}
                     </p>
                   </div>
                   <div class="col s12 m3">
