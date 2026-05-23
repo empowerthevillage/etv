@@ -16,42 +16,19 @@
       {% if event.subtitle is not None %}
       <h6 class="modal-title scale-up-center" style="color: black">{{ event.subtitle }}</h6>
       {% endif %}
-      <!--
       {% if not event.date_tbd %}
-      <h6 class="modal-date scale-up-center" style="width: 100%">
-        {% if event.is_multiday %}
-        {{ event.start_date|date:"F jS" }} &amp; {{ event.end_date|date:"jS" }}, {{ event.end_date|date:"Y" }}
-        {% else %}
-        {{ event.start_date|date:"F jS, Y" }}
-        {% endif %}
-      </h6>
-      {% if event.start_time is not None or event.end_time is not None %}
-      <h6 class="modal-date scale-up-center" style="width: 100%">
-        {% if event.start_time is not None %}{{ event.start_time|date:"P" }}{% endif %}
+      {% if event.is_multiday %}
+      <h6 class="modal-date scale-up-center" style="width: 100%">{{ event.start_date|date:"F jS" }} &
+        {{ event.end_date|date:"jS" }}, {{ event.end_date|date:"Y"}}</h6>
+      {% else %}
+      <h6 class="modal-date scale-up-center" style="width: 100%">{{ event.start_date|date:"F jS, Y" }}
+        {% if event.start_time is not None %}, {{ event.start_time|date:"P" }} {% endif %}
         {% if event.end_time is not None %} - {{ event.end_time|date:"P" }}{% endif %}
       </h6>
       {% endif %}
       {% else %}
-      <h6 class="modal-date scale-up-center" style="width: 100%">
-        Dates TBD
-      </h6>
-      {% endif %}-->
-
-      {% if not event.date_tbd %}
-      {% if event.is_multiday %}
-      <h6 class="modal-date scale-up-center" style="width: 100%">
-        {{ event.start_date|date:"F jS" }} &amp; {{ event.end_date|date:"jS" }}, {{ event.end_date|date:"Y"}}</h6>
-      {% else %}
-      <h6 class="modal-date scale-up-center" style="width: 100%">
-        {{ event.start_date|date:"F jS, Y" }}
-        {% if event.start_time is not None %}, {{ event.start_time|date:"P" }}{% endif %}
-        {% if event.end_time is not None %} - {{ event.end_time|date:"P" }}{% endif %}</h6>
-      {% endif %}
-      {% else %}
       <h6 class="modal-date scale-up-center" style="width: 100%">Dates TBD</h6>
       {% endif %}
-
-
     </div>
     <div class="row" id="ticket-checkout-p1">
       <div class="col s12 l6">
@@ -77,12 +54,13 @@
                   x.type.price|floatformat:"0"|intcomma }}</b> <b class="sale">&nbsp${{
                   x.type.sale_price|floatformat:"0"|intcomma }}</b> - {{ x.type.sale_description }}</p>
               {% else %}
-              <p class="ticket-price">
-                ${{ x.type.price|floatformat:"0"|intcomma }}
-                {% if x.type.price_description is not none %}- {{ x.type.price_description }}{% endif %}</p>
+              <p class="ticket-price">${{ x.type.price|floatformat:"0"|intcomma }}
+                {% if x.type.price_description is not none %} - {{ x.type.price_description }}{% endif %}</p>
               {% endif %}
-              <p class="ticket-description">{{ x.type.description }}{% if x.type.registration_url is not None %}<a
-                  href="{{ x.type.registration_url}}" target="_blank"> {{ x.type.registration_text }}{% endif %}</a></p>
+              <p class="ticket-description">{{ x.type.description }}{% if x.type.registration_url is not None %}
+                <a href="{{ x.type.registration_url}}" target="_blank"> {{ x.type.registration_text }}{% endif %}
+                </a>
+              </p>
             </div>
             <div class="col s12 m3">
               <div class="input-field ticket-quantity-input" id="{{ x.type.pk }}-select">
@@ -133,8 +111,9 @@
               <p class="ticket-price">${{ x.type.price|floatformat:"0"|intcomma }}
                 {% if x.type.price_description is not none %}- {{ x.type.price_description }}{% endif %}</p>
               {% endif %}
-              <p class="ticket-description">{{ x.type.description|safe }}{% if x.type.registration_url is not None %}<a
-                  href="{{ x.type.registration_url}}" target="_blank"> {{ x.type.registration_text }}{% endif %}</p>
+              <p class="ticket-description">{{ x.type.description|safe }}{% if x.type.registration_url is not None %}
+                <a href="{{ x.type.registration_url}}" target="_blank"> {{ x.type.registration_text }}{% endif %}
+              </p>
             </div>
             <div class="col s12 m4 right-align" id="{{ x.type.pk }}-remove-container">
               {% if x.cartItem is none %}
