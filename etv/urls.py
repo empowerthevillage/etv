@@ -152,10 +152,6 @@ urlpatterns = [
         include(("dashboard.urls", "dashboard"), namespace="dashboard"),
     ),
     path(
-        "donation/",
-        include(("donations.urls", "donations"), namespace="donation"),
-    ),
-    path(
         "economic-prosperity-and-employment/",
         include(("prosperity.urls", "prosperity"), namespace="prosperity"),
     ),
