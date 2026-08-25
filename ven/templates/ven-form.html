@@ -730,7 +730,15 @@
         </div>
 
         <div class="col s12 center-align">
-          <button class="btn btn-large submit-btn nomination-submit g-recaptcha"
+          <p>
+            <label>
+              <input type="checkbox" class="terms-check" />
+              <span>I have read and agreed to the Terms &amp; Conditions</span>
+            </label>
+          </p>
+        </div>
+        <div class="col s12 center-align">
+          <button class="btn btn-large submit-btn nomination-submit g-recaptcha disabled" disabled
             data-sitekey="6Lf2Ov0iAAAAACkudkPwl0VtX4g3VSUBnNxK3VJy" data-callback='onBusinessSubmit'
             data-action='submit'>
             SUBMIT
@@ -992,7 +1000,15 @@
         </div>
 
         <div class="col s12 center-align">
-          <button class="btn btn-large submit-btn nomination-submit g-recaptcha"
+          <p>
+            <label>
+              <input type="checkbox" class="terms-check" />
+              <span>I have read and agreed to the Terms &amp; Conditions</span>
+            </label>
+          </p>
+        </div>
+        <div class="col s12 center-align">
+          <button class="btn btn-large submit-btn nomination-submit g-recaptcha disabled" disabled
             data-sitekey="6Lf2Ov0iAAAAACkudkPwl0VtX4g3VSUBnNxK3VJy" data-callback='onFamilySubmit' data-action='submit'>
             SUBMIT
           </button>
@@ -1947,7 +1963,15 @@
         </fieldset>
 
         <div class="col s12 center-align">
-          <button class="btn btn-large submit-btn nomination-submit g-recaptcha"
+          <p>
+            <label>
+              <input type="checkbox" class="terms-check" />
+              <span>I have read and agreed to the Terms &amp; Conditions</span>
+            </label>
+          </p>
+        </div>
+        <div class="col s12 center-align">
+          <button class="btn btn-large submit-btn nomination-submit g-recaptcha disabled" disabled
             data-sitekey="6Lf2Ov0iAAAAACkudkPwl0VtX4g3VSUBnNxK3VJy" data-callback='onBothSubmit' data-action='submit'>
             SUBMIT
           </button>
@@ -2236,6 +2260,13 @@
       $('#vbp-both-nomination-form').removeClass('hidden')
     }
   })
+
+  $('.terms-check').on('change', function () {
+    var disable = !this.checked;
+    $(this).closest('form').find('.nomination-submit')
+      .prop('disabled', disable)
+      .toggleClass('disabled', disable);
+  });
 </script>
 
 {% endblock %}
