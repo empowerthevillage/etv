@@ -70,6 +70,10 @@
     if (guarded.indexOf(options.url) === -1) { return; }
     if (options.data instanceof FormData) {
       options.data.append('g-recaptcha-response', etvCaptchaToken);
+    } else if (typeof options.data === 'string') {
+      // jQuery serialises plain objects to a string before prefilters run
+      options.data += (options.data ? '&' : '') +
+        'g-recaptcha-response=' + encodeURIComponent(etvCaptchaToken);
     } else if (options.data && typeof options.data === 'object') {
       options.data['g-recaptcha-response'] = etvCaptchaToken;
     }
