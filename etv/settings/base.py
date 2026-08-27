@@ -42,6 +42,7 @@ GATEWAY_PUBLIC = braintree.BraintreeGateway(
 
 SECRET_KEY = env("SECRET_KEY")
 RECAPTCHA = env("RECAPTCHA")
+RECAPTCHA_V3_SECRET = env("RECAPTCHA_V3_SECRET", default="")
 
 SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = env("SOCIAL_AUTH_GOOGLE_OAUTH2_KEY")
 SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = env("SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET")
@@ -69,7 +70,18 @@ EMAIL_USE_SSL = False
 DEBUG = False
 
 
-ALLOWED_HOSTS = ["127.0.0.1", "127.0.0.1:8000", "localhost", "etv.villageblackpages.org", "www.etv.villageblackpages.org", "etvlive.herokuapp.com", "empowerthevillage.org", "www.empowerthevillage.org", "etv.empowerthevillage.org", "testing.empowerthevillage.org"]
+ALLOWED_HOSTS = [
+    "127.0.0.1",
+    "127.0.0.1:8000",
+    "localhost",
+    "etv.villageblackpages.org",
+    "www.etv.villageblackpages.org",
+    "etvlive.herokuapp.com",
+    "empowerthevillage.org",
+    "www.empowerthevillage.org",
+    "etv.empowerthevillage.org",
+    "testing.empowerthevillage.org",
+]
 
 
 SITE_ID = 1
@@ -127,7 +139,8 @@ LOUGOUT_REDIRECT_URL = "login"
 
 TINYMCE_DEFAULT_CONFIG = {
     "menubar": "file edit view insert format tools table help",
-    "plugins": "advlist autolink lists link image charmap print preview anchor searchreplace visualblocks code " "fullscreen insertdatetime media table paste code help wordcount spellchecker",
+    "plugins": "advlist autolink lists link image charmap print preview anchor searchreplace visualblocks code "
+    "fullscreen insertdatetime media table paste code help wordcount spellchecker",
     "toolbar": "undo redo | bold italic underline strikethrough | fontselect fontsizeselect formatselect | alignleft | code"
     "aligncenter alignright alignjustify | outdent indent |  numlist bullist checklist | forecolor "
     "backcolor casechange permanentpen formatpainter removeformat | pagebreak | charmap emoticons | "
@@ -245,7 +258,9 @@ STATICFILES_STORAGE = "etv.utils.StaticRootS3BotoStorage"
 AWS_STORAGE_BUCKET_NAME = "etv-static"
 S3_URL = "//%s.s3.amazonaws.com/" % AWS_STORAGE_BUCKET_NAME
 MEDIA_URL = "/media/"
-MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static-cdn", "media_root")
+MEDIA_ROOT = os.path.join(
+    os.path.dirname(BASE_DIR), "static-cdn", "media_root"
+)
 STATIC_URL = "https://%s/%s/" % (AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
 ADMIN_MEDIA_PREFIX = STATIC_URL + "admin/"
 import datetime

@@ -5,11 +5,15 @@ from django.utils.text import slugify
 from django.http import HttpResponse
 from django.template.loader import get_template
 
-StaticRootS3BotoStorage = lambda: S3Boto3Storage(location='static')
-MediaRootS3BotoStorage  = lambda: S3Boto3Storage(location='media')
+StaticRootS3BotoStorage = lambda: S3Boto3Storage(location="static")
+MediaRootS3BotoStorage = lambda: S3Boto3Storage(location="media")
 
-def random_string_generator(size=10, chars=string.ascii_lowercase + string.digits):
-    return ''.join(random.choice(chars) for _ in range(size))
+
+def random_string_generator(
+    size=10, chars=string.ascii_lowercase + string.digits
+):
+    return "".join(random.choice(chars) for _ in range(size))
+
 
 def unique_subscription_id_generator(instance):
     braintree_id = random_string_generator(size=7)
@@ -20,6 +24,7 @@ def unique_subscription_id_generator(instance):
         return unique_slug_generator(instance)
     return braintree_id
 
+
 def unique_ad_id_generator(instance):
     ad_id = random_string_generator(size=7)
 
@@ -28,6 +33,7 @@ def unique_ad_id_generator(instance):
     if qs_exists:
         return unique_slug_generator(instance)
     return ad_id
+
 
 def unique_order_key_generator(instance):
     """
@@ -42,6 +48,7 @@ def unique_order_key_generator(instance):
         return unique_slug_generator(instance)
     return key
 
+
 def unique_ticket_id_generator(instance):
     size = random.randint(6, 10)
     ticket_id = random_string_generator(size=size)
@@ -52,6 +59,7 @@ def unique_ticket_id_generator(instance):
         return unique_slug_generator(instance)
     return ticket_id
 
+
 def unique_ven_id_generator(instance):
     size = random.randint(8, 10)
     ven_id = random_string_generator(size=size)
@@ -61,6 +69,7 @@ def unique_ven_id_generator(instance):
     if qs_exists:
         return unique_slug_generator(instance)
     return ven_id
+
 
 def unique_order_id_generator(instance):
     """
@@ -74,6 +83,7 @@ def unique_order_id_generator(instance):
         return unique_slug_generator(instance)
     return order_new_id
 
+
 def unique_image_id_generator(instance):
     """
     This is for a Django product with an order_id field
@@ -85,6 +95,7 @@ def unique_image_id_generator(instance):
     if qs_exists:
         return unique_slug_generator(instance)
     return image_new_id
+
 
 def unique_slug_generator(instance, new_slug=None):
     """
@@ -100,47 +111,66 @@ def unique_slug_generator(instance, new_slug=None):
     qs_exists = Klass.objects.filter(slug=slug).exists()
     if qs_exists:
         new_slug = "{slug}-{randstr}".format(
-                    slug=slug,
-                    randstr=random_string_generator(size=4)
-                )
+            slug=slug, randstr=random_string_generator(size=4)
+        )
         return unique_slug_generator(instance, new_slug=new_slug)
     return slug
 
+
 def field_type_generator(instance):
-    text_input = ['CharField']
-    currency_input = ['DecimalField']
-    number_input = ['BigAutoField']
-    radio_input = ['BooleanField']
-    foreign_key_input = ['ForeignKey']
-    many_to_many_input = ['ManyToManyField']
-    datetime_input = ['DateTimeField']
-    file_input = ['FileField']
-    text_area = ['TextField']
+    text_input = ["CharField"]
+    currency_input = ["DecimalField"]
+    number_input = ["BigAutoField"]
+    radio_input = ["BooleanField"]
+    foreign_key_input = ["ForeignKey"]
+    many_to_many_input = ["ManyToManyField"]
+    datetime_input = ["DateTimeField"]
+    file_input = ["FileField"]
+    text_area = ["TextField"]
     type = instance.get_internal_type()
-    #print(type)
+    # print(type)
     if type in many_to_many_input:
-        field_type = 'manytomany'
+        field_type = "manytomany"
     elif type in text_input:
-        field_type = 'text'
+        field_type = "text"
     elif type in text_area:
-        field_type = 'textarea'
+        field_type = "textarea"
     elif type in currency_input:
-        field_type = 'currency'
+        field_type = "currency"
     elif type in number_input:
-        field_type = 'number'
+        field_type = "number"
     elif type in radio_input:
-        field_type = 'radio'
+        field_type = "radio"
     elif type in foreign_key_input:
-        field_type = 'foreignkey'
+        field_type = "foreignkey"
     elif type in file_input:
-        field_type = 'file'
+        field_type = "file"
     elif type in datetime_input:
-        field_type = 'datetime'
+        field_type = "datetime"
     else:
-        field_type = 'text'
+        field_type = "text"
     try:
         if instance.choices is not None:
-            field_type = 'choice'
-    except: 
+            field_type = "choice"
+    except:
         pass
     return field_type
+
+
+def verify_recaptcha(request):
+    """Server-side reCAPTCHA v3 check for payment endpoints. Fails closed."""
+    import requests
+    from django.conf import settings
+
+    token = request.POST.get("g-recaptcha-response", "")
+    if not token:
+        return False
+    try:
+        response = requests.post(
+            "https://www.google.com/recaptcha/api/siteverify",
+            data={"secret": settings.RECAPTCHA_V3_SECRET, "response": token},
+            timeout=5,
+        ).json()
+    except Exception:
+        return False
+    return response.get("success") is True and response.get("score", 0) >= 0.5

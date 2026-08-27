@@ -1,3 +1,4 @@
+from etv.utils import verify_recaptcha
 from django.shortcuts import render, redirect
 from .models import (
     Walker,
@@ -114,6 +115,8 @@ def org_walker_detail(request, org, walker):
 
 def walker_registration(request):
     if request.method == "POST":
+        if not verify_recaptcha(request):
+            return JsonResponse({"status": "error"})
         data = request.POST
         files = request.FILES
         nonce_id = data["nonce"]
@@ -310,6 +313,8 @@ def org_registration(request):
 
 def sponsor(request):
     if request.method == "POST":
+        if not verify_recaptcha(request):
+            return JsonResponse({"status": "error"})
         data = request.POST
         files = request.FILES
         nonce_id = data["nonce"]
@@ -442,6 +447,8 @@ def walker_donation_form(request):
 
 def process_walker_donation(request):
     if request.method == "POST":
+        if not verify_recaptcha(request):
+            return JsonResponse({"status": "error"})
         data = request.POST
         nonce_id = data["nonce"]
         first_name = data["first_name"]
